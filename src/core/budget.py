@@ -59,7 +59,8 @@ class Kommune:
 
     @property
     def label(self) -> str:
-        return f"{self.name} ({self.fylke})" if self.fylke else self.name
+        """Name with the fylke, except where they are the same (Oslo)."""
+        return f"{self.name} ({self.fylke})" if self.fylke and self.fylke != self.name else self.name
 
 
 @dataclass(frozen=True, slots=True)
@@ -354,5 +355,9 @@ def kommune_view(budget: Budget, nr: str) -> KommuneView:
 
 
 def find_kommune(budget: Budget, text: str) -> Kommune | None:
+    """Match the number or the label exactly; a bare name only when one kommune has it (Herøy and Våler exist twice)."""
     t = text.strip().lower()
-    return next((k for k in budget.kommuner if t in (k.nr, k.name.lower(), k.label.lower())), None)
+    if exact := next((k for k in budget.kommuner if t in (k.nr, k.label.lower())), None):
+        return exact
+    by_name = [k for k in budget.kommuner if k.name.lower() == t]
+    return by_name[0] if len(by_name) == 1 else None

@@ -299,7 +299,7 @@ def build(queries: Queries) -> FastAPI:
         ]
 
     @api.get("/kommune", summary="Frie inntekter for one kommune", responses={404: {"description": "No kommune matches"}})
-    def kommune(k: Annotated[str, Query(description="Kommune number (4 digits) or name, e.g. 4601 or Bergen")]) -> KommuneDetail:
+    def kommune(k: Annotated[str, Query(description="Kommune number (4 digits) or name, e.g. 4601 or Bergen. Two kommuner share a name: write Herøy (Nordland)")]) -> KommuneDetail:
         found = b.find_kommune(queries.budget, k)
         if found is None:
             raise HTTPException(404, f"Fant ingen kommune som heter {k!r}. Se /api/kommuner.")
