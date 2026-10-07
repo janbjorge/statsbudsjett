@@ -1,5 +1,7 @@
 """The web adapter: full pages, HTMX fragments and the shareable "For deg" link."""
 
+import re
+
 from fastapi.testclient import TestClient
 
 from adapters.web.main import app, profile_from, profile_query, queries
@@ -80,3 +82,11 @@ def test_other_host_names_redirect_to_the_canonical_one(monkeypatch) -> None:
 def test_without_a_canonical_host_every_host_name_is_served() -> None:
     assert client.get("/", headers={"Host": "statsbudsjett.fly.dev"}).status_code == 200
     assert 'rel="canonical"' not in client.get("/").text
+
+
+def test_static_files_are_versioned_and_cached_for_good() -> None:
+    html = client.get("/").text
+    url = re.search(r'href="(/static/app\.css\?v=\w+)"', html)
+    assert url, "pages link static files with a content hash"
+    assert "immutable" in client.get(url[1]).headers["cache-control"]
+    assert "immutable" not in client.get("/static/app.css").headers["cache-control"]  # an unversioned URL may change

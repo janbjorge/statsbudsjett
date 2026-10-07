@@ -1,5 +1,6 @@
 """FastAPI + Jinja + HTMX. Every fragment is also reachable as a full page via the same query string."""
 
+import hashlib
 import json
 import os
 from collections.abc import Awaitable, Callable
@@ -43,7 +44,10 @@ async def headers(request: Request, call_next: Callable[[Request], Awaitable[Res
         "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
     )
     path = request.url.path
-    if path.startswith(("/static/", "/data/")):
+    if path.startswith("/static/") and "v" in request.query_params:
+        # static_url() puts the content hash in ?v=, so a changed file gets a new URL and this one never goes stale
+        response.headers["Cache-Control"] = "public, max-age=31536000, immutable"
+    elif path.startswith(("/static/", "/data/")):
         response.headers["Cache-Control"] = "public, max-age=3600"
     else:
         # One URL answers a full page or redirect without HTMX and a fragment with it; a cache must keep them apart
@@ -63,9 +67,17 @@ def template_context(request: Request) -> dict[str, object]:
     """Names every template can use."""
     return {
         "PERSONAS": PERSONAS, "KID_BANDS": KID_BANDS, "Side": Side,
-        "group_slot": group_slot,
+        "group_slot": group_slot, "static_url": static_url,
         "canonical": f"https://{CANONICAL_HOST}{request.url.path}" if CANONICAL_HOST else "",
     }
+
+
+# Content hash per static file, read once at start-up: the image is rebuilt for every change
+STATIC_HASHES = {p.name: hashlib.sha256(p.read_bytes()).hexdigest()[:10] for p in (HERE / "static").iterdir() if p.is_file()}
+
+
+def static_url(name: str) -> str:
+    return f"/static/{name}?v={STATIC_HASHES[name]}"
 
 
 templates = Jinja2Templates(directory=HERE / "templates", context_processors=[template_context])

@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block title %}Pengestrømmen i statsbudsjettet 2027{% endblock %}
 {% block head %}
-<script src="/static/d3-sankey.min.js" defer></script>
-<script src="/static/flyt.js" defer></script>
+<script src="{{ static_url('d3-sankey.min.js') }}" defer></script>
+<script src="{{ static_url('flyt.js') }}" defer></script>
 {% endblock %}
 {% block main %}
   <section>
