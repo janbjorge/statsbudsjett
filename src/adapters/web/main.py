@@ -10,7 +10,7 @@ from urllib.parse import urlencode
 
 from fastapi import FastAPI, Query, Request
 from fastapi.middleware.gzip import GZipMiddleware
-from fastapi.responses import HTMLResponse, PlainTextResponse, RedirectResponse, Response
+from fastapi.responses import FileResponse, HTMLResponse, PlainTextResponse, RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from starlette.types import ASGIApp, Message, Receive, Scope, Send
@@ -294,6 +294,17 @@ def sitemap_xml(request: Request) -> Response:
         f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n',
         media_type="application/xml",
     )
+
+
+# Browsers, feed readers and link previews ask for these fixed paths without reading the <head> links
+@app.get("/favicon.ico")
+def favicon() -> FileResponse:
+    return FileResponse(HERE / "static" / "icon-48.png", media_type="image/png")
+
+
+@app.get("/apple-touch-icon.png")
+def apple_touch_icon() -> FileResponse:
+    return FileResponse(HERE / "static" / "icon-180.png", media_type="image/png")
 
 
 @app.get("/helse", response_class=PlainTextResponse)

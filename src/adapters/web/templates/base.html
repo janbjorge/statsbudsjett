@@ -8,6 +8,8 @@
 {% if canonical %}<link rel="canonical" href="{{ canonical }}">
 {% endif %}<link rel="alternate" type="text/markdown" href="/llms.txt" title="For KI-agenter">
 <link rel="service-desc" type="application/json" href="/api/openapi.json">
+<link rel="icon" type="image/svg+xml" href="{{ static_url('icon.svg') }}">
+<link rel="apple-touch-icon" href="{{ static_url('icon-180.png') }}">
 <link rel="stylesheet" href="{{ static_url('app.css') }}">
 <!-- Set the saved theme before first paint, so dark mode does not flash light -->
 <script>try { const t = new URLSearchParams(location.search).get("theme") || localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>

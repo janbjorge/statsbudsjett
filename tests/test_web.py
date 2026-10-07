@@ -177,6 +177,16 @@ def test_static_files_are_versioned_and_cached_for_good() -> None:
     assert "immutable" not in client.get("/static/app.css").headers["cache-control"]  # an unversioned URL may change
 
 
+def test_pages_link_the_icon_and_the_fixed_paths_answer() -> None:
+    html = client.get("/ki").text
+    assert re.search(r'rel="icon" type="image/svg\+xml" href="/static/icon\.svg\?v=\w+"', html)
+    assert re.search(r'rel="apple-touch-icon" href="/static/icon-180\.png\?v=\w+"', html)
+    for path in ("/favicon.ico", "/apple-touch-icon.png"):
+        r = client.get(path)
+        assert (r.status_code, r.headers["content-type"]) == (200, "image/png"), path
+        assert r.content.startswith(b"\x89PNG"), path
+
+
 def test_head_answers_like_get_without_a_body() -> None:
     for path in ("/", "/flyt", "/static/app.css", "/data/kommuner-2027.csv", "/api/openapi.json"):
         get, head = client.get(path), client.head(path)
