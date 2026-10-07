@@ -4,8 +4,7 @@ Every request from jb, with status. Newest first. An item is ticked only when it
 
 ## Open
 
-- [ ] **Switch on the canonical redirect** once budsjettlupa.no is old enough for corporate web filters (jb 2026-10-07: "My zscaler blocks the domain due to being to new"): `fly secrets set CANONICAL_HOST=budsjettlupa.no -a statsbudsjett`. Then statsbudsjett.fly.dev and www. redirect to budsjettlupa.no (src/adapters/web/main.py).
-- [ ] **Read through the user-facing texts** before publishing: the cards for each preset, the glossary, and the footer disclaimer ("ikke en offisiell side").
+Nothing open.
 
 ## Ideas not yet requested
 
