@@ -171,6 +171,7 @@ def meg() -> dict:
         "tax": {
             "params": {p["key"]: {"y2026": p["y2026"], "y2027": p["y2027"], "page": p.get("page")} for p in tax["params"]},
             "trinnskatt": {y: tax["trinnskatt"][y] for y in ("y2026", "y2027")},
+            "trinnskatt_page": tax["trinnskatt"]["page"],
             "growth": GROWTH,
             "source_url": TAX_SOURCE,
         },

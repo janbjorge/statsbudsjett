@@ -14,6 +14,41 @@
   <p style="margin:4px 0 0">{{ "Dere" if many else "Du" }} betaler om lag <b>{{ t.tax_2027|kr }}</b> i skatt av {{ t.income|kr }} ({{ t.rate|nb1 }} %).
     Endringen er regnet mot 2026-reglene justert for forventet lønnsvekst ({{ m.growth_wage|nb1 }} %) og pensjonsvekst ({{ m.growth_pension|num }} %), slik Finansdepartementet måler det.</p>
   {% endif %}
+  {% if t.income %}
+  {#- Pages are the PDF pages of Prop. 1 LS, from data/persona/tax.json; 79 and 82 are quoted in FACTS.md §7 -#}
+  {% macro ls(page) %}<a href="{{ m.tax_source }}" rel="noopener">Prop. 1 LS s. {{ page }}</a>{% endmacro %}
+  {% macro skl(par, text="") %}<a href="https://lovdata.no/dokument/NL/lov/1999-03-26-14/%C2%A7{{ par }}" rel="noopener">skatteloven § {{ par }}{{ text }}</a>{% endmacro %}
+  {% set kinds = t.lines|map(attribute="special_deduction")|select|list %}
+  <details class="calc">
+    <summary>Slik er skatten regnet</summary>
+    {% for l in t.lines %}{% set a = m.profile.adults[loop.index0] %}
+    {% if l.personinntekt %}
+    <table class="tbl">
+      {% if many %}<caption>Voksen {{ loop.index }}</caption>{% endif %}
+      <tr><td>Lønn, pensjon og næringsinntekt</td><td class="num">{{ l.personinntekt|kr }}</td><td></td></tr>
+      {% if l.minstefradrag %}<tr><td>− Minstefradrag</td><td class="num">{{ l.minstefradrag|kr }}</td><td>{{ ls(m.tax_pages.minstefradrag) }}</td></tr>{% endif %}
+      {% if l.special_deduction and a.business_kind == "jordbruk" %}<tr><td>− Jordbruksfradrag</td><td class="num">{{ l.special_deduction|kr }}</td><td>{{ ls(m.tax_pages.jordbruksfradrag) }}, {{ skl("8-1", " femte ledd") }}</td></tr>{% endif %}
+      {% if l.special_deduction and a.business_kind == "fiske" %}<tr><td>− Fiskerfradrag</td><td class="num">{{ l.special_deduction|kr }}</td><td>{{ ls(m.tax_pages.fiskerfradrag) }}, {{ skl("6-60") }}</td></tr>{% endif %}
+      <tr><td>− Personfradrag</td><td class="num">{{ l.personfradrag|kr }}</td><td>{{ ls(m.tax_pages.personfradrag) }}</td></tr>
+      <tr><td>= Alminnelig inntekt</td><td class="num">{{ l.alminnelig_inntekt|kr }}</td><td></td></tr>
+      <tr><td>Skatt på alminnelig inntekt</td><td class="num">{{ l.alminnelig|kr }}</td><td>{{ ls(m.tax_pages.alminnelig) }}</td></tr>
+      <tr><td>Trygdeavgift</td><td class="num">{{ l.trygdeavgift|kr }}</td><td>{{ ls(m.tax_pages.trygdeavgift) }}</td></tr>
+      <tr><td>Trinnskatt</td><td class="num">{{ l.trinnskatt|kr }}</td><td>{{ ls(m.tax_pages.trinnskatt) }}</td></tr>
+      {% if l.pensjonsfradrag %}<tr><td>− Skattefradrag for pensjon</td><td class="num">{{ l.pensjonsfradrag|kr }}</td><td>{{ ls(m.tax_pages.pensjonsfradrag) }}</td></tr>{% endif %}
+      <tr><td><b>= Skatt i 2027</b></td><td class="num"><b>{{ l.total|kr }}</b></td><td></td></tr>
+    </table>
+    {% endif %}
+    {% endfor %}
+    <p class="note">Satser og beløp er fra tabell 1.5 i {{ ls("26–30") }}. Beløpene er avrundet hver for seg.</p>
+    {% if m.profile.adults|selectattr("business")|list %}
+    <p class="note">Næringsdrivende får ikke minstefradrag, men fradrag for faktiske kostnader ({{ ls(79) }}). Hele næringsinntekten er regnet som personinntekt, uten skjermingsfradrag, så trinnskatt og trygdeavgift kan bli litt for høye.</p>
+    {% endif %}
+    {% if kinds %}
+    <p class="note">Jordbruksfradraget og fiskerfradraget senker bare alminnelig inntekt. Trinnskatt og trygdeavgift regnes av hele næringsinntekten ({{ skl("12-11", " andre ledd bokstav b") }}). Fiskerfradraget krever minst 130 dager med fiske i året.</p>
+    <p class="note">Fradragene står på samme kronebeløp i 2027, og regjeringen regner det som en endring mot referansesystemet ({{ ls(82) }}). Vi antar at referansesystemet ville økt dem med lønnsveksten, slik som personfradraget. Kilden sier ikke hvilken vekst den bruker (<a href="https://github.com/janbjorge/statsbudsjett/blob/main/METHOD.md#5-tax-calculator">metode</a>).</p>
+    {% endif %}
+  </details>
+  {% endif %}
   <p class="note" style="margin:8px 0 0">Gjelder lønn, pensjon og næringsinntekt med standardfradrag, jordbruksfradrag og fiskerfradrag. Næringsinntekt er regnet uten skjermingsfradrag.
     Ikke med: rentefradrag, formue, uføretrygd, særregler i Finnmark og Nord-Troms.
     <a href="https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/">Kilde: Prop. 1 LS (2026–2027), tabell 1.5</a></p>

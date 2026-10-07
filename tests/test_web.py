@@ -57,6 +57,33 @@ def test_farmer_link_shows_the_farm_tax() -> None:
     assert '<option value="jordbruk" selected>' in html
 
 
+LOVDATA = "https://lovdata.no/dokument/NL/lov/1999-03-26-14/%C2%A7"
+
+
+def test_farmer_breakdown_cites_the_law() -> None:
+    # Each line of "Slik er skatten regnet" names its source: Prop. 1 LS page, or the skatteloven section
+    html = client.get(f"/?{FARMER}").text
+    calc = html[html.index('<details class="calc">'):html.index("</details>", html.index('<details class="calc">'))]
+    assert re.search(r"Jordbruksfradrag</td><td class=\"num\">208\W900\Wkr", calc)
+    assert f'{LOVDATA}8-1"' in calc and f'{LOVDATA}12-11"' in calc
+    assert f'{LOVDATA}6-60"' not in calc
+    for page in (26, 27, 28, 79, 82):  # tabell 1.5, no minstefradrag for business (79), nominal deductions (82)
+        assert f"Prop. 1 LS s. {page}<" in calc, page
+    assert re.search(r"Skatt i 2027</b></td><td class=\"num\"><b>117\W291\Wkr", calc)
+
+
+def test_fisher_breakdown_cites_the_fiskerfradrag() -> None:
+    html = client.get("/?meg=fisker&naering=400000&naering_type=fiske").text
+    assert f'{LOVDATA}6-60"' in html and f'{LOVDATA}8-1"' not in html
+
+
+def test_wage_breakdown_has_no_business_notes() -> None:
+    meg, barn, lonn, pensjon = FAMILY_ARGS
+    html = client.get(f"/?meg={meg}&barn={barn}&lonn={lonn}&pensjon={pensjon}").text
+    assert html.count("<caption>Voksen") == 2 and "Minstefradrag" in html
+    assert LOVDATA not in html and "Prop. 1 LS s. 79" not in html
+
+
 def test_bonde_preset_is_a_farmer_not_a_wage_earner() -> None:
     html = client.get("/").text
     assert "naering=550000&amp;naering_type=jordbruk" in html

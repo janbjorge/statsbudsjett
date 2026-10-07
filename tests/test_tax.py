@@ -14,7 +14,7 @@ from itertools import pairwise
 import pytest
 
 from adapters.datasets import JsonDatasets
-from core.tax import Adult, Business, household_effect, special_deduction, tax
+from core.tax import Adult, Business, household_effect, special_deduction, tax, tax_lines
 
 TABLE = JsonDatasets().tax_table()
 R26 = TABLE.rules(2026)
@@ -299,6 +299,54 @@ def test_special_deduction_never_exceeds_the_income(kind: Business) -> None:
 # --- The household result ------------------------------------------------------------------------
 
 
+# --- Breakdown: the lines shown under "Slik er skatten regnet" ---------------------------------
+
+
+def test_farmer_lines_match_the_hand_worked_case() -> None:
+    # Same sums as test_farmer_550_000: LS tabell 1.5 pp. 26–28, skl § 8-1 femte ledd
+    lines = tax_lines(R27, business=550_000, kind=Business.JORDBRUK)
+    assert lines.personinntekt == 550_000
+    assert lines.minstefradrag == 0  # LS p. 79
+    assert lines.special_deduction == pytest.approx(208_900)
+    assert lines.personfradrag == pytest.approx(120_180)
+    assert lines.alminnelig_inntekt == pytest.approx(220_920)
+    assert lines.alminnelig == pytest.approx(48_602.40)
+    assert lines.trygdeavgift == pytest.approx(58_300)
+    assert lines.trinnskatt == pytest.approx(10_388.30)
+    assert lines.pensjonsfradrag == 0
+    assert lines.total == pytest.approx(117_290.70)
+
+
+@pytest.mark.parametrize("kind", list(Business))
+@pytest.mark.parametrize(
+    ("wage", "pension", "business"),
+    [(0, 0, 0), (650_000, 0, 0), (0, 150_000, 0), (0, 400_000, 0), (300_000, 0, 200_000), (200_000, 250_000, 400_000)],
+)
+def test_lines_add_up_to_the_tax(wage: float, pension: float, business: float, kind: Business) -> None:
+    # The table on the page must sum to the headline: alminnelig + trygdeavgift + trinnskatt − pensjonsfradrag
+    lines = tax_lines(R27, wage, pension, business, kind)
+    assert lines.total == pytest.approx(tax(R27, wage, pension, business, kind))
+    assert lines.alminnelig_inntekt == pytest.approx(
+        max(0, lines.personinntekt - lines.minstefradrag - lines.special_deduction - lines.personfradrag)
+    )
+    assert lines.total >= 0
+
+
+def test_pension_credit_shown_is_at_most_the_tax_it_is_set_against() -> None:
+    # The skattefradrag for pensjon cannot make tax negative (LS tabell 1.5 p. 27), so a small pension
+    # shows the credit actually used, not the full 40 750
+    lines = tax_lines(R27, pension=150_000)
+    assert lines.pensjonsfradrag == pytest.approx(lines.alminnelig + lines.trygdeavgift + lines.trinnskatt)
+    assert lines.total == 0
+
+
+def test_household_lines_follow_the_adults() -> None:
+    adults = [Adult(wage=300_000), Adult(business=550_000, business_kind=Business.JORDBRUK)]
+    effect = household_effect(TABLE, adults)
+    assert [line.personinntekt for line in effect.lines] == [300_000, 550_000]
+    assert sum(line.total for line in effect.lines) == pytest.approx(effect.tax_2027)
+
+
 def test_household_income_counts_business_income() -> None:
     effect = household_effect(TABLE, [Adult(wage=300_000), Adult(business=550_000, business_kind=Business.JORDBRUK)])
     assert effect.income == 850_000
@@ -306,7 +354,7 @@ def test_household_income_counts_business_income() -> None:
 
 
 def test_farmer_loses_on_the_nominal_jordbruksfradrag() -> None:
-    # LS p. 80, punkt 3.1.6: keeping jordbruksfradraget nominal "innebærer en endring sammenlignet med
+    # LS p. 82, punkt 3.1.6: keeping jordbruksfradraget nominal "innebærer en endring sammenlignet med
     # referansesystemet". The reference system carries the amounts with wage growth (METHOD.md §5 assumption):
     # cap 208 900 × 1,04 = 217 256. At 550 000 the deduction hits the cap in both, so against other business
     # income at the same level the farmer's change is 22 % × (217 256 − 208 900) = 1 838,32 kr worse.
@@ -319,7 +367,7 @@ def test_farmer_change_adds_up_from_its_three_parts() -> None:
     # The "Bonde" example, 550 000 kr from jordbruk, 2027 rules against the reference system:
     # trygdeavgift 10,8 → 10,6 % (LS tabell 1.5 p. 26): −0,2 % × 550 000 = −1 100
     # personfradrag 120 180 against 114 540 × 1,04 (LS tabell 1.5 p. 27, growth p. 80): −22 % × 1 058,40 = −232,85
-    # jordbruksfradrag kept at 208 900 against 208 900 × 1,04 (LS p. 80, METHOD.md §5): +22 % × 8 356 = +1 838,32
+    # jordbruksfradrag kept at 208 900 against 208 900 × 1,04 (LS p. 82, METHOD.md §5): +22 % × 8 356 = +1 838,32
     # trinnskatt thresholds rounded to 50 kr (LS tabell 1.5 p. 26): trinn 1 at 235 150 against 235 144 and
     # trinn 2 at 331 050 against 331 032: −1,7 % × 6 − (4,0 − 1,7) % × 18 = −0,516
     change = household_effect(TABLE, [Adult(business=550_000, business_kind=Business.JORDBRUK)]).change

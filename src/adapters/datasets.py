@@ -5,7 +5,7 @@ from pathlib import Path
 
 from core.budget import Budget, Chapter, Flow, FundYear, Kommune, Post, Side
 from core.facts import Amount, Effect, Fact, Kind
-from core.tax import Growth, TaxTable
+from core.tax import Growth, TaxPages, TaxTable
 
 DATASETS = Path(__file__).parents[2] / "datasets"
 
@@ -79,6 +79,16 @@ class JsonDatasets:
             growth=Growth(
                 wage=t["growth"]["wage"]["pct"], pension=t["growth"]["pension"]["pct"],
                 wage_page=t["growth"]["wage"].get("page"), pension_page=t["growth"]["pension"].get("page"),
+            ),
+            pages=TaxPages(
+                alminnelig=t["params"]["skatt_alminnelig_inntekt"]["page"],
+                personfradrag=t["params"]["personfradrag"]["page"],
+                minstefradrag=t["params"]["minstefradrag_lonn_sats"]["page"],
+                trygdeavgift=t["params"]["trygdeavgift_lonn"]["page"],
+                trinnskatt=t["trinnskatt_page"],
+                pensjonsfradrag=t["params"]["pensjonsskattefradrag_maks"]["page"],
+                jordbruksfradrag=t["params"]["jordbruksfradrag_maks"]["page"],
+                fiskerfradrag=t["params"]["fiskerfradrag_ovre"]["page"],
             ),
             source_url=t["source_url"],
         )

@@ -280,3 +280,11 @@ details.help p { margin: 8px 0 0; }
 .money .who { grid-column: 1 / -1; font-size: 13px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .05em; }
 /* The Sankey's flows span at least 640 px (flyt.js KPX) plus 16 px margin; reserving that keeps the page from jumping when it draws */
 #sankey { min-height: 656px; }
+
+/* "Slik er skatten regnet" under the tax card */
+details.calc { margin: 10px 0 0; font-size: 14px; }
+details.calc summary { cursor: pointer; color: var(--accent); }
+details.calc table { border-collapse: collapse; margin: 8px 0 0; width: 100%; max-width: 640px; }
+details.calc caption { text-align: left; font-weight: 600; padding: 4px 0; }
+details.calc td { padding: 3px 8px 3px 0; border-bottom: 1px solid var(--hairline); vertical-align: top; }
+details.calc td:last-child { color: var(--text-muted); font-size: 13px; }

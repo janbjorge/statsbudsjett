@@ -63,12 +63,27 @@ class Growth:
 
 
 @dataclass(frozen=True, slots=True)
+class TaxPages:
+    """The Prop. 1 LS page (PDF page) for each rule shown under "Slik er skatten regnet"."""
+
+    alminnelig: int
+    personfradrag: int
+    minstefradrag: int
+    trygdeavgift: int
+    trinnskatt: int
+    pensjonsfradrag: int
+    jordbruksfradrag: int
+    fiskerfradrag: int
+
+
+@dataclass(frozen=True, slots=True)
 class TaxTable:
     """Raw parameters for both years, as extracted from Prop. 1 LS."""
 
     params: dict[str, dict[str, float | None]]
     trinnskatt: dict[str, list[dict[str, float]]]
     growth: Growth
+    pages: TaxPages
     source_url: str = ""
 
     def rules(self, year: Year, wage_index: float = 1.0, pension_index: float = 1.0) -> TaxRules:
@@ -123,8 +138,28 @@ def special_deduction(rules: TaxRules, business: float, kind: Business) -> float
             return 0.0
 
 
-def tax(rules: TaxRules, wage: float = 0, pension: float = 0, business: float = 0, kind: Business = Business.ANNEN) -> float:
-    """Total income tax for one person with standard deductions.
+@dataclass(frozen=True, slots=True)
+class TaxLines:
+    """One person's income tax line by line, as shown under "Slik er skatten regnet"."""
+
+    personinntekt: float
+    minstefradrag: float
+    special_deduction: float
+    personfradrag: float
+    alminnelig_inntekt: float
+    alminnelig: float
+    trygdeavgift: float
+    trinnskatt: float
+    pensjonsfradrag: float
+    """The pension tax credit actually used, at most the tax it is set against."""
+
+    @property
+    def total(self) -> float:
+        return self.alminnelig + self.trygdeavgift + self.trinnskatt - self.pensjonsfradrag
+
+
+def tax_lines(rules: TaxRules, wage: float = 0, pension: float = 0, business: float = 0, kind: Business = Business.ANNEN) -> TaxLines:
+    """Income tax for one person with standard deductions, line by line.
 
     Business income gets no minstefradrag and counts in full as personinntekt; the skjermingsfradrag
     is left out (METHOD.md §5). The special deduction lowers alminnelig inntekt only (skatteloven § 12-11 (2) b).
@@ -132,8 +167,8 @@ def tax(rules: TaxRules, wage: float = 0, pension: float = 0, business: float = 
     minstefradrag = min(wage * rules.minstefradrag_lonn / 100, rules.minstefradrag_lonn_max) + min(
         pension * rules.minstefradrag_pensjon / 100, rules.minstefradrag_pensjon_max
     )
-    fradrag = minstefradrag + special_deduction(rules, business, kind) + rules.personfradrag
-    alminnelig = max(0, wage + pension + business - fradrag) * rules.alminnelig / 100
+    special = special_deduction(rules, business, kind)
+    alminnelig_inntekt = max(0, wage + pension + business - minstefradrag - special - rules.personfradrag)
 
     personinntekt = wage + pension + business
     business_rate = rules.trygdeavgift_fiske if kind is Business.FISKE else rules.trygdeavgift_naering
@@ -148,15 +183,31 @@ def tax(rules: TaxRules, wage: float = 0, pension: float = 0, business: float = 
         top = rules.trinnskatt[i + 1].start if i + 1 < len(rules.trinnskatt) else float("inf")
         trinnskatt += max(0, min(personinntekt, top) - bracket.start) * bracket.rate / 100
 
+    alminnelig = alminnelig_inntekt * rules.alminnelig / 100
     pensjonsfradrag = 0.0
     if pension > 0:
         reduction = (
             max(0, min(pension, rules.pensjonsfradrag_grense2) - rules.pensjonsfradrag_grense1) * rules.pensjonsfradrag_sats1 / 100
             + max(0, pension - rules.pensjonsfradrag_grense2) * rules.pensjonsfradrag_sats2 / 100
         )
-        pensjonsfradrag = max(0, rules.pensjonsfradrag_max - reduction)
+        pensjonsfradrag = min(max(0, rules.pensjonsfradrag_max - reduction), alminnelig + trygdeavgift + trinnskatt)
 
-    return max(0, alminnelig + trygdeavgift + trinnskatt - pensjonsfradrag)
+    return TaxLines(
+        personinntekt=personinntekt,
+        minstefradrag=minstefradrag,
+        special_deduction=special,
+        personfradrag=rules.personfradrag,
+        alminnelig_inntekt=alminnelig_inntekt,
+        alminnelig=alminnelig,
+        trygdeavgift=trygdeavgift,
+        trinnskatt=trinnskatt,
+        pensjonsfradrag=pensjonsfradrag,
+    )
+
+
+def tax(rules: TaxRules, wage: float = 0, pension: float = 0, business: float = 0, kind: Business = Business.ANNEN) -> float:
+    """Total income tax for one person with standard deductions (see tax_lines)."""
+    return tax_lines(rules, wage, pension, business, kind).total
 
 
 @dataclass(frozen=True, slots=True)
@@ -172,6 +223,8 @@ class TaxEffect:
     tax_2027: float
     tax_reference: float
     income: float
+    lines: tuple[TaxLines, ...] = ()
+    """2027 tax for each adult, in the order given."""
 
     @property
     def change(self) -> float:
@@ -185,8 +238,10 @@ class TaxEffect:
 def household_effect(table: TaxTable, adults: list[Adult]) -> TaxEffect:
     """Tax in 2027 for the household and the change against the reference system."""
     r27, ref = table.rules(2027), table.reference_2027()
+    lines = tuple(tax_lines(r27, a.wage, a.pension, a.business, a.business_kind) for a in adults)
     return TaxEffect(
-        tax_2027=sum(tax(r27, a.wage, a.pension, a.business, a.business_kind) for a in adults),
+        tax_2027=sum(line.total for line in lines),
         tax_reference=sum(tax(ref, a.wage, a.pension, a.business, a.business_kind) for a in adults),
         income=sum(a.wage + a.pension + a.business for a in adults),
+        lines=lines,
     )

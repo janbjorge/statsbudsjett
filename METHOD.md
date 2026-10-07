@@ -41,7 +41,7 @@ The pages show the budget the way Finansdepartementet presents it, without oil m
   - Business income counts in full as personinntekt. The skjermingsfradrag is left out, because it depends on what the business owns, which the form does not ask. With it, trinnskatt and trygdeavgift would be somewhat lower.
   - Only a profit can be entered; a loss is not offset against other income.
   - The fiskerfradrag assumes the 130 days of fishing that skatteloven § 6-60 requires. Barnepass in your own home, reindrift and sjøfolk are not offered as kinds.
-  - Assumption: the reference system carries the jordbruksfradrag and the fiskerfradrag cap with wage growth (4,0 %), like the personfradrag. The source says only that keeping them nominal is a change against the reference system (Prop. 1 LS p. 80).
+  - Assumption: the reference system carries the jordbruksfradrag and the fiskerfradrag cap with wage growth (4,0 %), like the personfradrag. The source says only that keeping them nominal is a change against the reference system (Prop. 1 LS p. 82, punkt 3.1.6, which names both deductions).
 - Not covered: uføretrygd, interest deductions, wealth tax, Finnmark/Nord-Troms rules, and the skattebegrensning for low incomes. The page lists these.
 - The headline is 2027 rules against the reference system: 2026 amounts × 1,04 for wage-related amounts and × 1,0335 for pension amounts (src/pipeline/datasets.py:115). That is the government's own yardstick.
 - Assumption: personfradrag and the trygdeavgift lower limit are indexed by wage growth in the reference system. The source does not state this; it matches the official −1 800 kr example.

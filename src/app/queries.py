@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from core import budget as b
 from core.facts import Fact, Profile, Section, select
 from core.ports import Datasets
-from core.tax import TaxEffect, household_effect
+from core.tax import TaxEffect, TaxPages, household_effect
 
 
 @dataclass(frozen=True, slots=True)
@@ -33,6 +33,7 @@ class MegView:
     sections: tuple[Section, ...]
     growth_wage: float
     growth_pension: float
+    tax_pages: TaxPages
     tax_source: str = ""
     growth_pages: tuple[int | None, int | None] = (None, None)
 
@@ -82,6 +83,7 @@ class Queries:
             growth_pension=table.growth.pension,
             tax_source=table.source_url,
             growth_pages=(table.growth.wage_page, table.growth.pension_page),
+            tax_pages=table.pages,
         )
 
     def facts(self) -> list[Fact]:
