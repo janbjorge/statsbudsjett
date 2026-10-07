@@ -14,7 +14,8 @@
   <p style="margin:4px 0 0">{{ "Dere" if many else "Du" }} betaler om lag <b>{{ t.tax_2027|kr }}</b> i skatt av {{ t.income|kr }} ({{ t.rate|nb1 }} %).
     Endringen er regnet mot 2026-reglene justert for forventet lønnsvekst ({{ m.growth_wage|nb1 }} %) og pensjonsvekst ({{ m.growth_pension|num }} %), slik Finansdepartementet måler det.</p>
   {% endif %}
-  <p class="note" style="margin:8px 0 0">Gjelder lønn og pensjon med standardfradrag. Ikke med: næringsinntekt, rentefradrag, formue, uføretrygd, særregler i Finnmark og Nord-Troms.
+  <p class="note" style="margin:8px 0 0">Gjelder lønn, pensjon og næringsinntekt med standardfradrag, jordbruksfradrag og fiskerfradrag. Næringsinntekt er regnet uten skjermingsfradrag.
+    Ikke med: rentefradrag, formue, uføretrygd, særregler i Finnmark og Nord-Troms.
     <a href="https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/">Kilde: Prop. 1 LS (2026–2027), tabell 1.5</a></p>
 </div>
 <div class="facts">

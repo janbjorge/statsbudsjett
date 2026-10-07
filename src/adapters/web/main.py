@@ -20,6 +20,7 @@ from adapters.web.params import kroner, profile_from, profile_query
 from app.queries import Queries
 from core.budget import FundYear, Kommune, Node, Side
 from core.facts import KID_BANDS, PERSONAS
+from core.tax import Business
 
 HERE = Path(__file__).parent
 # The one public address (budsjettlupa.no). Set on Fly once the certificate and DNS are live; every other
@@ -32,6 +33,7 @@ app = FastAPI(title="Statsbudsjettet 2027", docs_url=None, redoc_url=None, opena
 app.add_middleware(GZipMiddleware, minimum_size=1000)
 # On every page, for agents: the llms.txt guide and the API schema (service-desc, RFC 8631)
 LINK = '</llms.txt>; rel="alternate"; type="text/markdown", </api/openapi.json>; rel="service-desc"; type="application/json"'
+
 
 @app.middleware("http")
 async def headers(request: Request, call_next: Callable[[Request], Awaitable[Response]]) -> Response:
@@ -66,10 +68,14 @@ app.mount("/api", api.build(queries))
 telemetry.setup(app)
 
 
+# Labels for the kinds of business income in the "For deg" form
+BUSINESS = {Business.ANNEN: "Annen næring", Business.JORDBRUK: "Jordbruk", Business.FISKE: "Fiske og fangst"}
+
+
 def template_context(request: Request) -> dict[str, object]:
     """Names every template can use."""
     return {
-        "PERSONAS": PERSONAS, "KID_BANDS": KID_BANDS, "Side": Side,
+        "PERSONAS": PERSONAS, "KID_BANDS": KID_BANDS, "BUSINESS": BUSINESS, "Side": Side,
         "group_slot": group_slot, "static_url": static_url,
         "canonical": f"https://{CANONICAL_HOST}{request.url.path}" if CANONICAL_HOST else "",
     }
@@ -136,6 +142,8 @@ def index(
     barn: QL = None,
     lonn: QL = None,
     pensjon: QL = None,
+    naering: QL = None,
+    naering_type: QL = None,
     skatt: Q = "150000",
     side: Q = "utgift",
     sti: Q = "",
@@ -144,7 +152,7 @@ def index(
     tax_kroner = kroner(skatt)
     return templates.TemplateResponse(request, "index.html", {
         "o": queries.overview(),
-        "m": queries.meg(profile_from(meg, barn, lonn, pensjon)),
+        "m": queries.meg(profile_from(meg, barn, lonn, pensjon, naering, naering_type)),
         "tax_kroner": tax_kroner,
         "receipt": queries.receipt(tax_kroner),
         "income": queries.income(),
@@ -157,9 +165,18 @@ def index(
 
 
 @app.get("/meg", response_class=HTMLResponse)
-def meg_fragment(request: Request, meg: QL = None, barn: QL = None, lonn: QL = None, pensjon: QL = None, del_: Annotated[str, Query(alias="del")] = "") -> Response:
+def meg_fragment(
+    request: Request,
+    meg: QL = None,
+    barn: QL = None,
+    lonn: QL = None,
+    pensjon: QL = None,
+    naering: QL = None,
+    naering_type: QL = None,
+    del_: Annotated[str, Query(alias="del")] = "",
+) -> Response:
     """The "For deg" section. del=resultat returns only the result, so typing in the form keeps focus."""
-    profile = profile_from(meg, barn, lonn, pensjon)
+    profile = profile_from(meg, barn, lonn, pensjon, naering, naering_type)
     share = f"/?{profile_query(profile)}#meg"
     if _not_htmx(request):
         return RedirectResponse(share)

@@ -24,7 +24,7 @@ A public explainer of Norway's 2027 state budget proposal (Prop. 1 S (2026–202
 ### HTMX and URLs
 
 - Every fragment route (/meg, /kvittering, /utforsk, /kommune) redirects to the full page with the same query when called without the `HX-Request` header, so links and no-JS visits work.
-- /meg answers with `HX-Replace-Url: /?meg=…&barn=…&lonn=…&pensjon=…#meg`, so the address bar always holds a shareable link (src/adapters/web/main.py:161). The form's visible inputs are turned into these four parameters in charts.js (`htmx:configRequest`).
+- /meg answers with `HX-Replace-Url: /?meg=…&barn=…&lonn=…&pensjon=…#meg`, so the address bar always holds a shareable link (src/adapters/web/main.py, `meg_fragment`). With business income the link also carries `naering=…&naering_type=…` (jordbruk, fiske or annen per adult); without it, links look as before (src/adapters/web/params.py, `profile_query`). The form's visible inputs are turned into these parameters in charts.js (`htmx:configRequest`).
 - Query parsing never fails: unknown personas are dropped, numbers are digits-only and capped (src/adapters/web/params.py, `ProfileQuery`).
 
 ## 2. Sources on regjeringen.no
@@ -86,6 +86,14 @@ Site quirks:
 - Source: Prop. 1 LS (2026–2027) tabell 1.5 "Skattesatser, fradrag og beløpsgrenser i 2026 og forslag for 2027", pp. 26–30. https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/
 - Key 2027 changes: personfradrag 114 540 → 120 180; trygdeavgift on wages 7,6 → 7,4 %; trinnskatt thresholds +4,0 % with unchanged rates; the pension tax credit max 39 100 → 40 750.
 - Official comparisons use the reference system, meaning 2026 rules adjusted for expected wage growth (4,0 %, p. 80) and pension growth (3,35 %, p. 79). Compared at the same nominal income instead, the cut looks several times larger.
+- Business income (næringsinntekt), checked 2026-10-07 against Prop. 1 LS and the law text on lovdata.no:
+  - Trygdeavgift is 10,8 → 10,6 % on business income (tabell 1.5 p. 26, skattevedtaket § 8 p. 263). Fiske, fangst and barnepass pay the wage rate, 7,6 → 7,4 %, because they also pay a produktavgift (fotnote 7, p. 26). Jordbruk has no rate of its own, so it pays 10,6 %.
+  - No minstefradrag: "Selvstendig næringsdrivende får fradrag for faktiske kostnader i næringsvirksomheten" (p. 79).
+  - Income from an enkeltpersonforetak above the skjermingsfradrag is beregnet personinntekt and carries trinnskatt and trygdeavgift (p. 52).
+  - Jordbruksfradrag: 100 % up to 99 600 kr, then 38 % of the income above, at most 208 900 kr in total, the same in 2026 and 2027 (tabell 1.5 p. 28; skatteloven § 8-1 femte ledd, https://lovdata.no/dokument/NL/lov/1999-03-26-14/%C2%A78-1). Keeping it nominal counts as a change against the reference system (p. 80).
+  - Fiskerfradrag: 30 % of net income from fishing, at most 160 000 kr, for at least 130 days of fishing in the year (skatteloven § 6-60, https://lovdata.no/dokument/NL/lov/1999-03-26-14/%C2%A76-60).
+  - Both deductions reduce only alminnelig inntekt (22 %). Skatteloven § 12-11 (2) b adds them back when computing beregnet personinntekt ("Følgende poster legges til: … særskilt fradrag for fiskere og fangstfolk etter § 6-60 … jordbruksfradrag fastsatt etter § 8-1 femte ledd"), so they do not lower trinnskatt or trygdeavgift. https://lovdata.no/dokument/NL/lov/1999-03-26-14/%C2%A712-11
+  - Not stated anywhere we have read: which growth rate the reference system uses for the jordbruksfradrag.
 - The calculator (src/core/tax.py:88 and :139) reproduces tabell 2.1 (2026 tax at 200 000 / 650 000 / 1 000 000 kr: 15 200 / 160 983 / 305 870) exactly. It also gives −1 738 kr at 750 000 kr (official: "om lag 1 800"), and −998 kr for a pension between 350 000 and 450 000 kr (pension relief "inntil 750 kr" plus the general personfradrag increase).
 
 ## 8. Hosting

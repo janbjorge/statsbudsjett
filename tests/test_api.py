@@ -30,6 +30,14 @@ def test_meg_gives_the_same_tax_change_as_the_page() -> None:
     assert fact["kilde"]["url"].startswith("https://www.regjeringen.no/")
 
 
+def test_meg_takes_business_income() -> None:
+    # 117 290,70 kr worked by hand from Prop. 1 LS tabell 1.5 and skatteloven § 8-1 (tests/test_tax.py)
+    r = client.get("/api/meg?meg=bonde&naering=550000&naering_type=jordbruk").json()
+    assert r["profil"]["voksne"] == [{"lonn_kr": 0, "pensjon_kr": 0, "naering_kr": 550_000, "naering_type": "jordbruk"}]
+    assert round(r["skatt"]["skatt_2027_kr"], 2) == 117_290.70
+    assert r["lenke"].endswith("naering=550000&naering_type=jordbruk#meg")
+
+
 def test_tree_paths_lead_one_level_down() -> None:
     top = client.get("/api/utforsk").json()
     child = top["under"][0]

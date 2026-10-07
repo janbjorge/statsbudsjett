@@ -37,6 +37,8 @@ document.addEventListener("htmx:configRequest", ev => {
     barn: [...form.querySelectorAll("[data-kid]")].map(digits).join(","),
     lonn: [...form.querySelectorAll('[data-money="lonn"]')].map(digits).join(","),
     pensjon: [...form.querySelectorAll('[data-money="pensjon"]')].map(digits).join(","),
+    naering: [...form.querySelectorAll('[data-money="naering"]')].map(digits).join(","),
+    naering_type: [...form.querySelectorAll("[data-business-kind]")].map(s => s.value).join(","),
   };
   for (const [k, v] of Object.entries(params)) {
     if (ev.detail.parameters instanceof FormData) ev.detail.parameters.set(k, v);

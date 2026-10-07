@@ -263,6 +263,16 @@
       "note": "Tabell 1.5; sats 30 pst. begge år."
     },
     {
+      "key": "fiskerfradrag_sats",
+      "label_nb": "Særskilt fradrag for fiskere og fangstfolk, sats",
+      "y2026": 30,
+      "y2027": 30,
+      "unit": "pst",
+      "page": 28,
+      "quote": "Sats..................................................................................... 30 pst. 30 pst. -",
+      "note": "Tabell 1.5. Gir fradrag bare i alminnelig inntekt; skatteloven § 12-11 (2) b legger det til igjen i beregnet personinntekt."
+    },
+    {
       "key": "jordbruksfradrag_inntektsuavhengig",
       "label_nb": "Jordbruksfradrag, inntektsuavhengig",
       "y2026": 99600,
@@ -271,6 +281,16 @@
       "page": 28,
       "quote": "Inntektsuavhengig fradrag .............................................. 99 600 kr 99 600 kr -",
       "note": "Tabell 1.5; sats utover dette 38 pst."
+    },
+    {
+      "key": "jordbruksfradrag_sats",
+      "label_nb": "Jordbruksfradrag, sats utover inntektsuavhengig fradrag",
+      "y2026": 38,
+      "y2027": 38,
+      "unit": "pst",
+      "page": 28,
+      "quote": "Sats utover inntektsuavhengig fradrag .......................... 38 pst. 38 pst. -",
+      "note": "Tabell 1.5. Gir fradrag bare i alminnelig inntekt; skatteloven § 12-11 (2) b legger det til igjen i beregnet personinntekt."
     },
     {
       "key": "jordbruksfradrag_maks",

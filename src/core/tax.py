@@ -1,4 +1,4 @@
-"""Income tax for wage and pension income under 2026 rules, 2027 rules and the 2027 reference system.
+"""Income tax for wage, pension and business income under 2026 rules, 2027 rules and the 2027 reference system.
 
 The rules come from Prop. 1 LS (2026–2027) tabell 1.5 (datasets/meg.json). The engine reproduces
 tabell 2.1 and the official example of about −1 800 kr at 750 000 kr; see tests/test_tax.py.
@@ -6,8 +6,17 @@ What it leaves out is listed in METHOD.md §5.
 """
 
 from dataclasses import dataclass
+from enum import StrEnum
 
 type Year = int
+
+
+class Business(StrEnum):
+    """What kind of business income, which sets the trygdeavgift rate and the special deduction (FACTS.md §7)."""
+
+    ANNEN = "annen"
+    JORDBRUK = "jordbruk"
+    FISKE = "fiske"
 
 
 @dataclass(frozen=True, slots=True)
@@ -26,6 +35,8 @@ class TaxRules:
     minstefradrag_pensjon_max: float
     trygdeavgift_lonn: float
     trygdeavgift_pensjon: float
+    trygdeavgift_naering: float
+    trygdeavgift_fiske: float
     trygdeavgift_nedre: float
     trygdeavgift_opptrapping: float
     trinnskatt: tuple[Bracket, ...]
@@ -34,6 +45,11 @@ class TaxRules:
     pensjonsfradrag_sats1: float
     pensjonsfradrag_grense2: float
     pensjonsfradrag_sats2: float
+    jordbruksfradrag_bunn: float
+    jordbruksfradrag_sats: float
+    jordbruksfradrag_maks: float
+    fiskerfradrag_sats: float
+    fiskerfradrag_maks: float
 
 
 @dataclass(frozen=True, slots=True)
@@ -73,6 +89,8 @@ class TaxTable:
             minstefradrag_pensjon_max=g("minstefradrag_pensjon_ovre") * pension_index,
             trygdeavgift_lonn=g("trygdeavgift_lonn"),
             trygdeavgift_pensjon=g("trygdeavgift_pensjon"),
+            trygdeavgift_naering=g("trygdeavgift_annen_naering"),
+            trygdeavgift_fiske=g("trygdeavgift_fiske_barnepass"),
             trygdeavgift_nedre=g("trygdeavgift_nedre_grense") * wage_index,
             trygdeavgift_opptrapping=g("trygdeavgift_opptrappingssats"),
             trinnskatt=tuple(Bracket(b["from"] * wage_index, b["rate"]) for b in self.trinnskatt[y]),
@@ -81,6 +99,11 @@ class TaxTable:
             pensjonsfradrag_sats1=g("pensjonsskattefradrag_trinn1_sats"),
             pensjonsfradrag_grense2=g("pensjonsskattefradrag_trinn2_grense") * pension_index,
             pensjonsfradrag_sats2=g("pensjonsskattefradrag_trinn2_sats"),
+            jordbruksfradrag_bunn=g("jordbruksfradrag_inntektsuavhengig") * wage_index,
+            jordbruksfradrag_sats=g("jordbruksfradrag_sats"),
+            jordbruksfradrag_maks=g("jordbruksfradrag_maks") * wage_index,
+            fiskerfradrag_sats=g("fiskerfradrag_sats"),
+            fiskerfradrag_maks=g("fiskerfradrag_ovre") * wage_index,
         )
 
     def reference_2027(self) -> TaxRules:
@@ -88,15 +111,33 @@ class TaxTable:
         return self.rules(2026, 1 + self.growth.wage / 100, 1 + self.growth.pension / 100)
 
 
-def tax(rules: TaxRules, wage: float = 0, pension: float = 0) -> float:
-    """Total income tax for one person with standard deductions."""
+def special_deduction(rules: TaxRules, business: float, kind: Business) -> float:
+    """Jordbruksfradrag (skatteloven § 8-1 femte ledd) or fiskerfradrag (§ 6-60), in alminnelig inntekt only."""
+    match kind:
+        case Business.JORDBRUK:
+            above = max(0, business - rules.jordbruksfradrag_bunn) * rules.jordbruksfradrag_sats / 100
+            return min(min(business, rules.jordbruksfradrag_bunn) + above, rules.jordbruksfradrag_maks)
+        case Business.FISKE:
+            return min(business * rules.fiskerfradrag_sats / 100, rules.fiskerfradrag_maks)
+        case Business.ANNEN:
+            return 0.0
+
+
+def tax(rules: TaxRules, wage: float = 0, pension: float = 0, business: float = 0, kind: Business = Business.ANNEN) -> float:
+    """Total income tax for one person with standard deductions.
+
+    Business income gets no minstefradrag and counts in full as personinntekt; the skjermingsfradrag
+    is left out (METHOD.md §5). The special deduction lowers alminnelig inntekt only (skatteloven § 12-11 (2) b).
+    """
     minstefradrag = min(wage * rules.minstefradrag_lonn / 100, rules.minstefradrag_lonn_max) + min(
         pension * rules.minstefradrag_pensjon / 100, rules.minstefradrag_pensjon_max
     )
-    alminnelig = max(0, wage + pension - minstefradrag - rules.personfradrag) * rules.alminnelig / 100
+    fradrag = minstefradrag + special_deduction(rules, business, kind) + rules.personfradrag
+    alminnelig = max(0, wage + pension + business - fradrag) * rules.alminnelig / 100
 
-    personinntekt = wage + pension
-    raw = wage * rules.trygdeavgift_lonn / 100 + pension * rules.trygdeavgift_pensjon / 100
+    personinntekt = wage + pension + business
+    business_rate = rules.trygdeavgift_fiske if kind is Business.FISKE else rules.trygdeavgift_naering
+    raw = wage * rules.trygdeavgift_lonn / 100 + pension * rules.trygdeavgift_pensjon / 100 + business * business_rate / 100
     # Phase-in: never more than the opptrappingssats of income above the lower limit
     trygdeavgift = 0.0 if personinntekt <= rules.trygdeavgift_nedre else min(
         raw, (personinntekt - rules.trygdeavgift_nedre) * rules.trygdeavgift_opptrapping / 100
@@ -122,6 +163,8 @@ def tax(rules: TaxRules, wage: float = 0, pension: float = 0) -> float:
 class Adult:
     wage: float = 0
     pension: float = 0
+    business: float = 0
+    business_kind: Business = Business.ANNEN
 
 
 @dataclass(frozen=True, slots=True)
@@ -143,7 +186,7 @@ def household_effect(table: TaxTable, adults: list[Adult]) -> TaxEffect:
     """Tax in 2027 for the household and the change against the reference system."""
     r27, ref = table.rules(2027), table.reference_2027()
     return TaxEffect(
-        tax_2027=sum(tax(r27, a.wage, a.pension) for a in adults),
-        tax_reference=sum(tax(ref, a.wage, a.pension) for a in adults),
-        income=sum(a.wage + a.pension for a in adults),
+        tax_2027=sum(tax(r27, a.wage, a.pension, a.business, a.business_kind) for a in adults),
+        tax_reference=sum(tax(ref, a.wage, a.pension, a.business, a.business_kind) for a in adults),
+        income=sum(a.wage + a.pension + a.business for a in adults),
     )

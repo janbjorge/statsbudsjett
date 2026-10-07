@@ -15,6 +15,7 @@ from adapters.web.params import Kroner, ProfileQuery, profile_query
 from app.queries import Queries
 from core import budget as b
 from core.facts import Effect, Fact, Kind
+from core.tax import Business
 
 DESCRIPTION = """\
 Norway's 2027 state budget proposal (Prop. 1 S (2026–2027), presented 7 October 2026), as JSON.
@@ -164,6 +165,8 @@ class FactOut(Out):
 class Adult(Out):
     lonn_kr: float
     pensjon_kr: float
+    naering_kr: float
+    naering_type: Business = Field(description="jordbruk, fiske (fiske og fangst) or annen; sets the trygdeavgift rate and the special deduction")
 
 
 class ProfileOut(Out):
@@ -173,7 +176,7 @@ class ProfileOut(Out):
 
 
 class Tax(Out):
-    """Calculated by this site from the tax rates in Prop. 1 LS, for wage and pension income only."""
+    """Calculated by this site from the tax rates in Prop. 1 LS, for wage, pension and business income (METHOD.md §5)."""
 
     skatt_2027_kr: float
     skatt_referanse_kr: float
@@ -327,7 +330,8 @@ def build(queries: Queries) -> FastAPI:
         summary="What the budget changes for a household: tax and the facts that apply",
         description=(
             "Tax change is measured against 2026 rules adjusted for expected wage and pension growth, as the Ministry of Finance does. "
-            "Each parameter takes comma-separated values (or repeats). With neither `lonn` nor `pensjon`, one adult earning 500 000 kr is assumed."
+            "Each parameter takes comma-separated values (or repeats). With none of `lonn`, `pensjon` and `naering`, one adult earning 500 000 kr is assumed. "
+            "Business income leaves out the skjermingsfradrag."
         ),
     )
     def meg(q: Annotated[ProfileQuery, Query()]) -> Meg:
@@ -336,7 +340,10 @@ def build(queries: Queries) -> FastAPI:
         return Meg(
             profil=ProfileOut(
                 meg=list(q.meg), barn=profile.kids,
-                voksne=[Adult(lonn_kr=a.wage, pensjon_kr=a.pension) for a in profile.adults],
+                voksne=[
+                    Adult(lonn_kr=a.wage, pensjon_kr=a.pension, naering_kr=a.business, naering_type=a.business_kind)
+                    for a in profile.adults
+                ],
             ),
             skatt=Tax(
                 skatt_2027_kr=m.tax.tax_2027, skatt_referanse_kr=m.tax.tax_reference, endring_kr=m.tax.change,

@@ -9,6 +9,7 @@ from adapters.web.main import app, profile_from, profile_query, queries
 client = TestClient(app)
 HX = {"HX-Request": "true"}
 FAMILY = "meg=barnefamilie,arbeidstaker,bilist&barn=0,2,0,0&lonn=650000,650000&pensjon=0,0"
+FAMILY_ARGS = ("barnefamilie,arbeidstaker,bilist", "0,2,0,0", "650000,650000", "0,0")
 
 
 def test_front_page_renders_every_section() -> None:
@@ -37,13 +38,44 @@ def test_fragments_redirect_to_the_full_page_without_htmx() -> None:
 
 
 def test_bad_input_never_errors() -> None:
-    for url in ("/?meg=hacker,<script>&barn=x,y&lonn=-5,abc&pensjon=9999999999999", "/utforsk?sti=g:Finnes ikke&kap=999999", "/sok?q=%3Cscript%3E", "/kommune?k=Atlantis"):
+    for url in ("/?meg=hacker,<script>&barn=x,y&lonn=-5,abc&pensjon=9999999999999&naering=x&naering_type=<b>", "/utforsk?sti=g:Finnes ikke&kap=999999", "/sok?q=%3Cscript%3E", "/kommune?k=Atlantis"):
         assert client.get(url, headers=HX).status_code == 200, url
 
 
 def test_profile_round_trip() -> None:
     p = profile_from("pensjonist,student", "1,0,2,0", "100000,0", "250000,300000")
     assert profile_from(**dict(pair.split("=") for pair in profile_query(p).replace("%2C", ",").split("&"))) == p
+
+
+FARMER = "meg=bonde&barn=0,0,0,0&lonn=0&pensjon=0&naering=550000&naering_type=jordbruk"
+
+
+def test_farmer_link_shows_the_farm_tax() -> None:
+    # 117 290,70 kr worked by hand from Prop. 1 LS tabell 1.5 and skatteloven § 8-1 (tests/test_tax.py)
+    html = client.get(f"/?{FARMER}").text
+    assert re.search(r"om lag <b>117\W291\Wkr</b>", html)
+    assert '<option value="jordbruk" selected>' in html
+
+
+def test_bonde_preset_is_a_farmer_not_a_wage_earner() -> None:
+    html = client.get("/").text
+    assert "naering=550000&amp;naering_type=jordbruk" in html
+
+
+def test_business_profile_round_trip() -> None:
+    p = profile_from("bonde", "0,0,0,0", "0,300000", "0,0", "550000,0", "jordbruk,annen")
+    query = profile_query(p)
+    assert "naering_type=jordbruk%2Cannen" in query
+    assert profile_from(**dict(pair.split("=") for pair in query.replace("%2C", ",").split("&"))) == p
+
+
+def test_links_without_business_income_stay_as_before() -> None:
+    assert "naering" not in profile_query(profile_from(*FAMILY_ARGS))
+
+
+def test_unknown_business_kind_is_annen_naering() -> None:
+    (adult,) = profile_from(None, None, None, None, "400000", "hacker").adults
+    assert (adult.business, adult.business_kind) == (400_000, "annen")
 
 
 def test_flows_page_and_downloads() -> None:

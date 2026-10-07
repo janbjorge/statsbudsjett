@@ -2279,9 +2279,19 @@
         "y2027": 160000,
         "page": 28
       },
+      "fiskerfradrag_sats": {
+        "y2026": 30,
+        "y2027": 30,
+        "page": 28
+      },
       "jordbruksfradrag_inntektsuavhengig": {
         "y2026": 99600,
         "y2027": 99600,
+        "page": 28
+      },
+      "jordbruksfradrag_sats": {
+        "y2026": 38,
+        "y2027": 38,
         "page": 28
       },
       "jordbruksfradrag_maks": {

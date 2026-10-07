@@ -4,7 +4,7 @@
 <div class="chips" style="margin:-8px 0 20px"><span class="muted small" style="align-self:center">Eksempler:</span>
   {% for name, q in [
     ("Familie med to små barn", "meg=barnefamilie,arbeidstaker,bilist&barn=0,2,0,0&lonn=650000,650000&pensjon=0,0"),
-    ("Bonde", "meg=bonde,naeringsdrivende,bilist,distrikt_nord&barn=0,0,0,0&lonn=550000&pensjon=0"),
+    ("Bonde", "meg=bonde,naeringsdrivende,bilist,distrikt_nord&barn=0,0,0,0&lonn=0&pensjon=0&naering=550000&naering_type=jordbruk"),
     ("Pensjonist", "meg=pensjonist&barn=0,0,0,0&lonn=0&pensjon=320000"),
     ("Student", "meg=student&barn=0,0,0,0&lonn=120000&pensjon=0"),
   ] %}
@@ -33,8 +33,9 @@
       <h3>Inntekt i året, før skatt</h3>
       <details class="help">
         <summary><span aria-hidden="true">?</span> Hva skal jeg skrive her?</summary>
-        <p><b>Lønn:</b> det du tjener i året før skatt, med feriepenger og overtid. Inntekt fra egen gård eller bedrift
-          (næringsinntekt) er ikke med i beregningen ennå.</p>
+        <p><b>Lønn:</b> det du tjener i året før skatt, med feriepenger og overtid.</p>
+        <p><b>Næringsinntekt:</b> overskuddet fra egen gård, båt eller enkeltpersonforetak, etter kostnader.
+          Velg type: jordbruk og fiske har egne fradrag, og fiske har lavere trygdeavgift. Driver du aksjeselskap, er det lønn og utbytte du tar ut som teller, ikke dette feltet.</p>
         <p><b>Pensjon:</b> alderspensjon fra Nav, AFP og tjenestepensjon. Pensjon skattes lavere enn lønn og har derfor et eget felt.
           Har du både lønn og pensjon, fyll ut begge. Uføretrygd er ikke med i beregningen ennå.</p>
         <p>Bor dere to voksne sammen, fyll ut for begge. Bor du alene, la den andre stå tom.</p>
@@ -46,6 +47,12 @@
           <div class="who">{{ "Du" if i == 0 else "Voksen nr. 2 (valgfritt)" }}</div>
           <label>Lønn<input inputmode="numeric" name="lonn" data-money="lonn" value="{{ a.wage|nb if a else '' }}" placeholder="0"></label>
           <label>Pensjon<input inputmode="numeric" name="pensjon" data-money="pensjon" value="{{ a.pension|nb if a else '' }}" placeholder="0"></label>
+          <label>Næringsinntekt<input inputmode="numeric" name="naering" data-money="naering" value="{{ a.business|nb if a else '' }}" placeholder="0"></label>
+          <label>Type næring<select name="naering_type" data-business-kind>
+            {% for kind, label in BUSINESS.items() %}
+            <option value="{{ kind }}" {{ "selected" if a and a.business_kind == kind }}>{{ label }}</option>
+            {% endfor %}
+          </select></label>
         </div>
         {% endfor %}
       </div>
