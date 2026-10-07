@@ -78,19 +78,25 @@ function drawTreemap(el) {
   }));
 }
 
-// ---------- every kommune as a dot ----------
+// ---------- every kommune as a dot: money per person against population ----------
 function drawStrip(el) {
   const all = JSON.parse(el.dataset.kommuner), selected = el.dataset.selected, avg = +el.dataset.average;
-  const W = el.clientWidth || 800, H = 150, m = { l: 8, r: 8, t: 26, b: 28 };
+  const W = el.clientWidth || 800, H = 300, m = { l: 64, r: 12, t: 26, b: 46 };
   const [lo, hi] = d3.extent(all, k => k.pp);
+  const [plo, phi] = d3.extent(all, k => k.pop);
   const x = d3.scaleLog().domain([lo * 0.95, hi * 1.05]).range([m.l, W - m.r]);
-  // Deterministic jitter so dots stay put between redraws
-  const jit = k => { let h = 0; for (const c of k.nr) h = (h * 31 + c.charCodeAt(0)) % 997; return h / 997; };
-  const y = k => m.t + 8 + jit(k) * (H - m.t - m.b - 16);
+  const yScale = d3.scaleLog().domain([plo * 0.8, phi * 1.25]).range([H - m.b, m.t]);
+  const y = k => yScale(k.pop);
   const svg = d3.create("svg").attr("viewBox", [0, 0, W, H]);
   const ticks = [60, 80, 100, 150, 200, 300, 500].map(v => v * 1000).filter(v => v > lo * 0.95 && v < hi * 1.05 && (W >= 500 || [100000, 200000, 500000].includes(v)));
   svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - m.b})`)
     .call(d3.axisBottom(x).tickValues(ticks).tickFormat(v => nb.format(v / 1000) + " 000 kr").tickSizeOuter(0));
+  const yTicks = [1000, 10000, 100000, 1000000].filter(v => v > plo * 0.8 && v < phi * 1.25);
+  svg.append("g").attr("class", "axis").attr("transform", `translate(${m.l},0)`)
+    .call(d3.axisLeft(yScale).tickValues(yTicks).tickFormat(v => nb.format(v)).tickSizeOuter(0));
+  const label = (t, attrs) => { const el = svg.append("text").attr("font-size", 12).attr("fill", cssVar("--text-muted")).text(t); for (const [k, v] of Object.entries(attrs)) el.attr(k, v); };
+  label("Frie inntekter per innbygger →", { x: W - m.r, y: H - 8, "text-anchor": "end" });
+  label("↑ Innbyggere", { x: 0, y: 12 });
   svg.append("line").attr("x1", x(avg)).attr("x2", x(avg)).attr("y1", m.t - 8).attr("y2", H - m.b).attr("stroke", cssVar("--text-muted"));
   svg.append("text").attr("x", x(avg)).attr("y", m.t - 12).attr("text-anchor", "middle").attr("font-size", 12).attr("fill", cssVar("--text-muted")).text("snitt");
   const pick = k => {
