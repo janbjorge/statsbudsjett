@@ -35,16 +35,24 @@
       <h3>Inntekt i året, før skatt</h3>
       <input type="hidden" name="lonn" id="meg-lonn-value">
       <input type="hidden" name="pensjon" id="meg-pensjon-value">
+      <details class="help">
+        <summary><span aria-hidden="true">?</span> Hva skal jeg skrive her?</summary>
+        <p><b>Lønn:</b> det du tjener i året før skatt, med feriepenger og overtid. Inntekt fra egen gård eller bedrift
+          (næringsinntekt) er ikke med i beregningen ennå.</p>
+        <p><b>Pensjon:</b> alderspensjon fra Nav, AFP og tjenestepensjon. Pensjon skattes lavere enn lønn, derfor eget felt.
+          Har du både lønn og pensjon, fyll ut begge. Uføretrygd er ikke med i beregningen ennå.</p>
+        <p>Bor dere to voksne sammen, fyll ut for begge. Bor du alene, la den andre stå tom.</p>
+      </details>
       <div class="money">
         {% for i in range(2) %}
         {% set a = p.adults[i] if i < p.adults|length else none %}
         <div class="adult">
-          <label>{{ "Lønn" if i == 0 else "Voksen nr. 2: lønn" }}<input inputmode="numeric" data-money="lonn" value="{{ a.wage|nb if a else '' }}" placeholder="0"></label>
+          <div class="who">{{ "Du" if i == 0 else "Voksen nr. 2 (valgfritt)" }}</div>
+          <label>Lønn<input inputmode="numeric" data-money="lonn" value="{{ a.wage|nb if a else '' }}" placeholder="0"></label>
           <label>Pensjon<input inputmode="numeric" data-money="pensjon" value="{{ a.pension|nb if a else '' }}" placeholder="0"></label>
         </div>
         {% endfor %}
       </div>
-      <p class="note" style="margin:6px 0 0">La voksen nr. 2 stå tom hvis du bor alene.</p>
     </div>
     <noscript><button type="submit">Vis</button></noscript>
     <button class="share" type="button" data-copy-url>Kopier lenke til valgene dine</button>

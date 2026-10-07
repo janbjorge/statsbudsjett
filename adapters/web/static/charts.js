@@ -153,9 +153,25 @@ function drawAll() {
   document.querySelectorAll(".treemap[data-nodes]").forEach(drawTreemap);
   document.querySelectorAll(".strip[data-kommuner]").forEach(drawStrip);
   document.querySelectorAll(".fund[data-fund]").forEach(drawFund);
+  document.dispatchEvent(new Event("charts:redraw"));
 }
+
+// Header menu: close on a pick, an outside click or Escape
+document.addEventListener("click", ev => {
+  const menu = document.querySelector("nav.top .more");
+  if (menu?.open && (!menu.contains(ev.target) || ev.target.closest(".menu a"))) menu.open = false;
+});
+document.addEventListener("keydown", ev => {
+  if (ev.key === "Escape") document.querySelector("nav.top .more")?.removeAttribute("open");
+});
 let resizeTimer;
-addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(drawAll, 150); });
+// Mobile browsers fire resize when the address bar hides; only a width change needs a redraw
+let lastWidth = innerWidth;
+addEventListener("resize", () => {
+  if (innerWidth === lastWidth) return;
+  lastWidth = innerWidth;
+  clearTimeout(resizeTimer); resizeTimer = setTimeout(drawAll, 150);
+});
 document.addEventListener("htmx:afterSettle", drawAll);
 
 const isDark = () => document.documentElement.dataset.theme === "dark" ||

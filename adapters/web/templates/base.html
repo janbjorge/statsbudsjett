@@ -9,21 +9,34 @@
 <script src="/static/htmx.min.js" defer></script>
 <script src="/static/d3.min.js" defer></script>
 <script src="/static/charts.js" defer></script>
+{% block head %}{% endblock %}
 </head>
 <body>
 <nav class="top" aria-label="Seksjoner">
   <div class="in">
     <a class="brand" href="/#oversikt">Statsbudsjettet 2027</a>
-    <a href="/#meg">For deg</a>
-    <a href="/#skatt">Skatten din</a>
-    <a href="/#inntekter">Inntekter</a>
-    <a href="/#utforsk">Utforsk</a>
-    <a href="/#endringer">Endringer</a>
-    <a href="/#kommune">Kommunen din</a>
-    <a href="/#olje">Oljepengene</a>
-    <a href="/flyt">Pengestrømmen</a>
-    <a href="/#feil">Fant du en feil?</a>
-    <a href="/#ordliste">Ordliste</a>
+    <div class="nav-links">
+      <a href="/#meg">For deg</a>
+      <a href="/#skatt">Skatten din</a>
+      <a href="/#utforsk">Utforsk</a>
+      <a href="/#kommune">Kommunen din</a>
+      <a href="/flyt"{% if request.url.path == "/flyt" %} aria-current="page"{% endif %}>Pengestrømmen</a>
+    </div>
+    <details class="more">
+      <summary><span class="wide">Mer ▾</span><span class="narrow">Meny ☰</span></summary>
+      <div class="menu">
+        <a class="p" href="/#meg">For deg</a>
+        <a class="p" href="/#skatt">Skatten din</a>
+        <a class="p" href="/#utforsk">Utforsk</a>
+        <a class="p" href="/#kommune">Kommunen din</a>
+        <a class="p" href="/flyt">Pengestrømmen</a>
+        <a href="/#inntekter">Hvor pengene kommer fra</a>
+        <a href="/#endringer">Største endringer</a>
+        <a href="/#olje">Oljepengene</a>
+        <a href="/#ordliste">Ordliste</a>
+        <a href="/#feil">Fant du en feil?</a>
+      </div>
+    </details>
     <button class="theme" id="theme" type="button">Mørk</button>
   </div>
 </nav>

@@ -1,398 +1,48 @@
-<!doctype html>
-<html lang="nb">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Statsbudsjettet 2027 – hvor pengene kommer fra og går til</title>
-<style>
-.viz-root {
-  color-scheme: light;
-  --surface-0: #f4f3f0;
-  --surface-1: #fcfcfb;
-  --text-primary: #0b0b0b;
-  --text-secondary: #52514e;
-  --text-muted: #7a7974;
-  --hairline: #e4e3df;
-  --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; --series-4: #eda100;
-  --series-5: #e87ba4; --series-6: #008300; --series-7: #4a3aa7; --series-8: #e34948;
-  --other: #a3a29c;
-  --up: #2a78d6; --down: #e34948;
-}
-@media (prefers-color-scheme: dark) {
-  :root:where(:not([data-theme="light"])) .viz-root {
-    color-scheme: dark;
-    --surface-0: #121211; --surface-1: #1a1a19;
-    --text-primary: #ffffff; --text-secondary: #c3c2b7; --text-muted: #8f8e86;
-    --hairline: #2e2e2b;
-    --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
-    --series-5: #d55181; --series-6: #008300; --series-7: #9085e9; --series-8: #e66767;
-    --other: #6b6a65;
-    --up: #3987e5; --down: #e66767;
-  }
-}
-:root[data-theme="dark"] .viz-root {
-  color-scheme: dark;
-  --surface-0: #121211; --surface-1: #1a1a19;
-  --text-primary: #ffffff; --text-secondary: #c3c2b7; --text-muted: #8f8e86;
-  --hairline: #2e2e2b;
-  --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
-  --series-5: #d55181; --series-6: #008300; --series-7: #9085e9; --series-8: #e66767;
-  --other: #6b6a65;
-  --up: #3987e5; --down: #e66767;
-}
-* { box-sizing: border-box; }
-body { margin: 0; }
-.viz-root {
-  background: var(--surface-0); color: var(--text-primary);
-  font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
-  font-variant-numeric: tabular-nums;
-  min-height: 100vh; padding: 40px 32px 80px;
-}
-main { max-width: 1480px; margin: 0 auto; }
-header h1 { font-size: 28px; font-weight: 650; letter-spacing: -0.01em; margin: 0 0 6px; }
-header p { color: var(--text-secondary); margin: 0; max-width: 820px; }
-.toolbar { display: flex; gap: 12px; align-items: center; margin: 24px 0 16px; flex-wrap: wrap; }
-.seg { display: inline-flex; background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 8px; padding: 2px; }
-.seg button {
-  font: inherit; color: var(--text-secondary); background: none; border: 0;
-  padding: 6px 14px; border-radius: 6px; cursor: pointer;
-}
-.seg button[aria-pressed="true"] { background: var(--surface-0); color: var(--text-primary); font-weight: 600; }
-.tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 24px 0; }
-.tile { background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 12px; padding: 16px 20px; }
-.tile .k { color: var(--text-secondary); font-size: 13px; }
-.tile .v { font-size: 26px; font-weight: 650; margin-top: 2px; }
-.tile .s { color: var(--text-muted); font-size: 13px; }
-section.card { background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 16px; padding: 24px 28px; margin-bottom: 24px; }
-section.card h2 { font-size: 18px; font-weight: 650; margin: 0 0 2px; }
-section.card .sub { color: var(--text-secondary); margin: 0 0 16px; }
-svg { display: block; width: 100%; height: auto; overflow: visible; }
-.node-label { font-size: 12.5px; fill: var(--text-primary); }
-.node-label .val { fill: var(--text-secondary); }
-.node-label.big { font-size: 15px; font-weight: 650; }
-.link { mix-blend-mode: multiply; transition: opacity .15s; }
-:root[data-theme="dark"] .link { mix-blend-mode: screen; }
-@media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) .link { mix-blend-mode: screen; } }
-.dim .link { opacity: .12 !important; }
-.dim .link.hi { opacity: .75 !important; }
-.tip {
-  position: fixed; pointer-events: none; z-index: 10; opacity: 0; transition: opacity .1s;
-  background: var(--surface-1); color: var(--text-primary); border: 1px solid var(--hairline);
-  border-radius: 8px; padding: 8px 12px; box-shadow: 0 6px 24px rgba(0,0,0,.12); font-size: 13px; max-width: 320px;
-}
-.tip b { font-weight: 650; }
-.tip .m { color: var(--text-secondary); }
-.axis line, .axis path { stroke: var(--hairline); }
-.axis text { fill: var(--text-muted); font-size: 11.5px; }
-.zero { stroke: var(--text-muted); stroke-width: 1; }
-.row-label { font-size: 12.5px; fill: var(--text-primary); }
-.row-label.l1 { font-weight: 650; }
-.row-label.l2 { fill: var(--text-secondary); }
-.sec-label { font-size: 12px; font-weight: 650; fill: var(--text-muted); text-transform: uppercase; letter-spacing: .06em; }
-.bar-val { font-size: 12px; fill: var(--text-secondary); }
-.row-hit { fill: transparent; }
-.row-hit:hover { fill: var(--surface-0); }
-details { margin-top: 12px; color: var(--text-secondary); }
-summary { cursor: pointer; }
-table { border-collapse: collapse; margin-top: 12px; width: 100%; font-size: 13px; }
-th, td { text-align: right; padding: 4px 10px; border-bottom: 1px solid var(--hairline); }
-th:first-child, td:first-child { text-align: left; }
-th { color: var(--text-secondary); font-weight: 600; }
-footer { color: var(--text-muted); font-size: 12.5px; margin-top: 8px; max-width: 980px; }
-footer a { color: inherit; }
-</style>
-</head>
-<body>
-<div class="viz-root">
-<main>
-  <header>
-    <p style="margin:0 0 8px"><a href="/" style="color:inherit">← Tilbake til Statsbudsjettet 2027, forklart</a></p>
+{% extends "base.html" %}
+{% block title %}Pengestrømmen – Statsbudsjettet 2027{% endblock %}
+{% block head %}
+<script src="/static/d3-sankey.min.js" defer></script>
+<script src="/static/flyt.js" defer></script>
+{% endblock %}
+{% block main %}
+  <section>
+    <p class="muted" style="margin:0"><a href="/">← Statsbudsjettet 2027, forklart</a></p>
     <h1>Pengestrømmen 2026 og 2027</h1>
-    <p>Hvor pengene kommer fra og hvor de går. Budsjettet utenom olje: petroleumsinntektene går til
-      oljefondet, og overføringen fra fondet dekker gapet mellom inntekter og utgifter. Lånetransaksjoner er holdt utenfor.
-      Alle tall i milliarder kroner, løpende priser.</p>
-  </header>
-
-  <div class="tiles" id="tiles"></div>
-
-  <div class="toolbar">
-    <div class="seg" role="group" aria-label="Tema">
-      <button data-theme-set="light">Lys</button><button data-theme-set="dark">Mørk</button>
-    </div>
-  </div>
-
-  <section class="card">
-    <h2>Statsbudsjettet 2027</h2>
-    <p class="sub">Regjeringens forslag, Prop. 1 S (2026–2027)</p>
-    <div id="sankey-2027"></div>
+    <p class="lede">Hvor pengene kommer fra og hvor de går. Oljeinntektene går rett til oljefondet, og overføringen fra fondet
+      dekker gapet mellom inntekter og utgifter. Lån er holdt utenfor. Alle tall i milliarder kroner.</p>
+    <div class="grid tiles" id="tiles"></div>
   </section>
 
-  <section class="card">
-    <h2>Statsbudsjettet 2026</h2>
-    <p class="sub">Regjeringens forslag, Prop. 1 S (2025–2026). Samme skala som 2027, så bredder kan sammenlignes direkte.</p>
-    <div id="sankey-2026"></div>
-  </section>
-
-  <section class="card">
-    <h2>Endring fra 2026 til 2027</h2>
-    <p class="sub" id="diff-sub"></p>
-    <div class="toolbar" style="margin:0 0 8px">
-      <div class="seg" role="group" aria-label="Enhet">
-        <button data-unit="nok" aria-pressed="true">Milliarder kroner</button><button data-unit="pct">Prosent</button>
+  <section class="flow">
+    <div class="flow-head">
+      <h2 id="sankey-title">Statsbudsjettet 2027</h2>
+      <div class="chips" role="group" aria-label="År">
+        <button class="chip" type="button" data-year="2027" aria-pressed="true">2027</button>
+        <button class="chip" type="button" data-year="2026" aria-pressed="false">2026</button>
       </div>
     </div>
-    <div id="diff"></div>
-    <details>
-      <summary>Vis som tabell</summary>
-      <div id="table"></div>
-    </details>
+    <p class="note" id="sankey-sub">Begge år bruker samme skala, så du kan bytte år og sammenligne bredden på strømmene direkte.</p>
+    <div class="flow-info" id="flow-info" aria-live="polite"></div>
+    <div class="card hscroll"><div id="sankey"></div></div>
+    <p class="note swipe">Sveip sideveis for å se hele diagrammet.</p>
   </section>
 
-  <footer>
-    Kilde: Finansdepartementet, <a href="https://www.regjeringen.no/no/statsbudsjett/2027/statsbudsjettet-2027-tallgrunnlag-gul-bok/id3173280/">Gul bok 2027 datagrunnlag</a>
-    og <a href="https://www.regjeringen.no/no/statsbudsjett/2026/statsbudsjettet-2026-tallgrunnlag-gul-bok/id3120937/">Gul bok 2026 datagrunnlag</a>.
-    Begge år er regjeringens opprinnelige forslag (ikke saldert budsjett). Holdt utenfor: kap. 2440/5440 SDØE, 5507 petroleumsskatt,
-    5508/5509 utslippsavgifter på sokkelen, 5685 Equinor-utbytte, 2800 overføring til fondet, og alle poster 90–99.
-  </footer>
-</main>
-<div class="tip" id="tip"></div>
-</div>
-
-<script src="/static/d3.min.js"></script>
-<script src="/static/d3-sankey.min.js"></script>
-<script>
-const DATA = {{ payload|safe }};
-
-const nf1 = new Intl.NumberFormat("nb-NO", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
-const fmt = v => nf1.format(v);
-const fmtSigned = v => (v > 0 ? "+" : v < 0 ? "−" : "±") + nf1.format(Math.abs(v));
-const css = name => getComputedStyle(document.querySelector(".viz-root")).getPropertyValue(name).trim();
-
-// Colour follows the entity: income is slot 1, each expense group keeps its slot, the last group is gray
-const groupVar = Object.fromEntries(DATA.groups.map((g, i) => [g, i < DATA.groups.length - 1 ? `--series-${i + 2}` : "--other"]));
-const parentOf = {};
-for (const y of Object.keys(DATA.flows)) for (const f of DATA.flows[y]) if (f.level === 2) parentOf[f.target] = f.source;
-function colorVar(name, level) {
-  if (level === 0 || DATA.income.includes(name)) return "--series-1";
-  if (name.startsWith("Statsbudsjettet")) return "--text-secondary";
-  return groupVar[name] || groupVar[parentOf[name]] || "--other";
-}
-
-const tip = document.getElementById("tip");
-function showTip(ev, html) {
-  tip.innerHTML = html; tip.style.opacity = 1;
-  const r = tip.getBoundingClientRect();
-  let x = ev.clientX + 14, y = ev.clientY + 14;
-  if (x + r.width > innerWidth - 8) x = ev.clientX - r.width - 14;
-  if (y + r.height > innerHeight - 8) y = ev.clientY - r.height - 14;
-  tip.style.left = x + "px"; tip.style.top = y + "px";
-}
-const hideTip = () => { tip.style.opacity = 0; };
-
-// One px-per-billion scale shared by both years so the charts compare honestly
-const W = 1420, NODE_W = 10, PAD = 14, TOP = 8;
-const totals = Object.fromEntries(Object.entries(DATA.flows).map(([y, fs]) => [y, d3.sum(fs.filter(f => f.level === 0), f => f.beløp)]));
-const maxNodes = Math.max(...Object.values(DATA.flows).map(fs => fs.filter(f => f.level === 2).length + 1));
-const KPX = 1000 / d3.max(Object.values(totals));
-
-function nodeOrder(flows) {
-  const total = flows.find(f => f.level === 0).target;
-  const income = DATA.income.filter(n => flows.some(f => f.source === n));
-  const groups = DATA.groups.filter(n => flows.some(f => f.target === n));
-  const leaves = groups.flatMap(g => flows.filter(f => f.level === 2 && f.source === g).sort((a, b) => b.beløp - a.beløp).map(f => f.target));
-  return [...income, total, ...groups, ...leaves];
-}
-
-function drawSankey(year) {
-  const flows = DATA.flows[year];
-  const order = nodeOrder(flows);
-  const levelOf = { [order[DATA.income.length]]: 1 };
-  flows.forEach(f => { if (f.level === 0) levelOf[f.source] = 0; if (f.level === 1) levelOf[f.target] = 2; if (f.level === 2) levelOf[f.target] = 3; });
-  const H = totals[year] * KPX + PAD * (maxNodes - 1) + TOP * 2;
-  const total = totals[year];
-
-  const sankey = d3.sankey()
-    .nodeId(d => d.name).nodeWidth(NODE_W).nodePadding(PAD)
-    .nodeAlign(d => levelOf[d.name]).nodeSort((a, b) => order.indexOf(a.name) - order.indexOf(b.name))
-    .extent([[1, TOP], [W - 1, TOP + totals[year] * KPX + PAD * (maxNodes - 1)]]);
-
-  const graph = sankey({
-    nodes: order.map(name => ({ name })),
-    links: flows.map(f => ({ source: f.source, target: f.target, value: f.beløp, level: f.level })),
-  });
-
-  // Rescale vertically to the shared px-per-billion, keeping d3's ordering and packing each column from the top
-  const byCol = d3.group(graph.nodes, d => d.layer);
-  for (const nodes of byCol.values()) {
-    nodes.sort((a, b) => a.y0 - b.y0);
-    const used = d3.sum(nodes, n => n.value * KPX) + PAD * (nodes.length - 1);
-    let y = TOP + (H - TOP * 2 - used) / 2;
-    for (const n of nodes) { const h = n.value * KPX; n.y0 = y; n.y1 = y + h; y += h + PAD; }
-  }
-  for (const l of graph.links) l.width = l.value * KPX;
-  sankey.update(graph);
-
-  const svg = d3.create("svg").attr("viewBox", [0, 0, W, H]).attr("role", "img")
-    .attr("aria-label", `Sankey-diagram over statsbudsjettet ${year}`);
-  const linkG = svg.append("g").attr("fill", "none");
-
-  const links = linkG.selectAll("path").data(graph.links).join("path")
-    .attr("class", "link")
-    .attr("d", d3.sankeyLinkHorizontal())
-    .attr("stroke", d => css(colorVar(d.level === 0 ? d.source.name : d.target.name, d.level)))
-    .attr("stroke-opacity", d => d.level === 0 ? 0.32 : 0.38)
-    .attr("stroke-width", d => Math.max(1, d.width))
-    .on("mousemove", (ev, d) => showTip(ev,
-      `<b>${d.source.name} → ${d.target.name}</b><br>${fmt(d.value)} mrd kr <span class="m">· ${nf1.format(d.value / total * 100)} % av totalen</span>`))
-    .on("mouseleave", hideTip);
-
-  const node = svg.append("g").selectAll("g").data(graph.nodes).join("g");
-  node.append("rect")
-    .attr("x", d => d.x0).attr("y", d => d.y0)
-    .attr("width", d => d.x1 - d.x0).attr("height", d => Math.max(1, d.y1 - d.y0))
-    .attr("rx", 2)
-    .attr("fill", d => css(colorVar(d.name, levelOf[d.name])));
-
-  // Labels: the left half reads rightwards, the right half leftwards, like the reference chart
-  // The total sits under its links, so its label goes above the node
-  const isTotal = d => levelOf[d.name] === 1;
-  node.append("text")
-    .attr("class", d => "node-label" + (isTotal(d) ? " big" : ""))
-    .attr("x", d => isTotal(d) ? (d.x0 + d.x1) / 2 : d.x0 < W / 2 ? d.x1 + 8 : d.x0 - 8)
-    .attr("y", d => isTotal(d) ? d.y0 - 14 : (d.y0 + d.y1) / 2).attr("dy", "0.35em")
-    .attr("text-anchor", d => isTotal(d) ? "middle" : d.x0 < W / 2 ? "start" : "end")
-    .call(t => t.append("tspan").text(d => d.name))
-    .call(t => t.append("tspan").attr("class", "val").attr("dx", 6).text(d => fmt(d.value)));
-
-  // Hover a node: highlight every link that touches it
-  const hit = node.append("rect")
-    .attr("x", d => d.x0 - 6).attr("y", d => d.y0 - 4)
-    .attr("width", d => d.x1 - d.x0 + 12).attr("height", d => Math.max(8, d.y1 - d.y0 + 8))
-    .attr("fill", "transparent")
-    .on("mouseenter", (ev, d) => {
-      svg.classed("dim", true);
-      links.classed("hi", l => l.source === d || l.target === d);
-    })
-    .on("mousemove", (ev, d) => showTip(ev,
-      `<b>${d.name}</b><br>${fmt(d.value)} mrd kr <span class="m">· ${nf1.format(d.value / total * 100)} % av totalen</span>`))
-    .on("mouseleave", () => { svg.classed("dim", false); links.classed("hi", false); hideTip(); });
-
-  document.getElementById(`sankey-${year}`).replaceChildren(svg.node());
-}
-
-// Stat tiles
-function drawTiles() {
-  const [a, b] = [totals["2026"], totals["2027"]];
-  const fund = DATA.diff.find(d => d.level === 0 && d.key === "Overføring fra oljefondet");
-  const top = DATA.diff.filter(d => d.level === 1).sort((x, y) => y.change - x.change)[0];
-  const tiles = [
-    ["Utgifter 2027", fmt(b) + " mrd", `utenom olje og lån`],
-    ["Endring fra 2026", fmtSigned(b - a) + " mrd", `${fmtSigned((b - a) / a * 100)} % nominelt`],
-    ["Overføring fra oljefondet", fmt(fund.y2027) + " mrd", `${fmtSigned(fund.change)} mrd fra 2026`],
-    ["Største økning", top.key, `${fmtSigned(top.change)} mrd (${fmtSigned(top.pct)} %)`],
-  ];
-  document.getElementById("tiles").innerHTML = tiles.map(([k, v, s]) =>
-    `<div class="tile"><div class="k">${k}</div><div class="v">${v}</div><div class="s">${s}</div></div>`).join("");
-}
-
-// Diverging bar chart of the change, grouped as income, then each expense group with its leaves
-let unit = "nok";
-function diffRows() {
-  const rows = [];
-  rows.push({ section: "Inntekter" });
-  DATA.diff.filter(d => d.level === 0).sort((x, y) => DATA.income.indexOf(x.key) - DATA.income.indexOf(y.key))
-    .forEach(d => rows.push({ ...d, depth: 1 }));
-  rows.push({ section: "Utgifter" });
-  DATA.groups.forEach(g => {
-    const gd = DATA.diff.find(d => d.level === 1 && d.key === g);
-    if (!gd) return;
-    rows.push({ ...gd, depth: 1 });
-    DATA.diff.filter(d => d.level === 2 && d.parent === g).sort((x, y) => y.y2027 - x.y2027)
-      .forEach(d => rows.push({ ...d, depth: 2 }));
-  });
-  return rows;
-}
-
-function drawDiff() {
-  const rows = diffRows();
-  const val = d => unit === "nok" ? d.change : d.pct;
-  const ROW = 26, SEC = 36, LABEL_W = 290, VAL_W = 120, Wd = 1420;
-  let y = 8;
-  rows.forEach(r => { r.y = y; y += r.section ? SEC : ROW; });
-  const H = y + 30;
-  const vals = rows.filter(r => !r.section).map(val).filter(v => v != null);
-  const x = d3.scaleLinear().domain([Math.min(0, d3.min(vals)), Math.max(0, d3.max(vals))]).nice().range([LABEL_W + VAL_W + 40, Wd - VAL_W]);
-
-  const svg = d3.create("svg").attr("viewBox", [0, 0, Wd, H]).attr("role", "img")
-    .attr("aria-label", "Endring per post fra 2026 til 2027");
-
-  svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - 24})`)
-    .call(d3.axisBottom(x).ticks(8).tickSize(-(H - 32)).tickFormat(v => (v > 0 ? "+" : "") + nf1.format(v).replace(",0", "") + (unit === "pct" ? " %" : "")))
-    .call(g => g.select(".domain").remove())
-    .call(g => g.selectAll(".tick line").attr("stroke", css("--hairline")));
-  svg.append("line").attr("class", "zero").attr("x1", x(0)).attr("x2", x(0)).attr("y1", 4).attr("y2", H - 24);
-
-  const g = svg.append("g").selectAll("g").data(rows).join("g").attr("transform", r => `translate(0,${r.y})`);
-  g.filter(r => r.section).append("text").attr("class", "sec-label").attr("x", 0).attr("y", SEC - 10).text(r => r.section);
-
-  const data = g.filter(r => !r.section);
-  data.append("rect").attr("class", "row-hit").attr("x", 0).attr("y", 0).attr("width", Wd).attr("height", ROW).attr("rx", 4);
-  data.filter(r => r.depth === 1).append("rect")
-    .attr("x", 0).attr("y", ROW / 2 - 5).attr("width", 10).attr("height", 10).attr("rx", 2)
-    .attr("fill", r => css(colorVar(r.key, r.level)));
-  data.append("text").attr("class", r => `row-label l${r.depth}`)
-    .attr("x", r => r.depth === 1 ? 18 : 34).attr("y", ROW / 2).attr("dy", "0.35em").text(r => r.key);
-  data.append("text").attr("class", "bar-val").attr("x", LABEL_W + VAL_W - 12).attr("y", ROW / 2).attr("dy", "0.35em")
-    .attr("text-anchor", "end").text(r => `${fmt(r.y2026)} → ${fmt(r.y2027)}`);
-
-  const bh = r => r.depth === 1 ? 14 : 9;
-  data.append("rect")
-    .attr("x", r => Math.min(x(0), x(val(r) ?? 0)))
-    .attr("y", r => ROW / 2 - bh(r) / 2)
-    .attr("width", r => Math.max(1, Math.abs(x(val(r) ?? 0) - x(0))))
-    .attr("height", bh).attr("rx", 3)
-    .attr("fill", r => css(val(r) >= 0 ? "--up" : "--down"))
-    .attr("fill-opacity", r => r.depth === 1 ? 1 : 0.55);
-  data.append("text").attr("class", "bar-val")
-    .attr("x", r => x(val(r) ?? 0) + (val(r) >= 0 ? 6 : -6)).attr("y", ROW / 2).attr("dy", "0.35em")
-    .attr("text-anchor", r => val(r) >= 0 ? "start" : "end")
-    .attr("font-weight", r => r.depth === 1 ? 600 : 400)
-    .text(r => val(r) == null ? "ny" : fmtSigned(val(r)) + (unit === "pct" ? " %" : ""));
-
-  data.on("mousemove", (ev, r) => showTip(ev,
-      `<b>${r.key}</b>${r.parent ? ` <span class="m">(${r.parent})</span>` : ""}<br>` +
-      `2026: ${fmt(r.y2026)} mrd<br>2027: ${fmt(r.y2027)} mrd<br>` +
-      `Endring: <b>${fmtSigned(r.change)} mrd</b> (${r.pct == null ? "ny" : fmtSigned(r.pct) + " %"})`))
-    .on("mouseleave", hideTip);
-
-  document.getElementById("diff").replaceChildren(svg.node());
-  document.getElementById("diff-sub").textContent = unit === "nok"
-    ? "Endring i milliarder kroner. Blå er økning, rød er nedgang. Tallene til venstre viser 2026 → 2027."
-    : "Endring i prosent av 2026-beløpet. Små poster kan gi store prosenter; se kronebeløpet i verktøytipset.";
-}
-
-function drawTable() {
-  const rows = diffRows().filter(r => !r.section);
-  document.getElementById("table").innerHTML =
-    `<table><thead><tr><th>Post</th><th>Gruppe</th><th>2026</th><th>2027</th><th>Endring (mrd)</th><th>Endring (%)</th></tr></thead><tbody>` +
-    rows.map(r => `<tr><td>${r.depth === 2 ? "&nbsp;&nbsp;&nbsp;" : ""}${r.key}</td><td>${r.parent ?? ""}</td><td>${fmt(r.y2026)}</td><td>${fmt(r.y2027)}</td><td>${fmtSigned(r.change)}</td><td>${r.pct == null ? "ny" : fmtSigned(r.pct)}</td></tr>`).join("") +
-    `</tbody></table>`;
-}
-
-function drawAll() { drawTiles(); drawSankey("2027"); drawSankey("2026"); drawDiff(); drawTable(); }
-
-document.querySelectorAll("[data-unit]").forEach(b => b.addEventListener("click", () => {
-  unit = b.dataset.unit;
-  document.querySelectorAll("[data-unit]").forEach(o => o.setAttribute("aria-pressed", o === b));
-  drawDiff();
-}));
-const setTheme = t => {
-  document.documentElement.dataset.theme = t;
-  document.querySelectorAll("[data-theme-set]").forEach(o => o.setAttribute("aria-pressed", o.dataset.themeSet === t));
-  drawAll();
-};
-document.querySelectorAll("[data-theme-set]").forEach(b => b.addEventListener("click", () => setTheme(b.dataset.themeSet)));
-setTheme(new URLSearchParams(location.search).get("theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
-</script>
-</body>
-</html>
+  <section class="flow">
+    <div class="flow-head">
+      <h2>Endring fra 2026 til 2027</h2>
+      <div class="chips" role="group" aria-label="Enhet">
+        <button class="chip" type="button" data-unit="nok" aria-pressed="true">Kroner</button>
+        <button class="chip" type="button" data-unit="pct" aria-pressed="false">Prosent</button>
+      </div>
+    </div>
+    <p class="note" id="diff-sub"></p>
+    <div class="card hscroll"><div id="diff"></div></div>
+    <details class="gl">
+      <summary>Vis som tabell</summary>
+      <div class="hscroll" id="table"></div>
+    </details>
+    <p class="note">Begge år er regjeringens forslag (ikke vedtatt budsjett), i løpende kroner. Holdt utenfor: kap. 2440/5440 SDØE,
+      5507 petroleumsskatt, 5508/5509 utslippsavgifter på sokkelen, 5685 Equinor-utbytte, 2800 overføring til fondet, og alle poster 90–99.</p>
+  </section>
+<script type="application/json" id="flyt-data">{{ payload|safe }}</script>
+{% endblock %}
