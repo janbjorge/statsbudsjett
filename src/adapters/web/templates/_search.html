@@ -1,7 +1,7 @@
 <div id="results" class="results">
 {% if q|length >= 2 and not hits %}<p class="muted">Fant ingenting for «{{ q }}».</p>{% endif %}
 {% for h in hits %}
-  <a class="result" href="/?side={{ h.side }}#utforsk" hx-get="/utforsk?kap={{ h.kap }}" hx-target="#tree" hx-swap="outerHTML">
+  <a class="result" href="/utforsk?kap={{ h.kap }}" hx-get="/utforsk?kap={{ h.kap }}" hx-target="#tree" hx-swap="outerHTML">
     <span>{{ h.title }}</span><span class="amt">{{ h.v2027|amount }}</span>
     <span class="path">{{ "Utgift" if h.side == Side.UTGIFT else "Inntekt" }} › {{ h.group }}{% if h.area != h.group %} › {{ h.area }}{% endif %} · kap. {{ h.kap }}{% if h.post %} post {{ h.post }}{% endif %}</span>
   </a>
