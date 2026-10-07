@@ -10,14 +10,16 @@ def _group(n: int) -> str:
 
 
 def nb(v: float) -> str:
-    """Whole number with thin grouping: 405 677."""
-    return ("−" if v < 0 else "") + _group(round(abs(v)))
+    """Whole number with thin grouping: 405 677. No sign when the rounded value is 0."""
+    r = round(abs(v))
+    return ("−" if v < 0 and r else "") + _group(r)
 
 
 def nb1(v: float) -> str:
-    """One decimal with comma: 2 286,8."""
+    """One decimal with comma: 2 286,8. No sign when the rounded value is 0,0."""
     whole, frac = f"{abs(v):.1f}".split(".")
-    return ("−" if v < 0 else "") + _group(int(whole)) + "," + frac
+    minus = v < 0 and (int(whole) or int(frac))
+    return ("−" if minus else "") + _group(int(whole)) + "," + frac
 
 
 def num(v: float | None) -> str:
@@ -53,8 +55,9 @@ def signed_amount(bn: float) -> str:
 
 
 def signed1(v: float) -> str:
-    return _sign(v) + nb1(abs(v))
+    """Sign follows the shown decimal, so 0,04 is ±0,0 and not +0,0."""
+    return _sign(round(v, 1)) + nb1(abs(v))
 
 
 def pct(v: float | None) -> str:
-    return "" if v is None else _sign(v) + nb1(abs(v)) + NBSP + "%"
+    return "" if v is None else _sign(round(v, 1)) + nb1(abs(v)) + NBSP + "%"
