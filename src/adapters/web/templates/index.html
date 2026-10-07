@@ -92,6 +92,8 @@
       <input type="search" id="kom" name="k" list="kom-list" autocomplete="off" value="{{ kv.kommune.label }}" placeholder="Skriv navnet på kommunen">
       <datalist id="kom-list">{% for k in kommuner %}<option value="{{ k.label }}">{% endfor %}</datalist>
     </form>
+    {# Every kommune for the dot chart, sent once with the page; picking a kommune only swaps the fragment below #}
+    <script type="application/json" id="kommuner-data">{{ kommuner|tojson_kommuner|safe }}</script>
     {% include "_kommune.html" %}
   </section>
 

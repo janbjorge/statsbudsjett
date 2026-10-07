@@ -82,8 +82,10 @@ function drawTreemap(el) {
 }
 
 // ---------- every kommune as a dot: money per person against population ----------
+let kommuner;
 function drawStrip(el) {
-  const all = JSON.parse(el.dataset.kommuner), selected = el.dataset.selected, avg = +el.dataset.average;
+  kommuner ??= JSON.parse(document.getElementById("kommuner-data").textContent);
+  const all = kommuner, selected = el.dataset.selected, avg = +el.dataset.average;
   const W = el.clientWidth || 800, H = 300, m = { l: 64, r: 12, t: 26, b: 46 };
   const [lo, hi] = d3.extent(all, k => k.pp);
   const [plo, phi] = d3.extent(all, k => k.pop);
@@ -162,7 +164,7 @@ function drawFund(el) {
 // ---------- wiring ----------
 function drawAll() {
   document.querySelectorAll(".treemap[data-nodes]").forEach(drawTreemap);
-  document.querySelectorAll(".strip[data-kommuner]").forEach(drawStrip);
+  document.querySelectorAll(".strip").forEach(drawStrip);
   document.querySelectorAll(".fund[data-fund]").forEach(drawFund);
   document.dispatchEvent(new Event("charts:redraw"));
 }

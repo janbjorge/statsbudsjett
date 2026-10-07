@@ -102,7 +102,8 @@ def tojson_nodes(nodes: tuple[Node, ...], side: Side, base: str) -> str:
 
 
 def tojson_kommuner(kommuner: tuple[Kommune, ...]) -> str:
-    return json.dumps([{"nr": k.nr, "n": k.name, "f": k.fylke, "pop": k.population, "pp": round(k.per_person)} for k in kommuner], ensure_ascii=False)
+    rows = [{"nr": k.nr, "n": k.name, "f": k.fylke, "pop": k.population, "pp": round(k.per_person)} for k in kommuner]
+    return json.dumps(rows, ensure_ascii=False).replace("</", "<\\/")  # goes inside a <script> element
 
 
 def tojson_fund(fund: tuple[FundYear, ...]) -> str:
@@ -192,7 +193,7 @@ def search_fragment(request: Request, q: Q = "") -> HTMLResponse:
 def kommune_fragment(request: Request, k: Q = "") -> Response:
     if _not_htmx(request):
         return RedirectResponse(f"/?{urlencode({'k': k})}#kommune")
-    return templates.TemplateResponse(request, "_kommune.html", {"kv": queries.kommune(k), "kommuner": queries.budget.kommuner})
+    return templates.TemplateResponse(request, "_kommune.html", {"kv": queries.kommune(k)})
 
 
 @app.get("/flyt", response_class=HTMLResponse)
