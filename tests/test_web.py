@@ -2,6 +2,7 @@
 
 import re
 
+import pytest
 from fastapi.testclient import TestClient
 
 from adapters.web.main import app, profile_from, profile_query, queries
@@ -193,3 +194,43 @@ def test_head_answers_like_get_without_a_body() -> None:
         assert (head.status_code, head.headers["content-type"]) == (get.status_code, get.headers["content-type"]), path
         assert head.content == b"", path
     assert client.head("/finnes-ikke").status_code == 404
+
+
+# --- The tax receipt ---------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize("tax_kroner", [0, 1, 100, 1_000, 654_321])
+def test_receipt_lines_add_up_in_whole_kroner(tax_kroner: int) -> None:
+    groups = queries.receipt(tax_kroner)
+    assert sum(g.kroner for g in groups) == tax_kroner
+    for g in groups:
+        assert all(isinstance(line.kroner, int) for line in g.lines)
+        assert not g.lines or sum(line.kroner for line in g.lines) == g.kroner, g.name
+
+
+def test_receipt_starts_from_the_tax_worked_out_for_you() -> None:
+    own = queries.meg(profile_from(*FAMILY_ARGS)).tax_kroner
+    html = client.get(f"/?{FAMILY}").text
+    receipt = html[html.index('id="skatt"'):]
+    assert re.search(rf'id="my-tax" class="chip" type="button" data-set-tax="{own}" aria-pressed="true"', receipt)
+    total = re.search(r"TOTALT</span><span>([\d\W]+)kr", receipt)
+    assert total and re.sub(r"\D", "", total.group(1)) == str(own)
+
+
+def test_receipt_amount_in_the_link_wins() -> None:
+    html = client.get(f"/?{FAMILY}&skatt=50000").text
+    assert re.search(r'data-set-tax="50000" aria-pressed="true"', html)
+    assert re.search(r'id="my-tax"[^>]*aria-pressed="false"', html)
+
+
+def test_receipt_without_income_shows_150_000_and_no_own_chip() -> None:
+    html = client.get("/?lonn=0").text
+    assert re.search(r'id="my-tax"[^>]*hidden', html)
+    assert re.search(r'data-set-tax="150000" aria-pressed="true"', html)
+    assert 'data-set-tax="100"' not in html
+
+
+def test_for_deg_swaps_in_the_own_tax_chip() -> None:
+    html = client.get(f"/meg?del=resultat&{FAMILY}", headers=HX).text
+    assert re.search(r'id="my-tax"[^>]*hx-swap-oob="true"', html)
+    assert 'id="my-tax"' not in client.get(f"/?{FAMILY}").text.split('id="skatt"')[0]

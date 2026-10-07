@@ -1,0 +1,3 @@
+{# "Din skatt" chip for the receipt: the tax worked out under "For deg". /meg swaps it in out of band. #}
+{% set own = m.tax_kroner %}
+<button id="my-tax" class="chip" type="button" data-set-tax="{{ own }}" aria-pressed="{{ 'true' if own and own == tax_kroner else 'false' }}"{% if not own %} hidden{% endif %}{% if oob %} hx-swap-oob="true"{% endif %}>Din skatt: {{ own|kr }}</button>

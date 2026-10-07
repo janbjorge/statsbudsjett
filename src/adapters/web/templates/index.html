@@ -23,10 +23,12 @@
     <p class="lede">Skriv inn hvor mye du betaler i skatt i året, så ser du hvordan beløpet fordeles, i samme forhold som staten bruker pengene.</p>
     <form action="/#skatt" method="get" hx-get="/kvittering" hx-target="#receipt-out" hx-swap="outerHTML" hx-trigger="input delay:300ms, submit">
       <label class="field" for="tax">Skatten din i året (kroner)</label>
-      <input id="tax" name="skatt" inputmode="numeric" autocomplete="off" value="{{ tax_kroner|nb }}">
+      {% set own = m.tax_kroner %}
+      <input id="tax" name="skatt" inputmode="numeric" autocomplete="off" value="{{ tax_kroner|nb }}"{% if own and own == tax_kroner %} data-mine="1"{% endif %}>
       <div class="chips">
-        {% for v in [100, 50000, 150000, 300000] %}
-        <button class="chip" type="button" data-set-tax="{{ v }}" aria-pressed="{{ 'true' if v == tax_kroner else 'false' }}">{{ v|kr }}</button>
+        {% include "_my_tax.html" %}
+        {% for v in [50000, 150000, 300000, 600000, 1200000] %}
+        <button class="chip" type="button" data-set-tax="{{ v }}" aria-pressed="{{ 'true' if v == tax_kroner and v != own else 'false' }}">{{ v|kr }}</button>
         {% endfor %}
       </div>
     </form>

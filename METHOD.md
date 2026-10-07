@@ -62,7 +62,7 @@ The pages show the budget the way Finansdepartementet presents it, without oil m
 - A child over 18 has no facts of its own. Many still live at home or study with help from their parents, so entering one shows the student facts under "Barn over 18 år som studerer" (src/core/facts.py). They only apply if the child studies, hence the label. Borteboerstipend stays in the 16-18 band, so an adult child still in videregående does not see it.
 - Barnetrygd is hidden when every child entered is over 18. The quote says "barn 0–18 år", and the build stops if it no longer does (src/pipeline/datasets.py, `under_18`). Other cards with an age limit are left on until a source states the limit.
 - Foreldrefradrag stays on for every age. The usual limits (15 000 / 10 000 kr) are for younger children; Prop. 1 LS fotnote 13 (page 30) gives 25 000 / 15 000 kr for children 12 and older with særskilt behov for omsorg og pleie, with no upper age. Both sets of limits are shown and verified. The source does not state the age limit for the usual limits, so the card does not either.
-- The tax receipt (Skatten din) splits your tax in proportion to non-oil spending. Money is fungible; the page says this is a simplification.
+- The tax receipt (Skatten din) splits your tax in proportion to non-oil spending. Money is fungible; the page says this is a simplification. It starts from the tax worked out under "For deg" (150 000 kr when that is 0), and a `skatt` in the link wins. Amounts are whole kroner, rounded by largest remainder so the lines add up to their group and the groups to the total (src/core/budget.py, `whole_kroner`); lines that round to 0 kr are hidden.
 
 ## 7. Kommuner
 

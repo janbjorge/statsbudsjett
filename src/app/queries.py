@@ -49,6 +49,11 @@ class MegView:
     def n_unchanged(self) -> int:
         return sum(len(s.unchanged) for s in self.sections)
 
+    @property
+    def tax_kroner(self) -> int:
+        """The 2027 tax in whole kroner, the amount the receipt starts from."""
+        return round(self.tax.tax_2027)
+
 
 @dataclass(frozen=True, slots=True)
 class IncomeRow:
@@ -93,7 +98,7 @@ class Queries:
     def facts(self) -> list[Fact]:
         return self.data.facts()
 
-    def receipt(self, tax_kroner: float) -> list[b.ReceiptGroup]:
+    def receipt(self, tax_kroner: int) -> list[b.ReceiptGroup]:
         return b.receipt(self.budget, tax_kroner)
 
     def everyday(self) -> b.Everyday:

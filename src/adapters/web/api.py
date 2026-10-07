@@ -123,7 +123,7 @@ class KommuneDetail(KommuneRow):
 
 class ReceiptLine(Out):
     navn: str
-    kr: float
+    kr: int
 
 
 class ReceiptGroup(ReceiptLine):

@@ -102,27 +102,41 @@ class Budget:
 @dataclass(frozen=True, slots=True)
 class ReceiptLine:
     name: str
-    kroner: float
+    kroner: int
 
 
 @dataclass(frozen=True, slots=True)
 class ReceiptGroup:
     name: str
-    kroner: float
+    kroner: int
     share: float
     lines: tuple[ReceiptLine, ...]
 
 
-def receipt(budget: Budget, tax_kroner: float) -> list[ReceiptGroup]:
-    """Split a tax payment over spending in proportion to non-oil spending (METHOD.md §6)."""
+def whole_kroner(total: int, weights: list[float]) -> list[int]:
+    """Split `total` kroner by `weights` into whole kroner that add up to `total` (largest remainder)."""
+    exact = [total * w / sum(weights) for w in weights]
+    out = [int(x) for x in exact]
+    by_remainder = sorted(range(len(exact)), key=lambda i: exact[i] - out[i], reverse=True)
+    for i in by_remainder[: total - sum(out)]:
+        out[i] += 1
+    return out
+
+
+def receipt(budget: Budget, tax_kroner: int) -> list[ReceiptGroup]:
+    """Split a tax payment over spending in proportion to non-oil spending (METHOD.md §6).
+
+    Amounts are whole kroner, rounded so the lines add up to their group and the groups to the tax.
+    """
     total = budget.total(2027)
+    groups = [(g, a) for g in budget.groups if (a := budget.group_amount(2027, g))]
     out = []
-    for g in budget.groups:
-        amount = budget.group_amount(2027, g)
-        if not amount:
-            continue
-        lines = tuple(ReceiptLine(f.target, tax_kroner * f.amount / total) for f in budget.leaves(2027, g))
-        out.append(ReceiptGroup(g, tax_kroner * amount / total, amount / total * 100, lines))
+    for (g, amount), kroner in zip(groups, whole_kroner(tax_kroner, [a for _, a in groups]), strict=True):
+        leaves = budget.leaves(2027, g)
+        lines = tuple(
+            ReceiptLine(f.target, k) for f, k in zip(leaves, whole_kroner(kroner, [f.amount for f in leaves]), strict=True)
+        ) if leaves else ()
+        out.append(ReceiptGroup(g, kroner, amount / total * 100, lines))
     return out
 
 

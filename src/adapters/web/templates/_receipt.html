@@ -13,7 +13,7 @@
     {% for g in receipt %}
     <details {{ "open" if loop.index <= 3 }}>
       <summary class="row g"><span class="n">{{ g.name }}</span><span class="d"></span><span>{{ g.kroner|kr }}</span></summary>
-      {% for l in g.lines %}<div class="row l"><span class="n">{{ l.name }}</span><span class="d"></span><span>{{ l.kroner|kr }}</span></div>{% endfor %}
+      {% for l in g.lines if l.kroner %}<div class="row l"><span class="n">{{ l.name }}</span><span class="d"></span><span>{{ l.kroner|kr }}</span></div>{% endfor %}
     </details>
     {% endfor %}
     <hr><div class="row tot"><span>TOTALT</span><span>{{ tax_kroner|kr }}</span></div>

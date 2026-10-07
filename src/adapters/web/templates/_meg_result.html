@@ -54,6 +54,7 @@
     Ikke med: rentefradrag, formue, uføretrygd, særregler i Finnmark og Nord-Troms.
     <a href="https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/">Kilde: Prop. 1 LS (2026–2027), tabell 1.5</a></p>
 </div>
+{% if oob %}{% include "_my_tax.html" %}{% endif %}
 <div class="facts">
   {% if not m.profile.personas %}<p class="muted" style="margin:12px 0 0">Kryss av for det som gjelder {{ m.profile.you }} under «Gjelder noe av dette?» for å se flere endringer.</p>{% endif %}
   <p class="muted small" style="margin:16px 0 0">{{ m.n_changed }} endringer og {{ m.n_unchanged }} ting som står fast. Alt er hentet fra regjeringens budsjettdokumenter.</p>

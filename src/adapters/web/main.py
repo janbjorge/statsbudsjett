@@ -162,15 +162,17 @@ def index(
     pensjon: QL = None,
     naering: QL = None,
     naering_type: QL = None,
-    skatt: Q = "150000",
+    skatt: Q = "",
     side: Q = "utgift",
     sti: Q = "",
     k: Q = "",
 ) -> HTMLResponse:
-    tax_kroner = kroner(skatt)
+    m = queries.meg(profile_from(meg, barn, lonn, pensjon, naering, naering_type))
+    # The receipt starts from the tax worked out under "For deg", unless the link names an amount
+    tax_kroner = kroner(skatt) if skatt else m.tax_kroner or 150_000
     return templates.TemplateResponse(request, "index.html", {
         "o": queries.overview(),
-        "m": queries.meg(profile_from(meg, barn, lonn, pensjon, naering, naering_type)),
+        "m": m,
         "tax_kroner": tax_kroner,
         "receipt": queries.receipt(tax_kroner),
         "income": queries.income(),
@@ -199,7 +201,7 @@ def meg_fragment(
     if _not_htmx(request):
         return RedirectResponse(share)
     page = "_meg_result.html" if del_ == "resultat" else "_meg.html"
-    response = templates.TemplateResponse(request, page, {"m": queries.meg(profile)})
+    response = templates.TemplateResponse(request, page, {"m": queries.meg(profile), "oob": True})
     response.headers["HX-Replace-Url"] = share
     return response
 

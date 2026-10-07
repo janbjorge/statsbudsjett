@@ -61,7 +61,14 @@ document.addEventListener("click", async ev => {
     input.value = nb.format(+preset.dataset.setTax);
     document.querySelectorAll("[data-set-tax]").forEach(b => b.setAttribute("aria-pressed", b === preset));
     input.dispatchEvent(new Event("input", { bubbles: true }));
+    input.dataset.mine = preset.id === "my-tax" ? "1" : "";
   }
+});
+// Typing your own amount stops the receipt from following "For deg"
+document.addEventListener("input", ev => { if (ev.isTrusted && ev.target.id === "tax") ev.target.dataset.mine = ""; });
+// "For deg" swaps in a new "Din skatt" chip; if the receipt showed your tax, move it to the new amount
+document.addEventListener("htmx:oobAfterSwap", ev => {
+  if (ev.detail.target.id === "my-tax" && document.getElementById("tax").dataset.mine && !ev.detail.target.hidden) ev.detail.target.click();
 });
 
 // ---------- treemap of one budget level ----------
