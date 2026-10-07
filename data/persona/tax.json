@@ -1,0 +1,814 @@
+{
+ "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
+ "source_file": "data/text/prp202620270001ls0dddpdfs.txt",
+ "params": [
+  {
+   "key": "skatt_alminnelig_inntekt",
+   "label_nb": "Skatt på alminnelig inntekt, personer",
+   "y2026": 22,
+   "y2027": 22,
+   "unit": "pst",
+   "page": 26,
+   "quote": "Personer ............................................................................ 22 pst. 22 pst. -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "skatt_alminnelig_inntekt_innsatssonen",
+   "label_nb": "Skatt på alminnelig inntekt, personer i innsatssonen (Finnmark og Nord-Troms)",
+   "y2026": 18.5,
+   "y2027": 18.5,
+   "unit": "pst",
+   "page": 26,
+   "quote": "Personer i innsatssonen1 ................................................. 18,5 pst. 18,5 pst. -",
+   "note": "Tabell 1.5. Fotnote 1: innsatssonen = alle 18 kommunene i Finnmark + Karlsøy, Storfjord, Kåfjord, Skjervøy, Nordreisa, Kvænangen og Lyngen."
+  },
+  {
+   "key": "personfradrag",
+   "label_nb": "Personfradrag",
+   "y2026": 114540,
+   "y2027": 120180,
+   "unit": "kr",
+   "page": 27,
+   "quote": "Personfradrag............................................................... 114 540 kr 120 180 kr 4,9 pst.",
+   "note": "Tabell 1.5. Bekreftet i skattevedtaket § 6-3 (s. 259): 120 180 kroner i klasse 1."
+  },
+  {
+   "key": "minstefradrag_lonn_sats",
+   "label_nb": "Minstefradrag i lønnsinntekt mv., sats",
+   "y2026": 46,
+   "y2027": 46,
+   "unit": "pst",
+   "page": 27,
+   "quote": "Minstefradrag i lønnsinntekt mv.11 Sats..................................................................................... 46 pst. 46 pst.",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "minstefradrag_lonn_ovre",
+   "label_nb": "Minstefradrag i lønnsinntekt mv., øvre grense",
+   "y2026": 95700,
+   "y2027": 99550,
+   "unit": "kr",
+   "page": 27,
+   "quote": "Øvre grense....................................................................... 95 700 kr 99 550 kr 4 pst.",
+   "note": "Tabell 1.5; bekreftet i prosa s. 79 og skattevedtaket § 6-1. Fotnote 11: øvre grense for lønn gjelder som øvre grense for summen av minstefradrag i lønn og pensjon."
+  },
+  {
+   "key": "minstefradrag_lonn_nedre",
+   "label_nb": "Minstefradrag i lønnsinntekt mv., nedre grense",
+   "y2026": null,
+   "y2027": null,
+   "unit": "kr",
+   "page": 79,
+   "quote": "I 2026 utgjør minstef radraget i lønns- og tryg- deinntekter 46 pst. av samlet lønn og trygd, og maksimalt 95 700 kroner.",
+   "note": "Ingen nedre grense er oppgitt i Tabell 1.5, prosa eller skattevedtaket § 6-1 (kun øvre grense). Satt til null."
+  },
+  {
+   "key": "minstefradrag_pensjon_sats",
+   "label_nb": "Minstefradrag i pensjonsinntekt, sats",
+   "y2026": 40,
+   "y2027": 40,
+   "unit": "pst",
+   "page": 27,
+   "quote": "Minstefradrag i pensjonsinntekt11 Sats..................................................................................... 40 pst. 40 pst.",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "minstefradrag_pensjon_ovre",
+   "label_nb": "Minstefradrag i pensjonsinntekt, øvre grense",
+   "y2026": 75400,
+   "y2027": 77950,
+   "unit": "kr",
+   "page": 27,
+   "quote": "Øvre grense....................................................................... 75 400 kr 77 950 kr 3,4 pst.",
+   "note": "Tabell 1.5; bekreftet i skattevedtaket § 6-1."
+  },
+  {
+   "key": "trygdeavgift_nedre_grense",
+   "label_nb": "Nedre grense for å betale trygdeavgift",
+   "y2026": 99650,
+   "y2027": 99650,
+   "unit": "kr",
+   "page": 26,
+   "quote": "Nedre grense for å betale trygdeavgift .......................... 99 650 kr 99 650 kr -",
+   "note": "Tabell 1.5. Prosa s. 80: frikortgrensen er 100 000 kroner (noe høyere enn nedre grense fordi restskatt under 100 kr ikke kreves inn) og holdes nominelt uendret; teksten sier 'i 2026', antakelig ment 2027."
+  },
+  {
+   "key": "trygdeavgift_opptrappingssats",
+   "label_nb": "Trygdeavgift, opptrappingssats",
+   "y2026": 25,
+   "y2027": 25,
+   "unit": "pst",
+   "page": 26,
+   "quote": "Opptrappingssats.............................................................. 25 pst. 25 pst. -",
+   "note": "Tabell 1.5. Avgiften skal ikke utgjøre mer enn 25 pst. av inntekten over nedre grense."
+  },
+  {
+   "key": "trygdeavgift_lonn",
+   "label_nb": "Trygdeavgift, lønnsinntekt",
+   "y2026": 7.6,
+   "y2027": 7.4,
+   "unit": "pst",
+   "page": 26,
+   "quote": "Lønnsinntekt ..................................................................... 7,6 pst. 7,4 pst. -0,2 pst.-enhet",
+   "note": "Tabell 1.5; gjelder også trygd som skattlegges som lønn (prosa s. 80)."
+  },
+  {
+   "key": "trygdeavgift_fiske_barnepass",
+   "label_nb": "Trygdeavgift, næringsinntekt fiske, fangst og barnepass",
+   "y2026": 7.6,
+   "y2027": 7.4,
+   "unit": "pst",
+   "page": 26,
+   "quote": "Fiske, fangst og barnepass7............................................. 7,6 pst. 7,4 pst. -0,2 pst.-enhet",
+   "note": "Tabell 1.5, fotnote 7."
+  },
+  {
+   "key": "trygdeavgift_annen_naering",
+   "label_nb": "Trygdeavgift, annen næringsinntekt",
+   "y2026": 10.8,
+   "y2027": 10.6,
+   "unit": "pst",
+   "page": 26,
+   "quote": "Annen næringsinntekt ..................................................... 10,8 pst. 10,6 pst. -0,2 pst.-enhet",
+   "note": "Tabell 1.5. Egen sats for jordbruk er ikke oppgitt; jordbruk har eget særskilt fradrag (se jordbruksfradrag)."
+  },
+  {
+   "key": "trygdeavgift_pensjon",
+   "label_nb": "Trygdeavgift, pensjonsinntekt mv.",
+   "y2026": 5.1,
+   "y2027": 5.1,
+   "unit": "pst",
+   "page": 26,
+   "quote": "Pensjonsinntekt mv. ......................................................... 5,1 pst. 5,1 pst. -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "pensjonsskattefradrag_maks",
+   "label_nb": "Skattefradrag for pensjonsinntekt, maksimalt beløp",
+   "y2026": 39100,
+   "y2027": 40750,
+   "unit": "kr",
+   "page": 27,
+   "quote": "Maksimalt beløp ............................................................... 39 100 kr 40 750 kr 4,2 pst.",
+   "note": "Tabell 1.5; bekreftet i prosa s. 81 og skattevedtaket § 6-5."
+  },
+  {
+   "key": "pensjonsskattefradrag_trinn1_grense",
+   "label_nb": "Skattefradrag for pensjonsinntekt, nedtrapping trinn 1, innslagspunkt",
+   "y2026": 294200,
+   "y2027": 306250,
+   "unit": "kr",
+   "page": 27,
+   "quote": "Nedtrapping, trinn 1 Innslagspunkt ................................................................... 294 200 kr 306 250 kr 4,1 pst.",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "pensjonsskattefradrag_trinn1_sats",
+   "label_nb": "Skattefradrag for pensjonsinntekt, nedtrapping trinn 1, sats",
+   "y2026": 19.1,
+   "y2027": 19.1,
+   "unit": "pst",
+   "page": 27,
+   "quote": "Sats..................................................................................... 19,1 pst. 19,1 pst. -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "pensjonsskattefradrag_trinn2_grense",
+   "label_nb": "Skattefradrag for pensjonsinntekt, nedtrapping trinn 2, innslagspunkt",
+   "y2026": 437100,
+   "y2027": 457550,
+   "unit": "kr",
+   "page": 27,
+   "quote": "Nedtrapping, trinn 2 Innslagspunkt ................................................................... 437 100 kr 457 550 kr 4,7 pst.",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "pensjonsskattefradrag_trinn2_sats",
+   "label_nb": "Skattefradrag for pensjonsinntekt, nedtrapping trinn 2, sats",
+   "y2026": 6.0,
+   "y2027": 6.0,
+   "unit": "pst",
+   "page": 27,
+   "quote": "Sats..................................................................................... 6,0 pst. 6,0 pst. -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "skattebegrensning_avtrappingssats",
+   "label_nb": "Skattebegrensningsregelen, avtrappingssats",
+   "y2026": 55,
+   "y2027": 55,
+   "unit": "pst",
+   "page": 28,
+   "quote": "Avtrappingssats ................................................................ 55 pst. 55 pst. -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "skattefri_nettoinntekt_enslig",
+   "label_nb": "Skattebegrensning: skattefri nettoinntekt, enslig",
+   "y2026": 163750,
+   "y2027": 170300,
+   "unit": "kr",
+   "page": 28,
+   "quote": "Enslig ................................................................................. 163 750 kr 170 300 kr 4 pst.",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "skattefri_nettoinntekt_gift",
+   "label_nb": "Skattebegrensning: skattefri nettoinntekt, gift",
+   "y2026": 151350,
+   "y2027": 157400,
+   "unit": "kr",
+   "page": 28,
+   "quote": "Gift...................................................................................... 151 350 kr 157 400 kr 4 pst.",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "finnmarksfradrag",
+   "label_nb": "Særskilt fradrag i Finnmark og Nord-Troms (innsatssonen)",
+   "y2026": 45000,
+   "y2027": 45000,
+   "unit": "kr",
+   "page": 28,
+   "quote": "(innsatssonen)1............................................................ 45 000 kr 45 000 kr -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "sjofolksfradrag_sats",
+   "label_nb": "Særskilt fradrag for sjøfolk, sats",
+   "y2026": 30,
+   "y2027": 30,
+   "unit": "pst",
+   "page": 28,
+   "quote": "Særskilt fradrag for sjøfolk Sats..................................................................................... 30 pst. 30 pst. -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "sjofolksfradrag_ovre",
+   "label_nb": "Særskilt fradrag for sjøfolk, øvre grense",
+   "y2026": 86300,
+   "y2027": 86300,
+   "unit": "kr",
+   "page": 28,
+   "quote": "Øvre grense....................................................................... 86 300 kr 86 300 kr -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "fiskerfradrag_ovre",
+   "label_nb": "Særskilt fradrag for fiskere og fangstfolk, øvre grense (sats 30 pst.)",
+   "y2026": 160000,
+   "y2027": 160000,
+   "unit": "kr",
+   "page": 28,
+   "quote": "Øvre grense....................................................................... 160 000 kr 160 000 kr -",
+   "note": "Tabell 1.5; sats 30 pst. begge år."
+  },
+  {
+   "key": "jordbruksfradrag_inntektsuavhengig",
+   "label_nb": "Jordbruksfradrag, inntektsuavhengig",
+   "y2026": 99600,
+   "y2027": 99600,
+   "unit": "kr",
+   "page": 28,
+   "quote": "Inntektsuavhengig fradrag .............................................. 99 600 kr 99 600 kr -",
+   "note": "Tabell 1.5; sats utover dette 38 pst."
+  },
+  {
+   "key": "jordbruksfradrag_maks",
+   "label_nb": "Jordbruksfradrag, maksimalt samlet",
+   "y2026": 208900,
+   "y2027": 208900,
+   "unit": "kr",
+   "page": 28,
+   "quote": "Maksimalt samlet fradrag................................................ 208 900 kr 208 900 kr -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "ips_maks",
+   "label_nb": "Maksimalt fradrag for individuell sparing til pensjon (IPS)",
+   "y2026": 25000,
+   "y2027": 25000,
+   "unit": "kr",
+   "page": 28,
+   "quote": "sparing til pensjon ........................................................ 25 000 kr 25 000 kr -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "reisefradrag_sats_km",
+   "label_nb": "Reisefradrag, sats per km",
+   "y2026": 1.9,
+   "y2027": 1.9,
+   "unit": "kr",
+   "page": 28,
+   "quote": "Sats per km ....................................................................... 1,90 kr 1,90 kr -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "reisefradrag_nedre",
+   "label_nb": "Reisefradrag, nedre grense (egenandel)",
+   "y2026": 12000,
+   "y2027": 12000,
+   "unit": "kr",
+   "page": 28,
+   "quote": "Nedre grense for fradraget.............................................. 12 000 kr 12 000 kr -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "reisefradrag_ovre",
+   "label_nb": "Reisefradrag, øvre beløpsgrense",
+   "y2026": 120000,
+   "y2027": 120000,
+   "unit": "kr",
+   "page": 28,
+   "quote": "Øvre beløpsgrense ........................................................... 120 000 kr 120 000 kr -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "gavefradrag_maks",
+   "label_nb": "Maksimalt fradrag for gaver til frivillige organisasjoner",
+   "y2026": 25000,
+   "y2027": 25000,
+   "unit": "kr",
+   "page": 28,
+   "quote": "Maksimalt fradrag for gaver til frivillige organisasjoner 25 000 kr 25 000 kr -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "fagforeningsfradrag_maks",
+   "label_nb": "Maksimalt fradrag for fagforeningskontingent",
+   "y2026": 8700,
+   "y2027": 8950,
+   "unit": "kr",
+   "page": 28,
+   "quote": "kontingent mv. ............................................................. 8 700 kr 8 950 kr 2,9 pst.",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "bsu_sats",
+   "label_nb": "BSU, sats for skattefradrag",
+   "y2026": 10,
+   "y2027": 10,
+   "unit": "pst",
+   "page": 29,
+   "quote": "Sats for skattefradrag ....................................................... 10 pst. 10 pst. -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "bsu_maks_arlig",
+   "label_nb": "BSU, maksimalt årlig sparebeløp",
+   "y2026": 27500,
+   "y2027": 27500,
+   "unit": "kr",
+   "page": 29,
+   "quote": "Maksimalt årlig sparebeløp............................................. 27 500 kr 27 500 kr -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "bsu_maks_samlet",
+   "label_nb": "BSU, maksimalt samlet sparebeløp",
+   "y2026": 300000,
+   "y2027": 300000,
+   "unit": "kr",
+   "page": 29,
+   "quote": "Maksimalt samlet sparebeløp i ordningen..................... 300 000 kr 300 000 kr -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "foreldrefradrag_ett_barn",
+   "label_nb": "Foreldrefradrag, øvre grense ett barn",
+   "y2026": 15000,
+   "y2027": 15000,
+   "unit": "kr",
+   "page": 29,
+   "quote": "Ett barn.............................................................................. 15 000 kr 15 000 kr -",
+   "note": "Tabell 1.5. Fotnote 13: for barn 12 år+ med særskilt behov 25 000 kr for ett barn og 15 000 per ekstra barn."
+  },
+  {
+   "key": "foreldrefradrag_tillegg_per_barn",
+   "label_nb": "Foreldrefradrag, tillegg per barn utover det første",
+   "y2026": 10000,
+   "y2027": 10000,
+   "unit": "kr",
+   "page": 29,
+   "quote": "Tillegg per barn utover det første ................................... 10 000 kr 10 000 kr -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "arbeidsfradrag_unge_maks",
+   "label_nb": "Arbeidsfradrag for unge i forsøksordningen, maksimalt",
+   "y2026": 125000,
+   "y2027": 130000,
+   "unit": "kr",
+   "page": 29,
+   "quote": "Maksimalt fradrag ............................................................ 125 000 kr 130 000 kr 4 pst.",
+   "note": "Tabell 1.5. Gjelder kun et tilfeldig utvalg unge født 1991-2006 (fotnote 14). Nedtrappingssats 40 pst."
+  },
+  {
+   "key": "arbeidsfradrag_unge_nedtrapping",
+   "label_nb": "Arbeidsfradrag for unge, innslagspunkt for nedtrapping",
+   "y2026": 345000,
+   "y2027": 358800,
+   "unit": "kr",
+   "page": 29,
+   "quote": "Innslagspunkt for nedtrapping........................................ 345 000 kr 358 800 kr 4 pst.",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "formuesskatt_kommune_innslagspunkt",
+   "label_nb": "Formuesskatt kommune, innslagspunkt (bunnfradrag)",
+   "y2026": 1900000,
+   "y2027": 1990000,
+   "unit": "kr",
+   "page": 29,
+   "quote": "Kommune Innslagspunkt ................................................................... 1 900 000 kr 1 990 000 kr 4,7 pst.",
+   "note": "Tabell 1.5. Fotnote 15: for enslige; dobbelt for ektefeller."
+  },
+  {
+   "key": "formuesskatt_kommune_sats",
+   "label_nb": "Formuesskatt kommune, sats",
+   "y2026": 0.35,
+   "y2027": 0.35,
+   "unit": "pst",
+   "page": 29,
+   "quote": "Sats..................................................................................... 0,35 pst. 0,35 pst. -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "formuesskatt_stat_trinn1_innslagspunkt",
+   "label_nb": "Formuesskatt stat, innslagspunkt trinn 1",
+   "y2026": 1900000,
+   "y2027": 1990000,
+   "unit": "kr",
+   "page": 29,
+   "quote": "Innslagspunkt, trinn 1 ...................................................... 1 900 000 kr 1 990 000 kr 4,7 pst.",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "formuesskatt_stat_trinn1_sats",
+   "label_nb": "Formuesskatt stat, sats trinn 1",
+   "y2026": 0.65,
+   "y2027": 0.65,
+   "unit": "pst",
+   "page": 29,
+   "quote": "Sats, trinn 1 ....................................................................... 0,65 pst. 0,65 pst. -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "formuesskatt_stat_trinn2_innslagspunkt",
+   "label_nb": "Formuesskatt stat, innslagspunkt trinn 2",
+   "y2026": 21500000,
+   "y2027": 21500000,
+   "unit": "kr",
+   "page": 29,
+   "quote": "Innslagspunkt, trinn 2 ...................................................... 21,5 mill. kr 21,5 mill. kr -",
+   "note": "Tabell 1.5 (21,5 mill. kr)"
+  },
+  {
+   "key": "formuesskatt_stat_trinn2_sats",
+   "label_nb": "Formuesskatt stat, sats trinn 2",
+   "y2026": 0.75,
+   "y2027": 0.75,
+   "unit": "pst",
+   "page": 29,
+   "quote": "Sats, trinn 2 ....................................................................... 0,75 pst. 0,75 pst. -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "verdsettelse_primarbolig_lav",
+   "label_nb": "Verdsettelse primærbolig, opp til grensen",
+   "y2026": 25,
+   "y2027": 25,
+   "unit": "pst",
+   "page": 29,
+   "quote": "Primærbolig med lav verdsettelse17............................... 25 pst. 25 pst. -",
+   "note": "Tabell 1.5. Andel av boligverdi som inngår i formuesgrunnlaget."
+  },
+  {
+   "key": "verdsettelse_primarbolig_grense",
+   "label_nb": "Grense for lav verdsettelse av primærbolig",
+   "y2026": 14000000,
+   "y2027": 14000000,
+   "unit": "kr",
+   "page": 30,
+   "quote": "17 Primærbolig med lav verdsettelse gjelder for boligverdi inntil 14 mill. kroner både i 2026 og 2027.",
+   "note": "Tabell 1.5 fotnote 17."
+  },
+  {
+   "key": "verdsettelse_primarbolig_over",
+   "label_nb": "Verdsettelse primærbolig over grensen",
+   "y2026": 70,
+   "y2027": 70,
+   "unit": "pst",
+   "page": 29,
+   "quote": "Primærbolig ...................................................................... 70 pst. 70 pst. -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "verdsettelse_sekundarbolig",
+   "label_nb": "Verdsettelse sekundærbolig (og tilordnet gjeld)",
+   "y2026": 100,
+   "y2027": 100,
+   "unit": "pst",
+   "page": 29,
+   "quote": "Sekundærbolig (og tilordnet gjeld) ................................ 100 pst. 100 pst. -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "verdsettelse_aksjer",
+   "label_nb": "Verdsettelse aksjer (inkl. næringseiendom) og tilordnet gjeld",
+   "y2026": 80,
+   "y2027": 80,
+   "unit": "pst",
+   "page": 29,
+   "quote": "Aksjer (inkl. næringseiendom) og tilordnet gjeld......... 80 pst. 80 pst. -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "verdsettelse_driftsmidler",
+   "label_nb": "Verdsettelse driftsmidler (og tilordnet gjeld)",
+   "y2026": 70,
+   "y2027": 70,
+   "unit": "pst",
+   "page": 29,
+   "quote": "Driftsmidler (og tilordnet gjeld) ..................................... 70 pst. 70 pst. -",
+   "note": "Tabell 1.5"
+  },
+  {
+   "key": "maks_marginalskatt_lonn",
+   "label_nb": "Maksimal effektiv marginalskatt lønn ekskl. arbeidsgiveravgift",
+   "y2026": 47.4,
+   "y2027": 47.2,
+   "unit": "pst",
+   "page": 27,
+   "quote": "Lønnsinntekt ekskl. arbeidsgiveravgift.......................... 47,4 pst. 47,2 pst. -0,2 pst.-enhet",
+   "note": "Tabell 1.5 (kontrollverdi for kalkulator)"
+  },
+  {
+   "key": "maks_marginalskatt_pensjon",
+   "label_nb": "Maksimal effektiv marginalskatt pensjonsinntekt",
+   "y2026": 44.9,
+   "y2027": 44.9,
+   "unit": "pst",
+   "page": 27,
+   "quote": "Pensjonsinntekt9............................................................... 44,9 pst. 44,9 pst. -",
+   "note": "Tabell 1.5. Fotnote 9: opptil 50,2 pst. for personer med pensjonsskattefradrag."
+  },
+  {
+   "key": "utbytte_oppjusteringsfaktor",
+   "label_nb": "Oppjusteringsfaktor for utbytte mv.",
+   "y2026": 1.72,
+   "y2027": 1.72,
+   "unit": "faktor",
+   "page": 30,
+   "quote": "Både i 2026 og 2027 er selskapsskatten 22 pst. og oppjusterings- faktoren for utbytte mv. 1,72.",
+   "note": "Tabell 1.5 fotnote 10."
+  }
+ ],
+ "trinnskatt": {
+  "y2026": [
+   {
+    "from": 226100,
+    "rate": 1.7
+   },
+   {
+    "from": 318300,
+    "rate": 4.0
+   },
+   {
+    "from": 725050,
+    "rate": 13.7
+   },
+   {
+    "from": 980100,
+    "rate": 16.8
+   },
+   {
+    "from": 1467200,
+    "rate": 17.8
+   }
+  ],
+  "y2027": [
+   {
+    "from": 235150,
+    "rate": 1.7
+   },
+   {
+    "from": 331050,
+    "rate": 4.0
+   },
+   {
+    "from": 754050,
+    "rate": 13.7
+   },
+   {
+    "from": 1019300,
+    "rate": 16.8
+   },
+   {
+    "from": 1525900,
+    "rate": 17.8
+   }
+  ],
+  "page": 26,
+  "quote": "Trinn 1 Innslagspunkt ................................................................... 226 100 kr 235 150 kr 4 pst. Sats..................................................................................... 1,7 pst. 1,7 pst. -",
+  "note": "Tabell 1.5 (s. 26). Alle fem trinn bekreftet i prosa punkt 3.1.2 (s. 80) og skattevedtaket § 3-1 (s. 256-257). Ingen egen trinn 3-sats for Finnmark/Nord-Troms finnes i dokumentet; § 3-1 har én satsstruktur. Lavere skatt i innsatssonen gis via alminnelig inntekt (18,5 pst.) og finnmarksfradraget."
+ },
+ "examples": [
+  {
+   "description_nb": "Lønnstaker, kun lønnsinntekt og standard fradrag",
+   "income": 200000,
+   "tax_2026": 15200,
+   "tax_2027": null,
+   "change": null,
+   "table": "Tabell 2.1 Beregnet skatt for noen utvalgte lønnsinntekter. 2026-regler. Kroner",
+   "page": 49,
+   "quote": "Samlet skatt (pst. av lønnsinntekt) 15 200 (7,6 pst.) 160 983 (24,8 pst.) 305 870 (30,6 pst.)",
+   "note": "Kun 2026-regler. Kan brukes til å validere 2026-kalkulatoren. Minstefradrag 92 000, skattbar alminnelig inntekt 0, trygdeavgift 15 200."
+  },
+  {
+   "description_nb": "Lønnstaker, kun lønnsinntekt og standard fradrag",
+   "income": 650000,
+   "tax_2026": 160983,
+   "tax_2027": null,
+   "change": null,
+   "table": "Tabell 2.1 Beregnet skatt for noen utvalgte lønnsinntekter. 2026-regler. Kroner",
+   "page": 49,
+   "quote": "Samlet skatt (pst. av lønnsinntekt) 15 200 (7,6 pst.) 160 983 (24,8 pst.) 305 870 (30,6 pst.)",
+   "note": "Kun 2026-regler. Delposter: skatt alm. inntekt 96 747, trygdeavgift 49 400, trinnskatt 14 835."
+  },
+  {
+   "description_nb": "Lønnstaker, kun lønnsinntekt og standard fradrag",
+   "income": 1000000,
+   "tax_2026": 305870,
+   "tax_2027": null,
+   "change": null,
+   "table": "Tabell 2.1 Beregnet skatt for noen utvalgte lønnsinntekter. 2026-regler. Kroner",
+   "page": 49,
+   "quote": "Samlet skatt (pst. av lønnsinntekt) 15 200 (7,6 pst.) 160 983 (24,8 pst.) 305 870 (30,6 pst.)",
+   "note": "Kun 2026-regler. Delposter: skatt alm. inntekt 173 747, trygdeavgift 76 000, trinnskatt 56 122."
+  },
+  {
+   "description_nb": "Lønnstaker med 750 000 kroner i lønn og standard fradrag",
+   "income": 750000,
+   "tax_2026": null,
+   "tax_2027": null,
+   "change": -1800,
+   "table": "Pressemelding 'Foreslår milliardkutt i inntektsskatten – største på over 20 år' (https://www.regjeringen.no/no/aktuelt/foreslar-milliardkutt-i-inntektsskatten-storste-pa-over-20-ar/id3174677/)",
+   "page": null,
+   "quote": "– Som et eksempel vil en lønnstaker med 750 000 kroner i lønn og standard fradrag, få redusert skatten med om lag 1 800 kroner i 2027, sier finansminister Stoltenberg.",
+   "note": "'om lag'. Sammenligningsgrunnlag ikke presisert (trolig referansesystemet for 2027, dvs. 2026-regler justert for lønnsvekst — antakelse). Prop. 1 LS s. 80 sier trygdeavgiftsreduksjonen alene gir 1 500 kr lettelse ved 750 000; personfradraget gir om lag 250 kr.",
+   "source_file": "data/saker/id3174677.txt"
+  },
+  {
+   "description_nb": "Lønnstaker med 750 000 kroner i lønn (kun effekt av redusert trygdeavgift)",
+   "income": 750000,
+   "tax_2026": null,
+   "tax_2027": null,
+   "change": -1500,
+   "table": "Prop. 1 LS punkt 3.1.3 (prosa)",
+   "page": 80,
+   "quote": "For en skattyter med lønn på for eksempel 750 000 kroner gir det en skattelettelse på 1 500 kroner.",
+   "note": "Kun trygdeavgiftsreduksjonen (0,2 pst.-enheter)."
+  },
+  {
+   "description_nb": "Familie med to lønnsinntekter på 750 000 kroner",
+   "income": 1500000,
+   "tax_2026": null,
+   "tax_2027": null,
+   "change": -3500,
+   "table": "Pressemelding 'Et budsjett som trygger Norge i en utrygg tid' (https://www.regjeringen.no/no/aktuelt/et-budsjett-som-trygger-norge-i-en-utrygg-tid/id3174614/)",
+   "page": null,
+   "quote": "En familie med to lønnsinntekter på 750 000 kroner vil betale 15 000 kroner mindre i skatt neste år, sammenlignet med 2021. Av dette er 3 500 kroner lettelser i budsjettet som legges frem nå.",
+   "note": "income = samlet husholdningsinntekt (2 x 750 000). Endring -3 500 er lettelsen i 2027-budsjettet; -15 000 er sammenlignet med 2021.",
+   "source_file": "data/saker/id3174614.txt"
+  },
+  {
+   "description_nb": "Enslig minstepensjonist (minste pensjonsnivå, ingen andre inntekter)",
+   "income": null,
+   "tax_2026": null,
+   "tax_2027": null,
+   "change": null,
+   "table": "Prop. 1 LS punkt 3.1.4 (prosa)",
+   "page": 81,
+   "quote": "Regjeringen foreslår at pensjonsskattefradra - get justeres slik at minste pensjonsnivå for enslige holdes skattefritt også i 2027.",
+   "note": "Skatt 0 i 2027 ifølge forslaget; beløpet for minste pensjonsnivå er ikke oppgitt. Lettelse inntil om lag 750 kroner sammenlignet med referansen for 2027 (ikke sammenlignet med 2026)."
+  },
+  {
+   "description_nb": "Desil 1 etter bruttoinntekt, personer 17 år og eldre (gjennomsnitt)",
+   "income": null,
+   "tax_2026": null,
+   "tax_2027": null,
+   "change": 0,
+   "table": "Tabell 1.3 Anslåtte fordelingsvirkninger av endringer i personbeskatningen for personer 17 år og eldre",
+   "page": 24,
+   "quote": "1 0 –194 200 .............................. 2 400 3,1 0 0,1",
+   "note": "Bruttoinntektsintervall står i quote. Gjennomsnittlig skatt i referansesystemet for 2027 = 2400 kr (ikke 2026-skatt). Endring er sammenlignet med referansesystemet for 2027, avrundet til nærmeste 200 kr."
+  },
+  {
+   "description_nb": "Desil 2 etter bruttoinntekt, personer 17 år og eldre (gjennomsnitt)",
+   "income": null,
+   "tax_2026": null,
+   "tax_2027": null,
+   "change": -400,
+   "table": "Tabell 1.3 Anslåtte fordelingsvirkninger av endringer i personbeskatningen for personer 17 år og eldre",
+   "page": 24,
+   "quote": "2 194 200 – 343 800 .................. 17 400 6,2 -400 -0,2",
+   "note": "Bruttoinntektsintervall står i quote. Gjennomsnittlig skatt i referansesystemet for 2027 = 17400 kr (ikke 2026-skatt). Endring er sammenlignet med referansesystemet for 2027, avrundet til nærmeste 200 kr."
+  },
+  {
+   "description_nb": "Desil 3 etter bruttoinntekt, personer 17 år og eldre (gjennomsnitt)",
+   "income": null,
+   "tax_2026": null,
+   "tax_2027": null,
+   "change": -1000,
+   "table": "Tabell 1.3 Anslåtte fordelingsvirkninger av endringer i personbeskatningen for personer 17 år og eldre",
+   "page": 24,
+   "quote": "3 343 800 – 432 600 .................. 47 400 12,2 -1 000 -0,3",
+   "note": "Bruttoinntektsintervall står i quote. Gjennomsnittlig skatt i referansesystemet for 2027 = 47400 kr (ikke 2026-skatt). Endring er sammenlignet med referansesystemet for 2027, avrundet til nærmeste 200 kr."
+  },
+  {
+   "description_nb": "Desil 4 etter bruttoinntekt, personer 17 år og eldre (gjennomsnitt)",
+   "income": null,
+   "tax_2026": null,
+   "tax_2027": null,
+   "change": -1000,
+   "table": "Tabell 1.3 Anslåtte fordelingsvirkninger av endringer i personbeskatningen for personer 17 år og eldre",
+   "page": 24,
+   "quote": "4 432 600 – 520 400 .................. 78 000 16,4 -1 000 -0,2",
+   "note": "Bruttoinntektsintervall står i quote. Gjennomsnittlig skatt i referansesystemet for 2027 = 78000 kr (ikke 2026-skatt). Endring er sammenlignet med referansesystemet for 2027, avrundet til nærmeste 200 kr."
+  },
+  {
+   "description_nb": "Desil 5 etter bruttoinntekt, personer 17 år og eldre (gjennomsnitt)",
+   "income": null,
+   "tax_2026": null,
+   "tax_2027": null,
+   "change": -1000,
+   "table": "Tabell 1.3 Anslåtte fordelingsvirkninger av endringer i personbeskatningen for personer 17 år og eldre",
+   "page": 24,
+   "quote": "5 520 400 – 610 200 .................. 108 600 19,2 -1 000 -0,2",
+   "note": "Bruttoinntektsintervall står i quote. Gjennomsnittlig skatt i referansesystemet for 2027 = 108600 kr (ikke 2026-skatt). Endring er sammenlignet med referansesystemet for 2027, avrundet til nærmeste 200 kr."
+  },
+  {
+   "description_nb": "Desil 6 etter bruttoinntekt, personer 17 år og eldre (gjennomsnitt)",
+   "income": null,
+   "tax_2026": null,
+   "tax_2027": null,
+   "change": -1200,
+   "table": "Tabell 1.3 Anslåtte fordelingsvirkninger av endringer i personbeskatningen for personer 17 år og eldre",
+   "page": 24,
+   "quote": "6 610 200 – 705 200 .................. 137 600 21,0 -1 200 -0,2",
+   "note": "Bruttoinntektsintervall står i quote. Gjennomsnittlig skatt i referansesystemet for 2027 = 137600 kr (ikke 2026-skatt). Endring er sammenlignet med referansesystemet for 2027, avrundet til nærmeste 200 kr."
+  },
+  {
+   "description_nb": "Desil 7 etter bruttoinntekt, personer 17 år og eldre (gjennomsnitt)",
+   "income": null,
+   "tax_2026": null,
+   "tax_2027": null,
+   "change": -1600,
+   "table": "Tabell 1.3 Anslåtte fordelingsvirkninger av endringer i personbeskatningen for personer 17 år og eldre",
+   "page": 24,
+   "quote": "7 705 200 – 811 200 .................. 168 200 22,2 -1 600 -0,3",
+   "note": "Bruttoinntektsintervall står i quote. Gjennomsnittlig skatt i referansesystemet for 2027 = 168200 kr (ikke 2026-skatt). Endring er sammenlignet med referansesystemet for 2027, avrundet til nærmeste 200 kr."
+  },
+  {
+   "description_nb": "Desil 8 etter bruttoinntekt, personer 17 år og eldre (gjennomsnitt)",
+   "income": null,
+   "tax_2026": null,
+   "tax_2027": null,
+   "change": -1800,
+   "table": "Tabell 1.3 Anslåtte fordelingsvirkninger av endringer i personbeskatningen for personer 17 år og eldre",
+   "page": 24,
+   "quote": "8 811 200 – 953 400 .................. 212 800 24,3 -1 800 -0,3",
+   "note": "Bruttoinntektsintervall står i quote. Gjennomsnittlig skatt i referansesystemet for 2027 = 212800 kr (ikke 2026-skatt). Endring er sammenlignet med referansesystemet for 2027, avrundet til nærmeste 200 kr."
+  },
+  {
+   "description_nb": "Desil 9 etter bruttoinntekt, personer 17 år og eldre (gjennomsnitt)",
+   "income": null,
+   "tax_2026": null,
+   "tax_2027": null,
+   "change": -2000,
+   "table": "Tabell 1.3 Anslåtte fordelingsvirkninger av endringer i personbeskatningen for personer 17 år og eldre",
+   "page": 24,
+   "quote": "9 953 400 – 1 228 800 ............... 292 600 27,3 -2 000 -0,3",
+   "note": "Bruttoinntektsintervall står i quote. Gjennomsnittlig skatt i referansesystemet for 2027 = 292600 kr (ikke 2026-skatt). Endring er sammenlignet med referansesystemet for 2027, avrundet til nærmeste 200 kr."
+  },
+  {
+   "description_nb": "Desil 10 etter bruttoinntekt, personer 17 år og eldre (gjennomsnitt)",
+   "income": null,
+   "tax_2026": null,
+   "tax_2027": null,
+   "change": -3200,
+   "table": "Tabell 1.3 Anslåtte fordelingsvirkninger av endringer i personbeskatningen for personer 17 år og eldre",
+   "page": 24,
+   "quote": "10 1 228 800 – .......... .................. 717 200 35,3 -3 200 -0,2",
+   "note": "Bruttoinntektsintervall står i quote. Gjennomsnittlig skatt i referansesystemet for 2027 = 717200 kr (ikke 2026-skatt). Endring er sammenlignet med referansesystemet for 2027, avrundet til nærmeste 200 kr."
+  }
+ ],
+ "gaps": [
+  "Minstefradrag i lønn: nedre grense finnes ikke i dokumentet (kun sats og øvre grense).",
+  "Trinnskatt trinn 3 for Finnmark/Nord-Troms: ingen egen sats oppgitt; skattevedtaket § 3-1 har én satsstruktur for alle.",
+  "Trygdeavgift for jordbruk: ingen egen sats oppgitt (kun 'Fiske, fangst og barnepass' og 'Annen næringsinntekt').",
+  "Ingen offisiell tabell med typetilfeller (husholdninger) som viser skatt i 2026 og 2027 side om side. Tabell 2.1 viser kun 2026-regler; fordelingstabellene 1.3/1.4/3.1 sammenligner med referansesystemet for 2027, ikke med 2026.",
+  "Ingen eksempler for par med barn eller pensjonister med kronebeløp for skatt 2026 vs 2027.",
+  "Særfradrag (f.eks. for store sykdomsutgifter) og frikort ut over nedre grense for trygdeavgift er ikke oppgitt i Tabell 1.5."
+ ]
+}

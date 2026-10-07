@@ -1,4 +1,10 @@
 .venv/
 __pycache__/
 # Downloaded source files; recreate with `uv run python download.py`
-data/
+data/*
+# Verified facts are written by agent sessions, not downloaded
+!data/persona/
+# Maps text files to source URLs, written by hand
+!data/text/
+data/text/*
+!data/text/SOURCES.txt

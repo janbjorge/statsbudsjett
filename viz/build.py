@@ -19,7 +19,7 @@ FILES = {
 OUT = Path(__file__).parent / "budget.json"
 HTML = Path(__file__).parent / "statsbudsjett.html"
 
-PETROLEUM = [2440, 2800, 5440, 5507, 5508, 5509, 5685]
+PETROLEUM = [2440, 2800, 5440, 5507, 5508, 5509, 5685]  # see METHOD.md §1
 
 # Expense groups in display order; the first seven get a categorical slot, the last is gray
 GROUPS = [
@@ -136,7 +136,8 @@ def flows(year: int) -> pl.DataFrame:
     out = pl.concat([income.select(cols), groups.select(cols), leaves.select(cols)])
     balance = income["beløp"].sum() - groups["beløp"].sum()
     assert abs(balance) < 1e-6, f"{year}: income and spending differ by {balance} bn"
-    return out.with_columns(year=pl.lit(year))
+    # Round to whole kroner: parallel group_by sums differ in the last float bits between runs
+    return out.with_columns(pl.col("beløp").round(9), year=pl.lit(year)).sort("level", "source", "target")
 
 
 def main() -> None:
@@ -150,7 +151,7 @@ def main() -> None:
         keyed.pivot(on="year", index=["level", "key", "parent"], values="beløp")
         .rename({"2026": "y2026", "2027": "y2027"})
         .with_columns(pl.col("y2026", "y2027").fill_null(0.0))
-        .with_columns(change=pl.col("y2027") - pl.col("y2026"))
+        .with_columns(change=(pl.col("y2027") - pl.col("y2026")).round(9))
         .with_columns(pct=pl.when(pl.col("y2026") > 0).then(pl.col("change") / pl.col("y2026") * 100))
         .sort("level", "change", descending=[False, True])
     )

@@ -1,0 +1,27 @@
+data/text/prop-1-s_dfd-vedlegg_oppfolging-av-berekraftsmala.txt -> https://www.regjeringen.no/no/dokumenter/oppfolging-av-berekraftsmala-i-noreg/id3174026/
+data/text/regjeringens_klimastatus_og_-plan_for_2027.txt -> https://www.regjeringen.no/no/dokumenter/regjeringens-klimastatus-og-plan-for-2027/id3174132/
+data/text/prp202620270001bfddddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175032/
+data/text/prp202620270001_eddddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175070/
+data/text/prp202620270001_kddddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175106/
+data/text/prp202620270001nfddddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175167/
+data/text/prp202620270001kdddddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175192/
+data/text/prp202620270001findddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175217/
+data/text/prp202620270001lmddddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175272/
+data/text/prp202620270001dfddddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175298/
+data/text/prp202620270001hoddddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175316/
+data/text/prp202620270001_sddddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175333/
+data/text/prp202620270001_jddddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175360/
+data/text/prp202620270001svadddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop2.-1-s-20262027/id3175417/
+data/text/prp202620270001klddddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175616/
+data/text/prp202620270001_uddddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175636/
+data/text/prp202620270001aiddddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175670/
+data/text/prp202620270001_fddddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175722/
+data/text/prp202620270001guldddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175738/
+data/text/stm202620270001000dddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/meld.-st.-1-20262027/id3175768/
+data/text/prp202620270001kuddddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3176084/
+data/text/prp202620270001ls0dddpdfs.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/
+data/text/vedl01.txt -> https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175192/  (KDD særskilt vedlegg: Grønt hefte, berekningsteknisk dokumentasjon)
+
+Department codes in Prop. 1 S file names: bf=Barne- og familiedep., _k=Kunnskapsdep., kddddd=Kommunal- og distriktsdep., ai=Arbeids- og inkluderingsdep., ho=Helse- og omsorgsdep., lm=Landbruks- og matdep., nf=Nærings- og fiskeridep., _e=Energidep., kl=Klima- og miljødep., _s=Samferdselsdep., _j=Justis- og beredskapsdep., fin=Finansdep., df=Digitaliserings- og forvaltningsdep., ku=Kultur- og likestillingsdep., _u=Utenriksdep., _f=Forsvarsdep., sva=Svalbardbudsjettet, gul=Gul bok, ls0=Prop. 1 LS Skatter og avgifter, stm...=Meld. St. 1 Nasjonalbudsjettet.
+Each PDF text file marks pages as "=== SIDE N ===" (N = PDF page number).
+Press releases: data/saker/*.txt, each starts with TITLE:, URL:, DATE: lines.
