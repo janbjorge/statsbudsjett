@@ -276,9 +276,23 @@ def robots_txt(request: Request) -> str:
     return (
         f"# For AI agents: read {request.base_url}llms.txt, then use the JSON API\n"
         f"# described in {request.base_url}api/openapi.json instead of crawling the pages.\n"
+        f"Sitemap: {request.base_url}sitemap.xml\n"
         "User-agent: *\n"
         "Allow: /api/\n"
         + "".join(f"Disallow: {path}\n" for path in disallow)
+    )
+
+
+# The pages a crawler should index; the query-string variants and fragments stay out (see robots_txt)
+PAGES = ("", "flyt", "visste-du", "ki")
+
+
+@app.get("/sitemap.xml")
+def sitemap_xml(request: Request) -> Response:
+    urls = "".join(f"<url><loc>{request.base_url}{page}</loc></url>" for page in PAGES)
+    return Response(
+        f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n',
+        media_type="application/xml",
     )
 
 

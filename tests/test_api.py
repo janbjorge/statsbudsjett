@@ -92,6 +92,16 @@ def test_robots_txt_sends_crawlers_to_the_api() -> None:
     assert "/?*sti=" in rules and "/utforsk" in rules
     assert not any(r.startswith(("/api", "/*")) for r in rules)  # no rule reaches /api/utforsk?sti=
     assert "/" not in rules  # the pages themselves stay crawlable
+    assert "Sitemap: http://testserver/sitemap.xml\n" in text
+
+
+def test_sitemap_lists_the_pages_and_each_answers() -> None:
+    r = client.get("/sitemap.xml")
+    assert r.status_code == 200 and r.headers["content-type"].startswith("application/xml")
+    urls = [u.split("</loc>")[0] for u in r.text.split("<loc>")[1:]]
+    assert urls == ["http://testserver/", "http://testserver/flyt", "http://testserver/visste-du", "http://testserver/ki"]
+    for url in urls:
+        assert client.get(url).status_code == 200, url
 
 
 def test_openapi_has_an_absolute_server_and_typed_responses() -> None:
