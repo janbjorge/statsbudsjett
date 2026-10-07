@@ -27,7 +27,7 @@
       <input id="tax" name="skatt" inputmode="numeric" autocomplete="off" value="{{ tax_kroner|nb }}"{% if own and own == tax_kroner %} data-mine="1"{% endif %}>
       <div class="chips">
         {% include "_my_tax.html" %}
-        {% for v in [50000, 150000, 300000, 600000, 1200000] %}
+        {% for v in [50000, 150000, 300000] %}
         <button class="chip" type="button" data-set-tax="{{ v }}" aria-pressed="{{ 'true' if v == tax_kroner and v != own else 'false' }}">{{ v|kr }}</button>
         {% endfor %}
       </div>
