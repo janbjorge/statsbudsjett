@@ -1,0 +1,1015 @@
+{
+ "groups": [
+  "Folketrygden",
+  "Kommunesektoren",
+  "Helse og omsorg",
+  "Forsvar",
+  "Arbeid, familie og integrering",
+  "Utdanning og forskning",
+  "Samferdsel",
+  "Øvrige formål"
+ ],
+ "income": [
+  "Skatt på inntekt og formue",
+  "Trygde- og arbeidsgiveravgift",
+  "Merverdiavgift",
+  "Andre skatter og avgifter",
+  "Renter, utbytte og andre inntekter",
+  "Overføring fra oljefondet"
+ ],
+ "flows": {
+  "2026": [
+   {
+    "level": 0,
+    "source": "Overføring fra oljefondet",
+    "target": "Statsbudsjettet 2026",
+    "beløp": 452.220406
+   },
+   {
+    "level": 0,
+    "source": "Renter, utbytte og andre inntekter",
+    "target": "Statsbudsjettet 2026",
+    "beløp": 151.995315
+   },
+   {
+    "level": 0,
+    "source": "Skatt på inntekt og formue",
+    "target": "Statsbudsjettet 2026",
+    "beløp": 507.78025
+   },
+   {
+    "level": 0,
+    "source": "Andre skatter og avgifter",
+    "target": "Statsbudsjettet 2026",
+    "beløp": 117.294554
+   },
+   {
+    "level": 0,
+    "source": "Trygde- og arbeidsgiveravgift",
+    "target": "Statsbudsjettet 2026",
+    "beløp": 514.2004400000001
+   },
+   {
+    "level": 0,
+    "source": "Merverdiavgift",
+    "target": "Statsbudsjettet 2026",
+    "beløp": 420.97
+   },
+   {
+    "level": 1,
+    "source": "Statsbudsjettet 2026",
+    "target": "Utdanning og forskning",
+    "beløp": 107.22601600000002
+   },
+   {
+    "level": 1,
+    "source": "Statsbudsjettet 2026",
+    "target": "Folketrygden",
+    "beløp": 744.0177150000001
+   },
+   {
+    "level": 1,
+    "source": "Statsbudsjettet 2026",
+    "target": "Helse og omsorg",
+    "beløp": 257.365624
+   },
+   {
+    "level": 1,
+    "source": "Statsbudsjettet 2026",
+    "target": "Samferdsel",
+    "beløp": 98.11790000000003
+   },
+   {
+    "level": 1,
+    "source": "Statsbudsjettet 2026",
+    "target": "Forsvar",
+    "beløp": 179.76530400000004
+   },
+   {
+    "level": 1,
+    "source": "Statsbudsjettet 2026",
+    "target": "Arbeid, familie og integrering",
+    "beløp": 124.81804999999997
+   },
+   {
+    "level": 1,
+    "source": "Statsbudsjettet 2026",
+    "target": "Øvrige formål",
+    "beløp": 379.0798849999998
+   },
+   {
+    "level": 1,
+    "source": "Statsbudsjettet 2026",
+    "target": "Kommunesektoren",
+    "beløp": 274.070471
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Statsforvaltning og annet",
+    "beløp": 58.169709000000005
+   },
+   {
+    "level": 2,
+    "source": "Arbeid, familie og integrering",
+    "target": "Øvrig arbeid og familie",
+    "beløp": 28.334849
+   },
+   {
+    "level": 2,
+    "source": "Utdanning og forskning",
+    "target": "Høyere utdanning og forskning",
+    "beløp": 63.032705
+   },
+   {
+    "level": 2,
+    "source": "Arbeid, familie og integrering",
+    "target": "Familie og oppvekst",
+    "beløp": 33.405141
+   },
+   {
+    "level": 2,
+    "source": "Samferdsel",
+    "target": "Vei",
+    "beløp": 50.44969999999999
+   },
+   {
+    "level": 2,
+    "source": "Kommunesektoren",
+    "target": "Øvrig til kommunesektoren",
+    "beløp": 15.028984000000001
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Renter på statsgjeld",
+    "beløp": 20.081400000000002
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Momskompensasjon",
+    "beløp": 47.95
+   },
+   {
+    "level": 2,
+    "source": "Samferdsel",
+    "target": "Jernbane",
+    "beløp": 31.703900000000008
+   },
+   {
+    "level": 2,
+    "source": "Folketrygden",
+    "target": "Foreldrepenger",
+    "beløp": 31.388
+   },
+   {
+    "level": 2,
+    "source": "Folketrygden",
+    "target": "Legehjelp og legemidler",
+    "beløp": 47.9392
+   },
+   {
+    "level": 2,
+    "source": "Kommunesektoren",
+    "target": "Rammetilskudd fylkeskommuner",
+    "beløp": 55.553773
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Næring og fiskeri",
+    "beløp": 26.010489000000003
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Justis og beredskap",
+    "beløp": 60.61197200000001
+   },
+   {
+    "level": 2,
+    "source": "Arbeid, familie og integrering",
+    "target": "Integrering",
+    "beløp": 22.575123
+   },
+   {
+    "level": 2,
+    "source": "Utdanning og forskning",
+    "target": "Lånekassen",
+    "beløp": 21.402700000000003
+   },
+   {
+    "level": 2,
+    "source": "Folketrygden",
+    "target": "Andre trygdeytelser",
+    "beløp": 22.335315
+   },
+   {
+    "level": 2,
+    "source": "Folketrygden",
+    "target": "Alderspensjon",
+    "beløp": 352.07000000000005
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Kultur og medier",
+    "beløp": 27.03875500000001
+   },
+   {
+    "level": 2,
+    "source": "Samferdsel",
+    "target": "Øvrig samferdsel",
+    "beløp": 15.964300000000001
+   },
+   {
+    "level": 2,
+    "source": "Helse og omsorg",
+    "target": "Øvrig helse og omsorg",
+    "beløp": 19.243594000000005
+   },
+   {
+    "level": 2,
+    "source": "Helse og omsorg",
+    "target": "Sykehusene",
+    "beløp": 238.12203
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Klima, miljø og energi",
+    "beløp": 47.470338999999996
+   },
+   {
+    "level": 2,
+    "source": "Folketrygden",
+    "target": "Dagpenger mv.",
+    "beløp": 18.057000000000002
+   },
+   {
+    "level": 2,
+    "source": "Utdanning og forskning",
+    "target": "Øvrig utdanning",
+    "beløp": 6.224382
+   },
+   {
+    "level": 2,
+    "source": "Arbeid, familie og integrering",
+    "target": "Arbeidsmarkedstiltak",
+    "beløp": 12.545715000000001
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Landbruk og mat",
+    "beløp": 34.84628800000001
+   },
+   {
+    "level": 2,
+    "source": "Arbeid, familie og integrering",
+    "target": "Drift av Nav",
+    "beløp": 16.014105999999998
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Utenriks og bistand",
+    "beløp": 56.90093300000001
+   },
+   {
+    "level": 2,
+    "source": "Utdanning og forskning",
+    "target": "Grunnopplæring",
+    "beløp": 16.566229
+   },
+   {
+    "level": 2,
+    "source": "Folketrygden",
+    "target": "Sykepenger, AAP og uføretrygd",
+    "beløp": 272.22819999999996
+   },
+   {
+    "level": 2,
+    "source": "Kommunesektoren",
+    "target": "Rammetilskudd kommuner",
+    "beløp": 203.487714
+   },
+   {
+    "level": 2,
+    "source": "Arbeid, familie og integrering",
+    "target": "Barnevern",
+    "beløp": 11.943116
+   }
+  ],
+  "2027": [
+   {
+    "level": 0,
+    "source": "Trygde- og arbeidsgiveravgift",
+    "target": "Statsbudsjettet 2027",
+    "beløp": 510.30100000000004
+   },
+   {
+    "level": 0,
+    "source": "Merverdiavgift",
+    "target": "Statsbudsjettet 2027",
+    "beløp": 444.63000000000005
+   },
+   {
+    "level": 0,
+    "source": "Skatt på inntekt og formue",
+    "target": "Statsbudsjettet 2027",
+    "beløp": 486.63840400000004
+   },
+   {
+    "level": 0,
+    "source": "Overføring fra oljefondet",
+    "target": "Statsbudsjettet 2027",
+    "beløp": 561.740988
+   },
+   {
+    "level": 0,
+    "source": "Renter, utbytte og andre inntekter",
+    "target": "Statsbudsjettet 2027",
+    "beløp": 164.633071
+   },
+   {
+    "level": 0,
+    "source": "Andre skatter og avgifter",
+    "target": "Statsbudsjettet 2027",
+    "beløp": 118.854168
+   },
+   {
+    "level": 1,
+    "source": "Statsbudsjettet 2027",
+    "target": "Arbeid, familie og integrering",
+    "beløp": 123.03096199999996
+   },
+   {
+    "level": 1,
+    "source": "Statsbudsjettet 2027",
+    "target": "Kommunesektoren",
+    "beløp": 292.805565
+   },
+   {
+    "level": 1,
+    "source": "Statsbudsjettet 2027",
+    "target": "Samferdsel",
+    "beløp": 99.90839999999999
+   },
+   {
+    "level": 1,
+    "source": "Statsbudsjettet 2027",
+    "target": "Forsvar",
+    "beløp": 191.65318100000005
+   },
+   {
+    "level": 1,
+    "source": "Statsbudsjettet 2027",
+    "target": "Utdanning og forskning",
+    "beløp": 114.27441700000001
+   },
+   {
+    "level": 1,
+    "source": "Statsbudsjettet 2027",
+    "target": "Øvrige formål",
+    "beløp": 400.27869699999997
+   },
+   {
+    "level": 1,
+    "source": "Statsbudsjettet 2027",
+    "target": "Helse og omsorg",
+    "beløp": 270.76730000000003
+   },
+   {
+    "level": 1,
+    "source": "Statsbudsjettet 2027",
+    "target": "Folketrygden",
+    "beløp": 794.0791090000002
+   },
+   {
+    "level": 2,
+    "source": "Utdanning og forskning",
+    "target": "Øvrig utdanning",
+    "beløp": 6.84481
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Næring og fiskeri",
+    "beløp": 26.775598
+   },
+   {
+    "level": 2,
+    "source": "Utdanning og forskning",
+    "target": "Høyere utdanning og forskning",
+    "beløp": 66.36970900000001
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Momskompensasjon",
+    "beløp": 51.92
+   },
+   {
+    "level": 2,
+    "source": "Samferdsel",
+    "target": "Jernbane",
+    "beløp": 33.7216
+   },
+   {
+    "level": 2,
+    "source": "Kommunesektoren",
+    "target": "Rammetilskudd fylkeskommuner",
+    "beløp": 60.384001000000005
+   },
+   {
+    "level": 2,
+    "source": "Folketrygden",
+    "target": "Alderspensjon",
+    "beløp": 378.1600000000001
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Klima, miljø og energi",
+    "beløp": 49.523954
+   },
+   {
+    "level": 2,
+    "source": "Arbeid, familie og integrering",
+    "target": "Integrering",
+    "beløp": 18.650372000000004
+   },
+   {
+    "level": 2,
+    "source": "Folketrygden",
+    "target": "Foreldrepenger",
+    "beløp": 36.095000000000006
+   },
+   {
+    "level": 2,
+    "source": "Folketrygden",
+    "target": "Dagpenger mv.",
+    "beløp": 18.88
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Statsforvaltning og annet",
+    "beløp": 56.944483000000005
+   },
+   {
+    "level": 2,
+    "source": "Kommunesektoren",
+    "target": "Øvrig til kommunesektoren",
+    "beløp": 15.237679000000002
+   },
+   {
+    "level": 2,
+    "source": "Kommunesektoren",
+    "target": "Rammetilskudd kommuner",
+    "beløp": 217.18388500000003
+   },
+   {
+    "level": 2,
+    "source": "Arbeid, familie og integrering",
+    "target": "Drift av Nav",
+    "beløp": 16.693621
+   },
+   {
+    "level": 2,
+    "source": "Arbeid, familie og integrering",
+    "target": "Arbeidsmarkedstiltak",
+    "beløp": 12.986183
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Kultur og medier",
+    "beløp": 28.05942
+   },
+   {
+    "level": 2,
+    "source": "Folketrygden",
+    "target": "Sykepenger, AAP og uføretrygd",
+    "beløp": 291.0081
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Justis og beredskap",
+    "beløp": 65.111083
+   },
+   {
+    "level": 2,
+    "source": "Samferdsel",
+    "target": "Vei",
+    "beløp": 51.67600000000001
+   },
+   {
+    "level": 2,
+    "source": "Helse og omsorg",
+    "target": "Sykehusene",
+    "beløp": 251.45340400000003
+   },
+   {
+    "level": 2,
+    "source": "Arbeid, familie og integrering",
+    "target": "Øvrig arbeid og familie",
+    "beløp": 27.659462000000012
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Renter på statsgjeld",
+    "beløp": 24.399107
+   },
+   {
+    "level": 2,
+    "source": "Helse og omsorg",
+    "target": "Øvrig helse og omsorg",
+    "beløp": 19.313896
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Landbruk og mat",
+    "beløp": 38.495624
+   },
+   {
+    "level": 2,
+    "source": "Folketrygden",
+    "target": "Andre trygdeytelser",
+    "beløp": 21.141609
+   },
+   {
+    "level": 2,
+    "source": "Arbeid, familie og integrering",
+    "target": "Familie og oppvekst",
+    "beløp": 34.026766
+   },
+   {
+    "level": 2,
+    "source": "Samferdsel",
+    "target": "Øvrig samferdsel",
+    "beløp": 14.510800000000001
+   },
+   {
+    "level": 2,
+    "source": "Øvrige formål",
+    "target": "Utenriks og bistand",
+    "beløp": 59.049428
+   },
+   {
+    "level": 2,
+    "source": "Utdanning og forskning",
+    "target": "Grunnopplæring",
+    "beløp": 16.806339
+   },
+   {
+    "level": 2,
+    "source": "Arbeid, familie og integrering",
+    "target": "Barnevern",
+    "beløp": 13.014558000000001
+   },
+   {
+    "level": 2,
+    "source": "Utdanning og forskning",
+    "target": "Lånekassen",
+    "beløp": 24.253559000000003
+   },
+   {
+    "level": 2,
+    "source": "Folketrygden",
+    "target": "Legehjelp og legemidler",
+    "beløp": 48.7944
+   }
+  ]
+ },
+ "diff": [
+  {
+   "level": 0,
+   "key": "Overføring fra oljefondet",
+   "parent": null,
+   "y2026": 452.220406,
+   "y2027": 561.740988,
+   "change": 109.52058199999999,
+   "pct": 24.21840778233258
+  },
+  {
+   "level": 0,
+   "key": "Merverdiavgift",
+   "parent": null,
+   "y2026": 420.97,
+   "y2027": 444.63000000000005,
+   "change": 23.660000000000025,
+   "pct": 5.620352994275132
+  },
+  {
+   "level": 0,
+   "key": "Renter, utbytte og andre inntekter",
+   "parent": null,
+   "y2026": 151.995315,
+   "y2027": 164.633071,
+   "change": 12.637755999999996,
+   "pct": 8.314569432617049
+  },
+  {
+   "level": 0,
+   "key": "Andre skatter og avgifter",
+   "parent": null,
+   "y2026": 117.294554,
+   "y2027": 118.854168,
+   "change": 1.5596139999999963,
+   "pct": 1.329655936114473
+  },
+  {
+   "level": 0,
+   "key": "Trygde- og arbeidsgiveravgift",
+   "parent": null,
+   "y2026": 514.2004400000001,
+   "y2027": 510.30100000000004,
+   "change": -3.899440000000027,
+   "pct": -0.7583501873316223
+  },
+  {
+   "level": 0,
+   "key": "Skatt på inntekt og formue",
+   "parent": null,
+   "y2026": 507.78025,
+   "y2027": 486.63840400000004,
+   "change": -21.141845999999987,
+   "pct": -4.163581785624783
+  },
+  {
+   "level": 1,
+   "key": "Folketrygden",
+   "parent": null,
+   "y2026": 744.0177150000001,
+   "y2027": 794.0791090000002,
+   "change": 50.06139400000018,
+   "pct": 6.72852177988802
+  },
+  {
+   "level": 1,
+   "key": "Øvrige formål",
+   "parent": null,
+   "y2026": 379.07988499999993,
+   "y2027": 400.2786969999999,
+   "change": 21.198811999999975,
+   "pct": 5.592175380131283
+  },
+  {
+   "level": 1,
+   "key": "Kommunesektoren",
+   "parent": null,
+   "y2026": 274.070471,
+   "y2027": 292.805565,
+   "change": 18.735094000000004,
+   "pct": 6.83586740725527
+  },
+  {
+   "level": 1,
+   "key": "Helse og omsorg",
+   "parent": null,
+   "y2026": 257.365624,
+   "y2027": 270.76730000000003,
+   "change": 13.401676000000009,
+   "pct": 5.207251765682587
+  },
+  {
+   "level": 1,
+   "key": "Forsvar",
+   "parent": null,
+   "y2026": 179.76530400000004,
+   "y2027": 191.65318100000005,
+   "change": 11.887877000000003,
+   "pct": 6.6129985795256685
+  },
+  {
+   "level": 1,
+   "key": "Utdanning og forskning",
+   "parent": null,
+   "y2026": 107.22601600000002,
+   "y2027": 114.27441700000001,
+   "change": 7.048400999999998,
+   "pct": 6.573405655582687
+  },
+  {
+   "level": 1,
+   "key": "Samferdsel",
+   "parent": null,
+   "y2026": 98.11790000000002,
+   "y2027": 99.90840000000003,
+   "change": 1.7905000000000086,
+   "pct": 1.8248454155663834
+  },
+  {
+   "level": 1,
+   "key": "Arbeid, familie og integrering",
+   "parent": null,
+   "y2026": 124.81804999999997,
+   "y2027": 123.030962,
+   "change": -1.7870879999999687,
+   "pct": -1.4317544617945634
+  },
+  {
+   "level": 2,
+   "key": "Alderspensjon",
+   "parent": "Folketrygden",
+   "y2026": 352.07000000000005,
+   "y2027": 378.1600000000001,
+   "change": 26.090000000000032,
+   "pct": 7.410458147527487
+  },
+  {
+   "level": 2,
+   "key": "Sykepenger, AAP og uføretrygd",
+   "parent": "Folketrygden",
+   "y2026": 272.22819999999996,
+   "y2027": 291.0081,
+   "change": 18.779900000000055,
+   "pct": 6.898587288164877
+  },
+  {
+   "level": 2,
+   "key": "Rammetilskudd kommuner",
+   "parent": "Kommunesektoren",
+   "y2026": 203.487714,
+   "y2027": 217.18388500000003,
+   "change": 13.696171000000021,
+   "pct": 6.730711516077094
+  },
+  {
+   "level": 2,
+   "key": "Sykehusene",
+   "parent": "Helse og omsorg",
+   "y2026": 238.12203,
+   "y2027": 251.453404,
+   "change": 13.331374000000011,
+   "pct": 5.598547097889268
+  },
+  {
+   "level": 2,
+   "key": "Rammetilskudd fylkeskommuner",
+   "parent": "Kommunesektoren",
+   "y2026": 55.553773,
+   "y2027": 60.384001000000005,
+   "change": 4.830228000000005,
+   "pct": 8.694689377803385
+  },
+  {
+   "level": 2,
+   "key": "Foreldrepenger",
+   "parent": "Folketrygden",
+   "y2026": 31.388,
+   "y2027": 36.095000000000006,
+   "change": 4.707000000000004,
+   "pct": 14.996176882885193
+  },
+  {
+   "level": 2,
+   "key": "Justis og beredskap",
+   "parent": "Øvrige formål",
+   "y2026": 60.61197200000001,
+   "y2027": 65.111083,
+   "change": 4.499110999999985,
+   "pct": 7.422809144041683
+  },
+  {
+   "level": 2,
+   "key": "Renter på statsgjeld",
+   "parent": "Øvrige formål",
+   "y2026": 20.081400000000002,
+   "y2027": 24.399107,
+   "change": 4.317706999999999,
+   "pct": 21.50102582489268
+  },
+  {
+   "level": 2,
+   "key": "Momskompensasjon",
+   "parent": "Øvrige formål",
+   "y2026": 47.95,
+   "y2027": 51.92,
+   "change": 3.969999999999999,
+   "pct": 8.27945776850886
+  },
+  {
+   "level": 2,
+   "key": "Landbruk og mat",
+   "parent": "Øvrige formål",
+   "y2026": 34.84628800000001,
+   "y2027": 38.495624,
+   "change": 3.649335999999991,
+   "pct": 10.472667849155096
+  },
+  {
+   "level": 2,
+   "key": "Høyere utdanning og forskning",
+   "parent": "Utdanning og forskning",
+   "y2026": 63.032705,
+   "y2027": 66.36970900000001,
+   "change": 3.3370040000000145,
+   "pct": 5.29408344445953
+  },
+  {
+   "level": 2,
+   "key": "Lånekassen",
+   "parent": "Utdanning og forskning",
+   "y2026": 21.402700000000003,
+   "y2027": 24.253559000000003,
+   "change": 2.850859,
+   "pct": 13.32009045587706
+  },
+  {
+   "level": 2,
+   "key": "Utenriks og bistand",
+   "parent": "Øvrige formål",
+   "y2026": 56.90093300000001,
+   "y2027": 59.049428,
+   "change": 2.14849499999999,
+   "pct": 3.7758519706522025
+  },
+  {
+   "level": 2,
+   "key": "Klima, miljø og energi",
+   "parent": "Øvrige formål",
+   "y2026": 47.470338999999996,
+   "y2027": 49.523953999999996,
+   "change": 2.0536150000000006,
+   "pct": 4.326101399865716
+  },
+  {
+   "level": 2,
+   "key": "Jernbane",
+   "parent": "Samferdsel",
+   "y2026": 31.703900000000008,
+   "y2027": 33.7216,
+   "change": 2.0176999999999943,
+   "pct": 6.364201249688504
+  },
+  {
+   "level": 2,
+   "key": "Vei",
+   "parent": "Samferdsel",
+   "y2026": 50.44969999999999,
+   "y2027": 51.675999999999995,
+   "change": 1.226300000000002,
+   "pct": 2.4307379429411915
+  },
+  {
+   "level": 2,
+   "key": "Barnevern",
+   "parent": "Arbeid, familie og integrering",
+   "y2026": 11.943116,
+   "y2027": 13.014558000000003,
+   "change": 1.071442000000003,
+   "pct": 8.971209858465771
+  },
+  {
+   "level": 2,
+   "key": "Kultur og medier",
+   "parent": "Øvrige formål",
+   "y2026": 27.03875500000001,
+   "y2027": 28.05942,
+   "change": 1.0206649999999904,
+   "pct": 3.7748224724103974
+  },
+  {
+   "level": 2,
+   "key": "Legehjelp og legemidler",
+   "parent": "Folketrygden",
+   "y2026": 47.9392,
+   "y2027": 48.7944,
+   "change": 0.8552000000000035,
+   "pct": 1.7839263066551037
+  },
+  {
+   "level": 2,
+   "key": "Dagpenger mv.",
+   "parent": "Folketrygden",
+   "y2026": 18.057000000000002,
+   "y2027": 18.88,
+   "change": 0.8229999999999968,
+   "pct": 4.557789223015987
+  },
+  {
+   "level": 2,
+   "key": "Næring og fiskeri",
+   "parent": "Øvrige formål",
+   "y2026": 26.010488999999996,
+   "y2027": 26.775598,
+   "change": 0.7651090000000025,
+   "pct": 2.9415402378632813
+  },
+  {
+   "level": 2,
+   "key": "Drift av Nav",
+   "parent": "Arbeid, familie og integrering",
+   "y2026": 16.014105999999998,
+   "y2027": 16.693621,
+   "change": 0.6795150000000021,
+   "pct": 4.24322781427825
+  },
+  {
+   "level": 2,
+   "key": "Familie og oppvekst",
+   "parent": "Arbeid, familie og integrering",
+   "y2026": 33.405141,
+   "y2027": 34.026766,
+   "change": 0.6216250000000016,
+   "pct": 1.8608662660636628
+  },
+  {
+   "level": 2,
+   "key": "Øvrig utdanning",
+   "parent": "Utdanning og forskning",
+   "y2026": 6.224382,
+   "y2027": 6.84481,
+   "change": 0.6204279999999995,
+   "pct": 9.96770442431071
+  },
+  {
+   "level": 2,
+   "key": "Arbeidsmarkedstiltak",
+   "parent": "Arbeid, familie og integrering",
+   "y2026": 12.545715000000001,
+   "y2027": 12.986183,
+   "change": 0.4404679999999992,
+   "pct": 3.510903922175812
+  },
+  {
+   "level": 2,
+   "key": "Grunnopplæring",
+   "parent": "Utdanning og forskning",
+   "y2026": 16.566229,
+   "y2027": 16.806339,
+   "change": 0.24011000000000138,
+   "pct": 1.4493944276636608
+  },
+  {
+   "level": 2,
+   "key": "Øvrig til kommunesektoren",
+   "parent": "Kommunesektoren",
+   "y2026": 15.028984000000001,
+   "y2027": 15.237679000000002,
+   "change": 0.20869500000000052,
+   "pct": 1.388616822002076
+  },
+  {
+   "level": 2,
+   "key": "Øvrig helse og omsorg",
+   "parent": "Helse og omsorg",
+   "y2026": 19.243594000000005,
+   "y2027": 19.313896,
+   "change": 0.07030199999999454,
+   "pct": 0.3653267679623386
+  },
+  {
+   "level": 2,
+   "key": "Øvrig arbeid og familie",
+   "parent": "Arbeid, familie og integrering",
+   "y2026": 28.334849,
+   "y2027": 27.659462000000012,
+   "change": -0.6753869999999864,
+   "pct": -2.3835913154151145
+  },
+  {
+   "level": 2,
+   "key": "Andre trygdeytelser",
+   "parent": "Folketrygden",
+   "y2026": 22.335315,
+   "y2027": 21.141609,
+   "change": -1.1937060000000024,
+   "pct": -5.344478016092463
+  },
+  {
+   "level": 2,
+   "key": "Statsforvaltning og annet",
+   "parent": "Øvrige formål",
+   "y2026": 58.169709000000005,
+   "y2027": 56.944483000000005,
+   "change": -1.2252259999999993,
+   "pct": -2.1062955635552503
+  },
+  {
+   "level": 2,
+   "key": "Øvrig samferdsel",
+   "parent": "Samferdsel",
+   "y2026": 15.964300000000001,
+   "y2027": 14.5108,
+   "change": -1.4535000000000018,
+   "pct": -9.104689839203733
+  },
+  {
+   "level": 2,
+   "key": "Integrering",
+   "parent": "Arbeid, familie og integrering",
+   "y2026": 22.575123,
+   "y2027": 18.650372000000004,
+   "change": -3.924750999999997,
+   "pct": -17.385291765630676
+  }
+ ]
+}

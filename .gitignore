@@ -1,0 +1,4 @@
+.venv/
+__pycache__/
+# Downloaded source files; recreate with `uv run python download.py`
+data/
