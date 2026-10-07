@@ -45,8 +45,11 @@ async def headers(request: Request, call_next: Callable[[Request], Awaitable[Res
     path = request.url.path
     if path.startswith(("/static/", "/data/")):
         response.headers["Cache-Control"] = "public, max-age=3600"
-    elif "hx-request" not in request.headers:
-        response.headers["Cache-Control"] = "public, max-age=300"
+    else:
+        # One URL answers a full page or redirect without HTMX and a fragment with it; a cache must keep them apart
+        response.headers["Vary"] = ", ".join(filter(None, (response.headers.get("Vary"), "HX-Request")))
+        if "hx-request" not in request.headers:
+            response.headers["Cache-Control"] = "public, max-age=300"
     return response
 
 

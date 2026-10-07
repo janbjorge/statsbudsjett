@@ -30,6 +30,8 @@ def test_fragments_redirect_to_the_full_page_without_htmx() -> None:
     for url in (f"/meg?{FAMILY}", "/kvittering?skatt=1000", "/utforsk?sti=g:Forsvar", "/kommune?k=Bergen"):
         r = client.get(url, follow_redirects=False)
         assert r.status_code == 307 and r.headers["location"].startswith("/?"), url
+        # the redirect is cacheable, so a cache must not hand it to the HTMX request for the same URL
+        assert "HX-Request" in r.headers["vary"], url
 
 
 def test_bad_input_never_errors() -> None:
