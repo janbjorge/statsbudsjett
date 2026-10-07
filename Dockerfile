@@ -6,6 +6,9 @@ COPY pyproject.toml uv.lock ./
 # Runtime dependencies only: the pipeline (polars, pypdf) and dev tools stay out of the image
 RUN uv sync --locked --no-default-groups --no-install-project
 COPY src src
+# Commit for Logfire's service version and source links: fly deploy --build-arg GIT_SHA=$(git rev-parse HEAD)
+ARG GIT_SHA=main
+ENV GIT_SHA=$GIT_SHA
 COPY datasets datasets
 USER nobody
 EXPOSE 8080

@@ -8,6 +8,7 @@ dependencies = [
     "uvicorn[standard]",
     "jinja2",
     "pydantic>=2.13",
+    "logfire[fastapi,system-metrics]>=5.1.1",
 ]
 
 [build-system]

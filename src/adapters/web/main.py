@@ -13,7 +13,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 from adapters.datasets import DATASETS, JsonDatasets
-from adapters.web import api, fmt
+from adapters.web import api, fmt, telemetry
 from adapters.web.params import kroner, profile_from, profile_query
 from app.queries import Queries
 from core.budget import FundYear, Kommune, Node, Side
@@ -46,6 +46,7 @@ async def headers(request: Request, call_next: Callable[[Request], Awaitable[Res
 app.mount("/static", StaticFiles(directory=HERE / "static"), name="static")
 app.mount("/data", StaticFiles(directory=DATASETS), name="data")
 app.mount("/api", api.build(queries))
+telemetry.setup(app)
 
 
 def template_context(request: Request) -> dict[str, object]:
