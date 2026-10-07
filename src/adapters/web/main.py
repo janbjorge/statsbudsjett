@@ -199,7 +199,14 @@ def kommune_fragment(request: Request, k: Q = "") -> Response:
 def flows_page(request: Request) -> HTMLResponse:
     d = data.raw("budget.json")
     payload = {"groups": d["groups"], "income": d["income"], "flows": d["flows"], "diff": d["diff"]}
-    return templates.TemplateResponse(request, "flyt.html", {"payload": json.dumps(payload, ensure_ascii=False).replace("</", "<\\/")})
+    # Spending as the Sankey draws it: the income flows into the total, so the tiles and the chart agree
+    spent = {y: sum(f["beløp"] for f in d["flows"][y] if f["level"] == 0) for y in ("2026", "2027")}
+    return templates.TemplateResponse(request, "flyt.html", {
+        "payload": json.dumps(payload, ensure_ascii=False).replace("</", "<\\/"),
+        "spent": spent,
+        "fund": next(r for r in d["diff"] if r["level"] == 0 and r["key"] == "Overføring fra oljefondet"),
+        "top": max((r for r in d["diff"] if r["level"] == 1), key=lambda r: r["change"]),
+    })
 
 
 @app.get("/visste-du", response_class=HTMLResponse)

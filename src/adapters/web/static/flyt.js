@@ -138,21 +138,6 @@ function drawSankey() {
   document.getElementById("sankey-title").textContent = `Statsbudsjettet ${year}`;
 }
 
-// ---------- tiles ----------
-function drawTiles() {
-  const [a, b] = [totals["2026"], totals["2027"]];
-  const fund = DATA.diff.find(d => d.level === 0 && d.key === "Overføring fra oljefondet");
-  const top = DATA.diff.filter(d => d.level === 1).sort((x, y) => y.change - x.change)[0];
-  const tiles = [
-    ["Utgifter 2027", fmt(b) + " mrd.", "utenom olje og lån"],
-    ["Endring fra 2026", signed(b - a) + " mrd.", `${signed((b - a) / a * 100)} % før prisvekst`],
-    ["Fra oljefondet", fmt(fund.y2027) + " mrd.", `${signed(fund.change)} mrd. fra 2026`],
-    ["Største økning", top.key, `${signed(top.change)} mrd. (${signed(top.pct)} %)`],
-  ];
-  document.getElementById("tiles").innerHTML = tiles.map(([k, v, s]) =>
-    `<div class="card tile"><div class="k">${k}</div><div class="v">${html(v)}</div><div class="s">${s}</div></div>`).join("");
-}
-
 // ---------- change chart ----------
 function diffRows() {
   const rows = [{ section: "Inntekter" }];
@@ -238,5 +223,5 @@ function drawTable() {
 const press = (sel, on) => document.querySelectorAll(sel).forEach(b => b.setAttribute("aria-pressed", b === on));
 document.querySelectorAll("[data-year]").forEach(b => b.addEventListener("click", () => { year = b.dataset.year; press("[data-year]", b); drawSankey(); }));
 document.querySelectorAll("[data-unit]").forEach(b => b.addEventListener("click", () => { unit = b.dataset.unit; press("[data-unit]", b); drawDiff(); }));
-document.addEventListener("charts:redraw", () => { drawTiles(); drawSankey(); drawDiff(); drawTable(); });
+document.addEventListener("charts:redraw", () => { drawSankey(); drawDiff(); drawTable(); });
 })();

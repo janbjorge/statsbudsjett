@@ -10,7 +10,13 @@
     <h1>Pengestrømmen 2026 og 2027</h1>
     <p class="lede">Diagrammene viser hvor pengene kommer fra og hvor de går. Oljeinntektene går rett til oljefondet, og overføringen fra fondet
       dekker gapet mellom inntekter og utgifter. Lån er holdt utenfor. Alle tall i milliarder kroner.</p>
-    <div class="grid tiles" id="tiles"></div>
+    {% set a, b = spent["2026"], spent["2027"] %}
+    <div class="grid tiles">
+      <div class="card tile"><div class="k">Utgifter 2027</div><div class="v">{{ b|nb1 }} mrd.</div><div class="s">utenom olje og lån</div></div>
+      <div class="card tile"><div class="k">Endring fra 2026</div><div class="v">{{ (b - a)|signed1 }} mrd.</div><div class="s">{{ ((b - a) / a * 100)|signed1 }} % før prisvekst</div></div>
+      <div class="card tile"><div class="k">Fra oljefondet</div><div class="v">{{ fund.y2027|nb1 }} mrd.</div><div class="s">{{ fund.change|signed1 }} mrd. fra 2026</div></div>
+      <div class="card tile"><div class="k">Største økning</div><div class="v">{{ top.key }}</div><div class="s">{{ top.change|signed1 }} mrd. ({{ top.pct|signed1 }} %)</div></div>
+    </div>
   </section>
 
   <section class="flow">

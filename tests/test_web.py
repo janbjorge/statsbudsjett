@@ -50,6 +50,7 @@ def test_flows_page_and_downloads() -> None:
     page = client.get("/flyt").text
     assert 'id="sankey"' in page and 'id="flyt-data"' in page
     assert 'aria-current="page"' in page  # the shared site nav marks where we are
+    assert "Største økning" in page  # the tiles come with the page, not from JavaScript, so nothing jumps when it runs
     assert client.get("/data/poster-2027.csv").text.startswith("side,gruppe")
     assert client.get("/helse").text == "ok"
 

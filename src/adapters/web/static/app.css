@@ -278,3 +278,5 @@ details.help summary::-webkit-details-marker { display: none; }
 details.help summary span { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; border: 1px solid currentColor; font-size: 12px; font-weight: 700; }
 details.help p { margin: 8px 0 0; }
 .money .who { grid-column: 1 / -1; font-size: 13px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: .05em; }
+/* The Sankey's flows span at least 640 px (flyt.js KPX) plus 16 px margin; reserving that keeps the page from jumping when it draws */
+#sankey { min-height: 656px; }
