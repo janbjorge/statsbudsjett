@@ -66,6 +66,25 @@ def test_llms_txt_links_resolve() -> None:
         assert client.get(url.removeprefix(base.rstrip("/"))).status_code == 200, url
 
 
+def test_pages_point_agents_to_llms_txt() -> None:
+    r = client.get("/")
+    assert '</llms.txt>; rel="alternate"' in r.headers["link"]
+    assert '</api/openapi.json>; rel="service-desc"' in r.headers["link"]
+    assert '<link rel="alternate" type="text/markdown" href="/llms.txt"' in r.text
+    assert '<link rel="service-desc" type="application/json" href="/api/openapi.json">' in r.text
+    assert "link" not in client.get("/llms.txt").headers
+
+
+def test_robots_txt_sends_crawlers_to_the_api() -> None:
+    text = client.get("/robots.txt").text
+    assert "http://testserver/llms.txt" in text and "http://testserver/api/openapi.json" in text
+    assert "Allow: /api/\n" in text
+    rules = [line.split(": ", 1)[1] for line in text.splitlines() if line.startswith("Disallow")]
+    assert "/?*sti=" in rules and "/utforsk" in rules
+    assert not any(r.startswith(("/api", "/*")) for r in rules)  # no rule reaches /api/utforsk?sti=
+    assert "/" not in rules  # the pages themselves stay crawlable
+
+
 def test_openapi_has_an_absolute_server_and_typed_responses() -> None:
     schema = client.get("/api/openapi.json").json()
     assert schema["servers"] == [{"url": "http://testserver/api"}]

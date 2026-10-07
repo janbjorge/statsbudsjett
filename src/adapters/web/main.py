@@ -30,7 +30,8 @@ data = JsonDatasets()
 queries = Queries(data)
 app = FastAPI(title="Statsbudsjettet 2027", docs_url=None, redoc_url=None, openapi_url=None)
 app.add_middleware(GZipMiddleware, minimum_size=1000)
-
+# On every page, for agents: the llms.txt guide and the API schema (service-desc, RFC 8631)
+LINK = '</llms.txt>; rel="alternate"; type="text/markdown", </api/openapi.json>; rel="service-desc"; type="application/json"'
 
 @app.middleware("http")
 async def headers(request: Request, call_next: Callable[[Request], Awaitable[Response]]) -> Response:
@@ -44,6 +45,8 @@ async def headers(request: Request, call_next: Callable[[Request], Awaitable[Res
         "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
     )
     path = request.url.path
+    if response.headers.get("content-type", "").startswith("text/html"):
+        response.headers["Link"] = LINK
     if path.startswith("/static/") and "v" in request.query_params:
         # static_url() puts the content hash in ?v=, so a changed file gets a new URL and this one never goes stale
         response.headers["Cache-Control"] = "public, max-age=31536000, immutable"
@@ -226,6 +229,22 @@ def llms_txt(request: Request) -> Response:
     return templates.TemplateResponse(request, "llms.txt", {
         "base": str(request.base_url), "personas": ", ".join(PERSONAS), "kid_bands": "; ".join(f"{k} = {v}" for k, v in KID_BANDS.items()),
     }, media_type="text/markdown; charset=utf-8")
+
+
+@app.get("/robots.txt", response_class=PlainTextResponse)
+def robots_txt(request: Request) -> str:
+    """Crawlers may read every page and the JSON API, but not the endless query-string variants of the pages:
+    GPTBot walked about 1 200 tree paths (/?sti=) in three hours. The same data is one API call away.
+    The rules name page paths only, so /api/utforsk?sti= stays open."""
+    disallow = [f"/?*{key}=" for key in ("sti", "skatt", "lonn", "pensjon", "naering")]
+    disallow += ["/utforsk", "/kvittering", "/meg", "/sok", "/kommune"]  # HTMX fragments, or redirects to /?…
+    return (
+        f"# For AI agents: read {request.base_url}llms.txt, then use the JSON API\n"
+        f"# described in {request.base_url}api/openapi.json instead of crawling the pages.\n"
+        "User-agent: *\n"
+        "Allow: /api/\n"
+        + "".join(f"Disallow: {path}\n" for path in disallow)
+    )
 
 
 @app.get("/helse", response_class=PlainTextResponse)

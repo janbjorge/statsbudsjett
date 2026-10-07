@@ -6,7 +6,9 @@
 <title>{% block title %}Statsbudsjettet 2027, forklart{% endblock %}</title>
 <meta name="description" content="Se hvor pengene i statsbudsjettet for 2027 kommer fra og hva de brukes til. Se hva budsjettet betyr for deg, utforsk alle poster og se tallene for kommunen din.">
 {% if canonical %}<link rel="canonical" href="{{ canonical }}">
-{% endif %}<link rel="stylesheet" href="{{ static_url('app.css') }}">
+{% endif %}<link rel="alternate" type="text/markdown" href="/llms.txt" title="For KI-agenter">
+<link rel="service-desc" type="application/json" href="/api/openapi.json">
+<link rel="stylesheet" href="{{ static_url('app.css') }}">
 <!-- Set the saved theme before first paint, so dark mode does not flash light -->
 <script>try { const t = new URLSearchParams(location.search).get("theme") || localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
 <script src="{{ static_url('htmx.min.js') }}" defer></script>
