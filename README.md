@@ -2,6 +2,8 @@
 
 A public explainer of Norway's 2027 state budget proposal. You can see where the money comes from and goes to, what the budget means for you, the numbers for your kommune, and every post in the budget. Built from the government's own published data.
 
+Live at https://budsjettlupa.no. The same data is open as JSON under `/api` (OpenAPI at `/api/openapi.json`), and `/llms.txt` describes the site for AI tools.
+
 Python 3.14, FastAPI, Jinja and HTMX, with d3 only for the charts.
 
 Found a mistake? [Open an issue](https://github.com/janbjorge/statsbudsjett/issues). The page explains how in plain Norwegian (section "Fant du en feil?").
@@ -17,8 +19,9 @@ docker build -t statsbudsjett . && docker run --rm -p 8080:8080 statsbudsjett
 
 ```sh
 uvx ruff check .
-uv run ty check core app adapters pipeline tests
-uv run pytest tests/test_tax.py tests/test_facts.py tests/test_web.py tests/test_boundary.py
+uv run ty check src tests
+uv run pytest -q
+uv run python -m pipeline.verify     # needs the sources in data/, so local only
 ```
 
 ## Rebuild the data
@@ -27,6 +30,10 @@ uv run pytest tests/test_tax.py tests/test_facts.py tests/test_web.py tests/test
 uv run python -m pipeline.download   # fetch sources into data/ (about 140 MB, gitignored)
 uv run python -m pipeline.datasets   # verify every fact, then write datasets/
 ```
+
+## Deploy
+
+Every push to `main` is checked and deployed to Fly by [.github/workflows/deploy.yml](.github/workflows/deploy.yml).
 
 ## Docs
 
