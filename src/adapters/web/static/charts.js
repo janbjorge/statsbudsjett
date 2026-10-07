@@ -71,7 +71,7 @@ function drawTreemap(el) {
     div.className = "cell chart-mark" + (n.href ? "" : " leaf");
     Object.assign(div.style, { left: leaf.x0 + "px", top: leaf.y0 + "px", width: w + "px", height: h + "px", background: `var(--g-${n.slot})` });
     if (w > 70 && h > 34) div.innerHTML = `<div class="n">${esc(n.name)}</div>` + (h > 54 ? `<div class="v">${amount(n.v)}</div>` : "");
-    div.addEventListener("mousemove", ev => showTip(ev, `<b>${esc(n.name)}</b><br>${amount(n.v)} · ${nb1.format(n.v / parent * 100)} %<br>${kr(n.pp)} per innbygger` + (n.href ? `<br><span class="muted">Klikk for å se mer</span>` : "")));
+    div.addEventListener("mousemove", ev => showTip(ev, `<b>${esc(n.name)}</b><br>${amount(n.v)} · ${nb1.format(n.v / parent * 100)} %` + (n.href ? `<br><span class="muted">Klikk for å se mer</span>` : "")));
     div.addEventListener("mouseleave", hideTip);
     if (n.href) div.addEventListener("click", () => { hideTip(); htmx.ajax("GET", n.href, { target: "#tree", swap: "outerHTML" }); });
     return div;

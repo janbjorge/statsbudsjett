@@ -185,7 +185,6 @@ label.field { display: block; font-weight: 600; margin-bottom: 6px; }
 .tbl th { color: var(--text-secondary); font-weight: 600; font-size: 13px; }
 .tbl tr.click { cursor: pointer; }
 .tbl tr.click:hover td { background: var(--surface-2); }
-@media (max-width: 560px) { .tbl .hide-s { display: none; } }
 .pos { color: var(--up); } .neg { color: var(--down); }
 .results { margin-top: 12px; display: grid; gap: 6px; }
 .result { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 10px 12px; border-radius: 10px; background: var(--surface-1); border: 1px solid var(--hairline); cursor: pointer; text-align: left; font: inherit; color: inherit; }

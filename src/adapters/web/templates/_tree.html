@@ -16,7 +16,7 @@
   <div class="treemap" role="img" aria-label="Kart over {{ t.node.name }}"
        data-nodes="{{ t.children|tojson_nodes(t.side, base) }}"></div>
   <table class="tbl">
-    <thead><tr><th>Navn</th><th>2027</th><th class="hide-s">Per innbygger</th><th>Endring fra 2026</th></tr></thead>
+    <thead><tr><th>Navn</th><th>2027</th><th>Endring fra 2026</th></tr></thead>
     <tbody>
     {% for n in t.children %}
       <tr>
@@ -25,7 +25,6 @@
           {% if n.kap %}<span class="muted small">kap. {{ n.kap }}{% if n.post %} post {{ n.post }}{% endif %}</span>{% endif %}
         </td>
         <td>{{ n.v2027|amount }}</td>
-        <td class="hide-s">{{ per_person(n.v2027)|kr }}</td>
         <td>{% if n.change is none %}<span class="muted">ny</span>{% elif n.change|abs < 0.0005 %}<span class="muted">uendret</span>
           {% else %}<span class="{{ 'pos' if n.change > 0 else 'neg' }}">{{ n.change|signed_amount }}{% if n.v2026 and n.v2026 > 0 %} ({{ (n.change / n.v2026 * 100)|pct }}){% endif %}</span>{% endif %}</td>
       </tr>

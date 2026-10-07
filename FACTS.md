@@ -8,6 +8,7 @@ A public explainer of Norway's 2027 state budget proposal (Prop. 1 S (2026–202
 
 - `/` is the explorer: overview, "For deg" (what the budget means for you), tax receipt, income sources, a treemap of every post, biggest changes, your kommune, and oil money.
 - `/flyt` is the Sankey page: money flows for 2026 and 2027 and the 2026→2027 diff.
+- `/visste-du` holds the 2027 totals in everyday units: per innbygger, per day, per second, and per innbygger for each spending group and income source (src/core/budget.py, `everyday`).
 - Stack (jb 2026-10-07): Python 3.14, FastAPI + uvicorn + Jinja + HTMX. The server renders all HTML. d3 is used only for four chart islands in src/adapters/web/static/charts.js (treemap, kommune dots, fund line) and the Sankey page.
 
 ### Layout

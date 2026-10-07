@@ -83,9 +83,6 @@ class Budget:
     def total(self, year: int) -> float:
         return sum(f.amount for f in self.flows[year] if f.level == 1)
 
-    def per_person(self, amount_bn: float) -> float:
-        return amount_bn * 1e9 / self.population
-
     def level(self, year: int, level: int) -> tuple[Flow, ...]:
         return tuple(f for f in self.flows[year] if f.level == level)
 
@@ -126,6 +123,47 @@ def receipt(budget: Budget, tax_kroner: float) -> list[ReceiptGroup]:
         lines = tuple(ReceiptLine(f.target, tax_kroner * f.amount / total) for f in budget.leaves(2027, g))
         out.append(ReceiptGroup(g, tax_kroner * amount / total, amount / total * 100, lines))
     return out
+
+
+# ---------- everyday units ----------
+
+SECONDS_2027 = 365 * 24 * 60 * 60
+
+
+@dataclass(frozen=True, slots=True)
+class PerPerson:
+    name: str
+    kroner: float
+
+
+@dataclass(frozen=True, slots=True)
+class Everyday:
+    """2027 amounts in everyday units. Fun to know, but they do not say what the budget means for anyone (METHOD.md §4)."""
+
+    population: int
+    per_person: float
+    per_person_day: float
+    per_day: float
+    per_second: float
+    spending: tuple[PerPerson, ...]
+    income: tuple[PerPerson, ...]
+
+
+def everyday(budget: Budget) -> Everyday:
+    total = budget.total(2027)
+    per_person = total * 1e9 / budget.population
+    return Everyday(
+        population=budget.population,
+        per_person=per_person,
+        per_person_day=per_person / 365,
+        per_day=total / 365,
+        per_second=total * 1e9 / SECONDS_2027,
+        spending=tuple(
+            PerPerson(g, budget.group_amount(2027, g) * 1e9 / budget.population)
+            for g in sorted(budget.groups, key=lambda g: -budget.group_amount(2027, g))
+        ),
+        income=tuple(PerPerson(s, budget.income_amount(2027, s) * 1e9 / budget.population) for s in budget.income),
+    )
 
 
 # ---------- explore: drill-down tree ----------

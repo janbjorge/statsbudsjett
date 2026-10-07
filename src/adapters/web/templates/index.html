@@ -4,12 +4,12 @@
     <p class="muted" style="margin:0">Regjeringens forslag til statsbudsjett, lagt fram 7. oktober 2026</p>
     <h1>Hva bruker staten pengene på i 2027?</h1>
     <div class="hero-num">{{ o.total|nb1 }} <small>milliarder kroner</small></div>
-    <p class="lede">Det er <b>{{ o.per_person|kr }}</b> for hver innbygger i Norge, eller <b>{{ o.per_day|kr }}</b> per person hver dag.</p>
     <div class="grid tiles">
       <div class="card tile"><div class="k">Mer enn i 2026</div><div class="v">{{ o.change|signed1 }} mrd.</div><div class="s">{{ o.change_pct|pct }} før prisvekst</div></div>
       <div class="card tile"><div class="k">Største utgift</div><div class="v">{{ o.top_group }}</div><div class="s">{{ o.top_amount|amount }}, {{ (o.top_amount / o.total * 100)|nb }} % av alt</div></div>
       <div class="card tile"><div class="k">Fra oljefondet</div><div class="v">{{ o.fund|nb1 }} mrd.</div><div class="s">dekker {{ o.fund_share|num }} % av utgiftene</div></div>
     </div>
+    <p class="note" style="margin-top:12px"><a href="/visste-du">Hvor mye er det per innbygger, per dag og per sekund? →</a></p>
   </section>
 
   <section id="meg">
@@ -47,7 +47,7 @@
     {% set top = income|map(attribute="amount")|max %}
     <div class="card"><div class="bars">
       {% for r in income %}
-      <div class="bar-row"><div class="lab"><b>{{ r.name }}</b><div class="muted small">{{ explain[r.name] }}<br>{{ r.per_person|kr }} per innbygger</div></div>
+      <div class="bar-row"><div class="lab"><b>{{ r.name }}</b><div class="muted small">{{ explain[r.name] }}</div></div>
         <div class="bar-track"><div class="bar-fill" style="width:{{ r.amount / top * 60 }}%;background:var(--g-0)"></div>
           <div class="bar-val" style="left:calc({{ r.amount / top * 60 }}% + 8px)">{{ r.amount|amount }}</div></div></div>
       {% endfor %}

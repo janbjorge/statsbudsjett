@@ -32,7 +32,7 @@ The pages show the budget the way Finansdepartementet presents it, without oil m
 - Groups and sub-groups compare exact sums for both years.
 - Chapters and posts are matched on number. Renumbered or merged chapters show up as new or missing. The "biggest changes" lists leave them out and say how many there are (12).
 - The treemap lays out with negative posts set to 0 but shows exact sums (src/adapters/web/main.py:69).
-- Per person = amount / 5 636 995 (population on 1.7.2026).
+- National amounts are not shown per person ("405 677 kr per innbygger"). Such a figure says nothing about what the budget means for the reader, so it was removed from the hero, the income bars, the explorer and search (2026-10-07) and moved to its own page, /visste-du. There, per day is the yearly amount / 365 and per second is the total / the seconds in 2027 (365 days), spread evenly although the real spending is not. Kommuner are still compared per innbygger, because that is how frie inntekter are measured (§7). The population (5 636 995 on 1.7.2026) is still in datasets/budget.json.
 
 ## 5. Tax calculator
 

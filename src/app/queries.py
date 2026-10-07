@@ -12,8 +12,6 @@ from core.tax import TaxEffect, household_effect
 class Overview:
     total: float
     total_2026: float
-    per_person: float
-    per_day: float
     fund: float
     fund_share: float
     top_group: str
@@ -49,7 +47,6 @@ class MegView:
 class IncomeRow:
     name: str
     amount: float
-    per_person: float
 
 
 class Queries:
@@ -67,8 +64,6 @@ class Queries:
         return Overview(
             total=total,
             total_2026=bud.total(2026),
-            per_person=bud.per_person(total),
-            per_day=bud.per_person(total) / 365,
             fund=bud.income_amount(2027, "Overføring fra oljefondet"),
             fund_share=next(f.share for f in bud.fund if f.year == 2027),
             top_group=top.target,
@@ -88,9 +83,12 @@ class Queries:
     def receipt(self, tax_kroner: float) -> list[b.ReceiptGroup]:
         return b.receipt(self.budget, tax_kroner)
 
+    def everyday(self) -> b.Everyday:
+        return b.everyday(self.budget)
+
     def income(self) -> list[IncomeRow]:
         bud = self.budget
-        return [IncomeRow(s, bud.income_amount(2027, s), bud.per_person(bud.income_amount(2027, s))) for s in bud.income]
+        return [IncomeRow(s, bud.income_amount(2027, s)) for s in bud.income]
 
     def tree(self, side: b.Side, path: str) -> b.TreeLevel:
         return b.tree(self.budget, side, path)

@@ -52,7 +52,7 @@ def template_context(request: Request) -> dict[str, object]:
     """Names every template can use."""
     return {
         "PERSONAS": PERSONAS, "KID_BANDS": KID_BANDS, "EFFECT_LABEL": EFFECT_LABEL, "Side": Side,
-        "group_slot": group_slot, "per_person": queries.budget.per_person,
+        "group_slot": group_slot,
     }
 
 
@@ -72,7 +72,6 @@ def tojson_nodes(nodes: tuple[Node, ...], side: Side, base: str) -> str:
         {
             "name": n.name, "size": max(0.0, n.v2027), "v": n.v2027, "slot": group_slot(n.group),
             "href": f"/utforsk?{urlencode({'side': side, 'sti': f'{base}/{n.key}'.strip('/')})}" if n.has_children else None,
-            "pp": queries.budget.per_person(n.v2027),
         }
         for n in nodes
     ], ensure_ascii=False)
@@ -207,6 +206,11 @@ def flows_page(request: Request) -> HTMLResponse:
     d = data.raw("budget.json")
     payload = {"groups": d["groups"], "income": d["income"], "flows": d["flows"], "diff": d["diff"]}
     return templates.TemplateResponse(request, "flyt.html", {"payload": json.dumps(payload, ensure_ascii=False).replace("</", "<\\/")})
+
+
+@app.get("/visste-du", response_class=HTMLResponse)
+def everyday_page(request: Request) -> HTMLResponse:
+    return templates.TemplateResponse(request, "visste_du.html", {"e": queries.everyday()})
 
 
 @app.get("/helse", response_class=PlainTextResponse)

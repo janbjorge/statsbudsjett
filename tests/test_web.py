@@ -2,7 +2,7 @@
 
 from fastapi.testclient import TestClient
 
-from adapters.web.main import app, profile_from, profile_query
+from adapters.web.main import app, profile_from, profile_query, queries
 
 client = TestClient(app)
 HX = {"HX-Request": "true"}
@@ -48,3 +48,11 @@ def test_flows_page_and_downloads() -> None:
     assert 'aria-current="page"' in page  # the shared site nav marks where we are
     assert client.get("/data/poster-2027.csv").text.startswith("side,gruppe")
     assert client.get("/helse").text == "ok"
+
+
+def test_everyday_page_adds_up() -> None:
+    e = queries.everyday()
+    assert abs(sum(r.kroner for r in e.spending) - e.per_person) < 1
+    assert abs(sum(r.kroner for r in e.income) - e.per_person) < 1  # income equals spending in the non-oil view
+    html = client.get("/visste-du").text
+    assert "Visste du?" in html and 'aria-current="page"' in html
