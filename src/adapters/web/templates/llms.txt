@@ -1,0 +1,41 @@
+# Statsbudsjettet 2027, forklart
+
+> A plain-language explainer of Norway's 2027 state budget proposal (Prop. 1 S (2026–2027), presented 7 October 2026): where the money comes from and goes, what changes for a household, the numbers per kommune, and every post in the budget. Built from the government's published data. Not an official source.
+
+The site is in Norwegian (bokmål). Numbers come from regjeringen.no; every "For deg" fact carries the URL and page of the document it was checked against. Cite those sources, not this site, when precision matters.
+
+Totals are the non-oil budget, the way the Ministry of Finance presents it: petroleum income, the transfer to the oil fund and loan transactions (posts 90–99) are left out, and the transfer from the oil fund counts as income. 2026 and 2027 are both the government's proposals (Gul bok), in nominal kroner.
+
+## JSON API
+
+Read-only, no key, CORS open. Field names carry their unit: `_mrd_kr` is billions of kroner, `_kr` is kroner, `_prosent` is percent.
+
+- [OpenAPI schema]({{ base }}api/openapi.json): every endpoint and parameter
+- [Overview]({{ base }}api/oversikt): total spending 2026 and 2027, change, oil fund transfer and share
+- [What changes for a household]({{ base }}api/meg?meg=barnefamilie,arbeidstaker&barn=0,1,1,0,0&lonn=600000,550000): tax change plus every fact that applies, with sources. `meg` takes any of: {{ personas }}. `barn` counts children per age band ({{ kid_bands }}). `lonn`/`pensjon` are yearly kroner for up to two adults.
+- [All verified facts]({{ base }}api/fakta): every "For deg" fact with source URL and page
+- [Budget tree]({{ base }}api/utforsk?side=utgift): group → area → chapter → post; follow `sti` from the answer to go deeper. `side=inntekt` for income.
+- [Search]({{ base }}api/sok?q=politi): chapter and post names
+- [Biggest changes]({{ base }}api/endringer): spending chapters that grow or shrink most
+- [Income sources]({{ base }}api/inntekter)
+- [One kommune]({{ base }}api/kommune?k=Bergen) and [all kommuner]({{ base }}api/kommuner): frie inntekter (unrestricted income) per innbygger
+- [Tax receipt]({{ base }}api/kvittering?skatt=150000): where a given tax amount goes
+- [Everyday units]({{ base }}api/visste-du): per innbygger, per day, per second
+- [Oil fund share over time]({{ base }}api/oljefond)
+
+## Downloads
+
+- [Every post, 2027 and 2026 (CSV)]({{ base }}data/poster-2027.csv)
+- [Frie inntekter per kommune (CSV)]({{ base }}data/kommuner-2027.csv)
+
+## Pages
+
+- [Explorer]({{ base }}): overview, "For deg", tax receipt, budget tree, changes, kommune, oil money
+- [Money flows]({{ base }}flyt): Sankey diagram for 2026, 2027 and the difference
+- [Visste du?]({{ base }}visste-du): totals in everyday units
+
+## Method and sources
+
+- [METHOD.md](https://github.com/janbjorge/statsbudsjett/blob/main/METHOD.md): every simplification and judgement call behind the numbers
+- [FACTS.md](https://github.com/janbjorge/statsbudsjett/blob/main/FACTS.md): sources on regjeringen.no and how the data is built
+- [Budget documents](https://www.regjeringen.no/no/statsbudsjett/2027/id3172975/) on regjeringen.no

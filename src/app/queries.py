@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 
 from core import budget as b
-from core.facts import Profile, Section, select
+from core.facts import Fact, Profile, Section, select
 from core.ports import Datasets
 from core.tax import TaxEffect, household_effect
 
@@ -79,6 +79,9 @@ class Queries:
             growth_wage=table.growth.wage,
             growth_pension=table.growth.pension,
         )
+
+    def facts(self) -> list[Fact]:
+        return self.data.facts()
 
     def receipt(self, tax_kroner: float) -> list[b.ReceiptGroup]:
         return b.receipt(self.budget, tax_kroner)

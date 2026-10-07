@@ -9,6 +9,7 @@ A public explainer of Norway's 2027 state budget proposal (Prop. 1 S (2026–202
 - `/` is the explorer: overview, "For deg" (what the budget means for you), tax receipt, income sources, a treemap of every post, biggest changes, your kommune, and oil money.
 - `/flyt` is the Sankey page: money flows for 2026 and 2027 and the 2026→2027 diff.
 - `/visste-du` holds the 2027 totals in everyday units: per innbygger, per day, per second, and per innbygger for each spending group and income source (src/core/budget.py, `everyday`).
+- For AI agents: `/llms.txt` (llmstxt.org format, template in src/adapters/web/templates/llms.txt) and a read-only JSON API under `/api` with its schema at `/api/openapi.json` (src/adapters/web/api.py). The API returns the same queries as the pages. Its field names carry the unit (`_mrd_kr`, `_kr`, `_prosent`), because the core mixes mrd. kr and kr. CORS is open; an unknown kommune is a 404 there, where the page falls back to Oslo.
 - Stack (jb 2026-10-07): Python 3.14, FastAPI + uvicorn + Jinja + HTMX. The server renders all HTML. d3 is used only for four chart islands in src/adapters/web/static/charts.js (treemap, kommune dots, fund line) and the Sankey page.
 
 ### Layout
@@ -16,7 +17,7 @@ A public explainer of Norway's 2027 state budget proposal (Prop. 1 S (2026–202
 - `src/core/`: the pure domain. tax.py (the tax engine), facts.py ("For deg" selection), budget.py (tree, search, changes, kommune), ports.py. It imports only the standard library; tests/test_boundary.py enforces this.
 - `src/app/queries.py`: read-only queries with frozen-dataclass results; this is what the web adapter calls.
 - `src/adapters/datasets.py`: reads `datasets/*.json` into core types at startup (implements core.ports.Datasets).
-- `src/adapters/web/`: FastAPI app (main.py), number formatting (fmt.py), Jinja templates (`_*.html` are HTMX fragments), and static files.
+- `src/adapters/web/`: FastAPI app (main.py), the JSON API (api.py, mounted at /api), query-string parsing shared by both (params.py), number formatting (fmt.py), Jinja templates (`_*.html` are HTMX fragments), and static files.
 - `src/pipeline/`: offline scripts, run from the repo root. download.py fetches sources, flows.py and datasets.py build `datasets/` with polars, and verify.py checks the facts.
 - `datasets/`: the build output the app reads (budget.json, meg.json, plus CSV downloads served under /data). It is committed.
 

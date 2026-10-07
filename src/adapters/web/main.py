@@ -13,10 +13,10 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 from adapters.datasets import DATASETS, JsonDatasets
-from adapters.web import fmt
+from adapters.web import api, fmt
+from adapters.web.params import numbers, profile_from, profile_query
 from app.queries import Queries
 from core.budget import FundYear, Kommune, Node, Side
-from adapters.web.params import numbers, profile_from, profile_query
 from core.facts import KID_BANDS, PERSONAS
 
 HERE = Path(__file__).parent
@@ -45,6 +45,7 @@ async def headers(request: Request, call_next: Callable[[Request], Awaitable[Res
 
 app.mount("/static", StaticFiles(directory=HERE / "static"), name="static")
 app.mount("/data", StaticFiles(directory=DATASETS), name="data")
+app.mount("/api", api.build(queries))
 
 
 def template_context(request: Request) -> dict[str, object]:
@@ -178,6 +179,14 @@ def flows_page(request: Request) -> HTMLResponse:
 @app.get("/visste-du", response_class=HTMLResponse)
 def everyday_page(request: Request) -> HTMLResponse:
     return templates.TemplateResponse(request, "visste_du.html", {"e": queries.everyday()})
+
+
+@app.get("/llms.txt", response_class=PlainTextResponse)
+def llms_txt(request: Request) -> Response:
+    """Entry point for AI agents (llmstxt.org): what the site is, the JSON API and the method."""
+    return templates.TemplateResponse(request, "llms.txt", {
+        "base": str(request.base_url), "personas": ", ".join(PERSONAS), "kid_bands": ", ".join(KID_BANDS),
+    }, media_type="text/markdown; charset=utf-8")
 
 
 @app.get("/helse", response_class=PlainTextResponse)
