@@ -11,7 +11,7 @@ from urllib.parse import urljoin
 
 BASE = "https://www.regjeringen.no"
 ROOT = "/no/statsbudsjett/2027/id3172975/"
-OUT = Path(__file__).parent.parent / "data"
+OUT = Path(__file__).parents[2] / "data"
 UA = {"User-Agent": "Mozilla/5.0 (statsbudsjett-2027 downloader)"}
 
 DATA_PAGES = [

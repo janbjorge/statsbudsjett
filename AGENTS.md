@@ -14,12 +14,12 @@
 ## Code
 
 - Python 3.14 with uv: deferred annotations (no quoted forward refs), `type` aliases, frozen slotted dataclasses, StrEnum, match.
-- Hexagonal layout (FACTS.md §1): `core/` stays pure, enforced by tests/test_boundary.py. Pages are rendered on the server with Jinja + HTMX; JavaScript only for chart islands.
+- Hexagonal layout (FACTS.md §1): `src/core/` stays pure, enforced by tests/test_boundary.py. Pages are rendered on the server with Jinja + HTMX; JavaScript only for chart islands.
 - Data work in the pipeline uses polars, not pandas. The app itself does not depend on polars.
 - Plain `python3` is a rye shim that fails here; always use `uv run python`.
-- Outputs must be deterministic: sort group_by results and round float sums (pipeline/flows.py:136).
+- Outputs must be deterministic: sort group_by results and round float sums (src/pipeline/flows.py:136).
 - Charts follow the dataviz skill: validated palette, thin marks, legend plus direct labels, hover, table view, light and dark.
-- Before commit: `uvx ruff check .`, `uv run ty check core app adapters pipeline tests`, `uv run pytest tests/<files you touched>`, and `uv run python -m pipeline.verify`. Then run the app and look at it.
+- Before commit: `uvx ruff check .`, `uv run ty check src tests`, `uv run pytest tests/<files you touched>`, and `uv run python -m pipeline.verify`. Then run the app and look at it.
 
 ## Git and hosting
 

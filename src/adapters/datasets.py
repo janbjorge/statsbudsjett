@@ -7,7 +7,7 @@ from core.budget import Budget, Chapter, Flow, FundYear, Kommune, Post, Side
 from core.facts import Amount, Effect, Fact
 from core.tax import Growth, TaxTable
 
-DATASETS = Path(__file__).parent.parent / "datasets"
+DATASETS = Path(__file__).parents[2] / "datasets"
 
 
 class JsonDatasets:

@@ -3,7 +3,7 @@
 import ast
 from pathlib import Path
 
-CORE = Path(__file__).parent.parent / "core"
+CORE = Path(__file__).parent.parent / "src" / "core"
 ALLOWED = {"core", "dataclasses", "enum", "typing", "collections", "functools", "itertools", "math"}
 
 

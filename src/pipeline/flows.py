@@ -10,7 +10,7 @@ from pathlib import Path
 
 import polars as pl
 
-ROOT = Path(__file__).parent.parent
+ROOT = Path(__file__).parents[2]
 FILES = {
     2026: ROOT / "data/excel/2026/2026_gulbok_datagrunnlag.xlsx",
     2027: ROOT / "data/excel/2027_gulbok_datagrunnlag.xlsx",

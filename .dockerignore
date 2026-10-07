@@ -1,8 +1,7 @@
 *
 !pyproject.toml
 !uv.lock
-!core
-!app
-!adapters
+!src
+src/pipeline
 !datasets
 **/__pycache__

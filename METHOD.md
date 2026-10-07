@@ -6,7 +6,7 @@ Every simplification and judgement call behind the numbers on the pages. Add to 
 
 The pages show the budget the way Finansdepartementet presents it, without oil money.
 
-- Removed: kap. 2440/5440 (SDØE), 5507 (petroleum tax), 5508/5509 (emission taxes on the shelf), 5685 (Equinor dividend), 2800 (transfer to the fund). The list is in pipeline/flows.py:19.
+- Removed: kap. 2440/5440 (SDØE), 5507 (petroleum tax), 5508/5509 (emission taxes on the shelf), 5685 (Equinor dividend), 2800 (transfer to the fund). The list is in src/pipeline/flows.py:19.
 - Removed: all posts 90–99 (loan transactions such as student loans and Husbanken).
 - The transfer from the fund (kap. 5800) stays as an income source, so income equals spending exactly.
 - Why: about 570 mrd. kr goes to the fund and about 560 mrd. kr comes back. Showing both would double-count and drown out everything else.
@@ -18,27 +18,27 @@ The pages show the budget the way Finansdepartementet presents it, without oil m
 
 ## 3. Grouping
 
-- Spending is grouped into 8 groups with about 33 sub-groups by programområde, programkategori and a few chapters (pipeline/flows.py:52 and :64). The group names are ours, not official.
+- Spending is grouped into 8 groups with about 33 sub-groups by programområde, programkategori and a few chapters (src/pipeline/flows.py:52 and :64). The group names are ours, not official.
 - Choices worth knowing:
   - Folketrygden is omr. 28, 29, 30 and 33.
   - Kommunesektoren is only kat. 13.70.
   - Momskompensasjon (kap. 1632/1633) goes under "Øvrige formål".
   - Forsvar has no sub-groups.
-- Income is grouped into 6 sources by chapter (pipeline/flows.py:43).
+- Income is grouped into 6 sources by chapter (src/pipeline/flows.py:43).
 - The first seven groups get a palette colour; "Øvrige formål" is grey, because the palette has 8 slots and income takes slot 1.
 
 ## 4. Comparing 2026 and 2027
 
 - Groups and sub-groups compare exact sums for both years.
 - Chapters and posts are matched on number. Renumbered or merged chapters show up as new or missing. The "biggest changes" lists leave them out and say how many there are (12).
-- The treemap lays out with negative posts set to 0 but shows exact sums (adapters/web/main.py:69).
+- The treemap lays out with negative posts set to 0 but shows exact sums (src/adapters/web/main.py:69).
 - Per person = amount / 5 636 995 (population on 1.7.2026).
 
 ## 5. Tax calculator
 
 - Covers wage and pension income with standard deductions: minstefradrag, personfradrag, trygdeavgift with the phase-in rule, trinnskatt, and the pension tax credit.
 - Not covered: business income (trygdeavgift 10,6 % instead of 7,4 %), uføretrygd, interest deductions, wealth tax, Finnmark/Nord-Troms rules, and the skattebegrensning for low incomes. The page lists these.
-- The headline is 2027 rules against the reference system: 2026 amounts × 1,04 for wage-related amounts and × 1,0335 for pension amounts (pipeline/datasets.py:115). That is the government's own yardstick.
+- The headline is 2027 rules against the reference system: 2026 amounts × 1,04 for wage-related amounts and × 1,0335 for pension amounts (src/pipeline/datasets.py:115). That is the government's own yardstick.
 - Assumption: personfradrag and the trygdeavgift lower limit are indexed by wage growth in the reference system. The source does not state this; it matches the official −1 800 kr example.
 
 ## 6. "For deg" facts
