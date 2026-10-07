@@ -135,10 +135,16 @@ def meg() -> dict:
     # calculator already covers, and spending growth that reads like a personal change
     drop = {"toll-klaer-tekstiler-5-prosent", "skatt-lavere-inntektsskatt", "personfradrag-okes", "dagpenger-utgifter"}
     add_personas = {"toll-klaer-5-prosent": ["naeringsdrivende"]}
+    # Only for children under 18, with the words in the quote that say so (METHOD.md §6)
+    under_18 = {"barnetrygd-uendret": "barn 0–18 år"}
     items = [it for it in items if it["id"] not in drop]
     for it in items:
         it["personas"] = it["personas"] + [p for p in add_personas.get(it["id"], []) if p not in it["personas"]]
-    keep = ("id", "personas", "detail", "title_nb", "summary_nb", "effect", "amounts", "source_title", "source_url", "page", "caveat_nb")
+        if (words := under_18.get(it["id"])) is not None:
+            if words not in it["quote"]:
+                raise SystemExit(f"{it['id']}: quote no longer says {words!r}")
+            it["under_18"] = True
+    keep = ("id", "personas", "detail", "under_18", "title_nb", "summary_nb", "effect", "amounts", "source_title", "source_url", "page", "caveat_nb")
     tax = json.loads((PERSONA / "tax.json").read_text())
     return {
         "items": [{k: it.get(k) for k in keep} for it in items],

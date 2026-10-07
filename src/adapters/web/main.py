@@ -100,7 +100,9 @@ def _numbers(text: str, limit: int) -> list[int]:
 def profile_from(meg: str, barn: str, lonn: str, pensjon: str) -> Profile:
     """Parse the shareable query string. Anything unknown or malformed is dropped, never an error."""
     personas = frozenset(p for p in meg.split(",") if p in PERSONAS)
-    kids = dict(zip(KID_BANDS, (min(n, 10) for n in _numbers(barn, len(KID_BANDS))), strict=False))
+    # Links from before a band was added carry fewer values; the missing bands count as 0
+    counts = _numbers(barn, len(KID_BANDS)) + [0] * len(KID_BANDS)
+    kids = dict(zip(KID_BANDS, (min(n, 10) for n in counts), strict=False))
     wages, pensions = _numbers(lonn, 2), _numbers(pensjon, 2)
     pairs = [(wages[i] if i < len(wages) else 0, pensions[i] if i < len(pensions) else 0) for i in range(2)]
     # The second adult counts only when they have an income

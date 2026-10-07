@@ -36,3 +36,21 @@ def test_unchanged_facts_are_kept_apart() -> None:
     for s in select(FACTS, Profile(personas=frozenset({"barnefamilie"}))):
         assert all(f.effect is not Effect.UENDRET for f in s.changed)
         assert all(f.effect is Effect.UENDRET for f in s.unchanged)
+
+
+def test_children_over_18_bring_the_student_facts() -> None:
+    profile = Profile(personas=frozenset({"barnefamilie"}), kids={"18+": 1})
+    sections = {s.label: {f.id for f in s.changed + s.unchanged} for s in select(FACTS, profile)}
+    assert "studielan-basislan-g" in sections["Barn over 18 år som studerer"]
+    # Only an adult child: no barnehage or school facts
+    assert "barnehage-makspris" not in titles(profile)
+    # Choosing Student yourself keeps the usual label
+    labels = [s.label for s in select(FACTS, Profile(personas=frozenset({"student"}), kids={"18+": 1}))]
+    assert "Student" in labels and "Barn over 18 år som studerer" not in labels
+
+
+def test_barnetrygd_needs_a_child_under_18() -> None:
+    family = frozenset({"barnefamilie"})
+    assert "barnetrygd-uendret" not in titles(Profile(personas=family, kids={"18+": 2}))
+    assert "barnetrygd-uendret" in titles(Profile(personas=family, kids={"18+": 1, "16-18": 1}))
+    assert "barnetrygd-uendret" in titles(Profile(personas=family))

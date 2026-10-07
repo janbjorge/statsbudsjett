@@ -264,6 +264,18 @@
     "y2026": 10000,
     "y2027": 10000,
     "unit": "kr/år"
+   },
+   {
+    "label_nb": "Barn 12 år og eldre med særskilt behov, ett barn",
+    "y2026": 25000,
+    "y2027": 25000,
+    "unit": "kr/år"
+   },
+   {
+    "label_nb": "Barn 12 år og eldre med særskilt behov, per barn utover det første",
+    "y2026": 15000,
+    "y2027": 15000,
+    "unit": "kr/år"
    }
   ],
   "quote": "Foreldrefradrag for legitimerte utgifter til pass og stell av barn Øvre grense13 Ett barn.............................................................................. 15 000 kr 15 000 kr - Tillegg per barn utover det første ................................... 10 000 kr 10 000 kr -",
@@ -271,7 +283,13 @@
   "source_title": "Prop. 1 LS (2026–2027) Skatter, avgifter og toll 2027",
   "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
   "page": 29,
-  "caveat_nb": "Fradraget gjelder dokumenterte utgifter til pass og stell av barn."
+  "caveat_nb": "Fradraget gjelder dokumenterte utgifter til pass og stell av barn. De høyere grensene gjelder barn 12 år og eldre med særskilt behov for omsorg og pleie, og de videreføres fra 2026.",
+  "extra_quotes": [
+   {
+    "quote": "For barn 12 år og eldre med særskilt behov for omsorg og pleie videreføres grensene på 25 000 kroner for ett barn og 15 000 kroner per barn utover det første i 2027.",
+    "page": 30
+   }
+  ]
  },
  {
   "id": "skatt-lavere-inntektsskatt",

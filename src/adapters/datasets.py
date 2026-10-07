@@ -64,6 +64,7 @@ class JsonDatasets:
                 source_url=f["source_url"],
                 page=f.get("page"),
                 caveat=f.get("caveat_nb"),
+                under_18=bool(f.get("under_18")),
             )
             for f in self._raw["meg.json"]["items"]
         ]

@@ -36,7 +36,8 @@ PERSONAS = {
     "sparer": "Sparer eller har formue",
 }
 EVERYONE = "husholdning"
-KID_BANDS = {"0-1": "Under 1 år", "1-5": "1–5 år (barnehage)", "6-15": "6–15 år (skole)", "16-18": "16–18 år"}
+KID_BANDS = {"0-1": "Under 1 år", "1-5": "1–5 år (barnehage)", "6-15": "6–15 år (skole)", "16-18": "16–18 år", "18+": "Over 18 år"}
+ADULT_KIDS = "18+"
 
 
 @dataclass(frozen=True, slots=True)
@@ -60,6 +61,7 @@ class Fact:
     source_url: str
     page: int | None
     caveat: str | None
+    under_18: bool = False
 
     @property
     def effect_label(self) -> str:
@@ -76,6 +78,10 @@ class Profile:
     def has_kids(self) -> bool:
         return any(n > 0 for n in self.kids.values())
 
+    @property
+    def has_minors(self) -> bool:
+        return any(n > 0 for b, n in self.kids.items() if b != ADULT_KIDS)
+
 
 @dataclass(frozen=True, slots=True)
 class Section:
@@ -89,10 +95,15 @@ ORDER = {Effect.MINUS: 0, Effect.PLUSS: 1, Effect.BLANDET: 2, Effect.UENDRET: 3}
 
 def select(facts: list[Fact], profile: Profile) -> list[Section]:
     """Facts for the chosen situations plus those for everyone, each shown once under its first match."""
-    chosen = [p for p in PERSONAS if p in profile.personas] + [EVERYONE]
+    # Children over 18 often study with help from their parents, so they bring the student facts along
+    adult_kids = bool(profile.kids.get(ADULT_KIDS)) and "student" not in profile.personas
+    personas = profile.personas | {"student"} if adult_kids else profile.personas
+    chosen = [p for p in PERSONAS if p in personas] + [EVERYONE]
 
     def fits(f: Fact) -> bool:
         # Child-age facts only for ages present, once any child is entered
+        if f.under_18 and profile.has_kids and not profile.has_minors:
+            return False
         return not (f.detail in KID_BANDS and profile.has_kids and not profile.kids.get(f.detail))
 
     seen: set[str] = set()
@@ -107,7 +118,7 @@ def select(facts: list[Fact], profile: Profile) -> list[Section]:
         seen |= {f.id for f in mine}
         if mine:
             sections.append(Section(
-                label="Gjelder alle" if p == EVERYONE else PERSONAS[p],
+                label="Gjelder alle" if p == EVERYONE else "Barn over 18 år som studerer" if adult_kids and p == "student" else PERSONAS[p],
                 changed=tuple(f for f in mine if f.effect is not Effect.UENDRET),
                 unchanged=tuple(f for f in mine if f.effect is Effect.UENDRET),
             ))
