@@ -16,11 +16,10 @@ from adapters.datasets import DATASETS, JsonDatasets
 from adapters.web import fmt
 from app.queries import Queries
 from core.budget import FundYear, Kommune, Node, Side
-from core.facts import EFFECT_LABEL, KID_BANDS, PERSONAS, Profile
-from core.tax import Adult
+from adapters.web.params import numbers, profile_from, profile_query
+from core.facts import KID_BANDS, PERSONAS
 
 HERE = Path(__file__).parent
-MAX_INCOME = 100_000_000
 
 data = JsonDatasets()
 queries = Queries(data)
@@ -51,7 +50,7 @@ app.mount("/data", StaticFiles(directory=DATASETS), name="data")
 def template_context(request: Request) -> dict[str, object]:
     """Names every template can use."""
     return {
-        "PERSONAS": PERSONAS, "KID_BANDS": KID_BANDS, "EFFECT_LABEL": EFFECT_LABEL, "Side": Side,
+        "PERSONAS": PERSONAS, "KID_BANDS": KID_BANDS, "Side": Side,
         "group_slot": group_slot,
     }
 
@@ -88,38 +87,6 @@ def tojson_fund(fund: tuple[FundYear, ...]) -> str:
 templates.env.filters |= {"tojson_nodes": tojson_nodes, "tojson_kommuner": tojson_kommuner, "tojson_fund": tojson_fund}
 
 
-def _numbers(text: str, limit: int) -> list[int]:
-    out = []
-    for part in text.split(",")[:limit]:
-        digits = "".join(c for c in part if c.isdigit())
-        out.append(min(int(digits), MAX_INCOME) if digits else 0)
-    return out
-
-
-def profile_from(meg: str, barn: str, lonn: str, pensjon: str) -> Profile:
-    """Parse the shareable query string. Anything unknown or malformed is dropped, never an error."""
-    personas = frozenset(p for p in meg.split(",") if p in PERSONAS)
-    # Links from before a band was added carry fewer values; the missing bands count as 0
-    counts = _numbers(barn, len(KID_BANDS)) + [0] * len(KID_BANDS)
-    kids = dict(zip(KID_BANDS, (min(n, 10) for n in counts), strict=False))
-    wages, pensions = _numbers(lonn, 2), _numbers(pensjon, 2)
-    pairs = [(wages[i] if i < len(wages) else 0, pensions[i] if i < len(pensions) else 0) for i in range(2)]
-    # The second adult counts only when they have an income
-    adults = tuple(Adult(w, p) for i, (w, p) in enumerate(pairs) if i == 0 or w or p)
-    if not lonn and not pensjon:
-        adults = (Adult(wage=500_000),)
-    return Profile(personas=personas, kids=kids, adults=adults)
-
-
-def profile_query(p: Profile) -> str:
-    return urlencode({
-        "meg": ",".join(k for k in PERSONAS if k in p.personas),
-        "barn": ",".join(str(p.kids.get(b, 0)) for b in KID_BANDS),
-        "lonn": ",".join(str(round(a.wage)) for a in p.adults),
-        "pensjon": ",".join(str(round(a.pension)) for a in p.adults),
-    })
-
-
 def _not_htmx(request: Request) -> bool:
     return "hx-request" not in request.headers
 
@@ -143,7 +110,7 @@ def index(
     sti: Q = "",
     k: Q = "",
 ) -> HTMLResponse:
-    tax_kroner = (_numbers(skatt, 1) or [150_000])[0]
+    tax_kroner = (numbers(skatt, 1) or [150_000])[0]
     return templates.TemplateResponse(request, "index.html", {
         "o": queries.overview(),
         "m": queries.meg(profile_from(meg, barn, lonn, pensjon)),
@@ -175,7 +142,7 @@ def meg_fragment(request: Request, meg: Q = "", barn: Q = "", lonn: Q = "", pens
 def receipt_fragment(request: Request, skatt: Q = "150000") -> Response:
     if _not_htmx(request):
         return RedirectResponse(f"/?{urlencode({'skatt': skatt})}#skatt")
-    tax_kroner = (_numbers(skatt, 1) or [0])[0]
+    tax_kroner = (numbers(skatt, 1) or [0])[0]
     return templates.TemplateResponse(request, "_receipt.html", {"receipt": queries.receipt(tax_kroner), "tax_kroner": tax_kroner})
 
 

@@ -27,6 +27,7 @@
   "title_nb": "Minstepensjonen økte med 8 000 kroner i året fra mai 2026",
   "summary_nb": "Satsene for minstepensjon ble hevet med 8 000 kroner i året, i tillegg til den vanlige reguleringen. Økningen gjelder fra 1. mai 2026 og videreføres.",
   "effect": "pluss",
+  "kind": "far",
   "amounts": [],
   "quote": "blir satsane for minstepensjon auka med 8 000 kroner i året utover ordinær regulering. Auken skal etter planen utbetalast i september månad 2026, men med etterbetaling frå 1. mai 2026.",
   "source_file": "data/text/prp202620270001aiddddpdfs.txt",
@@ -44,6 +45,7 @@
   "title_nb": "Støtte til 1 750 nye eller fornyede sykehjemsplasser",
   "summary_nb": "Staten vil bruke fire milliarder kroner på å hjelpe kommunene med å bygge og fornye rundt 1 750 sykehjems- og omsorgsplasser i 2027, 250 flere enn i år.",
   "effect": "pluss",
+  "kind": "tilbud",
   "amounts": [
    {
     "label_nb": "Heldøgns omsorgsplasser med statlig tilskudd",
@@ -69,6 +71,7 @@
   "title_nb": "Kortere ventetid på høreapparat",
   "summary_nb": "Regjeringen bruker 16,5 millioner kroner på flere undersøkelser og bedre henvisninger hos fastlegen. Målet er maks fire måneders ventetid på høreapparat.",
   "effect": "pluss",
+  "kind": "tilbud",
   "amounts": [],
   "quote": "Høyreapparatgarantien er tydeleg på at ventetida skal vere maksimalt fire månader, og neste år følgjer vi opp garantien med 16,5 millionar kroner for fleire undersøkingar og betre tilvisingar",
   "source_file": "data/saker/id3174119.txt",
@@ -88,6 +91,7 @@
   "title_nb": "Egenandelstaket øker til 3 406 kroner",
   "summary_nb": "Du må betale litt mer selv før du får frikort for lege, psykolog, medisiner på blå resept og lignende. Taket øker fra 3 278 kroner i 2026 til 3 406 kroner i 2027.",
   "effect": "minus",
+  "kind": "betaler",
   "amounts": [
    {
     "label_nb": "Egenandelstak (grense for frikort)",
@@ -117,7 +121,7 @@
   "detail": "barn og unge",
   "title_nb": "Ungdom under 18 år slipper fortsatt egenandeler",
   "summary_nb": "Siden 1. august 2026 har barn og unge under 18 år ikke betalt egenandeler under takordningen, mot tidligere 16 år. Dette videreføres i 2027.",
-  "effect": "pluss",
+  "effect": "uendret",
   "amounts": [],
   "quote": "Fra 1. august 2026 ble aldersgrensen for betaling av alle egenandeler under takordningen økt fra 16 til 18 år. Det foreslås å videreføre dette tiltaket",
   "source_file": "data/text/prp202620270001hoddddpdfs.txt",
@@ -136,6 +140,7 @@
   "title_nb": "Høyere gravferdsstønad, men større egenandel for båretransport",
   "summary_nb": "Den behovsprøvde gravferdsstønaden øker til 37 000 kroner, mens dødsboets egenandel for båretransport øker til 7 400 kroner. Dødsbo med lite eller ingen midler skal komme likt eller bedre ut.",
   "effect": "blandet",
+  "kind": "far",
   "amounts": [
    {
     "label_nb": "Behovsprøvd gravferdsstønad (maks)",
@@ -166,6 +171,7 @@
   "title_nb": "Støtten til parykk øker med 19 prosent for dem over 30 år",
   "summary_nb": "Personer over 30 år som har mistet håret på grunn av sykdom, får høyere støtte til parykk. Ordinær sats går fra 6 265 til 7 455 kroner i året, og forhøyet sats fra 16 220 til 19 302 kroner.",
   "effect": "pluss",
+  "kind": "far",
   "amounts": [
    {
     "label_nb": "Ordinær sats per år",
@@ -196,6 +202,7 @@
   "title_nb": "Grunnstønad ved ADHD krever igjen dokumentasjon",
   "summary_nb": "Barn og unge under 18 år med ADHD med hyperaktivitet må dokumentere ekstrautgiftene for å fortsatt få grunnstønad. Voksne som fikk stønaden i 2019–2023 uten dokumentasjon, må også sende inn dette.",
   "effect": "minus",
+  "kind": "regel",
   "amounts": [],
   "quote": "Personar under 18 år med ADHD med hyperaktivitet må frå 1. mars 2027 sende inn dokumentasjon på nødvendige meirutgifter for framleis å få stønad",
   "source_file": "data/saker/id3175765.txt",
@@ -213,6 +220,7 @@
   "title_nb": "Lavere grunnstønad for voksne 18–30 år med cøliaki",
   "summary_nb": "Personer mellom 18 og 30 år med cøliaki flyttes fra sats 2 (i dag 1 146 kroner i måneden) til sats 1 (i dag 752 kroner i måneden), samme sats som de over 30 år. Barn beholder sats 2.",
   "effect": "minus",
+  "kind": "far",
   "amounts": [],
   "quote": "Personar over 30 år får sats 1 (752 kroner per månad), mens per- sonar mellom 5 og 30 år får sats 2 (1 146 kroner per månad). Departementet foreslår å endre direkteplassering frå sats 2 til sats 1 for dei mel - lom 18 og 30 år.",
   "source_file": "data/text/prp202620270001aiddddpdfs.txt",
@@ -230,6 +238,7 @@
   "title_nb": "Stønadssatser for hjelpemidler økes ikke med prisveksten",
   "summary_nb": "Faste stønadssatser for hjelpemidler du kjøper selv, holdes på samme kronebeløp i 2027 som i 2026. Unntaket er parykkstøtten for dem over 30 år.",
   "effect": "minus",
+  "kind": "far",
   "amounts": [],
   "quote": "Departementet foreslår å føre satsane vidare nominelt frå 2026 til 2027 med unntak for satsane for stønad til parykk for perso - nar over 30 år, som blir auka med 19 pst. frå 1. januar 2027.",
   "source_file": "data/text/prp202620270001aiddddpdfs.txt",
@@ -247,6 +256,7 @@
   "title_nb": "Bare ett aktivitetshjelpemiddel om gangen",
   "summary_nb": "Har du allerede lånt et aktivitetshjelpemiddel, kan du ikke få innvilget et nytt lån. Målet er at flere i målgruppen skal få minst ett.",
   "effect": "blandet",
+  "kind": "regel",
   "amounts": [],
   "quote": "Regjeringa foreslår derfor å inn- føre ein regel om at personar som har eitt eller fleire aktive lån av aktivitetshjelpemiddel, ikkje kan få innvilga eit nytt lån.",
   "source_file": "data/text/prp202620270001aiddddpdfs.txt",
@@ -264,6 +274,7 @@
   "title_nb": "Uføre får begrenset rett til sykepenger",
   "summary_nb": "Regjeringen vil begrense retten til sykepenger for uføre, slik at samme inntektstap ikke dekkes av både uføretrygd og sykepenger.",
   "effect": "minus",
+  "kind": "far",
   "amounts": [],
   "quote": "Regjeringa foreslår å avgrense retten til sjukepen - gar for uføre. Forslaget gjer at ein ikkje kan få dekt det same inntektstapet to gonger gjennom to ulike ytingar.",
   "source_file": "data/text/prp202620270001aiddddpdfs.txt",
@@ -281,6 +292,7 @@
   "title_nb": "Uføre kan tjene mer uten at trygden blir redusert",
   "summary_nb": "Etter to år med uføretrygd kan du tjene opptil 1 G ved siden av uten at trygden blir avkortet. Tidligere var grensen 0,4 G.",
   "effect": "pluss",
+  "kind": "far",
   "amounts": [],
   "quote": "Fribeløpet var tidlegare på 0,4 G, men med verknad frå 1. januar 2026 (i kraft 1. oktober 2026) auka fribeløpet til 1 G etter ei ventetid på to år etter at ein har fått innvilga uføretrygd, eller etter ein ev. auke i uføregrad.",
   "source_file": "data/text/prp202620270001aiddddpdfs.txt",
@@ -299,6 +311,7 @@
   "title_nb": "50 millioner for raskere behandling av sykepenger",
   "summary_nb": "Nav får 50 millioner kroner til blant annet å korte ned behandlingstiden for sykepenger. Det gjelder både søknader fra arbeidstakere og refusjon til arbeidsgivere.",
   "effect": "pluss",
+  "kind": "tilbud",
   "amounts": [],
   "quote": "Regjeringa føreslår å løyve 50 millionar kroner for å mellom anna få ned saksbehandlingstida for sjukepengar.",
   "source_file": "data/saker/id3175613.txt",
@@ -317,6 +330,7 @@
   "title_nb": "Mer samarbeid mellom Nav og helsetjenesten om sykmeldte",
   "summary_nb": "78 millioner kroner går til tettere samarbeid mellom Nav og kommunehelsetjenesten, bedre verktøy for legene som sykmelder, og en ny digital sykmelding.",
   "effect": "blandet",
+  "kind": "tilbud",
   "amounts": [],
   "quote": "Styrkingen vil gi 78 millioner kroner mer til samhandling mellom Nav og kommunehelsetjenesten, bedre beslutningsstøtte for fastlegene og andre sykemeldere, og forbedret utveksling av informasjon mellom Nav og helsetjenesten.",
   "source_file": "data/saker/id3176573.txt",
@@ -352,6 +366,7 @@
   "title_nb": "Flere tiltak fra Nav for å komme i jobb",
   "summary_nb": "Pengene til arbeidsmarkedstiltak, som jobbstøtte og lønnstilskudd, økes med 50 millioner kroner. Det åpner for mer individuell jobbstøtte (IPS) og et forsøk med fireårig lønnstilskudd for unge.",
   "effect": "pluss",
+  "kind": "tilbud",
   "amounts": [],
   "quote": "For 2027 foreslår regjeringa å auke løyvinga til arbeidsmarknadstiltak, inkludert personellressur - sar i etaten, med 50 mill. kroner. Auken gir grunn- lag for å styrke innsatsen med individuell jobb - støtte (IPS) og andre arbeidsmarknadstiltak",
   "source_file": "data/text/prp202620270001aiddddpdfs.txt",
@@ -370,6 +385,7 @@
   "title_nb": "300 flere plasser i varig tilrettelagt arbeid",
   "summary_nb": "Det settes av 49 millioner kroner til om lag 300 flere plasser i varig tilrettelagt arbeid (VTA).",
   "effect": "pluss",
+  "kind": "tilbud",
   "amounts": [
    {
     "label_nb": "Nye VTA-plasser",
@@ -394,6 +410,7 @@
   "title_nb": "Forsøk med ungdomsprogram fortsetter",
   "summary_nb": "Forsøket med et arbeidsrettet fulltidsprogram for unge, med egen ytelse uten medisinske krav, får 194 millioner kroner i 2027.",
   "effect": "pluss",
+  "kind": "tilbud",
   "amounts": [
    {
     "label_nb": "Bevilgning til forsøket",
@@ -418,6 +435,7 @@
   "title_nb": "Norgespris på strøm øker fra 40 til 45 øre",
   "summary_nb": "Den faste Norgesprisen på strøm og fjernvarme foreslås hevet med 5 øre til 45 øre per kWh (uten mva). Regjeringen anslår at en typisk husholdning i Sør-Norge likevel kan spare om lag 8 700 kroner med Norgespris.",
   "effect": "minus",
+  "kind": "betaler",
   "amounts": [
    {
     "label_nb": "Norgespris per kWh, uten mva",
@@ -442,6 +460,7 @@
   "title_nb": "Strømstøtten slår inn fra 79 øre",
   "summary_nb": "For dem som ikke har Norgespris, øker grensen for strømstøtte fra 77 til 79 øre per kWh (uten mva). Staten dekker fortsatt 90 prosent av prisen over grensen.",
   "effect": "minus",
+  "kind": "far",
   "amounts": [
    {
     "label_nb": "Terskel for strømstøtte per kWh, uten mva",
@@ -466,6 +485,7 @@
   "title_nb": "Elavgiften øker litt, til 7,32 øre per kWh",
   "summary_nb": "Avgiften på strøm prisjusteres fra 7,13 til 7,32 øre per kWh.",
   "effect": "minus",
+  "kind": "betaler",
   "amounts": [
    {
     "label_nb": "Elavgift per kWh",
@@ -490,6 +510,7 @@
   "title_nb": "Lavere toll på klær og tekstiler",
   "summary_nb": "Tollen på klær og tekstiler som tepper, håndklær og gardiner kuttes til én sats på 5 prosent. Det gjør det billigere for norske butikker å importere klær.",
   "effect": "pluss",
+  "kind": "betaler",
   "amounts": [],
   "quote": "Regjeringen foreslår å redusere gjenværende tollavgift på klær og tekstiler til én felles sats på 5 prosent. Dette gir en avgiftslettelse på om lag 675 millioner kroner.",
   "source_file": "data/saker/id3174660.txt",
@@ -508,6 +529,7 @@
   "title_nb": "Brev kommer i postkassen én dag i uka",
   "summary_nb": "Fra 1. juli 2027 leveres brev som hovedregel til postkassen én dag i uka. Vil du ha post oftere, kan du hente brev på et hentepunkt fem dager i uka. Pakkelevering endres ikke.",
   "effect": "minus",
+  "kind": "tilbud",
   "amounts": [],
   "quote": "Overgangsordninga, som skal gjelde frå 1. juli 2027, betyr at: brev som hovudregel blir levert til postkassa ein dag i veka",
   "source_file": "data/saker/id3175559.txt",
@@ -526,6 +548,7 @@
   "title_nb": "Boutgiftstakene i bostøtten justeres ikke for prisvekst",
   "summary_nb": "Om lag 92 900 husstander ventes å få bostøtte hver måned i 2027, i snitt 43 600 kroner i året. Grensene for hvor store boutgifter som regnes med, holdes på samme kronebeløp som i 2026.",
   "effect": "minus",
+  "kind": "far",
   "amounts": [
    {
     "label_nb": "Gjennomsnittlig bostøtte per husstand per år",
@@ -552,6 +575,7 @@
   "title_nb": "Mål om behandling innen 60 dager på sykehus",
   "summary_nb": "Sykehusene får 250 milliarder kroner. Målet er at alle pasienter på sikt skal ha startet behandling innen 60 dager etter henvisning.",
   "effect": "pluss",
+  "kind": "tilbud",
   "amounts": [],
   "quote": "Sykehusene jobber allerede for å oppnå de nye ventetidsmålene, som innebærer at alle pasienter på sikt skal ha startet behandling innen 60 dager fra henvisningen, med mindre pasienten selv ønsker å vente eller det er medisinske grunner til det.",
   "source_file": "data/saker/id3174121.txt",
@@ -570,6 +594,7 @@
   "title_nb": "Flere lavterskeltilbud innen psykisk helse",
   "summary_nb": "Psykisk helse får 300 millioner kroner mer. Pengene går blant annet til flere døgnplasser og flere lavterskeltilbud i kommunene, der du kan få hjelp tidlig.",
   "effect": "pluss",
+  "kind": "tilbud",
   "amounts": [],
   "quote": "Regjeringen vil øke bevilgningen til psykisk helse med 300 millioner kroner neste år. Pengene skal gå til en rekke tiltak, blant annet å styrke døgnkapasiteten i psykisk helsevern og til etablering av flere lavterskeltilbud i kommunene.",
   "source_file": "data/saker/id3174123.txt",
@@ -587,6 +612,7 @@
   "title_nb": "Offentlig KI-tjeneste skal svare på helsespørsmål",
   "summary_nb": "Det offentlige lager en kvalitetssikret chattetjeneste som kan svare på spørsmål om symptomer, plager og prøvesvar. Den skal tilpasses norsk helsetjeneste.",
   "effect": "pluss",
+  "kind": "tilbud",
   "amounts": [],
   "quote": "Regjeringa vil gi innbyggjarane ei kvalitetssikra KI-teneste, som kan svare på spørsmål om symptom, plager og prøvesvar. Tenesta skal vere tilpassa norsk helseteneste, og regjeringa foreslår 20 millionar kroner til etableringa.",
   "source_file": "data/saker/id3174108.txt",
@@ -604,6 +630,7 @@
   "title_nb": "Bedre mobildekning i togtunneler",
   "summary_nb": "135 millioner kroner går til bedre nettdekning i jernbanetunneler. Reisende gjennom Drammenstunnelen og Ulrikstunnelen kan få mobildekning for første gang.",
   "effect": "pluss",
+  "kind": "tilbud",
   "amounts": [],
   "quote": "Regjeringa legg opp til å bruke 135 millionar kroner til betre nettdekning i jernbanetunnelar i 2027.",
   "source_file": "data/saker/id3175562.txt",

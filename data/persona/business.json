@@ -2,12 +2,13 @@
  {
   "id": "elbil-moms-grense-150000",
   "personas": [
-   "bilist"
+   "bilkjoper"
   ],
   "detail": "elbil",
   "title_nb": "Moms på elbil fra 150 000 kroner",
   "summary_nb": "Elbiler har i dag momsfritak for de første 300 000 kronene av prisen. Grensen halveres til 150 000 kroner, så du betaler moms av mer av prisen når du kjøper eller leaser en ny elbil.",
   "effect": "minus",
+  "kind": "betaler",
   "amounts": [
    {
     "label_nb": "Del av elbilprisen som er fritatt for moms",
@@ -109,6 +110,7 @@
   "title_nb": "Trafikkforsikringsavgiften for vanlige biler øker litt",
   "summary_nb": "Avgiften du betaler gjennom bilforsikringen for personbiler og varebiler justeres opp med prisveksten.",
   "effect": "minus",
+  "kind": "betaler",
   "amounts": [
    {
     "label_nb": "Trafikkforsikringsavgift for personbiler, varebiler mv.",
@@ -133,6 +135,7 @@
   "title_nb": "Trafikkforsikringsavgiften for elbil øker litt",
   "summary_nb": "Elbiler har en høyere sats i trafikkforsikringsavgiften enn bensin- og dieselbiler. Satsen justeres opp med prisveksten.",
   "effect": "minus",
+  "kind": "betaler",
   "amounts": [
    {
     "label_nb": "Trafikkforsikringsavgift for elbiler",
@@ -158,6 +161,7 @@
   "title_nb": "Alle elektriske varebiler slipper trafikkforsikringsavgift",
   "summary_nb": "I dag er bare lette elektriske varebiler fritatt for trafikkforsikringsavgift. Nå utvides fritaket til alle elektriske varebiler, noe som gir en lettelse på drøyt 3 400 kroner i året per bil.",
   "effect": "pluss",
+  "kind": "betaler",
   "amounts": [
    {
     "label_nb": "Årlig lettelse per elektrisk varebil (vel)",
@@ -183,6 +187,7 @@
   "title_nb": "Ny skattemodell for firmabil",
   "summary_nb": "Skatten på privat bruk av firmabil beregnes på en ny måte som tar hensyn til ulike kostnader for ulike motortyper. Det blir gunstigere for elbil, diesel og hybrid, mens bensinbiler får litt høyere skatt.",
   "effect": "blandet",
+  "kind": "betaler",
   "amounts": [],
   "quote": "Endringen gir en mer treffsik - ker modell for verdsetting, som i utgangspunktet innebærer lempeligere regler for elbiler, dieselbi - ler og hybridbiler sammenlignet med i dag. Inn - tektspåslaget for bensinbiler vil øke noe",
   "source_file": "data/text/prp202620270001ls0dddpdfs.txt",
@@ -224,6 +229,7 @@
   "title_nb": "Billettprisene på riksvegferjene justeres for prisvekst",
   "summary_nb": "Budsjettet legger til grunn at prisene på riksvegferjene øker med 3,7 prosent fra nyttår.",
   "effect": "minus",
+  "kind": "betaler",
   "amounts": [
    {
     "label_nb": "Antatt prisjustering av ferjetakster",
@@ -272,6 +278,7 @@
   "title_nb": "Ekstra skattefradrag i Finnmark og Nord-Troms står fast",
   "summary_nb": "Det særskilte fradraget for dem som bor i Finnmark og Nord-Troms er 45 000 kroner også i 2027.",
   "effect": "uendret",
+  "kind": "far",
   "amounts": [
    {
     "label_nb": "Særskilt fradrag i Finnmark og Nord-Troms",
@@ -337,6 +344,7 @@
   "title_nb": "Alle kommuner i Finnmark får støtte til beredskap",
   "summary_nb": "Støtteordningen for bedre beredskap i kommunene utvides fra Øst-Finnmark til hele Finnmark, og blir på 12 millioner kroner fra 2027.",
   "effect": "pluss",
+  "kind": "tilbud",
   "amounts": [
    {
     "label_nb": "Støtte til beredskap i Finnmark-kommunene",
@@ -385,6 +393,7 @@
   "title_nb": "Utreder rabatt for fastboende på fly i Lofoten og Vesterålen",
   "summary_nb": "Regjeringen vil utrede en prøveordning med rabatt for fastboende på flyrutene i Lofoten og Vesterålen, fordi det har vært vanskelig å få plass.",
   "effect": "pluss",
+  "kind": "tilbud",
   "amounts": [],
   "quote": "For å betre tilgangen til flyrutetilbodet for lokalbefolkninga, vil regjeringa no greie ut ei pilotordning for buplassrabatt i Lofoten og Vesterålen.",
   "source_file": "data/saker/id3175561.txt",
@@ -402,6 +411,7 @@
   "title_nb": "Fast fjernvarmepris på 0,63 kr/kWh i Longyearbyen",
   "summary_nb": "Prisen på fjernvarme for husholdninger i Longyearbyen foreslås satt til 0,63 kroner per kWh i Svalbardpris-ordningen. Boliger på Svalbard bruker om lag dobbelt så mye fjernvarme som boliger på fastlandet.",
   "effect": "pluss",
+  "kind": "betaler",
   "amounts": [
    {
     "label_nb": "Fjernvarmepris i Svalbardpris",
@@ -427,6 +437,7 @@
   "title_nb": "54 millioner mer til kamp mot pukkellaks",
   "summary_nb": "Innsatsen mot den fremmede arten pukkellaks økes med 54 millioner kroner, til totalt 81 millioner i 2027. Pengene skal blant annet gå til nye feller, særlig i Altaelva.",
   "effect": "pluss",
+  "kind": "tilbud",
   "amounts": [
    {
     "label_nb": "Ekstra innsats mot pukkellaks",
@@ -457,6 +468,7 @@
   "title_nb": "Lavere trygdeavgift for fiskere",
   "summary_nb": "Trygdeavgiften på næringsinntekt fra fiske og fangst går ned med 0,2 prosentpoeng.",
   "effect": "pluss",
+  "kind": "betaler",
   "amounts": [
    {
     "label_nb": "Trygdeavgift på næringsinntekt fra fiske og fangst",
@@ -481,6 +493,7 @@
   "title_nb": "Produktavgiften på fangst går ned",
   "summary_nb": "Produktavgiften som betales av førstehåndsverdien på fisken, foreslås redusert fra 1,6 til 1,2 prosent.",
   "effect": "pluss",
+  "kind": "betaler",
   "amounts": [
    {
     "label_nb": "Produktavgift til folketrygden for fiskeri, hval- og selfangst",
@@ -535,6 +548,7 @@
   "title_nb": "Høyere CO2-avgift på diesel i kystfisket",
   "summary_nb": "CO2-avgiften for fiske i nære farvann øker med 13 prosent utover prisveksten. For fiske i fjerne farvann blir avgiften bare prisjustert.",
   "effect": "minus",
+  "kind": "betaler",
   "amounts": [
    {
     "label_nb": "CO2-avgift, fiske i nære farvann",
@@ -571,6 +585,7 @@
   "title_nb": "Mindre CO2-kompensasjon til fiskeflåten",
   "summary_nb": "Ordningen som kompenserer fiskerne for CO2-avgift reduseres med 165 millioner kroner, fordi fiskeflåten slapp CO2-avgift i flere måneder i 2026.",
   "effect": "minus",
+  "kind": "far",
   "amounts": [
    {
     "label_nb": "Kompensasjon for CO2-avgift til fiskeflåten",
@@ -595,6 +610,7 @@
   "title_nb": "Produksjonsavgiften på oppdrettsfisk prisjusteres",
   "summary_nb": "Avgiften per kilo produsert laks, ørret og regnbueørret øker litt i takt med prisveksten.",
   "effect": "minus",
+  "kind": "betaler",
   "amounts": [
    {
     "label_nb": "Avgift på oppdrettsfisk",
@@ -643,6 +659,7 @@
   "title_nb": "Lavere trygdeavgift på næringsinntekt",
   "summary_nb": "Selvstendig næringsdrivende betaler 0,2 prosentpoeng mindre i trygdeavgift på næringsinntekten.",
   "effect": "pluss",
+  "kind": "betaler",
   "amounts": [
    {
     "label_nb": "Trygdeavgift på annen næringsinntekt",
@@ -716,6 +733,7 @@
   "title_nb": "Strengere regler for Skattefunn",
   "summary_nb": "For å hindre misbruk får Skattefunn et samlet tak på 25 millioner kroner for konsern, og kostnader før prosjektet er godkjent gir ikke lenger fradrag.",
   "effect": "blandet",
+  "kind": "regel",
   "amounts": [
    {
     "label_nb": "Samlet tak på fradragsberettigede kostnader per konsern",
@@ -764,6 +782,7 @@
   "title_nb": "Mindre penger til næringsstøtte og Innovasjon Norge",
   "summary_nb": "Bevilgningene til det næringsrettede virkemiddelapparatet kuttes med om lag 300 millioner kroner. Blant annet avvikles Miljøteknologiordningen i Innovasjon Norge.",
   "effect": "minus",
+  "kind": "tilbud",
   "amounts": [
    {
     "label_nb": "Samlet kutt til virkemiddelapparatet (NFD og KDD)",
@@ -788,6 +807,7 @@
   "title_nb": "Full momskompensasjon for frivillige lag også i 2027",
   "summary_nb": "Frivillige organisasjoner og idrettslag får fortsatt full momskompensasjon. Ordningen økes med 171 millioner til 3,25 milliarder kroner.",
   "effect": "pluss",
+  "kind": "far",
   "amounts": [
    {
     "label_nb": "Momskompensasjon til frivillige organisasjoner",
@@ -812,6 +832,7 @@
   "title_nb": "Høyere bunnfradrag i formuesskatten",
   "summary_nb": "Du betaler formuesskatt først når nettoformuen er over 1 990 000 kroner, opp fra 1 900 000. For ektepar er grensen 3 980 000 kroner.",
   "effect": "pluss",
+  "kind": "betaler",
   "amounts": [
    {
     "label_nb": "Bunnfradrag i formuesskatten (enslig)",
@@ -842,6 +863,7 @@
   "title_nb": "Aksjesparekonto kan brukes til flere aksjer",
   "summary_nb": "Du kan nå også eie aksjer og egenkapitalbevis som handles på markedsplasser som Euronext Growth gjennom aksjesparekontoen.",
   "effect": "pluss",
+  "kind": "regel",
   "amounts": [],
   "quote": "Regjeringen foreslår nå at ordningen utvides slik at også aksjer og egenkapitalbevis som er tatt opp til handel på multilateral handelsfasilitet (MHF), kan eies gjennom aksjesparekonto. Euronext Growth er en MHF.",
   "source_file": "data/saker/id3174678.txt",
@@ -913,6 +935,7 @@
   "title_nb": "Jordbruksavtalen gir 3,66 milliarder i økte inntektsmuligheter",
   "summary_nb": "Avtalen med bondeorganisasjonene øker inntektsmulighetene i jordbruket med 3 660 millioner kroner, hvorav 3 237 millioner er økte bevilgninger over statsbudsjettet.",
   "effect": "pluss",
+  "kind": "far",
   "amounts": [
    {
     "label_nb": "Økte inntektsmuligheter i jordbruket",
@@ -943,6 +966,7 @@
   "title_nb": "Bedre ordninger for bønder ved svangerskap og fødsel",
   "summary_nb": "I jordbruksavtalen ble partene enige om å fjerne all samordning med andre inntekter ved svangerskap og fødsel.",
   "effect": "pluss",
+  "kind": "far",
   "amounts": [],
   "quote": "I jordbruksavtalen blei det semje om å fjerne all samordning for alle typar inntekter ved svangerskap og fødsel.",
   "source_file": "data/text/prp202620270001lmddddpdfs.txt",
@@ -960,6 +984,7 @@
   "title_nb": "Jordbruksfradraget står fast",
   "summary_nb": "Det særskilte fradraget i næringsinntekt fra jordbruk er det samme som i 2026: et fast fradrag på 99 600 kroner, pluss 38 prosent av inntekten utover dette, og maksimalt 208 900 kroner.",
   "effect": "uendret",
+  "kind": "far",
   "amounts": [
    {
     "label_nb": "Inntektsuavhengig jordbruksfradrag",
@@ -996,6 +1021,7 @@
   "title_nb": "Mer penger til investeringer i landbruket",
   "summary_nb": "Landbrukets utviklingsfond, som gir støtte til blant annet investeringer og utvikling i landbruket, får 330 millioner kroner mer. Investeringer for å møte dyrevelferdskrav og klima- og miljøtiltak prioriteres.",
   "effect": "pluss",
+  "kind": "tilbud",
   "amounts": [
    {
     "label_nb": "Bevilgning til Landbrukets utviklingsfond",
@@ -1037,6 +1063,7 @@
   "title_nb": "Kraftig økning i CO2-avgiften for veksthus",
   "summary_nb": "Den reduserte CO2-avgiften på gass til oppvarming av veksthus økes kraftig. Økningen skal tas med i kostnadene i jordbruksoppgjøret og dermed kompenseres over tid.",
   "effect": "minus",
+  "kind": "betaler",
   "amounts": [
    {
     "label_nb": "CO2-avgift på naturgass til veksthus",
@@ -1061,6 +1088,7 @@
   "title_nb": "Litt mer til skogbruket i jordbruksavtalen",
   "summary_nb": "Pengene til skog i jordbruksavtalen øker med 10 millioner kroner. Samtidig kuttes tilskuddet til tømmerkaier fordi de viktigste kaiene er bygget.",
   "effect": "blandet",
+  "kind": "tilbud",
   "amounts": [
    {
     "label_nb": "Tildelinger til skog i jordbruksavtalen",

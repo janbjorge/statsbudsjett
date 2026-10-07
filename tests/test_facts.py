@@ -54,3 +54,28 @@ def test_barnetrygd_needs_a_child_under_18() -> None:
     assert "barnetrygd-uendret" not in titles(Profile(personas=family, kids={"18+": 2}))
     assert "barnetrygd-uendret" in titles(Profile(personas=family, kids={"18+": 1, "16-18": 1}))
     assert "barnetrygd-uendret" in titles(Profile(personas=family))
+
+
+def test_amounts_that_stay_the_same_in_kroner_count_as_better_or_worse() -> None:
+    effect = {f.id: f.effect for f in FACTS}
+    assert effect["barnetrygd-uendret"] is Effect.MINUS
+    assert effect["kontantstotte-uendret"] is Effect.MINUS
+    assert effect["barnehage-makspris"] is Effect.PLUSS
+
+
+def test_elbil_vat_only_for_those_buying_a_car() -> None:
+    assert "elbil-moms-grense-150000" not in titles(Profile(personas=frozenset({"bilist"})))
+    assert "elbil-moms-grense-150000" in titles(Profile(personas=frozenset({"bilkjoper"})))
+
+
+def test_households_of_more_than_one_are_dere() -> None:
+    assert Profile().you == "deg"
+    assert Profile(kids={"1-5": 1}).you == "dere"
+
+
+def test_only_household_money_is_better_or_worse() -> None:
+    by_id = {f.id: f for f in FACTS}
+    assert by_id["horeapparatgaranti"].label("deg") == "● Mer til tilbudet"
+    assert by_id["horeapparatgaranti"].tone == "blandet"
+    assert by_id["elavgift-7-32"].label("dere") == "▲ Dere betaler mer"
+    assert by_id["barnetrygd-uendret"].label("deg") == "▼ Verdt mindre etter prisvekst"

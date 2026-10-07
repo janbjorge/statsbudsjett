@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 from core.budget import Budget, Chapter, Flow, FundYear, Kommune, Post, Side
-from core.facts import Amount, Effect, Fact
+from core.facts import Amount, Effect, Fact, Kind
 from core.tax import Growth, TaxTable
 
 DATASETS = Path(__file__).parents[2] / "datasets"
@@ -65,6 +65,8 @@ class JsonDatasets:
                 page=f.get("page"),
                 caveat=f.get("caveat_nb"),
                 under_18=bool(f.get("under_18")),
+                kind=Kind(f["kind"]) if f.get("kind") else None,
+                same_kroner=bool(f.get("same_kroner")),
             )
             for f in self._raw["meg.json"]["items"]
         ]

@@ -137,14 +137,34 @@ def meg() -> dict:
     add_personas = {"toll-klaer-5-prosent": ["naeringsdrivende"]}
     # Only for children under 18, with the words in the quote that say so (METHOD.md §6)
     under_18 = {"barnetrygd-uendret": "barn 0–18 år"}
+    # Kroner amounts that stay the same while prices rise: a benefit is worth less, a price costs
+    # less. The words in the quotes show the amount stays the same in kroner (METHOD.md §6)
+    same_kroner = {
+        "barnetrygd-uendret": ("minus", "no 2012 kroner per månad"),
+        "kontantstotte-uendret": ("minus", "med uendra nivå"),
+        "barnehage-makspris": ("pluss", "fryst på 1 200"),
+        "innsatssonen-saerskilt-fradrag": ("minus", "45 000 kr 45 000 kr"),
+        "jordbruksfradrag-uendret": ("minus", "99 600 kr 99 600 kr"),
+        "hjelpemiddel-satser-nominelt": ("minus", "føre satsane vidare nominelt"),
+        "bostotte-2027": ("minus", "nominelt vidareføre buutgiftstaka"),
+    }
     items = [it for it in items if it["id"] not in drop]
     for it in items:
         it["personas"] = it["personas"] + [p for p in add_personas.get(it["id"], []) if p not in it["personas"]]
+        quotes = " ".join([it["quote"], *(e["quote"] for e in it.get("extra_quotes", []))])
         if (words := under_18.get(it["id"])) is not None:
             if words not in it["quote"]:
                 raise SystemExit(f"{it['id']}: quote no longer says {words!r}")
             it["under_18"] = True
-    keep = ("id", "personas", "detail", "under_18", "title_nb", "summary_nb", "effect", "amounts", "source_title", "source_url", "page", "caveat_nb")
+        if (rule := same_kroner.get(it["id"])) is not None:
+            effect, words = rule
+            if words not in quotes or it["effect"] not in ("uendret", effect):
+                raise SystemExit(f"{it['id']}: quotes no longer say {words!r}, or the effect changed")
+            it["effect"] = effect
+            it["same_kroner"] = True
+        if it["effect"] != "uendret" and it.get("kind") not in ("betaler", "far", "tilbud", "regel"):
+            raise SystemExit(f"{it['id']}: a change needs a kind (betaler, far, tilbud or regel)")
+    keep = ("id", "personas", "detail", "under_18", "kind", "same_kroner", "title_nb", "summary_nb", "effect", "amounts", "source_title", "source_url", "page", "caveat_nb")
     tax = json.loads((PERSONA / "tax.json").read_text())
     return {
         "items": [{k: it.get(k) for k in keep} for it in items],

@@ -13,12 +13,32 @@ class Effect(StrEnum):
     UENDRET = "uendret"
 
 
-EFFECT_LABEL = {
-    Effect.PLUSS: "▲ Bedre for deg",
-    Effect.MINUS: "▼ Dårligere for deg",
-    Effect.BLANDET: "◆ Både og",
-    Effect.UENDRET: "■ Uendret",
+class Kind(StrEnum):
+    """What a change touches. Only money in or out of the household is called better or worse (METHOD.md §6)."""
+
+    BETALER = "betaler"
+    FAR = "far"
+    TILBUD = "tilbud"
+    REGEL = "regel"
+
+
+# {} is "Du" or "Dere"
+LABEL = {
+    (Kind.BETALER, Effect.PLUSS): "▼ {} betaler mindre",
+    (Kind.BETALER, Effect.MINUS): "▲ {} betaler mer",
+    (Kind.BETALER, Effect.BLANDET): "◆ Noen betaler mer, andre mindre",
+    (Kind.FAR, Effect.PLUSS): "▲ {} får mer",
+    (Kind.FAR, Effect.MINUS): "▼ {} får mindre",
+    (Kind.FAR, Effect.BLANDET): "◆ Noen får mer, andre mindre",
+    (Kind.TILBUD, Effect.PLUSS): "● Mer til tilbudet",
+    (Kind.TILBUD, Effect.MINUS): "● Mindre tilbud",
+    (Kind.TILBUD, Effect.BLANDET): "◆ Endret tilbud",
+    (Kind.REGEL, Effect.PLUSS): "◆ Romsligere regler",
+    (Kind.REGEL, Effect.MINUS): "◆ Strengere regler",
+    (Kind.REGEL, Effect.BLANDET): "◆ Endrede regler",
 }
+# Same kroner while prices rise: the amount itself does not change, its value does
+REAL_LABEL = {Kind.BETALER: "▲ Billigere etter prisvekst", Kind.FAR: "▼ Verdt mindre etter prisvekst"}
 
 # Persona keys match data/persona/*.json; "husholdning" applies to everyone and is not selectable
 PERSONAS = {
@@ -32,6 +52,7 @@ PERSONAS = {
     "fisker": "Fisker eller havbruk",
     "naeringsdrivende": "Driver egen bedrift",
     "bilist": "Har bil",
+    "bilkjoper": "Skal kjøpe eller lease ny bil",
     "distrikt_nord": "Bor i Nord-Norge",
     "sparer": "Sparer eller har formue",
 }
@@ -62,10 +83,20 @@ class Fact:
     page: int | None
     caveat: str | None
     under_18: bool = False
+    kind: Kind | None = None
+    same_kroner: bool = False
+
+    def label(self, you: str) -> str:
+        if self.effect is Effect.UENDRET or self.kind is None:
+            return "■ Står fast"
+        if self.same_kroner:
+            return REAL_LABEL[self.kind]
+        return LABEL[self.kind, self.effect].format(you.capitalize())
 
     @property
-    def effect_label(self) -> str:
-        return EFFECT_LABEL[self.effect]
+    def tone(self) -> str:
+        """Badge colour: good or bad only for money in or out of the household."""
+        return self.effect if self.kind in (Kind.BETALER, Kind.FAR) else "blandet"
 
 
 @dataclass(frozen=True, slots=True)
@@ -77,6 +108,11 @@ class Profile:
     @property
     def has_kids(self) -> bool:
         return any(n > 0 for n in self.kids.values())
+
+    @property
+    def you(self) -> str:
+        """How the page addresses the household: "dere" once more than one person lives there."""
+        return "dere" if len(self.adults) > 1 or self.has_kids else "deg"
 
     @property
     def has_minors(self) -> bool:

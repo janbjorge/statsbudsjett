@@ -1,7 +1,8 @@
 {# Tax effect and the facts for the chosen profile #}
 {% set t = m.tax %}
+{% set many = m.profile.adults|length > 1 %}
 <div class="card tax-card">
-  <div class="muted small">Inntektsskatt i 2027 for {{ "husstanden din" if m.profile.adults|length > 1 else "deg" }}</div>
+  <div class="muted small">Inntektsskatt i 2027 for {{ "dere" if many else "deg" }}</div>
   {% if t.income == 0 %}
   <div class="tax-big">Fyll inn inntekt for å se skatten</div>
   {% elif t.change|abs < 50 %}
@@ -10,14 +11,14 @@
   <div class="tax-big {{ 'pos' if t.change < 0 else 'neg' }}">{{ t.change|abs|kr }} {{ "lavere" if t.change < 0 else "høyere" }} skatt</div>
   {% endif %}
   {% if t.income %}
-  <p style="margin:4px 0 0">Du betaler om lag <b>{{ t.tax_2027|kr }}</b> i skatt av {{ t.income|kr }} ({{ t.rate|nb1 }} %).
+  <p style="margin:4px 0 0">{{ "Dere" if many else "Du" }} betaler om lag <b>{{ t.tax_2027|kr }}</b> i skatt av {{ t.income|kr }} ({{ t.rate|nb1 }} %).
     Endringen er regnet mot 2026-reglene justert for forventet lønnsvekst ({{ m.growth_wage|nb1 }} %) og pensjonsvekst ({{ m.growth_pension|num }} %), slik Finansdepartementet måler det.</p>
   {% endif %}
   <p class="note" style="margin:8px 0 0">Gjelder lønn og pensjon med standardfradrag. Ikke med: næringsinntekt, rentefradrag, formue, uføretrygd, særregler i Finnmark og Nord-Troms.
     <a href="https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/">Kilde: Prop. 1 LS (2026–2027), tabell 1.5</a></p>
 </div>
 <div class="facts">
-  {% if not m.profile.personas %}<p class="muted" style="margin:12px 0 0">Velg minst én ting for å se endringer som treffer deg. Under ser du det som gjelder alle.</p>{% endif %}
+  {% if not m.profile.personas %}<p class="muted" style="margin:12px 0 0">Velg minst én ting for å se endringer som treffer {{ m.profile.you }}. Under ser du det som gjelder alle.</p>{% endif %}
   <p class="muted small" style="margin:16px 0 0">{{ m.n_changed }} endringer og {{ m.n_unchanged }} ting som står fast. Alt er hentet fra regjeringens budsjettdokumenter.</p>
   {% macro amt(a) -%}
     {{ a.label }}:
@@ -29,7 +30,7 @@
     <h3 class="sec">{{ s.label }}</h3>
     {% for f in s.changed %}
     <article class="fact">
-      <div class="top"><h4>{{ f.title }}</h4><span class="badge {{ f.effect }}">{{ f.effect_label }}</span></div>
+      <div class="top"><h4>{{ f.title }}</h4><span class="badge {{ f.tone }}">{{ f.label(m.profile.you) }}</span></div>
       <p>{{ f.summary }}</p>
       {% if f.amounts %}<div class="amts">{% for a in f.amounts %}<div>{{ amt(a) }}</div>{% endfor %}</div>{% endif %}
       <div class="meta">{% if f.caveat %}{{ f.caveat }} · {% endif %}{{ source(f) }}</div>

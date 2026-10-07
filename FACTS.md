@@ -73,7 +73,7 @@ Site quirks:
 ## 6. "For deg" facts and verification
 
 - 94 facts in data/persona/{families,welfare,business}.json and 56 tax parameters in data/persona/tax.json. Four agent sessions extracted them on 2026-10-07 from the press releases and the propositions.
-- Each fact has personas, a plain bokmål title and summary, an effect (pluss/minus/uendret/blandet), amounts for 2026/2027, a verbatim quote, `source_file`, `source_url` and `page`. `extra_quotes` holds evidence that sits elsewhere (e.g. the 2026 value on another page).
+- Each fact has personas, a plain bokmål title and summary, an effect (pluss/minus/uendret/blandet), a kind for changes (betaler/far/tilbud/regel), amounts for 2026/2027, a verbatim quote, `source_file`, `source_url` and `page`. `extra_quotes` holds evidence that sits elsewhere (e.g. the 2026 value on another page).
 - src/pipeline/verify.py:52 checks every quote against its source file, the page against the page marker, and that every amount appears in the quote. src/pipeline/datasets.py:122 refuses to build if anything fails.
 - PDF text quirks the checker normalises (src/pipeline/verify.py:17): words broken across lines ("tryg-\ndeinntekter", "jus -\ntert"), private-use glyphs (U+F020), table rows that repeat on several pages, and amounts written as "21,5 mill.".
 - Curation happens in the build, not in the agent files (src/pipeline/datasets.py:136): duplicates, items the tax calculator already covers, and one item that was spending growth worded as a personal change.

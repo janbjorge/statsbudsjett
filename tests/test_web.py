@@ -56,3 +56,8 @@ def test_everyday_page_adds_up() -> None:
     assert abs(sum(r.kroner for r in e.income) - e.per_person) < 1  # income equals spending in the non-oil view
     html = client.get("/visste-du").text
     assert "Visste du?" in html and 'aria-current="page"' in html
+
+
+def test_family_is_addressed_as_dere() -> None:
+    html = client.get(f"/meg?del=resultat&{FAMILY}", headers=HX).text
+    assert "Dere betaler mer" in html and "Du betaler mer" not in html
