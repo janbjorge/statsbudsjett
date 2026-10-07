@@ -76,5 +76,9 @@ class JsonDatasets:
         return TaxTable(
             params={k: {"y2026": v["y2026"], "y2027": v["y2027"]} for k, v in t["params"].items()},
             trinnskatt=t["trinnskatt"],
-            growth=Growth(wage=t["growth"]["wage"]["pct"], pension=t["growth"]["pension"]["pct"]),
+            growth=Growth(
+                wage=t["growth"]["wage"]["pct"], pension=t["growth"]["pension"]["pct"],
+                wage_page=t["growth"]["wage"].get("page"), pension_page=t["growth"]["pension"].get("page"),
+            ),
+            source_url=t["source_url"],
         )

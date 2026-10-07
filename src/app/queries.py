@@ -33,6 +33,8 @@ class MegView:
     sections: tuple[Section, ...]
     growth_wage: float
     growth_pension: float
+    tax_source: str = ""
+    growth_pages: tuple[int | None, int | None] = (None, None)
 
     @property
     def n_changed(self) -> int:
@@ -78,6 +80,8 @@ class Queries:
             sections=tuple(select(self.data.facts(), profile)),
             growth_wage=table.growth.wage,
             growth_pension=table.growth.pension,
+            tax_source=table.source_url,
+            growth_pages=(table.growth.wage_page, table.growth.pension_page),
         )
 
     def facts(self) -> list[Fact]:

@@ -24,6 +24,8 @@ def test_meg_gives_the_same_tax_change_as_the_page() -> None:
     r = client.get("/api/meg?meg=barnefamilie,arbeidstaker,bilist&barn=0,2,0,0&lonn=650000,650000&pensjon=0,0").json()
     assert round(r["skatt"]["endring_kr"]) == -3076  # the page says "3 076 kr lavere skatt" (tests/test_web.py)
     assert r["lenke"].startswith("/?meg=barnefamilie")
+    assert r["skatt"]["kilde"]["url"] == "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/"
+    assert r["skatt"]["lonnsvekst_kilde_side"] == 80  # "anslått lønnsvekst på 4,0 pst." (data/persona/tax.json)
     fact = r["seksjoner"][0]["endret"][0]
     assert fact["kilde"]["url"].startswith("https://www.regjeringen.no/")
 

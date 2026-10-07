@@ -42,6 +42,8 @@ class Growth:
 
     wage: float
     pension: float
+    wage_page: int | None = None
+    pension_page: int | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -51,6 +53,7 @@ class TaxTable:
     params: dict[str, dict[str, float | None]]
     trinnskatt: dict[str, list[dict[str, float]]]
     growth: Growth
+    source_url: str = ""
 
     def rules(self, year: Year, wage_index: float = 1.0, pension_index: float = 1.0) -> TaxRules:
         y = f"y{year}"

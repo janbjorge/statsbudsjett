@@ -52,7 +52,7 @@ class ProfileQuery(BaseModel):
     model_config = ConfigDict(frozen=True)
 
     meg: Annotated[tuple[str, ...], BeforeValidator(_personas)] = Field(default=(), description=f"Any of {', '.join(PERSONAS)}")
-    barn: Annotated[tuple[int, ...], BeforeValidator(_kids)] = Field(default=(0,) * len(KID_BANDS), description=f"Children per age band: {', '.join(KID_BANDS)}")
+    barn: Annotated[tuple[int, ...], BeforeValidator(_kids)] = Field(default=(0,) * len(KID_BANDS), description="Children per age band, in this order: " + "; ".join(f"{k} = {v}" for k, v in KID_BANDS.items()))
     lonn: Annotated[tuple[int, ...], BeforeValidator(_two_amounts)] = Field(default=(), description="Yearly wage in kroner, up to two adults")
     pensjon: Annotated[tuple[int, ...], BeforeValidator(_two_amounts)] = Field(default=(), description="Yearly pension in kroner, up to two adults")
 

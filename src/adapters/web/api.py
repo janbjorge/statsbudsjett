@@ -27,6 +27,9 @@ are left out, and the transfer from the oil fund counts as income. Amounts are t
 """
 
 
+TAX_SOURCE_TITLE = "Prop. 1 LS (2026–2027) Skatter og avgifter 2027"
+
+
 class Out(BaseModel):
     model_config = ConfigDict(frozen=True)
 
@@ -170,12 +173,17 @@ class ProfileOut(Out):
 
 
 class Tax(Out):
+    """Calculated by this site from the tax rates in Prop. 1 LS, for wage and pension income only."""
+
     skatt_2027_kr: float
     skatt_referanse_kr: float
     endring_kr: float
     inntekt_kr: float
     lonnsvekst_prosent: float
     pensjonsvekst_prosent: float
+    kilde: Source = Field(description="Where the tax rates come from")
+    lonnsvekst_kilde_side: int | None = Field(description="Page in the same document that gives the wage growth")
+    pensjonsvekst_kilde_side: int | None = Field(description="Page in the same document that gives the pension growth")
 
 
 class Section(Out):
@@ -333,6 +341,8 @@ def build(queries: Queries) -> FastAPI:
             skatt=Tax(
                 skatt_2027_kr=m.tax.tax_2027, skatt_referanse_kr=m.tax.tax_reference, endring_kr=m.tax.change,
                 inntekt_kr=m.tax.income, lonnsvekst_prosent=m.growth_wage, pensjonsvekst_prosent=m.growth_pension,
+                kilde=Source(tittel=TAX_SOURCE_TITLE, url=m.tax_source, side=None),
+                lonnsvekst_kilde_side=m.growth_pages[0], pensjonsvekst_kilde_side=m.growth_pages[1],
             ),
             seksjoner=[Section(navn=s.label, endret=[_fact(f) for f in s.changed], uendret=[_fact(f) for f in s.unchanged]) for s in m.sections],
             lenke=f"/?{profile_query(profile)}#meg",

@@ -190,7 +190,7 @@ def agents_page(request: Request) -> HTMLResponse:
 def llms_txt(request: Request) -> Response:
     """Entry point for AI agents (llmstxt.org): what the site is, the JSON API and the method."""
     return templates.TemplateResponse(request, "llms.txt", {
-        "base": str(request.base_url), "personas": ", ".join(PERSONAS), "kid_bands": ", ".join(KID_BANDS),
+        "base": str(request.base_url), "personas": ", ".join(PERSONAS), "kid_bands": "; ".join(f"{k} = {v}" for k, v in KID_BANDS.items()),
     }, media_type="text/markdown; charset=utf-8")
 
 
