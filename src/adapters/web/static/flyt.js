@@ -1,5 +1,5 @@
 // Pengestrømmen: Sankey per year on one shared scale, plus the 2026 → 2027 change chart.
-// Details show in a fixed panel above the chart (hover on desktop, tap on mobile), not a floating tooltip.
+// Details show in a fixed panel above the chart: hover on desktop, tap on mobile.
 (() => {
 const DATA = JSON.parse(document.getElementById("flyt-data").textContent);
 const f1 = new Intl.NumberFormat("nb-NO", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
