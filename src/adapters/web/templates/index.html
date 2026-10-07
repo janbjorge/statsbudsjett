@@ -5,7 +5,7 @@
     <h1>Hva bruker staten pengene på i 2027?</h1>
     <div class="hero-num">{{ o.total|nb1 }} <small>milliarder kroner</small></div>
     <div class="grid tiles">
-      <div class="card tile"><div class="k">Mer enn i 2026</div><div class="v">{{ o.change|signed1 }} mrd.</div><div class="s">{{ o.change_pct|pct }} før prisvekst</div></div>
+      <div class="card tile"><div class="k">{{ "Mer" if o.change >= 0 else "Mindre" }} enn i 2026</div><div class="v">{{ o.change|signed1 }} mrd.</div><div class="s">{{ o.change_pct|pct }} før prisvekst</div></div>
       <div class="card tile"><div class="k">Største utgift</div><div class="v">{{ o.top_group }}</div><div class="s">{{ o.top_amount|amount }}, {{ (o.top_amount / o.total * 100)|nb }} % av alt</div></div>
       <div class="card tile"><div class="k">Fra oljefondet</div><div class="v">{{ o.fund|nb1 }} mrd.</div><div class="s">dekker {{ o.fund_share|num }} % av utgiftene</div></div>
     </div>
