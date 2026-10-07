@@ -62,20 +62,21 @@
     {%- else %}<b>{{ a.y2027|num }}</b> {{ a.unit }}{% if a.y2026 is not none %} (som i 2026){% endif %}{% endif %}
   {%- endmacro %}
   {% macro source(f) -%}<a href="{{ f.source_url }}" rel="noopener">Kilde: {{ f.source_title }}{% if f.page %}, side {{ f.page }}{% endif %} ↗</a>{%- endmacro %}
-  {% for s in m.sections %}
-    <h3 class="sec">{{ s.label }}</h3>
-    {% for f in s.changed %}
+  {% for g in m.groups %}
+    <h3 class="sec">{{ g.label(m.profile.you) }}</h3>
+    {% if g.wallet == "fast" %}
+    <div class="same">
+      {% for t in g.items %}{% set f = t.fact %}<div>■ <b>{{ f.title }}</b>{% for a in f.amounts %} · {{ amt(a) }}{% endfor %} <span class="tag">{{ t.situation }}</span> <a href="{{ f.source_url }}" rel="noopener">kilde ↗</a></div>{% endfor %}
+    </div>
+    {% else %}
+    {% for t in g.items %}{% set f = t.fact %}
     <article class="fact">
       <div class="top"><h4>{{ f.title }}</h4><span class="badge {{ f.tone }}">{{ f.label(m.profile.you) }}</span></div>
       <p>{{ f.summary }}</p>
       {% if f.amounts %}<div class="amts">{% for a in f.amounts %}<div>{{ amt(a) }}</div>{% endfor %}</div>{% endif %}
-      <div class="meta">{% if f.caveat %}{{ f.caveat }} · {% endif %}{{ source(f) }}</div>
+      <div class="meta"><span class="tag">{{ t.situation }}</span> · {% if f.caveat %}{{ f.caveat }} · {% endif %}{{ source(f) }}</div>
     </article>
     {% endfor %}
-    {% if s.unchanged %}
-    <div class="same"><div class="muted small" style="border:0;padding-bottom:0">Står fast</div>
-      {% for f in s.unchanged %}<div>■ <b>{{ f.title }}</b>{% for a in f.amounts %} · {{ amt(a) }}{% endfor %} <a href="{{ f.source_url }}" rel="noopener">kilde ↗</a></div>{% endfor %}
-    </div>
     {% endif %}
   {% endfor %}
 </div>

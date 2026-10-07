@@ -67,7 +67,14 @@ def test_form_asks_only_what_the_incomes_cannot_tell() -> None:
 
 def test_farm_income_brings_the_farm_facts_without_ticking_bonde() -> None:
     html = client.get("/?naering=550000&naering_type=jordbruk").text
-    assert '<h3 class="sec">Bonde</h3>' in html and '<h3 class="sec">Driver egen bedrift</h3>' in html
+    assert '<span class="tag">Bonde</span>' in html and '<span class="tag">Driver egen bedrift</span>' in html
+
+
+def test_changes_are_grouped_by_what_they_do_to_the_money() -> None:
+    html = client.get(f"/?{FAMILY}").text
+    heads = re.findall(r'<h3 class="sec">([^<]+)</h3>', html)
+    assert heads[:2] == ["Dere betaler mer eller får mindre", "Dere betaler mindre eller får mer"]
+    assert heads[-1] == "Står fast"
 
 
 def test_second_adult_shows_when_there_are_two() -> None:

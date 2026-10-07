@@ -129,8 +129,8 @@ class Profile:
             "arbeidstaker": any(a.wage for a in self.adults),
             "pensjonist": any(a.pension for a in self.adults),
             "naeringsdrivende": any(a.business for a in self.adults),
-            "bonde": any(a.business and a.business_kind is Business.JORDBRUK for a in self.adults),
-            "fisker": any(a.business and a.business_kind is Business.FISKE for a in self.adults),
+            "bonde": any(a.business and a.business_kind == Business.JORDBRUK for a in self.adults),
+            "fisker": any(a.business and a.business_kind == Business.FISKE for a in self.adults),
         }
         return self.personas | {p for p, yes in told.items() if yes}
 
@@ -143,6 +143,59 @@ class Section:
 
 
 ORDER = {Effect.MINUS: 0, Effect.PLUSS: 1, Effect.BLANDET: 2, Effect.UENDRET: 3}
+
+
+class Wallet(StrEnum):
+    """What a change does to the household's money; the page groups the facts by it (METHOD.md §6)."""
+
+    UT = "ut"
+    INN = "inn"
+    BEGGE = "begge"
+    TILBUD = "tilbud"
+    FAST = "fast"
+
+
+# {} is "Du" or "Dere"; in the order the page shows them
+WALLET_LABEL = {
+    Wallet.UT: "{} betaler mer eller får mindre",
+    Wallet.INN: "{} betaler mindre eller får mer",
+    Wallet.BEGGE: "Både mer og mindre",
+    Wallet.TILBUD: "Tilbud og regler",
+    Wallet.FAST: "Står fast",
+}
+MONEY = {Effect.MINUS: Wallet.UT, Effect.PLUSS: Wallet.INN, Effect.BLANDET: Wallet.BEGGE}
+
+
+@dataclass(frozen=True, slots=True)
+class Tagged:
+    """A fact with the situation it was picked for, shown as a tag on the card."""
+
+    fact: Fact
+    situation: str
+
+
+@dataclass(frozen=True, slots=True)
+class Group:
+    wallet: Wallet
+    items: tuple[Tagged, ...]
+
+    def label(self, you: str) -> str:
+        return WALLET_LABEL[self.wallet].format(you.capitalize())
+
+
+def wallet(f: Fact) -> Wallet:
+    if f.effect is Effect.UENDRET:
+        return Wallet.FAST
+    if f.kind in (Kind.BETALER, Kind.FAR):
+        return MONEY[f.effect]
+    return Wallet.TILBUD
+
+
+def by_wallet(sections: list[Section]) -> list[Group]:
+    """The same facts grouped by what they do to the household's money, keeping the order within each group."""
+    tagged = [Tagged(f, s.label) for s in sections for f in s.changed + s.unchanged]
+    groups = [Group(w, tuple(t for t in tagged if wallet(t.fact) is w)) for w in WALLET_LABEL]
+    return [g for g in groups if g.items]
 
 
 def select(facts: list[Fact], profile: Profile) -> list[Section]:

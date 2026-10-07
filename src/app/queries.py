@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 
 from core import budget as b
-from core.facts import Fact, Profile, Section, select
+from core.facts import Fact, Group, Profile, Section, by_wallet, select
 from core.ports import Datasets
 from core.tax import TaxEffect, TaxPages, household_effect
 
@@ -36,6 +36,10 @@ class MegView:
     tax_pages: TaxPages
     tax_source: str = ""
     growth_pages: tuple[int | None, int | None] = (None, None)
+
+    @property
+    def groups(self) -> list[Group]:
+        return by_wallet(list(self.sections))
 
     @property
     def n_changed(self) -> int:

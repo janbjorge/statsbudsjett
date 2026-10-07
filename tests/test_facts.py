@@ -1,7 +1,7 @@
 """Which facts a household sees (METHOD.md §6)."""
 
 from adapters.datasets import JsonDatasets
-from core.facts import ASKED, PERSONAS, Effect, Profile, select
+from core.facts import ASKED, PERSONAS, WALLET_LABEL, Effect, Kind, Profile, Wallet, by_wallet, select, wallet
 from core.tax import Adult, Business
 
 FACTS = JsonDatasets().facts()
@@ -101,3 +101,26 @@ def test_only_household_money_is_better_or_worse() -> None:
     assert by_id["horeapparatgaranti"].tone == "blandet"
     assert by_id["elavgift-7-32"].label("dere") == "▲ Dere betaler mer"
     assert by_id["barnetrygd-uendret"].label("deg") == "▼ Verdt mindre etter prisvekst"
+
+
+def test_wallet_groups_hold_every_fact_once_in_page_order() -> None:
+    profile = Profile(personas=frozenset({"bilist", "distrikt_nord"}), kids={"1-5": 2})
+    sections = select(FACTS, profile)
+    groups = by_wallet(sections)
+    assert sorted(t.fact.id for g in groups for t in g.items) == sorted(titles(profile))
+    order = list(WALLET_LABEL)
+    assert [g.wallet for g in groups] == sorted((g.wallet for g in groups), key=order.index)
+    # Within a group the facts keep the situation order, so "Gjelder alle" comes last
+    for g in groups:
+        seen = [t.situation for t in g.items]
+        assert seen == sorted(seen, key=[s.label for s in sections].index)
+
+
+def test_only_money_counts_as_more_or_less() -> None:
+    for f in FACTS:
+        w = wallet(f)
+        if w in (Wallet.UT, Wallet.INN, Wallet.BEGGE):
+            assert f.kind in (Kind.BETALER, Kind.FAR) and f.effect is not Effect.UENDRET
+        if w is Wallet.FAST:
+            assert f.effect is Effect.UENDRET
+    assert Wallet.UT in {wallet(f) for f in FACTS if f.id == "barnetrygd-uendret"}

@@ -135,6 +135,7 @@ label.field { display: block; font-weight: 600; margin-bottom: 6px; }
 .badge { font-size: 12.5px; font-weight: 650; padding: 2px 8px; border-radius: 999px; white-space: nowrap; border: 1px solid currentColor; }
 .badge.pluss { color: var(--up); } .badge.minus { color: var(--down); }
 .badge.uendret, .badge.blandet { color: var(--text-muted); }
+.tag { font-size: 12px; padding: 1px 7px; border-radius: 6px; background: var(--surface-2); color: var(--text-secondary); white-space: nowrap; }
 .same { display: grid; gap: 4px; margin-top: 6px; }
 .same div { font-size: 14.5px; color: var(--text-secondary); padding: 6px 2px; border-bottom: 1px solid var(--hairline); }
 .same b { color: var(--text-primary); font-weight: 600; }
