@@ -33,6 +33,7 @@ Read-only, no key, CORS open. Field names carry their unit: `_mrd_kr` is billion
 - [Explorer]({{ base }}): overview, "For deg", tax receipt, budget tree, changes, kommune, oil money
 - [Money flows]({{ base }}flyt): Sankey diagram for 2026, 2027 and the difference
 - [Visste du?]({{ base }}visste-du): totals in everyday units
+- [Spør en KI]({{ base }}ki): how readers can point ChatGPT, Claude or their own GPT at this site
 
 ## Method and sources
 

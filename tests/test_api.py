@@ -3,6 +3,7 @@
 from fastapi.testclient import TestClient
 
 from adapters.web.main import app, queries
+from adapters.web.params import MAX_INCOME, ProfileQuery
 
 client = TestClient(app)
 
@@ -61,3 +62,29 @@ def test_llms_txt_links_resolve() -> None:
     links = [part.split(")")[0] for part in text.split("](")[1:]]
     for url in (u for u in links if u.startswith(base)):
         assert client.get(url.removeprefix(base.rstrip("/"))).status_code == 200, url
+
+
+def test_openapi_has_an_absolute_server_and_typed_responses() -> None:
+    schema = client.get("/api/openapi.json").json()
+    assert schema["servers"] == [{"url": "http://testserver/api"}]
+    assert {"Meg", "FactOut", "Tree", "KommuneDetail"} <= set(schema["components"]["schemas"])
+
+
+def test_meg_accepts_comma_lists_and_repeats() -> None:
+    a = client.get("/api/meg?meg=student,pensjonist&lonn=100000").json()["profil"]
+    b = client.get("/api/meg?meg=student&meg=pensjonist&lonn=100000").json()["profil"]
+    assert a == b and a["meg"] == ["student", "pensjonist"]
+
+
+def test_profile_query_drops_bad_input() -> None:
+    p = ProfileQuery.model_validate({"meg": "hacker,student", "barn": "x,2", "lonn": "-5,abc", "pensjon": "9999999999999"}).profile()
+    assert p.personas == {"student"}
+    assert list(p.kids.values()) == [0, 2, 0, 0, 0]
+    assert [(a.wage, a.pension) for a in p.adults] == [(5, MAX_INCOME)]
+
+
+def test_agents_page_is_linked_and_shows_the_prompt() -> None:
+    html = client.get("/ki").text
+    assert "Spør en KI om budsjettet" in html and "http://testserver/llms.txt" in html
+    assert 'href="/ki" aria-current="page"' in html
+    assert 'href="/ki"' in client.get("/").text

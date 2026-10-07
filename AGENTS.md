@@ -15,6 +15,7 @@
 
 - Python 3.14 with uv: deferred annotations (no quoted forward refs), `type` aliases, frozen slotted dataclasses, StrEnum, match.
 - Hexagonal layout (FACTS.md §1): `src/core/` stays pure, enforced by tests/test_boundary.py. Pages are rendered on the server with Jinja + HTMX; JavaScript only for chart islands.
+- Validation uses pydantic v2 (jb 2026-10-07), in the adapters only: query strings (src/adapters/web/params.py) and API responses (src/adapters/web/api.py). `src/core/` stays standard library and keeps its dataclasses.
 - Data work in the pipeline uses polars, not pandas. The app itself does not depend on polars.
 - Plain `python3` is a rye shim that fails here; always use `uv run python`.
 - Outputs must be deterministic: sort group_by results and round float sums (src/pipeline/flows.py:136).

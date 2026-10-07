@@ -14,7 +14,7 @@ from fastapi.templating import Jinja2Templates
 
 from adapters.datasets import DATASETS, JsonDatasets
 from adapters.web import api, fmt
-from adapters.web.params import numbers, profile_from, profile_query
+from adapters.web.params import kroner, profile_from, profile_query
 from app.queries import Queries
 from core.budget import FundYear, Kommune, Node, Side
 from core.facts import KID_BANDS, PERSONAS
@@ -111,7 +111,7 @@ def index(
     sti: Q = "",
     k: Q = "",
 ) -> HTMLResponse:
-    tax_kroner = (numbers(skatt, 1) or [150_000])[0]
+    tax_kroner = kroner(skatt)
     return templates.TemplateResponse(request, "index.html", {
         "o": queries.overview(),
         "m": queries.meg(profile_from(meg, barn, lonn, pensjon)),
@@ -143,7 +143,7 @@ def meg_fragment(request: Request, meg: Q = "", barn: Q = "", lonn: Q = "", pens
 def receipt_fragment(request: Request, skatt: Q = "150000") -> Response:
     if _not_htmx(request):
         return RedirectResponse(f"/?{urlencode({'skatt': skatt})}#skatt")
-    tax_kroner = (numbers(skatt, 1) or [0])[0]
+    tax_kroner = kroner(skatt)
     return templates.TemplateResponse(request, "_receipt.html", {"receipt": queries.receipt(tax_kroner), "tax_kroner": tax_kroner})
 
 
@@ -179,6 +179,11 @@ def flows_page(request: Request) -> HTMLResponse:
 @app.get("/visste-du", response_class=HTMLResponse)
 def everyday_page(request: Request) -> HTMLResponse:
     return templates.TemplateResponse(request, "visste_du.html", {"e": queries.everyday()})
+
+
+@app.get("/ki", response_class=HTMLResponse)
+def agents_page(request: Request) -> HTMLResponse:
+    return templates.TemplateResponse(request, "ki.html", {"base": str(request.base_url)})
 
 
 @app.get("/llms.txt", response_class=PlainTextResponse)

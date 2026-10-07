@@ -494,6 +494,7 @@ source = { editable = "." }
 dependencies = [
     { name = "fastapi" },
     { name = "jinja2" },
+    { name = "pydantic" },
     { name = "uvicorn", extra = ["standard"] },
 ]
 
@@ -514,6 +515,7 @@ pipeline = [
 requires-dist = [
     { name = "fastapi" },
     { name = "jinja2" },
+    { name = "pydantic", specifier = ">=2.13" },
     { name = "uvicorn", extras = ["standard"] },
 ]
 

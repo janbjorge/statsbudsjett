@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Spør en KI om statsbudsjettet 2027{% endblock %}
+{% block main %}
+  <section>
+    <p class="muted" style="margin:0"><a href="/">← Statsbudsjettet 2027, forklart</a></p>
+    <h1>Spør en KI om budsjettet</h1>
+    <p class="lede">Du kan be ChatGPT, Claude, Copilot eller Gemini om å lese tallene på denne siden. Da svarer den ut fra budsjettet,
+      ikke ut fra det den tror den husker. Det fungerer med KI-tjenester som kan åpne lenker på nettet.</p>
+    <div class="grid tiles">
+      <div class="card"><h3>Slik gjør du</h3>
+        <ol class="steps">
+          <li>Åpne KI-tjenesten du bruker. Slå på nettsøk hvis den har en egen knapp for det.</li>
+          <li>Kopier teksten under og lim den inn. Bytt ut spørsmålet med ditt eget.</li>
+          <li>Still oppfølgingsspørsmål som vanlig. Be om lenken til kilden hvis den ikke gir den.</li>
+        </ol></div>
+      <div class="card"><h3>Ting du kan spørre om</h3>
+        <ul class="steps">
+          <li>Hva betyr budsjettet for meg som er pensjonist med 300 000 kr i pensjon?</li>
+          <li>Hvor mye mer får politiet i 2027 enn i 2026?</li>
+          <li>Hvordan står kommunen min i forhold til landssnittet?</li>
+          <li>Hva bruker staten mest penger på, og hvor kommer pengene fra?</li>
+        </ul></div>
+      <div class="card"><h3>Husk dette</h3>
+        <ul class="steps">
+          <li>En KI kan ta feil, også med riktige tall foran seg. Sjekk viktige tall her på siden eller i kilden den lenker til.</li>
+          <li>Det du skriver, går til selskapet bak KI-tjenesten, ikke til oss. Ikke del mer om deg selv enn du trenger.</li>
+        </ul></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Teksten du limer inn</h2>
+    <pre class="prompt" tabindex="0">Les {{ base }}llms.txt og bruk tallene og kildene derfra. Svar på norsk og oppgi kilde for hvert tall.
+
+Spørsmålet mitt: Hva betyr statsbudsjettet 2027 for en familie med to barn i barnehagen og to voksne som tjener 600 000 kr hver?</pre>
+    <p class="note">Lenken peker på en kort beskrivelse av siden laget for KI-tjenester, med lenker til alle tallene.
+      Du kan også bare lime inn adressen til denne siden og spørre.</p>
+  </section>
+
+  <section>
+    <h2>For utviklere</h2>
+    <p class="lede">Tallene finnes som et åpent JSON-API. Det er gratis, krever ingen nøkkel og kan bare lese.</p>
+    <ul class="steps">
+      <li><a href="/llms.txt">llms.txt</a>: beskrivelse av siden, metoden og alle endepunkter etter <a href="https://llmstxt.org/">llmstxt.org</a>-formatet.</li>
+      <li><a href="/api/openapi.json">OpenAPI-skjema</a>: alle endepunkter og parametere. Feltnavnene sier enheten: <code>_mrd_kr</code> er milliarder kroner, <code>_kr</code> er kroner.</li>
+      <li>Egen GPT i ChatGPT: under <b>Configure → Actions</b>, velg <b>Import from URL</b> og lim inn <code>{{ base }}api/openapi.json</code>.</li>
+      <li>Rådata: <a href="/data/poster-2027.csv">alle poster (CSV)</a>, <a href="/data/kommuner-2027.csv">kommuner (CSV)</a> og <a href="/data/budget.json">alt (JSON)</a>.</li>
+    </ul>
+  </section>
+{% endblock %}
