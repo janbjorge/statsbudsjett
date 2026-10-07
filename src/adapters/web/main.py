@@ -13,6 +13,7 @@ from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import HTMLResponse, PlainTextResponse, RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
 from adapters.datasets import DATASETS, JsonDatasets
 from adapters.web import api, fmt, telemetry
@@ -62,10 +63,27 @@ async def headers(request: Request, call_next: Callable[[Request], Awaitable[Res
     return response
 
 
+class HeadAsGet:
+    """Answer HEAD like GET without the body. Routes only take GET; link checkers and preview bots send HEAD."""
+
+    def __init__(self, app: ASGIApp) -> None:
+        self.app = app
+
+    async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
+        if scope["type"] != "http" or scope["method"] != "HEAD":
+            return await self.app(scope, receive, send)
+
+        async def headers_only(message: Message) -> None:
+            await send({**message, "body": b""} if message["type"] == "http.response.body" else message)
+
+        await self.app({**scope, "method": "GET"}, receive, headers_only)
+
+
 app.mount("/static", StaticFiles(directory=HERE / "static"), name="static")
 app.mount("/data", StaticFiles(directory=DATASETS), name="data")
 app.mount("/api", api.build(queries))
 telemetry.setup(app)
+app.add_middleware(HeadAsGet)
 
 
 # Labels for the kinds of business income in the "For deg" form

@@ -150,3 +150,11 @@ def test_static_files_are_versioned_and_cached_for_good() -> None:
     assert url, "pages link static files with a content hash"
     assert "immutable" in client.get(url[1]).headers["cache-control"]
     assert "immutable" not in client.get("/static/app.css").headers["cache-control"]  # an unversioned URL may change
+
+
+def test_head_answers_like_get_without_a_body() -> None:
+    for path in ("/", "/flyt", "/static/app.css", "/data/kommuner-2027.csv", "/api/openapi.json"):
+        get, head = client.get(path), client.head(path)
+        assert (head.status_code, head.headers["content-type"]) == (get.status_code, get.headers["content-type"]), path
+        assert head.content == b"", path
+    assert client.head("/finnes-ikke").status_code == 404
