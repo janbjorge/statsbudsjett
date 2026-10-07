@@ -19,6 +19,8 @@ def norm(s: str) -> str:
     s = re.sub(r"[\uf000-\uf8ff]", " ", s)  # private-use glyphs from PDF fonts
     s = s.replace("­", "").replace("\xa0", " ").replace(" ", " ").replace(" ", " ")
     s = re.sub(r"(?<=[a-zæøå]) ?-\s+(?!(?:og|eller|til|enn)\b)(?=[a-zæøå])", "", s)
+    # A capital on either side is a real hyphen ("Nord-\nNorge", "NAV-\nkontor"): keep it, drop the break
+    s = re.sub(r"(?<=[a-zæøåA-ZÆØÅ0-9])-\s+(?!(?:og|eller|til|enn)\b)(?=[a-zæøåA-ZÆØÅ])", "-", s)
     s = re.sub(r"[‐‑‒–—−]", "-", s)
     s = re.sub(r"[«»“”„\"]", '"', s).replace("’", "'")
     return re.sub(r"\s+", " ", s).strip().lower()
