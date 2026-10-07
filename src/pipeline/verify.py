@@ -74,7 +74,7 @@ def check_item(item: dict, cache: dict) -> list[str]:
     if item.get("page") is not None:
         # Map normalized position back to the raw text by searching the first quote words
         # Table rows repeat ("Personer ... 22 pst."), so any occurrence on the cited page counts
-        nk = norm_keep_markers(raw)
+        nk = cache.setdefault(src + "#markers", text.replace("=== side", "=== SIDE"))
         head = norm(item["quote"])[:40]
         pages = {page_at(nk, m.start()) for m in re.finditer(re.escape(head), nk)}
         if pages and item["page"] not in pages:
@@ -94,16 +94,6 @@ def check_item(item: dict, cache: dict) -> list[str]:
             if not any(f.replace(" ", "") in qn for f in forms):
                 errs.append(f"{a.get('label_nb')} {year}={v} not in quote")
     return errs
-
-
-_marker_cache: dict[int, str] = {}
-
-
-def norm_keep_markers(raw: str) -> str:
-    key = id(raw)
-    if key not in _marker_cache:
-        _marker_cache[key] = norm(raw).replace("=== side", "=== SIDE")
-    return _marker_cache[key]
 
 
 def main() -> int:
