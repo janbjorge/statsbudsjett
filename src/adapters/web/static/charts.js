@@ -4,7 +4,8 @@
 const nb = new Intl.NumberFormat("nb-NO", { maximumFractionDigits: 0 });
 const nb1 = new Intl.NumberFormat("nb-NO", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 const kr = v => nb.format(Math.round(v)) + " kr";
-const amount = bn => Math.abs(bn) >= 1 ? nb1.format(bn) + " mrd. kr" : nb.format(bn * 1000) + " mill. kr";
+// Same steps as fmt.amount on the server: mrd. from 1 bn, mill. from 1 mill., plain kroner below that
+const amount = bn => Math.abs(bn) >= 1 ? nb1.format(bn) + " mrd. kr" : Math.abs(bn) >= 0.001 ? nb.format(bn * 1000) + " mill. kr" : kr(bn * 1e9);
 const cssVar = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
