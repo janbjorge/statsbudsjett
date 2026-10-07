@@ -184,8 +184,6 @@ document.addEventListener("htmx:afterSettle", drawAll);
 const isDark = () => document.documentElement.dataset.theme === "dark" ||
   (!document.documentElement.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
 document.addEventListener("DOMContentLoaded", () => {
-  const theme = new URLSearchParams(location.search).get("theme") || localStorage.getItem("theme");
-  if (theme) document.documentElement.dataset.theme = theme;
   const btn = document.getElementById("theme");
   btn.textContent = isDark() ? "Lys" : "Mørk";
   btn.addEventListener("click", () => {
