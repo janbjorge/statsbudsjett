@@ -10,7 +10,7 @@
 <!-- Set the saved theme before first paint, so dark mode does not flash light -->
 <script>try { const t = new URLSearchParams(location.search).get("theme") || localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch {}</script>
 <script src="/static/htmx.min.js" defer></script>
-<script src="/static/d3.min.js" defer></script>
+{% block d3 %}<script src="/static/d3.min.js" defer></script>{% endblock %}
 <script src="/static/charts.js" defer></script>
 {% block head %}{% endblock %}
 </head>

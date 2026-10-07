@@ -10,7 +10,7 @@ A public explainer of Norway's 2027 state budget proposal (Prop. 1 S (2026–202
 - `/flyt` is the Sankey page: money flows for 2026 and 2027 and the 2026→2027 diff.
 - `/visste-du` holds the 2027 totals in everyday units: per innbygger, per day, per second, and per innbygger for each spending group and income source (src/core/budget.py, `everyday`).
 - For AI agents: `/ki` ("Spør en KI") tells readers how to point ChatGPT, Claude or a custom GPT at the site. `/llms.txt` (llmstxt.org format, template in src/adapters/web/templates/llms.txt) and a read-only JSON API under `/api` with its schema at `/api/openapi.json` (src/adapters/web/api.py). The API returns the same queries as the pages, as pydantic v2 models. Its field names carry the unit (`_mrd_kr`, `_kr`, `_prosent`), because the core mixes mrd. kr and kr. The schema's server URL is absolute, because ChatGPT actions refuse a relative one. CORS is open; an unknown kommune is a 404 there, where the page falls back to Oslo.
-- Stack (jb 2026-10-07): Python 3.14, FastAPI + uvicorn + Jinja + HTMX. The server renders all HTML. d3 is used only for four chart islands in src/adapters/web/static/charts.js (treemap, kommune dots, fund line) and the Sankey page.
+- Stack (jb 2026-10-07): Python 3.14, FastAPI + uvicorn + Jinja + HTMX. The server renders all HTML. d3 is used only for four chart islands in src/adapters/web/static/charts.js (treemap, kommune dots, fund line) and the Sankey page. static/d3.min.js is a subset build holding only the d3 functions those use; tools/d3-bundle.sh rebuilds it, and a new d3 call needs its name added there. Pages without charts (/visste-du, /ki) do not load it.
 
 ### Layout
 
