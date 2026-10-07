@@ -2,24 +2,35 @@
 
 A public explainer of Norway's 2027 state budget proposal. You can see where the money comes from and goes to, what the budget means for you, the numbers for your kommune, and every post in the budget. Built from the government's own published data.
 
+Python 3.14, FastAPI, Jinja and HTMX, with d3 only for the charts.
+
+Found a mistake? [Open an issue](https://github.com/janbjorge/statsbudsjett/issues). The page explains how in plain Norwegian (section "Fant du en feil?").
+
 ## Run it
 
 ```sh
-uv run python -m http.server 8000 --directory site    # http://localhost:8000
+uv run uvicorn adapters.web.main:app --reload     # http://localhost:8000
 docker build -t statsbudsjett . && docker run --rm -p 8080:8080 statsbudsjett
 ```
 
-## Rebuild it
+## Check it
 
 ```sh
-uv run python download.py      # fetch sources into data/ (about 140 MB, gitignored)
-uv run python viz/build.py     # Sankey page
-uv run python viz/explorer.py  # explorer; verifies every fact first, writes site/
+uvx ruff check .
+uv run ty check core app adapters pipeline tests
+uv run pytest tests/test_tax.py tests/test_facts.py tests/test_web.py tests/test_boundary.py
+```
+
+## Rebuild the data
+
+```sh
+uv run python -m pipeline.download   # fetch sources into data/ (about 140 MB, gitignored)
+uv run python -m pipeline.datasets   # verify every fact, then write datasets/
 ```
 
 ## Docs
 
-- [FACTS.md](FACTS.md): sources, data layout and numbers. Read first.
+- [FACTS.md](FACTS.md): sources, layout, data and numbers. Read first.
 - [METHOD.md](METHOD.md): what is left out, how things are grouped, and what calculations assume.
 - [TODO.md](TODO.md): open work. Finished work is in [docs/done.md](docs/done.md).
 - [AGENTS.md](AGENTS.md): rules for working on the code.

@@ -106,7 +106,8 @@ footer a { color: inherit; }
 <div class="viz-root">
 <main>
   <header>
-    <h1>Statsbudsjettet 2027</h1>
+    <p style="margin:0 0 8px"><a href="/" style="color:inherit">← Tilbake til Statsbudsjettet 2027, forklart</a></p>
+    <h1>Pengestrømmen 2026 og 2027</h1>
     <p>Hvor pengene kommer fra og hvor de går. Budsjettet utenom olje: petroleumsinntektene går til
       oljefondet, og overføringen fra fondet dekker gapet mellom inntekter og utgifter. Lånetransaksjoner er holdt utenfor.
       Alle tall i milliarder kroner, løpende priser.</p>
@@ -157,10 +158,10 @@ footer a { color: inherit; }
 <div class="tip" id="tip"></div>
 </div>
 
-<script>/*D3*/</script>
-<script>/*D3_SANKEY*/</script>
+<script src="/static/d3.min.js"></script>
+<script src="/static/d3-sankey.min.js"></script>
 <script>
-const DATA = /*DATA*/;
+const DATA = {{ payload|safe }};
 
 const nf1 = new Intl.NumberFormat("nb-NO", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 const fmt = v => nf1.format(v);

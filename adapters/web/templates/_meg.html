@@ -1,0 +1,54 @@
+{# The whole "For deg" block: presets, form and result. Form edits only swap the result, so focus stays put. #}
+{% set p = m.profile %}
+<div id="meg-inner">
+<div class="chips" style="margin:-8px 0 20px"><span class="muted small" style="align-self:center">Eksempler:</span>
+  {% for name, q in [
+    ("Familie med to små barn", "meg=barnefamilie,arbeidstaker,bilist&barn=0,2,0,0&lonn=650000,650000&pensjon=0,0"),
+    ("Bonde", "meg=bonde,naeringsdrivende,bilist,distrikt_nord&barn=0,0,0,0&lonn=550000&pensjon=0"),
+    ("Pensjonist", "meg=pensjonist&barn=0,0,0,0&lonn=0&pensjon=320000"),
+    ("Student", "meg=student&barn=0,0,0,0&lonn=120000&pensjon=0"),
+  ] %}
+  <a class="chip small" href="/?{{ q }}#meg" hx-get="/meg?{{ q }}" hx-target="#meg-inner" hx-swap="outerHTML">{{ name }}</a>
+  {% endfor %}
+</div>
+<div class="meg-grid">
+  <form class="meg-form card" action="/#meg" method="get"
+        hx-get="/meg?del=resultat" hx-target="#meg-result" hx-trigger="change, input delay:400ms">
+    <input type="hidden" name="meg" value="{{ p.personas|join(',') }}" id="meg-personas-value">
+    <div><h3>Hvem er du?</h3>
+      <div class="chips wrap">
+        {% for key, label in PERSONAS.items() %}
+        <label class="chip small check"><input type="checkbox" value="{{ key }}" data-persona {{ "checked" if key in p.personas }}> {{ label }}</label>
+        {% endfor %}
+      </div>
+    </div>
+    <div><h3>Barn i husstanden</h3>
+      <input type="hidden" name="barn" value="{% for b in KID_BANDS %}{{ p.kids.get(b, 0) }}{{ ',' if not loop.last }}{% endfor %}" id="meg-kids-value">
+      <div class="kids">
+        {% for band, label in KID_BANDS.items() %}
+        <label for="kid-{{ band }}">{{ label }}</label>
+        <input class="kid" id="kid-{{ band }}" type="number" min="0" max="10" inputmode="numeric" value="{{ p.kids.get(band, 0) }}" data-kid>
+        {% endfor %}
+      </div>
+    </div>
+    <div>
+      <h3>Inntekt i året, før skatt</h3>
+      <input type="hidden" name="lonn" id="meg-lonn-value">
+      <input type="hidden" name="pensjon" id="meg-pensjon-value">
+      <div class="money">
+        {% for i in range(2) %}
+        {% set a = p.adults[i] if i < p.adults|length else none %}
+        <div class="adult">
+          <label>{{ "Lønn" if i == 0 else "Voksen nr. 2: lønn" }}<input inputmode="numeric" data-money="lonn" value="{{ a.wage|nb if a else '' }}" placeholder="0"></label>
+          <label>Pensjon<input inputmode="numeric" data-money="pensjon" value="{{ a.pension|nb if a else '' }}" placeholder="0"></label>
+        </div>
+        {% endfor %}
+      </div>
+      <p class="note" style="margin:6px 0 0">La voksen nr. 2 stå tom hvis du bor alene.</p>
+    </div>
+    <noscript><button type="submit">Vis</button></noscript>
+    <button class="share" type="button" data-copy-url>Kopier lenke til valgene dine</button>
+  </form>
+  <div id="meg-result">{% include "_meg_result.html" %}</div>
+</div>
+</div>

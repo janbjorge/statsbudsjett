@@ -78,7 +78,7 @@ def check_item(item: dict, cache: dict) -> list[str]:
         head = norm(item["quote"])[:40]
         pages = {page_at(nk, m.start()) for m in re.finditer(re.escape(head), nk)}
         if pages and item["page"] not in pages:
-            errs.append(f"page {item['page']} but quote is on page(s) {sorted(pages)}")
+            errs.append(f"page {item['page']} but quote is on page(s) {sorted(p for p in pages if p is not None)}")
     # Facts spread over two places (e.g. 2026 and 2027 values on different pages) carry extra quotes
     for extra in item.get("extra_quotes", []):
         sub = {"source_file": src, "quote": extra["quote"], "page": extra.get("page"), "amounts": []}

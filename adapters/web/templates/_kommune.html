@@ -1,0 +1,16 @@
+{% set k = kv.kommune %}
+<div id="kommune-out">
+  <div class="grid tiles" style="margin-top:16px">
+    <div class="card tile"><div class="k">Frie inntekter 2027</div><div class="v">{{ (k.frie2027 / 1e9)|amount }}</div><div class="s">{{ k.population|nb }} innbyggere</div></div>
+    <div class="card tile"><div class="k">Per innbygger</div><div class="v">{{ k.per_person|kr }}</div>
+      <div class="s">{{ "over" if k.per_person >= kv.average_per_person else "under" }} landsgjennomsnittet på {{ kv.average_per_person|kr }} · nr. {{ kv.rank }} av {{ kv.count }}</div></div>
+    <div class="card tile"><div class="k">Vekst fra 2026</div><div class="v">{{ k.growth|pct }}</div><div class="s">anslått, før prisvekst</div></div>
+    <div class="card tile"><div class="k">Skatteinngang</div><div class="v">{{ k.tax_index|nb }} %</div><div class="s">av landsgjennomsnittet per innbygger</div></div>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <h3>Frie inntekter per innbygger i alle kommuner</h3>
+    <p class="muted small" style="margin:0 0 8px">Hver prikk er én kommune. Små kommuner får mer per innbygger fordi tjenestene koster mer å drive der. Klikk en prikk for å velge den.</p>
+    <div class="strip" data-selected="{{ k.nr }}" data-average="{{ kv.average_per_person }}"
+         data-kommuner="{{ kommuner|tojson_kommuner }}"></div>
+  </div>
+</div>

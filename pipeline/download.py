@@ -11,7 +11,7 @@ from urllib.parse import urljoin
 
 BASE = "https://www.regjeringen.no"
 ROOT = "/no/statsbudsjett/2027/id3172975/"
-OUT = Path(__file__).parent / "data"
+OUT = Path(__file__).parent.parent / "data"
 UA = {"User-Agent": "Mozilla/5.0 (statsbudsjett-2027 downloader)"}
 
 DATA_PAGES = [
@@ -153,7 +153,8 @@ def press_releases() -> None:
         body = re.sub(r"</(p|h\d|li|tr|div)>", "\n", body)
         text = html.unescape(re.sub(r"<[^>]+>", " ", body))
         text = re.sub(r"\n\s*\n+", "\n", re.sub(r"[ \t\xa0]+", " ", text)).strip()
-        title = html.unescape(re.search(r"<title>([^<]*)", page).group(1)).replace(" - regjeringen.no", "").strip()
+        title_tag = re.search(r"<title>([^<]*)", page)
+        title = html.unescape(title_tag.group(1)).replace(" - regjeringen.no", "").strip() if title_tag else path
         date = re.search(r"(\d{2}\.\d{2}\.20\d\d)", text)
         if date and len(text) >= 600:
             out = f"TITLE: {title}\nURL: {BASE}{path}\nDATE: {date.group(1)}\n\n{text}\n"

@@ -1,0 +1,22 @@
+{# Tax receipt: the 100-kroner bar and the receipt for the entered amount #}
+<div id="receipt-out">
+  <div class="stack" role="img" aria-label="Fordeling av 100 kroner">
+    {% for g in receipt %}<div style="flex:{{ g.share }};background:var(--g-{{ loop.index }})" data-tip="<b>{{ g.name }}</b><br>{{ g.share|nb1 }} kr av hver 100-lapp"></div>{% endfor %}
+  </div>
+  <div class="legend">
+    {% for g in receipt %}<span><i class="sw" style="background:var(--g-{{ loop.index }})"></i>{{ g.name }} {{ g.share|nb1 }} kr</span>{% endfor %}
+  </div>
+  <p class="note">Forenklet: skatten din havner i en felles pott sammen med andre inntekter og penger fra oljefondet.
+    Vi fordeler beløpet ditt etter hvor stor del av utgiftene hvert formål utgjør.</p>
+  <div class="receipt" aria-live="polite">
+    <h3>KVITTERING</h3><div class="c">Statsbudsjettet 2027 · din andel</div>
+    {% for g in receipt %}
+    <details {{ "open" if loop.index <= 3 }}>
+      <summary class="row g"><span class="n">{{ g.name }}</span><span class="d"></span><span>{{ g.kroner|kr }}</span></summary>
+      {% for l in g.lines %}<div class="row l"><span class="n">{{ l.name }}</span><span class="d"></span><span>{{ l.kroner|kr }}</span></div>{% endfor %}
+    </details>
+    {% endfor %}
+    <hr><div class="row tot"><span>TOTALT</span><span>{{ tax_kroner|kr }}</span></div>
+    <div class="c" style="margin:12px 0 0">Takk for bidraget!</div>
+  </div>
+</div>

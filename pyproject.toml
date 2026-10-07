@@ -1,5 +1,24 @@
 [project]
 name = "statsbudsjett"
 version = "0.1.0"
-requires-python = ">=3.12"
-dependencies = ["polars", "fastexcel", "pypdf"]
+description = "Statsbudsjettet 2027, forklart for folk flest"
+requires-python = ">=3.14"
+dependencies = ["fastapi", "uvicorn[standard]", "jinja2"]
+
+[dependency-groups]
+# Offline pipeline: download sources and build datasets/. Not needed to serve the site.
+pipeline = ["polars", "fastexcel", "pypdf"]
+dev = ["pytest", "httpx", "ruff", "ty"]
+
+[tool.uv]
+default-groups = ["pipeline", "dev"]
+
+[tool.ruff]
+line-length = 140
+target-version = "py314"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ty.environment]
+python = ".venv"

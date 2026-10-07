@@ -1,4 +1,4 @@
-# Static site: build it locally with `uv run python viz/build.py && uv run python viz/explorer.py`, then `fly deploy`.
+# Build datasets/ with `uv run python -m pipeline.datasets` and commit it, then `fly deploy`.
 app = "statsbudsjett"
 primary_region = "arn"
 
@@ -11,6 +11,13 @@ primary_region = "arn"
   auto_start_machines = true
   min_machines_running = 0
 
+  [[http_service.checks]]
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "10s"
+    method = "GET"
+    path = "/helse"
+
 [[vm]]
   size = "shared-cpu-1x"
-  memory = "256mb"
+  memory = "512mb"

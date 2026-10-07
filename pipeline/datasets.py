@@ -1,15 +1,17 @@
-"""Build the Statsbudsjettet 2027 explorer page for a general audience."""
+"""Build datasets/ for the web app from the downloaded sources. Run: uv run python -m pipeline.datasets"""
 
 import json
-import shutil
 from pathlib import Path
 
 import polars as pl
-from build import (
+
+from pipeline import verify
+from pipeline.flows import (
     FILES,
     GROUPS,
     INCOME,
     ROOT,
+    diff,
     expense_group,
     expense_leaf,
     flows,
@@ -18,8 +20,7 @@ from build import (
     load,
 )
 
-HERE = Path(__file__).parent
-SITE = ROOT / "site"
+OUT = ROOT / "datasets"
 GH = ROOT / "data/gront_hefte/kommunene-tabeller"
 NB3 = ROOT / "data/excel/kap_3_nb_2027.xlsx"
 COUNTIES = ROOT / "data/frie_inntekter/countycollection.json"
@@ -120,13 +121,11 @@ TAX_SOURCE = "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id317
 
 def meg() -> dict:
     """Verified persona facts and the tax rules the calculator needs."""
-    import verify_persona
-
-    if verify_persona.main() != 0:
+    if verify.main() != 0:
         raise SystemExit("persona facts failed verification, not building")
     for name, g in GROWTH.items():
         item = {"source_file": "data/text/prp202620270001ls0dddpdfs.txt", "amounts": [{"label_nb": name, "y2027": g["pct"]}], **g}
-        if errs := verify_persona.check_item(item, {}):
+        if errs := verify.check_item(item, {}):
             raise SystemExit(f"growth assumption {name}: {errs}")
     items = []
     for f in sorted(PERSONA.glob("*.json")):
@@ -164,20 +163,16 @@ def main() -> None:
         "kommuner": kom,
         "fund": fund_share(),
     }
-    (SITE / "data").mkdir(parents=True, exist_ok=True)
-    (SITE / "assets").mkdir(exist_ok=True)
-    (SITE / "data/statsbudsjett-2027.json").write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")))
-    (SITE / "data/meg-2027.json").write_text(json.dumps(meg(), ensure_ascii=False, separators=(",", ":")))
+    payload["diff"] = diff().to_dicts()
+    OUT.mkdir(exist_ok=True)
+    (OUT / "budget.json").write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")))
+    (OUT / "meg.json").write_text(json.dumps(meg(), ensure_ascii=False, separators=(",", ":")))
     # Downloads for anyone who wants the numbers themselves
     pl.DataFrame(payload["posts"]).rename(
         {"s": "side", "g": "gruppe", "l": "område", "k": "kapittel", "kn": "kapittelnavn", "p": "post", "pn": "postnavn", "v": "mrd_2027", "v26": "mrd_2026"}
-    ).write_csv(SITE / "data/poster-2027.csv")
-    pl.DataFrame(kom).write_csv(SITE / "data/kommuner-2027.csv")
-    shutil.copy(HERE / "vendor/d3.min.js", SITE / "assets/d3.min.js")
-    shutil.copy(HERE / "explorer.html", SITE / "index.html")
-    shutil.copy(HERE / "statsbudsjett.html", SITE / "flyt.html")
-    print(f"wrote {SITE}: {len(payload['posts'])} posts, {len(kom)} kommuner, population {payload['population']:,}")
-
+    ).write_csv(OUT / "poster-2027.csv")
+    pl.DataFrame(kom).write_csv(OUT / "kommuner-2027.csv")
+    print(f"wrote {OUT}: {len(payload['posts'])} posts, {len(kom)} kommuner, population {payload['population']:,}")
 
 if __name__ == "__main__":
     main()

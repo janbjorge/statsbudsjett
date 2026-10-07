@@ -1,0 +1,44 @@
+{# Tax effect and the facts for the chosen profile #}
+{% set t = m.tax %}
+<div class="card tax-card">
+  <div class="muted small">Inntektsskatt i 2027 for {{ "husstanden din" if m.profile.adults|length > 1 else "deg" }}</div>
+  {% if t.income == 0 %}
+  <div class="tax-big">Fyll inn inntekt for å se skatten</div>
+  {% elif t.change|abs < 50 %}
+  <div class="tax-big">Omtrent samme skatt som før</div>
+  {% else %}
+  <div class="tax-big {{ 'pos' if t.change < 0 else 'neg' }}">{{ t.change|abs|kr }} {{ "lavere" if t.change < 0 else "høyere" }} skatt</div>
+  {% endif %}
+  {% if t.income %}
+  <p style="margin:4px 0 0">Du betaler om lag <b>{{ t.tax_2027|kr }}</b> i skatt av {{ t.income|kr }} ({{ t.rate|nb1 }} %).
+    Endringen er regnet mot 2026-reglene justert for forventet lønnsvekst ({{ m.growth_wage|nb1 }} %) og pensjonsvekst ({{ m.growth_pension|num }} %), slik Finansdepartementet måler det.</p>
+  {% endif %}
+  <p class="note" style="margin:8px 0 0">Gjelder lønn og pensjon med standardfradrag. Ikke med: næringsinntekt, rentefradrag, formue, uføretrygd, særregler i Finnmark og Nord-Troms.
+    <a href="https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/">Kilde: Prop. 1 LS (2026–2027), tabell 1.5</a></p>
+</div>
+<div class="facts">
+  {% if not m.profile.personas %}<p class="muted" style="margin:12px 0 0">Velg minst én ting for å se endringer som treffer deg. Under ser du det som gjelder alle.</p>{% endif %}
+  <p class="muted small" style="margin:16px 0 0">{{ m.n_changed }} endringer og {{ m.n_unchanged }} ting som står fast. Alt er hentet fra regjeringens budsjettdokumenter.</p>
+  {% macro amt(a) -%}
+    {{ a.label }}:
+    {% if a.y2026 is not none and a.y2026 != a.y2027 %}{{ a.y2026|num }} → <b>{{ a.y2027|num }}</b> {{ a.unit }}
+    {%- else %}<b>{{ a.y2027|num }}</b> {{ a.unit }}{% if a.y2026 is not none %} (som i 2026){% endif %}{% endif %}
+  {%- endmacro %}
+  {% macro source(f) -%}<a href="{{ f.source_url }}" rel="noopener">Kilde: {{ f.source_title }}{% if f.page %}, side {{ f.page }}{% endif %} ↗</a>{%- endmacro %}
+  {% for s in m.sections %}
+    <h3 class="sec">{{ s.label }}</h3>
+    {% for f in s.changed %}
+    <article class="fact">
+      <div class="top"><h4>{{ f.title }}</h4><span class="badge {{ f.effect }}">{{ f.effect_label }}</span></div>
+      <p>{{ f.summary }}</p>
+      {% if f.amounts %}<div class="amts">{% for a in f.amounts %}<div>{{ amt(a) }}</div>{% endfor %}</div>{% endif %}
+      <div class="meta">{% if f.caveat %}{{ f.caveat }} · {% endif %}{{ source(f) }}</div>
+    </article>
+    {% endfor %}
+    {% if s.unchanged %}
+    <div class="same"><div class="muted small" style="border:0;padding-bottom:0">Står fast</div>
+      {% for f in s.unchanged %}<div>■ <b>{{ f.title }}</b>{% for a in f.amounts %} · {{ amt(a) }}{% endfor %} <a href="{{ f.source_url }}" rel="noopener">kilde ↗</a></div>{% endfor %}
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>

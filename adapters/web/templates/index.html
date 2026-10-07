@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% block main %}
+  <section id="oversikt">
+    <p class="muted" style="margin:0">Regjeringens forslag til statsbudsjett, lagt fram 7. oktober 2026</p>
+    <h1>Hva bruker staten pengene på i 2027?</h1>
+    <div class="hero-num">{{ o.total|nb1 }} <small>milliarder kroner</small></div>
+    <p class="lede">Det er <b>{{ o.per_person|kr }}</b> for hver innbygger i Norge, eller <b>{{ o.per_day|kr }}</b> per person hver dag.</p>
+    <div class="grid tiles">
+      <div class="card tile"><div class="k">Mer enn i 2026</div><div class="v">{{ o.change|signed1 }} mrd.</div><div class="s">{{ o.change_pct|pct }} før prisvekst</div></div>
+      <div class="card tile"><div class="k">Største utgift</div><div class="v">{{ o.top_group }}</div><div class="s">{{ o.top_amount|amount }}, {{ (o.top_amount / o.total * 100)|nb }} % av alt</div></div>
+      <div class="card tile"><div class="k">Fra oljefondet</div><div class="v">{{ o.fund|nb1 }} mrd.</div><div class="s">dekker {{ o.fund_share|num }} % av utgiftene</div></div>
+    </div>
+  </section>
+
+  <section id="meg">
+    <h2>Hva betyr budsjettet for deg?</h2>
+    <p class="lede">Velg det som passer for deg og husstanden din. Du får en oversikt over endringene som treffer deg, med lenke til kilden for hver av dem.</p>
+    {% include "_meg.html" %}
+  </section>
+
+  <section id="skatt">
+    <h2>Hvor går skattepengene dine?</h2>
+    <p class="lede">Skriv inn hvor mye du betaler i skatt i året, så ser du hvordan beløpet fordeles, i samme forhold som staten bruker pengene.</p>
+    <form action="/#skatt" method="get" hx-get="/kvittering" hx-target="#receipt-out" hx-swap="outerHTML" hx-trigger="input delay:300ms, submit">
+      <label class="field" for="tax">Skatten din i året (kroner)</label>
+      <input id="tax" name="skatt" inputmode="numeric" autocomplete="off" value="{{ tax_kroner|nb }}">
+      <div class="chips">
+        {% for v in [100, 50000, 150000, 300000] %}
+        <button class="chip" type="button" data-set-tax="{{ v }}" aria-pressed="{{ 'true' if v == tax_kroner else 'false' }}">{{ v|kr }}</button>
+        {% endfor %}
+      </div>
+    </form>
+    {% include "_receipt.html" %}
+  </section>
+
+  <section id="inntekter">
+    <h2>Hvor kommer pengene fra?</h2>
+    <p class="lede">Det meste kommer fra skatter og avgifter. Resten dekkes med penger fra oljefondet.</p>
+    {% set explain = {
+      "Skatt på inntekt og formue": "Skatt du betaler av lønn, pensjon og formue, og skatt fra bedrifter",
+      "Trygde- og arbeidsgiveravgift": "Trekkes av lønna di og betales av arbeidsgiveren",
+      "Merverdiavgift": "Moms på det du kjøper, vanligvis 25 %",
+      "Andre skatter og avgifter": "Avgifter på bil, drivstoff, alkohol, tobakk, strøm m.m.",
+      "Renter, utbytte og andre inntekter": "Utbytte fra statlige selskaper, renter og gebyrer",
+      "Overføring fra oljefondet": "Det som tas fra oljefondet for å få budsjettet i balanse",
+    } %}
+    {% set top = income|map(attribute="amount")|max %}
+    <div class="card"><div class="bars">
+      {% for r in income %}
+      <div class="bar-row"><div class="lab"><b>{{ r.name }}</b><div class="muted small">{{ explain[r.name] }}<br>{{ r.per_person|kr }} per innbygger</div></div>
+        <div class="bar-track"><div class="bar-fill" style="width:{{ r.amount / top * 60 }}%;background:var(--g-0)"></div>
+          <div class="bar-val" style="left:calc({{ r.amount / top * 60 }}% + 8px)">{{ r.amount|amount }}</div></div></div>
+      {% endfor %}
+    </div></div>
+    <p class="note" style="margin-top:12px">Oljeinntektene brukes ikke direkte. Alt staten tjener på olje og gass går inn i oljefondet
+      (Statens pensjonsfond utland). Hvert år tas det ut et beløp fra fondet for å dekke det som mangler i budsjettet.
+      <a href="/flyt">Se hele pengestrømmen →</a></p>
+  </section>
+
+  <section id="utforsk">
+    <h2>Utforsk hele budsjettet</h2>
+    <p class="lede">Klikk deg ned fra de store områdene til hver enkelt post, eller søk etter noe du lurer på.</p>
+    <input type="search" name="q" placeholder="Søk, f.eks. politi, barnehage, NRK, vei" aria-label="Søk i budsjettet"
+           hx-get="/sok" hx-target="#results" hx-swap="outerHTML" hx-trigger="input changed delay:250ms, search">
+    <div id="results" class="results"></div>
+    {% include "_tree.html" %}
+  </section>
+
+  <section id="endringer">
+    <h2>Hva er nytt fra 2026?</h2>
+    <p class="lede">Utgiftene øker med <b>{{ o.change|nb1 }} milliarder kroner</b> ({{ o.change_pct|pct }}) før prisvekst. Her er kapitlene som endrer seg mest.</p>
+    {% set top = (changes.up + changes.down)|map(attribute="change")|map("abs")|max %}
+    <div class="two">
+      {% for title, rows, var in [("Største økninger", changes.up, "--up"), ("Største kutt", changes.down, "--down")] %}
+      <div class="card"><h3>{{ title }}</h3><p class="muted small" style="margin:0 0 12px">Kapitler, milliarder kroner</p><div class="bars">
+        {% for c in rows %}
+        <div class="bar-row"><div class="lab"><b>{{ c.name }}</b><div class="muted small">{{ c.group }} · {{ c.v2026|nb1 }} → {{ c.v2027|nb1 }} mrd.</div></div>
+          <div class="bar-track"><div class="bar-fill" style="width:{{ (c.change|abs) / top * 60 }}%;background:var({{ var }})"></div>
+            <div class="bar-val" style="left:calc({{ (c.change|abs) / top * 60 }}% + 8px)">{{ c.change|signed1 }}{% if c.pct is not none %} ({{ c.pct|pct }}){% endif %}</div></div></div>
+        {% endfor %}
+      </div></div>
+      {% endfor %}
+    </div>
+    <p class="note" style="margin-top:12px">{{ changes.unmatched }} kapitler finnes bare i ett av årene, ofte fordi de har fått nytt nummer eller er slått sammen, og er ikke tatt med i listene.</p>
+  </section>
+
+  <section id="kommune">
+    <h2>Kommunen din</h2>
+    <p class="lede">Kommunene får frie inntekter: skatt fra innbyggerne og et tilskudd fra staten. Kommunen bestemmer selv hva pengene brukes til, som skole, sykehjem og veier.</p>
+    <form action="/#kommune" method="get" hx-get="/kommune" hx-target="#kommune-out" hx-swap="outerHTML" hx-trigger="change">
+      <label class="field" for="kom">Velg kommune</label>
+      <input type="search" id="kom" name="k" list="kom-list" autocomplete="off" value="{{ kv.kommune.label }}" placeholder="Skriv navnet på kommunen">
+      <datalist id="kom-list">{% for k in kommuner %}<option value="{{ k.label }}">{% endfor %}</datalist>
+    </form>
+    {% include "_kommune.html" %}
+  </section>
+
+  <section id="olje">
+    <h2>Oljepengene</h2>
+    {% set last = fund[-1] %}
+    <p class="lede">I {{ last.year }} dekker penger fra oljefondet <b>{{ last.share|nb1 }} %</b> av utgiftene i statsbudsjettet. I {{ fund[0].year }} var andelen {{ fund[0].share|nb1 }} %.</p>
+    <div class="card"><div class="fund" data-fund="{{ fund|tojson_fund }}"></div></div>
+    <p class="note" style="margin-top:12px">Kilde: Nasjonalbudsjettet 2027, figur 3.4. Andelen er Finansdepartementets beregning, og 2027 er regjeringens forslag.</p>
+  </section>
+
+  <section id="feil">
+    <h2>Fant du en feil?</h2>
+    <p class="lede">Denne siden er åpen kildekode. Alt som lager den, både koden, tallene og hvordan vi har regnet, ligger åpent på nettet.
+      Hvem som helst kan se hvordan den virker og si fra hvis noe er galt.</p>
+    <div class="grid tiles">
+      <div class="card"><h3>Hva betyr åpen kildekode?</h3>
+        <p class="muted">Tenk på det som en oppskrift som ligger fremme for alle. Du kan sjekke hver ingrediens: hvor et tall kommer fra,
+          hvilken side i budsjettdokumentene det står på, og hvordan skatten er regnet ut. Ser du en feil, kan du peke på nøyaktig hvor den er.</p></div>
+      <div class="card"><h3>Slik sier du fra</h3>
+        <ol class="steps">
+          <li>Gå til <a href="https://github.com/janbjorge/statsbudsjett/issues">listen over saker på GitHub</a>. GitHub er nettstedet der koden ligger.</li>
+          <li>Logg inn, eller lag en gratis konto.</li>
+          <li>Trykk <b>New issue</b> og skriv kort hva som er feil, hvor på siden du så det, og gjerne en lenke til kilden som viser riktig tall.</li>
+          <li>Saken er offentlig. Du og andre kan følge med på svaret der.</li>
+        </ol></div>
+      <div class="card"><h3>Dette er nyttig å si fra om</h3>
+        <ul class="steps">
+          <li>Et tall som ikke stemmer med kilden det lenker til</li>
+          <li>En endring som mangler for din situasjon</li>
+          <li>Noe som er uklart eller vanskelig å forstå</li>
+          <li>Noe som ikke virker, for eksempel på mobilen</li>
+        </ul></div>
+    </div>
+    <div class="chips" style="margin-top:16px">
+      <a class="chip" href="https://github.com/janbjorge/statsbudsjett/issues/new">Meld en feil på GitHub</a>
+      <a class="chip" href="https://github.com/janbjorge/statsbudsjett">Se koden og tallene</a>
+    </div>
+  </section>
+
+  <section id="ordliste">
+    <h2>Ordliste</h2>
+    <details class="gl"><summary>Statsbudsjettet</summary><p>Statens plan for inntekter og utgifter neste år. Regjeringen legger fram et forslag i oktober, og Stortinget vedtar budsjettet før jul.</p></details>
+    <details class="gl"><summary>Budsjettet utenom olje</summary><p>Tallene på denne siden holder olje- og gassinntektene utenfor, slik Finansdepartementet gjør. De går rett inn i oljefondet. Lån staten gir, for eksempel studielån, er også holdt utenfor.</p></details>
+    <details class="gl"><summary>Oljefondet (Statens pensjonsfond utland)</summary><p>Fondet der statens inntekter fra olje og gass spares. Hvert år overføres penger fra fondet til statsbudsjettet. Handlingsregelen sier at bruken over tid skal følge den forventede avkastningen, anslått til 3 prosent av fondet.</p></details>
+    <details class="gl"><summary>Folketrygden</summary><p>Ordningen som betaler ut pensjon, sykepenger, uføretrygd, foreldrepenger, dagpenger og mer. Den er den største utgiften i budsjettet.</p></details>
+    <details class="gl"><summary>Rammetilskudd</summary><p>Penger staten gir til kommuner og fylkeskommuner uten bindinger. Sammen med skatteinntektene utgjør det kommunenes frie inntekter.</p></details>
+    <details class="gl"><summary>Kapittel og post</summary><p>Budsjettet er delt inn i kapitler (ofte én etat eller ordning, for eksempel «Politiet») og poster (hva pengene brukes til, for eksempel «Driftsutgifter»).</p></details>
+  </section>
+{% endblock %}

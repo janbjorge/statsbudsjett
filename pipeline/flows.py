@@ -6,7 +6,6 @@ transactions (post 90-99) are removed; the transfer from the fund then closes
 the gap, so income equals spending exactly.
 """
 
-import json
 from pathlib import Path
 
 import polars as pl
@@ -16,8 +15,6 @@ FILES = {
     2026: ROOT / "data/excel/2026/2026_gulbok_datagrunnlag.xlsx",
     2027: ROOT / "data/excel/2027_gulbok_datagrunnlag.xlsx",
 }
-OUT = Path(__file__).parent / "budget.json"
-HTML = Path(__file__).parent / "statsbudsjett.html"
 
 PETROLEUM = [2440, 2800, 5440, 5507, 5508, 5509, 5685]  # see METHOD.md §1
 
@@ -134,20 +131,21 @@ def flows(year: int) -> pl.DataFrame:
     )
     cols = ["level", "source", "target", "beløp"]
     out = pl.concat([income.select(cols), groups.select(cols), leaves.select(cols)])
-    balance = income["beløp"].sum() - groups["beløp"].sum()
+    balance = float(income["beløp"].sum()) - float(groups["beløp"].sum())
     assert abs(balance) < 1e-6, f"{year}: income and spending differ by {balance} bn"
     # Round to whole kroner: parallel group_by sums differ in the last float bits between runs
     return out.with_columns(pl.col("beløp").round(9), year=pl.lit(year)).sort("level", "source", "target")
 
 
-def main() -> None:
+def diff() -> pl.DataFrame:
+    """Change per income source, group and sub-group from 2026 to 2027."""
     both = pl.concat([flows(y) for y in FILES])
     # Diff on stable keys: income sources, groups and leaves (total node renamed per year)
     keyed = both.with_columns(
         key=pl.when(pl.col("level") == 0).then("source").otherwise("target"),
         parent=pl.when(pl.col("level") == 2).then("source").otherwise(pl.lit(None)),
     )
-    diff = (
+    return (
         keyed.pivot(on="year", index=["level", "key", "parent"], values="beløp")
         .rename({"2026": "y2026", "2027": "y2027"})
         .with_columns(pl.col("y2026", "y2027").fill_null(0.0))
@@ -155,26 +153,3 @@ def main() -> None:
         .with_columns(pct=pl.when(pl.col("y2026") > 0).then(pl.col("change") / pl.col("y2026") * 100))
         .sort("level", "change", descending=[False, True])
     )
-    payload = {
-        "groups": GROUPS,
-        "income": INCOME,
-        "flows": {str(y): flows(y).drop("year").to_dicts() for y in FILES},
-        "diff": diff.to_dicts(),
-    }
-    OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=1))
-
-    here = Path(__file__).parent
-    html = (
-        (here / "template.html").read_text()
-        .replace("/*D3*/", (here / "vendor/d3.min.js").read_text())
-        .replace("/*D3_SANKEY*/", (here / "vendor/d3-sankey.min.js").read_text())
-        .replace("/*DATA*/", json.dumps(payload, ensure_ascii=False))
-    )
-    HTML.write_text(html)
-    print(f"wrote {HTML}")
-    with pl.Config(tbl_rows=60, fmt_str_lengths=40, float_precision=1):
-        print(diff)
-
-
-if __name__ == "__main__":
-    main()

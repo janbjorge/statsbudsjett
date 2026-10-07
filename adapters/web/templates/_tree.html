@@ -1,0 +1,35 @@
+{# One level of the budget: breadcrumbs, a treemap island and the same level as a table #}
+<div id="tree">
+  <div class="chips" style="margin:0 0 8px">
+    {% for s, label in [(Side.UTGIFT, "Utgifter"), (Side.INNTEKT, "Inntekter")] %}
+    <a class="chip" aria-pressed="{{ 'true' if t.side == s else 'false' }}" href="/?side={{ s }}#utforsk" hx-get="/utforsk?side={{ s }}" hx-target="#tree" hx-swap="outerHTML">{{ label }}</a>
+    {% endfor %}
+  </div>
+  <div class="crumbs">
+    {% for path, name in t.crumbs %}
+      {% if not loop.last %}<a href="/?side={{ t.side }}&sti={{ path|urlencode }}#utforsk" hx-get="/utforsk?side={{ t.side }}&sti={{ path|urlencode }}" hx-target="#tree" hx-swap="outerHTML">{{ name }}</a><span class="sep">›</span>
+      {% else %}<b>{{ name }}</b>{% endif %}
+    {% endfor %}
+    <span class="muted" style="margin-left:8px">{{ t.node.v2027|amount }}</span>
+  </div>
+  {% set base = t.crumbs[-1][0] %}
+  <div class="treemap" role="img" aria-label="Kart over {{ t.node.name }}"
+       data-nodes="{{ t.children|tojson_nodes(t.side, base) }}"></div>
+  <table class="tbl">
+    <thead><tr><th>Navn</th><th>2027</th><th class="hide-s">Per innbygger</th><th>Endring fra 2026</th></tr></thead>
+    <tbody>
+    {% for n in t.children %}
+      <tr>
+        <td><i class="sw" style="background:var(--g-{{ group_slot(n.group) }});margin-right:8px"></i>
+          {% if n.has_children %}<a href="/?side={{ t.side }}&sti={{ (base ~ '/' ~ n.key)|trim('/')|urlencode }}#utforsk" hx-get="/utforsk?side={{ t.side }}&sti={{ (base ~ '/' ~ n.key)|trim('/')|urlencode }}" hx-target="#tree" hx-swap="outerHTML">{{ n.name }}</a>{% else %}{{ n.name }}{% endif %}
+          {% if n.kap %}<span class="muted small">kap. {{ n.kap }}{% if n.post %} post {{ n.post }}{% endif %}</span>{% endif %}
+        </td>
+        <td>{{ n.v2027|amount }}</td>
+        <td class="hide-s">{{ per_person(n.v2027)|kr }}</td>
+        <td>{% if n.change is none %}<span class="muted">ny</span>{% elif n.change|abs < 0.0005 %}<span class="muted">uendret</span>
+          {% else %}<span class="{{ 'pos' if n.change > 0 else 'neg' }}">{{ n.change|signed_amount }}{% if n.v2026 and n.v2026 > 0 %} ({{ (n.change / n.v2026 * 100)|pct }}){% endif %}</span>{% endif %}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
