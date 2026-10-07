@@ -1,4 +1,4 @@
-# Build datasets/ with `uv run python -m pipeline.datasets` and commit it, then `fly deploy`.
+# Build datasets/ with `uv run python -m pipeline.datasets` and commit it, then push to main: .github/workflows/deploy.yml deploys it.
 app = "statsbudsjett"
 primary_region = "arn"
 

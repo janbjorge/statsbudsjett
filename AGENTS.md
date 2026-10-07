@@ -29,4 +29,4 @@
 
 - Commit to `main`. No force-push.
 - `datasets/` is committed; rebuild it (`uv run python -m pipeline.datasets`) when facts or pipeline code change.
-- Deploying to Fly makes the page public. Ask jb first, every time.
+- Every push to `main` is checked and deployed to Fly by .github/workflows/deploy.yml, which makes it public. Ask jb before every push.

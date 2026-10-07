@@ -6,7 +6,7 @@ Every request from jb, with status. Newest first. An item is ticked only when it
 
 - [ ] **Business income in the tax calculator.** The "Bonde" preset treats farm income as wages, so its tax figure is wrong for a farmer (trygdeavgift 10,6 % on business income vs 7,4 % on wages). The rates are already in data/persona/tax.json. Found 2026-10-07.
 - [ ] **Short domain** (jb 2026-10-07: "the domain is to long, can we make an alias somehow?"). Parked. Plan: buy a short .no domain and point it at Fly (`fly certs add` plus A/AAAA records); the fly.dev address keeps working. It should say statsbudsjett without sounding official. Candidates, availability not checked: statsbud.no, budsjettlupa.no, budsjettet.no, statsbudsjett.info, sb27.no.
-- [ ] **Deploy to Fly.io** (jb 2026-10-07: "Im going to host it in fly.io"). Dockerfile (uvicorn) and fly.toml are ready and tested locally in a container. Waiting for jb's go-ahead and an app name, because deploying makes the page public.
+- [ ] **Deploy to Fly.io** (jb 2026-10-07: "Im going to host it in fly.io"). Dockerfile (uvicorn) and fly.toml are ready and tested locally in a container. Deploy on push is in .github/workflows/deploy.yml (jb 2026-10-07). Left for jb: `fly apps create statsbudsjett`, the FLY_API_TOKEN repository secret and the LOGFIRE_TOKEN Fly secret.
 - [ ] **Read through the user-facing texts** before publishing: the cards for each preset, the glossary, and the footer disclaimer ("ikke en offisiell side").
 
 ## Ideas not yet requested
