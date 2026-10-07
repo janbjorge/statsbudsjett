@@ -74,7 +74,10 @@ def kroner(text: str) -> int:
     return KRONER.validate_python(text)
 
 
-def profile_from(meg: str, barn: str, lonn: str, pensjon: str) -> Profile:
+type Values = str | list[str] | None
+
+
+def profile_from(meg: Values, barn: Values, lonn: Values, pensjon: Values) -> Profile:
     return ProfileQuery.model_validate({"meg": meg, "barn": barn, "lonn": lonn, "pensjon": pensjon}).profile()
 
 

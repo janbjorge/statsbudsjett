@@ -14,27 +14,23 @@
 <div class="meg-grid">
   <form class="meg-form card" action="/#meg" method="get"
         hx-get="/meg?del=resultat" hx-target="#meg-result" hx-trigger="change, input delay:400ms">
-    <input type="hidden" name="meg" value="{{ p.personas|join(',') }}" id="meg-personas-value">
     <div><h3>Hvem er du?</h3>
       <div class="chips wrap">
         {% for key, label in PERSONAS.items() %}
-        <label class="chip small check"><input type="checkbox" value="{{ key }}" data-persona {{ "checked" if key in p.personas }}> {{ label }}</label>
+        <label class="chip small check"><input type="checkbox" name="meg" value="{{ key }}" data-persona {{ "checked" if key in p.personas }}> {{ label }}</label>
         {% endfor %}
       </div>
     </div>
     <div><h3>Barn i husstanden</h3>
-      <input type="hidden" name="barn" value="{% for b in KID_BANDS %}{{ p.kids.get(b, 0) }}{{ ',' if not loop.last }}{% endfor %}" id="meg-kids-value">
       <div class="kids">
         {% for band, label in KID_BANDS.items() %}
         <label for="kid-{{ band }}">{{ label }}</label>
-        <input class="kid" id="kid-{{ band }}" type="number" min="0" max="10" inputmode="numeric" value="{{ p.kids.get(band, 0) }}" data-kid>
+        <input class="kid" id="kid-{{ band }}" name="barn" type="number" min="0" max="10" inputmode="numeric" value="{{ p.kids.get(band, 0) }}" data-kid>
         {% endfor %}
       </div>
     </div>
     <div>
       <h3>Inntekt i året, før skatt</h3>
-      <input type="hidden" name="lonn" id="meg-lonn-value">
-      <input type="hidden" name="pensjon" id="meg-pensjon-value">
       <details class="help">
         <summary><span aria-hidden="true">?</span> Hva skal jeg skrive her?</summary>
         <p><b>Lønn:</b> det du tjener i året før skatt, med feriepenger og overtid. Inntekt fra egen gård eller bedrift
@@ -48,8 +44,8 @@
         {% set a = p.adults[i] if i < p.adults|length else none %}
         <div class="adult">
           <div class="who">{{ "Du" if i == 0 else "Voksen nr. 2 (valgfritt)" }}</div>
-          <label>Lønn<input inputmode="numeric" data-money="lonn" value="{{ a.wage|nb if a else '' }}" placeholder="0"></label>
-          <label>Pensjon<input inputmode="numeric" data-money="pensjon" value="{{ a.pension|nb if a else '' }}" placeholder="0"></label>
+          <label>Lønn<input inputmode="numeric" name="lonn" data-money="lonn" value="{{ a.wage|nb if a else '' }}" placeholder="0"></label>
+          <label>Pensjon<input inputmode="numeric" name="pensjon" data-money="pensjon" value="{{ a.pension|nb if a else '' }}" placeholder="0"></label>
         </div>
         {% endfor %}
       </div>

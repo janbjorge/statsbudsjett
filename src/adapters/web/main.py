@@ -94,6 +94,8 @@ def _not_htmx(request: Request) -> bool:
 
 
 type Q = Annotated[str, Query()]
+# Comma-separated or repeated: ?meg=a,b and ?meg=a&meg=b mean the same, so the plain form works without JavaScript
+type QL = Annotated[list[str] | None, Query()]
 
 
 def _side(side: str) -> Side:
@@ -103,10 +105,10 @@ def _side(side: str) -> Side:
 @app.get("/", response_class=HTMLResponse)
 def index(
     request: Request,
-    meg: Q = "",
-    barn: Q = "",
-    lonn: Q = "",
-    pensjon: Q = "",
+    meg: QL = None,
+    barn: QL = None,
+    lonn: QL = None,
+    pensjon: QL = None,
     skatt: Q = "150000",
     side: Q = "utgift",
     sti: Q = "",
@@ -128,7 +130,7 @@ def index(
 
 
 @app.get("/meg", response_class=HTMLResponse)
-def meg_fragment(request: Request, meg: Q = "", barn: Q = "", lonn: Q = "", pensjon: Q = "", del_: Annotated[str, Query(alias="del")] = "") -> Response:
+def meg_fragment(request: Request, meg: QL = None, barn: QL = None, lonn: QL = None, pensjon: QL = None, del_: Annotated[str, Query(alias="del")] = "") -> Response:
     """The "For deg" section. del=resultat returns only the result, so typing in the form keeps focus."""
     profile = profile_from(meg, barn, lonn, pensjon)
     share = f"/?{profile_query(profile)}#meg"
