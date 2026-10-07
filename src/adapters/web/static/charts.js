@@ -20,6 +20,8 @@ function showTip(ev, html) {
   t.style.left = x + "px"; t.style.top = y + "px";
 }
 const hideTip = () => { tip().style.opacity = 0; };
+// A tap shows the tip and nothing moves it away on a phone; it is fixed, so it would float over the page while scrolling
+addEventListener("scroll", hideTip, { passive: true });
 document.addEventListener("mousemove", ev => {
   const el = ev.target.closest?.("[data-tip]");
   if (el) showTip(ev, el.dataset.tip); else if (!ev.target.closest?.(".chart-mark")) hideTip();
@@ -107,6 +109,8 @@ function drawStrip(el) {
   svg.append("g").selectAll("circle").data(all.filter(k => k.nr !== selected)).join("circle")
     .attr("class", "chart-mark").attr("cx", k => x(k.pp)).attr("cy", y).attr("r", 4)
     .attr("fill", cssVar("--other")).attr("fill-opacity", .55).style("cursor", "pointer")
+    // An invisible stroke widens the hit area from 8 to 20 px, so a dot can be hit with a finger
+    .attr("stroke", "transparent").attr("stroke-width", 12)
     .on("mousemove", (ev, k) => showTip(ev, `<b>${esc(k.n)}</b> (${esc(k.f ?? "")})<br>${kr(k.pp)} per innbygger<br>${nb.format(k.pop)} innbyggere`))
     .on("mouseleave", hideTip).on("click", (ev, k) => { hideTip(); pick(k); });
   const s = all.find(k => k.nr === selected);
