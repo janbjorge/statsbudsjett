@@ -1,10 +1,10 @@
 {# Tax receipt: the 100-kroner bar and the receipt for the entered amount #}
 <div id="receipt-out">
   <div class="stack" role="img" aria-label="Fordeling av 100 kroner">
-    {% for g in receipt %}<div style="flex:{{ g.share }};background:var(--g-{{ loop.index }})" data-tip="<b>{{ g.name }}</b><br>{{ g.share|nb1 }} kr av hver 100-lapp"></div>{% endfor %}
+    {% for g in receipt %}<div style="flex:{{ g.share }};background:var(--g-{{ group_slot(g.name) }})" data-tip="<b>{{ g.name }}</b><br>{{ g.share|nb1 }} kr av hver 100-lapp"></div>{% endfor %}
   </div>
   <div class="legend">
-    {% for g in receipt %}<span><i class="sw" style="background:var(--g-{{ loop.index }})"></i>{{ g.name }} {{ g.share|nb1 }} kr</span>{% endfor %}
+    {% for g in receipt %}<span><i class="sw" style="background:var(--g-{{ group_slot(g.name) }})"></i>{{ g.name }} {{ g.share|nb1 }} kr</span>{% endfor %}
   </div>
   <p class="note">Forenklet: skatten din havner i en felles pott sammen med andre inntekter og penger fra oljefondet.
     Vi fordeler beløpet ditt etter hvor stor del av utgiftene hvert formål utgjør.</p>
