@@ -1,6 +1,7 @@
 """FastAPI + Jinja + HTMX. Every fragment is also reachable as a full page via the same query string."""
 
 import json
+import os
 from collections.abc import Awaitable, Callable
 from pathlib import Path
 from typing import Annotated
@@ -20,6 +21,9 @@ from core.budget import FundYear, Kommune, Node, Side
 from core.facts import KID_BANDS, PERSONAS
 
 HERE = Path(__file__).parent
+# The one public address (budsjettlupa.no). Set on Fly once the certificate and DNS are live; every other
+# host name, such as statsbudsjett.fly.dev or www., then redirects here. Unset locally and in tests.
+CANONICAL_HOST = os.environ.get("CANONICAL_HOST", "")
 
 data = JsonDatasets()
 queries = Queries(data)
@@ -29,6 +33,9 @@ app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 @app.middleware("http")
 async def headers(request: Request, call_next: Callable[[Request], Awaitable[Response]]) -> Response:
+    if CANONICAL_HOST and request.url.hostname != CANONICAL_HOST and request.url.path != "/helse":
+        # /helse stays, Fly's health check reaches the machine under another host name
+        return RedirectResponse(str(request.url.replace(scheme="https", netloc=CANONICAL_HOST)), status_code=301)
     response = await call_next(request)
     response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
@@ -54,6 +61,7 @@ def template_context(request: Request) -> dict[str, object]:
     return {
         "PERSONAS": PERSONAS, "KID_BANDS": KID_BANDS, "Side": Side,
         "group_slot": group_slot,
+        "canonical": f"https://{CANONICAL_HOST}{request.url.path}" if CANONICAL_HOST else "",
     }
 
 

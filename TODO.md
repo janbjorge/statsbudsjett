@@ -5,7 +5,7 @@ Every request from jb, with status. Newest first. An item is ticked only when it
 ## Open
 
 - [ ] **Business income in the tax calculator.** The "Bonde" preset treats farm income as wages, so its tax figure is wrong for a farmer (trygdeavgift 10,6 % on business income vs 7,4 % on wages). The rates are already in data/persona/tax.json. Found 2026-10-07.
-- [ ] **Short domain** (jb 2026-10-07: "the domain is to long, can we make an alias somehow?"). Parked. Plan: buy a short .no domain and point it at Fly (`fly certs add` plus A/AAAA records); the fly.dev address keeps working. It should say statsbudsjett without sounding official. Candidates, availability not checked: statsbud.no, budsjettlupa.no, budsjettet.no, statsbudsjett.info, sb27.no.
+- [ ] **Short domain** (jb 2026-10-07: "the domain is to long, can we make an alias somehow?"; 2026-10-07: "We are going to use the domain; budsjettlupa.no from now"). The code is host-neutral and ready: `CANONICAL_HOST` redirects every other host name to the one address and sets `<link rel="canonical">` (src/adapters/web/main.py). Left to do on Fly, in this order: `fly certs add budsjettlupa.no` and `fly certs add www.budsjettlupa.no`, DNS A/AAAA records for the apex and a CNAME for www to the values Fly shows, wait for the certificates, then `fly secrets set CANONICAL_HOST=budsjettlupa.no`. Setting the secret before the certificate is live would redirect visitors to a dead host.
 - [ ] **Read through the user-facing texts** before publishing: the cards for each preset, the glossary, and the footer disclaimer ("ikke en offisiell side").
 
 ## Ideas not yet requested

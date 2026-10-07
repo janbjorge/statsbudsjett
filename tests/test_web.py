@@ -61,3 +61,20 @@ def test_everyday_page_adds_up() -> None:
 def test_family_is_addressed_as_dere() -> None:
     html = client.get(f"/meg?del=resultat&{FAMILY}", headers=HX).text
     assert "Dere betaler mer" in html and "Du betaler mer" not in html
+
+
+def test_other_host_names_redirect_to_the_canonical_one(monkeypatch) -> None:
+    from adapters.web import main
+
+    monkeypatch.setattr(main, "CANONICAL_HOST", "budsjettlupa.no")
+    r = client.get(f"/?{FAMILY}", headers={"Host": "statsbudsjett.fly.dev"}, follow_redirects=False)
+    assert r.status_code == 301
+    assert r.headers["location"] == f"https://budsjettlupa.no/?{FAMILY}"
+    assert client.get("/helse", headers={"Host": "statsbudsjett.fly.dev"}).status_code == 200
+    html = client.get("/flyt", headers={"Host": "budsjettlupa.no"}).text
+    assert '<link rel="canonical" href="https://budsjettlupa.no/flyt">' in html
+
+
+def test_without_a_canonical_host_every_host_name_is_served() -> None:
+    assert client.get("/", headers={"Host": "statsbudsjett.fly.dev"}).status_code == 200
+    assert 'rel="canonical"' not in client.get("/").text
