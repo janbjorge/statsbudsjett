@@ -236,8 +236,20 @@ def kommune_fragment(request: Request, k: Q = "") -> Response:
     return templates.TemplateResponse(request, "_kommune.html", {"kv": queries.kommune(k)})
 
 
+@app.get("/flyt/del", response_class=HTMLResponse)
+def flow_detail_fragment(request: Request, vis: Q = "") -> Response:
+    """What one Sankey node holds, by chapter and post. The page link keeps it shareable."""
+    fd = queries.flow_detail(vis)
+    share = f"/flyt?{urlencode({'vis': vis})}#del" if fd else "/flyt"
+    if _not_htmx(request):
+        return RedirectResponse(share)
+    response = templates.TemplateResponse(request, "_flow_detail.html", {"fd": fd})
+    response.headers["HX-Replace-Url"] = share
+    return response
+
+
 @app.get("/flyt", response_class=HTMLResponse)
-def flows_page(request: Request) -> HTMLResponse:
+def flows_page(request: Request, vis: Q = "") -> HTMLResponse:
     d = data.raw("budget.json")
     payload = {"groups": d["groups"], "income": d["income"], "flows": d["flows"], "diff": d["diff"]}
     # Spending as the Sankey draws it: the income flows into the total, so the tiles and the chart agree
@@ -247,6 +259,7 @@ def flows_page(request: Request) -> HTMLResponse:
         "spent": spent,
         "fund": next(r for r in d["diff"] if r["level"] == 0 and r["key"] == "Overføring fra oljefondet"),
         "top": max((r for r in d["diff"] if r["level"] == 1), key=lambda r: r["change"]),
+        "fd": queries.flow_detail(vis) if vis else None,
     })
 
 
@@ -274,7 +287,8 @@ def robots_txt(request: Request) -> str:
     GPTBot walked about 1 200 tree paths (/?sti=) in three hours. The same data is one API call away.
     The rules name page paths only, so /api/utforsk?sti= stays open."""
     disallow = [f"/?*{key}=" for key in ("sti", "skatt", "lonn", "pensjon", "naering")]
-    disallow += ["/utforsk", "/kvittering", "/meg", "/sok", "/kommune"]  # HTMX fragments, or redirects to /?…
+    disallow += ["/flyt?*vis="]
+    disallow += ["/utforsk", "/kvittering", "/meg", "/sok", "/kommune", "/flyt/del"]  # HTMX fragments, or redirects to /?…
     return (
         f"# For AI agents: read {request.base_url}llms.txt, then use the JSON API\n"
         f"# described in {request.base_url}api/openapi.json instead of crawling the pages.\n"

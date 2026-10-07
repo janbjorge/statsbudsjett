@@ -56,6 +56,13 @@ function showInfo(d, total) {
   info.classList.add("on");
 }
 
+// Below the chart: the chapters and posts of what was clicked. A flow opens its income source or its target.
+function showDetail(d) {
+  const n = !d.source ? d : d.level === 0 ? d.source : d.target;
+  if (n.name.startsWith("Statsbudsjettet")) return;
+  htmx.ajax("GET", `/flyt/del?vis=${encodeURIComponent(n.name)}`, { target: "#flow-detail", swap: "outerHTML" });
+}
+
 // ---------- Sankey ----------
 function drawSankey() {
   const el = document.getElementById("sankey");
@@ -127,7 +134,7 @@ function drawSankey() {
   for (const sel of [links, hits]) {
     sel.on("pointerenter", (ev, d) => { if (ev.pointerType === "mouse") highlight(d); })
       .on("pointerleave", () => highlight(pinned))
-      .on("click", (ev, d) => { ev.stopPropagation(); pinned = pinned === d ? null : d; highlight(pinned); });
+      .on("click", (ev, d) => { ev.stopPropagation(); pinned = pinned === d ? null : d; highlight(pinned); if (pinned) showDetail(d); });
   }
   info.onclick = ev => { if (ev.target.closest("[data-unpin]")) { pinned = null; highlight(null); } };
 

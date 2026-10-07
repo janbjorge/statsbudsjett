@@ -140,6 +140,30 @@ def test_flows_page_and_downloads() -> None:
     assert client.get("/helse").text == "ok"
 
 
+@pytest.mark.parametrize("name", ["Alderspensjon", "Folketrygden", "Forsvar", "Merverdiavgift", "Renter, utbytte og andre inntekter"])
+def test_flow_detail_adds_up_to_the_sankey_node(name: str) -> None:
+    """Every Sankey node opens to chapters and posts that sum to the node, in 2027 and, with closed chapters, in 2026."""
+    fd = queries.flow_detail(name)
+    assert fd is not None and fd.chapters
+    budget = queries.budget
+    sankey = {y: sum(f.amount for f in budget.flows[y] if (f.source if f.level == 0 else f.target) == name) for y in (2026, 2027)}
+    assert abs(fd.node.v2027 - sankey[2027]) < 0.005  # posts are rounded to 0,1 mill. kr
+    assert abs(sum(c.node.v2026 or 0 for c in fd.chapters) + fd.gone_2026 - sankey[2026]) < 1e-6
+    for c in fd.chapters:
+        assert abs(sum(p.v2027 for p in c.posts) - c.node.v2027) < 1e-6
+
+
+def test_flow_detail_fragment_and_shareable_link() -> None:
+    r = client.get("/flyt/del?vis=Alderspensjon", headers=HX)
+    assert "Tilleggspensjon" in r.text and "kap. 2670" in r.text
+    assert r.headers["HX-Replace-Url"] == "/flyt?vis=Alderspensjon#del"
+    assert client.get("/flyt/del?vis=Alderspensjon", follow_redirects=False).headers["location"] == "/flyt?vis=Alderspensjon#del"
+    assert "Tilleggspensjon" in client.get("/flyt?vis=Alderspensjon").text
+    for unknown in ("Statsbudsjettet 2027", "tull"):
+        r = client.get("/flyt/del", params={"vis": unknown}, headers=HX)
+        assert r.status_code == 200 and r.headers["HX-Replace-Url"] == "/flyt" and "kap." not in r.text
+
+
 def test_everyday_page_adds_up() -> None:
     e = queries.everyday()
     assert abs(sum(r.kroner for r in e.spending) - e.per_person) < 1

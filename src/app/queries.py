@@ -111,6 +111,9 @@ class Queries:
     def tree(self, side: b.Side, path: str) -> b.TreeLevel:
         return b.tree(self.budget, side, path)
 
+    def flow_detail(self, name: str) -> b.FlowDetail | None:
+        return b.flow_detail(self.budget, name)
+
     def search(self, query: str) -> list[b.Hit]:
         return b.search(self.budget, query)
 

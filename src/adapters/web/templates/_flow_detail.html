@@ -1,0 +1,41 @@
+{# What one Sankey node holds: its chapters, each opening to its posts, 2027 against 2026 #}
+{% macro change(x) %}{% if x.change is none %}<span class="muted">ny</span>{% elif x.change|abs < 0.0005 %}<span class="muted">uendret</span>
+{%- else %}<span class="{{ 'pos' if x.change > 0 else 'neg' }}">{{ x.change|signed_amount }}{% if x.v2026 and x.v2026 > 0 %} ({{ (x.change / x.v2026 * 100)|pct }}){% endif %}</span>{% endif %}{% endmacro %}
+<div id="flow-detail" aria-live="polite">
+{% if fd %}
+  {% set n = fd.node %}
+  {% set top = fd.chapters[0].node.v2027 if fd.chapters else 0 %}
+  <div class="flow-head">
+    <h2>{{ n.name }}</h2>
+    <a class="small" href="/?side={{ fd.side }}&sti={{ fd.path|urlencode }}#utforsk">Se i budsjettkartet →</a>
+  </div>
+  <p class="note">{{ n.v2027|amount }} i 2027, {{ change(n) }} fra 2026.
+    {% if fd.chapters|length > 1 %}{{ fd.chapters|length }} kapitler, størst først. Trykk på et kapittel for å se postene.{% endif %}</p>
+  <div class="parts">
+    <div class="part-row head"><span>Kapittel og post</span><span class="num">2027</span><span class="num">Endring fra 2026</span></div>
+    {% for c in fd.chapters %}
+    <details {{ "open" if fd.chapters|length <= 2 }}>
+      <summary class="part-row">
+        <span class="n">{{ c.node.name }} <span class="muted small">kap. {{ c.node.kap }}</span>
+          <i class="bar" style="width:{{ (c.node.v2027 / top * 100) if top > 0 and c.node.v2027 > 0 else 0 }}%;background:var(--g-{{ group_slot(n.group) }})"></i></span>
+        <span class="num">{{ c.node.v2027|amount }}</span>
+        <span class="num">{{ change(c.node) }}</span>
+      </summary>
+      {% for p in c.posts %}
+      <div class="part-row post">
+        <span class="n">{{ p.name }} <span class="muted small">post {{ p.post }}</span></span>
+        <span class="num">{{ p.v2027|amount }}</span>
+        <span class="num">{{ change(p) }}</span>
+      </div>
+      {% endfor %}
+    </details>
+    {% endfor %}
+    {% if fd.gone_2026 > 0.0005 %}
+    <div class="part-row gone"><span class="n">Kapitler som fantes i 2026, men ikke i 2027 <span class="muted small">nedlagt eller fått nytt nummer</span></span>
+      <span class="num">–</span><span class="num neg">{{ (-fd.gone_2026)|signed_amount }}</span></div>
+    {% endif %}
+  </div>
+{% else %}
+  <p class="note">Trykk på en inntektskilde, et formål eller en strøm i diagrammet for å se hvilke kapitler og poster den består av.</p>
+{% endif %}
+</div>

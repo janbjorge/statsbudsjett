@@ -281,6 +281,60 @@ def _exact_2026(budget: Budget) -> dict[str, float | None]:
     return out
 
 
+# ---------- Pengestrømmen: what one node holds ----------
+
+@dataclass(frozen=True, slots=True)
+class FlowChapter:
+    node: Node
+    posts: tuple[Node, ...]
+
+
+@dataclass(frozen=True, slots=True)
+class FlowDetail:
+    """One income source, group or sub-group of the Sankey, broken into chapters and posts."""
+
+    side: Side
+    path: str  # the same node in the explorer on the front page
+    node: Node
+    chapters: tuple[FlowChapter, ...]
+
+    @property
+    def gone_2026(self) -> float:
+        """2026 money in chapters with no 2027 post here (closed or renumbered), so the 2026 column adds up."""
+        return (self.node.v2026 or 0) - sum(c.node.v2026 or 0 for c in self.chapters)
+
+
+def flow_detail(budget: Budget, name: str) -> FlowDetail | None:
+    """None for the total and for names that are not a node."""
+    posts = [p for p in budget.posts if name in (p.group, p.area)]
+    if not posts:
+        return None
+    first = posts[0]
+    is_leaf = first.area == name != first.group
+    key = f"l:{first.group}|{name}" if is_leaf else f"g:{name}"
+    path = f"g:{first.group}/{key}" if is_leaf else key
+    v2026 = {c.kap: c.v2026 for c in budget.chapters}
+
+    by_kap: dict[int, list[Post]] = {}
+    for p in posts:
+        by_kap.setdefault(p.kap, []).append(p)
+    chapters = sorted(
+        (
+            FlowChapter(
+                Node(f"k:{kap}", ps[0].kap_name, first.group, sum(p.v2027 for p in ps), v2026.get(kap), True, kap),
+                tuple(sorted(
+                    (Node(f"p:{kap}.{p.post}", p.post_name, first.group, p.v2027, p.v2026, False, kap, p.post) for p in ps),
+                    key=lambda n: -n.v2027,
+                )),
+            )
+            for kap, ps in by_kap.items()
+        ),
+        key=lambda c: -c.node.v2027,
+    )
+    node = Node(key, name, first.group, sum(p.v2027 for p in posts), _exact_2026(budget).get(key), True)
+    return FlowDetail(first.side, path, node, tuple(chapters))
+
+
 def path_to_chapter(budget: Budget, kap: int) -> tuple[Side, str]:
     p = next(p for p in budget.posts if p.kap == kap)
     parts = [f"g:{p.group}"] + ([f"l:{p.group}|{p.area}"] if p.area != p.group else []) + [f"k:{p.kap}"]

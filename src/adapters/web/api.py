@@ -65,6 +65,18 @@ class TreeNode(Out):
     sti: str | None = Field(description="Pass as `sti` to go one level down; null for a post")
 
 
+class FlowChapter(Out):
+    kapittel: TreeNode
+    poster: list[TreeNode]
+
+
+class FlowDetail(Out):
+    side: b.Side
+    her: TreeNode
+    kapitler: list[FlowChapter] = Field(description="Largest first, each with its posts")
+    kapitler_borte_mrd_kr_2026: float = Field(description="2026 money in chapters with no 2027 post here (closed or renumbered)")
+
+
 class Crumb(Out):
     sti: str
     navn: str
@@ -281,6 +293,23 @@ def build(queries: Queries) -> FastAPI:
             side=t.side, sti=base, brodsmuler=[Crumb(sti=p, navn=n) for p, n in t.crumbs],
             her=_node(t.node, base),
             under=[_node(n, f"{base}/{n.key}".strip("/")) for n in t.children],
+        )
+
+    @api.get(
+        "/flyt", summary="One node of the Pengestrømmen chart broken into chapters and posts",
+        responses={404: {"description": "No income source, group or sub-group has that name"}},
+    )
+    def flow(vis: Annotated[str, Query(description="Name of an income source, group or sub-group, e.g. Alderspensjon (see /oversikt)")]) -> FlowDetail:
+        fd = queries.flow_detail(vis)
+        if fd is None:
+            raise HTTPException(404, "Ukjent navn. Bruk en inntektskilde, en gruppe eller en undergruppe fra Pengestrømmen.")
+        return FlowDetail(
+            side=fd.side, her=_node(fd.node, fd.path),
+            kapitler=[
+                FlowChapter(kapittel=_node(c.node, queries.chapter_path(c.node.kap or 0)[1]), poster=[_node(n, "") for n in c.posts])
+                for c in fd.chapters
+            ],
+            kapitler_borte_mrd_kr_2026=fd.gone_2026,
         )
 
     @api.get("/sok", summary="Search chapter and post names (at least 2 characters)")

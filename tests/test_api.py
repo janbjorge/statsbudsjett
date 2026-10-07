@@ -10,7 +10,7 @@ client = TestClient(app)
 
 def test_openapi_lists_every_endpoint() -> None:
     paths = client.get("/api/openapi.json").json()["paths"]
-    for path in ("/oversikt", "/meg", "/fakta", "/utforsk", "/sok", "/endringer", "/inntekter", "/kommune", "/kommuner", "/kvittering", "/visste-du", "/oljefond"):
+    for path in ("/oversikt", "/meg", "/fakta", "/utforsk", "/sok", "/endringer", "/inntekter", "/kommune", "/kommuner", "/kvittering", "/visste-du", "/oljefond", "/flyt"):
         assert path in paths, path
 
 
@@ -45,6 +45,13 @@ def test_tree_paths_lead_one_level_down() -> None:
     below = client.get("/api/utforsk", params={"sti": child["sti"]}).json()
     assert below["her"]["navn"] == child["navn"]
     assert abs(sum(n["mrd_kr_2027"] for n in below["under"]) - child["mrd_kr_2027"]) < 1e-6
+
+
+def test_flow_chapters_lead_into_the_tree() -> None:
+    flow = client.get("/api/flyt", params={"vis": "Folketrygden"}).json()
+    chapter = flow["kapitler"][0]["kapittel"]
+    assert client.get("/api/utforsk", params={"sti": chapter["sti"]}).json()["her"]["navn"] == chapter["navn"]
+    assert client.get("/api/flyt", params={"vis": "tull"}).status_code == 404
 
 
 def test_kommune_by_name_and_unknown() -> None:
