@@ -1,7 +1,8 @@
 """Which facts a household sees (METHOD.md §6)."""
 
 from adapters.datasets import JsonDatasets
-from core.facts import Effect, Profile, select
+from core.facts import ASKED, PERSONAS, Effect, Profile, select
+from core.tax import Adult, Business
 
 FACTS = JsonDatasets().facts()
 
@@ -11,8 +12,29 @@ def titles(profile: Profile) -> set[str]:
 
 
 def test_everyone_sees_household_facts_without_choosing_anything() -> None:
-    sections = select(FACTS, Profile())
+    sections = select(FACTS, Profile(adults=(Adult(),)))
     assert [s.label for s in sections] == ["Gjelder alle"]
+
+
+def test_incomes_and_children_tell_the_situation() -> None:
+    told = Profile(
+        kids={"1-5": 1},
+        adults=(Adult(wage=400_000, pension=100_000), Adult(business=300_000, business_kind=Business.JORDBRUK)),
+    ).situations
+    assert told == {"barnefamilie", "arbeidstaker", "pensjonist", "naeringsdrivende", "bonde"}
+    assert Profile(adults=(Adult(business=300_000, business_kind=Business.FISKE),)).situations == {"naeringsdrivende", "fisker"}
+    # A kind with no amount says nothing
+    assert Profile(adults=(Adult(business_kind=Business.JORDBRUK),)).situations == set()
+
+
+def test_the_chosen_personas_are_kept() -> None:
+    assert Profile(personas=frozenset({"bilist"}), adults=(Adult(),)).situations == {"bilist"}
+
+
+def test_the_form_asks_only_what_the_incomes_cannot_tell() -> None:
+    told = {"barnefamilie", "arbeidstaker", "pensjonist", "bonde", "fisker"}
+    assert set(ASKED) | told == set(PERSONAS)
+    assert not set(ASKED) & told
 
 
 def test_each_fact_is_shown_once() -> None:

@@ -20,7 +20,7 @@ from adapters.web import api, fmt, telemetry
 from adapters.web.params import kroner, profile_from, profile_query
 from app.queries import Queries
 from core.budget import FundYear, Kommune, Node, Side
-from core.facts import KID_BANDS, PERSONAS
+from core.facts import ASKED, KID_BANDS, PERSONAS
 from core.tax import Business
 
 HERE = Path(__file__).parent
@@ -93,7 +93,7 @@ BUSINESS = {Business.ANNEN: "Annen næring", Business.JORDBRUK: "Jordbruk", Busi
 def template_context(request: Request) -> dict[str, object]:
     """Names every template can use."""
     return {
-        "PERSONAS": PERSONAS, "KID_BANDS": KID_BANDS, "BUSINESS": BUSINESS, "Side": Side,
+        "PERSONAS": PERSONAS, "ASKED": ASKED, "KID_BANDS": KID_BANDS, "BUSINESS": BUSINESS, "Side": Side,
         "group_slot": group_slot, "static_url": static_url,
         "canonical": f"https://{CANONICAL_HOST}{request.url.path}" if CANONICAL_HOST else "",
     }

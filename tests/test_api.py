@@ -36,6 +36,7 @@ def test_meg_takes_business_income() -> None:
     assert r["profil"]["voksne"] == [{"lonn_kr": 0, "pensjon_kr": 0, "naering_kr": 550_000, "naering_type": "jordbruk"}]
     assert round(r["skatt"]["skatt_2027_kr"], 2) == 117_290.70
     assert r["lenke"].endswith("naering=550000&naering_type=jordbruk#meg")
+    assert r["profil"]["situasjoner"] == ["bonde", "naeringsdrivende"]
 
 
 def test_tree_paths_lead_one_level_down() -> None:

@@ -31,7 +31,9 @@ document.addEventListener("mousemove", ev => {
 document.addEventListener("htmx:configRequest", ev => {
   const form = ev.detail.elt.closest?.(".meg-form");
   if (!form) return;
-  const digits = el => (el.value || "").replace(/[^\d]/g, "") || "0";
+  // Fields hidden by the form's CSS (a second adult, an unticked income, the child ages) count as 0
+  const shown = el => el.offsetParent !== null;
+  const digits = el => shown(el) && (el.value || "").replace(/[^\d]/g, "") || "0";
   const params = {
     meg: [...form.querySelectorAll("[data-persona]:checked")].map(c => c.value).join(","),
     barn: [...form.querySelectorAll("[data-kid]")].map(digits).join(","),

@@ -57,6 +57,24 @@ def test_farmer_link_shows_the_farm_tax() -> None:
     assert '<option value="jordbruk" selected>' in html
 
 
+def test_form_asks_only_what_the_incomes_cannot_tell() -> None:
+    html = client.get("/").text
+    for key in ("student", "bilist", "naeringsdrivende", "barnefamilie"):
+        assert f'name="meg" value="{key}"' in html
+    for key in ("arbeidstaker", "pensjonist", "bonde", "fisker"):
+        assert f'name="meg" value="{key}"' not in html
+
+
+def test_farm_income_brings_the_farm_facts_without_ticking_bonde() -> None:
+    html = client.get("/?naering=550000&naering_type=jordbruk").text
+    assert '<h3 class="sec">Bonde</h3>' in html and '<h3 class="sec">Driver egen bedrift</h3>' in html
+
+
+def test_second_adult_shows_when_there_are_two() -> None:
+    assert re.search(r'value="2" data-adults checked', client.get(f"/?{FAMILY}").text)
+    assert re.search(r'value="1" data-adults checked', client.get(f"/?{FARMER}").text)
+
+
 LOVDATA = "https://lovdata.no/dokument/NL/lov/1999-03-26-14/%C2%A7"
 
 

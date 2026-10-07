@@ -110,7 +110,16 @@ label.field { display: block; font-weight: 600; margin-bottom: 6px; }
 .money { display: grid; gap: 8px; }
 .money label { font-size: 14px; color: var(--text-secondary); display: grid; gap: 4px; }
 .money input, .money select { font-size: 16px; padding: 8px 12px; max-width: none; }
-.adult { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.money { gap: 16px; }
+.adult { display: grid; gap: 6px; }
+/* One row per kind of income: a chip, and the amount once it is ticked */
+.src { display: grid; grid-template-columns: 96px 1fr; gap: 6px 8px; align-items: center; }
+.src .chip { justify-self: start; color: var(--text-primary); }
+.src select { grid-column: 2; }
+.src:not(:has([data-src]:checked)) > :not(.chip) { display: none; }
+.meg-form:has([data-adults][value="1"]:checked) .adult + .adult { display: none; }
+.meg-form:not(:has([data-has-kids]:checked)) .kids { display: none; }
+.kids { margin-top: 10px; }
 .tax-card { border-left: 4px solid var(--accent); }
 .tax-big { font-size: clamp(24px, 3vw, 32px); font-weight: 650; letter-spacing: -0.02em; line-height: 1.1; margin: 4px 0; }
 .facts { display: grid; gap: 10px; margin-top: 12px; }

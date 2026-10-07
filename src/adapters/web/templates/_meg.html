@@ -3,10 +3,10 @@
 <div id="meg-inner">
 <div class="chips" style="margin:-8px 0 20px"><span class="muted small" style="align-self:center">Eksempler:</span>
   {% for name, q in [
-    ("Familie med to små barn", "meg=barnefamilie,arbeidstaker,bilist&barn=0,2,0,0&lonn=650000,650000&pensjon=0,0"),
-    ("Bonde", "meg=bonde,naeringsdrivende,bilist,distrikt_nord&barn=0,0,0,0&lonn=0&pensjon=0&naering=550000&naering_type=jordbruk"),
-    ("Pensjonist", "meg=pensjonist&barn=0,0,0,0&lonn=0&pensjon=320000"),
-    ("Student", "meg=student&barn=0,0,0,0&lonn=120000&pensjon=0"),
+    ("Familie med to små barn", "meg=bilist&barn=0,2,0,0,0&lonn=650000,650000"),
+    ("Bonde", "meg=bilist,distrikt_nord&lonn=0&naering=550000&naering_type=jordbruk"),
+    ("Pensjonist", "lonn=0&pensjon=320000"),
+    ("Student", "meg=student&lonn=120000"),
   ] %}
   <a class="chip small" href="/?{{ q }}#meg" hx-get="/meg?{{ q }}" hx-target="#meg-inner" hx-swap="outerHTML">{{ name }}</a>
   {% endfor %}
@@ -14,15 +14,17 @@
 <div class="meg-grid">
   <form class="meg-form card" action="/#meg" method="get"
         hx-get="/meg?del=resultat" hx-target="#meg-result" hx-trigger="change, input delay:400ms">
-    <div><h3>Hvem er du?</h3>
+    {#- Fields are shown or hidden with CSS :has(); charts.js sends a hidden field as 0, so only what is visible counts -#}
+    <div><h3>Husstand</h3>
       <div class="chips wrap">
-        {% for key, label in PERSONAS.items() %}
-        <label class="chip small check"><input type="checkbox" name="meg" value="{{ key }}" data-persona {{ "checked" if key in p.personas }}> {{ label }}</label>
+        <span class="muted small" style="align-self:center">Voksne:</span>
+        {% for n in (1, 2) %}
+        <label class="chip small check"><input type="radio" name="voksne" value="{{ n }}" data-adults {{ "checked" if p.adults|length == n or (n == 1 and not p.adults) }}> {{ n }}</label>
         {% endfor %}
+        <label class="chip small check"><input type="checkbox" name="meg" value="barnefamilie" data-persona data-has-kids {{ "checked" if "barnefamilie" in p.situations }}> Har barn</label>
       </div>
-    </div>
-    <div><h3>Barn i husstanden</h3>
       <div class="kids">
+        <span class="muted small" style="grid-column:1/-1">Hvor mange i hver alder? (valgfritt)</span>
         {% for band, label in KID_BANDS.items() %}
         <label for="kid-{{ band }}">{{ label }}</label>
         <input class="kid" id="kid-{{ band }}" name="barn" type="number" min="0" max="10" inputmode="numeric" value="{{ p.kids.get(band, 0) }}" data-kid>
@@ -34,26 +36,41 @@
       <details class="help">
         <summary><span aria-hidden="true">?</span> Hva skal jeg skrive her?</summary>
         <p><b>Lønn:</b> det du tjener i året før skatt, med feriepenger og overtid.</p>
-        <p><b>Næringsinntekt:</b> overskuddet fra egen gård, båt eller enkeltpersonforetak, etter kostnader.
-          Velg type: jordbruk og fiske har egne fradrag, og fiske har lavere trygdeavgift. Driver du aksjeselskap, er det lønn og utbytte du tar ut som teller, ikke dette feltet.</p>
-        <p><b>Pensjon:</b> alderspensjon fra Nav, AFP og tjenestepensjon. Pensjon skattes lavere enn lønn og har derfor et eget felt.
-          Har du både lønn og pensjon, fyll ut begge. Uføretrygd er ikke med i beregningen ennå.</p>
-        <p>Bor dere to voksne sammen, fyll ut for begge. Bor du alene, la den andre stå tom.</p>
+        <p><b>Pensjon:</b> alderspensjon fra Nav, AFP og tjenestepensjon. Pensjon skattes lavere enn lønn og har derfor et eget felt. Uføretrygd er ikke med i beregningen ennå.</p>
+        <p><b>Næring:</b> overskuddet fra egen gård, båt eller enkeltpersonforetak, etter kostnader.
+          Jordbruk og fiske har egne fradrag, og fiske har lavere trygdeavgift. Driver du aksjeselskap, skriv det du tar ut som lønn, og kryss av for «Driver egen bedrift» under.</p>
+        <p>Har du flere slags inntekt, velg alle.</p>
       </details>
       <div class="money">
         {% for i in range(2) %}
         {% set a = p.adults[i] if i < p.adults|length else none %}
         <div class="adult">
-          <div class="who">{{ "Du" if i == 0 else "Voksen nr. 2 (valgfritt)" }}</div>
-          <label>Lønn<input inputmode="numeric" name="lonn" data-money="lonn" value="{{ a.wage|nb if a else '' }}" placeholder="0"></label>
-          <label>Pensjon<input inputmode="numeric" name="pensjon" data-money="pensjon" value="{{ a.pension|nb if a else '' }}" placeholder="0"></label>
-          <label>Næringsinntekt<input inputmode="numeric" name="naering" data-money="naering" value="{{ a.business|nb if a else '' }}" placeholder="0"></label>
-          <label>Type næring<select name="naering_type" data-business-kind>
-            {% for kind, label in BUSINESS.items() %}
-            <option value="{{ kind }}" {{ "selected" if a and a.business_kind == kind }}>{{ label }}</option>
-            {% endfor %}
-          </select></label>
+          {% if i == 1 %}<div class="who">Voksen nr. 2</div>{% endif %}
+          <div class="src">
+            <label class="chip small check"><input type="checkbox" data-src {{ "checked" if not a or a.wage }}> Lønn</label>
+            <input inputmode="numeric" name="lonn" data-money="lonn" aria-label="Lønn" value="{{ a.wage|nb if a and a.wage else '' }}" placeholder="0">
+          </div>
+          <div class="src">
+            <label class="chip small check"><input type="checkbox" data-src {{ "checked" if a and a.pension }}> Pensjon</label>
+            <input inputmode="numeric" name="pensjon" data-money="pensjon" aria-label="Pensjon" value="{{ a.pension|nb if a and a.pension else '' }}" placeholder="0">
+          </div>
+          <div class="src">
+            <label class="chip small check"><input type="checkbox" data-src {{ "checked" if a and a.business }}> Næring</label>
+            <input inputmode="numeric" name="naering" data-money="naering" aria-label="Næringsinntekt" value="{{ a.business|nb if a and a.business else '' }}" placeholder="0">
+            <select name="naering_type" data-business-kind aria-label="Type næring">
+              {% for kind, label in BUSINESS.items() %}
+              <option value="{{ kind }}" {{ "selected" if a and a.business_kind == kind }}>{{ label }}</option>
+              {% endfor %}
+            </select>
+          </div>
         </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div><h3>Gjelder noe av dette?</h3>
+      <div class="chips wrap">
+        {% for key in ASKED %}
+        <label class="chip small check"><input type="checkbox" name="meg" value="{{ key }}" data-persona {{ "checked" if key in p.personas }}> {{ PERSONAS[key] }}</label>
         {% endfor %}
       </div>
     </div>

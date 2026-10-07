@@ -3,7 +3,7 @@
 from dataclasses import dataclass, field
 from enum import StrEnum
 
-from core.tax import Adult
+from core.tax import Adult, Business
 
 
 class Effect(StrEnum):
@@ -57,6 +57,9 @@ PERSONAS = {
     "sparer": "Sparer eller har formue",
 }
 EVERYONE = "husholdning"
+# The form asks only for these; Profile.situations reads the rest from the incomes and children.
+# "naeringsdrivende" is still asked, since an aksjeselskap owner has wage, not næringsinntekt
+ASKED = ("student", "syk_ufor", "arbeidsledig", "naeringsdrivende", "bilist", "bilkjoper", "distrikt_nord", "sparer")
 KID_BANDS = {"0-1": "Under 1 år", "1-5": "1–5 år (barnehage)", "6-15": "6–15 år (skole)", "16-18": "16–18 år", "18+": "Over 18 år"}
 ADULT_KIDS = "18+"
 
@@ -118,6 +121,19 @@ class Profile:
     def has_minors(self) -> bool:
         return any(n > 0 for b, n in self.kids.items() if b != ADULT_KIDS)
 
+    @property
+    def situations(self) -> frozenset[str]:
+        """The chosen personas plus those the incomes and children already tell, so the form need not ask twice."""
+        told = {
+            "barnefamilie": self.has_kids,
+            "arbeidstaker": any(a.wage for a in self.adults),
+            "pensjonist": any(a.pension for a in self.adults),
+            "naeringsdrivende": any(a.business for a in self.adults),
+            "bonde": any(a.business and a.business_kind is Business.JORDBRUK for a in self.adults),
+            "fisker": any(a.business and a.business_kind is Business.FISKE for a in self.adults),
+        }
+        return self.personas | {p for p, yes in told.items() if yes}
+
 
 @dataclass(frozen=True, slots=True)
 class Section:
@@ -132,8 +148,9 @@ ORDER = {Effect.MINUS: 0, Effect.PLUSS: 1, Effect.BLANDET: 2, Effect.UENDRET: 3}
 def select(facts: list[Fact], profile: Profile) -> list[Section]:
     """Facts for the chosen situations plus those for everyone, each shown once under its first match."""
     # Children over 18 often study with help from their parents, so they bring the student facts along
-    adult_kids = bool(profile.kids.get(ADULT_KIDS)) and "student" not in profile.personas
-    personas = profile.personas | {"student"} if adult_kids else profile.personas
+    situations = profile.situations
+    adult_kids = bool(profile.kids.get(ADULT_KIDS)) and "student" not in situations
+    personas = situations | {"student"} if adult_kids else situations
     chosen = [p for p in PERSONAS if p in personas] + [EVERYONE]
 
     def fits(f: Fact) -> bool:

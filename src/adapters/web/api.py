@@ -14,7 +14,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from adapters.web.params import Kroner, ProfileQuery, profile_query
 from app.queries import Queries
 from core import budget as b
-from core.facts import Effect, Fact, Kind
+from core.facts import PERSONAS, Effect, Fact, Kind
 from core.tax import Business
 
 DESCRIPTION = """\
@@ -171,6 +171,7 @@ class Adult(Out):
 
 class ProfileOut(Out):
     meg: list[str]
+    situasjoner: list[str] = Field(description="meg plus what the incomes and children tell: barn gives barnefamilie, lonn arbeidstaker, pensjon pensjonist, naering naeringsdrivende, and jordbruk or fiske also bonde or fisker")
     barn: dict[str, int]
     voksne: list[Adult]
 
@@ -339,7 +340,7 @@ def build(queries: Queries) -> FastAPI:
         m = queries.meg(profile)
         return Meg(
             profil=ProfileOut(
-                meg=list(q.meg), barn=profile.kids,
+                meg=list(q.meg), situasjoner=[p for p in PERSONAS if p in profile.situations], barn=profile.kids,
                 voksne=[
                     Adult(lonn_kr=a.wage, pensjon_kr=a.pension, naering_kr=a.business, naering_type=a.business_kind)
                     for a in profile.adults
