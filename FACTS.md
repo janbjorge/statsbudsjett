@@ -90,7 +90,7 @@ Site quirks:
 
 ## 8. Hosting
 
-- uvicorn serves the app directly (Dockerfile: python:3.14-slim plus uv, runtime dependencies only, runs as `nobody`). Fly config is in fly.toml: region arn, health check /helse, machines stop when idle. Pushes to main run the checks and then `flyctl deploy` (.github/workflows/deploy.yml, needs the FLY_API_TOKEN repository secret).
+- uvicorn serves the app directly (Dockerfile: python:3.14-slim plus uv, runtime dependencies only, runs as `nobody`). Fly config is in fly.toml: region arn, health check /helse, machines stop when idle. Pushes to main run ruff, ty and pytest and then `flyctl deploy`; pipeline.verify stays local because CI has no downloaded sources (.github/workflows/deploy.yml, needs the FLY_API_TOKEN repository secret).
 - The app adds gzip, security headers and cache headers itself (src/adapters/web/main.py:32). Static files and data are cached for 1 hour, full pages for 5 minutes. The front page is about 115 KB, or 21 KB gzipped.
 - The security policy allows inline scripts, because both pages embed their code.
 - Tracing and metrics go to Logfire (src/adapters/web/telemetry.py), only when the `LOGFIRE_TOKEN` Fly secret is set. Every request is a span with its full URL and arguments; the client IP is blanked (jb 2026-10-07: query values identify no one, IPs are not needed). /helse and /static are not traced. On Fly, CPU and memory metrics are sent too. The deploy job passes the commit as `GIT_SHA`, so spans carry it and link to the code on GitHub.

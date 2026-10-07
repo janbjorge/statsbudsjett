@@ -26,7 +26,7 @@ jobs:
       - run: uv sync --locked
       - run: uvx ruff check .
       - run: uv run ty check src tests
-      - run: uv run python -m pipeline.verify
+      # pipeline.verify is not run here: it needs the downloaded sources in data/, which are not committed
       - run: uv run pytest -q
 
   deploy:
