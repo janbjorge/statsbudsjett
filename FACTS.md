@@ -73,7 +73,7 @@ Site quirks:
 
 ## 6. "For deg" facts and verification
 
-- 94 facts in data/persona/{families,welfare,business}.json and 56 tax parameters in data/persona/tax.json. Four agent sessions extracted them on 2026-10-07 from the press releases and the propositions.
+- 94 facts in data/persona/{families,welfare,business}.json and 57 tax parameters in data/persona/tax.json. Four agent sessions extracted them on 2026-10-07 from the press releases and the propositions.
 - Each fact has personas, a plain bokmål title and summary, an effect (pluss/minus/uendret/blandet), a kind for changes (betaler/far/tilbud/regel), amounts for 2026/2027, a verbatim quote, `source_file`, `source_url` and `page`. `extra_quotes` holds evidence that sits elsewhere (e.g. the 2026 value on another page).
 - src/pipeline/verify.py:52 checks every quote against its source file, the page against the page marker, and that every amount appears in the quote. src/pipeline/datasets.py:122 refuses to build if anything fails.
 - PDF text quirks the checker normalises (src/pipeline/verify.py:17): words broken across lines ("tryg-\ndeinntekter", "jus -\ntert"), private-use glyphs (U+F020), table rows that repeat on several pages, and amounts written as "21,5 mill.".
@@ -85,6 +85,8 @@ Site quirks:
 
 - Source: Prop. 1 LS (2026–2027) tabell 1.5 "Skattesatser, fradrag og beløpsgrenser i 2026 og forslag for 2027", pp. 26–30. https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/
 - Key 2027 changes: personfradrag 114 540 → 120 180; trygdeavgift on wages 7,6 → 7,4 %; trinnskatt thresholds +4,0 % with unchanged rates; the pension tax credit max 39 100 → 40 750.
+- With both wage and pension, each minstefradrag is worked out on its own, but the wage cap (99 550 kr in 2027) caps the sum (tabell 1.5 fotnote 11, p. 30). Before 2026-10-07 the engine gave both caps, up to 177 500 kr.
+- Frikort: no trygdeavgift up to 99 650 kr, and restskatt under 100 kr is not collected, so a wage up to 100 000 kr pays nothing (p. 80).
 - Official comparisons use the reference system, meaning 2026 rules adjusted for expected wage growth (4,0 %, p. 80) and pension growth (3,35 %, p. 79). Compared at the same nominal income instead, the cut looks several times larger.
 - Business income (næringsinntekt), checked 2026-10-07 against Prop. 1 LS and the law text on lovdata.no:
   - Trygdeavgift is 10,8 → 10,6 % on business income (tabell 1.5 p. 26, skattevedtaket § 8 p. 263). Fiske, fangst and barnepass pay the wage rate, 7,6 → 7,4 %, because they also pay a produktavgift (fotnote 7, p. 26). Jordbruk has no rate of its own, so it pays 10,6 %.

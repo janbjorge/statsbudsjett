@@ -2194,6 +2194,11 @@
         "y2027": 99650,
         "page": 26
       },
+      "restskatt_nedre_grense": {
+        "y2026": 100,
+        "y2027": 100,
+        "page": 80
+      },
       "trygdeavgift_opptrappingssats": {
         "y2026": 25,
         "y2027": 25,

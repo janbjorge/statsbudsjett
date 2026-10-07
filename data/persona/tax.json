@@ -93,6 +93,16 @@
       "note": "Tabell 1.5. Prosa s. 80: frikortgrensen er 100 000 kroner (noe høyere enn nedre grense fordi restskatt under 100 kr ikke kreves inn) og holdes nominelt uendret; teksten sier 'i 2026', antakelig ment 2027."
     },
     {
+      "key": "restskatt_nedre_grense",
+      "label_nb": "Restskatt som ikke kreves inn",
+      "y2026": 100,
+      "y2027": 100,
+      "unit": "kr",
+      "page": 80,
+      "quote": "Siden restskatt under 100 kroner ikke innkreves, er den såkalte frikortgrensen noe høyere (100 000 kroner) enn den nedre grensen for å betale trygdeavgift.",
+      "note": "Prosa s. 80. Kilden gir ikke beløpet per år; samme beløp er brukt for 2026 og 2027 (METHOD.md §5)."
+    },
+    {
       "key": "trygdeavgift_opptrappingssats",
       "label_nb": "Trygdeavgift, opptrappingssats",
       "y2026": 25,

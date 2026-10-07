@@ -35,6 +35,7 @@
       <tr><td>Trygdeavgift</td><td class="num">{{ l.trygdeavgift|kr }}</td><td>{{ ls(m.tax_pages.trygdeavgift) }}</td></tr>
       <tr><td>Trinnskatt</td><td class="num">{{ l.trinnskatt|kr }}</td><td>{{ ls(m.tax_pages.trinnskatt) }}</td></tr>
       {% if l.pensjonsfradrag %}<tr><td>− Skattefradrag for pensjon</td><td class="num">{{ l.pensjonsfradrag|kr }}</td><td>{{ ls(m.tax_pages.pensjonsfradrag) }}</td></tr>{% endif %}
+      {% if l.not_collected %}<tr><td>− Så lite at det ikke kreves inn</td><td class="num">{{ l.not_collected|kr }}</td><td>{{ ls(m.tax_pages.restskatt) }}</td></tr>{% endif %}
       <tr><td><b>= Skatt i 2027</b></td><td class="num"><b>{{ l.total|kr }}</b></td><td></td></tr>
     </table>
     {% endif %}

@@ -41,6 +41,8 @@ def marginal(rules, step: float = 1_000, kind: Business = Business.ANNEN, **inco
         ("trygdeavgift_fiske", 7.6, 7.4),  # "Fiske, fangst og barnepass", fotnote 7
         ("trygdeavgift_naering", 10.8, 10.6),  # "Annen næringsinntekt"
         ("trygdeavgift_pensjon", 5.1, 5.1),
+        # LS p. 80: "restskatt under 100 kroner ikke innkreves"
+        ("restskatt_nedre", 100, 100),
         # LS tabell 1.5 p. 27
         ("personfradrag", 114_540, 120_180),
         ("minstefradrag_lonn", 46, 46),
@@ -101,6 +103,12 @@ def test_pension_relief_is_phased_out_above_450_000() -> None:
     assert -300 < high < -200
 
 
+def test_pension_is_tax_free_up_to_about_294_000_in_2026() -> None:
+    # LS p. 30: "det ikke betales skatt av en pensjonsinntekt på inntil om lag 294 000 kroner i 2026"
+    assert tax(R26, pension=290_000) == 0
+    assert tax(R26, pension=300_000) > 0
+
+
 def test_no_income_no_tax() -> None:
     effect = household_effect(TABLE, [Adult()])
     assert effect.tax_2027 == 0
@@ -113,6 +121,23 @@ def test_no_income_no_tax() -> None:
 def test_no_tax_up_to_the_trygdeavgift_lower_limit() -> None:
     # LS p. 50: "Frem til nedre grense for å betale trygdeavgift (99 650 kroner) betales ingen skatt."
     assert tax(R26, wage=99_650) == 0
+
+
+@pytest.mark.parametrize("rules", [R26, R27])
+def test_no_tax_collected_up_to_the_frikort_limit(rules) -> None:
+    # LS p. 80: "Siden restskatt under 100 kroner ikke innkreves, er den såkalte frikortgrensen noe høyere
+    # (100 000 kroner)". By hand: 25 % × (100 000 − 99 650) = 87,50, under 100, so nothing is collected.
+    lines = tax_lines(rules, wage=100_000)
+    assert lines.trygdeavgift == pytest.approx(87.50)
+    assert lines.not_collected == pytest.approx(87.50)
+    assert lines.total == 0
+
+
+def test_tax_from_100_kr_is_collected_in_full() -> None:
+    # LS p. 80: only restskatt under 100 kroner is dropped. By hand: 25 % × (100 050 − 99 650) = 100
+    lines = tax_lines(R27, wage=100_050)
+    assert lines.not_collected == 0
+    assert lines.total == pytest.approx(100)
 
 
 def test_phase_in_rate_is_25_percent_above_the_lower_limit() -> None:
@@ -297,6 +322,21 @@ def test_special_deduction_never_exceeds_the_income(kind: Business) -> None:
 
 
 # --- The household result ------------------------------------------------------------------------
+
+
+# --- Wage and pension together --------------------------------------------------------------------
+
+
+def test_wage_and_pension_share_one_minstefradrag_cap() -> None:
+    # LS tabell 1.5 fotnote 11 (p. 30): "Øvre grense for minstefradrag i lønnsinntekt gjelder som øvre grense
+    # for summen av minstefradragene." By hand: 46 % × 150 000 = 69 000 plus 40 % × 200 000 = 80 000,
+    # capped at 77 950, is 146 950; the sum is capped at the wage cap, 99 550.
+    assert tax_lines(R27, wage=150_000, pension=200_000).minstefradrag == pytest.approx(99_550)
+
+
+def test_wage_and_pension_under_the_cap_get_both_minstefradrag() -> None:
+    # LS tabell 1.5 p. 27: 46 % × 100 000 + 40 % × 50 000 = 66 000, under the 99 550 cap
+    assert tax_lines(R27, wage=100_000, pension=50_000).minstefradrag == pytest.approx(66_000)
 
 
 # --- Breakdown: the lines shown under "Slik er skatten regnet" ---------------------------------

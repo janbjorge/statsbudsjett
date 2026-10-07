@@ -39,6 +39,7 @@ class TaxRules:
     trygdeavgift_fiske: float
     trygdeavgift_nedre: float
     trygdeavgift_opptrapping: float
+    restskatt_nedre: float
     trinnskatt: tuple[Bracket, ...]
     pensjonsfradrag_max: float
     pensjonsfradrag_grense1: float
@@ -74,6 +75,7 @@ class TaxPages:
     pensjonsfradrag: int
     jordbruksfradrag: int
     fiskerfradrag: int
+    restskatt: int
 
 
 @dataclass(frozen=True, slots=True)
@@ -108,6 +110,7 @@ class TaxTable:
             trygdeavgift_fiske=g("trygdeavgift_fiske_barnepass"),
             trygdeavgift_nedre=g("trygdeavgift_nedre_grense") * wage_index,
             trygdeavgift_opptrapping=g("trygdeavgift_opptrappingssats"),
+            restskatt_nedre=g("restskatt_nedre_grense"),
             trinnskatt=tuple(Bracket(b["from"] * wage_index, b["rate"]) for b in self.trinnskatt[y]),
             pensjonsfradrag_max=g("pensjonsskattefradrag_maks") * pension_index,
             pensjonsfradrag_grense1=g("pensjonsskattefradrag_trinn1_grense") * pension_index,
@@ -152,10 +155,12 @@ class TaxLines:
     trinnskatt: float
     pensjonsfradrag: float
     """The pension tax credit actually used, at most the tax it is set against."""
+    not_collected: float = 0.0
+    """Tax under the restskatt limit (100 kr), which is never collected; this is why the frikort covers 100 000 kr."""
 
     @property
     def total(self) -> float:
-        return self.alminnelig + self.trygdeavgift + self.trinnskatt - self.pensjonsfradrag
+        return self.alminnelig + self.trygdeavgift + self.trinnskatt - self.pensjonsfradrag - self.not_collected
 
 
 def tax_lines(rules: TaxRules, wage: float = 0, pension: float = 0, business: float = 0, kind: Business = Business.ANNEN) -> TaxLines:
@@ -163,9 +168,13 @@ def tax_lines(rules: TaxRules, wage: float = 0, pension: float = 0, business: fl
 
     Business income gets no minstefradrag and counts in full as personinntekt; the skjermingsfradrag
     is left out (METHOD.md §5). The special deduction lowers alminnelig inntekt only (skatteloven § 12-11 (2) b).
+    Tax under the restskatt limit is dropped, assuming nothing was withheld during the year (METHOD.md §5).
     """
-    minstefradrag = min(wage * rules.minstefradrag_lonn / 100, rules.minstefradrag_lonn_max) + min(
-        pension * rules.minstefradrag_pensjon / 100, rules.minstefradrag_pensjon_max
+    # With both wage and pension, the wage cap also caps the sum (Prop. 1 LS tabell 1.5 fotnote 11)
+    minstefradrag = min(
+        min(wage * rules.minstefradrag_lonn / 100, rules.minstefradrag_lonn_max)
+        + min(pension * rules.minstefradrag_pensjon / 100, rules.minstefradrag_pensjon_max),
+        rules.minstefradrag_lonn_max,
     )
     special = special_deduction(rules, business, kind)
     alminnelig_inntekt = max(0, wage + pension + business - minstefradrag - special - rules.personfradrag)
@@ -191,6 +200,7 @@ def tax_lines(rules: TaxRules, wage: float = 0, pension: float = 0, business: fl
             + max(0, pension - rules.pensjonsfradrag_grense2) * rules.pensjonsfradrag_sats2 / 100
         )
         pensjonsfradrag = min(max(0, rules.pensjonsfradrag_max - reduction), alminnelig + trygdeavgift + trinnskatt)
+    assessed = alminnelig + trygdeavgift + trinnskatt - pensjonsfradrag
 
     return TaxLines(
         personinntekt=personinntekt,
@@ -202,6 +212,7 @@ def tax_lines(rules: TaxRules, wage: float = 0, pension: float = 0, business: fl
         trygdeavgift=trygdeavgift,
         trinnskatt=trinnskatt,
         pensjonsfradrag=pensjonsfradrag,
+        not_collected=assessed if assessed < rules.restskatt_nedre else 0.0,
     )
 
 

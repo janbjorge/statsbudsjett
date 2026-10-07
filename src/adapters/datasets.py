@@ -89,6 +89,7 @@ class JsonDatasets:
                 pensjonsfradrag=t["params"]["pensjonsskattefradrag_maks"]["page"],
                 jordbruksfradrag=t["params"]["jordbruksfradrag_maks"]["page"],
                 fiskerfradrag=t["params"]["fiskerfradrag_ovre"]["page"],
+                restskatt=t["params"]["restskatt_nedre_grense"]["page"],
             ),
             source_url=t["source_url"],
         )
