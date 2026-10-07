@@ -191,8 +191,8 @@ def main() -> None:
     }
     payload["diff"] = diff().to_dicts()
     OUT.mkdir(exist_ok=True)
-    (OUT / "budget.json").write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")))
-    (OUT / "meg.json").write_text(json.dumps(meg(), ensure_ascii=False, separators=(",", ":")))
+    (OUT / "budget.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
+    (OUT / "meg.json").write_text(json.dumps(meg(), ensure_ascii=False, indent=2) + "\n")
     # Downloads for anyone who wants the numbers themselves
     pl.DataFrame(payload["posts"]).rename(
         {"s": "side", "g": "gruppe", "l": "område", "k": "kapittel", "kn": "kapittelnavn", "p": "post", "pn": "postnavn", "v": "mrd_2027", "v26": "mrd_2026"}

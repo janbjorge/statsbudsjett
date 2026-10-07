@@ -109,7 +109,7 @@ def main() -> None:
 
     # Frie inntekter (rammetilskudd + skatteanslag) per kommune and fylkeskommune
     collection = json.loads(get(f"{FRIE_API}/countycollection/2027"))
-    save(OUT / "frie_inntekter" / "countycollection.json", json.dumps(collection, ensure_ascii=False, indent=1).encode())
+    save(OUT / "frie_inntekter" / "countycollection.json", json.dumps(collection, ensure_ascii=False, indent=2).encode() + b"\n")
     units = []
     for county in collection["data"]:
         units.append(county["fylkeskommune"])
@@ -120,7 +120,7 @@ def main() -> None:
 
     with ThreadPoolExecutor(4) as pool:
         result = dict(pool.map(frie, units))
-    save(OUT / "frie_inntekter" / "frie_inntekter_2027.json", json.dumps(result, ensure_ascii=False, indent=1).encode())
+    save(OUT / "frie_inntekter" / "frie_inntekter_2027.json", json.dumps(result, ensure_ascii=False, indent=2).encode() + b"\n")
 
     press_releases()
     pdf_text()

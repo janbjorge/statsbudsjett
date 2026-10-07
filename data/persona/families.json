@@ -1,504 +1,504 @@
 [
- {
-  "id": "barnetrygd-uendret",
-  "personas": [
-   "barnefamilie"
-  ],
-  "detail": null,
-  "title_nb": "Barnetrygden blir stående på 2 012 kr i måneden",
-  "summary_nb": "Barnetrygden økes ikke i 2027. Den er fortsatt 2 012 kroner i måneden per barn under 18 år. Enslige forsørgere får fortsatt utvidet barnetrygd, og noen får i tillegg småbarnstillegg.",
-  "effect": "uendret",
-  "kind": "far",
-  "amounts": [
-   {
-    "label_nb": "Ordinær barnetrygd per barn",
-    "y2026": 2012,
-    "y2027": 2012,
-    "unit": "kr/mnd"
-   },
-   {
-    "label_nb": "Utvidet barnetrygd (enslig mor eller far)",
-    "y2026": 2572,
-    "y2027": 2572,
-    "unit": "kr/mnd"
-   },
-   {
-    "label_nb": "Småbarnstillegg (enslige forsørgere med barn 0–3 år)",
-    "y2026": null,
-    "y2027": 712,
-    "unit": "kr/mnd"
-   }
-  ],
-  "quote": "Tabell 4.2 Forslag til satsar for barnetrygd (kroner) Satsar per månad Satsar per år Ordinær barnetrygd til barn 0–18 år 2012 24 144 Utvida barnetrygd til einsleg mor eller far for barn 0–18 år 2 572 30 864 Småbarnstillegg til einslege forsørgjarar med barn 0–3 år 712 8 544",
-  "source_file": "data/text/prp202620270001bfddddpdfs.txt",
-  "source_title": "Prop. 1 S (2026–2027) Barne- og familiedepartementet",
-  "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175032/",
-  "page": 77,
-  "caveat_nb": "Satsene ble sist justert 1. februar 2026 og er foreslått videreført uendret i 2027, noe som betyr at de ikke følger prisveksten. Krever vedtak i Stortinget.",
-  "extra_quotes": [
-   {
-    "quote": "Den ordinære barnetrygda for alle barn 0–18 år er no 2012 kroner per månad.",
-    "page": 14
-   },
-   {
-    "quote": "utvida barnetrygd er frå 1. februar 2026 på 2 572 kroner per månad.",
-    "page": 51
-   }
-  ]
- },
- {
-  "id": "engangsstonad-kuttes",
-  "personas": [
-   "barnefamilie"
-  ],
-  "detail": "0-1",
-  "title_nb": "Engangsstønaden ved fødsel kuttes til 67 100 kr",
-  "summary_nb": "Engangsstønaden går til mødre (og noen fedre) som ikke har rett på foreldrepenger. Den foreslås redusert fra 92 648 til 67 100 kroner per barn for barn født eller adoptert fra 1. juli 2027.",
-  "effect": "minus",
-  "kind": "far",
-  "amounts": [
-   {
-    "label_nb": "Engangsstønad per barn",
-    "y2026": 92648,
-    "y2027": 67100,
-    "unit": "kr"
-   }
-  ],
-  "quote": "satsen frå 1. juli 2027 frå 92 648 kro- ner til 67 100 kroner. Eit slikt stønadsnivå ligg nærare utgiftene familiar har til barnet det fyrste året.",
-  "source_file": "data/text/prp202620270001bfddddpdfs.txt",
-  "source_title": "Prop. 1 S (2026–2027) Barne- og familiedepartementet",
-  "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175032/",
-  "page": 156,
-  "caveat_nb": "Gjelder fra 1. juli 2027. Frem til 30. juni 2027 er satsen 92 648 kr. Krever vedtak i Stortinget."
- },
- {
-  "id": "rs-virus-spedbarn",
-  "personas": [
-   "barnefamilie"
-  ],
-  "detail": "0-1",
-  "title_nb": "Gratis beskyttelse mot RS-virus for spedbarn",
-  "summary_nb": "Spedbarn får et gratis tilbud om beskyttelse mot RS-virus gjennom barnevaksinasjonsprogrammet. I dag kjøper mange foreldre dette selv.",
-  "effect": "pluss",
-  "kind": "tilbud",
-  "amounts": [],
-  "quote": "Regjeringen foreslår å sette av 55 millioner kroner for at tilbudet om gratis beskyttelse mot RS-viruset blir en del av barnevaksinasjonsprogrammet fra og med 1. juli 2027",
-  "source_file": "data/saker/id3174122.txt",
-  "source_title": "Regjeringen vil ha beskyttelse mot RS-virus inn i barnevaksinasjonsprogrammet",
-  "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringen-vil-ha-beskyttelse-mot-rs-virus-inn-i-barnevaksinasjonsprogrammet/id3174122/",
-  "page": null,
-  "caveat_nb": "Gjelder fra 1. juli 2027. Det er ikke bestemt ennå om det blir antistoff til spedbarnet eller vaksine til den gravide."
- },
- {
-  "id": "kontantstotte-uendret",
-  "personas": [
-   "barnefamilie"
-  ],
-  "detail": "1-5",
-  "title_nb": "Kontantstøtten holdes på 7 500 kr i måneden",
-  "summary_nb": "Kontantstøtte for barn mellom 13 og 19 måneder som ikke har full barnehageplass videreføres med samme satser. Full sats er 7 500 kroner i måneden, og den blir lavere jo flere timer barnet er i barnehagen.",
-  "effect": "uendret",
-  "kind": "far",
-  "amounts": [
-   {
-    "label_nb": "Full kontantstøtte (ingen barnehageplass)",
-    "y2026": null,
-    "y2027": 7500,
-    "unit": "kr/mnd"
-   },
-   {
-    "label_nb": "Til og med 8 timer barnehage per uke",
-    "y2026": null,
-    "y2027": 6000,
-    "unit": "kr/mnd"
-   }
-  ],
-  "quote": "føre vidare satsane for kontantstøtte med uendra nivå",
-  "source_file": "data/text/prp202620270001bfddddpdfs.txt",
-  "source_title": "Prop. 1 S (2026–2027) Barne- og familiedepartementet",
-  "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175032/",
-  "page": 76,
-  "caveat_nb": "Satsene er foreslått videreført uendret i kroner. De følger ikke prisveksten, så de er verdt litt mindre. Krever vedtak i Stortinget.",
-  "extra_quotes": [
-   {
-    "quote": "Ikkje bruk av barnehageplass 100 7 50 0 Til og med 8 timar 80 6 00 0",
-    "page": 76
-   }
-  ]
- },
- {
-  "id": "barnehage-makspris",
-  "personas": [
-   "barnefamilie"
-  ],
-  "detail": "1-5",
-  "title_nb": "Barnehageprisen holdes på 1 200 kr i måneden",
-  "summary_nb": "Makspris for en heltidsplass i barnehage blir fortsatt 1 200 kroner i måneden. I de minst sentrale kommunene er prisen 700 kroner, og i Finnmark og deler av Nord-Troms er barnehagen gratis.",
-  "effect": "uendret",
-  "kind": "betaler",
-  "amounts": [
-   {
-    "label_nb": "Makspris, hele landet",
-    "y2026": 1200,
-    "y2027": 1200,
-    "unit": "kr/mnd"
-   },
-   {
-    "label_nb": "Makspris, minst sentrale kommuner (sone 5 og 6)",
-    "y2026": 700,
-    "y2027": 700,
-    "unit": "kr/mnd"
-   }
-  ],
-  "quote": "Maksprisen for foreldrebetaling i barnehage blir fryst på 1 200 kronar per månad i 2027. I sentralitetssone 5 og 6 blir maksprisen 700 kroner, og i innsatssona i Nord-Troms og Finnmark er barnehage framleis heilt gratis.",
-  "source_file": "data/saker/id3174270.txt",
-  "source_title": "Regjeringa vidarefører den historiske låge maksprisen i barnehage",
-  "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringa-vidareforer-den-historiske-lage-maksprisen-i-barnehage/id3174270/",
-  "page": null,
-  "caveat_nb": "Prisen står stille i kroner, så den blir litt lavere når man tar hensyn til prisveksten. Gjelder fra 1. januar 2027.",
-  "extra_quotes": [
-   {
-    "quote": "i revidert budsjett blei han satt ned til 1 200 kroner per månad nasjonalt og 700 kroner per månad i sentralitetssone 5 og 6."
-   }
-  ]
- },
- {
-  "id": "barnehage-soskenmoderasjon",
-  "personas": [
-   "barnefamilie"
-  ],
-  "detail": "1-5",
-  "title_nb": "Søskenrabatt og gratis plass for tredje barn fortsetter",
-  "summary_nb": "Med flere barn i barnehagen samtidig blir det billigere for barn nummer to, og barn nummer tre går gratis.",
-  "effect": "uendret",
-  "amounts": [],
-  "quote": "Det er framleis søskenmoderasjon med redusert foreldrebetaling for det andre barnet, og gratis barnehage for det tredje barnet når barna går i barnehagen samtidig.",
-  "source_file": "data/saker/id3174270.txt",
-  "source_title": "Regjeringa vidarefører den historiske låge maksprisen i barnehage",
-  "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringa-vidareforer-den-historiske-lage-maksprisen-i-barnehage/id3174270/",
-  "page": null,
-  "caveat_nb": null
- },
- {
-  "id": "barnehage-gratis-kjernetid",
-  "personas": [
-   "barnefamilie"
-  ],
-  "detail": "1-5",
-  "title_nb": "20 timer gratis barnehage for lavinntektsfamilier",
-  "summary_nb": "Barn mellom 2 og 5 år i familier med lav inntekt får fortsatt 20 timer gratis barnehage i uken. Inntektsgrensen settes til 718 780 kroner i året.",
-  "effect": "uendret",
-  "amounts": [
-   {
-    "label_nb": "Inntektsgrense for gratis kjernetid",
-    "y2026": null,
-    "y2027": 718780,
-    "unit": "kr/år"
-   }
-  ],
-  "quote": "Regjeringa foreslår å vidareføre den nasjonale ordninga med gratis kjernetid 20 timar per veke for barn i alderen 2–5 år for familiar med låg inn- tekt. Inntektsgrensa blir sett til 718 780 kroner frå 1. august 2027.",
-  "source_file": "data/text/prp202620270001_kddddpdfs.txt",
-  "source_title": "Prop. 1 S (2026–2027) Kunnskapsdepartementet",
-  "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175106/",
-  "page": 129,
-  "caveat_nb": "Ny inntektsgrense gjelder fra 1. august 2027."
- },
- {
-  "id": "sfo-gratis-12-timer",
-  "personas": [
-   "barnefamilie"
-  ],
-  "detail": "6-15",
-  "title_nb": "12 timer gratis SFO for 1.–3. trinn fortsetter",
-  "summary_nb": "Alle elever på 1.–3. trinn har rett til 12 timer gratis SFO i uken. Budsjettet endrer ikke denne ordningen.",
-  "effect": "uendret",
-  "amounts": [],
-  "quote": "Det er innført rett til 12 timar gratis SFO på 1.–3. trinn, og finansieringa av bemanninga i SFO er styrkt.",
-  "source_file": "data/text/prp202620270001_kddddpdfs.txt",
-  "source_title": "Prop. 1 S (2026–2027) Kunnskapsdepartementet",
-  "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175106/",
-  "page": 72,
-  "caveat_nb": "Retten har gjeldt siden 1. august 2026. Budsjettet foreslår ingen ny endring."
- },
- {
-  "id": "skole-smagruppeundervisning",
-  "personas": [
-   "barnefamilie"
-  ],
-  "detail": "6-15",
-  "title_nb": "Mer undervisning i små grupper fra høsten 2027",
-  "summary_nb": "Skolene får penger til flere lærere, slik at elevene får mer av opplæringen i lesing, skriving og regning i mindre grupper. Pengene gjelder særlig 1., 2., 5. og 8. trinn, og noe av dem tas fra leksehjelp.",
-  "effect": "blandet",
-  "kind": "tilbud",
-  "amounts": [],
-  "quote": "Regjeringa foreslår å opprette eit nytt øyremerkt tilskot til smågruppeundervisning. Tilskotet for hausten 2027 er på 465 millionar kroner og kjem i tillegg til dagens lærarnorm.",
-  "source_file": "data/saker/id3174269.txt",
-  "source_title": "Det viktigaste først i skulen",
-  "source_url": "https://www.regjeringen.no/no/aktuelt/satsingar-pa-skulen/id3174269/",
-  "page": null,
-  "caveat_nb": "Fra høsten 2027. Delvis finansiert ved å flytte penger fra leksehjelp."
- },
- {
-  "id": "skole-boker-lesing",
-  "personas": [
-   "barnefamilie"
-  ],
-  "detail": "6-15",
-  "title_nb": "Mer penger til bøker i skole og barnehage",
-  "summary_nb": "Støtten til fysiske lærebøker, skolebibliotek og bøker i barnehagen slås sammen og økes med over 94 millioner kroner, til 339,5 millioner.",
-  "effect": "pluss",
-  "kind": "tilbud",
-  "amounts": [],
-  "quote": "Regjeringa foreslår å auke løyvinga med over 94 millionar kroner til 339,5 millionar kroner til den samanslåtte tilskotsordninga for innkjøp av fysiske bøker i skulen, skulebibliotek og bøker og innkjøp av bøker i barnehage.",
-  "source_file": "data/saker/id3174269.txt",
-  "source_title": "Det viktigaste først i skulen",
-  "source_url": "https://www.regjeringen.no/no/aktuelt/satsingar-pa-skulen/id3174269/",
-  "page": null,
-  "caveat_nb": null
- },
- {
-  "id": "foreldrefradrag-uendret",
-  "personas": [
-   "barnefamilie"
-  ],
-  "detail": null,
-  "title_nb": "Foreldrefradraget for barnepass er uendret",
-  "summary_nb": "Utgifter til barnehage, SFO og annet barnepass kan fortsatt trekkes fra på skatten med inntil 15 000 kroner for ett barn og 10 000 kroner ekstra per barn utover det første.",
-  "effect": "uendret",
-  "amounts": [
-   {
-    "label_nb": "Øvre grense, ett barn",
-    "y2026": 15000,
-    "y2027": 15000,
-    "unit": "kr/år"
-   },
-   {
-    "label_nb": "Tillegg per barn utover det første",
-    "y2026": 10000,
-    "y2027": 10000,
-    "unit": "kr/år"
-   },
-   {
-    "label_nb": "Barn 12 år og eldre med særskilt behov, ett barn",
-    "y2026": 25000,
-    "y2027": 25000,
-    "unit": "kr/år"
-   },
-   {
-    "label_nb": "Barn 12 år og eldre med særskilt behov, per barn utover det første",
-    "y2026": 15000,
-    "y2027": 15000,
-    "unit": "kr/år"
-   }
-  ],
-  "quote": "Foreldrefradrag for legitimerte utgifter til pass og stell av barn Øvre grense13 Ett barn.............................................................................. 15 000 kr 15 000 kr - Tillegg per barn utover det første ................................... 10 000 kr 10 000 kr -",
-  "source_file": "data/text/prp202620270001ls0dddpdfs.txt",
-  "source_title": "Prop. 1 LS (2026–2027) Skatter, avgifter og toll 2027",
-  "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
-  "page": 29,
-  "caveat_nb": "Fradraget gjelder dokumenterte utgifter til pass og stell av barn. De høyere grensene gjelder barn 12 år og eldre med særskilt behov for omsorg og pleie, og de videreføres fra 2026.",
-  "extra_quotes": [
-   {
-    "quote": "For barn 12 år og eldre med særskilt behov for omsorg og pleie videreføres grensene på 25 000 kroner for ett barn og 15 000 kroner per barn utover det første i 2027.",
-    "page": 30
-   }
-  ]
- },
- {
-  "id": "skatt-lavere-inntektsskatt",
-  "personas": [
-   "barnefamilie",
-   "student"
-  ],
-  "detail": null,
-  "title_nb": "Litt lavere inntektsskatt for de fleste",
-  "summary_nb": "Trygdeavgiften senkes og personfradraget økes. En lønnstaker med 750 000 kroner i lønn betaler om lag 1 800 kroner mindre i skatt i 2027.",
-  "effect": "pluss",
-  "amounts": [
-   {
-    "label_nb": "Skattelette, lønn 750 000 kr",
-    "y2026": null,
-    "y2027": 1800,
-    "unit": "kr/år"
-   }
-  ],
-  "quote": "Som et eksempel vil en lønnstaker med 750 000 kroner i lønn og standard fradrag, få redusert skatten med om lag 1 800 kroner i 2027",
-  "source_file": "data/saker/id3174677.txt",
-  "source_title": "Foreslår milliardkutt i inntektsskatten – største på over 20 år",
-  "source_url": "https://www.regjeringen.no/no/aktuelt/foreslar-milliardkutt-i-inntektsskatten-storste-pa-over-20-ar/id3174677/",
-  "page": null,
-  "caveat_nb": "Eksempelet gjelder en lønnstaker med standard fradrag. Hvor stor lettelsen blir, avhenger av inntekten."
- },
- {
-  "id": "barnevern-flere-plasser",
-  "personas": [
-   "barnefamilie"
-  ],
-  "detail": null,
-  "title_nb": "Mer penger til barnevernet",
-  "summary_nb": "Det statlige barnevernet får om lag 510 millioner kroner mer fordi flere barn ventes å trenge plass på barnevernsinstitusjon i 2027.",
-  "effect": "pluss",
-  "kind": "tilbud",
-  "amounts": [],
-  "quote": "Det er anslått at flere barn vil ha behov for institusjonsplass i barnevernet i 2027. Regjeringen foreslår derfor å øke bevilgningen til det statlige barnevernet med om lag 510 mill. kroner",
-  "source_file": "data/text/prp202620270001guldddpdfs.txt",
-  "source_title": "Prop. 1 S (2026–2027) Statsbudsjettet 2027 (Gul bok)",
-  "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175738/",
-  "page": 30,
-  "caveat_nb": "Gjelder barn og familier som får hjelp fra barnevernet."
- },
- {
-  "id": "bortebuarstipend-okes",
-  "personas": [
-   "barnefamilie",
-   "student"
-  ],
-  "detail": "16-18",
-  "title_nb": "Borteboerstipendet øker til 7 310 kr i måneden",
-  "summary_nb": "Elever på videregående som bor borte fra foreldrene, får mer i borteboerstipend. Stipendet skal heretter følge lønnsveksten i stedet for prisveksten.",
-  "effect": "pluss",
-  "kind": "far",
-  "amounts": [
-   {
-    "label_nb": "Borteboerstipend",
-    "y2026": 7015,
-    "y2027": 7310,
-    "unit": "kr/mnd"
-   }
-  ],
-  "quote": "Med forslaget vil bortebuarstipendet, på same måte som basislånet, auke med 4,21 prosent, frå 7015 kroner til 7310 kroner i månaden.",
-  "source_file": "data/saker/id3174273.txt",
-  "source_title": "Ei historisk endring av studielån og stipend",
-  "source_url": "https://www.regjeringen.no/no/aktuelt/en-historisk-endring-av-studielan-og-stipend/id3174273/",
-  "page": null,
-  "caveat_nb": "Gjelder fra skoleåret 2027–28. Krever vedtak i Stortinget."
- },
- {
-  "id": "studielan-basislan-g",
-  "personas": [
-   "student"
-  ],
-  "detail": null,
-  "title_nb": "Studielånet øker med litt over 7 000 kr",
-  "summary_nb": "Basislånet fra Lånekassen skal heretter følge lønnsveksten (grunnbeløpet i folketrygden) i stedet for prisveksten. For studieåret 2027–28 betyr det 4,21 prosent mer, litt over 7 000 kroner.",
-  "effect": "pluss",
-  "kind": "far",
-  "amounts": [
-   {
-    "label_nb": "Økning i basislånet per studieår (litt over)",
-    "y2026": null,
-    "y2027": 7000,
-    "unit": "kr/år"
-   }
-  ],
-  "quote": "Med forslaget vil basislånet for studieåret 2027-28 auke med 4,21 prosent, som er litt over 7 000 kroner samanlikna med studieåret 2026-27.",
-  "source_file": "data/saker/id3174273.txt",
-  "source_title": "Ei historisk endring av studielån og stipend",
-  "source_url": "https://www.regjeringen.no/no/aktuelt/en-historisk-endring-av-studielan-og-stipend/id3174273/",
-  "page": null,
-  "caveat_nb": "Gjelder fra studieåret 2027–28 (fra høsten 2027). Krever vedtak i Stortinget."
- },
- {
-  "id": "studiestotte-prisjustering",
-  "personas": [
-   "student"
-  ],
-  "detail": null,
-  "title_nb": "Andre stipend og lån justeres for prisvekst",
-  "summary_nb": "De øvrige satsene i studiestøtten, utenom basislånet og borteboerstipendet, økes med 3,8 prosent for å holde tritt med prisene.",
-  "effect": "pluss",
-  "kind": "far",
-  "amounts": [],
-  "quote": "prisvekstjustering på 3,8 pst. av dei resterande utdanningsstøttesatsane for studieåret 2027– 28",
-  "source_file": "data/text/prp202620270001_kddddpdfs.txt",
-  "source_title": "Prop. 1 S (2026–2027) Kunnskapsdepartementet",
-  "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175106/",
-  "page": 207,
-  "caveat_nb": "Gjelder fra studieåret 2027–28."
- },
- {
-  "id": "studentboliger-3050",
-  "personas": [
-   "student"
-  ],
-  "detail": null,
-  "title_nb": "3 050 nye studentboliger",
-  "summary_nb": "Regjeringen vil gi støtte til å bygge eller pusse opp 3 050 studenthybler. Steder der det er få studentboliger og stort press, blir prioritert.",
-  "effect": "pluss",
-  "kind": "tilbud",
-  "amounts": [],
-  "quote": "Regjeringa foreslår å gi tilsegn til å bygge eller rehabilitere 3 050 fleire studenthyblar. Pressområde med låg dekningsgrad vil bli prioritert.",
-  "source_file": "data/saker/id3174273.txt",
-  "source_title": "Ei historisk endring av studielån og stipend",
-  "source_url": "https://www.regjeringen.no/no/aktuelt/en-historisk-endring-av-studielan-og-stipend/id3174273/",
-  "page": null,
-  "caveat_nb": "Det tar tid å bygge boligene, så de blir ikke klare i 2027."
- },
- {
-  "id": "studentboliger-stromstotte",
-  "personas": [
-   "student"
-  ],
-  "detail": null,
-  "title_nb": "Strømstøtte skal hindre høyere husleie i studentboliger",
-  "summary_nb": "Studentsamskipnader og studentboligstiftelser får 60 millioner kroner i strømstøtte. Den gjelder boliger med felles strømmåling og skal hindre at husleien må settes opp.",
-  "effect": "pluss",
-  "kind": "tilbud",
-  "amounts": [],
-  "quote": "Regjeringa foreslår òg 60 millionar til ordninga med straumstøtte til studentsamskipnadene og studentbustadstiftingane. Pengane skal kompensere for auka straumutgifter i studentbustader med felles straummåling, slik at husleiga ikkje må setjast opp.",
-  "source_file": "data/saker/id3174273.txt",
-  "source_title": "Ei historisk endring av studielån og stipend",
-  "source_url": "https://www.regjeringen.no/no/aktuelt/en-historisk-endring-av-studielan-og-stipend/id3174273/",
-  "page": null,
-  "caveat_nb": "Gjelder bare studentboliger med felles strømmåling."
- },
- {
-  "id": "folkehogskole-mindre-stipend",
-  "personas": [
-   "student"
-  ],
-  "detail": null,
-  "title_nb": "Folkehøgskoleelever får mindre av lånet gjort om til stipend",
-  "summary_nb": "I dag kan 40 prosent av basislånet gjøres om til stipend når du fullfører folkehøgskole. Dette foreslås kuttet til 15 prosent, altså det samme som studenter får for beståtte studiepoeng.",
-  "effect": "minus",
-  "kind": "far",
-  "amounts": [
-   {
-    "label_nb": "Andel av basislånet som blir stipend",
-    "y2026": 40,
-    "y2027": 15,
-    "unit": "prosent"
-   }
-  ],
-  "quote": "Det innebærer at omgjøringen av lån til stipend reduseres fra 40 pst. til 15 pst. for folkehøgskoleelever.",
-  "source_file": "data/text/prp202620270001guldddpdfs.txt",
-  "source_title": "Prop. 1 S (2026–2027) Statsbudsjettet 2027 (Gul bok)",
-  "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175738/",
-  "page": 22,
-  "caveat_nb": "Gjelder fra studieåret 2027–28. Krever vedtak i Stortinget."
- },
- {
-  "id": "personfradrag-okes",
-  "personas": [
-   "student"
-  ],
-  "detail": null,
-  "title_nb": "Personfradraget øker til 120 180 kr",
-  "summary_nb": "Personfradraget er den delen av inntekten du ikke betaler vanlig inntektsskatt av. Det øker, så du betaler litt mindre skatt på for eksempel en deltidsjobb ved siden av studiene.",
-  "effect": "pluss",
-  "amounts": [
-   {
-    "label_nb": "Personfradrag",
-    "y2026": 114540,
-    "y2027": 120180,
-    "unit": "kr/år"
-   }
-  ],
-  "quote": "Personfradrag............................................................... 114 540 kr 120 180 kr 4,9 pst.",
-  "source_file": "data/text/prp202620270001ls0dddpdfs.txt",
-  "source_title": "Prop. 1 LS (2026–2027) Skatter, avgifter og toll 2027",
-  "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
-  "page": 27,
-  "caveat_nb": "Gjelder alle skattytere fra inntektsåret 2027."
- }
+  {
+    "id": "barnetrygd-uendret",
+    "personas": [
+      "barnefamilie"
+    ],
+    "detail": null,
+    "title_nb": "Barnetrygden blir stående på 2 012 kr i måneden",
+    "summary_nb": "Barnetrygden økes ikke i 2027. Den er fortsatt 2 012 kroner i måneden per barn under 18 år. Enslige forsørgere får fortsatt utvidet barnetrygd, og noen får i tillegg småbarnstillegg.",
+    "effect": "uendret",
+    "kind": "far",
+    "amounts": [
+      {
+        "label_nb": "Ordinær barnetrygd per barn",
+        "y2026": 2012,
+        "y2027": 2012,
+        "unit": "kr/mnd"
+      },
+      {
+        "label_nb": "Utvidet barnetrygd (enslig mor eller far)",
+        "y2026": 2572,
+        "y2027": 2572,
+        "unit": "kr/mnd"
+      },
+      {
+        "label_nb": "Småbarnstillegg (enslige forsørgere med barn 0–3 år)",
+        "y2026": null,
+        "y2027": 712,
+        "unit": "kr/mnd"
+      }
+    ],
+    "quote": "Tabell 4.2 Forslag til satsar for barnetrygd (kroner) Satsar per månad Satsar per år Ordinær barnetrygd til barn 0–18 år 2012 24 144 Utvida barnetrygd til einsleg mor eller far for barn 0–18 år 2 572 30 864 Småbarnstillegg til einslege forsørgjarar med barn 0–3 år 712 8 544",
+    "source_file": "data/text/prp202620270001bfddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Barne- og familiedepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175032/",
+    "page": 77,
+    "caveat_nb": "Satsene ble sist justert 1. februar 2026 og er foreslått videreført uendret i 2027, noe som betyr at de ikke følger prisveksten. Krever vedtak i Stortinget.",
+    "extra_quotes": [
+      {
+        "quote": "Den ordinære barnetrygda for alle barn 0–18 år er no 2012 kroner per månad.",
+        "page": 14
+      },
+      {
+        "quote": "utvida barnetrygd er frå 1. februar 2026 på 2 572 kroner per månad.",
+        "page": 51
+      }
+    ]
+  },
+  {
+    "id": "engangsstonad-kuttes",
+    "personas": [
+      "barnefamilie"
+    ],
+    "detail": "0-1",
+    "title_nb": "Engangsstønaden ved fødsel kuttes til 67 100 kr",
+    "summary_nb": "Engangsstønaden går til mødre (og noen fedre) som ikke har rett på foreldrepenger. Den foreslås redusert fra 92 648 til 67 100 kroner per barn for barn født eller adoptert fra 1. juli 2027.",
+    "effect": "minus",
+    "kind": "far",
+    "amounts": [
+      {
+        "label_nb": "Engangsstønad per barn",
+        "y2026": 92648,
+        "y2027": 67100,
+        "unit": "kr"
+      }
+    ],
+    "quote": "satsen frå 1. juli 2027 frå 92 648 kro- ner til 67 100 kroner. Eit slikt stønadsnivå ligg nærare utgiftene familiar har til barnet det fyrste året.",
+    "source_file": "data/text/prp202620270001bfddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Barne- og familiedepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175032/",
+    "page": 156,
+    "caveat_nb": "Gjelder fra 1. juli 2027. Frem til 30. juni 2027 er satsen 92 648 kr. Krever vedtak i Stortinget."
+  },
+  {
+    "id": "rs-virus-spedbarn",
+    "personas": [
+      "barnefamilie"
+    ],
+    "detail": "0-1",
+    "title_nb": "Gratis beskyttelse mot RS-virus for spedbarn",
+    "summary_nb": "Spedbarn får et gratis tilbud om beskyttelse mot RS-virus gjennom barnevaksinasjonsprogrammet. I dag kjøper mange foreldre dette selv.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "amounts": [],
+    "quote": "Regjeringen foreslår å sette av 55 millioner kroner for at tilbudet om gratis beskyttelse mot RS-viruset blir en del av barnevaksinasjonsprogrammet fra og med 1. juli 2027",
+    "source_file": "data/saker/id3174122.txt",
+    "source_title": "Regjeringen vil ha beskyttelse mot RS-virus inn i barnevaksinasjonsprogrammet",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringen-vil-ha-beskyttelse-mot-rs-virus-inn-i-barnevaksinasjonsprogrammet/id3174122/",
+    "page": null,
+    "caveat_nb": "Gjelder fra 1. juli 2027. Det er ikke bestemt ennå om det blir antistoff til spedbarnet eller vaksine til den gravide."
+  },
+  {
+    "id": "kontantstotte-uendret",
+    "personas": [
+      "barnefamilie"
+    ],
+    "detail": "1-5",
+    "title_nb": "Kontantstøtten holdes på 7 500 kr i måneden",
+    "summary_nb": "Kontantstøtte for barn mellom 13 og 19 måneder som ikke har full barnehageplass videreføres med samme satser. Full sats er 7 500 kroner i måneden, og den blir lavere jo flere timer barnet er i barnehagen.",
+    "effect": "uendret",
+    "kind": "far",
+    "amounts": [
+      {
+        "label_nb": "Full kontantstøtte (ingen barnehageplass)",
+        "y2026": null,
+        "y2027": 7500,
+        "unit": "kr/mnd"
+      },
+      {
+        "label_nb": "Til og med 8 timer barnehage per uke",
+        "y2026": null,
+        "y2027": 6000,
+        "unit": "kr/mnd"
+      }
+    ],
+    "quote": "føre vidare satsane for kontantstøtte med uendra nivå",
+    "source_file": "data/text/prp202620270001bfddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Barne- og familiedepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175032/",
+    "page": 76,
+    "caveat_nb": "Satsene er foreslått videreført uendret i kroner. De følger ikke prisveksten, så de er verdt litt mindre. Krever vedtak i Stortinget.",
+    "extra_quotes": [
+      {
+        "quote": "Ikkje bruk av barnehageplass 100 7 50 0 Til og med 8 timar 80 6 00 0",
+        "page": 76
+      }
+    ]
+  },
+  {
+    "id": "barnehage-makspris",
+    "personas": [
+      "barnefamilie"
+    ],
+    "detail": "1-5",
+    "title_nb": "Barnehageprisen holdes på 1 200 kr i måneden",
+    "summary_nb": "Makspris for en heltidsplass i barnehage blir fortsatt 1 200 kroner i måneden. I de minst sentrale kommunene er prisen 700 kroner, og i Finnmark og deler av Nord-Troms er barnehagen gratis.",
+    "effect": "uendret",
+    "kind": "betaler",
+    "amounts": [
+      {
+        "label_nb": "Makspris, hele landet",
+        "y2026": 1200,
+        "y2027": 1200,
+        "unit": "kr/mnd"
+      },
+      {
+        "label_nb": "Makspris, minst sentrale kommuner (sone 5 og 6)",
+        "y2026": 700,
+        "y2027": 700,
+        "unit": "kr/mnd"
+      }
+    ],
+    "quote": "Maksprisen for foreldrebetaling i barnehage blir fryst på 1 200 kronar per månad i 2027. I sentralitetssone 5 og 6 blir maksprisen 700 kroner, og i innsatssona i Nord-Troms og Finnmark er barnehage framleis heilt gratis.",
+    "source_file": "data/saker/id3174270.txt",
+    "source_title": "Regjeringa vidarefører den historiske låge maksprisen i barnehage",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringa-vidareforer-den-historiske-lage-maksprisen-i-barnehage/id3174270/",
+    "page": null,
+    "caveat_nb": "Prisen står stille i kroner, så den blir litt lavere når man tar hensyn til prisveksten. Gjelder fra 1. januar 2027.",
+    "extra_quotes": [
+      {
+        "quote": "i revidert budsjett blei han satt ned til 1 200 kroner per månad nasjonalt og 700 kroner per månad i sentralitetssone 5 og 6."
+      }
+    ]
+  },
+  {
+    "id": "barnehage-soskenmoderasjon",
+    "personas": [
+      "barnefamilie"
+    ],
+    "detail": "1-5",
+    "title_nb": "Søskenrabatt og gratis plass for tredje barn fortsetter",
+    "summary_nb": "Med flere barn i barnehagen samtidig blir det billigere for barn nummer to, og barn nummer tre går gratis.",
+    "effect": "uendret",
+    "amounts": [],
+    "quote": "Det er framleis søskenmoderasjon med redusert foreldrebetaling for det andre barnet, og gratis barnehage for det tredje barnet når barna går i barnehagen samtidig.",
+    "source_file": "data/saker/id3174270.txt",
+    "source_title": "Regjeringa vidarefører den historiske låge maksprisen i barnehage",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringa-vidareforer-den-historiske-lage-maksprisen-i-barnehage/id3174270/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "barnehage-gratis-kjernetid",
+    "personas": [
+      "barnefamilie"
+    ],
+    "detail": "1-5",
+    "title_nb": "20 timer gratis barnehage for lavinntektsfamilier",
+    "summary_nb": "Barn mellom 2 og 5 år i familier med lav inntekt får fortsatt 20 timer gratis barnehage i uken. Inntektsgrensen settes til 718 780 kroner i året.",
+    "effect": "uendret",
+    "amounts": [
+      {
+        "label_nb": "Inntektsgrense for gratis kjernetid",
+        "y2026": null,
+        "y2027": 718780,
+        "unit": "kr/år"
+      }
+    ],
+    "quote": "Regjeringa foreslår å vidareføre den nasjonale ordninga med gratis kjernetid 20 timar per veke for barn i alderen 2–5 år for familiar med låg inn- tekt. Inntektsgrensa blir sett til 718 780 kroner frå 1. august 2027.",
+    "source_file": "data/text/prp202620270001_kddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Kunnskapsdepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175106/",
+    "page": 129,
+    "caveat_nb": "Ny inntektsgrense gjelder fra 1. august 2027."
+  },
+  {
+    "id": "sfo-gratis-12-timer",
+    "personas": [
+      "barnefamilie"
+    ],
+    "detail": "6-15",
+    "title_nb": "12 timer gratis SFO for 1.–3. trinn fortsetter",
+    "summary_nb": "Alle elever på 1.–3. trinn har rett til 12 timer gratis SFO i uken. Budsjettet endrer ikke denne ordningen.",
+    "effect": "uendret",
+    "amounts": [],
+    "quote": "Det er innført rett til 12 timar gratis SFO på 1.–3. trinn, og finansieringa av bemanninga i SFO er styrkt.",
+    "source_file": "data/text/prp202620270001_kddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Kunnskapsdepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175106/",
+    "page": 72,
+    "caveat_nb": "Retten har gjeldt siden 1. august 2026. Budsjettet foreslår ingen ny endring."
+  },
+  {
+    "id": "skole-smagruppeundervisning",
+    "personas": [
+      "barnefamilie"
+    ],
+    "detail": "6-15",
+    "title_nb": "Mer undervisning i små grupper fra høsten 2027",
+    "summary_nb": "Skolene får penger til flere lærere, slik at elevene får mer av opplæringen i lesing, skriving og regning i mindre grupper. Pengene gjelder særlig 1., 2., 5. og 8. trinn, og noe av dem tas fra leksehjelp.",
+    "effect": "blandet",
+    "kind": "tilbud",
+    "amounts": [],
+    "quote": "Regjeringa foreslår å opprette eit nytt øyremerkt tilskot til smågruppeundervisning. Tilskotet for hausten 2027 er på 465 millionar kroner og kjem i tillegg til dagens lærarnorm.",
+    "source_file": "data/saker/id3174269.txt",
+    "source_title": "Det viktigaste først i skulen",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/satsingar-pa-skulen/id3174269/",
+    "page": null,
+    "caveat_nb": "Fra høsten 2027. Delvis finansiert ved å flytte penger fra leksehjelp."
+  },
+  {
+    "id": "skole-boker-lesing",
+    "personas": [
+      "barnefamilie"
+    ],
+    "detail": "6-15",
+    "title_nb": "Mer penger til bøker i skole og barnehage",
+    "summary_nb": "Støtten til fysiske lærebøker, skolebibliotek og bøker i barnehagen slås sammen og økes med over 94 millioner kroner, til 339,5 millioner.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "amounts": [],
+    "quote": "Regjeringa foreslår å auke løyvinga med over 94 millionar kroner til 339,5 millionar kroner til den samanslåtte tilskotsordninga for innkjøp av fysiske bøker i skulen, skulebibliotek og bøker og innkjøp av bøker i barnehage.",
+    "source_file": "data/saker/id3174269.txt",
+    "source_title": "Det viktigaste først i skulen",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/satsingar-pa-skulen/id3174269/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "foreldrefradrag-uendret",
+    "personas": [
+      "barnefamilie"
+    ],
+    "detail": null,
+    "title_nb": "Foreldrefradraget for barnepass er uendret",
+    "summary_nb": "Utgifter til barnehage, SFO og annet barnepass kan fortsatt trekkes fra på skatten med inntil 15 000 kroner for ett barn og 10 000 kroner ekstra per barn utover det første.",
+    "effect": "uendret",
+    "amounts": [
+      {
+        "label_nb": "Øvre grense, ett barn",
+        "y2026": 15000,
+        "y2027": 15000,
+        "unit": "kr/år"
+      },
+      {
+        "label_nb": "Tillegg per barn utover det første",
+        "y2026": 10000,
+        "y2027": 10000,
+        "unit": "kr/år"
+      },
+      {
+        "label_nb": "Barn 12 år og eldre med særskilt behov, ett barn",
+        "y2026": 25000,
+        "y2027": 25000,
+        "unit": "kr/år"
+      },
+      {
+        "label_nb": "Barn 12 år og eldre med særskilt behov, per barn utover det første",
+        "y2026": 15000,
+        "y2027": 15000,
+        "unit": "kr/år"
+      }
+    ],
+    "quote": "Foreldrefradrag for legitimerte utgifter til pass og stell av barn Øvre grense13 Ett barn.............................................................................. 15 000 kr 15 000 kr - Tillegg per barn utover det første ................................... 10 000 kr 10 000 kr -",
+    "source_file": "data/text/prp202620270001ls0dddpdfs.txt",
+    "source_title": "Prop. 1 LS (2026–2027) Skatter, avgifter og toll 2027",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
+    "page": 29,
+    "caveat_nb": "Fradraget gjelder dokumenterte utgifter til pass og stell av barn. De høyere grensene gjelder barn 12 år og eldre med særskilt behov for omsorg og pleie, og de videreføres fra 2026.",
+    "extra_quotes": [
+      {
+        "quote": "For barn 12 år og eldre med særskilt behov for omsorg og pleie videreføres grensene på 25 000 kroner for ett barn og 15 000 kroner per barn utover det første i 2027.",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "skatt-lavere-inntektsskatt",
+    "personas": [
+      "barnefamilie",
+      "student"
+    ],
+    "detail": null,
+    "title_nb": "Litt lavere inntektsskatt for de fleste",
+    "summary_nb": "Trygdeavgiften senkes og personfradraget økes. En lønnstaker med 750 000 kroner i lønn betaler om lag 1 800 kroner mindre i skatt i 2027.",
+    "effect": "pluss",
+    "amounts": [
+      {
+        "label_nb": "Skattelette, lønn 750 000 kr",
+        "y2026": null,
+        "y2027": 1800,
+        "unit": "kr/år"
+      }
+    ],
+    "quote": "Som et eksempel vil en lønnstaker med 750 000 kroner i lønn og standard fradrag, få redusert skatten med om lag 1 800 kroner i 2027",
+    "source_file": "data/saker/id3174677.txt",
+    "source_title": "Foreslår milliardkutt i inntektsskatten – største på over 20 år",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/foreslar-milliardkutt-i-inntektsskatten-storste-pa-over-20-ar/id3174677/",
+    "page": null,
+    "caveat_nb": "Eksempelet gjelder en lønnstaker med standard fradrag. Hvor stor lettelsen blir, avhenger av inntekten."
+  },
+  {
+    "id": "barnevern-flere-plasser",
+    "personas": [
+      "barnefamilie"
+    ],
+    "detail": null,
+    "title_nb": "Mer penger til barnevernet",
+    "summary_nb": "Det statlige barnevernet får om lag 510 millioner kroner mer fordi flere barn ventes å trenge plass på barnevernsinstitusjon i 2027.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "amounts": [],
+    "quote": "Det er anslått at flere barn vil ha behov for institusjonsplass i barnevernet i 2027. Regjeringen foreslår derfor å øke bevilgningen til det statlige barnevernet med om lag 510 mill. kroner",
+    "source_file": "data/text/prp202620270001guldddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Statsbudsjettet 2027 (Gul bok)",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175738/",
+    "page": 30,
+    "caveat_nb": "Gjelder barn og familier som får hjelp fra barnevernet."
+  },
+  {
+    "id": "bortebuarstipend-okes",
+    "personas": [
+      "barnefamilie",
+      "student"
+    ],
+    "detail": "16-18",
+    "title_nb": "Borteboerstipendet øker til 7 310 kr i måneden",
+    "summary_nb": "Elever på videregående som bor borte fra foreldrene, får mer i borteboerstipend. Stipendet skal heretter følge lønnsveksten i stedet for prisveksten.",
+    "effect": "pluss",
+    "kind": "far",
+    "amounts": [
+      {
+        "label_nb": "Borteboerstipend",
+        "y2026": 7015,
+        "y2027": 7310,
+        "unit": "kr/mnd"
+      }
+    ],
+    "quote": "Med forslaget vil bortebuarstipendet, på same måte som basislånet, auke med 4,21 prosent, frå 7015 kroner til 7310 kroner i månaden.",
+    "source_file": "data/saker/id3174273.txt",
+    "source_title": "Ei historisk endring av studielån og stipend",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/en-historisk-endring-av-studielan-og-stipend/id3174273/",
+    "page": null,
+    "caveat_nb": "Gjelder fra skoleåret 2027–28. Krever vedtak i Stortinget."
+  },
+  {
+    "id": "studielan-basislan-g",
+    "personas": [
+      "student"
+    ],
+    "detail": null,
+    "title_nb": "Studielånet øker med litt over 7 000 kr",
+    "summary_nb": "Basislånet fra Lånekassen skal heretter følge lønnsveksten (grunnbeløpet i folketrygden) i stedet for prisveksten. For studieåret 2027–28 betyr det 4,21 prosent mer, litt over 7 000 kroner.",
+    "effect": "pluss",
+    "kind": "far",
+    "amounts": [
+      {
+        "label_nb": "Økning i basislånet per studieår (litt over)",
+        "y2026": null,
+        "y2027": 7000,
+        "unit": "kr/år"
+      }
+    ],
+    "quote": "Med forslaget vil basislånet for studieåret 2027-28 auke med 4,21 prosent, som er litt over 7 000 kroner samanlikna med studieåret 2026-27.",
+    "source_file": "data/saker/id3174273.txt",
+    "source_title": "Ei historisk endring av studielån og stipend",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/en-historisk-endring-av-studielan-og-stipend/id3174273/",
+    "page": null,
+    "caveat_nb": "Gjelder fra studieåret 2027–28 (fra høsten 2027). Krever vedtak i Stortinget."
+  },
+  {
+    "id": "studiestotte-prisjustering",
+    "personas": [
+      "student"
+    ],
+    "detail": null,
+    "title_nb": "Andre stipend og lån justeres for prisvekst",
+    "summary_nb": "De øvrige satsene i studiestøtten, utenom basislånet og borteboerstipendet, økes med 3,8 prosent for å holde tritt med prisene.",
+    "effect": "pluss",
+    "kind": "far",
+    "amounts": [],
+    "quote": "prisvekstjustering på 3,8 pst. av dei resterande utdanningsstøttesatsane for studieåret 2027– 28",
+    "source_file": "data/text/prp202620270001_kddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Kunnskapsdepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175106/",
+    "page": 207,
+    "caveat_nb": "Gjelder fra studieåret 2027–28."
+  },
+  {
+    "id": "studentboliger-3050",
+    "personas": [
+      "student"
+    ],
+    "detail": null,
+    "title_nb": "3 050 nye studentboliger",
+    "summary_nb": "Regjeringen vil gi støtte til å bygge eller pusse opp 3 050 studenthybler. Steder der det er få studentboliger og stort press, blir prioritert.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "amounts": [],
+    "quote": "Regjeringa foreslår å gi tilsegn til å bygge eller rehabilitere 3 050 fleire studenthyblar. Pressområde med låg dekningsgrad vil bli prioritert.",
+    "source_file": "data/saker/id3174273.txt",
+    "source_title": "Ei historisk endring av studielån og stipend",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/en-historisk-endring-av-studielan-og-stipend/id3174273/",
+    "page": null,
+    "caveat_nb": "Det tar tid å bygge boligene, så de blir ikke klare i 2027."
+  },
+  {
+    "id": "studentboliger-stromstotte",
+    "personas": [
+      "student"
+    ],
+    "detail": null,
+    "title_nb": "Strømstøtte skal hindre høyere husleie i studentboliger",
+    "summary_nb": "Studentsamskipnader og studentboligstiftelser får 60 millioner kroner i strømstøtte. Den gjelder boliger med felles strømmåling og skal hindre at husleien må settes opp.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "amounts": [],
+    "quote": "Regjeringa foreslår òg 60 millionar til ordninga med straumstøtte til studentsamskipnadene og studentbustadstiftingane. Pengane skal kompensere for auka straumutgifter i studentbustader med felles straummåling, slik at husleiga ikkje må setjast opp.",
+    "source_file": "data/saker/id3174273.txt",
+    "source_title": "Ei historisk endring av studielån og stipend",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/en-historisk-endring-av-studielan-og-stipend/id3174273/",
+    "page": null,
+    "caveat_nb": "Gjelder bare studentboliger med felles strømmåling."
+  },
+  {
+    "id": "folkehogskole-mindre-stipend",
+    "personas": [
+      "student"
+    ],
+    "detail": null,
+    "title_nb": "Folkehøgskoleelever får mindre av lånet gjort om til stipend",
+    "summary_nb": "I dag kan 40 prosent av basislånet gjøres om til stipend når du fullfører folkehøgskole. Dette foreslås kuttet til 15 prosent, altså det samme som studenter får for beståtte studiepoeng.",
+    "effect": "minus",
+    "kind": "far",
+    "amounts": [
+      {
+        "label_nb": "Andel av basislånet som blir stipend",
+        "y2026": 40,
+        "y2027": 15,
+        "unit": "prosent"
+      }
+    ],
+    "quote": "Det innebærer at omgjøringen av lån til stipend reduseres fra 40 pst. til 15 pst. for folkehøgskoleelever.",
+    "source_file": "data/text/prp202620270001guldddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Statsbudsjettet 2027 (Gul bok)",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175738/",
+    "page": 22,
+    "caveat_nb": "Gjelder fra studieåret 2027–28. Krever vedtak i Stortinget."
+  },
+  {
+    "id": "personfradrag-okes",
+    "personas": [
+      "student"
+    ],
+    "detail": null,
+    "title_nb": "Personfradraget øker til 120 180 kr",
+    "summary_nb": "Personfradraget er den delen av inntekten du ikke betaler vanlig inntektsskatt av. Det øker, så du betaler litt mindre skatt på for eksempel en deltidsjobb ved siden av studiene.",
+    "effect": "pluss",
+    "amounts": [
+      {
+        "label_nb": "Personfradrag",
+        "y2026": 114540,
+        "y2027": 120180,
+        "unit": "kr/år"
+      }
+    ],
+    "quote": "Personfradrag............................................................... 114 540 kr 120 180 kr 4,9 pst.",
+    "source_file": "data/text/prp202620270001ls0dddpdfs.txt",
+    "source_title": "Prop. 1 LS (2026–2027) Skatter, avgifter og toll 2027",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
+    "page": 27,
+    "caveat_nb": "Gjelder alle skattytere fra inntektsåret 2027."
+  }
 ]
