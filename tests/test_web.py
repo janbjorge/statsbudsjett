@@ -20,6 +20,22 @@ def test_front_page_renders_every_section() -> None:
         assert f'id="{anchor}"' in html
 
 
+def test_oil_page_states_the_2025_split() -> None:
+    html = client.get("/oljefondet").text
+    # NB 2027 figure 3.6 at year-end 2025, nb1 grouping
+    assert "Avkastning 13\u00a0371,9 mrd. kr. Olje inn 9\u00a0561,9" in html
+    assert "9\u00a0561,9 mrd. kr" in html
+    assert "\u22124\u00a0057,3 mrd. kr" in html
+    assert "2\u00a0391,4 mrd. kr" in html
+    assert "21\u00a0267,9 mrd. kr" in html
+    assert "kursgevinster" in html
+    assert 'data-parts="' in html
+    assert "<title>Avkastning 13\u00a0371,9 mrd. kr. Olje inn 9\u00a0561,9</title>" in html
+    assert 'href="/oljefondet"' in client.get("/").text
+    r = client.get("/olje", follow_redirects=False)
+    assert r.status_code == 301 and r.headers["location"] == "/oljefondet"
+
+
 def test_oil_section_shows_fund_size_spending_and_share() -> None:
     html = client.get("/").text
     # NB 2027 figures 3.6 (21 267,9 / 613,3 mrd. kr), 3.3 and 3.4

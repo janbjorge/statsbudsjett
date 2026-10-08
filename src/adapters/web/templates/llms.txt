@@ -24,6 +24,7 @@ Read-only, no key, CORS open. Field names carry their unit: `_mrd_kr` is billion
 - [Tax receipt]({{ base }}api/kvittering?skatt=150000): where a given tax amount goes
 - [Everyday units]({{ base }}api/visste-du): per innbygger, per day, per second
 - [Oil fund over time: budget share, share of the fund spent, fund value]({{ base }}api/oljefond)
+- [Oil fund value split: oil in, withdrawals, returns, krone]({{ base }}api/oljefond/bidrag)
 
 ## Downloads
 
@@ -35,6 +36,7 @@ Read-only, no key, CORS open. Field names carry their unit: `_mrd_kr` is billion
 - [Explorer]({{ base }}): overview, "For deg", tax receipt, budget tree, changes, kommune, oil money
 - [Money flows]({{ base }}flyt): Sankey diagram for 2026, 2027 and the difference
 - [Visste du?]({{ base }}visste-du): totals in everyday units
+- [Oljefondets verdi]({{ base }}oljefondet): what built the fund (oil in, withdrawals, returns, the krone)
 - [Spør en KI]({{ base }}ki): how readers can point ChatGPT, Claude or their own GPT at this site
 
 ## Method and sources

@@ -247,6 +247,15 @@ class FundYear(Out):
     fondsverdi_mrd_kr: float | None
 
 
+class FundParts(Out):
+    aar: int
+    olje_inn_mrd_kr: float = Field(description="Cumulative petroleum cash flow into the fund")
+    uttak_mrd_kr: float = Field(description="Cumulative withdrawal (oil-corrected deficit); negative")
+    avkastning_mrd_kr: float = Field(description="Cumulative nominal return after management costs")
+    kronekurs_mrd_kr: float = Field(description="Cumulative effect of the krone exchange rate")
+    fondsverdi_mrd_kr: float
+
+
 def _fact(f: Fact) -> FactOut:
     return FactOut(
         id=f.id, personer=list(f.personas), tittel=f.title, oppsummering=f.summary,
@@ -427,6 +436,19 @@ def build(queries: Queries) -> FastAPI:
                 forventet_realavkastning_prosent=f.expected, fondsverdi_mrd_kr=f.size,
             )
             for f in queries.budget.fund
+        ]
+
+    @api.get(
+        "/oljefond/bidrag",
+        summary="Cumulative contributions to the oil fund's market value (NB 2027 figure 3.6)",
+    )
+    def fund_parts() -> list[FundParts]:
+        return [
+            FundParts(
+                aar=p.year, olje_inn_mrd_kr=p.oil, uttak_mrd_kr=p.withdraw, avkastning_mrd_kr=p.returns,
+                kronekurs_mrd_kr=p.krone, fondsverdi_mrd_kr=p.size,
+            )
+            for p in queries.budget.fund_parts
         ]
 
     return api

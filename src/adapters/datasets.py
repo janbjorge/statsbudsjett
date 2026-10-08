@@ -4,7 +4,7 @@ from pathlib import Path
 
 import orjson
 
-from core.budget import Budget, Chapter, Flow, FundYear, Kommune, Post, Side
+from core.budget import Budget, Chapter, Flow, FundParts, FundYear, Kommune, Post, Side
 from core.facts import Amount, Effect, Fact, Kind
 from core.tax import Growth, TaxPages, TaxTable
 
@@ -49,6 +49,9 @@ class JsonDatasets:
                 for k in d["kommuner"]
             ),
             fund=tuple(FundYear(f["year"], f["value"], f["forecast"], f["spend"], f["expected"], f["size"]) for f in d["fund"]),
+            fund_parts=tuple(
+                FundParts(p["year"], p["oil"], p["withdraw"], p["returns"], p["krone"], p["size"]) for p in d["fund_parts"]
+            ),
         )
 
     def _read_facts(self) -> list[Fact]:

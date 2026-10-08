@@ -10,8 +10,20 @@ client = TestClient(app)
 
 def test_openapi_lists_every_endpoint() -> None:
     paths = client.get("/api/openapi.json").json()["paths"]
-    for path in ("/oversikt", "/meg", "/fakta", "/utforsk", "/sok", "/endringer", "/inntekter", "/kommune", "/kommuner", "/kvittering", "/visste-du", "/oljefond", "/flyt", "/tilbud"):
+    for path in ("/oversikt", "/meg", "/fakta", "/utforsk", "/sok", "/endringer", "/inntekter", "/kommune", "/kommuner", "/kvittering", "/visste-du", "/oljefond", "/oljefond/bidrag", "/flyt", "/tilbud"):
         assert path in paths, path
+
+
+def test_fund_parts_match_figure_3_6() -> None:
+    rows = client.get("/api/oljefond/bidrag").json()
+    last = rows[-1]
+    assert last["aar"] == 2025
+    assert last["avkastning_mrd_kr"] == 13371.9
+    assert last["olje_inn_mrd_kr"] == 9561.9
+    assert last["uttak_mrd_kr"] == -4057.3
+    assert last["kronekurs_mrd_kr"] == 2391.4
+    assert last["fondsverdi_mrd_kr"] == 21267.9
+    assert rows[0]["aar"] == 1996
 
 
 def test_overview_matches_the_page() -> None:
@@ -106,7 +118,10 @@ def test_sitemap_lists_the_pages_and_each_answers() -> None:
     r = client.get("/sitemap.xml")
     assert r.status_code == 200 and r.headers["content-type"].startswith("application/xml")
     urls = [u.split("</loc>")[0] for u in r.text.split("<loc>")[1:]]
-    assert urls == ["http://testserver/", "http://testserver/flyt", "http://testserver/tilbud", "http://testserver/visste-du", "http://testserver/ki"]
+    assert urls == [
+        "http://testserver/", "http://testserver/flyt", "http://testserver/tilbud",
+        "http://testserver/visste-du", "http://testserver/oljefondet", "http://testserver/ki",
+    ]
     for url in urls:
         assert client.get(url).status_code == 200, url
 

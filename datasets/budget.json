@@ -25479,6 +25479,248 @@
       "size": null
     }
   ],
+  "fund_parts": [
+    {
+      "year": 1996,
+      "oil": 69.9,
+      "withdraw": -22.4,
+      "returns": -0.1,
+      "krone": 0.0,
+      "size": 47.4
+    },
+    {
+      "year": 1997,
+      "oil": 156.7,
+      "withdraw": -48.3,
+      "returns": 0.0,
+      "krone": 5.0,
+      "size": 113.4
+    },
+    {
+      "year": 1998,
+      "oil": 201.7,
+      "withdraw": -60.4,
+      "returns": 12.1,
+      "krone": 18.3,
+      "size": 171.8
+    },
+    {
+      "year": 1999,
+      "oil": 246.4,
+      "withdraw": -80.6,
+      "returns": 35.2,
+      "krone": 21.2,
+      "size": 222.2
+    },
+    {
+      "year": 2000,
+      "oil": 407.7,
+      "withdraw": -91.9,
+      "returns": 40.8,
+      "krone": 29.5,
+      "size": 386.1
+    },
+    {
+      "year": 2001,
+      "oil": 651.0,
+      "withdraw": -83.6,
+      "returns": 31.8,
+      "krone": 14.1,
+      "size": 613.3
+    },
+    {
+      "year": 2002,
+      "oil": 820.2,
+      "withdraw": -127.1,
+      "returns": 1.9,
+      "krone": -86.6,
+      "size": 608.4
+    },
+    {
+      "year": 2003,
+      "oil": 993.9,
+      "withdraw": -196.3,
+      "returns": 92.7,
+      "krone": -45.7,
+      "size": 844.5
+    },
+    {
+      "year": 2004,
+      "oil": 1197.3,
+      "withdraw": -260.7,
+      "returns": 173.8,
+      "krone": -94.9,
+      "size": 1015.4
+    },
+    {
+      "year": 2005,
+      "oil": 1472.8,
+      "withdraw": -315.0,
+      "returns": 299.2,
+      "krone": -59.2,
+      "size": 1397.8
+    },
+    {
+      "year": 2006,
+      "oil": 1828.2,
+      "withdraw": -380.8,
+      "returns": 421.9,
+      "krone": -87.1,
+      "size": 1782.2
+    },
+    {
+      "year": 2007,
+      "oil": 2144.6,
+      "withdraw": -382.1,
+      "returns": 494.9,
+      "krone": -240.6,
+      "size": 2016.9
+    },
+    {
+      "year": 2008,
+      "oil": 2560.4,
+      "withdraw": -412.4,
+      "returns": -140.4,
+      "krone": 265.6,
+      "size": 2273.3
+    },
+    {
+      "year": 2009,
+      "oil": 2840.2,
+      "withdraw": -520.6,
+      "returns": 469.2,
+      "krone": -152.0,
+      "size": 2636.8
+    },
+    {
+      "year": 2010,
+      "oil": 3116.2,
+      "withdraw": -611.3,
+      "returns": 730.1,
+      "krone": -160.5,
+      "size": 3074.5
+    },
+    {
+      "year": 2011,
+      "oil": 3467.0,
+      "withdraw": -688.0,
+      "returns": 641.3,
+      "krone": -111.3,
+      "size": 3309.0
+    },
+    {
+      "year": 2012,
+      "oil": 3862.5,
+      "withdraw": -804.6,
+      "returns": 1086.5,
+      "krone": -330.9,
+      "size": 3813.6
+    },
+    {
+      "year": 2013,
+      "oil": 4207.6,
+      "withdraw": -908.5,
+      "returns": 1775.2,
+      "krone": -39.4,
+      "size": 5034.8
+    },
+    {
+      "year": 2014,
+      "oil": 4519.3,
+      "withdraw": -1070.2,
+      "returns": 2315.6,
+      "krone": 662.8,
+      "size": 6427.5
+    },
+    {
+      "year": 2015,
+      "oil": 4737.6,
+      "withdraw": -1242.8,
+      "returns": 2645.4,
+      "krone": 1331.0,
+      "size": 7471.2
+    },
+    {
+      "year": 2016,
+      "oil": 4862.3,
+      "withdraw": -1468.8,
+      "returns": 3088.4,
+      "krone": 1024.9,
+      "size": 7506.8
+    },
+    {
+      "year": 2017,
+      "oil": 5030.2,
+      "withdraw": -1697.5,
+      "returns": 4111.4,
+      "krone": 1039.6,
+      "size": 8483.7
+    },
+    {
+      "year": 2018,
+      "oil": 5281.1,
+      "withdraw": -1914.6,
+      "returns": 3621.7,
+      "krone": 1263.2,
+      "size": 8251.4
+    },
+    {
+      "year": 2019,
+      "oil": 5538.1,
+      "withdraw": -2153.7,
+      "returns": 5309.5,
+      "krone": 1389.9,
+      "size": 10083.8
+    },
+    {
+      "year": 2020,
+      "oil": 5644.9,
+      "withdraw": -2558.2,
+      "returns": 6373.9,
+      "krone": 1447.8,
+      "size": 10908.5
+    },
+    {
+      "year": 2021,
+      "oil": 5932.4,
+      "withdraw": -2964.7,
+      "returns": 7949.1,
+      "krone": 1423.2,
+      "size": 12340.1
+    },
+    {
+      "year": 2022,
+      "oil": 7217.6,
+      "withdraw": -3160.1,
+      "returns": 6306.7,
+      "krone": 2065.1,
+      "size": 12429.3
+    },
+    {
+      "year": 2023,
+      "oil": 8195.7,
+      "withdraw": -3427.2,
+      "returns": 8513.7,
+      "krone": 2474.5,
+      "size": 15756.7
+    },
+    {
+      "year": 2024,
+      "oil": 8897.8,
+      "withdraw": -3720.3,
+      "returns": 11017.3,
+      "krone": 3546.7,
+      "size": 19741.6
+    },
+    {
+      "year": 2025,
+      "oil": 9561.9,
+      "withdraw": -4057.3,
+      "returns": 13371.9,
+      "krone": 2391.4,
+      "size": 21267.9
+    }
+  ],
   "diff": [
     {
       "level": 0,

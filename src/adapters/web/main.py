@@ -19,7 +19,7 @@ from adapters.datasets import DATASETS, JsonDatasets
 from adapters.web import api, fmt, telemetry
 from adapters.web.params import kroner, profile_from, profile_query
 from app.queries import Queries
-from core.budget import FundYear, Kommune, Node, Side
+from core.budget import FundParts, FundYear, Kommune, Node, Side
 from core.facts import AREAS, ASKED, KID_BANDS, PERSONAS
 from core.tax import Business
 
@@ -139,7 +139,16 @@ def tojson_fund(fund: tuple[FundYear, ...]) -> str:
     ).decode()
 
 
-templates.env.filters |= {"tojson_nodes": tojson_nodes, "tojson_kommuner": tojson_kommuner, "tojson_fund": tojson_fund}
+def tojson_fund_parts(parts: tuple[FundParts, ...]) -> str:
+    return orjson.dumps(
+        [{"year": p.year, "oil": p.oil, "withdraw": p.withdraw, "returns": p.returns, "krone": p.krone, "size": p.size} for p in parts]
+    ).decode()
+
+
+templates.env.filters |= {
+    "tojson_nodes": tojson_nodes, "tojson_kommuner": tojson_kommuner, "tojson_fund": tojson_fund,
+    "tojson_fund_parts": tojson_fund_parts,
+}
 
 
 def _not_htmx(request: Request) -> bool:
@@ -275,6 +284,16 @@ def everyday_page(request: Request) -> HTMLResponse:
     return templates.TemplateResponse(request, "visste_du.html", {"e": queries.everyday()})
 
 
+@app.get("/oljefondet", response_class=HTMLResponse)
+def oil_page(request: Request) -> HTMLResponse:
+    return templates.TemplateResponse(request, "olje.html", {"parts": queries.budget.fund_parts})
+
+
+@app.get("/olje")
+def oil_page_short() -> RedirectResponse:
+    return RedirectResponse("/oljefondet", status_code=301)
+
+
 @app.get("/ki", response_class=HTMLResponse)
 def agents_page(request: Request) -> HTMLResponse:
     return templates.TemplateResponse(request, "ki.html", {"base": str(request.base_url)})
@@ -307,7 +326,7 @@ def robots_txt(request: Request) -> str:
 
 
 # The pages a crawler should index; the query-string variants and fragments stay out (see robots_txt)
-PAGES = ("", "flyt", "tilbud", "visste-du", "ki")
+PAGES = ("", "flyt", "tilbud", "visste-du", "oljefondet", "ki")
 
 
 @app.get("/sitemap.xml")

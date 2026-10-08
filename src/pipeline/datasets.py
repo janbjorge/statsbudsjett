@@ -99,26 +99,50 @@ def kommuner() -> list[dict]:
     )
 
 
+def _nb3_years(sheet: str) -> pl.DataFrame:
+    d = sheet_rows(NB3, sheet).filter(pl.col("column_0").str.contains(r"^\d{4}$"))
+    return d.with_columns(year=pl.col("column_0").cast(pl.Int64))
+
+
 def fund_share() -> list[dict]:
     """The oil fund per year from NB 2027 chapter 3: share of budget spending it covers (figure 3.4),
     share of the fund spent and the expected return (figure 3.3), and its value in mrd. kr (figure 3.6)."""
-    def years(sheet: str) -> pl.DataFrame:
-        d = sheet_rows(NB3, sheet).filter(pl.col("column_0").str.contains(r"^\d{4}$"))
-        return d.with_columns(year=pl.col("column_0").cast(pl.Int64))
-
-    share = years("Fig3-4").select(
+    share = _nb3_years("Fig3-4").select(
         "year",
         value=pl.coalesce(pl.col("column_1"), pl.col("column_2")).cast(pl.Float64),
         forecast=pl.col("column_1").is_null(),
     )
-    spend = years("Fig3-3").select(
+    spend = _nb3_years("Fig3-3").select(
         "year",
         spend=pl.coalesce(pl.col("column_1"), pl.col("column_4")).cast(pl.Float64),
         expected=pl.coalesce(pl.col("column_2"), pl.col("column_3")).cast(pl.Float64),
     )
     # 2026 in figure 3.6 is not the market value so far that year (figure 3.5), so the series ends at 2025 (METHOD.md)
-    size = years("Fig3-6").filter(pl.col("year") <= 2025).select("year", size=pl.col("column_5").cast(pl.Float64))
+    size = _nb3_years("Fig3-6").filter(pl.col("year") <= 2025).select("year", size=pl.col("column_5").cast(pl.Float64))
     return share.join(spend, on="year", how="left").join(size, on="year", how="left").sort("year").to_dicts()
+
+
+def fund_parts() -> list[dict]:
+    """Cumulative contributions to the fund's market value (NB 2027 figure 3.6). Withdrawal is negative.
+    2026 is dropped: it is not a year-end value (METHOD.md §8)."""
+    rows = (
+        _nb3_years("Fig3-6")
+        .filter(pl.col("year") <= 2025)
+        .select(
+            "year",
+            oil=pl.col("column_1").cast(pl.Float64),
+            withdraw=pl.col("column_2").cast(pl.Float64),
+            returns=pl.col("column_3").cast(pl.Float64),
+            krone=pl.col("column_4").cast(pl.Float64),
+            size=pl.col("column_5").cast(pl.Float64),
+        )
+        .sort("year")
+        .to_dicts()
+    )
+    # The four contributions are the official 1-decimal figures; they miss the value by 0,1 mrd. kr in some years
+    if any(abs(r["oil"] + r["withdraw"] + r["returns"] + r["krone"] - r["size"]) > 0.15 for r in rows):
+        raise ValueError("figure 3.6 contributions do not add to the fund value")
+    return rows
 
 
 PERSONA = ROOT / "data/persona"
@@ -226,6 +250,7 @@ def main() -> None:
         "chapters": chapters(),
         "kommuner": kom,
         "fund": fund_share(),
+        "fund_parts": fund_parts(),
     }
     payload["diff"] = diff().to_dicts()
     OUT.mkdir(exist_ok=True)

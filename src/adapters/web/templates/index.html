@@ -107,7 +107,8 @@
     <p class="lede">I {{ last.year }} dekker penger fra oljefondet <b>{{ last.share|nb1 }} %</b> av utgiftene i statsbudsjettet. I {{ first.year }} var andelen {{ first.share|nb1 }} %.</p>
     <p>Uttaket er {{ last.spend|nb1 }} % av fondet i {{ last.year }} og var {{ first.spend|nb1 }} % i {{ first.year }}.
       Fondet var verdt {{ sized[-1].size|num }} mrd. kr ved utgangen av {{ sized[-1].year }} og {{ sized[0].size|num }} mrd. kr ved utgangen av {{ sized[0].year }}.
-      <a href="#utforsk">Se hva pengene i budsjettet går til</a>.</p>
+      <a href="#utforsk">Se hva pengene i budsjettet går til</a>.
+      <a href="/oljefondet">Bidrag til fondets verdi</a>.</p>
     <div class="card"><h3>Andel av utgiftene i statsbudsjettet</h3><p class="muted small" style="margin:0 0 12px">Penger fra fondet, prosent av utgiftene</p>
       <div class="fund" data-key="share" data-fund="{{ data }}"></div></div>
     <div class="card" style="margin-top:12px"><h3>Uttak av fondet</h3><p class="muted small" style="margin:0 0 12px">Prosent av fondets verdi. Stiplet linje: forventet realavkastning, som handlingsregelen sier at bruken over tid skal følge</p>

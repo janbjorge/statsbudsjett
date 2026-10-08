@@ -195,11 +195,85 @@ function drawFund(el) {
   el.replaceChildren(svg.node());
 }
 
+const FUND_PARTS = [
+  { key: "size", label: "Fondets verdi", color: "--text-primary", width: 2 },
+  { key: "returns", label: "Avkastning", color: "--series-1", width: 1.5 },
+  { key: "oil", label: "Olje inn", color: "--series-2", width: 1.5 },
+  { key: "krone", label: "Kronekurs", color: "--series-4", width: 1.5 },
+  { key: "withdraw", label: "Uttak", color: "--series-8", width: 1.5 },
+];
+function drawFundParts(el) {
+  const s = JSON.parse(el.dataset.parts), last = s[s.length - 1];
+  const W = el.clientWidth || 800, H = Math.max(240, Math.min(340, W * 0.4));
+  const named = W >= 560;
+  const textOf = c => named ? `${c.label}: ${nb.format(last[c.key])}` : nb.format(last[c.key]);
+  const probeSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  const probe = document.createElementNS("http://www.w3.org/2000/svg", "text");
+  probe.setAttribute("font-size", "13");
+  probe.setAttribute("font-weight", "650");
+  probeSvg.append(probe);
+  el.append(probeSvg);
+  let labelW = 0;
+  for (const c of FUND_PARTS) {
+    probe.textContent = textOf(c);
+    labelW = Math.max(labelW, probe.getComputedTextLength());
+  }
+  probeSvg.remove();
+  const m = { l: 52, r: Math.ceil(Math.max(labelW, named ? 180 : 64)) + 20, t: 20, b: 28 };
+  const x = d3.scaleLinear().domain(d3.extent(s, d => d.year)).range([m.l, W - m.r]);
+  const lo = d3.min(s, d => d3.min(FUND_PARTS, c => d[c.key]));
+  const hi = d3.max(s, d => d3.max(FUND_PARTS, c => d[c.key]));
+  const y = d3.scaleLinear().domain([Math.min(0, lo) * 1.08, hi * 1.12]).nice().range([H - m.b, m.t]);
+  const svg = d3.create("svg").attr("viewBox", [0, 0, W, H]);
+  svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - m.b})`)
+    .call(d3.axisBottom(x).ticks(W < 500 ? 4 : 9).tickFormat(d3.format("d")).tickSizeOuter(0));
+  svg.append("g").attr("class", "axis").attr("transform", `translate(${m.l},0)`)
+    .call(d3.axisLeft(y).ticks(5).tickSize(-(W - m.l - m.r)).tickFormat(v => nb.format(v)))
+    .call(g => g.select(".domain").remove()).call(g => g.selectAll(".tick line").attr("stroke", cssVar("--hairline")));
+  svg.append("line").attr("x1", m.l).attr("x2", W - m.r).attr("y1", y(0)).attr("y2", y(0))
+    .attr("stroke", cssVar("--text-muted")).attr("stroke-width", 1);
+  const line = c => d3.line().x(d => x(d.year)).y(d => y(d[c.key]));
+  for (const c of FUND_PARTS) {
+    svg.append("path").datum(s).attr("fill", "none").attr("stroke", cssVar(c.color)).attr("stroke-width", c.width).attr("d", line(c));
+  }
+  const gap = 16, loY = m.t + 8, hiY = H - m.b - 8;
+  const labels = FUND_PARTS.map(c => ({ ...c, y: y(last[c.key]), text: textOf(c) })).sort((a, b) => a.y - b.y);
+  for (let i = 1; i < labels.length; i++) labels[i].y = Math.max(labels[i].y, labels[i - 1].y + gap);
+  if (labels.at(-1).y > hiY) {
+    labels.at(-1).y = hiY;
+    for (let i = labels.length - 2; i >= 0; i--) labels[i].y = Math.min(labels[i].y, labels[i + 1].y - gap);
+  }
+  if (labels[0].y < loY) {
+    labels[0].y = loY;
+    for (let i = 1; i < labels.length; i++) labels[i].y = Math.max(labels[i].y, labels[i - 1].y + gap);
+  }
+  for (const c of labels) {
+    const fill = cssVar(c.color);
+    svg.append("circle").attr("cx", x(last.year)).attr("cy", y(last[c.key])).attr("r", 4)
+      .attr("fill", fill).attr("stroke", cssVar("--surface-1")).attr("stroke-width", 2);
+    svg.append("text").attr("x", W - m.r + 10).attr("y", c.y).attr("dy", "0.35em")
+      .attr("font-size", 13).attr("font-weight", 650).attr("fill", fill).text(c.text);
+  }
+  const hover = svg.append("g").style("display", "none");
+  hover.append("line").attr("y1", m.t).attr("y2", H - m.b).attr("stroke", cssVar("--text-muted"));
+  svg.append("rect").attr("class", "chart-mark").attr("x", m.l).attr("y", m.t).attr("width", W - m.l - m.r).attr("height", H - m.t - m.b).attr("fill", "transparent")
+    .on("mousemove", ev => {
+      const [mx] = d3.pointer(ev);
+      const d = s.reduce((a, b) => Math.abs(x(b.year) - mx) < Math.abs(x(a.year) - mx) ? b : a);
+      hover.style("display", null);
+      hover.select("line").attr("x1", x(d.year)).attr("x2", x(d.year));
+      showTip(ev, `<b>${d.year}</b>` + FUND_PARTS.map(c => `<br>${c.label}: ${nb.format(d[c.key])} mrd. kr`).join(""));
+    })
+    .on("mouseleave", () => { hover.style("display", "none"); hideTip(); });
+  el.replaceChildren(svg.node());
+}
+
 // ---------- wiring ----------
 function drawAll() {
   document.querySelectorAll(".treemap[data-nodes]").forEach(drawTreemap);
   document.querySelectorAll(".strip").forEach(drawStrip);
   document.querySelectorAll(".fund[data-key]").forEach(drawFund);
+  document.querySelectorAll(".fund-parts").forEach(drawFundParts);
   document.dispatchEvent(new Event("charts:redraw"));
 }
 

@@ -75,6 +75,18 @@ class FundYear:
 
 
 @dataclass(frozen=True, slots=True)
+class FundParts:
+    """Cumulative contributions to the fund's market value, NB 2027 figure 3.6. Withdrawal is negative."""
+
+    year: int
+    oil: float
+    withdraw: float
+    returns: float
+    krone: float
+    size: float
+
+
+@dataclass(frozen=True, slots=True)
 class Budget:
     groups: tuple[str, ...]
     income: tuple[str, ...]
@@ -84,6 +96,7 @@ class Budget:
     chapters: tuple[Chapter, ...]
     kommuner: tuple[Kommune, ...]
     fund: tuple[FundYear, ...]
+    fund_parts: tuple[FundParts, ...]
 
     def total(self, year: int) -> float:
         return sum(f.amount for f in self.flows[year] if f.level == 1)
