@@ -1,13 +1,14 @@
 """Download published data for Statsbudsjettet 2027 from regjeringen.no."""
 
 import html
-import json
 import re
 import time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from urllib.parse import urljoin
+
+import orjson
 
 BASE = "https://www.regjeringen.no"
 ROOT = "/no/statsbudsjett/2027/id3172975/"
@@ -108,19 +109,19 @@ def main() -> None:
         save(OUT / sub / f"{slug(page)}.html", get(urljoin(BASE, page)))
 
     # Frie inntekter (rammetilskudd + skatteanslag) per kommune and fylkeskommune
-    collection = json.loads(get(f"{FRIE_API}/countycollection/2027"))
-    save(OUT / "frie_inntekter" / "countycollection.json", json.dumps(collection, ensure_ascii=False, indent=2).encode() + b"\n")
+    collection = orjson.loads(get(f"{FRIE_API}/countycollection/2027"))
+    save(OUT / "frie_inntekter" / "countycollection.json", orjson.dumps(collection, option=orjson.OPT_INDENT_2 | orjson.OPT_APPEND_NEWLINE))
     units = []
     for county in collection["data"]:
         units.append(county["fylkeskommune"])
         units.extend(county["kommuner"])
 
     def frie(unit: dict) -> tuple[str, dict]:
-        return unit["id"], json.loads(get(f"{FRIE_API}/data/2027/{unit['id']}"))["data"]
+        return unit["id"], orjson.loads(get(f"{FRIE_API}/data/2027/{unit['id']}"))["data"]
 
     with ThreadPoolExecutor(4) as pool:
         result = dict(pool.map(frie, units))
-    save(OUT / "frie_inntekter" / "frie_inntekter_2027.json", json.dumps(result, ensure_ascii=False, indent=2).encode() + b"\n")
+    save(OUT / "frie_inntekter" / "frie_inntekter_2027.json", orjson.dumps(result, option=orjson.OPT_INDENT_2 | orjson.OPT_APPEND_NEWLINE))
 
     press_releases()
     pdf_text()

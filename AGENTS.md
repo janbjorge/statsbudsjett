@@ -19,7 +19,7 @@
 - Data work in the pipeline uses polars, not pandas. The app itself does not depend on polars.
 - Plain `python3` is a rye shim that fails here; always use `uv run python`.
 - Outputs must be deterministic: sort group_by results and round float sums (src/pipeline/flows.py:136).
-- JSON in the repo is formatted like `jq .` (2-space indent, trailing newline) so diffs show what changed. Write it with `json.dumps(..., ensure_ascii=False, indent=2) + "\n"`.
+- JSON goes through orjson, not the standard library `json` (jb 2026-10-08). JSON in the repo is formatted like `jq .` (2-space indent, trailing newline) so diffs show what changed. Write it with `orjson.dumps(..., option=orjson.OPT_INDENT_2 | orjson.OPT_APPEND_NEWLINE)`; orjson returns bytes and keeps non-ASCII as is.
 - Charts follow the dataviz skill: validated palette, thin marks, legend plus direct labels, hover, table view, light and dark.
 - Before commit: `uvx ruff check .`, `uv run ty check src tests`, `uv run pytest tests/<files you touched>`, and `uv run python -m pipeline.verify`. Then run the app and look at it.
 

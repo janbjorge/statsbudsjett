@@ -5,10 +5,11 @@ For every item: the quote must occur in source_file, the page must match the
 Exits non-zero if anything fails, so a bad fact never reaches the page. See FACTS.md §6.
 """
 
-import json
 import re
 import sys
 from pathlib import Path
+
+import orjson
 
 ROOT = Path(__file__).parents[2]
 PERSONA = ROOT / "data/persona"
@@ -104,12 +105,12 @@ def main() -> int:
     total = 0
     for f in sorted(PERSONA.glob("*.json")):
         if f.name == "tax.json":
-            items = json.loads(f.read_text())["params"]
+            items = orjson.loads(f.read_bytes())["params"]
             for p in items:
                 p.setdefault("source_file", "data/text/prp202620270001ls0dddpdfs.txt")
                 p["amounts"] = [{"label_nb": p.get("label_nb"), "y2026": p.get("y2026"), "y2027": p.get("y2027")}]
         else:
-            items = json.loads(f.read_text())
+            items = orjson.loads(f.read_bytes())
         for it in items:
             total += 1
             errs = check_item(it, cache)

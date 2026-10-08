@@ -9,6 +9,7 @@ dependencies = [
     "jinja2",
     "pydantic>=2.13",
     "logfire[fastapi,system-metrics]>=5.1.1",
+    "orjson>=3.13.0",
 ]
 
 [build-system]

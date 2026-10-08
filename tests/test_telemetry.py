@@ -1,7 +1,6 @@
 """Logfire records what was asked, never who asked."""
 
-import json
-
+import orjson
 import pytest
 from fastapi.testclient import TestClient
 from logfire.testing import CaptureLogfire
@@ -16,8 +15,8 @@ def test_spans_keep_the_query_and_drop_the_client_address(capfire: CaptureLogfir
     client.get(path, headers={"HX-Request": "true"})
     spans = capfire.exporter.exported_spans_as_dict()
     root = next(s for s in spans if "http.route" in s["attributes"])
-    assert "654321" in json.dumps(root["attributes"], default=str)
-    assert "testclient" not in json.dumps([s["attributes"].get(k) for s in spans for k in ("net.peer.ip", "client.address")])
+    assert "654321" in orjson.dumps(root["attributes"], default=str).decode()
+    assert "testclient" not in orjson.dumps([s["attributes"].get(k) for s in spans for k in ("net.peer.ip", "client.address")]).decode()
 
 
 def test_health_check_is_not_traced(capfire: CaptureLogfire) -> None:
@@ -35,7 +34,7 @@ def test_spans_record_where_the_visit_came_from(capfire: CaptureLogfire) -> None
     client.get("/?utm_source=a&utm_medium=b&xclid=c", headers=headers)
     attrs = _root(capfire)
     assert attrs["visit.referrer"] == "example.org"
-    assert "some/thread" not in json.dumps(attrs, default=str)
+    assert "some/thread" not in orjson.dumps(attrs, default=str).decode()
     assert attrs["visit.fetch_site"] == "cross-site"
     assert attrs["visit.utm_source"] == "a"
     assert attrs["visit.utm_medium"] == "b"

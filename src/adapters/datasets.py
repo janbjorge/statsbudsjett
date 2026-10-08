@@ -1,7 +1,8 @@
 """Reads the JSON files in datasets/ (written by pipeline/datasets.py) into core types."""
 
-import json
 from pathlib import Path
+
+import orjson
 
 from core.budget import Budget, Chapter, Flow, FundYear, Kommune, Post, Side
 from core.facts import Amount, Effect, Fact, Kind
@@ -14,7 +15,7 @@ class JsonDatasets:
     """Implements core.ports.Datasets. Everything is read once at startup; the files only change on deploy."""
 
     def __init__(self, root: Path = DATASETS) -> None:
-        self._raw = {name: json.loads((root / name).read_text()) for name in ("budget.json", "meg.json")}
+        self._raw = {name: orjson.loads((root / name).read_bytes()) for name in ("budget.json", "meg.json")}
         self._budget = self._read_budget()
         self._facts = self._read_facts()
         self._tax = self._read_tax()

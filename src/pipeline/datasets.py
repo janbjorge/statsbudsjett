@@ -1,8 +1,8 @@
 """Build datasets/ for the web app from the downloaded sources. Run: uv run python -m pipeline.datasets"""
 
-import json
 from pathlib import Path
 
+import orjson
 import polars as pl
 
 from core.facts import AREAS
@@ -86,7 +86,7 @@ def kommuner() -> list[dict]:
     frie = sheet_rows(GH / "tabell-3-k-anslag-pa-frie-inntekter-i-2027.ods").filter(is_kommune).select(
         navn="column_0", frie26=num("column_1") * 1000, frie27=num("column_3") * 1000, vekst=num("column_5")
     )
-    fylker = {c["fylkeskommune"]["id"]: c["fylkeskommune"]["name"].removesuffix(" fylkeskommune") for c in json.loads(COUNTIES.read_text())["data"]}
+    fylker = {c["fylkeskommune"]["id"]: c["fylkeskommune"]["name"].removesuffix(" fylkeskommune") for c in orjson.loads(COUNTIES.read_bytes())["data"]}
     split = [pl.col("navn").str.slice(0, 4).alias("nr"), pl.col("navn").str.slice(5).str.strip_chars()]
     return (
         crit.with_columns(split)
@@ -140,7 +140,7 @@ def meg() -> dict:
     items = []
     for f in sorted(PERSONA.glob("*.json")):
         if f.name != "tax.json":
-            items += json.loads(f.read_text())
+            items += orjson.loads(f.read_bytes())
     # Curation on top of the extracted facts: duplicates between extraction runs, items the tax
     # calculator already covers, and spending growth that reads like a personal change
     drop = {"toll-klaer-tekstiler-5-prosent", "skatt-lavere-inntektsskatt", "personfradrag-okes", "dagpenger-utgifter"}
@@ -201,7 +201,7 @@ def meg() -> dict:
         if it.get("kind") == "utgift" and it.get("area") is None:
             raise SystemExit(f"{it['id']}: a spending total belongs to a part of the budget, so it needs an area")
     keep = ("id", "personas", "detail", "under_18", "kind", "same_kroner", "who", "area", "title_nb", "summary_nb", "effect", "amounts", "source_title", "source_url", "page", "caveat_nb")
-    tax = json.loads((PERSONA / "tax.json").read_text())
+    tax = orjson.loads((PERSONA / "tax.json").read_bytes())
     return {
         "items": [{k: it.get(k) for k in keep} for it in items],
         "tax": {
@@ -228,8 +228,8 @@ def main() -> None:
     }
     payload["diff"] = diff().to_dicts()
     OUT.mkdir(exist_ok=True)
-    (OUT / "budget.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n")
-    (OUT / "meg.json").write_text(json.dumps(meg(), ensure_ascii=False, indent=2) + "\n")
+    (OUT / "budget.json").write_bytes(orjson.dumps(payload, option=orjson.OPT_INDENT_2 | orjson.OPT_APPEND_NEWLINE))
+    (OUT / "meg.json").write_bytes(orjson.dumps(meg(), option=orjson.OPT_INDENT_2 | orjson.OPT_APPEND_NEWLINE))
     # Downloads for anyone who wants the numbers themselves
     pl.DataFrame(payload["posts"]).rename(
         {"s": "side", "g": "gruppe", "l": "område", "k": "kapittel", "kn": "kapittelnavn", "p": "post", "pn": "postnavn", "v": "mrd_2027", "v26": "mrd_2026"}

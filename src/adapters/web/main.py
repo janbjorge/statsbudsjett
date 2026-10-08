@@ -1,13 +1,13 @@
 """FastAPI + Jinja + HTMX. Every fragment is also reachable as a full page via the same query string."""
 
 import hashlib
-import json
 import os
 from collections.abc import Awaitable, Callable
 from pathlib import Path
 from typing import Annotated
 from urllib.parse import urlencode
 
+import orjson
 from fastapi import FastAPI, Query, Request
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import FileResponse, HTMLResponse, PlainTextResponse, RedirectResponse, Response
@@ -119,24 +119,24 @@ def group_slot(group: str) -> int:
 
 def tojson_nodes(nodes: tuple[Node, ...], side: Side, base: str) -> str:
     """Treemap island data. Layout needs non-negative sizes; labels use the exact sum (METHOD.md §4)."""
-    return json.dumps([
+    return orjson.dumps([
         {
             "name": n.name, "size": max(0.0, n.v2027), "v": n.v2027, "slot": group_slot(n.group),
             "href": f"/utforsk?{urlencode({'side': side, 'sti': f'{base}/{n.key}'.strip('/')})}" if n.has_children else None,
         }
         for n in nodes
-    ], ensure_ascii=False)
+    ]).decode()
 
 
 def tojson_kommuner(kommuner: tuple[Kommune, ...]) -> str:
     rows = [{"nr": k.nr, "n": k.name, "f": k.fylke, "pop": k.population, "pp": round(k.per_person)} for k in kommuner]
-    return json.dumps(rows, ensure_ascii=False).replace("</", "<\\/")  # goes inside a <script> element
+    return orjson.dumps(rows).decode().replace("</", "<\\/")  # goes inside a <script> element
 
 
 def tojson_fund(fund: tuple[FundYear, ...]) -> str:
-    return json.dumps(
+    return orjson.dumps(
         [{"year": f.year, "share": f.share, "forecast": f.forecast, "spend": f.spend, "expected": f.expected, "size": f.size} for f in fund]
-    )
+    ).decode()
 
 
 templates.env.filters |= {"tojson_nodes": tojson_nodes, "tojson_kommuner": tojson_kommuner, "tojson_fund": tojson_fund}
@@ -257,7 +257,7 @@ def flows_page(request: Request, vis: Q = "") -> HTMLResponse:
     # Spending as the Sankey draws it: the income flows into the total, so the tiles and the chart agree
     spent = {y: sum(f["beløp"] for f in d["flows"][y] if f["level"] == 0) for y in ("2026", "2027")}
     return templates.TemplateResponse(request, "flyt.html", {
-        "payload": json.dumps(payload, ensure_ascii=False).replace("</", "<\\/"),
+        "payload": orjson.dumps(payload).decode().replace("</", "<\\/"),
         "spent": spent,
         "fund": next(r for r in d["diff"] if r["level"] == 0 and r["key"] == "Overføring fra oljefondet"),
         "top": max((r for r in d["diff"] if r["level"] == 1), key=lambda r: r["change"]),
