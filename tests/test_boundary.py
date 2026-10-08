@@ -4,7 +4,7 @@ import ast
 from pathlib import Path
 
 CORE = Path(__file__).parent.parent / "src" / "core"
-ALLOWED = {"core", "dataclasses", "enum", "typing", "collections", "functools", "itertools", "math"}
+ALLOWED = {"core", "dataclasses", "datetime", "enum", "typing", "collections", "functools", "itertools", "math"}
 
 
 def test_core_imports_nothing_from_outside() -> None:

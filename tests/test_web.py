@@ -200,6 +200,16 @@ def test_everyday_page_adds_up() -> None:
     assert "Visste du?" in html and 'aria-current="page"' in html
 
 
+def test_everyday_page_has_playful_units() -> None:
+    e = queries.everyday()
+    # 2 286,8 mrd. kr: the oil fund transfer of 561,7 covers 89,7 days, 1000-kr notes of 154 x 70 mm over 105 x 68 m pitches,
+    # and Operaen at 4 278 mill. kr
+    assert (e.fund_until.month, e.fund_until.day) == (3, 31)
+    assert round(e.pitches) == 3453 and round(e.operas) == 535
+    html = client.get("/visste-du").text
+    assert "31. mars" in html and "fotballbaner" in html and "operahus" in html
+
+
 def test_family_is_addressed_as_dere() -> None:
     html = client.get(f"/meg?del=resultat&{FAMILY}", headers=HX).text
     assert "Dere betaler mer" in html and "Du betaler mer" not in html

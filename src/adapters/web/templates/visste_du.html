@@ -17,6 +17,20 @@
   </section>
 
   <section>
+    <h2>Budsjettet i andre mål</h2>
+    {% set months = ["januar", "februar", "mars", "april", "mai", "juni", "juli", "august", "september", "oktober", "november", "desember"] %}
+    <div class="grid tiles">
+      <div class="card tile"><div class="k">Oljepengene rekker til</div><div class="v">{{ e.fund_until.day }}. {{ months[e.fund_until.month - 1] }}</div><div class="s">av årets utgifter, regnet fra 1. januar</div></div>
+      <div class="card tile"><div class="k">I tusenlapper</div><div class="v">{{ e.pitches|nb }} fotballbaner</div><div class="s">med sedler lagt side om side</div></div>
+      <div class="card tile"><div class="k">I operahus</div><div class="v">{{ e.operas|nb }} operahus</div><div class="s">som Operaen i Oslo</div></div>
+    </div>
+    <p class="note" style="margin-top:12px">Utgiftene er fordelt jevnt over året. En tusenlapp er 154 × 70 mm
+      (<a href="https://www.norges-bank.no/en/topics/notes-and-coins/legal-tender-notes-coins/1000-krone-note/">Norges Bank</a>), og en fotballbane er 105 × 68 m
+      (<a href="https://www.fotball.no/lov-og-reglement/klubblisens/tl-og-obos/retningslinjer/retningslinjer-infrastruktur/">NFF</a>).
+      Operaen kostet 4 278 mill. kr i 2009-kroner (<a href="https://www.ntnu.no/concept/nytt-operahus">NTNU Concept</a>), så operahusene blander kroneverdien fra to år.</p>
+  </section>
+
+  <section>
     <h2>Utgiftene per innbygger</h2>
     <table class="tbl">
       <thead><tr><th>Område</th><th>I året</th><th>Per dag</th></tr></thead>

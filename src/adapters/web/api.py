@@ -5,6 +5,7 @@ Field names carry their unit: `_mrd_kr` is billions of kroner, `_kr` is kroner, 
 The core mixes units (the tree is in mrd. kr, per-person figures and kommune money in kr), so this adapter names them.
 """
 
+from datetime import date
 from typing import Annotated
 
 from fastapi import FastAPI, HTTPException, Query, Request
@@ -230,6 +231,9 @@ class Everyday(Out):
     per_sekund_kr: float
     utgifter_per_innbygger: list[PerPerson]
     inntekter_per_innbygger: list[PerPerson]
+    oljepengene_rekker_til: date = Field(description="Last day the transfer from the oil fund covers, spending spread evenly from 1 January")
+    fotballbaner_med_tusenlapper: float = Field(description="Football pitches (105 x 68 m) covered by the spending in 1000-krone notes (154 x 70 mm)")
+    operahus: float = Field(description="The spending divided by the Oslo Opera House's final cost, 4 278 mill. kr in 2009 kroner")
 
 
 class FundYear(Out):
@@ -406,6 +410,7 @@ def build(queries: Queries) -> FastAPI:
             per_dag_mrd_kr=e.per_day, per_sekund_kr=e.per_second,
             utgifter_per_innbygger=[PerPerson(navn=r.name, kr=r.kroner) for r in e.spending],
             inntekter_per_innbygger=[PerPerson(navn=r.name, kr=r.kroner) for r in e.income],
+            oljepengene_rekker_til=e.fund_until, fotballbaner_med_tusenlapper=e.pitches, operahus=e.operas,
         )
 
     @api.get(

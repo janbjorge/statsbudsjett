@@ -35,6 +35,8 @@ The pages show the budget the way Finansdepartementet presents it, without oil m
 - The treemap lays out with negative posts set to 0 but shows exact sums (src/adapters/web/main.py:69).
 - National amounts are not shown per person ("405 677 kr per innbygger"). Such a figure says nothing about what the budget means for the reader, so it was removed from the hero, the income bars, the explorer and search (2026-10-07) and moved to its own page, /visste-du. There, per day is the yearly amount / 365 and per second is the total / the seconds in 2027 (365 days), spread evenly although the real spending is not. Kommuner are still compared per innbygger, because that is how frie inntekter are measured (§7). The population (5 636 995 on 1.7.2026) is still in datasets/budget.json.
 
+- /visste-du also shows three playful units (jb 2026-10-08), each from one source: the date the transfer from the oil fund covers if spending were spread evenly from 1 January; the spending in 1000-kroner notes (154 x 70 mm, Norges Bank) laid side by side, counted in football pitches (105 x 68 m, NFF); and the spending divided by the cost of Operaen i Oslo (4 278 mill. kr in 2009 kroner, NTNU Concept). The opera unit mixes the price levels of 2009 and 2027, and the page says so. NTNU's summary page also says "4287 mill." in one place; 4 278 is the figure given with its price level. The constants are in src/core/budget.py next to `everyday`.
+
 ## 5. Tax calculator
 
 - Covers wage, pension and business income with standard deductions: minstefradrag, personfradrag, trygdeavgift with the phase-in rule, trinnskatt, the pension tax credit, the jordbruksfradrag and the fiskerfradrag. The rules and their sources are in FACTS.md §7; tests/test_tax.py checks each against the law.
