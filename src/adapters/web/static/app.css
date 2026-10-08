@@ -55,19 +55,52 @@ nav.top a[aria-current] { color: var(--text-primary); font-weight: 600; }
   background: var(--surface-1); border: 1px solid var(--hairline); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,.12);
 }
 nav.top .more .menu a { padding: 8px 12px; font-size: 15px; }
-.more .menu a.p, .more .narrow { display: none; }
-@media (max-width: 860px) {
-  nav.top .nav-links, .more .wide { display: none; }
-  .more .narrow { display: inline; }
-  .more { margin-left: auto; }
-  nav.top .theme { margin-left: 4px; }
-  .more .menu a.p { display: block; }
-  .more .menu a.p:last-of-type { border-bottom: 1px solid var(--hairline); margin-bottom: 4px; padding-bottom: 12px; }
-}
 nav.top a { color: var(--text-secondary); text-decoration: none; font-size: 14px; padding: 6px 10px; border-radius: 6px; white-space: nowrap; }
 nav.top a:hover { background: var(--surface-2); color: var(--text-primary); }
 nav.top .brand { font-weight: 700; color: var(--text-primary); margin-right: 8px; }
 nav.top .theme { margin-left: auto; font: inherit; font-size: 13px; background: none; border: 1px solid var(--hairline); color: var(--text-secondary); border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+
+/* Phones: the top bar is only the name and scrolls away; the menu is a button in thumb reach that opens a bottom sheet */
+.nav-fab { display: none; }
+@media (max-width: 860px) {
+  nav.top { position: static; background: none; backdrop-filter: none; }
+  nav.top .nav-links, nav.top .more, nav.top .theme { display: none; }
+  html { scroll-padding-top: 16px; }
+  main { padding-bottom: 120px; }
+  .nav-fab {
+    display: inline-flex; align-items: center; gap: 8px; position: fixed; z-index: 25;
+    right: 16px; bottom: calc(16px + env(safe-area-inset-bottom));
+    font: inherit; font-size: 16px; font-weight: 600; padding: 12px 20px; border: 0; border-radius: 999px; cursor: pointer;
+    background: var(--text-primary); color: var(--surface-1); box-shadow: 0 6px 20px rgba(0,0,0,.25);
+  }
+}
+.nav-sheet {
+  position: fixed; inset: auto 0 0 0; margin: 0; width: 100%; max-width: none; max-height: 85dvh; overflow-y: auto;
+  border: 0; border-radius: 18px 18px 0 0; padding: 0 16px calc(12px + env(safe-area-inset-bottom));
+  background: var(--surface-1); color: var(--text-primary); box-shadow: 0 -8px 30px rgba(0,0,0,.18);
+}
+.nav-sheet::backdrop { background: rgba(0,0,0,.4); }
+.nav-sheet:popover-open { animation: sheet-up .22s ease-out; }
+@keyframes sheet-up { from { transform: translateY(100%); } }
+@media (prefers-reduced-motion: reduce) { .nav-sheet:popover-open { animation: none; } }
+html:has(.nav-sheet:popover-open) { overflow: hidden; }
+.sheet-head { display: flex; align-items: center; gap: 12px; position: sticky; top: 0; padding-top: 6px; background: var(--surface-1); z-index: 1; }
+.sheet-h { font-size: 12px; font-weight: 650; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin: 14px 0 6px; }
+.sheet-head b { font-size: 17px; margin-right: auto; }
+.sheet-close { font: inherit; font-size: 18px; width: 44px; height: 44px; margin-right: -10px; border: 0; background: none; color: var(--text-secondary); cursor: pointer; border-radius: 50%; }
+.sheet-pages { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.sheet-pages a { padding: 12px; font-size: 16px; font-weight: 600; line-height: 1.3; color: var(--text-primary); text-decoration: none; border: 1px solid var(--hairline); border-radius: 12px; }
+.sheet-pages a[aria-current] { border: 2px solid var(--accent); padding: 11px; }
+.sheet-sections { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.sheet-sections a { padding: 8px 12px; font-size: 15px; line-height: 1.3; color: var(--text-primary); text-decoration: none; background: var(--surface-2); border-radius: 10px; }
+.theme-row {
+  display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0;
+  font: inherit; font-size: 14px; color: var(--text-secondary); background: none; border: 0; cursor: pointer;
+}
+.switch { width: 46px; height: 28px; border-radius: 999px; background: var(--hairline); position: relative; transition: background .15s; }
+.switch::after { content: ""; position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.3); transition: transform .15s; }
+.theme-row[aria-pressed="true"] .switch { background: var(--accent); }
+.theme-row[aria-pressed="true"] .switch::after { transform: translateX(18px); }
 main { max-width: 1120px; margin: 0 auto; padding: 0 16px 80px; }
 section { padding: 56px 0 8px; }
 h1 { font-size: clamp(28px, 4.2vw, 40px); line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 12px; font-weight: 650; }

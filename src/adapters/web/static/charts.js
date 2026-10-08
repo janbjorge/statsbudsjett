@@ -289,6 +289,10 @@ document.addEventListener("click", ev => {
 document.addEventListener("keydown", ev => {
   if (ev.key === "Escape") document.querySelector("nav.top .more")?.removeAttribute("open");
 });
+// Phone menu sheet: a link to a section on the same page does not navigate, so close the sheet by hand
+document.addEventListener("click", ev => {
+  if (ev.target.closest("#nav-sheet a")) document.getElementById("nav-sheet").hidePopover?.();
+});
 let resizeTimer;
 // Mobile browsers fire resize when the address bar hides; only a width change needs a redraw
 let lastWidth = innerWidth;
@@ -302,13 +306,15 @@ document.addEventListener("htmx:afterSettle", drawAll);
 const isDark = () => document.documentElement.dataset.theme === "dark" ||
   (!document.documentElement.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
 document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("theme");
-  btn.textContent = isDark() ? "Lys" : "Mørk";
-  btn.addEventListener("click", () => {
+  // Two toggles: the button in the desktop bar and the switch in the phone menu
+  const toggles = document.querySelectorAll("[data-theme-toggle]");
+  const label = () => toggles.forEach(b => b.hasAttribute("aria-pressed") ? b.setAttribute("aria-pressed", isDark()) : b.textContent = isDark() ? "Lys" : "Mørk");
+  label();
+  toggles.forEach(b => b.addEventListener("click", () => {
     document.documentElement.dataset.theme = isDark() ? "light" : "dark";
     localStorage.setItem("theme", document.documentElement.dataset.theme);
-    btn.textContent = isDark() ? "Lys" : "Mørk";
+    label();
     drawAll();
-  });
+  }));
   drawAll();
 });

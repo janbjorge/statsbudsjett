@@ -31,27 +31,38 @@
       <a href="/tilbud"{% if request.url.path == "/tilbud" %} aria-current="page"{% endif %}>Hele budsjettet</a>
     </div>
     <details class="more">
-      <summary><span class="wide">Mer ▾</span><span class="narrow">Meny ☰</span></summary>
+      <summary>Mer ▾</summary>
       <div class="menu">
-        <a class="p" href="/#meg">For deg</a>
-        <a class="p" href="/#skatt">Skatten din</a>
-        <a class="p" href="/#utforsk">Utforsk</a>
-        <a class="p" href="/#kommune">Kommunen din</a>
-        <a class="p" href="/flyt">Pengestrømmen</a>
         <a href="/#inntekter">Hvor pengene kommer fra</a>
         <a href="/#endringer">Største endringer</a>
         <a href="/#olje">Oljepengene</a>
         <a href="/oljefondet"{% if request.url.path == "/oljefondet" %} aria-current="page"{% endif %}>Oljefondets verdi</a>
-        <a class="p" href="/tilbud">Hele budsjettet</a>
         <a href="/visste-du"{% if request.url.path == "/visste-du" %} aria-current="page"{% endif %}>Visste du?</a>
         <a href="/ki"{% if request.url.path == "/ki" %} aria-current="page"{% endif %}>Spør en KI</a>
         <a href="/#ordliste">Ordliste</a>
         <a href="/#feil">Fant du en feil?</a>
       </div>
     </details>
-    <button class="theme" id="theme" type="button">Mørk</button>
+    <button class="theme" type="button" data-theme-toggle>Mørk</button>
   </div>
 </nav>
+{# Phones: a button in thumb reach opens the menu as a sheet from the bottom (popover, so the browser handles closing) #}
+{% set pages = [("/", "Forsiden"), ("/flyt", "Pengestrømmen"), ("/tilbud", "Hele budsjettet"), ("/oljefondet", "Oljefondets verdi"), ("/visste-du", "Visste du?"), ("/ki", "Spør en KI")] %}
+{% set sections = [("meg", "For deg"), ("skatt", "Skatten din"), ("inntekter", "Hvor pengene kommer fra"), ("utforsk", "Utforsk"), ("endringer", "Største endringer"), ("kommune", "Kommunen din"), ("olje", "Oljepengene"), ("ordliste", "Ordliste"), ("feil", "Fant du en feil?")] %}
+<button class="nav-fab" type="button" popovertarget="nav-sheet">Meny <span aria-hidden="true">☰</span></button>
+<div class="nav-sheet" id="nav-sheet" popover role="dialog" aria-label="Meny">
+  <div class="sheet-head"><b>Meny</b>
+    <button class="theme-row" type="button" data-theme-toggle aria-pressed="false"><span>Mørkt tema</span><span class="switch" aria-hidden="true"></span></button>
+    <button class="sheet-close" type="button" popovertarget="nav-sheet" popovertargetaction="hide" aria-label="Lukk menyen">✕</button></div>
+  <div class="sheet-h">Sider</div>
+  <nav class="sheet-pages" aria-label="Sider">
+    {% for href, label in pages %}<a href="{{ href }}"{% if request.url.path == href %} aria-current="page"{% endif %}>{{ label }}</a>
+    {% endfor %}</nav>
+  <div class="sheet-h">På forsiden</div>
+  <nav class="sheet-sections" aria-label="På forsiden">
+    {% for id, label in sections %}<a href="/#{{ id }}">{{ label }}</a>
+    {% endfor %}</nav>
+</div>
 <main>
 {% block main %}{% endblock %}
   <footer>
