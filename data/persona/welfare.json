@@ -174,16 +174,16 @@
     "kind": "far",
     "amounts": [
       {
-        "label_nb": "Ordinær sats per år",
+        "label_nb": "Ordinær sats",
         "y2026": 6265,
         "y2027": 7455,
-        "unit": "kr"
+        "unit": "kr/år"
       },
       {
-        "label_nb": "Forhøyet sats per år",
+        "label_nb": "Forhøyet sats",
         "y2026": 16220,
         "y2027": 19302,
-        "unit": "kr"
+        "unit": "kr/år"
       }
     ],
     "quote": "Dette inneber at den ordinære satsen blir auka frå 6 265 til 7 455 kroner og den for - høgde satsen frå 16 220 til 19 302 kroner.",
@@ -235,8 +235,8 @@
       "syk_ufor"
     ],
     "detail": "hjelpemidler",
-    "title_nb": "Stønadssatser for hjelpemidler økes ikke med prisveksten",
-    "summary_nb": "Faste stønadssatser for hjelpemidler du kjøper selv, holdes på samme kronebeløp i 2027 som i 2026. Unntaket er parykkstøtten for dem over 30 år.",
+    "title_nb": "Stønadssatser for hjelpemidler følger ikke prisveksten",
+    "summary_nb": "Faste stønadssatser for hjelpemidler du kjøper selv, er de samme i kroner som i 2026 og følger ikke prisveksten. Unntaket er parykkstøtten for dem over 30 år.",
     "effect": "minus",
     "kind": "far",
     "amounts": [],
@@ -546,15 +546,15 @@
     ],
     "detail": "bostøtte",
     "title_nb": "Grensene for boutgifter i bostøtten følger ikke prisveksten",
-    "summary_nb": "Om lag 92 900 husstander ventes å få bostøtte hver måned i 2027, i snitt 43 600 kr i året. Grensene for hvor store boutgifter som regnes med, holdes på samme kronebeløp som i 2026.",
+    "summary_nb": "Om lag 92 900 husstander ventes å få bostøtte hver måned i 2027, i snitt 43 600 kr i året. Grensene for hvor store boutgifter som regnes med, er de samme i kroner som i 2026 og følger ikke prisveksten.",
     "effect": "minus",
     "kind": "far",
     "amounts": [
       {
-        "label_nb": "Gjennomsnittlig bostøtte per husstand per år",
+        "label_nb": "Gjennomsnittlig bostøtte per husstand",
         "y2026": null,
         "y2027": 43600,
-        "unit": "kr"
+        "unit": "kr/år"
       }
     ],
     "quote": "Samla er det venta at i gjennomsnitt 92  900 hus - standar vil få bustøtte kvar månad i 2027, på eit nivå som svarar til 43 600 kroner per husstand per år. Det er noko lågare enn i 2026. Det blir foreslått å nominelt vidareføre buutgiftstaka",

@@ -63,13 +63,13 @@
           "label_nb": "Veibruksavgift på bensin",
           "y2026": 3.77,
           "y2027": 3.37,
-          "unit": "kr per liter"
+          "unit": "kr/liter"
         },
         {
           "label_nb": "Veibruksavgift på diesel (mineralolje)",
           "y2026": 2.28,
           "y2027": 1.84,
-          "unit": "kr per liter"
+          "unit": "kr/liter"
         }
       ],
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
@@ -95,13 +95,13 @@
           "label_nb": "CO2-avgift på bensin",
           "y2026": 3.8,
           "y2027": 4.4,
-          "unit": "kr per liter"
+          "unit": "kr/liter"
         },
         {
           "label_nb": "CO2-avgift på diesel (mineralolje, generell sats)",
           "y2026": 4.42,
           "y2027": 5.13,
-          "unit": "kr per liter"
+          "unit": "kr/liter"
         }
       ],
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
@@ -127,7 +127,7 @@
           "label_nb": "Trafikkforsikringsavgift for personbiler, varebiler mv.",
           "y2026": 6.52,
           "y2027": 6.7,
-          "unit": "kr per døgn"
+          "unit": "kr/døgn"
         }
       ],
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
@@ -153,7 +153,7 @@
           "label_nb": "Trafikkforsikringsavgift for elbiler",
           "y2026": 9.16,
           "y2027": 9.41,
-          "unit": "kr per døgn"
+          "unit": "kr/døgn"
         }
       ],
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
@@ -310,7 +310,7 @@
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
       "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
       "page": 28,
-      "caveat_nb": "Beløpet er ikke prisjustert, så verdien blir litt lavere reelt."
+      "caveat_nb": "Beløpet er det samme i kroner og følger ikke prisveksten."
     },
     {
       "id": "innsatssonen-gratis-barnehage",
@@ -446,7 +446,7 @@
           "label_nb": "Fjernvarmepris i Svalbardpris",
           "y2026": null,
           "y2027": 0.63,
-          "unit": "kr per kWh"
+          "unit": "kr/kWh"
         }
       ],
       "source_title": "Regjeringen vil styrke Longyearbyen",
@@ -589,19 +589,19 @@
           "label_nb": "CO2-avgift, fiske i nære farvann",
           "y2026": null,
           "y2027": 5.13,
-          "unit": "kr per liter"
+          "unit": "kr/liter"
         },
         {
           "label_nb": "CO2-avgift, fiske i både nære og fjerne farvann",
           "y2026": null,
           "y2027": 3.13,
-          "unit": "kr per liter"
+          "unit": "kr/liter"
         },
         {
           "label_nb": "CO2-avgift, fiske i fjerne farvann",
           "y2026": null,
           "y2027": 1.14,
-          "unit": "kr per liter"
+          "unit": "kr/liter"
         }
       ],
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
@@ -653,7 +653,7 @@
           "label_nb": "Avgift på oppdrettsfisk",
           "y2026": 0.985,
           "y2027": 1.01,
-          "unit": "kr per kg"
+          "unit": "kr/kg"
         }
       ],
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
@@ -749,7 +749,7 @@
       "under_18": null,
       "kind": null,
       "same_kroner": null,
-      "who": null,
+      "who": "Arbeidsgivere",
       "title_nb": "Arbeidsgiveravgiften er uendret",
       "summary_nb": "Satsene for arbeidsgiveravgift er de samme som i 2026. I sone I er satsen fortsatt 14,1 %.",
       "effect": "uendret",
@@ -874,7 +874,7 @@
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
       "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
       "page": 92,
-      "caveat_nb": "Grensen for trinn 2 (21,5 mill. kr) og for lav verdsetting av primærbolig (14 mill. kr) holdes nominelt uendret."
+      "caveat_nb": "Grensen for trinn 2 (21,5 mill. kr) og for lav verdsetting av primærbolig (14 mill. kr) er de samme i kroner og følger ikke prisveksten."
     },
     {
       "id": "aksjesparekonto-euronext-growth",
@@ -1040,7 +1040,7 @@
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
       "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
       "page": 28,
-      "caveat_nb": "Beløpene er ikke prisjustert."
+      "caveat_nb": "Beløpene er de samme i kroner og følger ikke prisveksten."
     },
     {
       "id": "landbrukets-utviklingsfond",
@@ -1077,7 +1077,7 @@
       "under_18": null,
       "kind": null,
       "same_kroner": null,
-      "who": null,
+      "who": "Jordbruket",
       "title_nb": "Strømstøtten for jordbruk og veksthus varer ut 2029",
       "summary_nb": "Ordningen med strømstøtte for jordbruksforetak, veksthus og vanningslag gjelder strømforbruk til og med desember 2029.",
       "effect": "uendret",
@@ -1096,7 +1096,7 @@
       "under_18": null,
       "kind": "betaler",
       "same_kroner": null,
-      "who": null,
+      "who": "Veksthusene",
       "title_nb": "Kraftig økning i CO2-avgiften for veksthus",
       "summary_nb": "Veksthus har en lavere sats i CO2-avgiften på gass til oppvarming. Satsen for naturgass øker fra 0,95 til 2,71 kr per standardkubikkmeter. Økningen skal tas med i kostnadene i jordbruksoppgjøret og dermed kompenseres over tid.",
       "effect": "minus",
@@ -1105,7 +1105,7 @@
           "label_nb": "CO2-avgift på naturgass til veksthus",
           "y2026": 0.95,
           "y2027": 2.71,
-          "unit": "kr per Sm3"
+          "unit": "kr/kubikkmeter"
         }
       ],
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
@@ -1175,7 +1175,7 @@
       "source_title": "Prop. 1 S (2026–2027) Barne- og familiedepartementet",
       "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175032/",
       "page": 77,
-      "caveat_nb": "Satsene ble sist justert 1. februar 2026 og er foreslått videreført uendret i 2027, noe som betyr at de ikke følger prisveksten. Krever vedtak i Stortinget."
+      "caveat_nb": "Satsene ble sist justert 1. februar 2026, er de samme i kroner i 2027 og følger ikke prisveksten. Krever vedtak i Stortinget."
     },
     {
       "id": "engangsstonad-kuttes",
@@ -1243,7 +1243,7 @@
           "unit": "kr/mnd"
         },
         {
-          "label_nb": "Til og med 8 timer barnehage per uke",
+          "label_nb": "Til og med 8 timer barnehage i uken",
           "y2026": null,
           "y2027": 6000,
           "unit": "kr/mnd"
@@ -1252,7 +1252,7 @@
       "source_title": "Prop. 1 S (2026–2027) Barne- og familiedepartementet",
       "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175032/",
       "page": 76,
-      "caveat_nb": "Satsene er foreslått videreført uendret i kroner. De følger ikke prisveksten, så de er verdt litt mindre. Krever vedtak i Stortinget."
+      "caveat_nb": "Satsene er de samme i kroner og følger ikke prisveksten. Krever vedtak i Stortinget."
     },
     {
       "id": "barnehage-makspris",
@@ -1284,7 +1284,7 @@
       "source_title": "Regjeringa vidarefører den historiske låge maksprisen i barnehage",
       "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringa-vidareforer-den-historiske-lage-maksprisen-i-barnehage/id3174270/",
       "page": null,
-      "caveat_nb": "Prisen står stille i kroner, så den blir litt lavere når man tar hensyn til prisveksten. Gjelder fra 1. januar 2027."
+      "caveat_nb": "Prisen er den samme i kroner og følger ikke prisveksten. Gjelder fra 1. januar 2027."
     },
     {
       "id": "barnehage-soskenmoderasjon",
@@ -1493,10 +1493,10 @@
       "effect": "pluss",
       "amounts": [
         {
-          "label_nb": "Økning i basislånet per studieår (litt over)",
+          "label_nb": "Økning i basislånet (litt over)",
           "y2026": null,
           "y2027": 7000,
-          "unit": "kr/år"
+          "unit": "kr/studieår"
         }
       ],
       "source_title": "Ei historisk endring av studielån og stipend",
@@ -1768,16 +1768,16 @@
       "effect": "pluss",
       "amounts": [
         {
-          "label_nb": "Ordinær sats per år",
+          "label_nb": "Ordinær sats",
           "y2026": 6265,
           "y2027": 7455,
-          "unit": "kr"
+          "unit": "kr/år"
         },
         {
-          "label_nb": "Forhøyet sats per år",
+          "label_nb": "Forhøyet sats",
           "y2026": 16220,
           "y2027": 19302,
-          "unit": "kr"
+          "unit": "kr/år"
         }
       ],
       "source_title": "Prop. 1 S (2026–2027) Arbeids- og inkluderingsdepartementet",
@@ -1833,8 +1833,8 @@
       "kind": "far",
       "same_kroner": true,
       "who": null,
-      "title_nb": "Stønadssatser for hjelpemidler økes ikke med prisveksten",
-      "summary_nb": "Faste stønadssatser for hjelpemidler du kjøper selv, holdes på samme kronebeløp i 2027 som i 2026. Unntaket er parykkstøtten for dem over 30 år.",
+      "title_nb": "Stønadssatser for hjelpemidler følger ikke prisveksten",
+      "summary_nb": "Faste stønadssatser for hjelpemidler du kjøper selv, er de samme i kroner som i 2026 og følger ikke prisveksten. Unntaket er parykkstøtten for dem over 30 år.",
       "effect": "minus",
       "amounts": [],
       "source_title": "Prop. 1 S (2026–2027) Arbeids- og inkluderingsdepartementet",
@@ -2100,7 +2100,7 @@
       "under_18": null,
       "kind": "betaler",
       "same_kroner": null,
-      "who": null,
+      "who": "Butikkene",
       "title_nb": "Lavere toll på klær og tekstiler",
       "summary_nb": "Tollen på klær og tekstiler som tepper, håndklær og gardiner kuttes til én sats på 5 %. Det gjør det billigere for norske butikker å importere klær.",
       "effect": "pluss",
@@ -2142,14 +2142,14 @@
       "same_kroner": true,
       "who": null,
       "title_nb": "Grensene for boutgifter i bostøtten følger ikke prisveksten",
-      "summary_nb": "Om lag 92 900 husstander ventes å få bostøtte hver måned i 2027, i snitt 43 600 kr i året. Grensene for hvor store boutgifter som regnes med, holdes på samme kronebeløp som i 2026.",
+      "summary_nb": "Om lag 92 900 husstander ventes å få bostøtte hver måned i 2027, i snitt 43 600 kr i året. Grensene for hvor store boutgifter som regnes med, er de samme i kroner som i 2026 og følger ikke prisveksten.",
       "effect": "minus",
       "amounts": [
         {
-          "label_nb": "Gjennomsnittlig bostøtte per husstand per år",
+          "label_nb": "Gjennomsnittlig bostøtte per husstand",
           "y2026": null,
           "y2027": 43600,
-          "unit": "kr"
+          "unit": "kr/år"
         }
       ],
       "source_title": "Prop. 1 S (2026–2027) Kommunal- og distriktsdepartementet",

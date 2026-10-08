@@ -34,7 +34,7 @@
     "source_title": "Prop. 1 S (2026–2027) Barne- og familiedepartementet",
     "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175032/",
     "page": 77,
-    "caveat_nb": "Satsene ble sist justert 1. februar 2026 og er foreslått videreført uendret i 2027, noe som betyr at de ikke følger prisveksten. Krever vedtak i Stortinget.",
+    "caveat_nb": "Satsene ble sist justert 1. februar 2026, er de samme i kroner i 2027 og følger ikke prisveksten. Krever vedtak i Stortinget.",
     "extra_quotes": [
       {
         "quote": "Den ordinære barnetrygda for alle barn 0–18 år er no 2012 kroner per månad.",
@@ -107,7 +107,7 @@
         "unit": "kr/mnd"
       },
       {
-        "label_nb": "Til og med 8 timer barnehage per uke",
+        "label_nb": "Til og med 8 timer barnehage i uken",
         "y2026": null,
         "y2027": 6000,
         "unit": "kr/mnd"
@@ -118,7 +118,7 @@
     "source_title": "Prop. 1 S (2026–2027) Barne- og familiedepartementet",
     "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175032/",
     "page": 76,
-    "caveat_nb": "Satsene er foreslått videreført uendret i kroner. De følger ikke prisveksten, så de er verdt litt mindre. Krever vedtak i Stortinget.",
+    "caveat_nb": "Satsene er de samme i kroner og følger ikke prisveksten. Krever vedtak i Stortinget.",
     "extra_quotes": [
       {
         "quote": "Ikkje bruk av barnehageplass 100 7 50 0 Til og med 8 timar 80 6 00 0",
@@ -155,7 +155,7 @@
     "source_title": "Regjeringa vidarefører den historiske låge maksprisen i barnehage",
     "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringa-vidareforer-den-historiske-lage-maksprisen-i-barnehage/id3174270/",
     "page": null,
-    "caveat_nb": "Prisen står stille i kroner, så den blir litt lavere når man tar hensyn til prisveksten. Gjelder fra 1. januar 2027.",
+    "caveat_nb": "Prisen er den samme i kroner og følger ikke prisveksten. Gjelder fra 1. januar 2027.",
     "extra_quotes": [
       {
         "quote": "i revidert budsjett blei han satt ned til 1 200 kroner per månad nasjonalt og 700 kroner per månad i sentralitetssone 5 og 6."
@@ -385,10 +385,10 @@
     "kind": "far",
     "amounts": [
       {
-        "label_nb": "Økning i basislånet per studieår (litt over)",
+        "label_nb": "Økning i basislånet (litt over)",
         "y2026": null,
         "y2027": 7000,
-        "unit": "kr/år"
+        "unit": "kr/studieår"
       }
     ],
     "quote": "Med forslaget vil basislånet for studieåret 2027-28 auke med 4,21 prosent, som er litt over 7 000 kroner samanlikna med studieåret 2026-27.",

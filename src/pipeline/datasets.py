@@ -158,6 +158,10 @@ def meg() -> dict:
         "avgift-oppdrettsfisk": "Oppdrettsselskapene",
         "grunnrenteskatt-havbruk-uendret": "Oppdrettsselskapene",
         "skattefunn-innstramming": "Bedrifter",
+        "toll-klaer-5-prosent": "Butikkene",
+        "arbeidsgiveravgift-uendret": "Arbeidsgivere",
+        "stromstotte-jordbruk-2029": "Jordbruket",
+        "co2-avgift-veksthus": "Veksthusene",
     }
     items = [it for it in items if it["id"] not in drop]
     if missing := who.keys() - {it["id"] for it in items}:
