@@ -64,6 +64,14 @@ document.addEventListener("click", async ev => {
     input.dataset.mine = preset.id === "my-tax" ? "1" : "";
   }
 });
+// Kroner fields show plain digits while you type and 650 000, like the server renders them, once you leave
+const onlyDigits = s => [...s].filter(c => c >= "0" && c <= "9").join("");
+const isKroner = el => el.matches?.("[data-money], #tax");
+document.addEventListener("focusin", ev => { if (isKroner(ev.target)) ev.target.value = onlyDigits(ev.target.value); });
+document.addEventListener("focusout", ev => {
+  const el = ev.target, raw = onlyDigits(el.value || "");
+  if (isKroner(el)) el.value = raw ? nb.format(+raw) : "";
+});
 // Typing your own amount stops the receipt from following "For deg"
 document.addEventListener("input", ev => { if (ev.isTrusted && ev.target.id === "tax") ev.target.dataset.mine = ""; });
 // "For deg" swaps in a new "Din skatt" chip; if the receipt showed your tax, move it to the new amount
@@ -110,12 +118,12 @@ function drawStrip(el) {
   const yTicks = [1000, 10000, 100000, 1000000].filter(v => v > plo * 0.8 && v < phi * 1.25);
   svg.append("g").attr("class", "axis").attr("transform", `translate(${m.l},0)`)
     .call(d3.axisLeft(yScale).tickValues(yTicks).tickFormat(v => nb.format(v)).tickSizeOuter(0));
-  const label = (t, attrs) => { const el = svg.append("text").attr("font-size", 12).attr("fill", cssVar("--text-muted")).text(t); for (const [k, v] of Object.entries(attrs)) el.attr(k, v); };
+  const label = (t, attrs) => { const el = svg.append("text").attr("class", "chart-note").attr("fill", cssVar("--text-muted")).text(t); for (const [k, v] of Object.entries(attrs)) el.attr(k, v); };
   label("Frie inntekter per innbygger →", { x: W - m.r, y: H - 8, "text-anchor": "end" });
   label("↑ Innbyggere", { x: 0, y: 12 });
   // "snitt" sits one line below the axis title, right of the line, so the two never meet on a narrow screen
   svg.append("line").attr("x1", x(avg)).attr("x2", x(avg)).attr("y1", m.t - 16).attr("y2", H - m.b).attr("stroke", cssVar("--text-muted"));
-  svg.append("text").attr("x", x(avg) + 4).attr("y", m.t - 8).attr("font-size", 12).attr("fill", cssVar("--text-muted")).text("snitt");
+  svg.append("text").attr("x", x(avg) + 4).attr("y", m.t - 8).attr("class", "chart-note").attr("fill", cssVar("--text-muted")).text("snitt");
   const pick = k => {
     document.getElementById("kom").value = k.f ? `${k.n} (${k.f})` : k.n;
     htmx.ajax("GET", "/kommune?k=" + k.nr, { target: "#kommune-out", swap: "outerHTML" });
@@ -134,7 +142,7 @@ function drawStrip(el) {
     // Beside the dot, on the side with more room, so it stays clear of the labels above the plot
     const left = cx > (m.l + W - m.r) / 2;
     svg.append("text").attr("x", left ? cx - 13 : cx + 13).attr("y", cy).attr("dy", "0.35em").attr("text-anchor", left ? "end" : "start")
-      .attr("font-weight", 650).attr("font-size", 13).attr("fill", cssVar("--text-primary"))
+      .attr("class", "chart-label").attr("fill", cssVar("--text-primary"))
       .attr("paint-order", "stroke").attr("stroke", cssVar("--surface-1")).attr("stroke-width", 3).attr("stroke-linejoin", "round").text(s.n);
   }
   el.replaceChildren(svg.node());
@@ -166,7 +174,7 @@ function drawFund(el) {
       .attr("stroke-dasharray", "2 4").attr("d", d3.line().x(p => x(p[0])).y(p => y(p[1])));
     // Label the middle of the first level, clear of the end labels
     const level = s.filter(d => d[c.ref] === s[0][c.ref]), mid = level[Math.floor(level.length / 2)];
-    svg.append("text").attr("x", x(mid.year)).attr("y", y(mid[c.ref]) - 8).attr("text-anchor", "middle").attr("font-size", 12)
+    svg.append("text").attr("x", x(mid.year)).attr("y", y(mid[c.ref]) - 8).attr("text-anchor", "middle").attr("class", "chart-note")
       .attr("fill", cssVar("--text-secondary")).text(`Forventet realavkastning, ${nb.format(mid[c.ref])} %`);
   }
   const line = d3.line().x(d => x(d.year)).y(d => y(d.value));
@@ -179,7 +187,7 @@ function drawFund(el) {
   for (const [d, near, anchor, dx] of [[s[0], s[1], "start", 8], [last, actual[actual.length - (last.forecast ? 1 : 2)], "end", -8]]) {
     const below = near.value > d.value || (c.ref && d[c.ref] > d.value);
     svg.append("circle").attr("cx", x(d.year)).attr("cy", y(d.value)).attr("r", 5).attr("fill", cssVar("--series-1")).attr("stroke", cssVar("--surface-1")).attr("stroke-width", 2);
-    svg.append("text").attr("x", x(d.year) + dx).attr("y", below ? Math.min(y(d.value) + 22, H - m.b - 6) : y(d.value) - 12).attr("text-anchor", anchor).attr("font-size", 13).attr("font-weight", 650)
+    svg.append("text").attr("x", x(d.year) + dx).attr("y", below ? Math.min(y(d.value) + 22, H - m.b - 6) : y(d.value) - 12).attr("text-anchor", anchor).attr("class", "chart-label")
       .attr("fill", cssVar("--text-primary")).text(`${d.year}: ${c.unit(d.value)}`);
   }
   const hover = svg.append("g").style("display", "none");
@@ -213,8 +221,7 @@ function drawFundParts(el) {
   const textOf = c => named ? `${c.label}: ${nb.format(last[c.key])}` : nb.format(last[c.key]);
   const probeSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   const probe = document.createElementNS("http://www.w3.org/2000/svg", "text");
-  probe.setAttribute("font-size", "13");
-  probe.setAttribute("font-weight", "650");
+  probe.setAttribute("class", "chart-label");
   probeSvg.append(probe);
   el.append(probeSvg);
   let labelW = 0;
@@ -256,7 +263,7 @@ function drawFundParts(el) {
     svg.append("circle").attr("cx", x(last.year)).attr("cy", y(last[c.key])).attr("r", 4)
       .attr("fill", fill).attr("stroke", cssVar("--surface-1")).attr("stroke-width", 2);
     svg.append("text").attr("x", W - m.r + 10).attr("y", c.y).attr("dy", "0.35em")
-      .attr("font-size", 13).attr("font-weight", 650).attr("fill", fill).text(c.text);
+      .attr("class", "chart-label").attr("fill", fill).text(c.text);
   }
   const hover = svg.append("g").style("display", "none");
   hover.append("line").attr("y1", m.t).attr("y2", H - m.b).attr("stroke", cssVar("--text-muted"));

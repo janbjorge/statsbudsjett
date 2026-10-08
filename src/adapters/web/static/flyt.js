@@ -68,7 +68,8 @@ function showDetail(d) {
 // ---------- Sankey ----------
 function drawSankey() {
   const el = document.getElementById("sankey");
-  const W = Math.max(boxWidth(el.parentElement), 720);
+  // 880 px leaves room for the longest 14 px label between two columns; a phone scrolls it sideways
+  const W = Math.max(boxWidth(el.parentElement), 880);
   const narrow = W < 900;
   const NODE_W = 10, PAD = 14, TOP = 8;
   const KPX = (narrow ? 640 : 720) / d3.max(Object.values(totals));
@@ -168,7 +169,7 @@ function drawDiff() {
   const narrow = Wd < 900;
   const rows = diffRows();
   const val = d => unit === "nok" ? d.change : d.pct;
-  const ROW = 28, SEC = 36, LABEL_W = narrow ? 220 : 300, VAL_W = narrow ? 104 : 124;
+  const ROW = 28, SEC = 36, LABEL_W = narrow ? 256 : 300, VAL_W = narrow ? 104 : 124;
   let y = 8;
   rows.forEach(r => { r.y = y; y += r.section ? SEC : ROW; });
   const H = y + 30;
@@ -208,10 +209,9 @@ function drawDiff() {
     .attr("width", r => Math.max(1, Math.abs(x(val(r) ?? 0) - x(0)))).attr("height", bh).attr("rx", 3)
     .attr("fill", r => color(val(r) >= 0 ? "--up" : "--down"))
     .attr("fill-opacity", r => r.depth === 1 ? 1 : 0.55);
-  data.append("text").attr("class", "val-label")
+  data.append("text").attr("class", r => "val-label" + (r.depth === 1 ? " l1" : ""))
     .attr("x", r => x(val(r) ?? 0) + (val(r) >= 0 ? 6 : -6)).attr("y", ROW / 2).attr("dy", "0.35em")
     .attr("text-anchor", r => val(r) >= 0 ? "start" : "end")
-    .attr("font-weight", r => r.depth === 1 ? 600 : 400)
     .text(r => val(r) == null ? "ny" : signed(val(r)) + (unit === "pct" ? " %" : ""));
 
   el.replaceChildren(svg.node());

@@ -21,6 +21,7 @@
 - Outputs must be deterministic: sort group_by results, and sum amounts as whole kroner before converting to billions (src/pipeline/flows.py `load`), since float sums from a parallel group_by vary in the last bit.
 - JSON goes through orjson, not the standard library `json` (jb 2026-10-08). JSON in the repo is formatted like `jq .` (2-space indent, trailing newline) so diffs show what changed. Write it with `orjson.dumps(..., option=orjson.OPT_INDENT_2 | orjson.OPT_APPEND_NEWLINE)`; orjson returns bytes and keeps non-ASCII as is.
 - Charts follow the dataviz skill: validated palette, thin marks, legend plus direct labels, hover, table view, light and dark.
+- Text sizes come from the type scale in app.css (six `--t-*` tokens, weights 400 and 650); tests/test_type_scale.py enforces it. SVG text gets a class, not a font-size. `tools/density.py` measures the pages; run it after layout changes.
 - Before commit: `uvx ruff check .`, `uv run ty check src tests`, `uv run pytest tests/<files you touched>`, and `uv run python -m pipeline.verify`. Then run the app and look at it.
 
 ## Git and hosting
