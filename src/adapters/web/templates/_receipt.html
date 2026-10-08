@@ -7,9 +7,9 @@
     {% for g in receipt %}<span><i class="sw" style="background:var(--g-{{ group_slot(g.name) }})"></i>{{ g.name }} {{ g.share|nb1 }} kr</span>{% endfor %}
   </div>
   <p class="note">Forenklet: skatten din havner i en felles pott sammen med andre inntekter og penger fra oljefondet.
-    Vi fordeler beløpet ditt etter hvor stor del av utgiftene hvert formål utgjør.</p>
+    Beløpet er fordelt etter hvor stor del av utgiftene hvert formål utgjør.</p>
   <div class="receipt" aria-live="polite">
-    <h3>KVITTERING</h3><div class="c">Statsbudsjettet 2027 · din andel</div>
+    <h3>KVITTERING</h3><div class="c">Statsbudsjettet 2027 · din skatt fordelt</div>
     {% for g in receipt %}
     <details {{ "open" if loop.index <= 3 }}>
       <summary class="row g"><span class="n">{{ g.name }}</span><span class="d"></span><span>{{ g.kroner|kr }}</span></summary>
@@ -17,6 +17,5 @@
     </details>
     {% endfor %}
     <hr><div class="row tot"><span>TOTALT</span><span>{{ tax_kroner|kr }}</span></div>
-    <div class="c" style="margin:12px 0 0">Takk for bidraget!</div>
   </div>
 </div>
