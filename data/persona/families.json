@@ -53,7 +53,7 @@
     ],
     "detail": "0-1",
     "title_nb": "Engangsstønaden ved fødsel kuttes til 67 100 kr",
-    "summary_nb": "Engangsstønaden går til mødre (og noen fedre) som ikke har rett på foreldrepenger. Den foreslås redusert fra 92 648 til 67 100 kroner per barn for barn født eller adoptert fra 1. juli 2027.",
+    "summary_nb": "Engangsstønaden går til mødre (og noen fedre) som ikke har rett til foreldrepenger. Den foreslås redusert fra 92 648 til 67 100 kroner per barn for barn født eller adoptert fra 1. juli 2027.",
     "effect": "minus",
     "kind": "far",
     "amounts": [
@@ -96,7 +96,7 @@
     ],
     "detail": "1-5",
     "title_nb": "Kontantstøtten holdes på 7 500 kr i måneden",
-    "summary_nb": "Kontantstøtte for barn mellom 13 og 19 måneder som ikke har full barnehageplass videreføres med samme satser. Full sats er 7 500 kroner i måneden, og den blir lavere jo flere timer barnet er i barnehagen.",
+    "summary_nb": "Kontantstøtte for barn mellom 13 og 19 måneder som ikke har full barnehageplass, videreføres med samme satser. Full sats er 7 500 kroner i måneden, og den blir lavere jo flere timer barnet er i barnehagen.",
     "effect": "uendret",
     "kind": "far",
     "amounts": [
@@ -218,7 +218,7 @@
     "source_title": "Prop. 1 S (2026–2027) Kunnskapsdepartementet",
     "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175106/",
     "page": 72,
-    "caveat_nb": "Retten har gjeldt siden 1. august 2026. Budsjettet foreslår ingen ny endring."
+    "caveat_nb": "Retten har gjeldt siden 1. august 2026."
   },
   {
     "id": "skole-smagruppeundervisning",
@@ -227,7 +227,7 @@
     ],
     "detail": "6-15",
     "title_nb": "Mer undervisning i små grupper fra høsten 2027",
-    "summary_nb": "Skolene får penger til flere lærere, slik at elevene får mer av opplæringen i lesing, skriving og regning i mindre grupper. Pengene gjelder særlig 1., 2., 5. og 8. trinn, og noe av dem tas fra leksehjelp.",
+    "summary_nb": "Et nytt tilskudd på 465 millioner kroner høsten 2027 skal gi mer undervisning i små grupper, i tillegg til lærernormen. Pengene gjelder særlig 1., 2., 5. og 8. trinn.",
     "effect": "blandet",
     "kind": "tilbud",
     "amounts": [],
@@ -345,7 +345,7 @@
     "source_title": "Prop. 1 S (2026–2027) Statsbudsjettet 2027 (Gul bok)",
     "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175738/",
     "page": 30,
-    "caveat_nb": "Gjelder barn og familier som får hjelp fra barnevernet."
+    "caveat_nb": null
   },
   {
     "id": "bortebuarstipend-okes",
@@ -379,7 +379,7 @@
       "student"
     ],
     "detail": null,
-    "title_nb": "Studielånet øker med litt over 7 000 kr",
+    "title_nb": "Basislånet øker med litt over 7 000 kr",
     "summary_nb": "Basislånet fra Lånekassen skal heretter følge lønnsveksten (grunnbeløpet i folketrygden) i stedet for prisveksten. For studieåret 2027–28 betyr det 4,21 prosent mer, litt over 7 000 kroner.",
     "effect": "pluss",
     "kind": "far",
@@ -422,7 +422,7 @@
       "student"
     ],
     "detail": null,
-    "title_nb": "3 050 nye studentboliger",
+    "title_nb": "Støtte til 3 050 nye eller oppussede studentboliger",
     "summary_nb": "Regjeringen vil gi støtte til å bygge eller pusse opp 3 050 studenthybler. Steder der det er få studentboliger og stort press, blir prioritert.",
     "effect": "pluss",
     "kind": "tilbud",
@@ -450,7 +450,7 @@
     "source_title": "Ei historisk endring av studielån og stipend",
     "source_url": "https://www.regjeringen.no/no/aktuelt/en-historisk-endring-av-studielan-og-stipend/id3174273/",
     "page": null,
-    "caveat_nb": "Gjelder bare studentboliger med felles strømmåling."
+    "caveat_nb": null
   },
   {
     "id": "folkehogskole-mindre-stipend",

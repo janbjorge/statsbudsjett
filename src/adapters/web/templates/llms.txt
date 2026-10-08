@@ -1,4 +1,4 @@
-# Statsbudsjettet 2027, forklart
+# Statsbudsjettet 2027 enkelt forklart
 
 > A plain-language explainer of Norway's 2027 state budget proposal (Prop. 1 S (2026–2027), presented 7 October 2026): where the money comes from and goes, what changes for a household, the numbers per kommune, and every post in the budget. Built from the government's published data. Not an official source.
 

@@ -40,7 +40,7 @@
     <p class="lede">Det meste kommer fra skatter og avgifter. Resten dekkes med penger fra oljefondet.</p>
     {% set explain = {
       "Skatt på inntekt og formue": "Skatt du betaler av lønn, pensjon og formue, og skatt fra bedrifter",
-      "Trygde- og arbeidsgiveravgift": "Trekkes av lønna di og betales av arbeidsgiveren",
+      "Trygde- og arbeidsgiveravgift": "Trekkes fra lønnen din og betales av arbeidsgiveren",
       "Merverdiavgift": "Moms på det du kjøper, vanligvis 25 %",
       "Andre skatter og avgifter": "Avgifter på bil, drivstoff, alkohol, tobakk, strøm m.m.",
       "Renter, utbytte og andre inntekter": "Utbytte fra statlige selskaper, renter og gebyrer",
@@ -69,11 +69,11 @@
   </section>
 
   <section id="endringer">
-    <h2>Hva er nytt fra 2026?</h2>
+    <h2>Hva endres fra 2026?</h2>
     <p class="lede">Utgiftene øker med <b>{{ o.change|nb1 }} milliarder kroner</b> ({{ o.change_pct|pct }}) før prisvekst. Her er kapitlene som endrer seg mest.</p>
     {% set top = (changes.up + changes.down)|map(attribute="change")|map("abs")|max %}
     <div class="two">
-      {% for title, rows, var in [("Største økninger", changes.up, "--up"), ("Største kutt", changes.down, "--down")] %}
+      {% for title, rows, var in [("Største økninger", changes.up, "--up"), ("Største nedganger", changes.down, "--down")] %}
       <div class="card"><h3>{{ title }}</h3><p class="muted small" style="margin:0 0 12px">Kapitler, milliarder kroner</p><div class="bars">
         {% for c in rows %}
         <div class="bar-row"><div class="lab"><b>{{ c.name }}</b><div class="muted small">{{ c.group }} · {{ c.v2026|nb1 }} → {{ c.v2027|nb1 }} mrd.</div></div>
@@ -109,12 +109,12 @@
 
   <section id="feil">
     <h2>Fant du en feil?</h2>
-    <p class="lede">Denne siden er åpen kildekode. Koden, tallene og utregningene ligger åpent på nettet,
+    <p class="lede">Koden bak siden er åpen. Koden, tallene og utregningene ligger åpent på nettet,
       så hvem som helst kan se hvordan siden virker og si fra hvis noe er galt.</p>
     <div class="grid tiles">
       <div class="card"><h3>Hva betyr åpen kildekode?</h3>
         <p class="muted">Du kan sjekke hvor et tall kommer fra,
-          hvilken side i budsjettdokumentene det står på, og hvordan skatten er regnet ut. Ser du en feil, kan du peke på nøyaktig hvor den er.</p></div>
+          hvilken side i budsjettdokumentene det står på og hvordan skatten er regnet ut. Ser du en feil, kan du peke på nøyaktig hvor den er.</p></div>
       <div class="card"><h3>Slik sier du fra</h3>
         <ol class="steps">
           <li>Gå til <a href="https://github.com/janbjorge/statsbudsjett/issues">listen over saker på GitHub</a>. GitHub er nettstedet der koden ligger.</li>

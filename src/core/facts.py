@@ -38,7 +38,7 @@ LABEL = {
     (Kind.REGEL, Effect.BLANDET): "◆ Endrede regler",
 }
 # Same kroner while prices rise: the amount itself does not change, its value does
-REAL_LABEL = {Kind.BETALER: "▲ Billigere etter prisvekst", Kind.FAR: "▼ Verdt mindre etter prisvekst"}
+REAL_LABEL = {Kind.BETALER: "▼ Reelt billigere", Kind.FAR: "▼ Reelt mindre verdt"}
 
 # Persona keys match data/persona/*.json; "husholdning" applies to everyone and is not selectable
 PERSONAS = {
@@ -49,7 +49,7 @@ PERSONAS = {
     "syk_ufor": "Syk eller ufør",
     "arbeidsledig": "Arbeidsledig",
     "bonde": "Bonde",
-    "fisker": "Fisker eller havbruk",
+    "fisker": "Fisker eller oppdretter",
     "naeringsdrivende": "Driver egen bedrift",
     "bilist": "Har bil",
     "bilkjoper": "Skal kjøpe eller lease ny bil",
@@ -60,7 +60,7 @@ EVERYONE = "husholdning"
 # The form asks only for these; Profile.situations reads the rest from the incomes and children.
 # "naeringsdrivende" is still asked, since an aksjeselskap owner has wage, not næringsinntekt
 ASKED = ("student", "syk_ufor", "arbeidsledig", "naeringsdrivende", "bilist", "bilkjoper", "distrikt_nord", "sparer")
-KID_BANDS = {"0-1": "Under 1 år", "1-5": "1–5 år (barnehage)", "6-15": "6–15 år (skole)", "16-18": "16–18 år", "18+": "Over 18 år"}
+KID_BANDS = {"0-1": "Under 1 år", "1-5": "1–5 år (barnehage)", "6-15": "6–15 år (skole)", "16-18": "16–17 år", "18+": "18 år og eldre"}
 ADULT_KIDS = "18+"
 
 

@@ -33,7 +33,7 @@ function nodeOrder(flows) {
 // ---------- info panel ----------
 const info = document.getElementById("flow-info");
 const HINT = matchMedia("(hover: hover)").matches
-  ? "Hold musepekeren over en strøm for å se detaljer. Klikk for å låse valget."
+  ? "Hold musepekeren over en strøm for å se detaljer. Klikk for å holde valget fast."
   : "Trykk på en strøm eller en stolpe for å se detaljer.";
 
 function describe(d, total) {
@@ -175,7 +175,7 @@ function drawDiff() {
     .range([LABEL_W + VAL_W + 24, Wd - (narrow ? 56 : VAL_W)]);
 
   const svg = d3.create("svg").attr("width", Wd).attr("height", H).attr("viewBox", [0, 0, Wd, H])
-    .attr("role", "img").attr("aria-label", "Endring per post fra 2026 til 2027");
+    .attr("role", "img").attr("aria-label", "Endring per område fra 2026 til 2027");
   svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - 24})`)
     .call(d3.axisBottom(x).ticks(narrow ? 4 : 8).tickSize(-(H - 32))
       .tickFormat(v => (v > 0 ? "+" : "") + f1.format(v).replace(",0", "") + (unit === "pct" ? " %" : "")))
@@ -214,13 +214,13 @@ function drawDiff() {
   el.parentElement.classList.toggle("overflows", Wd > el.parentElement.clientWidth);
   document.getElementById("diff-sub").textContent = unit === "nok"
     ? "Endring i milliarder kroner. Blå er økning, rød er nedgang. Tallene i midten viser 2026 → 2027."
-    : "Endring i prosent av 2026-beløpet. Små poster kan gi store prosenter.";
+    : "Endring i prosent av 2026-beløpet. Små beløp kan gi store prosentvise endringer.";
 }
 
 function drawTable() {
   const rows = diffRows().filter(r => !r.section);
   document.getElementById("table").innerHTML =
-    `<table class="tbl"><thead><tr><th>Post</th><th class="num">2026</th><th class="num">2027</th><th class="num">Endring</th><th class="num">%</th></tr></thead><tbody>` +
+    `<table class="tbl"><thead><tr><th>Område</th><th class="num">2026</th><th class="num">2027</th><th class="num">Endring</th><th class="num">%</th></tr></thead><tbody>` +
     rows.map(r => `<tr><td>${r.depth === 2 ? "&nbsp;&nbsp;&nbsp;" : ""}${html(r.key)}</td><td class="num">${fmt(r.y2026)}</td><td class="num">${fmt(r.y2027)}</td>` +
       `<td class="num">${signed(r.change)}</td><td class="num">${r.pct == null ? "ny" : signed(r.pct)}</td></tr>`).join("") +
     `</tbody></table>`;

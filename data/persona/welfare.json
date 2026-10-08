@@ -8,7 +8,7 @@
     ],
     "detail": null,
     "title_nb": "Pensjoner og trygder justeres fra 1. mai 2027",
-    "summary_nb": "Pensjoner og trygder som følger grunnbeløpet (G) i folketrygden, justeres som vanlig fra 1. mai 2027. Budsjettet regner med denne justeringen.",
+    "summary_nb": "Pensjoner og trygder som følger grunnbeløpet (G) i folketrygden, justeres som vanlig fra 1. mai 2027.",
     "effect": "uendret",
     "amounts": [],
     "quote": "Budsjettforslaget for 2027 for dei G- regulerte ytingane inkluderer anslått effekt av reguleringa av grunnbeløpet i folketrygda per 1. mai 2027",
@@ -16,7 +16,7 @@
     "source_title": "Prop. 1 S (2026–2027) Arbeids- og inkluderingsdepartementet",
     "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175670/",
     "page": 20,
-    "caveat_nb": "Budsjettet bygger på et anslag; den faktiske økningen fastsettes ved reguleringen 1. mai 2027."
+    "caveat_nb": "Budsjettet bygger på et anslag. Den faktiske økningen fastsettes ved reguleringen 1. mai 2027."
   },
   {
     "id": "minstepensjon-8000",
@@ -42,7 +42,7 @@
       "pensjonist"
     ],
     "detail": "sykehjem",
-    "title_nb": "Støtte til 1 750 nye eller fornyede sykehjemsplasser",
+    "title_nb": "Støtte til 1 750 nye eller fornyede sykehjems- og omsorgsplasser",
     "summary_nb": "Staten vil bruke fire milliarder kroner på å hjelpe kommunene med å bygge og fornye rundt 1 750 sykehjems- og omsorgsplasser i 2027, 250 flere enn i år.",
     "effect": "pluss",
     "kind": "tilbud",
@@ -69,7 +69,7 @@
     ],
     "detail": null,
     "title_nb": "Kortere ventetid på høreapparat",
-    "summary_nb": "Regjeringen bruker 16,5 millioner kroner på flere undersøkelser og bedre henvisninger hos fastlegen. Målet er maks fire måneders ventetid på høreapparat.",
+    "summary_nb": "Regjeringen bruker 16,5 millioner kroner på flere undersøkelser og bedre henvisninger. Høreapparatgarantien sier at ventetiden skal være maks fire måneder.",
     "effect": "pluss",
     "kind": "tilbud",
     "amounts": [],
@@ -120,7 +120,7 @@
     ],
     "detail": "barn og unge",
     "title_nb": "Ungdom under 18 år slipper fortsatt egenandeler",
-    "summary_nb": "Siden 1. august 2026 har barn og unge under 18 år ikke betalt egenandeler under takordningen, mot tidligere 16 år. Dette videreføres i 2027.",
+    "summary_nb": "Siden 1. august 2026 har barn og unge under 18 år sluppet egenandeler hos lege, psykolog og lignende. Før gikk grensen ved 16 år. Dette videreføres i 2027.",
     "effect": "uendret",
     "amounts": [],
     "quote": "Fra 1. august 2026 ble aldersgrensen for betaling av alle egenandeler under takordningen økt fra 16 til 18 år. Det foreslås å videreføre dette tiltaket",
@@ -138,7 +138,7 @@
     ],
     "detail": "dødsfall i familien",
     "title_nb": "Høyere gravferdsstønad, men større egenandel for båretransport",
-    "summary_nb": "Den behovsprøvde gravferdsstønaden øker til 37 000 kroner, mens dødsboets egenandel for båretransport øker til 7 400 kroner. Dødsbo med lite eller ingen midler skal komme likt eller bedre ut.",
+    "summary_nb": "Den behovsprøvde gravferdsstønaden øker til 37 000 kroner, mens dødsboets egenandel for båretransport øker til 7 400 kroner. Dødsbo med lite eller ingen midler skal komme like godt eller bedre ut.",
     "effect": "blandet",
     "kind": "far",
     "amounts": [
@@ -200,7 +200,7 @@
     ],
     "detail": "grunnstønad ADHD",
     "title_nb": "Grunnstønad ved ADHD krever igjen dokumentasjon",
-    "summary_nb": "Barn og unge under 18 år med ADHD med hyperaktivitet må dokumentere ekstrautgiftene for å fortsatt få grunnstønad. Voksne som fikk stønaden i 2019–2023 uten dokumentasjon, må også sende inn dette.",
+    "summary_nb": "Barn og unge under 18 år med ADHD med hyperaktivitet må dokumentere merutgiftene for fortsatt å få grunnstønad. Voksne som fikk stønaden i 2019–2023 uten dokumentasjon, må også sende inn dette.",
     "effect": "minus",
     "kind": "regel",
     "amounts": [],
@@ -254,7 +254,7 @@
     ],
     "detail": "hjelpemidler",
     "title_nb": "Bare ett aktivitetshjelpemiddel om gangen",
-    "summary_nb": "Har du allerede lånt et aktivitetshjelpemiddel, kan du ikke få innvilget et nytt lån. Målet er at flere i målgruppen skal få minst ett.",
+    "summary_nb": "Har du allerede lånt et aktivitetshjelpemiddel, kan du ikke få innvilget et nytt lån. Målet er at flere som trenger det, skal få låne minst ett.",
     "effect": "blandet",
     "kind": "regel",
     "amounts": [],
@@ -309,7 +309,7 @@
     ],
     "detail": "sykepenger",
     "title_nb": "50 millioner for raskere behandling av sykepenger",
-    "summary_nb": "Nav får 50 millioner kroner til blant annet å korte ned behandlingstiden for sykepenger. Det gjelder både søknader fra arbeidstakere og refusjon til arbeidsgivere.",
+    "summary_nb": "Nav får 50 millioner kroner blant annet til å korte ned behandlingstiden for sykepenger. Det gjelder både søknader fra arbeidstakere og refusjon til arbeidsgivere.",
     "effect": "pluss",
     "kind": "tilbud",
     "amounts": [],
@@ -328,7 +328,7 @@
     ],
     "detail": "sykefravær",
     "title_nb": "Mer samarbeid mellom Nav og helsetjenesten om sykmeldte",
-    "summary_nb": "78 millioner kroner går til tettere samarbeid mellom Nav og kommunehelsetjenesten, bedre verktøy for legene som sykmelder, og en ny digital sykmelding.",
+    "summary_nb": "78 millioner kroner går til tettere samarbeid mellom Nav og kommunehelsetjenesten, bedre beslutningsstøtte for legene som sykmelder og bedre utveksling av informasjon mellom Nav og helsetjenesten.",
     "effect": "blandet",
     "kind": "tilbud",
     "amounts": [],
@@ -364,7 +364,7 @@
     ],
     "detail": "arbeidsmarkedstiltak",
     "title_nb": "Flere tiltak fra Nav for å komme i jobb",
-    "summary_nb": "Pengene til arbeidsmarkedstiltak, som jobbstøtte og lønnstilskudd, økes med 50 millioner kroner. Det åpner for mer individuell jobbstøtte (IPS) og et forsøk med fireårig lønnstilskudd for unge.",
+    "summary_nb": "Pengene til arbeidsmarkedstiltak, som jobbstøtte og lønnstilskudd, økes med 50 millioner kroner. Det åpner for mer individuell jobbstøtte og et forsøk med fireårig lønnstilskudd for unge.",
     "effect": "pluss",
     "kind": "tilbud",
     "amounts": [],
@@ -424,7 +424,7 @@
     "source_title": "Prop. 1 S (2026–2027) Arbeids- og inkluderingsdepartementet",
     "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175670/",
     "page": 22,
-    "caveat_nb": "Forsøket startet i 2025 ved sju Nav-kontor og gjelder ikke hele landet."
+    "caveat_nb": "Forsøket startet i 2025 ved sju Nav-kontorer og gjelder ikke hele landet."
   },
   {
     "id": "norgespris-45-ore",
@@ -433,7 +433,7 @@
     ],
     "detail": "strøm",
     "title_nb": "Norgespris på strøm øker fra 40 til 45 øre",
-    "summary_nb": "Den faste Norgesprisen på strøm og fjernvarme foreslås hevet med 5 øre til 45 øre per kWh (uten mva). Regjeringen anslår at en typisk husholdning i Sør-Norge likevel kan spare om lag 8 700 kroner med Norgespris.",
+    "summary_nb": "Den faste Norgesprisen på strøm og fjernvarme foreslås hevet med 5 øre til 45 øre per kWh (uten mva). Regjeringen anslår at en typisk husholdning i Sørvest-Norge likevel kan spare om lag 8 700 kroner med Norgespris.",
     "effect": "minus",
     "kind": "betaler",
     "amounts": [
@@ -449,7 +449,7 @@
     "source_title": "Regjeringa vil løyve 16,4 milliardar kroner til Noregspris og straumstønad",
     "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringa-vil-loyva-164-milliardar-kroner-til-Noregspris-og-straumstonad/id3174255/",
     "page": null,
-    "caveat_nb": "Gjelder fra 1. januar 2027. Sparingen er beregnet med 16 000 kWh i året og anslått spotpris i Sørvest-Norge (NO2)."
+    "caveat_nb": "Gjelder fra 1. januar 2027. Innsparingen er beregnet med 16 000 kWh i året og anslått spotpris i Sørvest-Norge (NO2)."
   },
   {
     "id": "stromstotte-terskel-79",
@@ -526,8 +526,8 @@
       "pensjonist"
     ],
     "detail": "post",
-    "title_nb": "Brev kommer i postkassen én dag i uka",
-    "summary_nb": "Fra 1. juli 2027 leveres brev som hovedregel til postkassen én dag i uka. Vil du ha post oftere, kan du hente brev på et hentepunkt fem dager i uka. Pakkelevering endres ikke.",
+    "title_nb": "Brev kommer i postkassen én dag i uken",
+    "summary_nb": "Fra 1. juli 2027 leveres brev som hovedregel til postkassen én dag i uken. Vil du ha post oftere, kan du hente brev på et hentepunkt fem dager i uken. Pakkelevering endres ikke.",
     "effect": "minus",
     "kind": "tilbud",
     "amounts": [],
@@ -545,7 +545,7 @@
       "pensjonist"
     ],
     "detail": "bostøtte",
-    "title_nb": "Boutgiftstakene i bostøtten justeres ikke for prisvekst",
+    "title_nb": "Grensene for boutgifter i bostøtten følger ikke prisveksten",
     "summary_nb": "Om lag 92 900 husstander ventes å få bostøtte hver måned i 2027, i snitt 43 600 kroner i året. Grensene for hvor store boutgifter som regnes med, holdes på samme kronebeløp som i 2026.",
     "effect": "minus",
     "kind": "far",
@@ -637,6 +637,6 @@
     "source_title": "Betre nettdekning på jernbana",
     "source_url": "https://www.regjeringen.no/no/aktuelt/nettdekning-i-tunnel/id3175562/",
     "page": null,
-    "caveat_nb": "Romeriksporten skal fornyes først, sommeren 2027."
+    "caveat_nb": "Mobilnettet i Romeriksporten fornyes først, sommeren 2027."
   }
 ]

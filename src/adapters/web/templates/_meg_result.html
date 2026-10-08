@@ -3,7 +3,7 @@
 {% set t = m.tax %}
 {% set many = m.profile.adults|length > 1 %}
 <div class="card tax-card">
-  <div class="muted small">Inntektsskatt i 2027 for {{ "dere" if many else "deg" }}</div>
+  <div class="muted small">Inntektsskatten {{ "deres" if many else "din" }} i 2027</div>
   {% if t.income == 0 %}
   <div class="tax-big">Fyll inn inntekt for å se skatten</div>
   {% elif t.change|abs < 50 %}
@@ -13,7 +13,7 @@
   {% endif %}
   {% if t.income %}
   <p style="margin:4px 0 0">{{ "Dere" if many else "Du" }} betaler om lag <b>{{ t.tax_2027|kr }}</b> i skatt av {{ t.income|kr }} ({{ t.rate|nb1 }} %).
-    Endringen er regnet mot 2026-reglene justert for forventet lønnsvekst ({{ m.growth_wage|nb1 }} %) og pensjonsvekst ({{ m.growth_pension|num }} %), slik Finansdepartementet måler det.</p>
+    Endringen er sammenlignet med 2026-reglene, oppjustert for forventet lønnsvekst ({{ m.growth_wage|nb1 }} %) og pensjonsvekst ({{ m.growth_pension|num }} %), slik Finansdepartementet gjør.</p>
   {% endif %}
   {% if t.income %}
   {#- Pages are the PDF pages of Prop. 1 LS, from data/persona/tax.json; 79 and 82 are quoted in FACTS.md §7 -#}
@@ -36,7 +36,7 @@
       <tr><td>Trygdeavgift</td><td class="num">{{ l.trygdeavgift|kr }}</td><td>{{ ls(m.tax_pages.trygdeavgift) }}</td></tr>
       <tr><td>Trinnskatt</td><td class="num">{{ l.trinnskatt|kr }}</td><td>{{ ls(m.tax_pages.trinnskatt) }}</td></tr>
       {% if l.pensjonsfradrag %}<tr><td>− Skattefradrag for pensjon</td><td class="num">{{ l.pensjonsfradrag|kr }}</td><td>{{ ls(m.tax_pages.pensjonsfradrag) }}</td></tr>{% endif %}
-      {% if l.not_collected %}<tr><td>− Så lite at det ikke kreves inn</td><td class="num">{{ l.not_collected|kr }}</td><td>{{ ls(m.tax_pages.restskatt) }}</td></tr>{% endif %}
+      {% if l.not_collected %}<tr><td>− Kreves ikke inn (under 100 kr)</td><td class="num">{{ l.not_collected|kr }}</td><td>{{ ls(m.tax_pages.restskatt) }}</td></tr>{% endif %}
       <tr><td><b>= Skatt i 2027</b></td><td class="num"><b>{{ l.total|kr }}</b></td><td></td></tr>
     </table>
     {% endif %}
@@ -47,7 +47,7 @@
     {% endif %}
     {% if kinds %}
     <p class="note">Jordbruksfradraget og fiskerfradraget senker bare alminnelig inntekt. Trinnskatt og trygdeavgift regnes av hele næringsinntekten ({{ skl("12-11", " andre ledd bokstav b") }}). Fiskerfradraget krever minst 130 dager med fiske i året.</p>
-    <p class="note">Fradragene står på samme kronebeløp i 2027, og regjeringen regner det som en endring mot referansesystemet ({{ ls(82) }}). Vi antar at referansesystemet ville økt dem med lønnsveksten, slik som personfradraget. Kilden sier ikke hvilken vekst den bruker (<a href="https://github.com/janbjorge/statsbudsjett/blob/main/METHOD.md#5-tax-calculator">metode</a>).</p>
+    <p class="note">Fradragene står på samme kronebeløp i 2027, og regjeringen regner det som en innstramming ({{ ls(82) }}). Vi antar at de ellers ville økt med lønnsveksten, slik som personfradraget. Kilden oppgir ikke hvilken vekst den bruker (<a href="https://github.com/janbjorge/statsbudsjett/blob/main/METHOD.md#5-tax-calculator">se metoden</a>).</p>
     {% endif %}
   </details>
   {% endif %}
@@ -58,9 +58,9 @@
 {% if oob %}{% include "_my_tax.html" %}{% endif %}
 <div class="facts">
   {% if not m.profile.personas %}<p class="muted" style="margin:12px 0 0">Kryss av for det som gjelder {{ m.profile.you }} under «Gjelder noe av dette?» for å se flere endringer.</p>{% endif %}
-  <p class="muted small" style="margin:16px 0 0">{{ m.n_changed }} endringer og {{ m.n_unchanged }} ting som står fast. Alt er hentet fra regjeringens budsjettdokumenter.</p>
-  <p class="services-link"><a href="/tilbud">{% if m.n_general %}{{ m.n_general }} {{ "endring" if m.n_general == 1 else "endringer" }} for tilbud og næringer gjelder {{ m.profile.you }}{% else %}Endringer for tilbud og næringer{% endif %},
-    som mer penger til barnevernet eller mindre CO2-kompensasjon til fiskeflåten. De står på egen side →</a></p>
+  <p class="muted small" style="margin:16px 0 0">{{ m.n_changed }} endringer og {{ m.n_unchanged }} som står fast. Alt er hentet fra regjeringens budsjettdokumenter.</p>
+  <p class="services-link"><a href="/tilbud">{% if m.n_general %}{{ m.n_general }} {{ "endring" if m.n_general == 1 else "endringer" }} i offentlige tilbud og for næringer gjelder {{ m.profile.you }}{% else %}Endringer i offentlige tilbud og for næringer{% endif %}.
+    De står på egen side →</a></p>
   {% for g in m.groups %}
     <h3 class="sec">{{ g.label(m.profile.subject) }}</h3>
     {% if g.wallet == "fast" %}

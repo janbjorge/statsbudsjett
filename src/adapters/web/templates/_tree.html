@@ -13,7 +13,7 @@
     <span class="muted" style="margin-left:8px">{{ t.node.v2027|amount }}</span>
   </div>
   {% set base = t.crumbs[-1][0] %}
-  <div class="treemap" role="img" aria-label="Kart over {{ t.node.name }}"
+  <div class="treemap" role="img" aria-label="Kart: {{ t.node.name }}"
        data-nodes="{{ t.children|tojson_nodes(t.side, base) }}"></div>
   <table class="tbl">
     <thead><tr><th>Navn</th><th>2027</th><th>Endring fra 2026</th></tr></thead>

@@ -6,13 +6,13 @@
   <section>
     <p class="muted" style="margin:0"><a href="/">← Budsjettlupa</a></p>
     <h1>Visste du?</h1>
-    <p class="lede">Statsbudsjettet for 2027 regnet om til kroner per innbygger, per dag og per sekund. Tallene er morsomme å vite,
-      men de sier ikke hva budsjettet betyr for deg. Det ser du under <a href="/#meg">For deg</a>.</p>
+    <p class="lede">Statsbudsjettet for 2027 regnet om til kroner per innbygger, per dag og per sekund. Vil du se hva budsjettet
+      betyr for deg, finner du det under <a href="/#meg">For deg</a>.</p>
     <div class="grid tiles">
       <div class="card tile"><div class="k">Per innbygger</div><div class="v">{{ e.per_person|kr }}</div><div class="s">i året</div></div>
       <div class="card tile"><div class="k">Per innbygger hver dag</div><div class="v">{{ e.per_person_day|kr }}</div><div class="s">i snitt over året</div></div>
       <div class="card tile"><div class="k">Hver dag</div><div class="v">{{ e.per_day|amount }}</div><div class="s">bruker staten i snitt</div></div>
-      <div class="card tile"><div class="k">Hvert sekund</div><div class="v">{{ e.per_second|kr }}</div><div class="s">døgnet rundt, hele året</div></div>
+      <div class="card tile"><div class="k">Hvert sekund</div><div class="v">{{ e.per_second|kr }}</div><div class="s">i snitt</div></div>
     </div>
   </section>
 
@@ -39,6 +39,6 @@
       </tbody>
     </table>
     <p class="note" style="margin-top:12px">Alle tall er budsjettet utenom olje, slik resten av siden viser det. Per innbygger er beløpet delt på
-      {{ e.population|nb }} innbyggere, summen av folketallet i Grønt hefte 2027. Per dag er delt på 365, og per sekund er delt på antall sekunder i 2027.</p>
+      {{ e.population|nb }} innbyggere, folketallet i Grønt hefte 2027. Dagstallene er delt på 365 og sekundtallet på antall sekunder i 2027.</p>
   </section>
 {% endblock %}

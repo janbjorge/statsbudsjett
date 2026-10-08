@@ -7,7 +7,7 @@
   {% set top = fd.chapters[0].node.v2027 if fd.chapters else 0 %}
   <div class="flow-head">
     <h2>{{ n.name }}</h2>
-    <a class="small" href="/?side={{ fd.side }}&sti={{ fd.path|urlencode }}#utforsk">Se i budsjettkartet →</a>
+    <a class="small" href="/?side={{ fd.side }}&sti={{ fd.path|urlencode }}#utforsk">Se i Utforsk →</a>
   </div>
   <p class="note">{{ n.v2027|amount }} i 2027, {{ change(n) }} fra 2026.
     {% if fd.chapters|length > 1 %}{{ fd.chapters|length }} kapitler, størst først. Trykk på et kapittel for å se postene.{% endif %}</p>
@@ -31,7 +31,7 @@
     </details>
     {% endfor %}
     {% if fd.gone_2026 > 0.0005 %}
-    <div class="part-row gone"><span class="n">Kapitler som fantes i 2026, men ikke i 2027 <span class="muted small">nedlagt eller fått nytt nummer</span></span>
+    <div class="part-row gone"><span class="n">Kapitler som fantes i 2026, men ikke i 2027 <span class="muted small">er lagt ned eller har fått nytt nummer</span></span>
       <span class="num">–</span><span class="num neg">{{ (-fd.gone_2026)|signed_amount }}</span></div>
     {% endif %}
   </div>

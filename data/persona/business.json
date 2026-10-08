@@ -6,7 +6,7 @@
     ],
     "detail": "elbil",
     "title_nb": "Moms på elbil fra 150 000 kroner",
-    "summary_nb": "Elbiler har i dag momsfritak for de første 300 000 kronene av prisen. Grensen halveres til 150 000 kroner, så du betaler moms av mer av prisen når du kjøper eller leaser en ny elbil.",
+    "summary_nb": "Elbiler har i dag momsfritak for de første 300 000 kronene av prisen. Grensen halveres til 150 000 kroner, så du betaler moms på en større del av prisen når du kjøper eller leaser en ny elbil.",
     "effect": "minus",
     "kind": "betaler",
     "amounts": [
@@ -31,7 +31,7 @@
     ],
     "detail": "fossilbil",
     "title_nb": "Avgiftene på bensin og diesel holdes reelt uendret",
-    "summary_nb": "CO2-avgiften går opp, men veibruksavgiften går ned like mye. Samlet skal avgiftene på bensin og diesel være om lag uendret når man tar hensyn til prisveksten.",
+    "summary_nb": "CO2-avgiften går opp og veibruksavgiften går ned. Samlet holdes avgiftene på bensin og diesel uendret når man tar hensyn til prisveksten.",
     "effect": "uendret",
     "amounts": [],
     "quote": "Veibruksavgiften på mineralolje, biodiesel og bensin foreslås derfor redusert med 1,2 mrd. kr oner i 2027, slik at de samlede avgiftene på bensin og diesel til bruk i veitrafikken holdes reelt uendret.",
@@ -48,7 +48,7 @@
     ],
     "detail": "fossilbil",
     "title_nb": "Lavere veibruksavgift på bensin og diesel",
-    "summary_nb": "Veibruksavgiften per liter går ned for både bensin og diesel. Dette skal veie opp for at CO2-avgiften på drivstoff øker, slik at pumpeprisen ikke påvirkes av avgiftsendringene.",
+    "summary_nb": "Veibruksavgiften per liter går ned for både bensin og diesel. Det veier opp for at CO2-avgiften øker, slik at de samlede avgiftene holdes uendret når man tar hensyn til prisveksten.",
     "effect": "uendret",
     "amounts": [
       {
@@ -69,7 +69,7 @@
     "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
     "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
     "page": 33,
-    "caveat_nb": "Tabell 1.6: kolonnene er 2026, forslag 2027 og endring i prosent. CO2-avgiften på drivstoff øker samtidig."
+    "caveat_nb": null
   },
   {
     "id": "co2-avgift-bensin-diesel",
@@ -78,7 +78,7 @@
     ],
     "detail": "fossilbil",
     "title_nb": "Høyere CO2-avgift på bensin og diesel",
-    "summary_nb": "CO2-avgiften på bensin og diesel øker. Samtidig senkes veibruksavgiften, så samlet avgift på drivstoff til bil skal være om lag uendret.",
+    "summary_nb": "CO2-avgiften på bensin og diesel øker. Samtidig går veibruksavgiften ned, så de samlede avgiftene holdes uendret når man tar hensyn til prisveksten.",
     "effect": "uendret",
     "amounts": [
       {
@@ -99,7 +99,7 @@
     "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
     "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
     "page": 34,
-    "caveat_nb": "Tabell 1.6: kolonnene er 2026, forslag 2027 og endring i prosent."
+    "caveat_nb": null
   },
   {
     "id": "trafikkforsikringsavgift-personbil",
@@ -164,7 +164,7 @@
     "kind": "betaler",
     "amounts": [
       {
-        "label_nb": "Årlig lettelse per elektrisk varebil (vel)",
+        "label_nb": "Årlig lettelse per elektrisk varebil (litt over)",
         "y2026": null,
         "y2027": 3400,
         "unit": "kr"
@@ -185,7 +185,7 @@
     ],
     "detail": null,
     "title_nb": "Ny skattemodell for firmabil",
-    "summary_nb": "Skatten på privat bruk av firmabil beregnes på en ny måte som tar hensyn til ulike kostnader for ulike motortyper. Det blir gunstigere for elbil, diesel og hybrid, mens bensinbiler får litt høyere skatt.",
+    "summary_nb": "Skatten på privat bruk av firmabil skal beregnes etter en ny modell. I utgangspunktet blir det gunstigere for elbiler, dieselbiler og hybridbiler, mens skatten for bensinbiler øker noe.",
     "effect": "blandet",
     "kind": "betaler",
     "amounts": [],
@@ -226,8 +226,8 @@
       "bilist"
     ],
     "detail": null,
-    "title_nb": "Billettprisene på riksvegferjene justeres for prisvekst",
-    "summary_nb": "Budsjettet legger til grunn at prisene på riksvegferjene øker med 3,7 prosent fra nyttår.",
+    "title_nb": "Billettprisene på riksveiferjene justeres for prisvekst",
+    "summary_nb": "Budsjettet regner med at billettprisene på riksveiferjene øker med 3,7 prosent fra 1. januar.",
     "effect": "minus",
     "kind": "betaler",
     "amounts": [
@@ -243,7 +243,7 @@
     "source_title": "Prop. 1 S (2026–2027) Samferdselsdepartementet",
     "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175333/",
     "page": 90,
-    "caveat_nb": "Gjelder riksvegferjer der billettinntektene går til staten. Fra 1. januar 2027."
+    "caveat_nb": "Gjelder riksveiferjer der billettinntektene går til staten. Fra 1. januar 2027."
   },
   {
     "id": "innsatssonen-skattesats",
@@ -305,7 +305,7 @@
     "effect": "uendret",
     "amounts": [
       {
-        "label_nb": "Makspris barnehage i kommuner med sentralitetsindeks 5 og 6",
+        "label_nb": "Makspris barnehage i de minst sentrale kommunene",
         "y2026": null,
         "y2027": 700,
         "unit": "kr per måned"
@@ -341,7 +341,7 @@
       "distrikt_nord"
     ],
     "detail": null,
-    "title_nb": "Alle kommuner i Finnmark får støtte til beredskap",
+    "title_nb": "Beredskapsstøtten til kommunene utvides til hele Finnmark",
     "summary_nb": "Støtteordningen for bedre beredskap i kommunene utvides fra Øst-Finnmark til hele Finnmark, og blir på 12 millioner kroner fra 2027.",
     "effect": "pluss",
     "kind": "tilbud",
@@ -391,7 +391,7 @@
     ],
     "detail": null,
     "title_nb": "Utreder rabatt for fastboende på fly i Lofoten og Vesterålen",
-    "summary_nb": "Regjeringen vil utrede en prøveordning med rabatt for fastboende på flyrutene i Lofoten og Vesterålen, fordi det har vært vanskelig å få plass.",
+    "summary_nb": "Regjeringen vil utrede en prøveordning med rabatt for fastboende på flyrutene i Lofoten og Vesterålen for at folk som bor der, lettere skal få plass på flyene.",
     "effect": "pluss",
     "kind": "tilbud",
     "amounts": [],
@@ -400,7 +400,7 @@
     "source_title": "Framleis høge ambisjonar for samferdsel",
     "source_url": "https://www.regjeringen.no/no/aktuelt/framleis-hoge-ambisjonar-for-samferdsel/id3175561/",
     "page": null,
-    "caveat_nb": "Dette er en utredning, ikke et vedtatt tilbud."
+    "caveat_nb": "Ordningen er foreløpig bare til utredning."
   },
   {
     "id": "svalbard-fjernvarmepris",
@@ -425,7 +425,7 @@
     "source_title": "Regjeringen vil styrke Longyearbyen",
     "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringen-vil-styrke-longyearbyen/id3174574/",
     "page": null,
-    "caveat_nb": "Svalbardpris gjelder husholdninger og frivillig sektor. Ifølge samme pressemelding får de om lag samme strømpris som Norgespris på fastlandet."
+    "caveat_nb": "Svalbardpris gjelder husholdninger og frivillig sektor. De får også om lag samme strømpris som Norgespris på fastlandet."
   },
   {
     "id": "pukkellaks-tiltak",
@@ -491,7 +491,7 @@
     ],
     "detail": null,
     "title_nb": "Produktavgiften på fangst går ned",
-    "summary_nb": "Produktavgiften som betales av førstehåndsverdien på fisken, foreslås redusert fra 1,6 til 1,2 prosent.",
+    "summary_nb": "Produktavgiften, som er en andel av førstehåndsverdien av fisken, foreslås redusert fra 1,6 til 1,2 prosent.",
     "effect": "pluss",
     "kind": "betaler",
     "amounts": [
@@ -507,7 +507,7 @@
     "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
     "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
     "page": 144,
-    "caveat_nb": "Satsen er tilrådd av Nærings- og fiskeridepartementet. Avgiften ventes å øke noe igjen i 2028."
+    "caveat_nb": "Det er Nærings- og fiskeridepartementet som anbefaler satsen. Avgiften ventes å øke noe igjen i 2028."
   },
   {
     "id": "fiskerfradrag-uendret",
@@ -545,7 +545,7 @@
       "fisker"
     ],
     "detail": null,
-    "title_nb": "Høyere CO2-avgift på diesel i kystfisket",
+    "title_nb": "Høyere CO2-avgift for fiske i nære farvann",
     "summary_nb": "CO2-avgiften for fiske i nære farvann øker med 13 prosent utover prisveksten. For fiske i fjerne farvann blir avgiften bare prisjustert.",
     "effect": "minus",
     "kind": "betaler",
@@ -574,7 +574,7 @@
     "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
     "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
     "page": 175,
-    "caveat_nb": "Nære farvann er mindre enn 250 nautiske mil fra kysten. I 2026 var satsene 4,42, 2,76 og 1,11 kroner per liter (samme proposisjon, s. 174)."
+    "caveat_nb": "Nære farvann er mindre enn 250 nautiske mil fra kysten. I 2026 var satsene 4,42 kroner (nære farvann), 2,76 kroner (både nære og fjerne) og 1,11 kroner (fjerne farvann) per liter."
   },
   {
     "id": "co2-kompensasjon-fiskeflaten",
@@ -624,7 +624,7 @@
     "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
     "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
     "page": 35,
-    "caveat_nb": "Tabell 1.6: kolonnene er 2026, forslag 2027 og endring i prosent."
+    "caveat_nb": null
   },
   {
     "id": "grunnrenteskatt-havbruk-uendret",
@@ -648,7 +648,7 @@
     "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
     "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
     "page": 26,
-    "caveat_nb": "Formell sats 32,1 prosent tilsvarer en effektiv sats på 25 prosent. Fra 2027 kan avgift på oppdrettsfisk bare trekkes fra for tillatelser som er grunnrenteskattepliktige."
+    "caveat_nb": "Den formelle satsen på 32,1 prosent tilsvarer en effektiv sats på 25 prosent. Fra 2027 kan avgift på oppdrettsfisk bare trekkes fra for tillatelser som er grunnrenteskattepliktige."
   },
   {
     "id": "trygdeavgift-naeringsinntekt",
@@ -698,7 +698,7 @@
     "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
     "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
     "page": 27,
-    "caveat_nb": "Selskapsskatten er 22 prosent og oppjusteringsfaktoren for utbytte 1,72 både i 2026 og 2027."
+    "caveat_nb": "Selskapsskatten er 22 prosent, og utbytte ganges fortsatt med 1,72 før det skattlegges."
   },
   {
     "id": "arbeidsgiveravgift-uendret",
@@ -780,12 +780,12 @@
     ],
     "detail": null,
     "title_nb": "Mindre penger til næringsstøtte og Innovasjon Norge",
-    "summary_nb": "Bevilgningene til det næringsrettede virkemiddelapparatet kuttes med om lag 300 millioner kroner. Blant annet avvikles Miljøteknologiordningen i Innovasjon Norge.",
+    "summary_nb": "Statens støtteordninger for næringslivet får om lag 300 millioner kroner mindre. Blant annet avvikles Miljøteknologiordningen i Innovasjon Norge.",
     "effect": "minus",
     "kind": "tilbud",
     "amounts": [
       {
-        "label_nb": "Samlet kutt til virkemiddelapparatet (NFD og KDD)",
+        "label_nb": "Samlet kutt i støtteordninger for næringslivet",
         "y2026": null,
         "y2027": 300,
         "unit": "mill. kr"
@@ -861,7 +861,7 @@
     ],
     "detail": null,
     "title_nb": "Aksjesparekonto kan brukes til flere aksjer",
-    "summary_nb": "Du kan nå også eie aksjer og egenkapitalbevis som handles på markedsplasser som Euronext Growth gjennom aksjesparekontoen.",
+    "summary_nb": "Fra 2027 kan du også ha aksjer og egenkapitalbevis på aksjesparekontoen når de handles på markedsplasser som Euronext Growth.",
     "effect": "pluss",
     "kind": "regel",
     "amounts": [],
@@ -933,7 +933,7 @@
     ],
     "detail": null,
     "title_nb": "Jordbruksavtalen gir 3,66 milliarder i økte inntektsmuligheter",
-    "summary_nb": "Avtalen med bondeorganisasjonene øker inntektsmulighetene i jordbruket med 3 660 millioner kroner, hvorav 3 237 millioner er økte bevilgninger over statsbudsjettet.",
+    "summary_nb": "Avtalen med bondeorganisasjonene øker inntektsmulighetene i jordbruket med 3 660 millioner kroner, og 3 237 millioner av dette er økte bevilgninger over statsbudsjettet.",
     "effect": "pluss",
     "kind": "far",
     "amounts": [
@@ -963,8 +963,8 @@
       "bonde"
     ],
     "detail": null,
-    "title_nb": "Bedre ordninger for bønder ved svangerskap og fødsel",
-    "summary_nb": "I jordbruksavtalen ble partene enige om å fjerne all samordning med andre inntekter ved svangerskap og fødsel.",
+    "title_nb": "Bønder får ikke lenger ytelser ved fødsel avkortet mot andre inntekter",
+    "summary_nb": "I jordbruksavtalen ble partene enige om at ytelsene ved svangerskap og fødsel ikke lenger skal avkortes mot andre inntekter.",
     "effect": "pluss",
     "kind": "far",
     "amounts": [],
@@ -1061,7 +1061,7 @@
     ],
     "detail": "veksthus",
     "title_nb": "Kraftig økning i CO2-avgiften for veksthus",
-    "summary_nb": "Den reduserte CO2-avgiften på gass til oppvarming av veksthus økes kraftig. Økningen skal tas med i kostnadene i jordbruksoppgjøret og dermed kompenseres over tid.",
+    "summary_nb": "Veksthus har en lavere sats i CO2-avgiften på gass til oppvarming. Satsen for naturgass øker fra 0,95 til 2,71 kroner per standardkubikkmeter. Økningen skal tas med i kostnadene i jordbruksoppgjøret og dermed kompenseres over tid.",
     "effect": "minus",
     "kind": "betaler",
     "amounts": [
@@ -1077,7 +1077,7 @@
     "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
     "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
     "page": 175,
-    "caveat_nb": "Satsen for LPG til veksthus øker fra 1,43 til 4,08 kroner. Veksthusnæringen er omfattet av strømstøtteordningen."
+    "caveat_nb": "Satsen for LPG til veksthus øker fra 1,43 til 4,08 kroner per kilo. Veksthusnæringen er omfattet av strømstøtteordningen."
   },
   {
     "id": "skog-jordbruksavtalen",

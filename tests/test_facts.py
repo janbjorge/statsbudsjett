@@ -101,7 +101,7 @@ def test_only_household_money_is_better_or_worse() -> None:
     assert by_id["horeapparatgaranti"].tone == "pluss"
     assert by_id["elavgift-7-32"].label("dere") == "▲ Dere betaler mer"
     assert by_id["elavgift-7-32"].label("du") == "▲ Du betaler mer"
-    assert by_id["barnetrygd-uendret"].label("du") == "▼ Verdt mindre etter prisvekst"
+    assert by_id["barnetrygd-uendret"].label("du") == "▼ Reelt mindre verdt"
 
 
 def test_wallet_groups_hold_every_fact_once_in_page_order() -> None:

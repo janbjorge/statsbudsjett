@@ -9,7 +9,7 @@
     <p class="muted" style="margin:0"><a href="/">← Budsjettlupa</a></p>
     <h1>Pengestrømmen 2026 og 2027</h1>
     <p class="lede">Diagrammene viser hvor pengene kommer fra og hvor de går. Oljeinntektene går rett til oljefondet, og overføringen fra fondet
-      dekker gapet mellom inntekter og utgifter. Lån er holdt utenfor. Alle tall i milliarder kroner.</p>
+      dekker det som mangler. Lån er holdt utenfor. Alle tall i milliarder kroner.</p>
     {% set a, b = spent["2026"], spent["2027"] %}
     <div class="grid tiles">
       <div class="card tile"><div class="k">Utgifter 2027</div><div class="v">{{ b|nb1 }} mrd.</div><div class="s">utenom olje og lån</div></div>
@@ -27,7 +27,7 @@
         <button class="chip" type="button" data-year="2026" aria-pressed="false">2026</button>
       </div>
     </div>
-    <p class="note" id="sankey-sub">Begge år bruker samme skala, så du kan bytte år og sammenligne bredden på strømmene direkte.</p>
+    <p class="note" id="sankey-sub">Begge årene er tegnet i samme skala, så du kan bytte år og sammenligne bredden på strømmene direkte.</p>
     <div class="flow-info" id="flow-info" aria-live="polite"></div>
     <div class="card hscroll"><div id="sankey"></div></div>
     <p class="note swipe">Sveip sideveis for å se hele diagrammet.</p>
@@ -51,8 +51,8 @@
       <summary>Vis som tabell</summary>
       <div class="hscroll" id="table"></div>
     </details>
-    <p class="note">Begge år er regjeringens forslag (ikke vedtatt budsjett), i løpende kroner. Holdt utenfor: kap. 2440/5440 SDØE,
-      5507 petroleumsskatt, 5508/5509 utslippsavgifter på sokkelen, 5685 Equinor-utbytte, 2800 overføring til fondet, og alle poster 90–99.</p>
+    <p class="note">Holdt utenfor: kap. 2440/5440 SDØE,
+      5507 petroleumsskatt, 5508/5509 utslippsavgifter på sokkelen, 5685 Equinor-utbytte, 2800 overføring til fondet og alle poster 90–99.</p>
   </section>
 <script type="application/json" id="flyt-data">{{ payload|safe }}</script>
 {% endblock %}
