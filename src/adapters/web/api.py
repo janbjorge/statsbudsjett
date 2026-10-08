@@ -232,7 +232,9 @@ class Everyday(Out):
     utgifter_per_innbygger: list[PerPerson]
     inntekter_per_innbygger: list[PerPerson]
     oljepengene_rekker_til: date = Field(description="Last day the transfer from the oil fund covers, spending spread evenly from 1 January")
-    fotballbaner_med_tusenlapper: float = Field(description="Football pitches (105 x 68 m) covered by the spending in 1000-krone notes (154 x 70 mm)")
+    tusenlapper_paa_fotballbane_m: float = Field(
+        description="Height in metres of the spending in 1000-krone notes (154 x 70 mm, about 0.12 mm thick) stacked on one football pitch (105 x 68 m)"
+    )
     operahus: float = Field(description="The spending divided by the Oslo Opera House's final cost, 4 278 mill. kr in 2009 kroner")
 
 
@@ -410,7 +412,7 @@ def build(queries: Queries) -> FastAPI:
             per_dag_mrd_kr=e.per_day, per_sekund_kr=e.per_second,
             utgifter_per_innbygger=[PerPerson(navn=r.name, kr=r.kroner) for r in e.spending],
             inntekter_per_innbygger=[PerPerson(navn=r.name, kr=r.kroner) for r in e.income],
-            oljepengene_rekker_til=e.fund_until, fotballbaner_med_tusenlapper=e.pitches, operahus=e.operas,
+            oljepengene_rekker_til=e.fund_until, tusenlapper_paa_fotballbane_m=e.pitch_stack_m, operahus=e.operas,
         )
 
     @api.get(

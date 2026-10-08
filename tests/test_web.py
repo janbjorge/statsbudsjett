@@ -6,6 +6,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from adapters.web.main import app, profile_from, profile_query, queries
+from core import budget
 
 client = TestClient(app)
 HX = {"HX-Request": "true"}
@@ -202,12 +203,19 @@ def test_everyday_page_adds_up() -> None:
 
 def test_everyday_page_has_playful_units() -> None:
     e = queries.everyday()
-    # 2 286,8 mrd. kr: the oil fund transfer of 561,7 covers 89,7 days, 1000-kr notes of 154 x 70 mm over 105 x 68 m pitches,
+    # 2 286,8 mrd. kr: the oil fund transfer of 561,7 covers 89,7 days, 1000-kr notes of 154 x 70 x 0,12 mm stacked on one 105 x 68 m pitch,
     # and Operaen at 4 278 mill. kr
     assert (e.fund_until.month, e.fund_until.day) == (3, 31)
-    assert round(e.pitches) == 3453 and round(e.operas) == 535
+    assert round(e.pitch_stack_m * 100) == 41 and round(e.operas) == 535
     html = client.get("/visste-du").text
-    assert "31. mars" in html and "fotballbaner" in html and "operahus" in html
+    assert "31. mars" in html and "41 cm" in html and "operahus" in html
+
+
+def test_pitch_stack_height() -> None:
+    # Exactly enough 1000-kr notes to cover one 105 x 68 m pitch make one layer, 0,12 mm high
+    one_layer_bn = 105 * 68 / (0.154 * 0.070) * 1000 / 1e9
+    assert abs(budget.pitch_stack_m(one_layer_bn) - 0.00012) < 1e-12
+    assert budget.pitch_stack_m(0) == 0
 
 
 def test_family_is_addressed_as_dere() -> None:

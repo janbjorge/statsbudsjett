@@ -149,6 +149,7 @@ def receipt(budget: Budget, tax_kroner: int) -> list[ReceiptGroup]:
 SECONDS_2027 = 365 * 24 * 60 * 60
 # Playful units for /visste-du, one source each (METHOD.md §4)
 NOTE_M2 = 0.154 * 0.070  # 1000-kroneseddel, 154 x 70 mm (Norges Bank)
+NOTE_THICKNESS_M = 0.00012  # about 0.12 mm per note: 100 Swedish cotton notes are about 1.2 cm (Riksbank); Norges Bank gives none
 PITCH_M2 = 105 * 68  # fotballbane, 105 x 68 m (NFF, retningslinjer infrastruktur)
 OPERA_BN = 4.278  # Operaen i Oslo, sluttkostnad 4 278 mill. kr i 2009-kroner (NTNU Concept)
 
@@ -171,8 +172,14 @@ class Everyday:
     spending: tuple[PerPerson, ...]
     income: tuple[PerPerson, ...]
     fund_until: date  # the last day the transfer from the oil fund covers, spending spread evenly from 1 January
-    pitches: float  # football pitches covered by the spending in 1000-kroner notes laid side by side
+    pitch_stack_m: float  # height of the spending in 1000-kroner notes stacked evenly on one football pitch
     operas: float
+
+
+def pitch_stack_m(billions: float) -> float:
+    """Height in metres of an amount in 1000-kroner notes laid edge to edge over one football pitch, layer on layer."""
+    layers = billions * 1e9 / 1000 * NOTE_M2 / PITCH_M2
+    return layers * NOTE_THICKNESS_M
 
 
 def everyday(budget: Budget) -> Everyday:
@@ -190,7 +197,7 @@ def everyday(budget: Budget) -> Everyday:
         ),
         income=tuple(PerPerson(s, budget.income_amount(2027, s) * 1e9 / budget.population) for s in budget.income),
         fund_until=date(2027, 1, 1) + timedelta(days=int(budget.income_amount(2027, "Overføring fra oljefondet") / total * 365)),
-        pitches=total * 1e9 / 1000 * NOTE_M2 / PITCH_M2,
+        pitch_stack_m=pitch_stack_m(total),
         operas=total / OPERA_BN,
     )
 
