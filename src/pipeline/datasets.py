@@ -148,7 +148,20 @@ def meg() -> dict:
         "hjelpemiddel-satser-nominelt": ("minus", "føre satsane vidare nominelt"),
         "bostotte-2027": ("minus", "nominelt vidareføre buutgiftstaka"),
     }
+    # Money to or from a sector, an organisation or companies, not a household: off "For deg", onto /tilbud,
+    # with the badge naming who it hits (METHOD.md §6)
+    who = {
+        "fot-flyruter": "Regionale flyruter",
+        "momskompensasjon-frivillige": "Frivillige lag",
+        "jordbruksavtalen-inntekt": "Jordbruket",
+        "co2-kompensasjon-fiskeflaten": "Fiskeflåten",
+        "avgift-oppdrettsfisk": "Oppdrettsselskapene",
+        "grunnrenteskatt-havbruk-uendret": "Oppdrettsselskapene",
+        "skattefunn-innstramming": "Bedrifter",
+    }
     items = [it for it in items if it["id"] not in drop]
+    if missing := who.keys() - {it["id"] for it in items}:
+        raise SystemExit(f"general facts no longer extracted: {sorted(missing)}")
     for it in items:
         it["personas"] = it["personas"] + [p for p in add_personas.get(it["id"], []) if p not in it["personas"]]
         quotes = " ".join([it["quote"], *(e["quote"] for e in it.get("extra_quotes", []))])
@@ -162,9 +175,10 @@ def meg() -> dict:
                 raise SystemExit(f"{it['id']}: quotes no longer say {words!r}, or the effect changed")
             it["effect"] = effect
             it["same_kroner"] = True
+        it["who"] = who.get(it["id"])
         if it["effect"] != "uendret" and it.get("kind") not in ("betaler", "far", "tilbud", "regel"):
             raise SystemExit(f"{it['id']}: a change needs a kind (betaler, far, tilbud or regel)")
-    keep = ("id", "personas", "detail", "under_18", "kind", "same_kroner", "title_nb", "summary_nb", "effect", "amounts", "source_title", "source_url", "page", "caveat_nb")
+    keep = ("id", "personas", "detail", "under_18", "kind", "same_kroner", "who", "title_nb", "summary_nb", "effect", "amounts", "source_title", "source_url", "page", "caveat_nb")
     tax = json.loads((PERSONA / "tax.json").read_text())
     return {
         "items": [{k: it.get(k) for k in keep} for it in items],

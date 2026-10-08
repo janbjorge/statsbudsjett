@@ -164,6 +164,21 @@ def test_flow_detail_fragment_and_shareable_link() -> None:
         assert r.status_code == 200 and r.headers["HX-Replace-Url"] == "/flyt" and "kap." not in r.text
 
 
+def test_for_deg_links_to_the_general_changes_instead_of_listing_them() -> None:
+    m = queries.meg(profile_from(None, "0,1,0,0", "500000", None, None, None))
+    assert m.n_general and not any(f.who or (f.kind == "tilbud" and f.effect != "uendret") for s in m.sections for f in s.changed + s.unchanged)
+    html = client.get("/?barn=0,1,0,0&lonn=500000").text
+    assert "Mer penger til barnevernet" not in html and f"{m.n_general} endringer for tilbud og næringer gjelder dere" in html
+    page = client.get("/tilbud").text
+    assert "Mer penger til barnevernet" in page and "Fiskeflåten får mindre" in page and 'aria-current="page"' in page
+
+
+def test_one_person_is_du_in_the_badges_not_deg() -> None:
+    html = client.get("/?lonn=500000&meg=bilist").text
+    assert "Du betaler mer" in html and "betaler mer eller får mindre" in html
+    assert not re.search(r"Deg (betaler|får)", html)
+
+
 def test_everyday_page_adds_up() -> None:
     e = queries.everyday()
     assert abs(sum(r.kroner for r in e.spending) - e.per_person) < 1

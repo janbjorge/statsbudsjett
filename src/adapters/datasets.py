@@ -67,6 +67,7 @@ class JsonDatasets:
                 under_18=bool(f.get("under_18")),
                 kind=Kind(f["kind"]) if f.get("kind") else None,
                 same_kroner=bool(f.get("same_kroner")),
+                who=f.get("who"),
             )
             for f in self._raw["meg.json"]["items"]
         ]

@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 
 from core import budget as b
-from core.facts import Fact, Group, Profile, Section, by_wallet, select
+from core.facts import Fact, Group, Profile, Section, by_wallet, general, is_general, select
 from core.ports import Datasets
 from core.tax import TaxEffect, TaxPages, household_effect
 
@@ -34,6 +34,7 @@ class MegView:
     growth_wage: float
     growth_pension: float
     tax_pages: TaxPages
+    n_general: int = 0  # changes to services and sectors for this profile, shown on /tilbud
     tax_source: str = ""
     growth_pages: tuple[int | None, int | None] = (None, None)
 
@@ -84,10 +85,12 @@ class Queries:
 
     def meg(self, profile: Profile) -> MegView:
         table = self.data.tax_table()
+        facts = self.data.facts()
         return MegView(
             profile=profile,
             tax=household_effect(table, list(profile.adults)),
-            sections=tuple(select(self.data.facts(), profile)),
+            sections=tuple(select([f for f in facts if not is_general(f)], profile)),
+            n_general=sum(len(s.changed) for s in select([f for f in facts if is_general(f)], profile)),
             growth_wage=table.growth.wage,
             growth_pension=table.growth.pension,
             tax_source=table.source_url,
@@ -97,6 +100,9 @@ class Queries:
 
     def facts(self) -> list[Fact]:
         return self.data.facts()
+
+    def general(self) -> list[Section]:
+        return general(self.data.facts())
 
     def receipt(self, tax_kroner: int) -> list[b.ReceiptGroup]:
         return b.receipt(self.budget, tax_kroner)

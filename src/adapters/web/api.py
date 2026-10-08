@@ -168,6 +168,7 @@ class FactOut(Out):
     oppsummering: str
     effekt: Effect
     type: Kind | None
+    gjelder: str | None = Field(description="The sector, organisation or companies the change hits; null when it is a household's")
     under_18: bool
     forbehold: str | None
     belop: list[Amount]
@@ -239,7 +240,7 @@ class FundYear(Out):
 def _fact(f: Fact) -> FactOut:
     return FactOut(
         id=f.id, personer=list(f.personas), tittel=f.title, oppsummering=f.summary,
-        effekt=f.effect, type=f.kind, under_18=f.under_18, forbehold=f.caveat,
+        effekt=f.effect, type=f.kind, gjelder=f.who, under_18=f.under_18, forbehold=f.caveat,
         belop=[Amount(navn=a.label, verdi_2026=a.y2026, verdi_2027=a.y2027, enhet=a.unit) for a in f.amounts],
         kilde=Source(tittel=f.source_title, url=f.source_url, side=f.page),
     )
@@ -388,6 +389,10 @@ def build(queries: Queries) -> FastAPI:
     @api.get("/fakta", summary="Every verified \"For deg\" fact with its source document and page")
     def facts() -> list[FactOut]:
         return [_fact(f) for f in queries.facts()]
+
+    @api.get("/tilbud", summary="Changes to public services and sectors (barnevernet, fiskeflåten), grouped by who they are for")
+    def general() -> list[Section]:
+        return [Section(navn=s.label, endret=[_fact(f) for f in s.changed], uendret=[_fact(f) for f in s.unchanged]) for s in queries.general()]
 
     @api.get("/visste-du", summary="2027 totals in everyday units: per innbygger, per day, per second")
     def everyday() -> Everyday:

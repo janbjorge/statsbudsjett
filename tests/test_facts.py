@@ -1,7 +1,7 @@
 """Which facts a household sees (METHOD.md §6)."""
 
 from adapters.datasets import JsonDatasets
-from core.facts import ASKED, PERSONAS, WALLET_LABEL, Effect, Kind, Profile, Wallet, by_wallet, select, wallet
+from core.facts import ASKED, PERSONAS, WALLET_LABEL, Effect, Kind, Profile, Wallet, by_wallet, general, is_general, select, wallet
 from core.tax import Adult, Business
 
 FACTS = JsonDatasets().facts()
@@ -91,16 +91,17 @@ def test_elbil_vat_only_for_those_buying_a_car() -> None:
 
 
 def test_households_of_more_than_one_are_dere() -> None:
-    assert Profile().you == "deg"
-    assert Profile(kids={"1-5": 1}).you == "dere"
+    assert (Profile().you, Profile().subject) == ("deg", "du")
+    assert (Profile(kids={"1-5": 1}).you, Profile(kids={"1-5": 1}).subject) == ("dere", "dere")
 
 
 def test_only_household_money_is_better_or_worse() -> None:
     by_id = {f.id: f for f in FACTS}
-    assert by_id["horeapparatgaranti"].label("deg") == "● Mer til tilbudet"
-    assert by_id["horeapparatgaranti"].tone == "blandet"
+    assert by_id["horeapparatgaranti"].label("du") == "● Mer til tilbudet"
+    assert by_id["horeapparatgaranti"].tone == "pluss"
     assert by_id["elavgift-7-32"].label("dere") == "▲ Dere betaler mer"
-    assert by_id["barnetrygd-uendret"].label("deg") == "▼ Verdt mindre etter prisvekst"
+    assert by_id["elavgift-7-32"].label("du") == "▲ Du betaler mer"
+    assert by_id["barnetrygd-uendret"].label("du") == "▼ Verdt mindre etter prisvekst"
 
 
 def test_wallet_groups_hold_every_fact_once_in_page_order() -> None:
@@ -124,3 +125,19 @@ def test_only_money_counts_as_more_or_less() -> None:
         if w is Wallet.FAST:
             assert f.effect is Effect.UENDRET
     assert Wallet.UT in {wallet(f) for f in FACTS if f.id == "barnetrygd-uendret"}
+
+
+def test_general_changes_leave_for_deg_for_their_own_page() -> None:
+    """More to barnevernet or less to fiskeflåten changes no household's money or rules, so it sits on /tilbud (METHOD.md §6)."""
+    shown = general(FACTS)
+    ids = [f.id for s in shown for f in s.changed + s.unchanged]
+    assert sorted(ids) == sorted(f.id for f in FACTS if is_general(f)) and len(ids) == len(set(ids))
+    assert shown[0].label == "Gjelder alle"
+    by_id = {f.id: f for f in FACTS}
+    assert is_general(by_id["barnevern-flere-plasser"])
+    # A sector's money is named in the badge, coloured by which way it goes for them
+    assert by_id["co2-kompensasjon-fiskeflaten"].label("du") == "▼ Fiskeflåten får mindre"
+    assert by_id["co2-kompensasjon-fiskeflaten"].tone == "minus"
+    assert not is_general(by_id["elavgift-7-32"])
+    regel = next(f for f in FACTS if f.kind is Kind.REGEL and f.effect is not Effect.UENDRET and not is_general(f))
+    assert wallet(regel) is Wallet.REGEL

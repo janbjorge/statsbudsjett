@@ -263,6 +263,11 @@ def flows_page(request: Request, vis: Q = "") -> HTMLResponse:
     })
 
 
+@app.get("/tilbud", response_class=HTMLResponse)
+def services_page(request: Request) -> HTMLResponse:
+    return templates.TemplateResponse(request, "tilbud.html", {"sections": queries.general()})
+
+
 @app.get("/visste-du", response_class=HTMLResponse)
 def everyday_page(request: Request) -> HTMLResponse:
     return templates.TemplateResponse(request, "visste_du.html", {"e": queries.everyday()})
@@ -300,7 +305,7 @@ def robots_txt(request: Request) -> str:
 
 
 # The pages a crawler should index; the query-string variants and fragments stay out (see robots_txt)
-PAGES = ("", "flyt", "visste-du", "ki")
+PAGES = ("", "flyt", "tilbud", "visste-du", "ki")
 
 
 @app.get("/sitemap.xml")

@@ -10,7 +10,7 @@ client = TestClient(app)
 
 def test_openapi_lists_every_endpoint() -> None:
     paths = client.get("/api/openapi.json").json()["paths"]
-    for path in ("/oversikt", "/meg", "/fakta", "/utforsk", "/sok", "/endringer", "/inntekter", "/kommune", "/kommuner", "/kvittering", "/visste-du", "/oljefond", "/flyt"):
+    for path in ("/oversikt", "/meg", "/fakta", "/utforsk", "/sok", "/endringer", "/inntekter", "/kommune", "/kommuner", "/kvittering", "/visste-du", "/oljefond", "/flyt", "/tilbud"):
         assert path in paths, path
 
 
@@ -106,7 +106,7 @@ def test_sitemap_lists_the_pages_and_each_answers() -> None:
     r = client.get("/sitemap.xml")
     assert r.status_code == 200 and r.headers["content-type"].startswith("application/xml")
     urls = [u.split("</loc>")[0] for u in r.text.split("<loc>")[1:]]
-    assert urls == ["http://testserver/", "http://testserver/flyt", "http://testserver/visste-du", "http://testserver/ki"]
+    assert urls == ["http://testserver/", "http://testserver/flyt", "http://testserver/tilbud", "http://testserver/visste-du", "http://testserver/ki"]
     for url in urls:
         assert client.get(url).status_code == 200, url
 

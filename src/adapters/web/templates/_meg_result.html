@@ -1,4 +1,5 @@
 {# Tax effect and the facts for the chosen profile #}
+{% from "_fact.html" import amt, card %}
 {% set t = m.tax %}
 {% set many = m.profile.adults|length > 1 %}
 <div class="card tax-card">
@@ -58,27 +59,16 @@
 <div class="facts">
   {% if not m.profile.personas %}<p class="muted" style="margin:12px 0 0">Kryss av for det som gjelder {{ m.profile.you }} under «Gjelder noe av dette?» for å se flere endringer.</p>{% endif %}
   <p class="muted small" style="margin:16px 0 0">{{ m.n_changed }} endringer og {{ m.n_unchanged }} ting som står fast. Alt er hentet fra regjeringens budsjettdokumenter.</p>
-  {% macro amt(a) -%}
-    {{ a.label }}:
-    {% if a.y2026 is not none and a.y2026 != a.y2027 %}{{ a.y2026|num }} → <b>{{ a.y2027|num }}</b> {{ a.unit }}
-    {%- else %}<b>{{ a.y2027|num }}</b> {{ a.unit }}{% if a.y2026 is not none %} (som i 2026){% endif %}{% endif %}
-  {%- endmacro %}
-  {% macro source(f) -%}<a href="{{ f.source_url }}" rel="noopener">Kilde: {{ f.source_title }}{% if f.page %}, side {{ f.page }}{% endif %} ↗</a>{%- endmacro %}
+  <p class="services-link"><a href="/tilbud">{% if m.n_general %}{{ m.n_general }} {{ "endring" if m.n_general == 1 else "endringer" }} for tilbud og næringer gjelder {{ m.profile.you }}{% else %}Endringer for tilbud og næringer{% endif %},
+    som mer penger til barnevernet eller mindre CO2-kompensasjon til fiskeflåten. De står på egen side →</a></p>
   {% for g in m.groups %}
-    <h3 class="sec">{{ g.label(m.profile.you) }}</h3>
+    <h3 class="sec">{{ g.label(m.profile.subject) }}</h3>
     {% if g.wallet == "fast" %}
     <div class="same">
       {% for t in g.items %}{% set f = t.fact %}<div>■ <b>{{ f.title }}</b>{% for a in f.amounts %} · {{ amt(a) }}{% endfor %} <span class="tag">{{ t.situation }}</span> <a href="{{ f.source_url }}" rel="noopener">kilde ↗</a></div>{% endfor %}
     </div>
     {% else %}
-    {% for t in g.items %}{% set f = t.fact %}
-    <article class="fact">
-      <div class="top"><h4>{{ f.title }}</h4><span class="badge {{ f.tone }}">{{ f.label(m.profile.you) }}</span></div>
-      <p>{{ f.summary }}</p>
-      {% if f.amounts %}<div class="amts">{% for a in f.amounts %}<div>{{ amt(a) }}</div>{% endfor %}</div>{% endif %}
-      <div class="meta"><span class="tag">{{ t.situation }}</span> · {% if f.caveat %}{{ f.caveat }} · {% endif %}{{ source(f) }}</div>
-    </article>
-    {% endfor %}
+    {% for t in g.items %}{{ card(t.fact, m.profile.subject, t.situation) }}{% endfor %}
     {% endif %}
   {% endfor %}
 </div>

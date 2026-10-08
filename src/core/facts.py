@@ -22,7 +22,7 @@ class Kind(StrEnum):
     REGEL = "regel"
 
 
-# {} is "Du" or "Dere"
+# {} is the subject: "Du", "Dere", or who a general change hits
 LABEL = {
     (Kind.BETALER, Effect.PLUSS): "▼ {} betaler mindre",
     (Kind.BETALER, Effect.MINUS): "▲ {} betaler mer",
@@ -88,18 +88,21 @@ class Fact:
     under_18: bool = False
     kind: Kind | None = None
     same_kroner: bool = False
+    who: str | None = None  # a sector, organisation or companies, when the change is not a household's
 
-    def label(self, you: str) -> str:
+    def label(self, subject: str) -> str:
+        """Badge text; `subject` is "du" or "dere" (Profile.subject), never "deg"."""
         if self.effect is Effect.UENDRET or self.kind is None:
             return "■ Står fast"
         if self.same_kroner:
             return REAL_LABEL[self.kind]
-        return LABEL[self.kind, self.effect].format(you.capitalize())
+        return LABEL[self.kind, self.effect].format(self.who or subject.capitalize())
 
     @property
     def tone(self) -> str:
-        """Badge colour: good or bad only for money in or out of the household."""
-        return self.effect if self.kind in (Kind.BETALER, Kind.FAR) else "blandet"
+        """Badge colour (jb 2026-10-08): green for more, red for less, yellow for mixed. Rules stay yellow,
+        since a stricter rule is not less of anything."""
+        return "blandet" if self.kind is Kind.REGEL else self.effect
 
 
 @dataclass(frozen=True, slots=True)
@@ -116,6 +119,11 @@ class Profile:
     def you(self) -> str:
         """How the page addresses the household: "dere" once more than one person lives there."""
         return "dere" if len(self.adults) > 1 or self.has_kids else "deg"
+
+    @property
+    def subject(self) -> str:
+        """The same as the subject of a sentence: "Du betaler mer", not "Deg betaler mer"."""
+        return "dere" if self.you == "dere" else "du"
 
     @property
     def has_minors(self) -> bool:
@@ -151,7 +159,7 @@ class Wallet(StrEnum):
     UT = "ut"
     INN = "inn"
     BEGGE = "begge"
-    TILBUD = "tilbud"
+    REGEL = "regel"
     FAST = "fast"
 
 
@@ -160,7 +168,7 @@ WALLET_LABEL = {
     Wallet.UT: "{} betaler mer eller får mindre",
     Wallet.INN: "{} betaler mindre eller får mer",
     Wallet.BEGGE: "Både mer og mindre",
-    Wallet.TILBUD: "Tilbud og regler",
+    Wallet.REGEL: "Nye regler",
     Wallet.FAST: "Står fast",
 }
 MONEY = {Effect.MINUS: Wallet.UT, Effect.PLUSS: Wallet.INN, Effect.BLANDET: Wallet.BEGGE}
@@ -179,16 +187,23 @@ class Group:
     wallet: Wallet
     items: tuple[Tagged, ...]
 
-    def label(self, you: str) -> str:
-        return WALLET_LABEL[self.wallet].format(you.capitalize())
+    def label(self, subject: str) -> str:
+        return WALLET_LABEL[self.wallet].format(subject.capitalize())
+
+
+def is_general(f: Fact) -> bool:
+    """A change to a public service (more money to barnevernet) or to a sector or companies (fiskeflåten, konsern).
+    It does not change what a household pays, gets or must follow, so it has its own page, not "For deg" (METHOD.md §6)."""
+    return (f.kind is Kind.TILBUD and f.effect is not Effect.UENDRET) or f.who is not None
 
 
 def wallet(f: Fact) -> Wallet:
+    """Where a "For deg" fact goes; general facts are not shown there (is_general)."""
     if f.effect is Effect.UENDRET:
         return Wallet.FAST
     if f.kind in (Kind.BETALER, Kind.FAR):
         return MONEY[f.effect]
-    return Wallet.TILBUD
+    return Wallet.REGEL
 
 
 def by_wallet(sections: list[Section]) -> list[Group]:
@@ -229,3 +244,10 @@ def select(facts: list[Fact], profile: Profile) -> list[Section]:
                 unchanged=tuple(f for f in mine if f.effect is Effect.UENDRET),
             ))
     return sections
+
+
+def general(facts: list[Fact]) -> list[Section]:
+    """Every general fact, grouped by who it is for, with those for everyone first."""
+    every = Profile(personas=frozenset(PERSONAS))
+    sections = select([f for f in facts if is_general(f)], every)
+    return sorted(sections, key=lambda s: s.label != "Gjelder alle")
