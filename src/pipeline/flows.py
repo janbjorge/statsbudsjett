@@ -99,12 +99,13 @@ expense_leaf = (
 )
 
 
+BN = 1e9  # kroner per billion; the datasets are in billion NOK
+
+
 def load(year: int) -> pl.DataFrame:
-    return (
-        pl.read_excel(FILES[year], sheet_name="Data")
-        .filter((pl.col("post_nr") < 90) & ~kap.is_in(PETROLEUM))
-        .with_columns(pl.col("beløp").cast(pl.Float64) / 1e9)
-    )
+    """Non-oil posts with `beløp` in whole kroner (Int64). Sum before dividing by BN: integer sums are exact in any
+    order, float sums from a parallel group_by are not, and a sum on a rounding tie then rounds either way."""
+    return pl.read_excel(FILES[year], sheet_name="Data").filter((pl.col("post_nr") < 90) & ~kap.is_in(PETROLEUM))
 
 
 def flows(year: int) -> pl.DataFrame:
@@ -131,10 +132,10 @@ def flows(year: int) -> pl.DataFrame:
     )
     cols = ["level", "source", "target", "beløp"]
     out = pl.concat([income.select(cols), groups.select(cols), leaves.select(cols)])
-    balance = float(income["beløp"].sum()) - float(groups["beløp"].sum())
-    assert abs(balance) < 1e-6, f"{year}: income and spending differ by {balance} bn"
-    # Round to whole kroner: parallel group_by sums differ in the last float bits between runs
-    return out.with_columns(pl.col("beløp").round(9), year=pl.lit(year)).sort("level", "source", "target")
+    balance = int(income["beløp"].sum()) - int(groups["beløp"].sum())
+    assert balance == 0, f"{year}: income and spending differ by {balance} kr"
+    # Round after dividing (21141609 / 1e9 is 21.141609000000003 as a float); 3 decimals is 1 mill. kr
+    return out.with_columns((pl.col("beløp") / BN).round(3), year=pl.lit(year)).sort("level", "source", "target")
 
 
 def diff() -> pl.DataFrame:
@@ -149,7 +150,7 @@ def diff() -> pl.DataFrame:
         keyed.pivot(on="year", index=["level", "key", "parent"], values="beløp")
         .rename({"2026": "y2026", "2027": "y2027"})
         .with_columns(pl.col("y2026", "y2027").fill_null(0.0))
-        .with_columns(change=(pl.col("y2027") - pl.col("y2026")).round(9))
-        .with_columns(pct=pl.when(pl.col("y2026") > 0).then(pl.col("change") / pl.col("y2026") * 100))
+        .with_columns(change=(pl.col("y2027") - pl.col("y2026")).round(3))
+        .with_columns(pct=pl.when(pl.col("y2026") > 0).then((pl.col("change") / pl.col("y2026") * 100).round(3)))
         .sort("level", "change", descending=[False, True])
     )

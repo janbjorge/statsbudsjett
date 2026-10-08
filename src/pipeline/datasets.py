@@ -8,6 +8,7 @@ import polars as pl
 from core.facts import AREAS
 from pipeline import verify
 from pipeline.flows import (
+    BN,
     FILES,
     GROUPS,
     INCOME,
@@ -46,8 +47,8 @@ def posts() -> list[dict]:
             kn=pl.col("kap_navn"),
             p=pl.col("post_nr"),
             pn=pl.col("post_navn"),
-            v=pl.col("beløp").round(4),
-            v26=pl.col("v26").round(4),
+            v=(pl.col("beløp") / BN).round(4),
+            v26=(pl.col("v26") / BN).round(4),
         )
         .sort("k", "p")
         .to_dicts()
@@ -66,7 +67,7 @@ def chapters() -> list[dict]:
             kn=pl.coalesce("kap_navn", "kap_navn_26"),
             s=pl.when(kap < 3000).then(pl.lit("utgift")).otherwise(pl.lit("inntekt")),
         )
-        .select(k="kap_nr", kn="kn", s="s", v=pl.col("v").round(4), v26=pl.col("v26").round(4))
+        .select(k="kap_nr", kn="kn", s="s", v=(pl.col("v") / BN).round(4), v26=(pl.col("v26") / BN).round(4))
         .sort("k")
         .to_dicts()
     )
@@ -81,10 +82,10 @@ def kommuner() -> list[dict]:
     is_kommune = pl.col("column_0").str.contains(r"^\d{4} ")
     num = lambda c: pl.col(c).cast(pl.Float64)
     crit = sheet_rows(GH / "tabell-f-k-kriteriedata.ods").filter(is_kommune).select(
-        navn="column_0", pop=num("column_2"), skatteindeks=num("column_37")
+        navn="column_0", pop=num("column_2"), skatteindeks=num("column_37").round(3)
     )
     frie = sheet_rows(GH / "tabell-3-k-anslag-pa-frie-inntekter-i-2027.ods").filter(is_kommune).select(
-        navn="column_0", frie26=num("column_1") * 1000, frie27=num("column_3") * 1000, vekst=num("column_5")
+        navn="column_0", frie26=(num("column_1") * 1000).round(0), frie27=(num("column_3") * 1000).round(0), vekst=num("column_5").round(3)
     )
     fylker = {c["fylkeskommune"]["id"]: c["fylkeskommune"]["name"].removesuffix(" fylkeskommune") for c in orjson.loads(COUNTIES.read_bytes())["data"]}
     split = [pl.col("navn").str.slice(0, 4).alias("nr"), pl.col("navn").str.slice(5).str.strip_chars()]

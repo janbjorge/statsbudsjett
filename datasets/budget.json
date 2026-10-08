@@ -24,7 +24,7 @@
         "level": 0,
         "source": "Andre skatter og avgifter",
         "target": "Statsbudsjettet 2026",
-        "beløp": 117.294554
+        "beløp": 117.295
       },
       {
         "level": 0,
@@ -36,109 +36,109 @@
         "level": 0,
         "source": "Overføring fra oljefondet",
         "target": "Statsbudsjettet 2026",
-        "beløp": 452.220406
+        "beløp": 452.22
       },
       {
         "level": 0,
         "source": "Renter, utbytte og andre inntekter",
         "target": "Statsbudsjettet 2026",
-        "beløp": 151.995315
+        "beløp": 151.995
       },
       {
         "level": 0,
         "source": "Skatt på inntekt og formue",
         "target": "Statsbudsjettet 2026",
-        "beløp": 507.78025
+        "beløp": 507.78
       },
       {
         "level": 0,
         "source": "Trygde- og arbeidsgiveravgift",
         "target": "Statsbudsjettet 2026",
-        "beløp": 514.20044
+        "beløp": 514.2
       },
       {
         "level": 1,
         "source": "Statsbudsjettet 2026",
         "target": "Arbeid, familie og integrering",
-        "beløp": 124.81805
+        "beløp": 124.818
       },
       {
         "level": 1,
         "source": "Statsbudsjettet 2026",
         "target": "Folketrygden",
-        "beløp": 744.017715
+        "beløp": 744.018
       },
       {
         "level": 1,
         "source": "Statsbudsjettet 2026",
         "target": "Forsvar",
-        "beløp": 179.765304
+        "beløp": 179.765
       },
       {
         "level": 1,
         "source": "Statsbudsjettet 2026",
         "target": "Helse og omsorg",
-        "beløp": 257.365624
+        "beløp": 257.366
       },
       {
         "level": 1,
         "source": "Statsbudsjettet 2026",
         "target": "Kommunesektoren",
-        "beløp": 274.070471
+        "beløp": 274.07
       },
       {
         "level": 1,
         "source": "Statsbudsjettet 2026",
         "target": "Samferdsel",
-        "beløp": 98.1179
+        "beløp": 98.118
       },
       {
         "level": 1,
         "source": "Statsbudsjettet 2026",
         "target": "Utdanning og forskning",
-        "beløp": 107.226016
+        "beløp": 107.226
       },
       {
         "level": 1,
         "source": "Statsbudsjettet 2026",
         "target": "Øvrige områder",
-        "beløp": 379.079885
+        "beløp": 379.08
       },
       {
         "level": 2,
         "source": "Arbeid, familie og integrering",
         "target": "Arbeidsmarkedstiltak",
-        "beløp": 12.545715
+        "beløp": 12.546
       },
       {
         "level": 2,
         "source": "Arbeid, familie og integrering",
         "target": "Barnevern",
-        "beløp": 11.943116
+        "beløp": 11.943
       },
       {
         "level": 2,
         "source": "Arbeid, familie og integrering",
         "target": "Drift av Nav",
-        "beløp": 16.014106
+        "beløp": 16.014
       },
       {
         "level": 2,
         "source": "Arbeid, familie og integrering",
         "target": "Familie og oppvekst",
-        "beløp": 33.405141
+        "beløp": 33.405
       },
       {
         "level": 2,
         "source": "Arbeid, familie og integrering",
         "target": "Integrering",
-        "beløp": 22.575123
+        "beløp": 22.575
       },
       {
         "level": 2,
         "source": "Arbeid, familie og integrering",
         "target": "Øvrig arbeid og familie",
-        "beløp": 28.334849
+        "beløp": 28.335
       },
       {
         "level": 2,
@@ -150,7 +150,7 @@
         "level": 2,
         "source": "Folketrygden",
         "target": "Andre trygdeytelser",
-        "beløp": 22.335315
+        "beløp": 22.335
       },
       {
         "level": 2,
@@ -168,109 +168,109 @@
         "level": 2,
         "source": "Folketrygden",
         "target": "Legehjelp og legemidler",
-        "beløp": 47.9392
+        "beløp": 47.939
       },
       {
         "level": 2,
         "source": "Folketrygden",
         "target": "Sykepenger, AAP og uføretrygd",
-        "beløp": 272.2282
+        "beløp": 272.228
       },
       {
         "level": 2,
         "source": "Helse og omsorg",
         "target": "Sykehusene",
-        "beløp": 238.12203
+        "beløp": 238.122
       },
       {
         "level": 2,
         "source": "Helse og omsorg",
         "target": "Øvrig helse og omsorg",
-        "beløp": 19.243594
+        "beløp": 19.244
       },
       {
         "level": 2,
         "source": "Kommunesektoren",
         "target": "Rammetilskudd fylkeskommuner",
-        "beløp": 55.553773
+        "beløp": 55.554
       },
       {
         "level": 2,
         "source": "Kommunesektoren",
         "target": "Rammetilskudd kommuner",
-        "beløp": 203.487714
+        "beløp": 203.488
       },
       {
         "level": 2,
         "source": "Kommunesektoren",
         "target": "Øvrig til kommunesektoren",
-        "beløp": 15.028984
+        "beløp": 15.029
       },
       {
         "level": 2,
         "source": "Samferdsel",
         "target": "Jernbane",
-        "beløp": 31.7039
+        "beløp": 31.704
       },
       {
         "level": 2,
         "source": "Samferdsel",
         "target": "Vei",
-        "beløp": 50.4497
+        "beløp": 50.45
       },
       {
         "level": 2,
         "source": "Samferdsel",
         "target": "Øvrig samferdsel",
-        "beløp": 15.9643
+        "beløp": 15.964
       },
       {
         "level": 2,
         "source": "Utdanning og forskning",
         "target": "Grunnopplæring",
-        "beløp": 16.566229
+        "beløp": 16.566
       },
       {
         "level": 2,
         "source": "Utdanning og forskning",
         "target": "Høyere utdanning og forskning",
-        "beløp": 63.032705
+        "beløp": 63.033
       },
       {
         "level": 2,
         "source": "Utdanning og forskning",
         "target": "Lånekassen",
-        "beløp": 21.4027
+        "beløp": 21.403
       },
       {
         "level": 2,
         "source": "Utdanning og forskning",
         "target": "Øvrig utdanning",
-        "beløp": 6.224382
+        "beløp": 6.224
       },
       {
         "level": 2,
         "source": "Øvrige områder",
         "target": "Justis og beredskap",
-        "beløp": 60.611972
+        "beløp": 60.612
       },
       {
         "level": 2,
         "source": "Øvrige områder",
         "target": "Klima, miljø og energi",
-        "beløp": 47.470339
+        "beløp": 47.47
       },
       {
         "level": 2,
         "source": "Øvrige områder",
         "target": "Kultur og medier",
-        "beløp": 27.038755
+        "beløp": 27.039
       },
       {
         "level": 2,
         "source": "Øvrige områder",
         "target": "Landbruk og mat",
-        "beløp": 34.846288
+        "beløp": 34.846
       },
       {
         "level": 2,
@@ -282,25 +282,25 @@
         "level": 2,
         "source": "Øvrige områder",
         "target": "Næring og fiskeri",
-        "beløp": 26.010489
+        "beløp": 26.01
       },
       {
         "level": 2,
         "source": "Øvrige områder",
         "target": "Renter på statsgjeld",
-        "beløp": 20.0814
+        "beløp": 20.081
       },
       {
         "level": 2,
         "source": "Øvrige områder",
         "target": "Statsforvaltning og annet",
-        "beløp": 58.169709
+        "beløp": 58.17
       },
       {
         "level": 2,
         "source": "Øvrige områder",
         "target": "Utenriks og bistand",
-        "beløp": 56.900933
+        "beløp": 56.901
       }
     ],
     "2027": [
@@ -308,7 +308,7 @@
         "level": 0,
         "source": "Andre skatter og avgifter",
         "target": "Statsbudsjettet 2027",
-        "beløp": 118.854168
+        "beløp": 118.854
       },
       {
         "level": 0,
@@ -320,19 +320,19 @@
         "level": 0,
         "source": "Overføring fra oljefondet",
         "target": "Statsbudsjettet 2027",
-        "beløp": 561.740988
+        "beløp": 561.741
       },
       {
         "level": 0,
         "source": "Renter, utbytte og andre inntekter",
         "target": "Statsbudsjettet 2027",
-        "beløp": 164.633071
+        "beløp": 164.633
       },
       {
         "level": 0,
         "source": "Skatt på inntekt og formue",
         "target": "Statsbudsjettet 2027",
-        "beløp": 486.638404
+        "beløp": 486.638
       },
       {
         "level": 0,
@@ -344,85 +344,85 @@
         "level": 1,
         "source": "Statsbudsjettet 2027",
         "target": "Arbeid, familie og integrering",
-        "beløp": 123.030962
+        "beløp": 123.031
       },
       {
         "level": 1,
         "source": "Statsbudsjettet 2027",
         "target": "Folketrygden",
-        "beløp": 794.079109
+        "beløp": 794.079
       },
       {
         "level": 1,
         "source": "Statsbudsjettet 2027",
         "target": "Forsvar",
-        "beløp": 191.653181
+        "beløp": 191.653
       },
       {
         "level": 1,
         "source": "Statsbudsjettet 2027",
         "target": "Helse og omsorg",
-        "beløp": 270.7673
+        "beløp": 270.767
       },
       {
         "level": 1,
         "source": "Statsbudsjettet 2027",
         "target": "Kommunesektoren",
-        "beløp": 292.805565
+        "beløp": 292.806
       },
       {
         "level": 1,
         "source": "Statsbudsjettet 2027",
         "target": "Samferdsel",
-        "beløp": 99.9084
+        "beløp": 99.908
       },
       {
         "level": 1,
         "source": "Statsbudsjettet 2027",
         "target": "Utdanning og forskning",
-        "beløp": 114.274417
+        "beløp": 114.274
       },
       {
         "level": 1,
         "source": "Statsbudsjettet 2027",
         "target": "Øvrige områder",
-        "beløp": 400.278697
+        "beløp": 400.279
       },
       {
         "level": 2,
         "source": "Arbeid, familie og integrering",
         "target": "Arbeidsmarkedstiltak",
-        "beløp": 12.986183
+        "beløp": 12.986
       },
       {
         "level": 2,
         "source": "Arbeid, familie og integrering",
         "target": "Barnevern",
-        "beløp": 13.014558
+        "beløp": 13.015
       },
       {
         "level": 2,
         "source": "Arbeid, familie og integrering",
         "target": "Drift av Nav",
-        "beløp": 16.693621
+        "beløp": 16.694
       },
       {
         "level": 2,
         "source": "Arbeid, familie og integrering",
         "target": "Familie og oppvekst",
-        "beløp": 34.026766
+        "beløp": 34.027
       },
       {
         "level": 2,
         "source": "Arbeid, familie og integrering",
         "target": "Integrering",
-        "beløp": 18.650372
+        "beløp": 18.65
       },
       {
         "level": 2,
         "source": "Arbeid, familie og integrering",
         "target": "Øvrig arbeid og familie",
-        "beløp": 27.659462
+        "beløp": 27.659
       },
       {
         "level": 2,
@@ -434,7 +434,7 @@
         "level": 2,
         "source": "Folketrygden",
         "target": "Andre trygdeytelser",
-        "beløp": 21.141609
+        "beløp": 21.142
       },
       {
         "level": 2,
@@ -452,49 +452,49 @@
         "level": 2,
         "source": "Folketrygden",
         "target": "Legehjelp og legemidler",
-        "beløp": 48.7944
+        "beløp": 48.794
       },
       {
         "level": 2,
         "source": "Folketrygden",
         "target": "Sykepenger, AAP og uføretrygd",
-        "beløp": 291.0081
+        "beløp": 291.008
       },
       {
         "level": 2,
         "source": "Helse og omsorg",
         "target": "Sykehusene",
-        "beløp": 251.453404
+        "beløp": 251.453
       },
       {
         "level": 2,
         "source": "Helse og omsorg",
         "target": "Øvrig helse og omsorg",
-        "beløp": 19.313896
+        "beløp": 19.314
       },
       {
         "level": 2,
         "source": "Kommunesektoren",
         "target": "Rammetilskudd fylkeskommuner",
-        "beløp": 60.384001
+        "beløp": 60.384
       },
       {
         "level": 2,
         "source": "Kommunesektoren",
         "target": "Rammetilskudd kommuner",
-        "beløp": 217.183885
+        "beløp": 217.184
       },
       {
         "level": 2,
         "source": "Kommunesektoren",
         "target": "Øvrig til kommunesektoren",
-        "beløp": 15.237679
+        "beløp": 15.238
       },
       {
         "level": 2,
         "source": "Samferdsel",
         "target": "Jernbane",
-        "beløp": 33.7216
+        "beløp": 33.722
       },
       {
         "level": 2,
@@ -506,55 +506,55 @@
         "level": 2,
         "source": "Samferdsel",
         "target": "Øvrig samferdsel",
-        "beløp": 14.5108
+        "beløp": 14.511
       },
       {
         "level": 2,
         "source": "Utdanning og forskning",
         "target": "Grunnopplæring",
-        "beløp": 16.806339
+        "beløp": 16.806
       },
       {
         "level": 2,
         "source": "Utdanning og forskning",
         "target": "Høyere utdanning og forskning",
-        "beløp": 66.369709
+        "beløp": 66.37
       },
       {
         "level": 2,
         "source": "Utdanning og forskning",
         "target": "Lånekassen",
-        "beløp": 24.253559
+        "beløp": 24.254
       },
       {
         "level": 2,
         "source": "Utdanning og forskning",
         "target": "Øvrig utdanning",
-        "beløp": 6.84481
+        "beløp": 6.845
       },
       {
         "level": 2,
         "source": "Øvrige områder",
         "target": "Justis og beredskap",
-        "beløp": 65.111083
+        "beløp": 65.111
       },
       {
         "level": 2,
         "source": "Øvrige områder",
         "target": "Klima, miljø og energi",
-        "beløp": 49.523954
+        "beløp": 49.524
       },
       {
         "level": 2,
         "source": "Øvrige områder",
         "target": "Kultur og medier",
-        "beløp": 28.05942
+        "beløp": 28.059
       },
       {
         "level": 2,
         "source": "Øvrige områder",
         "target": "Landbruk og mat",
-        "beløp": 38.495624
+        "beløp": 38.496
       },
       {
         "level": 2,
@@ -566,25 +566,25 @@
         "level": 2,
         "source": "Øvrige områder",
         "target": "Næring og fiskeri",
-        "beløp": 26.775598
+        "beløp": 26.776
       },
       {
         "level": 2,
         "source": "Øvrige områder",
         "target": "Renter på statsgjeld",
-        "beløp": 24.399107
+        "beløp": 24.399
       },
       {
         "level": 2,
         "source": "Øvrige områder",
         "target": "Statsforvaltning og annet",
-        "beløp": 56.944483
+        "beløp": 56.944
       },
       {
         "level": 2,
         "source": "Øvrige områder",
         "target": "Utenriks og bistand",
-        "beløp": 59.049428
+        "beløp": 59.049
       }
     ]
   },
@@ -18354,7 +18354,7 @@
       "kn": "Politiets sikkerhetstjeneste (PST)",
       "s": "utgift",
       "v": 2.2735,
-      "v26": 1.9646
+      "v26": 1.9647
     },
     {
       "k": 445,
@@ -21695,3570 +21695,3570 @@
       "navn": "Alstahaug",
       "fylke": "Nordland",
       "pop": 7542,
-      "frie26": 643785035.27644,
-      "frie27": 669646770.0195099,
-      "vekst": 4.040389929,
-      "skatteindeks": 88.78697444
+      "frie26": 643785035.0,
+      "frie27": 669646770.0,
+      "vekst": 4.04,
+      "skatteindeks": 88.787
     },
     {
       "nr": "5601",
       "navn": "Alta",
       "fylke": "Finnmark",
       "pop": 22156,
-      "frie26": 2001470756.1567,
-      "frie27": 2109615929.7544003,
-      "vekst": 5.366952992,
-      "skatteindeks": 86.39018207
+      "frie26": 2001470756.0,
+      "frie27": 2109615930.0,
+      "vekst": 5.367,
+      "skatteindeks": 86.39
     },
     {
       "nr": "3428",
       "navn": "Alvdal",
       "fylke": "Innlandet",
       "pop": 2489,
-      "frie26": 245273400.26113,
-      "frie27": 252911337.93109998,
-      "vekst": 3.133353411,
-      "skatteindeks": 85.52917073
+      "frie26": 245273400.0,
+      "frie27": 252911338.0,
+      "vekst": 3.133,
+      "skatteindeks": 85.529
     },
     {
       "nr": "4631",
       "navn": "Alver",
       "fylke": "Vestland",
       "pop": 30432,
-      "frie26": 2536703092.9696,
-      "frie27": 2639890412.9501,
-      "vekst": 4.06486195,
-      "skatteindeks": 88.80646625
+      "frie26": 2536703093.0,
+      "frie27": 2639890413.0,
+      "vekst": 4.065,
+      "skatteindeks": 88.806
     },
     {
       "nr": "1871",
       "navn": "Andøy",
       "fylke": "Nordland",
       "pop": 4575,
-      "frie26": 408789668.74892,
-      "frie27": 428511059.33738,
-      "vekst": 4.834251293,
-      "skatteindeks": 96.40875963
+      "frie26": 408789669.0,
+      "frie27": 428511059.0,
+      "vekst": 4.834,
+      "skatteindeks": 96.409
     },
     {
       "nr": "3124",
       "navn": "Aremark",
       "fylke": "Østfold",
       "pop": 1344,
-      "frie26": 141551482.31223,
-      "frie27": 146615508.56886,
-      "vekst": 3.607399637,
-      "skatteindeks": 84.88326359
+      "frie26": 141551482.0,
+      "frie27": 146615509.0,
+      "vekst": 3.607,
+      "skatteindeks": 84.883
     },
     {
       "nr": "4203",
       "navn": "Arendal",
       "fylke": "Agder",
       "pop": 46639,
-      "frie26": 3586378604.9333,
-      "frie27": 3752216998.8993998,
-      "vekst": 4.620947203,
-      "skatteindeks": 85.11689314
+      "frie26": 3586378605.0,
+      "frie27": 3752216999.0,
+      "vekst": 4.621,
+      "skatteindeks": 85.117
     },
     {
       "nr": "3203",
       "navn": "Asker",
       "fylke": "Akershus",
       "pop": 101923,
-      "frie26": 8195766839.552,
-      "frie27": 8628709177.9747,
-      "vekst": 5.279483488,
-      "skatteindeks": 120.18759862
+      "frie26": 8195766840.0,
+      "frie27": 8628709178.0,
+      "vekst": 5.279,
+      "skatteindeks": 120.188
     },
     {
       "nr": "4645",
       "navn": "Askvoll",
       "fylke": "Vestland",
       "pop": 2905,
-      "frie26": 290996405.37165,
-      "frie27": 302628788.54955,
-      "vekst": 4.011872349,
-      "skatteindeks": 95.10854394
+      "frie26": 290996405.0,
+      "frie27": 302628789.0,
+      "vekst": 4.012,
+      "skatteindeks": 95.109
     },
     {
       "nr": "4627",
       "navn": "Askøy",
       "fylke": "Vestland",
       "pop": 30695,
-      "frie26": 2385618566.5813,
-      "frie27": 2491480214.6211,
-      "vekst": 4.4344066,
-      "skatteindeks": 85.5682268
+      "frie26": 2385618567.0,
+      "frie27": 2491480215.0,
+      "vekst": 4.434,
+      "skatteindeks": 85.568
     },
     {
       "nr": "1547",
       "navn": "Aukra",
       "fylke": "Møre og Romsdal",
       "pop": 3789,
-      "frie26": 340263678.3861,
-      "frie27": 356219374.57147,
-      "vekst": 4.692885442,
-      "skatteindeks": 95.69432115
+      "frie26": 340263678.0,
+      "frie27": 356219375.0,
+      "vekst": 4.693,
+      "skatteindeks": 95.694
     },
     {
       "nr": "1576",
       "navn": "Aure",
       "fylke": "Møre og Romsdal",
       "pop": 3345,
-      "frie26": 340241691.13334,
-      "frie27": 351815505.7284,
-      "vekst": 3.417662701,
-      "skatteindeks": 89.73400323
+      "frie26": 340241691.0,
+      "frie27": 351815506.0,
+      "vekst": 3.418,
+      "skatteindeks": 89.734
     },
     {
       "nr": "4641",
       "navn": "Aurland",
       "fylke": "Vestland",
       "pop": 1901,
-      "frie26": 184816070.71266,
-      "frie27": 191564115.06151998,
-      "vekst": 3.671169471,
-      "skatteindeks": 144.66078963
+      "frie26": 184816071.0,
+      "frie27": 191564115.0,
+      "vekst": 3.671,
+      "skatteindeks": 144.661
     },
     {
       "nr": "3226",
       "navn": "Aurskog-Høland",
       "fylke": "Akershus",
       "pop": 18571,
-      "frie26": 1489275428.1677,
-      "frie27": 1565597892.4636,
-      "vekst": 5.12168132,
-      "skatteindeks": 79.17867233
+      "frie26": 1489275428.0,
+      "frie27": 1565597892.0,
+      "vekst": 5.122,
+      "skatteindeks": 79.179
     },
     {
       "nr": "4625",
       "navn": "Austevoll",
       "fylke": "Vestland",
       "pop": 5576,
-      "frie26": 517123232.41832995,
-      "frie27": 538727231.29302,
-      "vekst": 4.200922927,
-      "skatteindeks": 147.71898441
+      "frie26": 517123232.0,
+      "frie27": 538727231.0,
+      "vekst": 4.201,
+      "skatteindeks": 147.719
     },
     {
       "nr": "4632",
       "navn": "Austrheim",
       "fylke": "Vestland",
       "pop": 2948,
-      "frie26": 277837612.44876003,
-      "frie27": 290014737.28732,
-      "vekst": 4.409080132,
-      "skatteindeks": 111.30477279
+      "frie26": 277837612.0,
+      "frie27": 290014737.0,
+      "vekst": 4.409,
+      "skatteindeks": 111.305
     },
     {
       "nr": "1554",
       "navn": "Averøy",
       "fylke": "Møre og Romsdal",
       "pop": 6043,
-      "frie26": 497779392.92538,
-      "frie27": 522671283.85634,
-      "vekst": 5.013489665,
-      "skatteindeks": 95.14306264
+      "frie26": 497779393.0,
+      "frie27": 522671284.0,
+      "vekst": 5.013,
+      "skatteindeks": 95.143
     },
     {
       "nr": "5532",
       "navn": "Balsfjord",
       "fylke": "Troms",
       "pop": 5640,
-      "frie26": 526996598.15335995,
-      "frie27": 549763744.9294701,
-      "vekst": 4.325569163,
-      "skatteindeks": 80.34758624
+      "frie26": 526996598.0,
+      "frie27": 549763745.0,
+      "vekst": 4.326,
+      "skatteindeks": 80.348
     },
     {
       "nr": "4012",
       "navn": "Bamble",
       "fylke": "Telemark",
       "pop": 14287,
-      "frie26": 1154437922.3457,
-      "frie27": 1207099858.2871,
-      "vekst": 4.558631662,
-      "skatteindeks": 89.1424605
+      "frie26": 1154437922.0,
+      "frie27": 1207099858.0,
+      "vekst": 4.559,
+      "skatteindeks": 89.142
     },
     {
       "nr": "5520",
       "navn": "Bardu",
       "fylke": "Troms",
       "pop": 3931,
-      "frie26": 353410617.69679004,
-      "frie27": 367047550.38079,
-      "vekst": 3.893818556,
-      "skatteindeks": 99.84863365
+      "frie26": 353410618.0,
+      "frie27": 367047550.0,
+      "vekst": 3.894,
+      "skatteindeks": 99.849
     },
     {
       "nr": "1839",
       "navn": "Beiarn",
       "fylke": "Nordland",
       "pop": 1019,
-      "frie26": 130963033.71995,
-      "frie27": 134522762.78572,
-      "vekst": 2.710685261,
-      "skatteindeks": 81.00590341
+      "frie26": 130963034.0,
+      "frie27": 134522763.0,
+      "vekst": 2.711,
+      "skatteindeks": 81.006
     },
     {
       "nr": "4601",
       "navn": "Bergen",
       "fylke": "Vestland",
       "pop": 295010,
-      "frie26": 22675730667.281002,
-      "frie27": 23781600493.443,
-      "vekst": 4.873846027,
-      "skatteindeks": 106.70450025
+      "frie26": 22675730667.0,
+      "frie27": 23781600493.0,
+      "vekst": 4.874,
+      "skatteindeks": 106.705
     },
     {
       "nr": "5630",
       "navn": "Berlevåg",
       "fylke": "Finnmark",
       "pop": 866,
-      "frie26": 120157597.96693,
-      "frie27": 123711204.7328,
-      "vekst": 3.050834487,
-      "skatteindeks": 86.85111228
+      "frie26": 120157598.0,
+      "frie27": 123711205.0,
+      "vekst": 3.051,
+      "skatteindeks": 86.851
     },
     {
       "nr": "1811",
       "navn": "Bindal",
       "fylke": "Nordland",
       "pop": 1374,
-      "frie26": 152862732.6952,
-      "frie27": 160556987.5853,
-      "vekst": 4.767639962,
-      "skatteindeks": 88.13485754
+      "frie26": 152862733.0,
+      "frie27": 160556988.0,
+      "vekst": 4.768,
+      "skatteindeks": 88.135
     },
     {
       "nr": "4216",
       "navn": "Birkenes",
       "fylke": "Agder",
       "pop": 5450,
-      "frie26": 474292558.55702996,
-      "frie27": 494647234.17993003,
-      "vekst": 4.28852105,
-      "skatteindeks": 71.60378855
+      "frie26": 474292559.0,
+      "frie27": 494647234.0,
+      "vekst": 4.289,
+      "skatteindeks": 71.604
     },
     {
       "nr": "1114",
       "navn": "Bjerkreim",
       "fylke": "Rogaland",
       "pop": 2902,
-      "frie26": 256904118.06435,
-      "frie27": 266937852.97888,
-      "vekst": 3.902607982,
-      "skatteindeks": 92.65689722
+      "frie26": 256904118.0,
+      "frie27": 266937853.0,
+      "vekst": 3.903,
+      "skatteindeks": 92.657
     },
     {
       "nr": "4624",
       "navn": "Bjørnafjorden",
       "fylke": "Vestland",
       "pop": 26914,
-      "frie26": 2141133812.5303001,
-      "frie27": 2264794577.3307996,
-      "vekst": 5.772330505,
-      "skatteindeks": 92.88090668
+      "frie26": 2141133813.0,
+      "frie27": 2264794577.0,
+      "vekst": 5.772,
+      "skatteindeks": 92.881
     },
     {
       "nr": "1804",
       "navn": "Bodø",
       "fylke": "Nordland",
       "pop": 53673,
-      "frie26": 4192089579.9184,
-      "frie27": 4404447633.3347,
-      "vekst": 5.062659759,
-      "skatteindeks": 96.67802803
+      "frie26": 4192089580.0,
+      "frie27": 4404447633.0,
+      "vekst": 5.063,
+      "skatteindeks": 96.678
     },
     {
       "nr": "1145",
       "navn": "Bokn",
       "fylke": "Rogaland",
       "pop": 903,
-      "frie26": 104553608.56534,
-      "frie27": 107801200.10303,
-      "vekst": 3.131063037,
-      "skatteindeks": 98.74913084
+      "frie26": 104553609.0,
+      "frie27": 107801200.0,
+      "vekst": 3.131,
+      "skatteindeks": 98.749
     },
     {
       "nr": "4648",
       "navn": "Bremanger",
       "fylke": "Vestland",
       "pop": 3378,
-      "frie26": 342899146.83208996,
-      "frie27": 354710005.19975,
-      "vekst": 3.454971523,
-      "skatteindeks": 102.03592141
+      "frie26": 342899147.0,
+      "frie27": 354710005.0,
+      "vekst": 3.455,
+      "skatteindeks": 102.036
     },
     {
       "nr": "1813",
       "navn": "Brønnøy",
       "fylke": "Nordland",
       "pop": 7850,
-      "frie26": 683908883.44287,
-      "frie27": 712405708.2365,
-      "vekst": 4.181661944,
-      "skatteindeks": 87.81210771
+      "frie26": 683908883.0,
+      "frie27": 712405708.0,
+      "vekst": 4.182,
+      "skatteindeks": 87.812
     },
     {
       "nr": "4220",
       "navn": "Bygland",
       "fylke": "Agder",
       "pop": 1163,
-      "frie26": 123705914.38055001,
-      "frie27": 129380585.98636,
-      "vekst": 4.626894466,
-      "skatteindeks": 87.56233781
+      "frie26": 123705914.0,
+      "frie27": 129380586.0,
+      "vekst": 4.627,
+      "skatteindeks": 87.562
     },
     {
       "nr": "4222",
       "navn": "Bykle",
       "fylke": "Agder",
       "pop": 1051,
-      "frie26": 125025255.88856,
-      "frie27": 132920881.31388998,
-      "vekst": 6.317317533,
-      "skatteindeks": 207.87219805
+      "frie26": 125025256.0,
+      "frie27": 132920881.0,
+      "vekst": 6.317,
+      "skatteindeks": 207.872
     },
     {
       "nr": "5632",
       "navn": "Båtsfjord",
       "fylke": "Finnmark",
       "pop": 2080,
-      "frie26": 225573003.98564002,
-      "frie27": 234646558.0017,
-      "vekst": 4.192651031,
-      "skatteindeks": 84.69974639
+      "frie26": 225573004.0,
+      "frie27": 234646558.0,
+      "vekst": 4.193,
+      "skatteindeks": 84.7
     },
     {
       "nr": "3201",
       "navn": "Bærum",
       "fylke": "Akershus",
       "pop": 133715,
-      "frie26": 11594867349.942001,
-      "frie27": 12192625675.407,
-      "vekst": 5.152522237,
-      "skatteindeks": 154.90078406
+      "frie26": 11594867350.0,
+      "frie27": 12192625675.0,
+      "vekst": 5.153,
+      "skatteindeks": 154.901
     },
     {
       "nr": "1867",
       "navn": "Bø",
       "fylke": "Nordland",
       "pop": 2581,
-      "frie26": 264517192.77865,
-      "frie27": 279546888.54055,
-      "vekst": 5.714088105,
-      "skatteindeks": 111.57950366
+      "frie26": 264517193.0,
+      "frie27": 279546889.0,
+      "vekst": 5.714,
+      "skatteindeks": 111.58
     },
     {
       "nr": "4613",
       "navn": "Bømlo",
       "fylke": "Vestland",
       "pop": 12551,
-      "frie26": 1036537677.2766,
-      "frie27": 1079884232.7886999,
-      "vekst": 4.200701973,
-      "skatteindeks": 95.33997924
+      "frie26": 1036537677.0,
+      "frie27": 1079884233.0,
+      "vekst": 4.201,
+      "skatteindeks": 95.34
     },
     {
       "nr": "3431",
       "navn": "Dovre",
       "fylke": "Innlandet",
       "pop": 2488,
-      "frie26": 249548120.31475002,
-      "frie27": 257118140.11594,
-      "vekst": 3.080091111,
-      "skatteindeks": 82.65052535
+      "frie26": 249548120.0,
+      "frie27": 257118140.0,
+      "vekst": 3.08,
+      "skatteindeks": 82.651
     },
     {
       "nr": "3301",
       "navn": "Drammen",
       "fylke": "Buskerud",
       "pop": 106377,
-      "frie26": 8336067411.988,
-      "frie27": 8730202083.9879,
-      "vekst": 4.724946386,
-      "skatteindeks": 89.6140308
+      "frie26": 8336067412.0,
+      "frie27": 8730202084.0,
+      "vekst": 4.725,
+      "skatteindeks": 89.614
     },
     {
       "nr": "4016",
       "navn": "Drangedal",
       "fylke": "Telemark",
       "pop": 4064,
-      "frie26": 376700422.18565,
-      "frie27": 393426205.96935,
-      "vekst": 4.45008886,
-      "skatteindeks": 75.90900151
+      "frie26": 376700422.0,
+      "frie27": 393426206.0,
+      "vekst": 4.45,
+      "skatteindeks": 75.909
     },
     {
       "nr": "5528",
       "navn": "Dyrøy",
       "fylke": "Troms",
       "pop": 1059,
-      "frie26": 132264435.58734998,
-      "frie27": 138319295.65162,
-      "vekst": 4.589444754,
-      "skatteindeks": 83.43005285
+      "frie26": 132264436.0,
+      "frie27": 138319296.0,
+      "vekst": 4.589,
+      "skatteindeks": 83.43
     },
     {
       "nr": "1827",
       "navn": "Dønna",
       "fylke": "Nordland",
       "pop": 1445,
-      "frie26": 160944919.04157,
-      "frie27": 169988446.84546003,
-      "vekst": 5.61171273,
-      "skatteindeks": 101.5535706
+      "frie26": 160944919.0,
+      "frie27": 169988447.0,
+      "vekst": 5.612,
+      "skatteindeks": 101.554
     },
     {
       "nr": "4619",
       "navn": "Eidfjord",
       "fylke": "Vestland",
       "pop": 988,
-      "frie26": 116359009.20006,
-      "frie27": 120288203.35097,
-      "vekst": 3.377997195,
-      "skatteindeks": 162.98876833
+      "frie26": 116359009.0,
+      "frie27": 120288203.0,
+      "vekst": 3.378,
+      "skatteindeks": 162.989
     },
     {
       "nr": "3416",
       "navn": "Eidskog",
       "fylke": "Innlandet",
       "pop": 6081,
-      "frie26": 533004395.94525003,
-      "frie27": 559113376.9558799,
-      "vekst": 4.895389559,
-      "skatteindeks": 77.82979821
+      "frie26": 533004396.0,
+      "frie27": 559113377.0,
+      "vekst": 4.895,
+      "skatteindeks": 77.83
     },
     {
       "nr": "3240",
       "navn": "Eidsvoll",
       "fylke": "Akershus",
       "pop": 28845,
-      "frie26": 2239526987.9227,
-      "frie27": 2347765772.3933997,
-      "vekst": 4.810723985,
-      "skatteindeks": 78.86499349
+      "frie26": 2239526988.0,
+      "frie27": 2347765772.0,
+      "vekst": 4.811,
+      "skatteindeks": 78.865
     },
     {
       "nr": "1101",
       "navn": "Eigersund",
       "fylke": "Rogaland",
       "pop": 15638,
-      "frie26": 1273097502.6257,
-      "frie27": 1340632875.7835999,
-      "vekst": 5.301723342,
-      "skatteindeks": 104.50089531
+      "frie26": 1273097503.0,
+      "frie27": 1340632876.0,
+      "vekst": 5.302,
+      "skatteindeks": 104.501
     },
     {
       "nr": "3420",
       "navn": "Elverum",
       "fylke": "Innlandet",
       "pop": 22037,
-      "frie26": 1742432895.5958,
-      "frie27": 1832330783.5814002,
-      "vekst": 5.156163308,
-      "skatteindeks": 80.12950125
+      "frie26": 1742432896.0,
+      "frie27": 1832330784.0,
+      "vekst": 5.156,
+      "skatteindeks": 80.13
     },
     {
       "nr": "3220",
       "navn": "Enebakk",
       "fylke": "Akershus",
       "pop": 11717,
-      "frie26": 902457677.68055,
-      "frie27": 944124510.23318,
-      "vekst": 4.613920713,
-      "skatteindeks": 83.89953849
+      "frie26": 902457678.0,
+      "frie27": 944124510.0,
+      "vekst": 4.614,
+      "skatteindeks": 83.9
     },
     {
       "nr": "3425",
       "navn": "Engerdal",
       "fylke": "Innlandet",
       "pop": 1290,
-      "frie26": 148142442.45526,
-      "frie27": 152087761.24247998,
-      "vekst": 2.683998822,
-      "skatteindeks": 73.20216767
+      "frie26": 148142442.0,
+      "frie27": 152087761.0,
+      "vekst": 2.684,
+      "skatteindeks": 73.202
     },
     {
       "nr": "4611",
       "navn": "Etne",
       "fylke": "Vestland",
       "pop": 4142,
-      "frie26": 376184141.94026,
-      "frie27": 394888216.10606,
-      "vekst": 4.986434243,
-      "skatteindeks": 94.10281881
+      "frie26": 376184142.0,
+      "frie27": 394888216.0,
+      "vekst": 4.986,
+      "skatteindeks": 94.103
     },
     {
       "nr": "3450",
       "navn": "Etnedal",
       "fylke": "Innlandet",
       "pop": 1358,
-      "frie26": 156136516.69234,
-      "frie27": 175236657.02134,
-      "vekst": 12.205010679,
-      "skatteindeks": 77.82581682
+      "frie26": 156136517.0,
+      "frie27": 175236657.0,
+      "vekst": 12.205,
+      "skatteindeks": 77.826
     },
     {
       "nr": "1853",
       "navn": "Evenes",
       "fylke": "Nordland",
       "pop": 1433,
-      "frie26": 142477899.89315,
-      "frie27": 150714297.28251,
-      "vekst": 5.762426763,
-      "skatteindeks": 86.21592773
+      "frie26": 142477900.0,
+      "frie27": 150714297.0,
+      "vekst": 5.762,
+      "skatteindeks": 86.216
     },
     {
       "nr": "4219",
       "navn": "Evje og\nHornnes",
       "fylke": "Agder",
       "pop": 3860,
-      "frie26": 347042658.56674,
-      "frie27": 365085555.04624,
-      "vekst": 5.195899273,
-      "skatteindeks": 76.91326922
+      "frie26": 347042659.0,
+      "frie27": 365085555.0,
+      "vekst": 5.196,
+      "skatteindeks": 76.913
     },
     {
       "nr": "4206",
       "navn": "Farsund",
       "fylke": "Agder",
       "pop": 9915,
-      "frie26": 826352195.28792,
-      "frie27": 869347506.7570599,
-      "vekst": 5.19991018,
-      "skatteindeks": 85.2665762
+      "frie26": 826352195.0,
+      "frie27": 869347507.0,
+      "vekst": 5.2,
+      "skatteindeks": 85.267
     },
     {
       "nr": "1841",
       "navn": "Fauske",
       "fylke": "Nordland",
       "pop": 9715,
-      "frie26": 799262031.88436,
-      "frie27": 835877210.93589,
-      "vekst": 4.578071486,
-      "skatteindeks": 85.90292924
+      "frie26": 799262032.0,
+      "frie27": 835877211.0,
+      "vekst": 4.578,
+      "skatteindeks": 85.903
     },
     {
       "nr": "4633",
       "navn": "Fedje",
       "fylke": "Vestland",
       "pop": 521,
-      "frie26": 79236920.778726,
-      "frie27": 80641804.927927,
-      "vekst": 1.804889849,
-      "skatteindeks": 91.3331685
+      "frie26": 79236921.0,
+      "frie27": 80641805.0,
+      "vekst": 1.805,
+      "skatteindeks": 91.333
     },
     {
       "nr": "4615",
       "navn": "Fitjar",
       "fylke": "Vestland",
       "pop": 3271,
-      "frie26": 288047922.24738,
-      "frie27": 300592045.55446005,
-      "vekst": 4.377754487,
-      "skatteindeks": 96.22565
+      "frie26": 288047922.0,
+      "frie27": 300592046.0,
+      "vekst": 4.378,
+      "skatteindeks": 96.226
     },
     {
       "nr": "4646",
       "navn": "Fjaler",
       "fylke": "Vestland",
       "pop": 2974,
-      "frie26": 310625811.47754,
-      "frie27": 320693142.99697,
-      "vekst": 3.252517447,
-      "skatteindeks": 86.96915889
+      "frie26": 310625811.0,
+      "frie27": 320693143.0,
+      "vekst": 3.253,
+      "skatteindeks": 86.969
     },
     {
       "nr": "1578",
       "navn": "Fjord",
       "fylke": "Møre og Romsdal",
       "pop": 2711,
-      "frie26": 274865864.65989,
-      "frie27": 290332111.12433004,
-      "vekst": 3.280549408,
-      "skatteindeks": 89.66740205
+      "frie26": 274865865.0,
+      "frie27": 290332111.0,
+      "vekst": 3.281,
+      "skatteindeks": 89.667
     },
     {
       "nr": "1859",
       "navn": "Flakstad",
       "fylke": "Nordland",
       "pop": 1217,
-      "frie26": 135061193.60057,
-      "frie27": 139826284.71002,
-      "vekst": 3.536642336,
-      "skatteindeks": 91.21010514
+      "frie26": 135061194.0,
+      "frie27": 139826285.0,
+      "vekst": 3.537,
+      "skatteindeks": 91.21
     },
     {
       "nr": "5049",
       "navn": "Flatanger",
       "fylke": "Trøndelag",
       "pop": 1088,
-      "frie26": 129614166.15745,
-      "frie27": 134818359.8594,
-      "vekst": 4.024848186,
-      "skatteindeks": 97.09223559
+      "frie26": 129614166.0,
+      "frie27": 134818360.0,
+      "vekst": 4.025,
+      "skatteindeks": 97.092
     },
     {
       "nr": "4207",
       "navn": "Flekkefjord",
       "fylke": "Agder",
       "pop": 9372,
-      "frie26": 809357427.23104,
-      "frie27": 844902340.8821399,
-      "vekst": 4.388681834,
-      "skatteindeks": 89.24926191
+      "frie26": 809357427.0,
+      "frie27": 844902341.0,
+      "vekst": 4.389,
+      "skatteindeks": 89.249
     },
     {
       "nr": "3334",
       "navn": "Flesberg",
       "fylke": "Buskerud",
       "pop": 2792,
-      "frie26": 256132984.80185,
-      "frie27": 267524512.83218002,
-      "vekst": 4.4444455,
-      "skatteindeks": 92.66840995
+      "frie26": 256132985.0,
+      "frie27": 267524513.0,
+      "vekst": 4.444,
+      "skatteindeks": 92.668
     },
     {
       "nr": "3320",
       "navn": "Flå",
       "fylke": "Buskerud",
       "pop": 1126,
-      "frie26": 126748698.23131,
-      "frie27": 134630836.34548,
-      "vekst": 6.230127992,
-      "skatteindeks": 107.25603728
+      "frie26": 126748698.0,
+      "frie27": 134630836.0,
+      "vekst": 6.23,
+      "skatteindeks": 107.256
     },
     {
       "nr": "3429",
       "navn": "Folldal",
       "fylke": "Innlandet",
       "pop": 1539,
-      "frie26": 156987070.57019,
-      "frie27": 164551442.58773002,
-      "vekst": 4.806731096,
-      "skatteindeks": 81.56048676
+      "frie26": 156987071.0,
+      "frie27": 164551443.0,
+      "vekst": 4.807,
+      "skatteindeks": 81.56
     },
     {
       "nr": "3107",
       "navn": "Fredrikstad",
       "fylke": "Østfold",
       "pop": 86450,
-      "frie26": 6610773187.1946,
-      "frie27": 6954063174.7808,
-      "vekst": 5.189699337,
-      "skatteindeks": 82.49207138
+      "frie26": 6610773187.0,
+      "frie27": 6954063175.0,
+      "vekst": 5.19,
+      "skatteindeks": 82.492
     },
     {
       "nr": "3214",
       "navn": "Frogn",
       "fylke": "Akershus",
       "pop": 16518,
-      "frie26": 1280624983.6389,
-      "frie27": 1340794348.088,
-      "vekst": 4.695411373,
-      "skatteindeks": 112.81009575
+      "frie26": 1280624984.0,
+      "frie27": 1340794348.0,
+      "vekst": 4.695,
+      "skatteindeks": 112.81
     },
     {
       "nr": "4214",
       "navn": "Froland",
       "fylke": "Agder",
       "pop": 6297,
-      "frie26": 520044275.31350005,
-      "frie27": 544628549.32061,
-      "vekst": 4.724187564,
-      "skatteindeks": 81.01948434
+      "frie26": 520044275.0,
+      "frie27": 544628549.0,
+      "vekst": 4.724,
+      "skatteindeks": 81.019
     },
     {
       "nr": "5036",
       "navn": "Frosta",
       "fylke": "Trøndelag",
       "pop": 2678,
-      "frie26": 246998628.52028,
-      "frie27": 258636532.30282,
-      "vekst": 4.74111686,
-      "skatteindeks": 77.35950768
+      "frie26": 246998629.0,
+      "frie27": 258636532.0,
+      "vekst": 4.741,
+      "skatteindeks": 77.36
     },
     {
       "nr": "5014",
       "navn": "Frøya",
       "fylke": "Trøndelag",
       "pop": 5814,
-      "frie26": 573984219.8016,
-      "frie27": 605373924.54958,
-      "vekst": 5.481418826,
-      "skatteindeks": 224.4971993
+      "frie26": 573984220.0,
+      "frie27": 605373925.0,
+      "vekst": 5.481,
+      "skatteindeks": 224.497
     },
     {
       "nr": "4032",
       "navn": "Fyresdal",
       "fylke": "Telemark",
       "pop": 1267,
-      "frie26": 134690528.06724,
-      "frie27": 138930745.13556,
-      "vekst": 3.160447804,
-      "skatteindeks": 90.68878535
+      "frie26": 134690528.0,
+      "frie27": 138930745.0,
+      "vekst": 3.16,
+      "skatteindeks": 90.689
     },
     {
       "nr": "3911",
       "navn": "Færder",
       "fylke": "Vestfold",
       "pop": 27805,
-      "frie26": 2216191269.5963,
-      "frie27": 2321058580.2348,
-      "vekst": 4.728765201,
-      "skatteindeks": 95.74110906
+      "frie26": 2216191270.0,
+      "frie27": 2321058580.0,
+      "vekst": 4.729,
+      "skatteindeks": 95.741
     },
     {
       "nr": "5626",
       "navn": "Gamvik",
       "fylke": "Finnmark",
       "pop": 994,
-      "frie26": 139549733.47307,
-      "frie27": 144659076.18971,
-      "vekst": 3.800507047,
-      "skatteindeks": 81.55302112
+      "frie26": 139549733.0,
+      "frie27": 144659076.0,
+      "vekst": 3.801,
+      "skatteindeks": 81.553
     },
     {
       "nr": "3441",
       "navn": "Gausdal",
       "fylke": "Innlandet",
       "pop": 6155,
-      "frie26": 509669792.9099,
-      "frie27": 536527359.85710996,
-      "vekst": 5.266490199,
-      "skatteindeks": 85.31386849
+      "frie26": 509669793.0,
+      "frie27": 536527360.0,
+      "vekst": 5.266,
+      "skatteindeks": 85.314
     },
     {
       "nr": "1838",
       "navn": "Gildeskål",
       "fylke": "Nordland",
       "pop": 2017,
-      "frie26": 205771760.79742,
-      "frie27": 214464814.57353,
-      "vekst": 4.220619008,
-      "skatteindeks": 87.12181457
+      "frie26": 205771761.0,
+      "frie27": 214464815.0,
+      "vekst": 4.221,
+      "skatteindeks": 87.122
     },
     {
       "nr": "1532",
       "navn": "Giske",
       "fylke": "Møre og Romsdal",
       "pop": 8852,
-      "frie26": 716562509.16045,
-      "frie27": 747769453.2246,
-      "vekst": 4.351977983,
-      "skatteindeks": 90.56624396
+      "frie26": 716562509.0,
+      "frie27": 747769453.0,
+      "vekst": 4.352,
+      "skatteindeks": 90.566
     },
     {
       "nr": "1557",
       "navn": "Gjemnes",
       "fylke": "Møre og Romsdal",
       "pop": 2769,
-      "frie26": 243503166.58424002,
-      "frie27": 259946984.41922,
-      "vekst": 6.765191508,
-      "skatteindeks": 81.29426753
+      "frie26": 243503167.0,
+      "frie27": 259946984.0,
+      "vekst": 6.765,
+      "skatteindeks": 81.294
     },
     {
       "nr": "3230",
       "navn": "Gjerdrum",
       "fylke": "Akershus",
       "pop": 7522,
-      "frie26": 583639286.39544,
-      "frie27": 612319748.5469201,
-      "vekst": 4.910985433,
-      "skatteindeks": 100.85486042
+      "frie26": 583639286.0,
+      "frie27": 612319749.0,
+      "vekst": 4.911,
+      "skatteindeks": 100.855
     },
     {
       "nr": "4211",
       "navn": "Gjerstad",
       "fylke": "Agder",
       "pop": 2508,
-      "frie26": 234398976.00583,
-      "frie27": 244791803.3147,
-      "vekst": 4.452217471,
-      "skatteindeks": 72.35091894
+      "frie26": 234398976.0,
+      "frie27": 244791803.0,
+      "vekst": 4.452,
+      "skatteindeks": 72.351
     },
     {
       "nr": "1122",
       "navn": "Gjesdal",
       "fylke": "Rogaland",
       "pop": 12771,
-      "frie26": 1034040972.7399,
-      "frie27": 1088720875.0895002,
-      "vekst": 5.284804697,
-      "skatteindeks": 85.60834778
+      "frie26": 1034040973.0,
+      "frie27": 1088720875.0,
+      "vekst": 5.285,
+      "skatteindeks": 85.608
     },
     {
       "nr": "3407",
       "navn": "Gjøvik",
       "fylke": "Innlandet",
       "pop": 31389,
-      "frie26": 2429020940.5245,
-      "frie27": 2544788333.9676,
-      "vekst": 4.762843379,
-      "skatteindeks": 84.14937005
+      "frie26": 2429020941.0,
+      "frie27": 2544788334.0,
+      "vekst": 4.763,
+      "skatteindeks": 84.149
     },
     {
       "nr": "4650",
       "navn": "Gloppen",
       "fylke": "Vestland",
       "pop": 6019,
-      "frie26": 563920236.61484,
-      "frie27": 593367016.1274,
-      "vekst": 5.235352612,
-      "skatteindeks": 93.11740032
+      "frie26": 563920237.0,
+      "frie27": 593367016.0,
+      "vekst": 5.235,
+      "skatteindeks": 93.117
     },
     {
       "nr": "3324",
       "navn": "Gol",
       "fylke": "Buskerud",
       "pop": 4945,
-      "frie26": 439510474.38659,
-      "frie27": 463763382.96214,
-      "vekst": 5.515043212,
-      "skatteindeks": 99.52549117
+      "frie26": 439510474.0,
+      "frie27": 463763383.0,
+      "vekst": 5.515,
+      "skatteindeks": 99.525
     },
     {
       "nr": "3446",
       "navn": "Gran",
       "fylke": "Innlandet",
       "pop": 13704,
-      "frie26": 1101602919.9152,
-      "frie27": 1155460605.3888,
-      "vekst": 4.885917561,
-      "skatteindeks": 87.31295425
+      "frie26": 1101602920.0,
+      "frie27": 1155460605.0,
+      "vekst": 4.886,
+      "skatteindeks": 87.313
     },
     {
       "nr": "1825",
       "navn": "Grane",
       "fylke": "Nordland",
       "pop": 1408,
-      "frie26": 154479497.29777,
-      "frie27": 160962374.95757,
-      "vekst": 4.214694657,
-      "skatteindeks": 86.65962442
+      "frie26": 154479497.0,
+      "frie27": 160962375.0,
+      "vekst": 4.215,
+      "skatteindeks": 86.66
     },
     {
       "nr": "5516",
       "navn": "Gratangen",
       "fylke": "Troms",
       "pop": 1077,
-      "frie26": 126444728.05404,
-      "frie27": 130552386.55874,
-      "vekst": 3.268064817,
-      "skatteindeks": 83.16076235
+      "frie26": 126444728.0,
+      "frie27": 130552387.0,
+      "vekst": 3.268,
+      "skatteindeks": 83.161
     },
     {
       "nr": "4202",
       "navn": "Grimstad",
       "fylke": "Agder",
       "pop": 25658,
-      "frie26": 1954062863.0272002,
-      "frie27": 2056533632.2573,
-      "vekst": 5.240762468,
-      "skatteindeks": 84.89915063
+      "frie26": 1954062863.0,
+      "frie27": 2056533632.0,
+      "vekst": 5.241,
+      "skatteindeks": 84.899
     },
     {
       "nr": "5045",
       "navn": "Grong",
       "fylke": "Trøndelag",
       "pop": 2277,
-      "frie26": 237589678.81797,
-      "frie27": 246615478.35119998,
-      "vekst": 3.801858916,
-      "skatteindeks": 82.79441038
+      "frie26": 237589679.0,
+      "frie27": 246615478.0,
+      "vekst": 3.802,
+      "skatteindeks": 82.794
     },
     {
       "nr": "3417",
       "navn": "Grue",
       "fylke": "Innlandet",
       "pop": 4458,
-      "frie26": 397115536.02014,
-      "frie27": 414771922.33834004,
-      "vekst": 4.451104124,
-      "skatteindeks": 79.13324484
+      "frie26": 397115536.0,
+      "frie27": 414771922.0,
+      "vekst": 4.451,
+      "skatteindeks": 79.133
     },
     {
       "nr": "4635",
       "navn": "Gulen",
       "fylke": "Vestland",
       "pop": 2309,
-      "frie26": 234187838.07768998,
-      "frie27": 246673392.89205998,
-      "vekst": 5.331368371,
-      "skatteindeks": 108.48522371
+      "frie26": 234187838.0,
+      "frie27": 246673393.0,
+      "vekst": 5.331,
+      "skatteindeks": 108.485
     },
     {
       "nr": "1866",
       "navn": "Hadsel",
       "fylke": "Nordland",
       "pop": 8382,
-      "frie26": 730721375.68463,
-      "frie27": 759765409.46925,
-      "vekst": 4.011327642,
-      "skatteindeks": 94.33374399
+      "frie26": 730721376.0,
+      "frie27": 759765409.0,
+      "vekst": 4.011,
+      "skatteindeks": 94.334
     },
     {
       "nr": "3101",
       "navn": "Halden",
       "fylke": "Østfold",
       "pop": 32022,
-      "frie26": 2533953025.378,
-      "frie27": 2644371208.2221003,
-      "vekst": 4.354430144,
-      "skatteindeks": 79.08297625
+      "frie26": 2533953025.0,
+      "frie27": 2644371208.0,
+      "vekst": 4.354,
+      "skatteindeks": 79.083
     },
     {
       "nr": "3403",
       "navn": "Hamar",
       "fylke": "Innlandet",
       "pop": 33938,
-      "frie26": 2629222241.4319,
-      "frie27": 2767891664.1644998,
-      "vekst": 5.270967538,
-      "skatteindeks": 90.28567962
+      "frie26": 2629222241.0,
+      "frie27": 2767891664.0,
+      "vekst": 5.271,
+      "skatteindeks": 90.286
     },
     {
       "nr": "1875",
       "navn": "Hamarøy",
       "fylke": "Nordland",
       "pop": 2805,
-      "frie26": 296920934.04551,
-      "frie27": 306655062.18689,
-      "vekst": 3.293274912,
-      "skatteindeks": 93.42035299
+      "frie26": 296920934.0,
+      "frie27": 306655062.0,
+      "vekst": 3.293,
+      "skatteindeks": 93.42
     },
     {
       "nr": "5603",
       "navn": "Hammerfest",
       "fylke": "Finnmark",
       "pop": 11396,
-      "frie26": 1118307636.7577,
-      "frie27": 1158976973.5188,
-      "vekst": 3.673513323,
-      "skatteindeks": 104.93690206
+      "frie26": 1118307637.0,
+      "frie27": 1158976974.0,
+      "vekst": 3.674,
+      "skatteindeks": 104.937
     },
     {
       "nr": "1580",
       "navn": "Haram",
       "fylke": "Møre og Romsdal",
       "pop": 9507,
-      "frie26": 787593089.42006,
-      "frie27": 819336797.44649,
-      "vekst": 4.048202488,
-      "skatteindeks": 89.4548416
+      "frie26": 787593089.0,
+      "frie27": 819336797.0,
+      "vekst": 4.048,
+      "skatteindeks": 89.455
     },
     {
       "nr": "1517",
       "navn": "Hareid",
       "fylke": "Møre og Romsdal",
       "pop": 5354,
-      "frie26": 458489257.35978,
-      "frie27": 484582582.71336997,
-      "vekst": 5.688000472,
-      "skatteindeks": 84.03321656
+      "frie26": 458489257.0,
+      "frie27": 484582583.0,
+      "vekst": 5.688,
+      "skatteindeks": 84.033
     },
     {
       "nr": "5503",
       "navn": "Harstad",
       "fylke": "Troms",
       "pop": 25190,
-      "frie26": 2119548528.7406,
-      "frie27": 2229789970.4283,
-      "vekst": 5.198249344,
-      "skatteindeks": 96.97903952
+      "frie26": 2119548529.0,
+      "frie27": 2229789970.0,
+      "vekst": 5.198,
+      "skatteindeks": 96.979
     },
     {
       "nr": "5616",
       "navn": "Hasvik",
       "fylke": "Finnmark",
       "pop": 969,
-      "frie26": 135345318.67268997,
-      "frie27": 138671508.05037,
-      "vekst": 2.543958819,
-      "skatteindeks": 78.21821526
+      "frie26": 135345319.0,
+      "frie27": 138671508.0,
+      "vekst": 2.544,
+      "skatteindeks": 78.218
     },
     {
       "nr": "1826",
       "navn": "Hattfjelldal",
       "fylke": "Nordland",
       "pop": 1249,
-      "frie26": 145652708.43505,
-      "frie27": 151134053.23352,
-      "vekst": 3.763441253,
-      "skatteindeks": 77.14750838
+      "frie26": 145652708.0,
+      "frie27": 151134053.0,
+      "vekst": 3.763,
+      "skatteindeks": 77.148
     },
     {
       "nr": "1106",
       "navn": "Haugesund",
       "fylke": "Rogaland",
       "pop": 38672,
-      "frie26": 3033659779.553,
-      "frie27": 3191778065.1376,
-      "vekst": 5.209039386,
-      "skatteindeks": 104.39239628
+      "frie26": 3033659780.0,
+      "frie27": 3191778065.0,
+      "vekst": 5.209,
+      "skatteindeks": 104.392
     },
     {
       "nr": "5055",
       "navn": "Heim",
       "fylke": "Trøndelag",
       "pop": 6046,
-      "frie26": 564757489.57507,
-      "frie27": 588778766.79565,
-      "vekst": 4.271296275,
-      "skatteindeks": 82.94180318
+      "frie26": 564757490.0,
+      "frie27": 588778767.0,
+      "vekst": 4.271,
+      "skatteindeks": 82.942
     },
     {
       "nr": "1832",
       "navn": "Hemnes",
       "fylke": "Nordland",
       "pop": 4492,
-      "frie26": 424743943.17796,
-      "frie27": 439725994.4283,
-      "vekst": 3.545844739,
-      "skatteindeks": 92.19887562
+      "frie26": 424743943.0,
+      "frie27": 439725994.0,
+      "vekst": 3.546,
+      "skatteindeks": 92.199
     },
     {
       "nr": "3326",
       "navn": "Hemsedal",
       "fylke": "Buskerud",
       "pop": 2741,
-      "frie26": 246138685.15899998,
-      "frie27": 255972639.55471998,
-      "vekst": 4.034947016,
-      "skatteindeks": 117.45305503
+      "frie26": 246138685.0,
+      "frie27": 255972640.0,
+      "vekst": 4.035,
+      "skatteindeks": 117.453
     },
     {
       "nr": "1515",
       "navn": "Herøy",
       "fylke": "Møre og Romsdal",
       "pop": 9011,
-      "frie26": 744383312.56192,
-      "frie27": 777014239.50986,
-      "vekst": 4.408181125,
-      "skatteindeks": 103.9882661
+      "frie26": 744383313.0,
+      "frie27": 777014240.0,
+      "vekst": 4.408,
+      "skatteindeks": 103.988
     },
     {
       "nr": "1818",
       "navn": "Herøy",
       "fylke": "Nordland",
       "pop": 1877,
-      "frie26": 192375234.55629,
-      "frie27": 201798176.6848,
-      "vekst": 4.899562363,
-      "skatteindeks": 84.46451685
+      "frie26": 192375235.0,
+      "frie27": 201798177.0,
+      "vekst": 4.9,
+      "skatteindeks": 84.465
     },
     {
       "nr": "5056",
       "navn": "Hitra",
       "fylke": "Trøndelag",
       "pop": 5626,
-      "frie26": 488195851.88718003,
-      "frie27": 513272094.76072997,
-      "vekst": 5.152554456,
-      "skatteindeks": 87.52774971
+      "frie26": 488195852.0,
+      "frie27": 513272095.0,
+      "vekst": 5.153,
+      "skatteindeks": 87.528
     },
     {
       "nr": "4024",
       "navn": "Hjartdal",
       "fylke": "Telemark",
       "pop": 1630,
-      "frie26": 162583460.92966002,
-      "frie27": 168022605.30333,
-      "vekst": 3.363031709,
-      "skatteindeks": 94.49385578
+      "frie26": 162583461.0,
+      "frie27": 168022605.0,
+      "vekst": 3.363,
+      "skatteindeks": 94.494
     },
     {
       "nr": "1133",
       "navn": "Hjelmeland",
       "fylke": "Rogaland",
       "pop": 2609,
-      "frie26": 262075219.30076998,
-      "frie27": 271160079.62524,
-      "vekst": 3.500101302,
-      "skatteindeks": 120.0902936
+      "frie26": 262075219.0,
+      "frie27": 271160080.0,
+      "vekst": 3.5,
+      "skatteindeks": 120.09
     },
     {
       "nr": "3330",
       "navn": "Hol",
       "fylke": "Buskerud",
       "pop": 4583,
-      "frie26": 403106445.56262,
-      "frie27": 422310217.86517,
-      "vekst": 4.790337409,
-      "skatteindeks": 129.29871454
+      "frie26": 403106446.0,
+      "frie27": 422310218.0,
+      "vekst": 4.79,
+      "skatteindeks": 129.299
     },
     {
       "nr": "3310",
       "navn": "Hole",
       "fylke": "Buskerud",
       "pop": 7231,
-      "frie26": 586947655.26453,
-      "frie27": 618845790.38314,
-      "vekst": 5.43144492,
-      "skatteindeks": 104.9616259
+      "frie26": 586947655.0,
+      "frie27": 618845790.0,
+      "vekst": 5.431,
+      "skatteindeks": 104.962
     },
     {
       "nr": "3903",
       "navn": "Holmestrand",
       "fylke": "Vestfold",
       "pop": 27227,
-      "frie26": 2110778116.5318,
-      "frie27": 2213947175.8905,
-      "vekst": 4.884618227,
-      "skatteindeks": 86.57306092
+      "frie26": 2110778117.0,
+      "frie27": 2213947176.0,
+      "vekst": 4.885,
+      "skatteindeks": 86.573
     },
     {
       "nr": "5026",
       "navn": "Holtålen",
       "fylke": "Trøndelag",
       "pop": 2036,
-      "frie26": 196889885.86636,
-      "frie27": 206455868.09325,
-      "vekst": 4.869798578,
-      "skatteindeks": 73.89438108
+      "frie26": 196889886.0,
+      "frie27": 206455868.0,
+      "vekst": 4.87,
+      "skatteindeks": 73.894
     },
     {
       "nr": "3901",
       "navn": "Horten",
       "fylke": "Vestfold",
       "pop": 28068,
-      "frie26": 2189598216.1533,
-      "frie27": 2293263081.8592,
-      "vekst": 4.731280229,
-      "skatteindeks": 84.9822738
+      "frie26": 2189598216.0,
+      "frie27": 2293263082.0,
+      "vekst": 4.731,
+      "skatteindeks": 84.982
     },
     {
       "nr": "3242",
       "navn": "Hurdal",
       "fylke": "Akershus",
       "pop": 3060,
-      "frie26": 273325702.31492996,
-      "frie27": 288834573.08428,
-      "vekst": 5.670905866,
-      "skatteindeks": 73.49775928
+      "frie26": 273325702.0,
+      "frie27": 288834573.0,
+      "vekst": 5.671,
+      "skatteindeks": 73.498
     },
     {
       "nr": "1579",
       "navn": "Hustadvika",
       "fylke": "Møre og Romsdal",
       "pop": 13620,
-      "frie26": 1133670216.0338001,
-      "frie27": 1194141226.1481001,
-      "vekst": 5.345089877,
-      "skatteindeks": 85.73967026
+      "frie26": 1133670216.0,
+      "frie27": 1194141226.0,
+      "vekst": 5.345,
+      "skatteindeks": 85.74
     },
     {
       "nr": "3110",
       "navn": "Hvaler",
       "fylke": "Østfold",
       "pop": 4705,
-      "frie26": 381167832.84018004,
-      "frie27": 403254665.92096,
-      "vekst": 5.791383466,
-      "skatteindeks": 100.41809451
+      "frie26": 381167833.0,
+      "frie27": 403254666.0,
+      "vekst": 5.791,
+      "skatteindeks": 100.418
     },
     {
       "nr": "4637",
       "navn": "Hyllestad",
       "fylke": "Vestland",
       "pop": 1270,
-      "frie26": 139843276.84052998,
-      "frie27": 149632942.34707,
-      "vekst": 7.004150455,
-      "skatteindeks": 99.35651655
+      "frie26": 139843277.0,
+      "frie27": 149632942.0,
+      "vekst": 7.004,
+      "skatteindeks": 99.357
     },
     {
       "nr": "1119",
       "navn": "Hå",
       "fylke": "Rogaland",
       "pop": 20058,
-      "frie26": 1599743213.3673,
-      "frie27": 1672465630.4859,
-      "vekst": 4.542713479,
-      "skatteindeks": 88.20421268
+      "frie26": 1599743213.0,
+      "frie27": 1672465630.0,
+      "vekst": 4.543,
+      "skatteindeks": 88.204
     },
     {
       "nr": "4226",
       "navn": "Hægebostad",
       "fylke": "Agder",
       "pop": 1783,
-      "frie26": 187879224.5979,
-      "frie27": 196237557.00195,
-      "vekst": 4.463076326,
-      "skatteindeks": 88.7821833
+      "frie26": 187879225.0,
+      "frie27": 196237557.0,
+      "vekst": 4.463,
+      "skatteindeks": 88.782
     },
     {
       "nr": "4638",
       "navn": "Høyanger",
       "fylke": "Vestland",
       "pop": 3902,
-      "frie26": 369196583.10328,
-      "frie27": 385095245.015,
-      "vekst": 4.312285936,
-      "skatteindeks": 103.50958983
+      "frie26": 369196583.0,
+      "frie27": 385095245.0,
+      "vekst": 4.312,
+      "skatteindeks": 103.51
     },
     {
       "nr": "5046",
       "navn": "Høylandet",
       "fylke": "Trøndelag",
       "pop": 1218,
-      "frie26": 145752620.15582,
-      "frie27": 149977021.59151998,
-      "vekst": 2.900546622,
-      "skatteindeks": 76.16054283
+      "frie26": 145752620.0,
+      "frie27": 149977022.0,
+      "vekst": 2.901,
+      "skatteindeks": 76.161
     },
     {
       "nr": "5514",
       "navn": "Ibestad",
       "fylke": "Troms",
       "pop": 1287,
-      "frie26": 146050366.1896,
-      "frie27": 154261866.65596998,
-      "vekst": 5.602706005,
-      "skatteindeks": 90.36373784
+      "frie26": 146050366.0,
+      "frie27": 154261867.0,
+      "vekst": 5.603,
+      "skatteindeks": 90.364
     },
     {
       "nr": "5053",
       "navn": "Inderøy",
       "fylke": "Trøndelag",
       "pop": 7045,
-      "frie26": 615981029.65167,
-      "frie27": 642295140.9684399,
-      "vekst": 4.268933465,
-      "skatteindeks": 84.03552846
+      "frie26": 615981030.0,
+      "frie27": 642295141.0,
+      "vekst": 4.269,
+      "skatteindeks": 84.036
     },
     {
       "nr": "5054",
       "navn": "Indre\nFosen",
       "fylke": "Trøndelag",
       "pop": 10011,
-      "frie26": 870117137.27116,
-      "frie27": 911605030.78119,
-      "vekst": 4.781464539,
-      "skatteindeks": 75.15035278
+      "frie26": 870117137.0,
+      "frie27": 911605031.0,
+      "vekst": 4.781,
+      "skatteindeks": 75.15
     },
     {
       "nr": "3118",
       "navn": "Indre Østfold",
       "fylke": "Østfold",
       "pop": 48100,
-      "frie26": 3846266197.9824004,
-      "frie27": 4024131892.8763,
-      "vekst": 4.621291531,
-      "skatteindeks": 82.21488334
+      "frie26": 3846266198.0,
+      "frie27": 4024131893.0,
+      "vekst": 4.621,
+      "skatteindeks": 82.215
     },
     {
       "nr": "4218",
       "navn": "Iveland",
       "fylke": "Agder",
       "pop": 1385,
-      "frie26": 155828564.93196,
-      "frie27": 160404366.87184,
-      "vekst": 2.977056817,
-      "skatteindeks": 71.04090782
+      "frie26": 155828565.0,
+      "frie27": 160404367.0,
+      "vekst": 2.977,
+      "skatteindeks": 71.041
     },
     {
       "nr": "3236",
       "navn": "Jevnaker",
       "fylke": "Akershus",
       "pop": 7047,
-      "frie26": 570221235.20564,
-      "frie27": 598055815.43341,
-      "vekst": 4.87819662,
-      "skatteindeks": 79.53070113
+      "frie26": 570221235.0,
+      "frie27": 598055815.0,
+      "vekst": 4.878,
+      "skatteindeks": 79.531
     },
     {
       "nr": "5610",
       "navn": "Karasjok",
       "fylke": "Finnmark",
       "pop": 2519,
-      "frie26": 267770812.52787,
-      "frie27": 276986908.77703,
-      "vekst": 3.445512402,
-      "skatteindeks": 78.32077376
+      "frie26": 267770813.0,
+      "frie27": 276986909.0,
+      "vekst": 3.446,
+      "skatteindeks": 78.321
     },
     {
       "nr": "5534",
       "navn": "Karlsøy",
       "fylke": "Troms",
       "pop": 2229,
-      "frie26": 254755306.58278,
-      "frie27": 262749711.50824,
-      "vekst": 3.17778589,
-      "skatteindeks": 84.99679971
+      "frie26": 254755307.0,
+      "frie27": 262749712.0,
+      "vekst": 3.178,
+      "skatteindeks": 84.997
     },
     {
       "nr": "1149",
       "navn": "Karmøy",
       "fylke": "Rogaland",
       "pop": 43948,
-      "frie26": 3404372739.8335,
-      "frie27": 3570700869.3689003,
-      "vekst": 4.882567573,
-      "skatteindeks": 91.50444995
+      "frie26": 3404372740.0,
+      "frie27": 3570700869.0,
+      "vekst": 4.883,
+      "skatteindeks": 91.504
     },
     {
       "nr": "5612",
       "navn": "Kautokeino",
       "fylke": "Finnmark",
       "pop": 2903,
-      "frie26": 312496497.9644,
-      "frie27": 325514989.54525995,
-      "vekst": 4.163270269,
-      "skatteindeks": 67.85453284
+      "frie26": 312496498.0,
+      "frie27": 325514990.0,
+      "vekst": 4.163,
+      "skatteindeks": 67.855
     },
     {
       "nr": "4602",
       "navn": "Kinn",
       "fylke": "Vestland",
       "pop": 17289,
-      "frie26": 1492642406.7021,
-      "frie27": 1551816234.999,
-      "vekst": 3.984763651,
-      "skatteindeks": 95.94694961
+      "frie26": 1492642407.0,
+      "frie27": 1551816235.0,
+      "vekst": 3.985,
+      "skatteindeks": 95.947
     },
     {
       "nr": "1120",
       "navn": "Klepp",
       "fylke": "Rogaland",
       "pop": 21582,
-      "frie26": 1676289171.6568,
-      "frie27": 1750370970.6244001,
-      "vekst": 4.416318718,
-      "skatteindeks": 97.22044934
+      "frie26": 1676289172.0,
+      "frie27": 1750370971.0,
+      "vekst": 4.416,
+      "skatteindeks": 97.22
     },
     {
       "nr": "3303",
       "navn": "Kongsberg",
       "fylke": "Buskerud",
       "pop": 29179,
-      "frie26": 2312483330.8967,
-      "frie27": 2418712034.4424,
-      "vekst": 4.590686013,
-      "skatteindeks": 110.08246964
+      "frie26": 2312483331.0,
+      "frie27": 2418712034.0,
+      "vekst": 4.591,
+      "skatteindeks": 110.082
     },
     {
       "nr": "3401",
       "navn": "Kongsvinger",
       "fylke": "Innlandet",
       "pop": 18251,
-      "frie26": 1491119182.7489,
-      "frie27": 1555551766.0077,
-      "vekst": 4.317953717,
-      "skatteindeks": 82.46937701
+      "frie26": 1491119183.0,
+      "frie27": 1555551766.0,
+      "vekst": 4.318,
+      "skatteindeks": 82.469
     },
     {
       "nr": "4014",
       "navn": "Kragerø",
       "fylke": "Telemark",
       "pop": 10370,
-      "frie26": 853654344.76472,
-      "frie27": 894404893.08762,
-      "vekst": 4.770536378,
-      "skatteindeks": 83.44909187
+      "frie26": 853654345.0,
+      "frie27": 894404893.0,
+      "vekst": 4.771,
+      "skatteindeks": 83.449
     },
     {
       "nr": "4204",
       "navn": "Kristiansand",
       "fylke": "Agder",
       "pop": 119729,
-      "frie26": 9114516570.1371,
-      "frie27": 9612250604.615,
-      "vekst": 5.457719327,
-      "skatteindeks": 83.08820203
+      "frie26": 9114516570.0,
+      "frie27": 9612250605.0,
+      "vekst": 5.458,
+      "skatteindeks": 83.088
     },
     {
       "nr": "1505",
       "navn": "Kristiansund",
       "fylke": "Møre og Romsdal",
       "pop": 24390,
-      "frie26": 1920599138.5093,
-      "frie27": 2011402847.9681,
-      "vekst": 4.724806263,
-      "skatteindeks": 87.90265323
+      "frie26": 1920599139.0,
+      "frie27": 2011402848.0,
+      "vekst": 4.725,
+      "skatteindeks": 87.903
     },
     {
       "nr": "3318",
       "navn": "Krødsherad",
       "fylke": "Buskerud",
       "pop": 2275,
-      "frie26": 226910356.65242,
-      "frie27": 234792384.01766,
-      "vekst": 3.501746821,
-      "skatteindeks": 107.55687331
+      "frie26": 226910357.0,
+      "frie27": 234792384.0,
+      "vekst": 3.502,
+      "skatteindeks": 107.557
     },
     {
       "nr": "4622",
       "navn": "Kvam",
       "fylke": "Vestland",
       "pop": 8502,
-      "frie26": 750728499.1826099,
-      "frie27": 780102625.2077999,
-      "vekst": 3.909711404,
-      "skatteindeks": 93.90045809
+      "frie26": 750728499.0,
+      "frie27": 780102625.0,
+      "vekst": 3.91,
+      "skatteindeks": 93.9
     },
     {
       "nr": "4227",
       "navn": "Kvinesdal",
       "fylke": "Agder",
       "pop": 6215,
-      "frie26": 554210555.04717,
-      "frie27": 575992412.40386,
-      "vekst": 3.942676688,
-      "skatteindeks": 91.13641164
+      "frie26": 554210555.0,
+      "frie27": 575992412.0,
+      "vekst": 3.943,
+      "skatteindeks": 91.136
     },
     {
       "nr": "4617",
       "navn": "Kvinnherad",
       "fylke": "Vestland",
       "pop": 13280,
-      "frie26": 1118740274.9006002,
-      "frie27": 1175326481.1573,
-      "vekst": 5.073543418,
-      "skatteindeks": 97.765847
+      "frie26": 1118740275.0,
+      "frie27": 1175326481.0,
+      "vekst": 5.074,
+      "skatteindeks": 97.766
     },
     {
       "nr": "4028",
       "navn": "Kviteseid",
       "fylke": "Telemark",
       "pop": 2501,
-      "frie26": 241156964.25316,
-      "frie27": 252258571.37901002,
-      "vekst": 4.594036413,
-      "skatteindeks": 92.65769898
+      "frie26": 241156964.0,
+      "frie27": 252258571.0,
+      "vekst": 4.594,
+      "skatteindeks": 92.658
     },
     {
       "nr": "1144",
       "navn": "Kvitsøy",
       "fylke": "Rogaland",
       "pop": 578,
-      "frie26": 80636344.147284,
-      "frie27": 82677739.42627,
-      "vekst": 2.592285144,
-      "skatteindeks": 96.94656642
+      "frie26": 80636344.0,
+      "frie27": 82677739.0,
+      "vekst": 2.592,
+      "skatteindeks": 96.947
     },
     {
       "nr": "5510",
       "navn": "Kvæfjord",
       "fylke": "Troms",
       "pop": 2900,
-      "frie26": 291985914.32006,
-      "frie27": 301999300.67278004,
-      "vekst": 3.44399566,
-      "skatteindeks": 78.60558167
+      "frie26": 291985914.0,
+      "frie27": 301999301.0,
+      "vekst": 3.444,
+      "skatteindeks": 78.606
     },
     {
       "nr": "5546",
       "navn": "Kvænangen",
       "fylke": "Troms",
       "pop": 1107,
-      "frie26": 154449263.37341002,
-      "frie27": 158451364.06962,
-      "vekst": 2.738383808,
-      "skatteindeks": 86.71839698
+      "frie26": 154449263.0,
+      "frie27": 158451364.0,
+      "vekst": 2.738,
+      "skatteindeks": 86.718
     },
     {
       "nr": "5540",
       "navn": "Kåfjord",
       "fylke": "Troms",
       "pop": 1917,
-      "frie26": 215113582.20677,
-      "frie27": 221801435.04462,
-      "vekst": 3.117942417,
-      "skatteindeks": 81.45110216
+      "frie26": 215113582.0,
+      "frie27": 221801435.0,
+      "vekst": 3.118,
+      "skatteindeks": 81.451
     },
     {
       "nr": "3909",
       "navn": "Larvik",
       "fylke": "Vestfold",
       "pop": 48986,
-      "frie26": 3887706718.5622997,
-      "frie27": 4078012354.5762,
-      "vekst": 4.891943945,
-      "skatteindeks": 84.26318979
+      "frie26": 3887706719.0,
+      "frie27": 4078012355.0,
+      "vekst": 4.892,
+      "skatteindeks": 84.263
     },
     {
       "nr": "5518",
       "navn": "Lavangen",
       "fylke": "Troms",
       "pop": 1009,
-      "frie26": 125923425.10773,
-      "frie27": 129696046.24454,
-      "vekst": 2.979697849,
-      "skatteindeks": 69.24891242
+      "frie26": 125923425.0,
+      "frie27": 129696046.0,
+      "vekst": 2.98,
+      "skatteindeks": 69.249
     },
     {
       "nr": "5624",
       "navn": "Lebesby",
       "fylke": "Finnmark",
       "pop": 1237,
-      "frie26": 162994847.94952,
-      "frie27": 168596006.41135,
-      "vekst": 3.463387693,
-      "skatteindeks": 89.32029152
+      "frie26": 162994848.0,
+      "frie27": 168596006.0,
+      "vekst": 3.463,
+      "skatteindeks": 89.32
     },
     {
       "nr": "1822",
       "navn": "Leirfjord",
       "fylke": "Nordland",
       "pop": 2368,
-      "frie26": 244049791.69246998,
-      "frie27": 255530050.17878,
-      "vekst": 4.733290769,
-      "skatteindeks": 72.88175739
+      "frie26": 244049792.0,
+      "frie27": 255530050.0,
+      "vekst": 4.733,
+      "skatteindeks": 72.882
     },
     {
       "nr": "5052",
       "navn": "Leka",
       "fylke": "Trøndelag",
       "pop": 580,
-      "frie26": 84493308.568831,
-      "frie27": 87272783.40534599,
-      "vekst": 3.327352149,
-      "skatteindeks": 93.60913531
+      "frie26": 84493309.0,
+      "frie27": 87272783.0,
+      "vekst": 3.327,
+      "skatteindeks": 93.609
     },
     {
       "nr": "3432",
       "navn": "Lesja",
       "fylke": "Innlandet",
       "pop": 1954,
-      "frie26": 197096514.54594,
-      "frie27": 203937570.80804,
-      "vekst": 3.488579585,
-      "skatteindeks": 85.38658875
+      "frie26": 197096515.0,
+      "frie27": 203937571.0,
+      "vekst": 3.489,
+      "skatteindeks": 85.387
     },
     {
       "nr": "5037",
       "navn": "Levanger",
       "fylke": "Trøndelag",
       "pop": 20754,
-      "frie26": 1640702999.6678,
-      "frie27": 1721258058.954,
-      "vekst": 4.906617842,
-      "skatteindeks": 83.84507354
+      "frie26": 1640703000.0,
+      "frie27": 1721258059.0,
+      "vekst": 4.907,
+      "skatteindeks": 83.845
     },
     {
       "nr": "3312",
       "navn": "Lier",
       "fylke": "Buskerud",
       "pop": 28919,
-      "frie26": 2322101688.0914,
-      "frie27": 2432814331.3462,
-      "vekst": 4.764725717,
-      "skatteindeks": 105.6502076
+      "frie26": 2322101688.0,
+      "frie27": 2432814331.0,
+      "vekst": 4.765,
+      "skatteindeks": 105.65
     },
     {
       "nr": "5042",
       "navn": "Lierne",
       "fylke": "Trøndelag",
       "pop": 1303,
-      "frie26": 159456699.24377,
-      "frie27": 163980328.06816,
-      "vekst": 2.84892849,
-      "skatteindeks": 79.59644312
+      "frie26": 159456699.0,
+      "frie27": 163980328.0,
+      "vekst": 2.849,
+      "skatteindeks": 79.596
     },
     {
       "nr": "3405",
       "navn": "Lillehammer",
       "fylke": "Innlandet",
       "pop": 29465,
-      "frie26": 2295707228.3736,
-      "frie27": 2406144248.7008,
-      "vekst": 4.807459219,
-      "skatteindeks": 93.32824351
+      "frie26": 2295707228.0,
+      "frie27": 2406144249.0,
+      "vekst": 4.807,
+      "skatteindeks": 93.328
     },
     {
       "nr": "4215",
       "navn": "Lillesand",
       "fylke": "Agder",
       "pop": 11864,
-      "frie26": 920073880.0736699,
-      "frie27": 975523863.5978299,
-      "vekst": 6.023483811,
-      "skatteindeks": 95.81213649
+      "frie26": 920073880.0,
+      "frie27": 975523864.0,
+      "vekst": 6.023,
+      "skatteindeks": 95.812
     },
     {
       "nr": "3205",
       "navn": "Lillestrøm",
       "fylke": "Akershus",
       "pop": 97244,
-      "frie26": 7406359852.389,
-      "frie27": 7798031756.9321995,
-      "vekst": 5.285190066,
-      "skatteindeks": 95.55448615
+      "frie26": 7406359852.0,
+      "frie27": 7798031757.0,
+      "vekst": 5.285,
+      "skatteindeks": 95.554
     },
     {
       "nr": "4205",
       "navn": "Lindesnes",
       "fylke": "Agder",
       "pop": 23722,
-      "frie26": 1941128677.7895,
-      "frie27": 2025439007.6849,
-      "vekst": 4.340314302,
-      "skatteindeks": 83.56813228
+      "frie26": 1941128678.0,
+      "frie27": 2025439008.0,
+      "vekst": 4.34,
+      "skatteindeks": 83.568
     },
     {
       "nr": "3434",
       "navn": "Lom",
       "fylke": "Innlandet",
       "pop": 2243,
-      "frie26": 211684099.24854,
-      "frie27": 222505226.46175,
-      "vekst": 5.102756852,
-      "skatteindeks": 85.67869973
+      "frie26": 211684099.0,
+      "frie27": 222505226.0,
+      "vekst": 5.103,
+      "skatteindeks": 85.679
     },
     {
       "nr": "5614",
       "navn": "Loppa",
       "fylke": "Finnmark",
       "pop": 837,
-      "frie26": 134484662.05136,
-      "frie27": 139557027.24980003,
-      "vekst": 3.716211478,
-      "skatteindeks": 76.19095081
+      "frie26": 134484662.0,
+      "frie27": 139557027.0,
+      "vekst": 3.716,
+      "skatteindeks": 76.191
     },
     {
       "nr": "1112",
       "navn": "Lund",
       "fylke": "Rogaland",
       "pop": 3201,
-      "frie26": 301949793.04953,
-      "frie27": 313562438.55076,
-      "vekst": 3.862881746,
-      "skatteindeks": 89.39180373
+      "frie26": 301949793.0,
+      "frie27": 313562439.0,
+      "vekst": 3.863,
+      "skatteindeks": 89.392
     },
     {
       "nr": "3234",
       "navn": "Lunner",
       "fylke": "Akershus",
       "pop": 9525,
-      "frie26": 754064567.1186,
-      "frie27": 791855161.31128,
-      "vekst": 5.00843778,
-      "skatteindeks": 85.17917406
+      "frie26": 754064567.0,
+      "frie27": 791855161.0,
+      "vekst": 5.008,
+      "skatteindeks": 85.179
     },
     {
       "nr": "1834",
       "navn": "Lurøy",
       "fylke": "Nordland",
       "pop": 1952,
-      "frie26": 287378686.41751,
-      "frie27": 297434721.23866,
-      "vekst": 3.50370937,
-      "skatteindeks": 197.67907275
+      "frie26": 287378686.0,
+      "frie27": 297434721.0,
+      "vekst": 3.504,
+      "skatteindeks": 197.679
     },
     {
       "nr": "4644",
       "navn": "Luster",
       "fylke": "Vestland",
       "pop": 5483,
-      "frie26": 498033377.302,
-      "frie27": 517294836.03143,
-      "vekst": 3.902392422,
-      "skatteindeks": 99.24617936
+      "frie26": 498033377.0,
+      "frie27": 517294836.0,
+      "vekst": 3.902,
+      "skatteindeks": 99.246
     },
     {
       "nr": "4225",
       "navn": "Lyngdal",
       "fylke": "Agder",
       "pop": 10931,
-      "frie26": 943736960.93071,
-      "frie27": 996112344.40378,
-      "vekst": 5.546638845,
-      "skatteindeks": 76.04954065
+      "frie26": 943736961.0,
+      "frie27": 996112344.0,
+      "vekst": 5.547,
+      "skatteindeks": 76.05
     },
     {
       "nr": "5536",
       "navn": "Lyngen",
       "fylke": "Troms",
       "pop": 2703,
-      "frie26": 302179747.83923,
-      "frie27": 314330767.9867,
-      "vekst": 4.005368759,
-      "skatteindeks": 83.62668144
+      "frie26": 302179748.0,
+      "frie27": 314330768.0,
+      "vekst": 4.005,
+      "skatteindeks": 83.627
     },
     {
       "nr": "4642",
       "navn": "Lærdal",
       "fylke": "Vestland",
       "pop": 2247,
-      "frie26": 220631983.99077,
-      "frie27": 234453224.16761,
-      "vekst": 6.251964743,
-      "skatteindeks": 109.37707775
+      "frie26": 220631984.0,
+      "frie27": 234453224.0,
+      "vekst": 6.252,
+      "skatteindeks": 109.377
     },
     {
       "nr": "1851",
       "navn": "Lødingen",
       "fylke": "Nordland",
       "pop": 1983,
-      "frie26": 214336678.97474998,
-      "frie27": 221113551.78642,
-      "vekst": 3.166791729,
-      "skatteindeks": 81.59396149
+      "frie26": 214336679.0,
+      "frie27": 221113552.0,
+      "vekst": 3.167,
+      "skatteindeks": 81.594
     },
     {
       "nr": "3222",
       "navn": "Lørenskog",
       "fylke": "Akershus",
       "pop": 52235,
-      "frie26": 3871446655.2149,
-      "frie27": 4134997083.0547,
-      "vekst": 6.804284052,
-      "skatteindeks": 96.50729203
+      "frie26": 3871446655.0,
+      "frie27": 4134997083.0,
+      "vekst": 6.804,
+      "skatteindeks": 96.507
     },
     {
       "nr": "3412",
       "navn": "Løten",
       "fylke": "Innlandet",
       "pop": 7924,
-      "frie26": 643291905.50442,
-      "frie27": 670999675.57096,
-      "vekst": 4.304036948,
-      "skatteindeks": 73.56560226
+      "frie26": 643291906.0,
+      "frie27": 670999676.0,
+      "vekst": 4.304,
+      "skatteindeks": 73.566
     },
     {
       "nr": "5031",
       "navn": "Malvik",
       "fylke": "Trøndelag",
       "pop": 14983,
-      "frie26": 1171201327.8038,
-      "frie27": 1226004355.3551,
-      "vekst": 4.676095325,
-      "skatteindeks": 91.75115513
+      "frie26": 1171201328.0,
+      "frie27": 1226004355.0,
+      "vekst": 4.676,
+      "skatteindeks": 91.751
     },
     {
       "nr": "3122",
       "navn": "Marker",
       "fylke": "Østfold",
       "pop": 3663,
-      "frie26": 322369626.26049,
-      "frie27": 339860514.80631,
-      "vekst": 5.422548585,
-      "skatteindeks": 83.17777164
+      "frie26": 322369626.0,
+      "frie27": 339860515.0,
+      "vekst": 5.423,
+      "skatteindeks": 83.178
     },
     {
       "nr": "4634",
       "navn": "Masfjorden",
       "fylke": "Vestland",
       "pop": 1674,
-      "frie26": 186082819.54852,
-      "frie27": 191993845.81759,
-      "vekst": 3.193698132,
-      "skatteindeks": 113.72387967
+      "frie26": 186082820.0,
+      "frie27": 191993846.0,
+      "vekst": 3.194,
+      "skatteindeks": 113.724
     },
     {
       "nr": "5028",
       "navn": "Melhus",
       "fylke": "Trøndelag",
       "pop": 17808,
-      "frie26": 1424995896.9569,
-      "frie27": 1489449129.0202,
-      "vekst": 4.519916867,
-      "skatteindeks": 81.51974928
+      "frie26": 1424995897.0,
+      "frie27": 1489449129.0,
+      "vekst": 4.52,
+      "skatteindeks": 81.52
     },
     {
       "nr": "1837",
       "navn": "Meløy",
       "fylke": "Nordland",
       "pop": 6068,
-      "frie26": 564778127.00116,
-      "frie27": 586557010.53547,
-      "vekst": 3.877461963,
-      "skatteindeks": 99.67855449
+      "frie26": 564778127.0,
+      "frie27": 586557011.0,
+      "vekst": 3.877,
+      "skatteindeks": 99.679
     },
     {
       "nr": "5034",
       "navn": "Meråker",
       "fylke": "Trøndelag",
       "pop": 2479,
-      "frie26": 236940483.02897,
-      "frie27": 245482758.33664,
-      "vekst": 3.624547384,
-      "skatteindeks": 74.87431314
+      "frie26": 236940483.0,
+      "frie27": 245482758.0,
+      "vekst": 3.625,
+      "skatteindeks": 74.874
     },
     {
       "nr": "4020",
       "navn": "Midt-Telemark",
       "fylke": "Telemark",
       "pop": 11075,
-      "frie26": 926668947.50898,
-      "frie27": 966863887.5535301,
-      "vekst": 4.334528915,
-      "skatteindeks": 76.98376524
+      "frie26": 926668948.0,
+      "frie27": 966863888.0,
+      "vekst": 4.335,
+      "skatteindeks": 76.984
     },
     {
       "nr": "5027",
       "navn": "Midtre\nGauldal",
       "fylke": "Trøndelag",
       "pop": 6093,
-      "frie26": 566000788.8169401,
-      "frie27": 587021868.2037001,
-      "vekst": 3.73849768,
-      "skatteindeks": 76.03019028
+      "frie26": 566000789.0,
+      "frie27": 587021868.0,
+      "vekst": 3.738,
+      "skatteindeks": 76.03
     },
     {
       "nr": "4629",
       "navn": "Modalen",
       "fylke": "Vestland",
       "pop": 396,
-      "frie26": 69496613.42993401,
-      "frie27": 71366580.95092799,
-      "vekst": 2.742301376,
-      "skatteindeks": 172.64134892
+      "frie26": 69496613.0,
+      "frie27": 71366581.0,
+      "vekst": 2.742,
+      "skatteindeks": 172.641
     },
     {
       "nr": "3316",
       "navn": "Modum",
       "fylke": "Buskerud",
       "pop": 14756,
-      "frie26": 1212641552.7816,
-      "frie27": 1264429978.0953,
-      "vekst": 4.267622354,
-      "skatteindeks": 83.78166155
+      "frie26": 1212641553.0,
+      "frie27": 1264429978.0,
+      "vekst": 4.268,
+      "skatteindeks": 83.782
     },
     {
       "nr": "1506",
       "navn": "Molde",
       "fylke": "Møre og Romsdal",
       "pop": 33298,
-      "frie26": 2730881691.7132,
-      "frie27": 2858824469.5355997,
-      "vekst": 4.682003389,
-      "skatteindeks": 96.15445598
+      "frie26": 2730881692.0,
+      "frie27": 2858824470.0,
+      "vekst": 4.682,
+      "skatteindeks": 96.154
     },
     {
       "nr": "1874",
       "navn": "Moskenes",
       "fylke": "Nordland",
       "pop": 987,
-      "frie26": 114773396.95168,
-      "frie27": 118321447.02245,
-      "vekst": 3.10700834,
-      "skatteindeks": 111.15501689
+      "frie26": 114773397.0,
+      "frie27": 118321447.0,
+      "vekst": 3.107,
+      "skatteindeks": 111.155
     },
     {
       "nr": "3103",
       "navn": "Moss",
       "fylke": "Østfold",
       "pop": 53178,
-      "frie26": 4055023573.8150997,
-      "frie27": 4275631765.8329997,
-      "vekst": 5.437163064,
-      "skatteindeks": 87.40102227
+      "frie26": 4055023574.0,
+      "frie27": 4275631766.0,
+      "vekst": 5.437,
+      "skatteindeks": 87.401
     },
     {
       "nr": "5524",
       "navn": "Målselv",
       "fylke": "Troms",
       "pop": 6820,
-      "frie26": 600222769.50943,
-      "frie27": 628785571.82968,
-      "vekst": 4.768210242,
-      "skatteindeks": 92.80958373
+      "frie26": 600222770.0,
+      "frie27": 628785572.0,
+      "vekst": 4.768,
+      "skatteindeks": 92.81
     },
     {
       "nr": "5618",
       "navn": "Måsøy",
       "fylke": "Finnmark",
       "pop": 1082,
-      "frie26": 145696234.55425,
-      "frie27": 149490788.1989,
-      "vekst": 2.645487868,
-      "skatteindeks": 94.23768041
+      "frie26": 145696235.0,
+      "frie27": 149490788.0,
+      "vekst": 2.645,
+      "skatteindeks": 94.238
     },
     {
       "nr": "5007",
       "navn": "Namsos",
       "fylke": "Trøndelag",
       "pop": 15066,
-      "frie26": 1338505797.5835,
-      "frie27": 1395462097.4034002,
-      "vekst": 4.252330285,
-      "skatteindeks": 84.94571287
+      "frie26": 1338505798.0,
+      "frie27": 1395462097.0,
+      "vekst": 4.252,
+      "skatteindeks": 84.946
     },
     {
       "nr": "5044",
       "navn": "Namsskogan",
       "fylke": "Trøndelag",
       "pop": 807,
-      "frie26": 115211679.90494,
-      "frie27": 117939013.43253,
-      "vekst": 2.391522071,
-      "skatteindeks": 112.39895667
+      "frie26": 115211680.0,
+      "frie27": 117939013.0,
+      "vekst": 2.392,
+      "skatteindeks": 112.399
     },
     {
       "nr": "3238",
       "navn": "Nannestad",
       "fylke": "Akershus",
       "pop": 16798,
-      "frie26": 1287612179.6929998,
-      "frie27": 1361539427.1182,
-      "vekst": 5.738208949,
-      "skatteindeks": 79.88597483
+      "frie26": 1287612180.0,
+      "frie27": 1361539427.0,
+      "vekst": 5.738,
+      "skatteindeks": 79.886
     },
     {
       "nr": "1806",
       "navn": "Narvik",
       "fylke": "Nordland",
       "pop": 21650,
-      "frie26": 1819391269.9678998,
-      "frie27": 1901585253.5127,
-      "vekst": 4.514723657,
-      "skatteindeks": 90.98621179
+      "frie26": 1819391270.0,
+      "frie27": 1901585254.0,
+      "vekst": 4.515,
+      "skatteindeks": 90.986
     },
     {
       "nr": "3228",
       "navn": "Nes",
       "fylke": "Akershus",
       "pop": 25008,
-      "frie26": 1923404157.4582,
-      "frie27": 2020617148.6987,
-      "vekst": 5.051020564,
-      "skatteindeks": 83.02930571
+      "frie26": 1923404157.0,
+      "frie27": 2020617149.0,
+      "vekst": 5.051,
+      "skatteindeks": 83.029
     },
     {
       "nr": "3322",
       "navn": "Nesbyen",
       "fylke": "Buskerud",
       "pop": 3211,
-      "frie26": 298588902.28778,
-      "frie27": 309153487.23218,
-      "vekst": 3.548031996,
-      "skatteindeks": 95.99879188
+      "frie26": 298588902.0,
+      "frie27": 309153487.0,
+      "vekst": 3.548,
+      "skatteindeks": 95.999
     },
     {
       "nr": "1828",
       "navn": "Nesna",
       "fylke": "Nordland",
       "pop": 1778,
-      "frie26": 184901952.88953,
-      "frie27": 191720282.74771002,
-      "vekst": 3.719032297,
-      "skatteindeks": 80.79085478
+      "frie26": 184901953.0,
+      "frie27": 191720283.0,
+      "vekst": 3.719,
+      "skatteindeks": 80.791
     },
     {
       "nr": "3212",
       "navn": "Nesodden",
       "fylke": "Akershus",
       "pop": 21140,
-      "frie26": 1625828146.6324,
-      "frie27": 1706401039.4385002,
-      "vekst": 4.952643094,
-      "skatteindeks": 98.45282975
+      "frie26": 1625828147.0,
+      "frie27": 1706401039.0,
+      "vekst": 4.953,
+      "skatteindeks": 98.453
     },
     {
       "nr": "5636",
       "navn": "Nesseby",
       "fylke": "Finnmark",
       "pop": 864,
-      "frie26": 122183184.07817,
-      "frie27": 125521295.73934999,
-      "vekst": 2.756730474,
-      "skatteindeks": 76.1079108
+      "frie26": 122183184.0,
+      "frie27": 125521296.0,
+      "vekst": 2.757,
+      "skatteindeks": 76.108
     },
     {
       "nr": "4030",
       "navn": "Nissedal",
       "fylke": "Telemark",
       "pop": 1513,
-      "frie26": 159240390.73272,
-      "frie27": 164355287.39214,
-      "vekst": 3.22840863,
-      "skatteindeks": 93.43021633
+      "frie26": 159240391.0,
+      "frie27": 164355287.0,
+      "vekst": 3.228,
+      "skatteindeks": 93.43
     },
     {
       "nr": "3232",
       "navn": "Nittedal",
       "fylke": "Akershus",
       "pop": 26001,
-      "frie26": 2065084135.3519,
-      "frie27": 2164986881.1347,
-      "vekst": 4.834649301,
-      "skatteindeks": 102.27837199
+      "frie26": 2065084135.0,
+      "frie27": 2164986881.0,
+      "vekst": 4.835,
+      "skatteindeks": 102.278
     },
     {
       "nr": "4018",
       "navn": "Nome",
       "fylke": "Telemark",
       "pop": 6516,
-      "frie26": 549480552.964,
-      "frie27": 577380733.10666,
-      "vekst": 5.074444132,
-      "skatteindeks": 82.9006615
+      "frie26": 549480553.0,
+      "frie27": 577380733.0,
+      "vekst": 5.074,
+      "skatteindeks": 82.901
     },
     {
       "nr": "3451",
       "navn": "Nord-Aurdal",
       "fylke": "Innlandet",
       "pop": 6407,
-      "frie26": 550527909.6123,
-      "frie27": 586825830.6340799,
-      "vekst": 6.590082641,
-      "skatteindeks": 85.86065477
+      "frie26": 550527910.0,
+      "frie27": 586825831.0,
+      "vekst": 6.59,
+      "skatteindeks": 85.861
     },
     {
       "nr": "3436",
       "navn": "Nord-Fron",
       "fylke": "Innlandet",
       "pop": 5571,
-      "frie26": 503144689.75229,
-      "frie27": 522017183.13536,
-      "vekst": 3.788643729,
-      "skatteindeks": 91.34819456
+      "frie26": 503144690.0,
+      "frie27": 522017183.0,
+      "vekst": 3.789,
+      "skatteindeks": 91.348
     },
     {
       "nr": "3414",
       "navn": "Nord-Odal",
       "fylke": "Innlandet",
       "pop": 4999,
-      "frie26": 421289493.96822995,
-      "frie27": 441848906.81148,
-      "vekst": 4.877048132,
-      "skatteindeks": 78.7063448
+      "frie26": 421289494.0,
+      "frie27": 441848907.0,
+      "vekst": 4.877,
+      "skatteindeks": 78.706
     },
     {
       "nr": "5620",
       "navn": "Nordkapp",
       "fylke": "Finnmark",
       "pop": 2925,
-      "frie26": 297985281.11575,
-      "frie27": 307719460.56179,
-      "vekst": 3.298591885,
-      "skatteindeks": 92.81713188
+      "frie26": 297985281.0,
+      "frie27": 307719461.0,
+      "vekst": 3.299,
+      "skatteindeks": 92.817
     },
     {
       "nr": "3207",
       "navn": "Nordre\nFollo",
       "fylke": "Akershus",
       "pop": 65640,
-      "frie26": 5191486310.1751,
-      "frie27": 5457808420.408999,
-      "vekst": 5.126912706,
-      "skatteindeks": 106.44829035
+      "frie26": 5191486310.0,
+      "frie27": 5457808420.0,
+      "vekst": 5.127,
+      "skatteindeks": 106.448
     },
     {
       "nr": "3448",
       "navn": "Nordre\nLand",
       "fylke": "Innlandet",
       "pop": 6520,
-      "frie26": 566720242.92995,
-      "frie27": 593518793.86442,
-      "vekst": 4.725635006,
-      "skatteindeks": 76.8875606
+      "frie26": 566720243.0,
+      "frie27": 593518794.0,
+      "vekst": 4.726,
+      "skatteindeks": 76.888
     },
     {
       "nr": "5544",
       "navn": "Nordreisa",
       "fylke": "Troms",
       "pop": 4826,
-      "frie26": 432135393.64966,
-      "frie27": 448856269.28279,
-      "vekst": 3.904288698,
-      "skatteindeks": 82.84556203
+      "frie26": 432135394.0,
+      "frie27": 448856269.0,
+      "vekst": 3.904,
+      "skatteindeks": 82.846
     },
     {
       "nr": "3338",
       "navn": "Nore og\nUvdal",
       "fylke": "Buskerud",
       "pop": 2458,
-      "frie26": 244860081.46951002,
-      "frie27": 253353702.95622,
-      "vekst": 3.484415502,
-      "skatteindeks": 113.41521834
+      "frie26": 244860081.0,
+      "frie27": 253353703.0,
+      "vekst": 3.484,
+      "skatteindeks": 113.415
     },
     {
       "nr": "4005",
       "navn": "Notodden",
       "fylke": "Telemark",
       "pop": 13313,
-      "frie26": 1099214961.9650998,
-      "frie27": 1144863427.8781,
-      "vekst": 4.149728695,
-      "skatteindeks": 84.72311216
+      "frie26": 1099214962.0,
+      "frie27": 1144863428.0,
+      "vekst": 4.15,
+      "skatteindeks": 84.723
     },
     {
       "nr": "5060",
       "navn": "Nærøysund",
       "fylke": "Trøndelag",
       "pop": 9924,
-      "frie26": 900903621.29814,
-      "frie27": 936290471.83666,
-      "vekst": 4.011137468,
-      "skatteindeks": 88.51871327
+      "frie26": 900903621.0,
+      "frie27": 936290472.0,
+      "vekst": 4.011,
+      "skatteindeks": 88.519
     },
     {
       "nr": "5021",
       "navn": "Oppdal",
       "fylke": "Trøndelag",
       "pop": 7442,
-      "frie26": 630362802.98455,
-      "frie27": 659409420.5863401,
-      "vekst": 4.648518129,
-      "skatteindeks": 83.1775256
+      "frie26": 630362803.0,
+      "frie27": 659409421.0,
+      "vekst": 4.649,
+      "skatteindeks": 83.178
     },
     {
       "nr": "5059",
       "navn": "Orkland",
       "fylke": "Trøndelag",
       "pop": 18796,
-      "frie26": 1568507859.0291,
-      "frie27": 1640730768.0168998,
-      "vekst": 4.601547467,
-      "skatteindeks": 80.92252402
+      "frie26": 1568507859.0,
+      "frie27": 1640730768.0,
+      "vekst": 4.602,
+      "skatteindeks": 80.923
     },
     {
       "nr": "3430",
       "navn": "Os",
       "fylke": "Innlandet",
       "pop": 1886,
-      "frie26": 187821666.93164998,
-      "frie27": 195431791.70592,
-      "vekst": 4.098256812,
-      "skatteindeks": 82.82790927
+      "frie26": 187821667.0,
+      "frie27": 195431792.0,
+      "vekst": 4.098,
+      "skatteindeks": 82.828
     },
     {
       "nr": "5020",
       "navn": "Osen",
       "fylke": "Trøndelag",
       "pop": 910,
-      "frie26": 109229564.89408,
-      "frie27": 115297019.97262,
-      "vekst": 5.592119083,
-      "skatteindeks": 85.49860847
+      "frie26": 109229565.0,
+      "frie27": 115297020.0,
+      "vekst": 5.592,
+      "skatteindeks": 85.499
     },
     {
       "nr": "0301",
       "navn": "Oslo",
       "fylke": "Oslo",
       "pop": 729454,
-      "frie26": 56712276492.827995,
-      "frie27": 59706208964.437004,
-      "vekst": 5.25522842,
-      "skatteindeks": 130.84764988
+      "frie26": 56712276493.0,
+      "frie27": 59706208964.0,
+      "vekst": 5.255,
+      "skatteindeks": 130.848
     },
     {
       "nr": "4630",
       "navn": "Osterøy",
       "fylke": "Vestland",
       "pop": 8213,
-      "frie26": 666375138.02509,
-      "frie27": 701986691.06968,
-      "vekst": 5.340842338,
-      "skatteindeks": 82.65010757
+      "frie26": 666375138.0,
+      "frie27": 701986691.0,
+      "vekst": 5.341,
+      "skatteindeks": 82.65
     },
     {
       "nr": "5047",
       "navn": "Overhalla",
       "fylke": "Trøndelag",
       "pop": 3913,
-      "frie26": 362141777.71706,
-      "frie27": 375640244.09615,
-      "vekst": 3.754575257,
-      "skatteindeks": 81.58325222
+      "frie26": 362141778.0,
+      "frie27": 375640244.0,
+      "vekst": 3.755,
+      "skatteindeks": 81.583
     },
     {
       "nr": "5622",
       "navn": "Porsanger",
       "fylke": "Finnmark",
       "pop": 3895,
-      "frie26": 375041568.45452005,
-      "frie27": 388508457.55754,
-      "vekst": 3.626739598,
-      "skatteindeks": 90.26226522
+      "frie26": 375041568.0,
+      "frie27": 388508458.0,
+      "vekst": 3.627,
+      "skatteindeks": 90.262
     },
     {
       "nr": "4001",
       "navn": "Porsgrunn",
       "fylke": "Telemark",
       "pop": 37546,
-      "frie26": 2894379048.3509,
-      "frie27": 3038340435.7429,
-      "vekst": 4.970651631,
-      "skatteindeks": 91.71038445
+      "frie26": 2894379048.0,
+      "frie27": 3038340436.0,
+      "vekst": 4.971,
+      "skatteindeks": 91.71
     },
     {
       "nr": "3120",
       "navn": "Rakkestad",
       "fylke": "Østfold",
       "pop": 8611,
-      "frie26": 716958672.20235,
-      "frie27": 758325830.0731901,
-      "vekst": 5.76664897,
-      "skatteindeks": 80.09117812
+      "frie26": 716958672.0,
+      "frie27": 758325830.0,
+      "vekst": 5.767,
+      "skatteindeks": 80.091
     },
     {
       "nr": "1833",
       "navn": "Rana",
       "fylke": "Nordland",
       "pop": 25797,
-      "frie26": 2074694949.4884,
-      "frie27": 2166539398.6461,
-      "vekst": 4.423861709,
-      "skatteindeks": 89.79125001
+      "frie26": 2074694949.0,
+      "frie27": 2166539399.0,
+      "vekst": 4.424,
+      "skatteindeks": 89.791
     },
     {
       "nr": "1127",
       "navn": "Randaberg",
       "fylke": "Rogaland",
       "pop": 11806,
-      "frie26": 953103692.2140299,
-      "frie27": 1015439867.2149,
-      "vekst": 6.537198932,
-      "skatteindeks": 108.97729791
+      "frie26": 953103692.0,
+      "frie27": 1015439867.0,
+      "vekst": 6.537,
+      "skatteindeks": 108.977
     },
     {
       "nr": "1539",
       "navn": "Rauma",
       "fylke": "Møre og Romsdal",
       "pop": 7210,
-      "frie26": 629885196.46894,
-      "frie27": 660826013.56317,
-      "vekst": 4.927855879,
-      "skatteindeks": 91.04734954
+      "frie26": 629885196.0,
+      "frie27": 660826014.0,
+      "vekst": 4.928,
+      "skatteindeks": 91.047
     },
     {
       "nr": "3424",
       "navn": "Rendalen",
       "fylke": "Innlandet",
       "pop": 1842,
-      "frie26": 192788677.62249002,
-      "frie27": 200409727.99918,
-      "vekst": 3.966841257,
-      "skatteindeks": 79.75309092
+      "frie26": 192788678.0,
+      "frie27": 200409728.0,
+      "vekst": 3.967,
+      "skatteindeks": 79.753
     },
     {
       "nr": "5022",
       "navn": "Rennebu",
       "fylke": "Trøndelag",
       "pop": 2511,
-      "frie26": 237883405.81886,
-      "frie27": 250463742.89673,
-      "vekst": 5.28650352,
-      "skatteindeks": 79.73870314
+      "frie26": 237883406.0,
+      "frie27": 250463743.0,
+      "vekst": 5.287,
+      "skatteindeks": 79.739
     },
     {
       "nr": "5061",
       "navn": "Rindal",
       "fylke": "Trøndelag",
       "pop": 1949,
-      "frie26": 190127337.94949,
-      "frie27": 197210449.91645,
-      "vekst": 3.737987287,
-      "skatteindeks": 81.74791215
+      "frie26": 190127338.0,
+      "frie27": 197210450.0,
+      "vekst": 3.738,
+      "skatteindeks": 81.748
     },
     {
       "nr": "3439",
       "navn": "Ringebu",
       "fylke": "Innlandet",
       "pop": 4473,
-      "frie26": 396511189.41297,
-      "frie27": 416559777.7123,
-      "vekst": 5.070909406,
-      "skatteindeks": 86.42905858
+      "frie26": 396511189.0,
+      "frie27": 416559778.0,
+      "vekst": 5.071,
+      "skatteindeks": 86.429
     },
     {
       "nr": "3305",
       "navn": "Ringerike",
       "fylke": "Buskerud",
       "pop": 32043,
-      "frie26": 2490929390.9365,
-      "frie27": 2613406164.3704,
-      "vekst": 4.913718998,
-      "skatteindeks": 84.87137179
+      "frie26": 2490929391.0,
+      "frie27": 2613406164.0,
+      "vekst": 4.914,
+      "skatteindeks": 84.871
     },
     {
       "nr": "3411",
       "navn": "Ringsaker",
       "fylke": "Innlandet",
       "pop": 36303,
-      "frie26": 2789507948.0629,
-      "frie27": 2939022922.3781,
-      "vekst": 5.356734158,
-      "skatteindeks": 82.22627998
+      "frie26": 2789507948.0,
+      "frie27": 2939022922.0,
+      "vekst": 5.357,
+      "skatteindeks": 82.226
     },
     {
       "nr": "4201",
       "navn": "Risør",
       "fylke": "Agder",
       "pop": 6665,
-      "frie26": 575752942.90642,
-      "frie27": 603379243.21183,
-      "vekst": 4.79522146,
-      "skatteindeks": 83.57759729
+      "frie26": 575752943.0,
+      "frie27": 603379243.0,
+      "vekst": 4.795,
+      "skatteindeks": 83.578
     },
     {
       "nr": "3336",
       "navn": "Rollag",
       "fylke": "Buskerud",
       "pop": 1458,
-      "frie26": 162247232.36900002,
-      "frie27": 168184799.87759,
-      "vekst": 3.658873253,
-      "skatteindeks": 95.5636722
+      "frie26": 162247232.0,
+      "frie27": 168184800.0,
+      "vekst": 3.659,
+      "skatteindeks": 95.564
     },
     {
       "nr": "3112",
       "navn": "Råde",
       "fylke": "Østfold",
       "pop": 7912,
-      "frie26": 646542557.7219001,
-      "frie27": 673779558.26069,
-      "vekst": 4.209656172,
-      "skatteindeks": 88.06517443
+      "frie26": 646542558.0,
+      "frie27": 673779558.0,
+      "vekst": 4.21,
+      "skatteindeks": 88.065
     },
     {
       "nr": "3224",
       "navn": "Rælingen",
       "fylke": "Akershus",
       "pop": 20917,
-      "frie26": 1615271694.4393,
-      "frie27": 1707479409.3901,
-      "vekst": 5.705318483,
-      "skatteindeks": 92.69719128
+      "frie26": 1615271694.0,
+      "frie27": 1707479409.0,
+      "vekst": 5.705,
+      "skatteindeks": 92.697
     },
     {
       "nr": "1836",
       "navn": "Rødøy",
       "fylke": "Nordland",
       "pop": 1129,
-      "frie26": 148076431.33753,
-      "frie27": 152050091.82050002,
-      "vekst": 2.711951301,
-      "skatteindeks": 88.98490342
+      "frie26": 148076431.0,
+      "frie27": 152050092.0,
+      "vekst": 2.712,
+      "skatteindeks": 88.985
     },
     {
       "nr": "5025",
       "navn": "Røros",
       "fylke": "Trøndelag",
       "pop": 5650,
-      "frie26": 485671882.3678,
-      "frie27": 506481680.59106004,
-      "vekst": 4.306650444,
-      "skatteindeks": 83.76184824
+      "frie26": 485671882.0,
+      "frie27": 506481681.0,
+      "vekst": 4.307,
+      "skatteindeks": 83.762
     },
     {
       "nr": "1856",
       "navn": "Røst",
       "fylke": "Nordland",
       "pop": 471,
-      "frie26": 80687429.51729499,
-      "frie27": 82376166.74800499,
-      "vekst": 2.108836594,
-      "skatteindeks": 103.61479361
+      "frie26": 80687430.0,
+      "frie27": 82376167.0,
+      "vekst": 2.109,
+      "skatteindeks": 103.615
     },
     {
       "nr": "5043",
       "navn": "Røyrvik",
       "fylke": "Trøndelag",
       "pop": 444,
-      "frie26": 72374808.34194499,
-      "frie27": 76180211.672087,
-      "vekst": 5.271204708,
-      "skatteindeks": 85.77265435
+      "frie26": 72374808.0,
+      "frie27": 76180212.0,
+      "vekst": 5.271,
+      "skatteindeks": 85.773
     },
     {
       "nr": "5522",
       "navn": "Salangen",
       "fylke": "Troms",
       "pop": 2141,
-      "frie26": 212936845.61385,
-      "frie27": 224654767.40113,
-      "vekst": 5.517560921,
-      "skatteindeks": 81.91704005
+      "frie26": 212936846.0,
+      "frie27": 224654767.0,
+      "vekst": 5.518,
+      "skatteindeks": 81.917
     },
     {
       "nr": "1840",
       "navn": "Saltdal",
       "fylke": "Nordland",
       "pop": 4805,
-      "frie26": 441838024.14405996,
-      "frie27": 460380581.7169,
-      "vekst": 4.228611544,
-      "skatteindeks": 78.95374973
+      "frie26": 441838024.0,
+      "frie27": 460380582.0,
+      "vekst": 4.229,
+      "skatteindeks": 78.954
     },
     {
       "nr": "4623",
       "navn": "Samnanger",
       "fylke": "Vestland",
       "pop": 2478,
-      "frie26": 228200751.28575,
-      "frie27": 238745254.23468998,
-      "vekst": 4.617664899,
-      "skatteindeks": 88.85456328
+      "frie26": 228200751.0,
+      "frie27": 238745254.0,
+      "vekst": 4.618,
+      "skatteindeks": 88.855
     },
     {
       "nr": "1514",
       "navn": "Sande",
       "fylke": "Møre og Romsdal",
       "pop": 2416,
-      "frie26": 245302322.77693,
-      "frie27": 255907507.09759,
-      "vekst": 4.340262499,
-      "skatteindeks": 111.50013873
+      "frie26": 245302323.0,
+      "frie27": 255907507.0,
+      "vekst": 4.34,
+      "skatteindeks": 111.5
     },
     {
       "nr": "3907",
       "navn": "Sandefjord",
       "fylke": "Vestfold",
       "pop": 67305,
-      "frie26": 5228203607.1467,
-      "frie27": 5483009999.7366,
-      "vekst": 4.870519124,
-      "skatteindeks": 87.86322367
+      "frie26": 5228203607.0,
+      "frie27": 5483010000.0,
+      "vekst": 4.871,
+      "skatteindeks": 87.863
     },
     {
       "nr": "1108",
       "navn": "Sandnes",
       "fylke": "Rogaland",
       "pop": 86197,
-      "frie26": 6745898006.4388,
-      "frie27": 7050433120.5926,
-      "vekst": 4.511291133,
-      "skatteindeks": 102.21692678
+      "frie26": 6745898006.0,
+      "frie27": 7050433121.0,
+      "vekst": 4.511,
+      "skatteindeks": 102.217
     },
     {
       "nr": "3105",
       "navn": "Sarpsborg",
       "fylke": "Østfold",
       "pop": 60938,
-      "frie26": 4850138202.691,
-      "frie27": 5098714309.9602,
-      "vekst": 5.121953589,
-      "skatteindeks": 76.64850525
+      "frie26": 4850138203.0,
+      "frie27": 5098714310.0,
+      "vekst": 5.122,
+      "skatteindeks": 76.649
     },
     {
       "nr": "1135",
       "navn": "Sauda",
       "fylke": "Rogaland",
       "pop": 4592,
-      "frie26": 409431491.41596,
-      "frie27": 424864833.70852,
-      "vekst": 3.784653045,
-      "skatteindeks": 96.54494848
+      "frie26": 409431491.0,
+      "frie27": 424864834.0,
+      "vekst": 3.785,
+      "skatteindeks": 96.545
     },
     {
       "nr": "3437",
       "navn": "Sel",
       "fylke": "Innlandet",
       "pop": 5550,
-      "frie26": 512672572.13786,
-      "frie27": 533130587.54661006,
-      "vekst": 3.995319795,
-      "skatteindeks": 72.76698352
+      "frie26": 512672572.0,
+      "frie27": 533130588.0,
+      "vekst": 3.995,
+      "skatteindeks": 72.767
     },
     {
       "nr": "5032",
       "navn": "Selbu",
       "fylke": "Trøndelag",
       "pop": 4261,
-      "frie26": 376048445.97319,
-      "frie27": 390731429.22591,
-      "vekst": 3.928935451,
-      "skatteindeks": 80.75703033
+      "frie26": 376048446.0,
+      "frie27": 390731429.0,
+      "vekst": 3.929,
+      "skatteindeks": 80.757
     },
     {
       "nr": "4022",
       "navn": "Seljord",
       "fylke": "Telemark",
       "pop": 2981,
-      "frie26": 278432324.91288996,
-      "frie27": 291331709.93557996,
-      "vekst": 4.65262324,
-      "skatteindeks": 87.76272495
+      "frie26": 278432325.0,
+      "frie27": 291331710.0,
+      "vekst": 4.653,
+      "skatteindeks": 87.763
     },
     {
       "nr": "5530",
       "navn": "Senja",
       "fylke": "Troms",
       "pop": 14952,
-      "frie26": 1430751807.0473,
-      "frie27": 1482379500.2247,
-      "vekst": 3.626908686,
-      "skatteindeks": 90.13196121
+      "frie26": 1430751807.0,
+      "frie27": 1482379500.0,
+      "vekst": 3.627,
+      "skatteindeks": 90.132
     },
     {
       "nr": "3332",
       "navn": "Sigdal",
       "fylke": "Buskerud",
       "pop": 3515,
-      "frie26": 319903863.72546,
-      "frie27": 335514249.94392,
-      "vekst": 4.907833844,
-      "skatteindeks": 93.14173413
+      "frie26": 319903864.0,
+      "frie27": 335514250.0,
+      "vekst": 4.908,
+      "skatteindeks": 93.142
     },
     {
       "nr": "4010",
       "navn": "Siljan",
       "fylke": "Telemark",
       "pop": 2380,
-      "frie26": 216725908.48719,
-      "frie27": 227025692.186,
-      "vekst": 4.749357404,
-      "skatteindeks": 82.02884386
+      "frie26": 216725908.0,
+      "frie27": 227025692.0,
+      "vekst": 4.749,
+      "skatteindeks": 82.029
     },
     {
       "nr": "4228",
       "navn": "Sirdal",
       "fylke": "Agder",
       "pop": 1914,
-      "frie26": 202066457.89014,
-      "frie27": 209048772.09010002,
-      "vekst": 3.453977431,
-      "skatteindeks": 155.21643061
+      "frie26": 202066458.0,
+      "frie27": 209048772.0,
+      "vekst": 3.454,
+      "skatteindeks": 155.216
     },
     {
       "nr": "5029",
       "navn": "Skaun",
       "fylke": "Trøndelag",
       "pop": 8583,
-      "frie26": 690376488.4189099,
-      "frie27": 722713944.4912001,
-      "vekst": 4.680902867,
-      "skatteindeks": 79.06583791
+      "frie26": 690376488.0,
+      "frie27": 722713944.0,
+      "vekst": 4.681,
+      "skatteindeks": 79.066
     },
     {
       "nr": "4003",
       "navn": "Skien",
       "fylke": "Telemark",
       "pop": 57016,
-      "frie26": 4451962186.3205,
-      "frie27": 4669306074.402101,
-      "vekst": 4.878791774,
-      "skatteindeks": 83.50436078
+      "frie26": 4451962186.0,
+      "frie27": 4669306074.0,
+      "vekst": 4.879,
+      "skatteindeks": 83.504
     },
     {
       "nr": "3116",
       "navn": "Skiptvet",
       "fylke": "Østfold",
       "pop": 3966,
-      "frie26": 321735600.44018,
-      "frie27": 336740441.00794,
-      "vekst": 4.660573962,
-      "skatteindeks": 90.258709
+      "frie26": 321735600.0,
+      "frie27": 336740441.0,
+      "vekst": 4.661,
+      "skatteindeks": 90.259
     },
     {
       "nr": "5542",
       "navn": "Skjervøy",
       "fylke": "Troms",
       "pop": 2782,
-      "frie26": 297806473.82032,
-      "frie27": 307612115.85418004,
-      "vekst": 3.31165336,
-      "skatteindeks": 81.25222972
+      "frie26": 297806474.0,
+      "frie27": 307612116.0,
+      "vekst": 3.312,
+      "skatteindeks": 81.252
     },
     {
       "nr": "3433",
       "navn": "Skjåk",
       "fylke": "Innlandet",
       "pop": 2191,
-      "frie26": 207396942.34909,
-      "frie27": 218435171.80152,
-      "vekst": 5.310920119,
-      "skatteindeks": 94.18855709
+      "frie26": 207396942.0,
+      "frie27": 218435172.0,
+      "vekst": 5.311,
+      "skatteindeks": 94.189
     },
     {
       "nr": "1573",
       "navn": "Smøla",
       "fylke": "Møre og Romsdal",
       "pop": 2136,
-      "frie26": 214481473.95766,
-      "frie27": 221375098.44362,
-      "vekst": 3.240399007,
-      "skatteindeks": 90.94929749
+      "frie26": 214481474.0,
+      "frie27": 221375098.0,
+      "vekst": 3.24,
+      "skatteindeks": 90.949
     },
     {
       "nr": "5041",
       "navn": "Snåsa",
       "fylke": "Trøndelag",
       "pop": 2117,
-      "frie26": 216030963.99240002,
-      "frie27": 229050687.02293003,
-      "vekst": 6.020611475,
-      "skatteindeks": 73.37838169
+      "frie26": 216030964.0,
+      "frie27": 229050687.0,
+      "vekst": 6.021,
+      "skatteindeks": 73.378
     },
     {
       "nr": "4640",
       "navn": "Sogndal",
       "fylke": "Vestland",
       "pop": 12566,
-      "frie26": 1077812373.5229,
-      "frie27": 1121696910.0210001,
-      "vekst": 4.110650478,
-      "skatteindeks": 88.08488787
+      "frie26": 1077812374.0,
+      "frie27": 1121696910.0,
+      "vekst": 4.111,
+      "skatteindeks": 88.085
     },
     {
       "nr": "1111",
       "navn": "Sokndal",
       "fylke": "Rogaland",
       "pop": 3358,
-      "frie26": 307740857.69075,
-      "frie27": 319695275.80976,
-      "vekst": 3.917753411,
-      "skatteindeks": 85.34777742
+      "frie26": 307740858.0,
+      "frie27": 319695276.0,
+      "vekst": 3.918,
+      "skatteindeks": 85.348
     },
     {
       "nr": "1124",
       "navn": "Sola",
       "fylke": "Rogaland",
       "pop": 29581,
-      "frie26": 2388894227.3625,
-      "frie27": 2514384564.2255,
-      "vekst": 5.250102382,
-      "skatteindeks": 126.20011139
+      "frie26": 2388894227.0,
+      "frie27": 2514384564.0,
+      "vekst": 5.25,
+      "skatteindeks": 126.2
     },
     {
       "nr": "4636",
       "navn": "Solund",
       "fylke": "Vestland",
       "pop": 742,
-      "frie26": 93084467.95031701,
-      "frie27": 95793057.170395,
-      "vekst": 2.909088077,
-      "skatteindeks": 111.96755896
+      "frie26": 93084468.0,
+      "frie27": 95793057.0,
+      "vekst": 2.909,
+      "skatteindeks": 111.968
     },
     {
       "nr": "1870",
       "navn": "Sortland",
       "fylke": "Nordland",
       "pop": 10789,
-      "frie26": 896345253.19003,
-      "frie27": 938037389.26002,
-      "vekst": 4.648275288,
-      "skatteindeks": 87.04742528
+      "frie26": 896345253.0,
+      "frie27": 938037389.0,
+      "vekst": 4.648,
+      "skatteindeks": 87.047
     },
     {
       "nr": "4649",
       "navn": "Stad",
       "fylke": "Vestland",
       "pop": 9671,
-      "frie26": 842670965.3037801,
-      "frie27": 883377428.26255,
-      "vekst": 4.858545183,
-      "skatteindeks": 86.8585996
+      "frie26": 842670965.0,
+      "frie27": 883377428.0,
+      "vekst": 4.859,
+      "skatteindeks": 86.859
     },
     {
       "nr": "3413",
       "navn": "Stange",
       "fylke": "Innlandet",
       "pop": 21876,
-      "frie26": 1736233303.1052,
-      "frie27": 1815910613.5421,
-      "vekst": 4.585907503,
-      "skatteindeks": 80.76991967
+      "frie26": 1736233303.0,
+      "frie27": 1815910614.0,
+      "vekst": 4.586,
+      "skatteindeks": 80.77
     },
     {
       "nr": "1103",
       "navn": "Stavanger",
       "fylke": "Rogaland",
       "pop": 151765,
-      "frie26": 12148469928.265,
-      "frie27": 12799596447.838,
-      "vekst": 5.356790069,
-      "skatteindeks": 127.2958002
+      "frie26": 12148469928.0,
+      "frie27": 12799596448.0,
+      "vekst": 5.357,
+      "skatteindeks": 127.296
     },
     {
       "nr": "1848",
       "navn": "Steigen",
       "fylke": "Nordland",
       "pop": 2686,
-      "frie26": 266531583.80892,
-      "frie27": 278706184.71189,
-      "vekst": 4.574292703,
-      "skatteindeks": 86.34624731
+      "frie26": 266531584.0,
+      "frie27": 278706185.0,
+      "vekst": 4.574,
+      "skatteindeks": 86.346
     },
     {
       "nr": "5006",
       "navn": "Steinkjer",
       "fylke": "Trøndelag",
       "pop": 23964,
-      "frie26": 2018320742.3936,
-      "frie27": 2103868062.5095,
-      "vekst": 4.235497636,
-      "skatteindeks": 78.29762092
+      "frie26": 2018320742.0,
+      "frie27": 2103868063.0,
+      "vekst": 4.235,
+      "skatteindeks": 78.298
     },
     {
       "nr": "5035",
       "navn": "Stjørdal",
       "fylke": "Trøndelag",
       "pop": 25176,
-      "frie26": 1940899276.1103,
-      "frie27": 2027720358.8876998,
-      "vekst": 4.470094142,
-      "skatteindeks": 81.14807241
+      "frie26": 1940899276.0,
+      "frie27": 2027720359.0,
+      "vekst": 4.47,
+      "skatteindeks": 81.148
     },
     {
       "nr": "3423",
       "navn": "Stor-Elvdal",
       "fylke": "Innlandet",
       "pop": 2222,
-      "frie26": 220427315.64196002,
-      "frie27": 228011707.64876,
-      "vekst": 3.446130645,
-      "skatteindeks": 75.8170456
+      "frie26": 220427316.0,
+      "frie27": 228011708.0,
+      "vekst": 3.446,
+      "skatteindeks": 75.817
     },
     {
       "nr": "4614",
       "navn": "Stord",
       "fylke": "Vestland",
       "pop": 19318,
-      "frie26": 1607720716.421,
-      "frie27": 1677758563.546,
-      "vekst": 4.353400116,
-      "skatteindeks": 111.45573233
+      "frie26": 1607720716.0,
+      "frie27": 1677758564.0,
+      "vekst": 4.353,
+      "skatteindeks": 111.456
     },
     {
       "nr": "5538",
       "navn": "Storfjord",
       "fylke": "Troms",
       "pop": 1830,
-      "frie26": 206673126.58949003,
-      "frie27": 215753207.15374,
-      "vekst": 4.425646999,
-      "skatteindeks": 85.10275007
+      "frie26": 206673127.0,
+      "frie27": 215753207.0,
+      "vekst": 4.426,
+      "skatteindeks": 85.103
     },
     {
       "nr": "1130",
       "navn": "Strand",
       "fylke": "Rogaland",
       "pop": 14026,
-      "frie26": 1121047204.3783002,
-      "frie27": 1172149488.01,
-      "vekst": 4.555248781,
-      "skatteindeks": 89.14078633
+      "frie26": 1121047204.0,
+      "frie27": 1172149488.0,
+      "vekst": 4.555,
+      "skatteindeks": 89.141
     },
     {
       "nr": "1525",
       "navn": "Stranda",
       "fylke": "Møre og Romsdal",
       "pop": 4153,
-      "frie26": 385071751.47973,
-      "frie27": 392499965.38665,
-      "vekst": 3.631447939,
-      "skatteindeks": 97.06624706
+      "frie26": 385071751.0,
+      "frie27": 392499965.0,
+      "vekst": 3.631,
+      "skatteindeks": 97.066
     },
     {
       "nr": "4651",
       "navn": "Stryn",
       "fylke": "Vestland",
       "pop": 7341,
-      "frie26": 634642231.69996,
-      "frie27": 659928937.2302101,
-      "vekst": 4.008336763,
-      "skatteindeks": 89.51027266
+      "frie26": 634642232.0,
+      "frie27": 659928937.0,
+      "vekst": 4.008,
+      "skatteindeks": 89.51
     },
     {
       "nr": "1531",
       "navn": "Sula",
       "fylke": "Møre og Romsdal",
       "pop": 9823,
-      "frie26": 807327980.1419001,
-      "frie27": 840269781.23119,
-      "vekst": 4.077241234,
-      "skatteindeks": 82.39499198
+      "frie26": 807327980.0,
+      "frie27": 840269781.0,
+      "vekst": 4.077,
+      "skatteindeks": 82.395
     },
     {
       "nr": "1134",
       "navn": "Suldal",
       "fylke": "Rogaland",
       "pop": 3873,
-      "frie26": 379994675.99473,
-      "frie27": 398978554.70096,
-      "vekst": 5.026604909,
-      "skatteindeks": 115.57641956
+      "frie26": 379994676.0,
+      "frie27": 398978555.0,
+      "vekst": 5.027,
+      "skatteindeks": 115.576
     },
     {
       "nr": "1563",
       "navn": "Sunndal",
       "fylke": "Møre og Romsdal",
       "pop": 7062,
-      "frie26": 647421646.59325,
-      "frie27": 673051741.53695,
-      "vekst": 3.983377402,
-      "skatteindeks": 98.58872497
+      "frie26": 647421647.0,
+      "frie27": 673051742.0,
+      "vekst": 3.983,
+      "skatteindeks": 98.589
     },
     {
       "nr": "4647",
       "navn": "Sunnfjord",
       "fylke": "Vestland",
       "pop": 22837,
-      "frie26": 1932825854.1518998,
-      "frie27": 2022394460.9862,
-      "vekst": 4.654349399,
-      "skatteindeks": 93.43552774
+      "frie26": 1932825854.0,
+      "frie27": 2022394461.0,
+      "vekst": 4.654,
+      "skatteindeks": 93.436
     },
     {
       "nr": "1566",
       "navn": "Surnadal",
       "fylke": "Møre og Romsdal",
       "pop": 5977,
-      "frie26": 522448088.413,
-      "frie27": 549474981.93822,
-      "vekst": 5.195559483,
-      "skatteindeks": 81.57722339
+      "frie26": 522448088.0,
+      "frie27": 549474982.0,
+      "vekst": 5.196,
+      "skatteindeks": 81.577
     },
     {
       "nr": "4612",
       "navn": "Sveio",
       "fylke": "Vestland",
       "pop": 5803,
-      "frie26": 491503572.45580995,
-      "frie27": 510478067.90246,
-      "vekst": 3.857468476,
-      "skatteindeks": 88.22376621
+      "frie26": 491503572.0,
+      "frie27": 510478068.0,
+      "vekst": 3.857,
+      "skatteindeks": 88.224
     },
     {
       "nr": "1528",
       "navn": "Sykkylven",
       "fylke": "Møre og Romsdal",
       "pop": 7647,
-      "frie26": 608489129.73559,
-      "frie27": 636079839.57547,
-      "vekst": 4.531163484,
-      "skatteindeks": 85.19242761
+      "frie26": 608489130.0,
+      "frie27": 636079840.0,
+      "vekst": 4.531,
+      "skatteindeks": 85.192
     },
     {
       "nr": "1812",
       "navn": "Sømna",
       "fylke": "Nordland",
       "pop": 2004,
-      "frie26": 203306416.82019,
-      "frie27": 214592381.1534,
-      "vekst": 5.535587876,
-      "skatteindeks": 81.01325358
+      "frie26": 203306417.0,
+      "frie27": 214592381.0,
+      "vekst": 5.536,
+      "skatteindeks": 81.013
     },
     {
       "nr": "3447",
       "navn": "Søndre\nLand",
       "fylke": "Innlandet",
       "pop": 5605,
-      "frie26": 475543998.97825,
-      "frie27": 501535400.02109,
-      "vekst": 5.462515029,
-      "skatteindeks": 71.30025391
+      "frie26": 475543999.0,
+      "frie27": 501535400.0,
+      "vekst": 5.463,
+      "skatteindeks": 71.3
     },
     {
       "nr": "3449",
       "navn": "Sør-Aurdal",
       "fylke": "Innlandet",
       "pop": 2831,
-      "frie26": 282591141.50564003,
-      "frie27": 293060640.56399,
-      "vekst": 3.680083862,
-      "skatteindeks": 84.81644152
+      "frie26": 282591142.0,
+      "frie27": 293060641.0,
+      "vekst": 3.68,
+      "skatteindeks": 84.816
     },
     {
       "nr": "3438",
       "navn": "Sør-Fron",
       "fylke": "Innlandet",
       "pop": 3095,
-      "frie26": 285909318.6871,
-      "frie27": 297188154.96900004,
-      "vekst": 3.959055944,
-      "skatteindeks": 87.11055277
+      "frie26": 285909319.0,
+      "frie27": 297188155.0,
+      "vekst": 3.959,
+      "skatteindeks": 87.111
     },
     {
       "nr": "3415",
       "navn": "Sør-Odal",
       "fylke": "Innlandet",
       "pop": 8165,
-      "frie26": 642612974.47068,
-      "frie27": 670414637.9261199,
-      "vekst": 4.323249259,
-      "skatteindeks": 81.54446203
+      "frie26": 642612974.0,
+      "frie27": 670414638.0,
+      "vekst": 4.323,
+      "skatteindeks": 81.544
     },
     {
       "nr": "5605",
       "navn": "Sør-Varanger",
       "fylke": "Finnmark",
       "pop": 9940,
-      "frie26": 894444745.80558,
-      "frie27": 937904732.49803,
-      "vekst": 4.86830633,
-      "skatteindeks": 90.14339103
+      "frie26": 894444746.0,
+      "frie27": 937904732.0,
+      "vekst": 4.868,
+      "skatteindeks": 90.143
     },
     {
       "nr": "1845",
       "navn": "Sørfold",
       "fylke": "Nordland",
       "pop": 1814,
-      "frie26": 202548550.09846,
-      "frie27": 208730997.79547,
-      "vekst": 3.079736421,
-      "skatteindeks": 103.44040015
+      "frie26": 202548550.0,
+      "frie27": 208730998.0,
+      "vekst": 3.08,
+      "skatteindeks": 103.44
     },
     {
       "nr": "5526",
       "navn": "Sørreisa",
       "fylke": "Troms",
       "pop": 3518,
-      "frie26": 325147236.51056,
-      "frie27": 337270041.82578003,
-      "vekst": 3.76230452,
-      "skatteindeks": 84.59816628
+      "frie26": 325147237.0,
+      "frie27": 337270042.0,
+      "vekst": 3.762,
+      "skatteindeks": 84.598
     },
     {
       "nr": "5628",
       "navn": "Tana",
       "fylke": "Finnmark",
       "pop": 2808,
-      "frie26": 312966302.41732997,
-      "frie27": 327376913.5394,
-      "vekst": 4.674083288,
-      "skatteindeks": 87.58306922
+      "frie26": 312966302.0,
+      "frie27": 327376914.0,
+      "vekst": 4.674,
+      "skatteindeks": 87.583
     },
     {
       "nr": "1121",
       "navn": "Time",
       "fylke": "Rogaland",
       "pop": 20608,
-      "frie26": 1613019226.6127,
-      "frie27": 1686581138.2259998,
-      "vekst": 4.557414823,
-      "skatteindeks": 98.61981369
+      "frie26": 1613019227.0,
+      "frie27": 1686581138.0,
+      "vekst": 4.557,
+      "skatteindeks": 98.62
     },
     {
       "nr": "1560",
       "navn": "Tingvoll",
       "fylke": "Møre og Romsdal",
       "pop": 3061,
-      "frie26": 293262601.50921,
-      "frie27": 303759877.61797,
-      "vekst": 3.612549761,
-      "skatteindeks": 80.91825258
+      "frie26": 293262602.0,
+      "frie27": 303759878.0,
+      "vekst": 3.613,
+      "skatteindeks": 80.918
     },
     {
       "nr": "4026",
       "navn": "Tinn",
       "fylke": "Telemark",
       "pop": 5513,
-      "frie26": 493348469.72450995,
-      "frie27": 512694102.90827996,
-      "vekst": 3.937080511,
-      "skatteindeks": 115.80370178
+      "frie26": 493348470.0,
+      "frie27": 512694103.0,
+      "vekst": 3.937,
+      "skatteindeks": 115.804
     },
     {
       "nr": "5512",
       "navn": "Tjeldsund",
       "fylke": "Troms",
       "pop": 4177,
-      "frie26": 417911522.96589,
-      "frie27": 432605259.033,
-      "vekst": 3.541868881,
-      "skatteindeks": 81.97637967
+      "frie26": 417911523.0,
+      "frie27": 432605259.0,
+      "vekst": 3.542,
+      "skatteindeks": 81.976
     },
     {
       "nr": "4034",
       "navn": "Tokke",
       "fylke": "Telemark",
       "pop": 2245,
-      "frie26": 219257479.65743,
-      "frie27": 226949747.38380998,
-      "vekst": 3.54643001,
-      "skatteindeks": 114.46462165
+      "frie26": 219257480.0,
+      "frie27": 226949747.0,
+      "vekst": 3.546,
+      "skatteindeks": 114.465
     },
     {
       "nr": "3426",
       "navn": "Tolga",
       "fylke": "Innlandet",
       "pop": 1612,
-      "frie26": 169799210.63002002,
-      "frie27": 176176604.58319,
-      "vekst": 3.801943007,
-      "skatteindeks": 73.6948645
+      "frie26": 169799211.0,
+      "frie27": 176176605.0,
+      "vekst": 3.802,
+      "skatteindeks": 73.695
     },
     {
       "nr": "5501",
       "navn": "Tromsø",
       "fylke": "Troms",
       "pop": 79934,
-      "frie26": 6056799102.3682995,
-      "frie27": 6405738812.1475,
-      "vekst": 5.758134743,
-      "skatteindeks": 98.63023491
+      "frie26": 6056799102.0,
+      "frie27": 6405738812.0,
+      "vekst": 5.758,
+      "skatteindeks": 98.63
     },
     {
       "nr": "5001",
       "navn": "Trondheim",
       "fylke": "Trøndelag",
       "pop": 218785,
-      "frie26": 15783982289.239,
-      "frie27": 16663354028.034,
-      "vekst": 5.729484174,
-      "skatteindeks": 99.46221022
+      "frie26": 15783982289.0,
+      "frie27": 16663354028.0,
+      "vekst": 5.729,
+      "skatteindeks": 99.462
     },
     {
       "nr": "3421",
       "navn": "Trysil",
       "fylke": "Innlandet",
       "pop": 6472,
-      "frie26": 565803353.9344699,
-      "frie27": 592561738.15724,
-      "vekst": 4.747462813,
-      "skatteindeks": 85.36195391
+      "frie26": 565803354.0,
+      "frie27": 592561738.0,
+      "vekst": 4.747,
+      "skatteindeks": 85.362
     },
     {
       "nr": "1835",
       "navn": "Træna",
       "fylke": "Nordland",
       "pop": 456,
-      "frie26": 78526772.37997,
-      "frie27": 80767594.18189101,
-      "vekst": 2.879498109,
-      "skatteindeks": 90.18287066
+      "frie26": 78526772.0,
+      "frie27": 80767594.0,
+      "vekst": 2.879,
+      "skatteindeks": 90.183
     },
     {
       "nr": "4213",
       "navn": "Tvedestrand",
       "fylke": "Agder",
       "pop": 6475,
-      "frie26": 545408511.2601099,
-      "frie27": 567678251.26669,
-      "vekst": 4.080055798,
-      "skatteindeks": 76.30246377
+      "frie26": 545408511.0,
+      "frie27": 567678251.0,
+      "vekst": 4.08,
+      "skatteindeks": 76.302
     },
     {
       "nr": "5033",
       "navn": "Tydal",
       "fylke": "Trøndelag",
       "pop": 774,
-      "frie26": 93541913.905032,
-      "frie27": 96143335.161091,
-      "vekst": 2.817015819,
-      "skatteindeks": 126.12367534
+      "frie26": 93541914.0,
+      "frie27": 96143335.0,
+      "vekst": 2.817,
+      "skatteindeks": 126.124
     },
     {
       "nr": "3427",
       "navn": "Tynset",
       "fylke": "Innlandet",
       "pop": 5776,
-      "frie26": 504711432.05638003,
-      "frie27": 527082790.16152,
-      "vekst": 4.43651872,
-      "skatteindeks": 80.6874889
+      "frie26": 504711432.0,
+      "frie27": 527082790.0,
+      "vekst": 4.437,
+      "skatteindeks": 80.687
     },
     {
       "nr": "4616",
       "navn": "Tysnes",
       "fylke": "Vestland",
       "pop": 3058,
-      "frie26": 300658091.06826997,
-      "frie27": 316171978.12894,
-      "vekst": 5.190481024,
-      "skatteindeks": 118.4610743
+      "frie26": 300658091.0,
+      "frie27": 316171978.0,
+      "vekst": 5.19,
+      "skatteindeks": 118.461
     },
     {
       "nr": "1146",
       "navn": "Tysvær",
       "fylke": "Rogaland",
       "pop": 11754,
-      "frie26": 1030067884.3135,
-      "frie27": 1077412878.5932,
-      "vekst": 4.593313114,
-      "skatteindeks": 92.37032562
+      "frie26": 1030067884.0,
+      "frie27": 1077412879.0,
+      "vekst": 4.593,
+      "skatteindeks": 92.37
     },
     {
       "nr": "3905",
       "navn": "Tønsberg",
       "fylke": "Vestfold",
       "pop": 60407,
-      "frie26": 4625191129.5813,
-      "frie27": 4870948097.0984,
-      "vekst": 5.31026719,
-      "skatteindeks": 92.22117276
+      "frie26": 4625191130.0,
+      "frie27": 4870948097.0,
+      "vekst": 5.31,
+      "skatteindeks": 92.221
     },
     {
       "nr": "3209",
       "navn": "Ullensaker",
       "fylke": "Akershus",
       "pop": 46456,
-      "frie26": 3479905398.9761,
-      "frie27": 3674752908.1414003,
-      "vekst": 5.60845777,
-      "skatteindeks": 86.34495289
+      "frie26": 3479905399.0,
+      "frie27": 3674752908.0,
+      "vekst": 5.608,
+      "skatteindeks": 86.345
     },
     {
       "nr": "4618",
       "navn": "Ullensvang",
       "fylke": "Vestland",
       "pop": 10913,
-      "frie26": 1034762200.7268,
-      "frie27": 1073891464.5928,
-      "vekst": 3.797928534,
-      "skatteindeks": 114.34596091
+      "frie26": 1034762201.0,
+      "frie27": 1073891465.0,
+      "vekst": 3.798,
+      "skatteindeks": 114.346
     },
     {
       "nr": "1516",
       "navn": "Ulstein",
       "fylke": "Møre og Romsdal",
       "pop": 8931,
-      "frie26": 741581994.17742,
-      "frie27": 780411172.46912,
-      "vekst": 5.232941109,
-      "skatteindeks": 103.4721517
+      "frie26": 741581994.0,
+      "frie27": 780411172.0,
+      "vekst": 5.233,
+      "skatteindeks": 103.472
     },
     {
       "nr": "4620",
       "navn": "Ulvik",
       "fylke": "Vestland",
       "pop": 1120,
-      "frie26": 131228589.57419,
-      "frie27": 135732366.26107,
-      "vekst": 3.432833893,
-      "skatteindeks": 98.66200639
+      "frie26": 131228590.0,
+      "frie27": 135732366.0,
+      "vekst": 3.433,
+      "skatteindeks": 98.662
     },
     {
       "nr": "1151",
       "navn": "Utsira",
       "fylke": "Rogaland",
       "pop": 219,
-      "frie26": 50552895.265649,
-      "frie27": 51610010.808842,
-      "vekst": 2.101731078,
-      "skatteindeks": 99.78192199
+      "frie26": 50552895.0,
+      "frie27": 51610011.0,
+      "vekst": 2.102,
+      "skatteindeks": 99.782
     },
     {
       "nr": "5607",
       "navn": "Vadsø",
       "fylke": "Finnmark",
       "pop": 5804,
-      "frie26": 542205243.20634,
-      "frie27": 573413638.1980201,
-      "vekst": 5.701203267,
-      "skatteindeks": 86.72422481
+      "frie26": 542205243.0,
+      "frie27": 573413638.0,
+      "vekst": 5.701,
+      "skatteindeks": 86.724
     },
     {
       "nr": "4628",
       "navn": "Vaksdal",
       "fylke": "Vestland",
       "pop": 3883,
-      "frie26": 357606243.69655997,
-      "frie27": 371019446.89079,
-      "vekst": 3.77226925,
-      "skatteindeks": 88.64224613
+      "frie26": 357606244.0,
+      "frie27": 371019447.0,
+      "vekst": 3.772,
+      "skatteindeks": 88.642
     },
     {
       "nr": "4221",
       "navn": "Valle",
       "fylke": "Agder",
       "pop": 1235,
-      "frie26": 129318325.73307,
-      "frie27": 133655160.39932999,
-      "vekst": 3.365019847,
-      "skatteindeks": 126.68699006
+      "frie26": 129318326.0,
+      "frie27": 133655160.0,
+      "vekst": 3.365,
+      "skatteindeks": 126.687
     },
     {
       "nr": "3454",
       "navn": "Vang",
       "fylke": "Innlandet",
       "pop": 1684,
-      "frie26": 166944783.88845998,
-      "frie27": 173295993.77279,
-      "vekst": 3.843161148,
-      "skatteindeks": 97.75636959
+      "frie26": 166944784.0,
+      "frie27": 173295994.0,
+      "vekst": 3.843,
+      "skatteindeks": 97.756
     },
     {
       "nr": "1511",
       "navn": "Vanylven",
       "fylke": "Møre og Romsdal",
       "pop": 3016,
-      "frie26": 289183735.80507004,
-      "frie27": 304526648.24432003,
-      "vekst": 5.319672223,
-      "skatteindeks": 92.00816923
+      "frie26": 289183736.0,
+      "frie27": 304526648.0,
+      "vekst": 5.32,
+      "skatteindeks": 92.008
     },
     {
       "nr": "5634",
       "navn": "Vardø",
       "fylke": "Finnmark",
       "pop": 1945,
-      "frie26": 217058193.11244,
-      "frie27": 225002028.84403,
-      "vekst": 3.771263421,
-      "skatteindeks": 77.1973683
+      "frie26": 217058193.0,
+      "frie27": 225002029.0,
+      "vekst": 3.771,
+      "skatteindeks": 77.197
     },
     {
       "nr": "1824",
       "navn": "Vefsn",
       "fylke": "Nordland",
       "pop": 13493,
-      "frie26": 1139882354.5353,
-      "frie27": 1193072699.6195,
-      "vekst": 4.663284402,
-      "skatteindeks": 88.14146366
+      "frie26": 1139882355.0,
+      "frie27": 1193072700.0,
+      "vekst": 4.663,
+      "skatteindeks": 88.141
     },
     {
       "nr": "1815",
       "navn": "Vega",
       "fylke": "Nordland",
       "pop": 1213,
-      "frie26": 134123680.53052999,
-      "frie27": 138288192.38786,
-      "vekst": 3.115764681,
-      "skatteindeks": 79.69899963
+      "frie26": 134123681.0,
+      "frie27": 138288192.0,
+      "vekst": 3.116,
+      "skatteindeks": 79.699
     },
     {
       "nr": "4212",
       "navn": "Vegårshei",
       "fylke": "Agder",
       "pop": 2254,
-      "frie26": 214953136.19476998,
-      "frie27": 224412922.69748002,
-      "vekst": 4.432409567,
-      "skatteindeks": 73.48423293
+      "frie26": 214953136.0,
+      "frie27": 224412923.0,
+      "vekst": 4.432,
+      "skatteindeks": 73.484
     },
     {
       "nr": "4223",
       "navn": "Vennesla",
       "fylke": "Agder",
       "pop": 15818,
-      "frie26": 1243151901.6227999,
-      "frie27": 1311611609.354,
-      "vekst": 5.50373664,
-      "skatteindeks": 71.60011732
+      "frie26": 1243151902.0,
+      "frie27": 1311611609.0,
+      "vekst": 5.504,
+      "skatteindeks": 71.6
     },
     {
       "nr": "5038",
       "navn": "Verdal",
       "fylke": "Trøndelag",
       "pop": 15397,
-      "frie26": 1228393421.1245,
-      "frie27": 1298036239.2884,
-      "vekst": 5.666247054,
-      "skatteindeks": 81.33127097
+      "frie26": 1228393421.0,
+      "frie27": 1298036239.0,
+      "vekst": 5.666,
+      "skatteindeks": 81.331
     },
     {
       "nr": "3216",
       "navn": "Vestby",
       "fylke": "Akershus",
       "pop": 20407,
-      "frie26": 1565550562.4583,
-      "frie27": 1641946698.6133,
-      "vekst": 4.876666915,
-      "skatteindeks": 93.37737288
+      "frie26": 1565550562.0,
+      "frie27": 1641946699.0,
+      "vekst": 4.877,
+      "skatteindeks": 93.377
     },
     {
       "nr": "1535",
       "navn": "Vestnes",
       "fylke": "Møre og Romsdal",
       "pop": 7268,
-      "frie26": 600618757.3635801,
-      "frie27": 631898806.23221,
-      "vekst": 5.243659505,
-      "skatteindeks": 95.11833883
+      "frie26": 600618757.0,
+      "frie27": 631898806.0,
+      "vekst": 5.244,
+      "skatteindeks": 95.118
     },
     {
       "nr": "3452",
       "navn": "Vestre\nSlidre",
       "fylke": "Innlandet",
       "pop": 2206,
-      "frie26": 202054867.66888002,
-      "frie27": 212188234.74021,
-      "vekst": 5.008507163,
-      "skatteindeks": 94.71532793
+      "frie26": 202054868.0,
+      "frie27": 212188235.0,
+      "vekst": 5.009,
+      "skatteindeks": 94.715
     },
     {
       "nr": "3443",
       "navn": "Vestre\nToten",
       "fylke": "Innlandet",
       "pop": 13585,
-      "frie26": 1070407353.2191,
-      "frie27": 1117774503.1942,
-      "vekst": 4.422047271,
-      "skatteindeks": 80.22832842
+      "frie26": 1070407353.0,
+      "frie27": 1117774503.0,
+      "vekst": 4.422,
+      "skatteindeks": 80.228
     },
     {
       "nr": "1860",
       "navn": "Vestvågøy",
       "fylke": "Nordland",
       "pop": 11645,
-      "frie26": 982581272.4393,
-      "frie27": 1024755719.3709999,
-      "vekst": 4.317925214,
-      "skatteindeks": 86.38604954
+      "frie26": 982581272.0,
+      "frie27": 1024755719.0,
+      "vekst": 4.318,
+      "skatteindeks": 86.386
     },
     {
       "nr": "1816",
       "navn": "Vevelstad",
       "fylke": "Nordland",
       "pop": 474,
-      "frie26": 77529353.810082,
-      "frie27": 80294519.630509,
-      "vekst": 3.591480875,
-      "skatteindeks": 78.19151687
+      "frie26": 77529354.0,
+      "frie27": 80294520.0,
+      "vekst": 3.591,
+      "skatteindeks": 78.192
     },
     {
       "nr": "4639",
       "navn": "Vik",
       "fylke": "Vestland",
       "pop": 2532,
-      "frie26": 247563734.86894,
-      "frie27": 256302985.93286,
-      "vekst": 3.563419485,
-      "skatteindeks": 101.52769564
+      "frie26": 247563735.0,
+      "frie27": 256302986.0,
+      "vekst": 3.563,
+      "skatteindeks": 101.528
     },
     {
       "nr": "1160",
       "navn": "Vindafjord",
       "fylke": "Rogaland",
       "pop": 9220,
-      "frie26": 796812991.00662,
-      "frie27": 830380065.46662,
-      "vekst": 4.226229574,
-      "skatteindeks": 107.76488198
+      "frie26": 796812991.0,
+      "frie27": 830380065.0,
+      "vekst": 4.226,
+      "skatteindeks": 107.765
     },
     {
       "nr": "4036",
       "navn": "Vinje",
       "fylke": "Telemark",
       "pop": 3804,
-      "frie26": 367018485.28983,
-      "frie27": 383890157.64953,
-      "vekst": 4.620033332,
-      "skatteindeks": 115.18006539
+      "frie26": 367018485.0,
+      "frie27": 383890158.0,
+      "vekst": 4.62,
+      "skatteindeks": 115.18
     },
     {
       "nr": "1577",
       "navn": "Volda",
       "fylke": "Møre og Romsdal",
       "pop": 10926,
-      "frie26": 920111562.0849301,
-      "frie27": 975733150.8962699,
-      "vekst": 6.041988823,
-      "skatteindeks": 79.20693223
+      "frie26": 920111562.0,
+      "frie27": 975733151.0,
+      "vekst": 6.042,
+      "skatteindeks": 79.207
     },
     {
       "nr": "4621",
       "navn": "Voss",
       "fylke": "Vestland",
       "pop": 16490,
-      "frie26": 1430923410.9711,
-      "frie27": 1498677754.1592999,
-      "vekst": 4.731956302,
-      "skatteindeks": 92.68756158
+      "frie26": 1430923411.0,
+      "frie27": 1498677754.0,
+      "vekst": 4.732,
+      "skatteindeks": 92.688
     },
     {
       "nr": "1865",
       "navn": "Vågan",
       "fylke": "Nordland",
       "pop": 9929,
-      "frie26": 832906904.07709,
-      "frie27": 867223624.73051,
-      "vekst": 4.139864672,
-      "skatteindeks": 91.59807529
+      "frie26": 832906904.0,
+      "frie27": 867223625.0,
+      "vekst": 4.14,
+      "skatteindeks": 91.598
     },
     {
       "nr": "3435",
       "navn": "Vågå",
       "fylke": "Innlandet",
       "pop": 3572,
-      "frie26": 327961109.59113,
-      "frie27": 340843239.76441,
-      "vekst": 3.929918189,
-      "skatteindeks": 80.87579883
+      "frie26": 327961110.0,
+      "frie27": 340843240.0,
+      "vekst": 3.93,
+      "skatteindeks": 80.876
     },
     {
       "nr": "3114",
       "navn": "Våler",
       "fylke": "Østfold",
       "pop": 6245,
-      "frie26": 508381574.75865,
-      "frie27": 529936409.36642003,
-      "vekst": 4.236743238,
-      "skatteindeks": 81.26441545
+      "frie26": 508381575.0,
+      "frie27": 529936409.0,
+      "vekst": 4.237,
+      "skatteindeks": 81.264
     },
     {
       "nr": "3419",
       "navn": "Våler",
       "fylke": "Innlandet",
       "pop": 3841,
-      "frie26": 329212968.69577,
-      "frie27": 344743692.83393,
-      "vekst": 4.697291277,
-      "skatteindeks": 74.79404904
+      "frie26": 329212969.0,
+      "frie27": 344743693.0,
+      "vekst": 4.697,
+      "skatteindeks": 74.794
     },
     {
       "nr": "1857",
       "navn": "Værøy",
       "fylke": "Nordland",
       "pop": 668,
-      "frie26": 103194197.14967,
-      "frie27": 105614978.43916999,
-      "vekst": 2.350830457,
-      "skatteindeks": 102.28661196
+      "frie26": 103194197.0,
+      "frie27": 105614978.0,
+      "vekst": 2.351,
+      "skatteindeks": 102.287
     },
     {
       "nr": "5058",
       "navn": "Åfjord",
       "fylke": "Trøndelag",
       "pop": 4393,
-      "frie26": 430046127.21316,
-      "frie27": 450994738.48362,
-      "vekst": 4.896073481,
-      "skatteindeks": 84.0224984
+      "frie26": 430046127.0,
+      "frie27": 450994738.0,
+      "vekst": 4.896,
+      "skatteindeks": 84.022
     },
     {
       "nr": "3328",
       "navn": "Ål",
       "fylke": "Buskerud",
       "pop": 4871,
-      "frie26": 440891979.55012,
-      "frie27": 460659591.75275,
-      "vekst": 4.5224208,
-      "skatteindeks": 98.30971714
+      "frie26": 440891980.0,
+      "frie27": 460659592.0,
+      "vekst": 4.522,
+      "skatteindeks": 98.31
     },
     {
       "nr": "1508",
       "navn": "Ålesund",
       "fylke": "Møre og Romsdal",
       "pop": 59796,
-      "frie26": 4622634032.028,
-      "frie27": 4852247123.7381,
-      "vekst": 4.964062345,
-      "skatteindeks": 99.13462903
+      "frie26": 4622634032.0,
+      "frie27": 4852247124.0,
+      "vekst": 4.964,
+      "skatteindeks": 99.135
     },
     {
       "nr": "4217",
       "navn": "Åmli",
       "fylke": "Agder",
       "pop": 1818,
-      "frie26": 198464136.64732,
-      "frie27": 207127633.67721,
-      "vekst": 4.370494602,
-      "skatteindeks": 79.15626015
+      "frie26": 198464137.0,
+      "frie27": 207127634.0,
+      "vekst": 4.37,
+      "skatteindeks": 79.156
     },
     {
       "nr": "3422",
       "navn": "Åmot",
       "fylke": "Innlandet",
       "pop": 4201,
-      "frie26": 362117306.11354995,
-      "frie27": 378487594.41533,
-      "vekst": 4.53483654,
-      "skatteindeks": 87.82152907
+      "frie26": 362117306.0,
+      "frie27": 378487594.0,
+      "vekst": 4.535,
+      "skatteindeks": 87.822
     },
     {
       "nr": "4643",
       "navn": "Årdal",
       "fylke": "Vestland",
       "pop": 5128,
-      "frie26": 490911013.93806,
-      "frie27": 513996027.65787005,
-      "vekst": 4.712663995,
-      "skatteindeks": 108.01504366
+      "frie26": 490911014.0,
+      "frie27": 513996028.0,
+      "vekst": 4.713,
+      "skatteindeks": 108.015
     },
     {
       "nr": "3218",
       "navn": "Ås",
       "fylke": "Akershus",
       "pop": 22688,
-      "frie26": 1675104955.8646,
-      "frie27": 1783581391.6694999,
-      "vekst": 6.472547563,
-      "skatteindeks": 90.39600817
+      "frie26": 1675104956.0,
+      "frie27": 1783581392.0,
+      "vekst": 6.473,
+      "skatteindeks": 90.396
     },
     {
       "nr": "4224",
       "navn": "Åseral",
       "fylke": "Agder",
       "pop": 896,
-      "frie26": 108300597.53903,
-      "frie27": 111780305.72526999,
-      "vekst": 3.265418351,
-      "skatteindeks": 135.28263827
+      "frie26": 108300598.0,
+      "frie27": 111780306.0,
+      "vekst": 3.265,
+      "skatteindeks": 135.283
     },
     {
       "nr": "3418",
       "navn": "Åsnes",
       "fylke": "Innlandet",
       "pop": 7196,
-      "frie26": 626090475.00978,
-      "frie27": 659256361.61564,
-      "vekst": 5.324337894,
-      "skatteindeks": 78.00751224
+      "frie26": 626090475.0,
+      "frie27": 659256362.0,
+      "vekst": 5.324,
+      "skatteindeks": 78.008
     },
     {
       "nr": "1868",
       "navn": "Øksnes",
       "fylke": "Nordland",
       "pop": 4635,
-      "frie26": 411666890.01429,
-      "frie27": 429544181.90206,
-      "vekst": 4.372555133,
-      "skatteindeks": 88.5101486
+      "frie26": 411666890.0,
+      "frie27": 429544182.0,
+      "vekst": 4.373,
+      "skatteindeks": 88.51
     },
     {
       "nr": "5057",
       "navn": "Ørland",
       "fylke": "Trøndelag",
       "pop": 10719,
-      "frie26": 918722987.8893,
-      "frie27": 961277193.69128,
-      "vekst": 4.658985333,
-      "skatteindeks": 86.73693069
+      "frie26": 918722988.0,
+      "frie27": 961277194.0,
+      "vekst": 4.659,
+      "skatteindeks": 86.737
     },
     {
       "nr": "1520",
       "navn": "Ørsta",
       "fylke": "Møre og Romsdal",
       "pop": 11070,
-      "frie26": 907180067.25294,
-      "frie27": 944622485.05128,
-      "vekst": 4.124224864,
-      "skatteindeks": 86.17168816
+      "frie26": 907180067.0,
+      "frie27": 944622485.0,
+      "vekst": 4.124,
+      "skatteindeks": 86.172
     },
     {
       "nr": "3442",
       "navn": "Østre\nToten",
       "fylke": "Innlandet",
       "pop": 14917,
-      "frie26": 1183286915.3022,
-      "frie27": 1242820970.924,
-      "vekst": 5.028111166,
-      "skatteindeks": 83.0475348
+      "frie26": 1183286915.0,
+      "frie27": 1242820971.0,
+      "vekst": 5.028,
+      "skatteindeks": 83.048
     },
     {
       "nr": "3314",
       "navn": "Øvre Eiker",
       "fylke": "Buskerud",
       "pop": 21046,
-      "frie26": 1656572751.1597002,
-      "frie27": 1729407443.8896,
-      "vekst": 4.393598728,
-      "skatteindeks": 91.02003774
+      "frie26": 1656572751.0,
+      "frie27": 1729407444.0,
+      "vekst": 4.394,
+      "skatteindeks": 91.02
     },
     {
       "nr": "3440",
       "navn": "Øyer",
       "fylke": "Innlandet",
       "pop": 5121,
-      "frie26": 450329869.36433,
-      "frie27": 468134099.31974995,
-      "vekst": 3.950563229,
-      "skatteindeks": 90.93905433
+      "frie26": 450329869.0,
+      "frie27": 468134099.0,
+      "vekst": 3.951,
+      "skatteindeks": 90.939
     },
     {
       "nr": "4626",
       "navn": "Øygarden",
       "fylke": "Vestland",
       "pop": 40806,
-      "frie26": 3180488583.7286,
-      "frie27": 3322113123.3772,
-      "vekst": 4.449833263,
-      "skatteindeks": 94.69020282
+      "frie26": 3180488584.0,
+      "frie27": 3322113123.0,
+      "vekst": 4.45,
+      "skatteindeks": 94.69
     },
     {
       "nr": "3453",
       "navn": "Øystre\nSlidre",
       "fylke": "Innlandet",
       "pop": 3351,
-      "frie26": 300683277.85086,
-      "frie27": 314300024.01066,
-      "vekst": 4.552187816,
-      "skatteindeks": 95.41241464
+      "frie26": 300683278.0,
+      "frie27": 314300024.0,
+      "vekst": 4.552,
+      "skatteindeks": 95.412
     }
   ],
   "fund": [
@@ -25484,10 +25484,10 @@
       "level": 0,
       "key": "Overføring fra oljefondet",
       "parent": null,
-      "y2026": 452.220406,
-      "y2027": 561.740988,
-      "change": 109.520582,
-      "pct": 24.218407782332584
+      "y2026": 452.22,
+      "y2027": 561.741,
+      "change": 109.521,
+      "pct": 24.219
     },
     {
       "level": 0,
@@ -25496,115 +25496,115 @@
       "y2026": 420.97,
       "y2027": 444.63,
       "change": 23.66,
-      "pct": 5.620352994275126
+      "pct": 5.62
     },
     {
       "level": 0,
       "key": "Renter, utbytte og andre inntekter",
       "parent": null,
-      "y2026": 151.995315,
-      "y2027": 164.633071,
-      "change": 12.637756,
-      "pct": 8.314569432617052
+      "y2026": 151.995,
+      "y2027": 164.633,
+      "change": 12.638,
+      "pct": 8.315
     },
     {
       "level": 0,
       "key": "Andre skatter og avgifter",
       "parent": null,
-      "y2026": 117.294554,
-      "y2027": 118.854168,
-      "change": 1.559614,
-      "pct": 1.3296559361144762
+      "y2026": 117.295,
+      "y2027": 118.854,
+      "change": 1.559,
+      "pct": 1.329
     },
     {
       "level": 0,
       "key": "Trygde- og arbeidsgiveravgift",
       "parent": null,
-      "y2026": 514.20044,
+      "y2026": 514.2,
       "y2027": 510.301,
-      "change": -3.89944,
-      "pct": -0.7583501873316172
+      "change": -3.899,
+      "pct": -0.758
     },
     {
       "level": 0,
       "key": "Skatt på inntekt og formue",
       "parent": null,
-      "y2026": 507.78025,
-      "y2027": 486.638404,
-      "change": -21.141846,
-      "pct": -4.163581785624785
+      "y2026": 507.78,
+      "y2027": 486.638,
+      "change": -21.142,
+      "pct": -4.164
     },
     {
       "level": 1,
       "key": "Folketrygden",
       "parent": null,
-      "y2026": 744.017715,
-      "y2027": 794.079109,
-      "change": 50.061394,
-      "pct": 6.728521779887997
+      "y2026": 744.018,
+      "y2027": 794.079,
+      "change": 50.061,
+      "pct": 6.728
     },
     {
       "level": 1,
       "key": "Øvrige områder",
       "parent": null,
-      "y2026": 379.079885,
-      "y2027": 400.278697,
-      "change": 21.198812,
-      "pct": 5.592175380131288
+      "y2026": 379.08,
+      "y2027": 400.279,
+      "change": 21.199,
+      "pct": 5.592
     },
     {
       "level": 1,
       "key": "Kommunesektoren",
       "parent": null,
-      "y2026": 274.070471,
-      "y2027": 292.805565,
-      "change": 18.735094,
-      "pct": 6.835867407255268
+      "y2026": 274.07,
+      "y2027": 292.806,
+      "change": 18.736,
+      "pct": 6.836
     },
     {
       "level": 1,
       "key": "Helse og omsorg",
       "parent": null,
-      "y2026": 257.365624,
-      "y2027": 270.7673,
-      "change": 13.401676,
-      "pct": 5.207251765682583
+      "y2026": 257.366,
+      "y2027": 270.767,
+      "change": 13.401,
+      "pct": 5.207
     },
     {
       "level": 1,
       "key": "Forsvar",
       "parent": null,
-      "y2026": 179.765304,
-      "y2027": 191.653181,
-      "change": 11.887877,
-      "pct": 6.612998579525669
+      "y2026": 179.765,
+      "y2027": 191.653,
+      "change": 11.888,
+      "pct": 6.613
     },
     {
       "level": 1,
       "key": "Utdanning og forskning",
       "parent": null,
-      "y2026": 107.226016,
-      "y2027": 114.274417,
-      "change": 7.048401,
-      "pct": 6.57340565558269
+      "y2026": 107.226,
+      "y2027": 114.274,
+      "change": 7.048,
+      "pct": 6.573
     },
     {
       "level": 1,
       "key": "Samferdsel",
       "parent": null,
-      "y2026": 98.1179,
-      "y2027": 99.9084,
-      "change": 1.7905,
-      "pct": 1.8248454155663747
+      "y2026": 98.118,
+      "y2027": 99.908,
+      "change": 1.79,
+      "pct": 1.824
     },
     {
       "level": 1,
       "key": "Arbeid, familie og integrering",
       "parent": null,
-      "y2026": 124.81805,
-      "y2027": 123.030962,
-      "change": -1.787088,
-      "pct": -1.431754461794588
+      "y2026": 124.818,
+      "y2027": 123.031,
+      "change": -1.787,
+      "pct": -1.432
     },
     {
       "level": 2,
@@ -25613,43 +25613,43 @@
       "y2026": 352.07,
       "y2027": 378.16,
       "change": 26.09,
-      "pct": 7.410458147527481
+      "pct": 7.41
     },
     {
       "level": 2,
       "key": "Sykepenger, AAP og uføretrygd",
       "parent": "Folketrygden",
-      "y2026": 272.2282,
-      "y2027": 291.0081,
-      "change": 18.7799,
-      "pct": 6.8985872881648564
+      "y2026": 272.228,
+      "y2027": 291.008,
+      "change": 18.78,
+      "pct": 6.899
     },
     {
       "level": 2,
       "key": "Rammetilskudd kommuner",
       "parent": "Kommunesektoren",
-      "y2026": 203.487714,
-      "y2027": 217.183885,
-      "change": 13.696171,
-      "pct": 6.730711516077083
+      "y2026": 203.488,
+      "y2027": 217.184,
+      "change": 13.696,
+      "pct": 6.731
     },
     {
       "level": 2,
       "key": "Sykehusene",
       "parent": "Helse og omsorg",
-      "y2026": 238.12203,
-      "y2027": 251.453404,
-      "change": 13.331374,
-      "pct": 5.598547097889263
+      "y2026": 238.122,
+      "y2027": 251.453,
+      "change": 13.331,
+      "pct": 5.598
     },
     {
       "level": 2,
       "key": "Rammetilskudd fylkeskommuner",
       "parent": "Kommunesektoren",
-      "y2026": 55.553773,
-      "y2027": 60.384001,
-      "change": 4.830228,
-      "pct": 8.694689377803376
+      "y2026": 55.554,
+      "y2027": 60.384,
+      "change": 4.83,
+      "pct": 8.694
     },
     {
       "level": 2,
@@ -25658,25 +25658,25 @@
       "y2026": 31.388,
       "y2027": 36.095,
       "change": 4.707,
-      "pct": 14.996176882885178
+      "pct": 14.996
     },
     {
       "level": 2,
       "key": "Justis og beredskap",
       "parent": "Øvrige områder",
-      "y2026": 60.611972,
-      "y2027": 65.111083,
-      "change": 4.499111,
-      "pct": 7.422809144041709
+      "y2026": 60.612,
+      "y2027": 65.111,
+      "change": 4.499,
+      "pct": 7.423
     },
     {
       "level": 2,
       "key": "Renter på statsgjeld",
       "parent": "Øvrige områder",
-      "y2026": 20.0814,
-      "y2027": 24.399107,
-      "change": 4.317707,
-      "pct": 21.501025824892693
+      "y2026": 20.081,
+      "y2027": 24.399,
+      "change": 4.318,
+      "pct": 21.503
     },
     {
       "level": 2,
@@ -25685,97 +25685,97 @@
       "y2026": 47.95,
       "y2027": 51.92,
       "change": 3.97,
-      "pct": 8.279457768508863
+      "pct": 8.279
     },
     {
       "level": 2,
       "key": "Landbruk og mat",
       "parent": "Øvrige områder",
-      "y2026": 34.846288,
-      "y2027": 38.495624,
-      "change": 3.649336,
-      "pct": 10.472667849155123
+      "y2026": 34.846,
+      "y2027": 38.496,
+      "change": 3.65,
+      "pct": 10.475
     },
     {
       "level": 2,
       "key": "Høyere utdanning og forskning",
       "parent": "Utdanning og forskning",
-      "y2026": 63.032705,
-      "y2027": 66.369709,
-      "change": 3.337004,
-      "pct": 5.294083444459507
+      "y2026": 63.033,
+      "y2027": 66.37,
+      "change": 3.337,
+      "pct": 5.294
     },
     {
       "level": 2,
       "key": "Lånekassen",
       "parent": "Utdanning og forskning",
-      "y2026": 21.4027,
-      "y2027": 24.253559,
-      "change": 2.850859,
-      "pct": 13.320090455877063
+      "y2026": 21.403,
+      "y2027": 24.254,
+      "change": 2.851,
+      "pct": 13.321
     },
     {
       "level": 2,
       "key": "Utenriks og bistand",
       "parent": "Øvrige områder",
-      "y2026": 56.900933,
-      "y2027": 59.049428,
-      "change": 2.148495,
-      "pct": 3.775851970652221
+      "y2026": 56.901,
+      "y2027": 59.049,
+      "change": 2.148,
+      "pct": 3.775
     },
     {
       "level": 2,
       "key": "Klima, miljø og energi",
       "parent": "Øvrige områder",
-      "y2026": 47.470339,
-      "y2027": 49.523954,
-      "change": 2.053615,
-      "pct": 4.326101399865714
+      "y2026": 47.47,
+      "y2027": 49.524,
+      "change": 2.054,
+      "pct": 4.327
     },
     {
       "level": 2,
       "key": "Jernbane",
       "parent": "Samferdsel",
-      "y2026": 31.7039,
-      "y2027": 33.7216,
-      "change": 2.0177,
-      "pct": 6.364201249688524
+      "y2026": 31.704,
+      "y2027": 33.722,
+      "change": 2.018,
+      "pct": 6.365
     },
     {
       "level": 2,
       "key": "Vei",
       "parent": "Samferdsel",
-      "y2026": 50.4497,
+      "y2026": 50.45,
       "y2027": 51.676,
-      "change": 1.2263,
-      "pct": 2.4307379429411866
+      "change": 1.226,
+      "pct": 2.43
     },
     {
       "level": 2,
       "key": "Barnevern",
       "parent": "Arbeid, familie og integrering",
-      "y2026": 11.943116,
-      "y2027": 13.014558,
-      "change": 1.071442,
-      "pct": 8.971209858465748
+      "y2026": 11.943,
+      "y2027": 13.015,
+      "change": 1.072,
+      "pct": 8.976
     },
     {
       "level": 2,
       "key": "Kultur og medier",
       "parent": "Øvrige områder",
-      "y2026": 27.038755,
-      "y2027": 28.05942,
-      "change": 1.020665,
-      "pct": 3.7748224724104342
+      "y2026": 27.039,
+      "y2027": 28.059,
+      "change": 1.02,
+      "pct": 3.772
     },
     {
       "level": 2,
       "key": "Legehjelp og legemidler",
       "parent": "Folketrygden",
-      "y2026": 47.9392,
-      "y2027": 48.7944,
-      "change": 0.8552,
-      "pct": 1.7839263066550963
+      "y2026": 47.939,
+      "y2027": 48.794,
+      "change": 0.855,
+      "pct": 1.784
     },
     {
       "level": 2,
@@ -25784,124 +25784,124 @@
       "y2026": 18.057,
       "y2027": 18.88,
       "change": 0.823,
-      "pct": 4.557789223016005
+      "pct": 4.558
     },
     {
       "level": 2,
       "key": "Næring og fiskeri",
       "parent": "Øvrige områder",
-      "y2026": 26.010489,
-      "y2027": 26.775598,
-      "change": 0.765109,
-      "pct": 2.9415402378632716
+      "y2026": 26.01,
+      "y2027": 26.776,
+      "change": 0.766,
+      "pct": 2.945
     },
     {
       "level": 2,
       "key": "Drift av Nav",
       "parent": "Arbeid, familie og integrering",
-      "y2026": 16.014106,
-      "y2027": 16.693621,
-      "change": 0.679515,
-      "pct": 4.243227814278237
+      "y2026": 16.014,
+      "y2027": 16.694,
+      "change": 0.68,
+      "pct": 4.246
     },
     {
       "level": 2,
       "key": "Familie og oppvekst",
       "parent": "Arbeid, familie og integrering",
-      "y2026": 33.405141,
-      "y2027": 34.026766,
-      "change": 0.621625,
-      "pct": 1.8608662660636575
+      "y2026": 33.405,
+      "y2027": 34.027,
+      "change": 0.622,
+      "pct": 1.862
     },
     {
       "level": 2,
       "key": "Øvrig utdanning",
       "parent": "Utdanning og forskning",
-      "y2026": 6.224382,
-      "y2027": 6.84481,
-      "change": 0.620428,
-      "pct": 9.967704424310718
+      "y2026": 6.224,
+      "y2027": 6.845,
+      "change": 0.621,
+      "pct": 9.978
     },
     {
       "level": 2,
       "key": "Arbeidsmarkedstiltak",
       "parent": "Arbeid, familie og integrering",
-      "y2026": 12.545715,
-      "y2027": 12.986183,
-      "change": 0.440468,
-      "pct": 3.510903922175819
+      "y2026": 12.546,
+      "y2027": 12.986,
+      "change": 0.44,
+      "pct": 3.507
     },
     {
       "level": 2,
       "key": "Grunnopplæring",
       "parent": "Utdanning og forskning",
-      "y2026": 16.566229,
-      "y2027": 16.806339,
-      "change": 0.24011,
-      "pct": 1.4493944276636523
+      "y2026": 16.566,
+      "y2027": 16.806,
+      "change": 0.24,
+      "pct": 1.449
     },
     {
       "level": 2,
       "key": "Øvrig til kommunesektoren",
       "parent": "Kommunesektoren",
-      "y2026": 15.028984,
-      "y2027": 15.237679,
-      "change": 0.208695,
-      "pct": 1.388616822002073
+      "y2026": 15.029,
+      "y2027": 15.238,
+      "change": 0.209,
+      "pct": 1.391
     },
     {
       "level": 2,
       "key": "Øvrig helse og omsorg",
       "parent": "Helse og omsorg",
-      "y2026": 19.243594,
-      "y2027": 19.313896,
-      "change": 0.070302,
-      "pct": 0.3653267679623671
+      "y2026": 19.244,
+      "y2027": 19.314,
+      "change": 0.07,
+      "pct": 0.364
     },
     {
       "level": 2,
       "key": "Øvrig arbeid og familie",
       "parent": "Arbeid, familie og integrering",
-      "y2026": 28.334849,
-      "y2027": 27.659462,
-      "change": -0.675387,
-      "pct": -2.3835913154151624
+      "y2026": 28.335,
+      "y2027": 27.659,
+      "change": -0.676,
+      "pct": -2.386
     },
     {
       "level": 2,
       "key": "Andre trygdeytelser",
       "parent": "Folketrygden",
-      "y2026": 22.335315,
-      "y2027": 21.141609,
-      "change": -1.193706,
-      "pct": -5.344478016092452
+      "y2026": 22.335,
+      "y2027": 21.142,
+      "change": -1.193,
+      "pct": -5.341
     },
     {
       "level": 2,
       "key": "Statsforvaltning og annet",
       "parent": "Øvrige områder",
-      "y2026": 58.169709,
-      "y2027": 56.944483,
-      "change": -1.225226,
-      "pct": -2.1062955635552516
+      "y2026": 58.17,
+      "y2027": 56.944,
+      "change": -1.226,
+      "pct": -2.108
     },
     {
       "level": 2,
       "key": "Øvrig samferdsel",
       "parent": "Samferdsel",
-      "y2026": 15.9643,
-      "y2027": 14.5108,
-      "change": -1.4535,
-      "pct": -9.104689839203724
+      "y2026": 15.964,
+      "y2027": 14.511,
+      "change": -1.453,
+      "pct": -9.102
     },
     {
       "level": 2,
       "key": "Integrering",
       "parent": "Arbeid, familie og integrering",
-      "y2026": 22.575123,
-      "y2027": 18.650372,
-      "change": -3.924751,
-      "pct": -17.38529176563069
+      "y2026": 22.575,
+      "y2027": 18.65,
+      "change": -3.925,
+      "pct": -17.386
     }
   ]
 }
