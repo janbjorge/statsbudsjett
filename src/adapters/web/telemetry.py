@@ -2,10 +2,13 @@
 
 Query strings and endpoint arguments are recorded as they are: they hold no name or account.
 The client address is blanked before the span leaves the process, because the site has no use for it.
+Where a visit came from is kept as `visit.*` attributes: the referring site's host (never its path), how the
+browser got here, and the campaign tags and click id name in the link.
 """
 
 import os
 from typing import Any
+from urllib.parse import parse_qs, urlsplit
 
 import logfire
 from fastapi import FastAPI
@@ -17,7 +20,26 @@ REDACTED = "x"
 _CLIENT_ATTRS = ("http.client_ip", "client.address", "net.peer.ip", "net.sock.peer.addr")
 
 
-def _drop_client_address(span: Span, _scope: dict[str, Any]) -> None:
+def _visit(scope: dict[str, Any]) -> dict[str, str]:
+    headers = {k.decode("latin-1"): v.decode("latin-1") for k, v in scope.get("headers", [])}
+    query = parse_qs(scope.get("query_string", b"").decode("latin-1"))
+    visit: dict[str, str] = {}
+    referrer = urlsplit(headers.get("referer", "")).hostname
+    if referrer and referrer != urlsplit(f"//{headers.get('host', '')}").hostname:
+        visit["visit.referrer"] = referrer
+    # "none" means typed, bookmarked or opened from an app such as a mail client; "cross-site" means a link elsewhere
+    if site := headers.get("sec-fetch-site"):
+        visit["visit.fetch_site"] = site
+    for key, values in query.items():
+        if key.startswith("utm_"):
+            visit[f"visit.{key}"] = values[0]
+    # Ad and social platforms append a click id parameter ending in "clid"; its name says which one, its value nothing
+    if click := next((key for key in query if key.endswith("clid")), None):
+        visit["visit.click_id"] = click
+    return visit
+
+
+def _on_request(span: Span, scope: dict[str, Any]) -> None:
     """Runs when the request span starts, before anything is exported."""
     if not span.is_recording():
         return
@@ -25,6 +47,7 @@ def _drop_client_address(span: Span, _scope: dict[str, Any]) -> None:
     for key in _CLIENT_ATTRS:
         if key in attrs:
             span.set_attribute(key, REDACTED)
+    span.set_attributes(_visit(scope))
 
 
 def setup(app: FastAPI) -> None:
@@ -42,6 +65,6 @@ def setup(app: FastAPI) -> None:
             revision=os.environ.get("GIT_SHA", "main"),
         ),
     )
-    logfire.instrument_fastapi(app, server_request_hook=_drop_client_address, excluded_urls="/helse,/static/.*")
+    logfire.instrument_fastapi(app, server_request_hook=_on_request, excluded_urls="/helse,/static/.*")
     if on_fly:
         logfire.instrument_system_metrics()
