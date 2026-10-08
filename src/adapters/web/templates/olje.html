@@ -34,10 +34,10 @@
       <div class="fund-parts" data-parts="{{ parts|tojson_fund_parts }}"></div>
     </div>
     <details style="margin-top:12px"><summary>Vis tallene som tabell</summary>
-      <table class="tbl">
+      <div class="tbl-scroll"><table class="tbl">
         <thead><tr><th>År</th><th>Olje inn</th><th>Uttak</th><th>Avkastning</th><th>Kronekurs</th><th>Fondets verdi</th></tr></thead>
         <tbody>{% for p in parts %}<tr><td>{{ p.year }}</td><td>{{ p.oil|nb1 }}</td><td>{{ p.withdraw|nb1 }}</td><td>{{ p.returns|nb1 }}</td><td>{{ p.krone|nb1 }}</td><td>{{ p.size|nb1 }}</td></tr>{% endfor %}</tbody>
-      </table>
+      </table></div>
     </details>
     <p class="note" style="margin-top:12px">Kilde: Nasjonalbudsjettet 2027, figur 3.6. Tallene er akkumulerte bidrag til markedsverdien, i mrd. kr uten justering for prisvekst.
       Uttak er negativt. Avkastning og kronekurs kan også være negative i enkeltår. I noen år summerer de fire bidragene til 0,1 mrd. kr unna verdien, slik kilden er avrundet.

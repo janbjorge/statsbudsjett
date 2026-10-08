@@ -6,6 +6,8 @@ const f1 = new Intl.NumberFormat("nb-NO", { minimumFractionDigits: 1, maximumFra
 const fmt = v => f1.format(v);
 const signed = v => (v > 0 ? "+" : v < 0 ? "−" : "±") + f1.format(Math.abs(v));
 const color = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+// Width inside the scroll box's padding; clientWidth includes the padding, which made the charts 24 px too wide
+const boxWidth = box => { const cs = getComputedStyle(box); return box.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight); };
 const html = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
 // Colour follows the entity: income is slot 1, each expense group keeps its slot, the last group is gray
@@ -66,7 +68,7 @@ function showDetail(d) {
 // ---------- Sankey ----------
 function drawSankey() {
   const el = document.getElementById("sankey");
-  const W = Math.max(el.parentElement.clientWidth - 2, 720);
+  const W = Math.max(boxWidth(el.parentElement), 720);
   const narrow = W < 900;
   const NODE_W = 10, PAD = 14, TOP = 8;
   const KPX = (narrow ? 640 : 720) / d3.max(Object.values(totals));
@@ -141,7 +143,7 @@ function drawSankey() {
   pinned = null;
   highlight(null);
   el.replaceChildren(svg.node());
-  el.parentElement.classList.toggle("overflows", W > el.parentElement.clientWidth);
+  el.parentElement.classList.toggle("overflows", W > boxWidth(el.parentElement));
   document.getElementById("sankey-title").textContent = `Statsbudsjettet ${year}`;
 }
 
@@ -162,7 +164,7 @@ function diffRows() {
 
 function drawDiff() {
   const el = document.getElementById("diff");
-  const Wd = Math.max(el.parentElement.clientWidth - 2, 640);
+  const Wd = Math.max(boxWidth(el.parentElement), 640);
   const narrow = Wd < 900;
   const rows = diffRows();
   const val = d => unit === "nok" ? d.change : d.pct;
@@ -171,8 +173,10 @@ function drawDiff() {
   rows.forEach(r => { r.y = y; y += r.section ? SEC : ROW; });
   const H = y + 30;
   const vals = rows.filter(r => !r.section).map(val).filter(v => v != null);
+  // Room left of the bars for the labels of negative changes, so they stay clear of the 2026 → 2027 column
+  const NEG_W = d3.min(vals) < 0 ? 52 : 0;
   const x = d3.scaleLinear().domain([Math.min(0, d3.min(vals)), Math.max(0, d3.max(vals))]).nice()
-    .range([LABEL_W + VAL_W + 24, Wd - (narrow ? 56 : VAL_W)]);
+    .range([LABEL_W + VAL_W + 24 + NEG_W, Wd - (narrow ? 64 : VAL_W)]);
 
   const svg = d3.create("svg").attr("width", Wd).attr("height", H).attr("viewBox", [0, 0, Wd, H])
     .attr("role", "img").attr("aria-label", "Endring per område fra 2026 til 2027");
@@ -211,7 +215,7 @@ function drawDiff() {
     .text(r => val(r) == null ? "ny" : signed(val(r)) + (unit === "pct" ? " %" : ""));
 
   el.replaceChildren(svg.node());
-  el.parentElement.classList.toggle("overflows", Wd > el.parentElement.clientWidth);
+  el.parentElement.classList.toggle("overflows", Wd > boxWidth(el.parentElement));
   document.getElementById("diff-sub").textContent = unit === "nok"
     ? "Endring i mrd. kr. Blå er økning, rød er nedgang. Tallene i midten viser 2026 → 2027."
     : "Endring i prosent av 2026-beløpet. Små beløp kan gi store prosentvise endringer.";

@@ -97,7 +97,7 @@ let kommuner;
 function drawStrip(el) {
   kommuner ??= JSON.parse(document.getElementById("kommuner-data").textContent);
   const all = kommuner, selected = el.dataset.selected, avg = +el.dataset.average;
-  const W = el.clientWidth || 800, H = 300, m = { l: 64, r: 12, t: 26, b: 46 };
+  const W = el.clientWidth || 800, H = 300, m = { l: 64, r: 12, t: 40, b: 46 };
   const [lo, hi] = d3.extent(all, k => k.pp);
   const [plo, phi] = d3.extent(all, k => k.pop);
   const x = d3.scaleLog().domain([lo * 0.95, hi * 1.05]).range([m.l, W - m.r]);
@@ -113,8 +113,9 @@ function drawStrip(el) {
   const label = (t, attrs) => { const el = svg.append("text").attr("font-size", 12).attr("fill", cssVar("--text-muted")).text(t); for (const [k, v] of Object.entries(attrs)) el.attr(k, v); };
   label("Frie inntekter per innbygger →", { x: W - m.r, y: H - 8, "text-anchor": "end" });
   label("↑ Innbyggere", { x: 0, y: 12 });
-  svg.append("line").attr("x1", x(avg)).attr("x2", x(avg)).attr("y1", m.t - 8).attr("y2", H - m.b).attr("stroke", cssVar("--text-muted"));
-  svg.append("text").attr("x", x(avg)).attr("y", m.t - 12).attr("text-anchor", "middle").attr("font-size", 12).attr("fill", cssVar("--text-muted")).text("snitt");
+  // "snitt" sits one line below the axis title, right of the line, so the two never meet on a narrow screen
+  svg.append("line").attr("x1", x(avg)).attr("x2", x(avg)).attr("y1", m.t - 16).attr("y2", H - m.b).attr("stroke", cssVar("--text-muted"));
+  svg.append("text").attr("x", x(avg) + 4).attr("y", m.t - 8).attr("font-size", 12).attr("fill", cssVar("--text-muted")).text("snitt");
   const pick = k => {
     document.getElementById("kom").value = k.f ? `${k.n} (${k.f})` : k.n;
     htmx.ajax("GET", "/kommune?k=" + k.nr, { target: "#kommune-out", swap: "outerHTML" });
@@ -130,8 +131,11 @@ function drawStrip(el) {
   if (s) {
     const cx = x(s.pp), cy = y(s);
     svg.append("circle").attr("cx", cx).attr("cy", cy).attr("r", 8).attr("fill", cssVar("--accent")).attr("stroke", cssVar("--surface-1")).attr("stroke-width", 2);
-    svg.append("text").attr("x", cx).attr("y", cy - 13).attr("text-anchor", cx > W - 80 ? "end" : cx < 80 ? "start" : "middle")
-      .attr("font-weight", 650).attr("font-size", 13).attr("fill", cssVar("--text-primary")).text(s.n);
+    // Beside the dot, on the side with more room, so it stays clear of the labels above the plot
+    const left = cx > (m.l + W - m.r) / 2;
+    svg.append("text").attr("x", left ? cx - 13 : cx + 13).attr("y", cy).attr("dy", "0.35em").attr("text-anchor", left ? "end" : "start")
+      .attr("font-weight", 650).attr("font-size", 13).attr("fill", cssVar("--text-primary"))
+      .attr("paint-order", "stroke").attr("stroke", cssVar("--surface-1")).attr("stroke-width", 3).attr("stroke-linejoin", "round").text(s.n);
   }
   el.replaceChildren(svg.node());
 }

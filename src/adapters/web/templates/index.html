@@ -116,10 +116,10 @@
     <div class="card" style="margin-top:12px"><h3>Fondets verdi</h3><p class="muted small" style="margin:0 0 12px">Markedsverdi ved årsslutt, mrd. kr</p>
       <div class="fund" data-key="size" data-fund="{{ data }}"></div></div>
     <details style="margin-top:12px"><summary>Vis tallene som tabell</summary>
-      <table class="tbl">
+      <div class="tbl-scroll"><table class="tbl">
         <thead><tr><th>År</th><th>Andel av utgiftene, %</th><th>Uttak, % av fondet</th><th>Forventet realavkastning, %</th><th>Fondets verdi, mrd. kr</th></tr></thead>
         <tbody>{% for f in fund %}<tr><td>{{ f.year }}{{ " (forslag)" if f.forecast }}</td><td>{{ f.share|nb1 }}</td><td>{{ f.spend|nb1 }}</td><td>{{ f.expected|nb1 }}</td><td>{{ f.size|nb1 if f.size else "–" }}</td></tr>{% endfor %}</tbody>
-      </table>
+      </table></div>
     </details>
     <p class="note" style="margin-top:12px">Kilde: Nasjonalbudsjettet 2027, figur 3.3, 3.4 og 3.6. Tallene er Finansdepartementets, og {{ last.year }} er regjeringens forslag. Fondets verdi er i kroner uten justering for prisvekst, og en svakere krone gjør den høyere.</p>
   </section>
