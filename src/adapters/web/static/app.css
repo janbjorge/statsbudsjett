@@ -184,6 +184,9 @@ label.field { display: block; font-weight: 650; margin-bottom: 6px; }
 .badge.blandet { color: var(--mixed); } .badge.uendret { color: var(--text-muted); }
 .tag { font-size: var(--t-small); padding: 1px 7px; border-radius: 6px; background: var(--surface-2); color: var(--text-secondary); white-space: nowrap; }
 .same { display: grid; gap: 4px; margin-top: 6px; }
+/* /tilbud: the rest of a section, one tap away */
+details.all > summary { cursor: pointer; color: var(--accent); padding: 10px 0; list-style-position: inside; }
+details.all > .facts { margin-top: 0; }
 .same div { font-size: var(--t-body); color: var(--text-secondary); padding: 6px 2px; border-bottom: 1px solid var(--hairline); }
 .same b { color: var(--text-primary); font-weight: 650; }
 .same a { color: var(--text-muted); font-size: var(--t-small); }

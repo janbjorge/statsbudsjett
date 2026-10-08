@@ -8,15 +8,21 @@
 {% macro chips(list, start) %}<div class="chips">
   {% for s in list %}<a class="chip" href="#g{{ start + loop.index }}">{{ s.label }} ({{ s.changed|length + s.unchanged|length }})</a>{% endfor %}
 </div>{% endmacro %}
+{# Each section shows its TOP changes, largest kroner amount first (core.facts.ranked); the rest open on a tap #}
+{% set TOP = 3 %}
+{% macro same(list) %}<div class="same">
+  {% for f in list %}<div>■ <b>{{ f.title }}</b>{% for a in f.amounts %} · {{ amt(a) }}{% endfor %} <a href="{{ f.source_url }}" rel="noopener">kilde ↗</a></div>{% endfor %}
+</div>{% endmacro %}
 {% macro block(s, n) %}
   <section class="facts" id="g{{ n }}">
     <h2>{{ s.label }}</h2>
-    {% for f in s.changed %}{{ card(f, "du") }}{% endfor %}
-    {% if s.unchanged %}
-    <div class="same">
-      {% for f in s.unchanged %}<div>■ <b>{{ f.title }}</b>{% for a in f.amounts %} · {{ amt(a) }}{% endfor %} <a href="{{ f.source_url }}" rel="noopener">kilde ↗</a></div>{% endfor %}
-    </div>
-    {% endif %}
+    {% for f in s.changed[:TOP] %}{{ card(f, "du") }}{% endfor %}
+    {% if s.changed|length > TOP %}
+    <details class="all"><summary>Vis alle ({{ s.changed|length + s.unchanged|length }})</summary>
+      <div class="facts">{% for f in s.changed[TOP:] %}{{ card(f, "du") }}{% endfor %}</div>
+      {% if s.unchanged %}{{ same(s.unchanged) }}{% endif %}
+    </details>
+    {% elif s.unchanged %}{{ same(s.unchanged) }}{% endif %}
   </section>
 {% endmacro %}
 {% block main %}

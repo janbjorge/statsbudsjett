@@ -1,7 +1,22 @@
 """Which facts a household sees (METHOD.md §6)."""
 
 from adapters.datasets import JsonDatasets
-from core.facts import AREAS, ASKED, PERSONAS, WALLET_LABEL, Effect, Kind, Profile, Wallet, by_wallet, general, is_general, select, wallet
+from core.facts import (
+    AREAS,
+    ASKED,
+    PERSONAS,
+    WALLET_LABEL,
+    Effect,
+    Kind,
+    Profile,
+    Wallet,
+    by_wallet,
+    general,
+    is_general,
+    kroner,
+    select,
+    wallet,
+)
 from core.tax import Adult, Business
 
 FACTS = JsonDatasets().facts()
@@ -156,3 +171,15 @@ def test_parts_of_the_budget_follow_the_profiles_and_never_reach_for_deg() -> No
     totals = [f for f in FACTS if f.kind is Kind.UTGIFT]
     assert totals and all(f.area for f in totals)
     assert {f.label("du") for f in totals} <= {"▲ Mer penger", "▼ Mindre penger", "◆ Mer og mindre", "■ Står fast"}
+
+
+def test_tilbud_sections_put_the_largest_kroner_amount_first() -> None:
+    """/tilbud shows the top few of each section, so the order is a judgement (jb 2026-10-08, METHOD.md §6)."""
+    for s in general(FACTS):
+        known = [k for f in s.changed if (k := kroner(f))]
+        assert known == sorted(known, reverse=True)
+        # Facts with no kroner amount come after those with one
+        flags = [bool(kroner(f)) for f in s.changed]
+        assert flags == sorted(flags, reverse=True)
+    culture = next(s for s in general(FACTS) if s.label == AREAS["kultur"])
+    assert kroner(culture.changed[0]) == 28_100_000_000

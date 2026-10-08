@@ -1,6 +1,6 @@
 """Which budget facts matter to a household, given who they are. METHOD.md §6 has the rules."""
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from enum import StrEnum
 
 from core.tax import Adult, Business
@@ -279,4 +279,19 @@ def general(facts: list[Fact]) -> list[Section]:
                 changed=tuple(f for f in mine if f.effect is not Effect.UENDRET),
                 unchanged=tuple(f for f in mine if f.effect is Effect.UENDRET),
             ))
-    return sorted(people, key=lambda s: s.label != "Gjelder alle") + areas
+    return [ranked(s) for s in sorted(people, key=lambda s: s.label != "Gjelder alle") + areas]
+
+
+KRONER = {"kr": 1, "mill. kr": 1e6, "mrd. kr": 1e9}
+
+
+def kroner(f: Fact) -> float | None:
+    """The largest kroner amount on the card, either year; None when it has none (rates, øre, per-unit prices)."""
+    found = [abs(v) * KRONER[a.unit] for a in f.amounts if a.unit in KRONER for v in (a.y2026, a.y2027) if v is not None]
+    return max(found, default=None)
+
+
+def ranked(s: Section) -> Section:
+    """Largest kroner amount first, so /tilbud can show the top few of each section (jb 2026-10-08, METHOD.md §6).
+    Facts without one come after, in their earlier order."""
+    return replace(s, changed=tuple(sorted(s.changed, key=lambda f: -(kroner(f) or -1))))

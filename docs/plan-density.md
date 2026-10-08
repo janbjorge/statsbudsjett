@@ -1,6 +1,6 @@
 # Plan: make the pages calmer to read
 
-Status: approved by jb 2026-10-08, being built. Steps 1 and 2 are done; see "Decisions" for the answers to the open questions.
+Status: approved by jb 2026-10-08. Steps 1 to 4 are built; step 4 missed its page-length targets (see "Results"). See "Decisions" for the answers to the open questions.
 
 ## Why
 
@@ -127,3 +127,18 @@ Changes while building step 1:
 - New content, or cutting facts from the data.
 - The chart label overlaps on phones ("Uttak av fondet", small treemap cells). These are separate fixes.
 - A phone-specific Sankey and change chart. Today they scroll sideways in their own box.
+
+## Results (2026-10-08, tools/density.py, WebKit)
+
+| | before | after |
+|---|---|---|
+| Text styles on `/` | 24 | 8 |
+| Text styles, other pages | | 5 to 7 |
+| Longest running line, 1280 px | about 95 characters | 69 |
+| `/` on a phone, screens | 22 (23.4 with 17 px text) | 21.7 |
+| `/tilbud` on a phone, screens | 44 (50.1 with 17 px text) | 35.2 |
+
+Step 4 missed its target of under 15 phone screens:
+
+- `/tilbud` has 22 sections. With one card per section it would still be 17.9 screens; two per section gives 27.2. Getting under 15 needs a different page, for example collapsing each section to its heading.
+- On `/`, "For deg" alone is 5.7 screens, and this plan leaves it as it is. Then come the tax receipt (2.1), "Hva endres" (2.3), Kommunen din (2.1) and the oil fund (2.2).

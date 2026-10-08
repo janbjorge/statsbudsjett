@@ -74,13 +74,17 @@
     {% set top = (changes.up + changes.down)|map(attribute="change")|map("abs")|max %}
     <div class="two">
       {% for title, rows, var in [("Største økninger", changes.up, "--up"), ("Største nedganger", changes.down, "--down")] %}
-      <div class="card"><h3>{{ title }}</h3><p class="muted small" style="margin:0 0 12px">Kapitler, mrd. kr</p><div class="bars">
-        {% for c in rows %}
+      {% macro bar(c) %}
         <div class="bar-row"><div class="lab"><b>{{ c.name }}</b><div class="muted small">{{ c.group }} · {{ c.v2026|nb1 }} → {{ c.v2027|nb1 }} mrd.</div></div>
           <div class="bar-track"><div class="bar-fill" style="width:{{ (c.change|abs) / top * 60 }}%;background:var({{ var }})"></div>
             <div class="bar-val" style="left:calc({{ (c.change|abs) / top * 60 }}% + 8px)">{{ c.change|signed1 }}{% if c.pct is not none %} ({{ c.pct|pct }}){% endif %}</div></div></div>
-        {% endfor %}
-      </div></div>
+      {% endmacro %}
+      {# The five largest show; the rest open on a tap (docs/plan-density.md step 4) #}
+      <div class="card"><h3>{{ title }}</h3><p class="muted small" style="margin:0 0 12px">Kapitler, mrd. kr</p>
+        <div class="bars">{% for c in rows[:5] %}{{ bar(c) }}{% endfor %}</div>
+        {% if rows|length > 5 %}<details class="all"><summary>Vis alle ({{ rows|length }})</summary>
+          <div class="bars">{% for c in rows[5:] %}{{ bar(c) }}{% endfor %}</div></details>{% endif %}
+      </div>
       {% endfor %}
     </div>
     <p class="note" style="margin-top:12px">{{ changes.unmatched }} kapitler finnes bare i ett av årene, ofte fordi de har fått nytt nummer eller er slått sammen, og er ikke tatt med i listene.</p>

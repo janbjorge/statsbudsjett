@@ -203,6 +203,18 @@ def test_for_deg_links_to_the_general_changes_instead_of_listing_them() -> None:
     assert "Etter del av budsjettet" in page and page.index("Fisker eller oppdretter</h2>") < page.index("Forsvar og beredskap</h2>")
 
 
+def test_tilbud_and_the_front_page_show_the_top_and_keep_the_rest_a_tap_away() -> None:
+    page = client.get("/tilbud").text
+    # Every fact is still on the page, behind "Vis alle" when the section has more than three
+    for s in queries.general():
+        for f in s.changed + s.unchanged:
+            assert f.title in page
+    assert page.count('<details class="all">') == sum(len(s.changed) > 3 for s in queries.general())
+    front = client.get("/").text
+    endringer = front[front.index('id="endringer"'):front.index('id="kommune"')]
+    assert endringer.count('<details class="all">') == 2 and "Vis alle (10)" in endringer
+
+
 def test_one_person_is_du_in_the_badges_not_deg() -> None:
     html = client.get("/?lonn=500000&meg=bilist").text
     assert "Du betaler mer" in html and "betaler mer eller får mindre" in html
