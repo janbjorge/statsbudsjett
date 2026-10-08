@@ -4,7 +4,8 @@ Every request from jb, with status. Newest first. An item is ticked only when it
 
 ## Open
 
-Nothing open.
+- [ ] Get 4xx in Logfire to ~0 for real clients (jb 2026-10-08). Scanner probes (`/.env`, `/.git/*`, `/.svn/*`, POST/OPTIONS `/`) should keep getting 404/405. Still open as of 2026-10-08, the rest is fixed (robots.txt a5e4e18, HEAD 52fa0a2, sitemap.xml bb8dfe9, favicon.ico and apple-touch-icon.png d0a7dc2):
+  - `/.well-known/security.txt` and `/security.txt`: needs a contact address from jb.
 
 ## Ideas not yet requested
 

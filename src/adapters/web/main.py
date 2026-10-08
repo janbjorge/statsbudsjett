@@ -319,11 +319,13 @@ def sitemap_xml(request: Request) -> Response:
 
 # Browsers, feed readers and link previews ask for these fixed paths without reading the <head> links
 @app.get("/favicon.ico")
+@app.get("/favicon.png")
 def favicon() -> FileResponse:
     return FileResponse(HERE / "static" / "icon-48.png", media_type="image/png")
 
 
 @app.get("/apple-touch-icon.png")
+@app.get("/apple-touch-icon-precomposed.png")
 def apple_touch_icon() -> FileResponse:
     return FileResponse(HERE / "static" / "icon-180.png", media_type="image/png")
 

@@ -221,7 +221,7 @@ def test_pages_link_the_icon_and_the_fixed_paths_answer() -> None:
     html = client.get("/ki").text
     assert re.search(r'rel="icon" type="image/svg\+xml" href="/static/icon\.svg\?v=\w+"', html)
     assert re.search(r'rel="apple-touch-icon" href="/static/icon-180\.png\?v=\w+"', html)
-    for path in ("/favicon.ico", "/apple-touch-icon.png"):
+    for path in ("/favicon.ico", "/favicon.png", "/apple-touch-icon.png", "/apple-touch-icon-precomposed.png"):
         r = client.get(path)
         assert (r.status_code, r.headers["content-type"]) == (200, "image/png"), path
         assert r.content.startswith(b"\x89PNG"), path
