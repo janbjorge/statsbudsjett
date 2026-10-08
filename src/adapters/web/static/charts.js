@@ -160,17 +160,22 @@ function drawFund(el) {
     const steps = s.flatMap((d, i) => i && s[i - 1][c.ref] !== d[c.ref] ? [[d.year, s[i - 1][c.ref]], [d.year, d[c.ref]]] : [[d.year, d[c.ref]]]);
     svg.append("path").datum(steps).attr("fill", "none").attr("stroke", cssVar("--text-muted")).attr("stroke-width", 1.5)
       .attr("stroke-dasharray", "2 4").attr("d", d3.line().x(p => x(p[0])).y(p => y(p[1])));
-    svg.append("text").attr("x", x(s[0].year) + 4).attr("y", y(s[0][c.ref]) - 8).attr("font-size", 12)
-      .attr("fill", cssVar("--text-secondary")).text("Forventet realavkastning");
+    // Label the middle of the first level, clear of the end labels
+    const level = s.filter(d => d[c.ref] === s[0][c.ref]), mid = level[Math.floor(level.length / 2)];
+    svg.append("text").attr("x", x(mid.year)).attr("y", y(mid[c.ref]) - 8).attr("text-anchor", "middle").attr("font-size", 12)
+      .attr("fill", cssVar("--text-secondary")).text(`Forventet realavkastning, ${nb.format(mid[c.ref])} %`);
   }
   const line = d3.line().x(d => x(d.year)).y(d => y(d.value));
   const actual = s.filter(d => !d.forecast);
   svg.append("path").datum(actual).attr("fill", "none").attr("stroke", cssVar("--series-1")).attr("stroke-width", 2).attr("d", line);
   if (last.forecast) svg.append("path").datum([actual[actual.length - 1], last]).attr("fill", "none").attr("stroke", cssVar("--series-1"))
     .attr("stroke-width", 2).attr("stroke-dasharray", "4 4").attr("d", line);
-  for (const [d, anchor, dx] of [[s[0], "start", 0], [last, "end", -8]]) {
+  // End labels go on the side away from the line: below when the neighbouring point or the dashed level is higher,
+  // kept above the x axis
+  for (const [d, near, anchor, dx] of [[s[0], s[1], "start", 8], [last, actual[actual.length - (last.forecast ? 1 : 2)], "end", -8]]) {
+    const below = near.value > d.value || (c.ref && d[c.ref] > d.value);
     svg.append("circle").attr("cx", x(d.year)).attr("cy", y(d.value)).attr("r", 5).attr("fill", cssVar("--series-1")).attr("stroke", cssVar("--surface-1")).attr("stroke-width", 2);
-    svg.append("text").attr("x", x(d.year) + dx).attr("y", y(d.value) - 12).attr("text-anchor", anchor).attr("font-size", 13).attr("font-weight", 650)
+    svg.append("text").attr("x", x(d.year) + dx).attr("y", below ? Math.min(y(d.value) + 22, H - m.b - 6) : y(d.value) - 12).attr("text-anchor", anchor).attr("font-size", 13).attr("font-weight", 650)
       .attr("fill", cssVar("--text-primary")).text(`${d.year}: ${c.unit(d.value)}`);
   }
   const hover = svg.append("g").style("display", "none");
