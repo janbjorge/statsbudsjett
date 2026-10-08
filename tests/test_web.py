@@ -54,7 +54,7 @@ FARMER = "meg=bonde&barn=0,0,0,0&lonn=0&pensjon=0&naering=550000&naering_type=jo
 def test_farmer_link_shows_the_farm_tax() -> None:
     # 117 290,70 kr worked by hand from Prop. 1 LS tabell 1.5 and skatteloven § 8-1 (tests/test_tax.py)
     html = client.get(f"/?{FARMER}").text
-    assert re.search(r"om lag <b>117\W291\Wkr</b>", html)
+    assert re.search(r"betaler <b>117\W291\Wkr</b>", html)
     assert '<option value="jordbruk" selected>' in html
 
 

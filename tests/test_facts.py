@@ -97,7 +97,7 @@ def test_households_of_more_than_one_are_dere() -> None:
 
 def test_only_household_money_is_better_or_worse() -> None:
     by_id = {f.id: f for f in FACTS}
-    assert by_id["horeapparatgaranti"].label("du") == "● Mer til tilbudet"
+    assert by_id["horeapparatgaranti"].label("du") == "▲ Styrkes"
     assert by_id["horeapparatgaranti"].tone == "pluss"
     assert by_id["elavgift-7-32"].label("dere") == "▲ Dere betaler mer"
     assert by_id["elavgift-7-32"].label("du") == "▲ Du betaler mer"

@@ -12,7 +12,7 @@
   <div class="tax-big {{ 'pos' if t.change < 0 else 'neg' }}">{{ t.change|abs|kr }} {{ "lavere" if t.change < 0 else "høyere" }} skatt</div>
   {% endif %}
   {% if t.income %}
-  <p style="margin:4px 0 0">{{ "Dere" if many else "Du" }} betaler om lag <b>{{ t.tax_2027|kr }}</b> i skatt av {{ t.income|kr }} ({{ t.rate|nb1 }} %).
+  <p style="margin:4px 0 0">{{ "Dere" if many else "Du" }} betaler <b>{{ t.tax_2027|kr }}</b> i skatt av {{ t.income|kr }} ({{ t.rate|nb1 }} %).
     Endringen er sammenlignet med 2026-reglene, oppjustert for forventet lønnsvekst ({{ m.growth_wage|nb1 }} %) og pensjonsvekst ({{ m.growth_pension|num }} %), slik Finansdepartementet gjør.</p>
   {% endif %}
   {% if t.income %}

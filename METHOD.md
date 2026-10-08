@@ -22,10 +22,10 @@ The pages show the budget the way Finansdepartementet presents it, without oil m
 - Choices worth knowing:
   - Folketrygden is omr. 28, 29, 30 and 33.
   - Kommunesektoren is only kat. 13.70.
-  - Momskompensasjon (kap. 1632/1633) goes under "Øvrige formål".
+  - Momskompensasjon (kap. 1632/1633) goes under "Øvrige områder".
   - Forsvar has no sub-groups.
 - Income is grouped into 6 sources by chapter (src/pipeline/flows.py:43).
-- The first seven groups get a palette colour; "Øvrige formål" is grey, because the palette has 8 slots and income takes slot 1.
+- The first seven groups get a palette colour; "Øvrige områder" is grey, because the palette has 8 slots and income takes slot 1.
 
 ## 4. Comparing 2026 and 2027
 
@@ -51,7 +51,7 @@ The pages show the budget the way Finansdepartementet presents it, without oil m
 ## 6. "For deg" facts
 
 - The effect (pluss/minus/uendret/blandet) is the extracting agent's reading of the source, from the citizen's side. It is a judgement, not a number.
-- The page does not say whether a change is good for the reader, because it cannot know. A reader who owns an elbil gains when new ones get dearer; a reader without hearing aids gets nothing from shorter queues for them. Each change therefore has a kind (`kind` in data/persona/*.json), and the label only states what happens: money the household pays (`betaler`: "Du betaler mer/mindre"), money it receives (`far`: "Du får mer/mindre"), a public service (`tilbud`: "Mer til tilbudet", "Mindre tilbud") or a rule (`regel`: "Strengere/Romsligere regler"). The badge colour shows only the direction, as readers expect (jb 2026-10-08): green for more (or paying less), red for less (or paying more), yellow for mixed. Rules are always yellow, since a stricter rule is not less of anything. The kind is a judgement; the build stops if a change has none.
+- The page does not say whether a change is good for the reader, because it cannot know. A reader who owns an elbil gains when new ones get dearer; a reader without hearing aids gets nothing from shorter queues for them. Each change therefore has a kind (`kind` in data/persona/*.json), and the label only states what happens: money the household pays (`betaler`: "Du betaler mer/mindre"), money it receives (`far`: "Du får mer/mindre"), a public service (`tilbud`: "Styrkes", "Svekkes", "Endres") or a rule (`regel`: "Strengere/Romsligere regler"). The badge colour shows only the direction, as readers expect (jb 2026-10-08): green for more (or paying less), red for less (or paying more), yellow for mixed. Rules are always yellow, since a stricter rule is not less of anything. The kind is a judgement; the build stops if a change has none.
 - General changes are not on "For deg" but on their own page, /tilbud ("Tilbud og næringer"), grouped by who they are for with "Gjelder alle" first (src/core/facts.py, `is_general`, `general`). jb found them noisy there (2026-10-08): they change nothing the household itself pays, gets or must follow. Two kinds count as general:
   - changes to a public service (`kind` `tilbud`: more money to barnevernet, new studentboliger, shorter waits for hearing aids);
   - money to or from a sector, an organisation or companies, picked by hand in the build with who it hits (src/pipeline/datasets.py, `who`): regional flyruter, frivillige lag (momskompensasjon), jordbruket (jordbruksavtalen), fiskeflåten (CO2-kompensasjon), oppdrettsselskapene (produksjonsavgift, grunnrenteskatt) and bedrifter (Skattefunn). Their badge names who ("Fiskeflåten får mindre") and is coloured by which way it goes for them. A judgement; kept on "For deg" as close calls: lower toll on klær (reaches people through shop prices), arbeidsgiveravgift (an employer's own cost), strømstøtte and CO2-avgift for jordbruk and veksthus (a farm's own costs).

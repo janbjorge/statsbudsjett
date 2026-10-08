@@ -6,7 +6,7 @@
     ],
     "detail": null,
     "title_nb": "Barnetrygden blir stående på 2 012 kr i måneden",
-    "summary_nb": "Barnetrygden økes ikke i 2027. Den er fortsatt 2 012 kroner i måneden per barn under 18 år. Enslige forsørgere får fortsatt utvidet barnetrygd, og noen får i tillegg småbarnstillegg.",
+    "summary_nb": "Barnetrygden økes ikke i 2027. Den er fortsatt 2 012 kr i måneden per barn under 18 år. Enslige forsørgere får fortsatt utvidet barnetrygd, og noen får i tillegg småbarnstillegg.",
     "effect": "uendret",
     "kind": "far",
     "amounts": [
@@ -53,7 +53,7 @@
     ],
     "detail": "0-1",
     "title_nb": "Engangsstønaden ved fødsel kuttes til 67 100 kr",
-    "summary_nb": "Engangsstønaden går til mødre (og noen fedre) som ikke har rett til foreldrepenger. Den foreslås redusert fra 92 648 til 67 100 kroner per barn for barn født eller adoptert fra 1. juli 2027.",
+    "summary_nb": "Engangsstønaden går til mødre (og noen fedre) som ikke har rett til foreldrepenger. Den foreslås redusert fra 92 648 til 67 100 kr per barn for barn født eller adoptert fra 1. juli 2027.",
     "effect": "minus",
     "kind": "far",
     "amounts": [
@@ -96,7 +96,7 @@
     ],
     "detail": "1-5",
     "title_nb": "Kontantstøtten holdes på 7 500 kr i måneden",
-    "summary_nb": "Kontantstøtte for barn mellom 13 og 19 måneder som ikke har full barnehageplass, videreføres med samme satser. Full sats er 7 500 kroner i måneden, og den blir lavere jo flere timer barnet er i barnehagen.",
+    "summary_nb": "Kontantstøtte for barn mellom 13 og 19 måneder som ikke har full barnehageplass, videreføres med samme satser. Full sats er 7 500 kr i måneden, og den blir lavere jo flere timer barnet er i barnehagen.",
     "effect": "uendret",
     "kind": "far",
     "amounts": [
@@ -133,7 +133,7 @@
     ],
     "detail": "1-5",
     "title_nb": "Barnehageprisen holdes på 1 200 kr i måneden",
-    "summary_nb": "Makspris for en heltidsplass i barnehage blir fortsatt 1 200 kroner i måneden. I de minst sentrale kommunene er prisen 700 kroner, og i Finnmark og deler av Nord-Troms er barnehagen gratis.",
+    "summary_nb": "Makspris for en heltidsplass i barnehage blir fortsatt 1 200 kr i måneden. I de minst sentrale kommunene er prisen 700 kr, og i Finnmark og deler av Nord-Troms er barnehagen gratis.",
     "effect": "uendret",
     "kind": "betaler",
     "amounts": [
@@ -186,7 +186,7 @@
     ],
     "detail": "1-5",
     "title_nb": "20 timer gratis barnehage for lavinntektsfamilier",
-    "summary_nb": "Barn mellom 2 og 5 år i familier med lav inntekt får fortsatt 20 timer gratis barnehage i uken. Inntektsgrensen settes til 718 780 kroner i året.",
+    "summary_nb": "Barn mellom 2 og 5 år i familier med lav inntekt får fortsatt 20 timer gratis barnehage i uken. Inntektsgrensen settes til 718 780 kr i året.",
     "effect": "uendret",
     "amounts": [
       {
@@ -227,7 +227,7 @@
     ],
     "detail": "6-15",
     "title_nb": "Mer undervisning i små grupper fra høsten 2027",
-    "summary_nb": "Et nytt tilskudd på 465 millioner kroner høsten 2027 skal gi mer undervisning i små grupper, i tillegg til lærernormen. Pengene gjelder særlig 1., 2., 5. og 8. trinn.",
+    "summary_nb": "Et nytt tilskudd på 465 mill. kr høsten 2027 skal gi mer undervisning i små grupper, i tillegg til lærernormen. Pengene gjelder særlig 1., 2., 5. og 8. trinn.",
     "effect": "blandet",
     "kind": "tilbud",
     "amounts": [],
@@ -245,7 +245,7 @@
     ],
     "detail": "6-15",
     "title_nb": "Mer penger til bøker i skole og barnehage",
-    "summary_nb": "Støtten til fysiske lærebøker, skolebibliotek og bøker i barnehagen slås sammen og økes med over 94 millioner kroner, til 339,5 millioner.",
+    "summary_nb": "Støtten til fysiske lærebøker, skolebibliotek og bøker i barnehagen slås sammen og økes med over 94 mill. kr, til 339,5 mill. kr.",
     "effect": "pluss",
     "kind": "tilbud",
     "amounts": [],
@@ -263,7 +263,7 @@
     ],
     "detail": null,
     "title_nb": "Foreldrefradraget for barnepass er uendret",
-    "summary_nb": "Utgifter til barnehage, SFO og annet barnepass kan fortsatt trekkes fra på skatten med inntil 15 000 kroner for ett barn og 10 000 kroner ekstra per barn utover det første.",
+    "summary_nb": "Utgifter til barnehage, SFO og annet barnepass kan fortsatt trekkes fra på skatten med inntil 15 000 kr for ett barn og 10 000 kr ekstra per barn utover det første.",
     "effect": "uendret",
     "amounts": [
       {
@@ -312,7 +312,7 @@
     ],
     "detail": null,
     "title_nb": "Litt lavere inntektsskatt for de fleste",
-    "summary_nb": "Trygdeavgiften senkes og personfradraget økes. En lønnstaker med 750 000 kroner i lønn betaler om lag 1 800 kroner mindre i skatt i 2027.",
+    "summary_nb": "Trygdeavgiften senkes og personfradraget økes. En lønnstaker med 750 000 kr i lønn betaler om lag 1 800 kr mindre i skatt i 2027.",
     "effect": "pluss",
     "amounts": [
       {
@@ -336,7 +336,7 @@
     ],
     "detail": null,
     "title_nb": "Mer penger til barnevernet",
-    "summary_nb": "Det statlige barnevernet får om lag 510 millioner kroner mer fordi flere barn ventes å trenge plass på barnevernsinstitusjon i 2027.",
+    "summary_nb": "Det statlige barnevernet får om lag 510 mill. kr mer fordi flere barn ventes å trenge plass på barnevernsinstitusjon i 2027.",
     "effect": "pluss",
     "kind": "tilbud",
     "amounts": [],
@@ -380,7 +380,7 @@
     ],
     "detail": null,
     "title_nb": "Basislånet øker med litt over 7 000 kr",
-    "summary_nb": "Basislånet fra Lånekassen skal heretter følge lønnsveksten (grunnbeløpet i folketrygden) i stedet for prisveksten. For studieåret 2027–28 betyr det 4,21 prosent mer, litt over 7 000 kroner.",
+    "summary_nb": "Basislånet fra Lånekassen skal heretter følge lønnsveksten (grunnbeløpet i folketrygden) i stedet for prisveksten. For studieåret 2027–28 betyr det 4,21 % mer, litt over 7 000 kr.",
     "effect": "pluss",
     "kind": "far",
     "amounts": [
@@ -405,7 +405,7 @@
     ],
     "detail": null,
     "title_nb": "Andre stipend og lån justeres for prisvekst",
-    "summary_nb": "De øvrige satsene i studiestøtten, utenom basislånet og borteboerstipendet, økes med 3,8 prosent for å holde tritt med prisene.",
+    "summary_nb": "De øvrige satsene i studiestøtten, utenom basislånet og borteboerstipendet, økes med 3,8 % for å holde tritt med prisene.",
     "effect": "pluss",
     "kind": "far",
     "amounts": [],
@@ -441,7 +441,7 @@
     ],
     "detail": null,
     "title_nb": "Strømstøtte skal hindre høyere husleie i studentboliger",
-    "summary_nb": "Studentsamskipnader og studentboligstiftelser får 60 millioner kroner i strømstøtte. Den gjelder boliger med felles strømmåling og skal hindre at husleien må settes opp.",
+    "summary_nb": "Studentsamskipnader og studentboligstiftelser får 60 mill. kr i strømstøtte. Den gjelder boliger med felles strømmåling og skal hindre at husleien må settes opp.",
     "effect": "pluss",
     "kind": "tilbud",
     "amounts": [],
@@ -459,7 +459,7 @@
     ],
     "detail": null,
     "title_nb": "Folkehøgskoleelever får mindre av lånet gjort om til stipend",
-    "summary_nb": "I dag kan 40 prosent av basislånet gjøres om til stipend når du fullfører folkehøgskole. Dette foreslås kuttet til 15 prosent, altså det samme som studenter får for beståtte studiepoeng.",
+    "summary_nb": "I dag kan 40 % av basislånet gjøres om til stipend når du fullfører folkehøgskole. Dette foreslås kuttet til 15 %, altså det samme som studenter får for beståtte studiepoeng.",
     "effect": "minus",
     "kind": "far",
     "amounts": [
@@ -467,7 +467,7 @@
         "label_nb": "Andel av basislånet som blir stipend",
         "y2026": 40,
         "y2027": 15,
-        "unit": "prosent"
+        "unit": "%"
       }
     ],
     "quote": "Det innebærer at omgjøringen av lån til stipend reduseres fra 40 pst. til 15 pst. for folkehøgskoleelever.",

@@ -223,7 +223,7 @@ footer { border-top: 1px solid var(--hairline); margin-top: 48px; padding-top: 2
 .note { font-size: 14px; color: var(--text-muted); max-width: 760px; }
 .loading { padding: 80px 0; color: var(--text-muted); }
 
-/* group colour slots: 0 = income, 1..7 = spending groups in display order, 8 = "Øvrige formål" */
+/* group colour slots: 0 = income, 1..7 = spending groups in display order, 8 = "Øvrige områder" */
 :root {
   --g-0: var(--series-1); --g-1: var(--series-2); --g-2: var(--series-3); --g-3: var(--series-4); --g-4: var(--series-5);
   --g-5: var(--series-6); --g-6: var(--series-7); --g-7: var(--series-8); --g-8: var(--other);

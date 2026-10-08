@@ -3,7 +3,7 @@
   <section id="oversikt">
     <p class="muted" style="margin:0">Regjeringens forslag til statsbudsjett, lagt fram 7. oktober 2026</p>
     <h1>Hva bruker staten pengene på i 2027?</h1>
-    <div class="hero-num">{{ o.total|nb1 }} <small>milliarder kroner</small></div>
+    <div class="hero-num">{{ o.total|nb1 }} <small>mrd. kr</small></div>
     <div class="grid tiles">
       <div class="card tile"><div class="k">{{ "Mer" if o.change >= 0 else "Mindre" }} enn i 2026</div><div class="v">{{ o.change|signed1 }} mrd.</div><div class="s">{{ o.change_pct|pct }} før prisvekst</div></div>
       <div class="card tile"><div class="k">Største utgift</div><div class="v">{{ o.top_group }}</div><div class="s">{{ o.top_amount|amount }}, {{ (o.top_amount / o.total * 100)|nb }} % av alt</div></div>
@@ -22,7 +22,7 @@
     <h2>Hvor går skattepengene dine?</h2>
     <p class="lede">Skriv inn hvor mye du betaler i skatt i året, så ser du hvordan beløpet fordeles, i samme forhold som staten bruker pengene.</p>
     <form action="/#skatt" method="get" hx-get="/kvittering" hx-target="#receipt-out" hx-swap="outerHTML" hx-trigger="input delay:300ms, submit">
-      <label class="field" for="tax">Skatten din i året (kroner)</label>
+      <label class="field" for="tax">Skatten din i året (kr)</label>
       {% set own = m.tax_kroner %}
       <input id="tax" name="skatt" inputmode="numeric" autocomplete="off" value="{{ tax_kroner|nb }}"{% if own and own == tax_kroner %} data-mine="1"{% endif %}>
       <div class="chips">
@@ -70,11 +70,11 @@
 
   <section id="endringer">
     <h2>Hva endres fra 2026?</h2>
-    <p class="lede">Utgiftene øker med <b>{{ o.change|nb1 }} milliarder kroner</b> ({{ o.change_pct|pct }}) før prisvekst. Her er kapitlene som endrer seg mest.</p>
+    <p class="lede">Utgiftene øker med <b>{{ o.change|nb1 }} mrd. kr</b> ({{ o.change_pct|pct }}) før prisvekst. Her er kapitlene som endrer seg mest.</p>
     {% set top = (changes.up + changes.down)|map(attribute="change")|map("abs")|max %}
     <div class="two">
       {% for title, rows, var in [("Største økninger", changes.up, "--up"), ("Største nedganger", changes.down, "--down")] %}
-      <div class="card"><h3>{{ title }}</h3><p class="muted small" style="margin:0 0 12px">Kapitler, milliarder kroner</p><div class="bars">
+      <div class="card"><h3>{{ title }}</h3><p class="muted small" style="margin:0 0 12px">Kapitler, mrd. kr</p><div class="bars">
         {% for c in rows %}
         <div class="bar-row"><div class="lab"><b>{{ c.name }}</b><div class="muted small">{{ c.group }} · {{ c.v2026|nb1 }} → {{ c.v2027|nb1 }} mrd.</div></div>
           <div class="bar-track"><div class="bar-fill" style="width:{{ (c.change|abs) / top * 60 }}%;background:var({{ var }})"></div>
@@ -140,7 +140,7 @@
     <h2>Ordliste</h2>
     <details class="gl"><summary>Statsbudsjettet</summary><p>Statens plan for inntekter og utgifter neste år. Regjeringen legger fram et forslag i oktober, og Stortinget vedtar budsjettet før jul.</p></details>
     <details class="gl"><summary>Budsjettet utenom olje</summary><p>Tallene på denne siden holder olje- og gassinntektene utenfor, slik Finansdepartementet gjør. De går rett inn i oljefondet. Lån staten gir, for eksempel studielån, er også holdt utenfor.</p></details>
-    <details class="gl"><summary>Oljefondet (Statens pensjonsfond utland)</summary><p>Fondet der statens inntekter fra olje og gass spares. Hvert år overføres penger fra fondet til statsbudsjettet. Handlingsregelen sier at bruken over tid skal følge den forventede avkastningen, anslått til 3 prosent av fondet.</p></details>
+    <details class="gl"><summary>Oljefondet (Statens pensjonsfond utland)</summary><p>Fondet der statens inntekter fra olje og gass spares. Hvert år overføres penger fra fondet til statsbudsjettet. Handlingsregelen sier at bruken over tid skal følge den forventede avkastningen, anslått til 3 % av fondet.</p></details>
     <details class="gl"><summary>Folketrygden</summary><p>Ordningen som betaler ut pensjon, sykepenger, uføretrygd, foreldrepenger, dagpenger og mer. Den er den største utgiften i budsjettet.</p></details>
     <details class="gl"><summary>Rammetilskudd</summary><p>Penger staten gir til kommuner og fylkeskommuner uten bindinger. Sammen med skatteinntektene utgjør det kommunenes frie inntekter.</p></details>
     <details class="gl"><summary>Kapittel og post</summary><p>Budsjettet er delt inn i kapitler (ofte én etat eller ordning, for eksempel «Politiet») og poster (hva pengene brukes til, for eksempel «Driftsutgifter»).</p></details>

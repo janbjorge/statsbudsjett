@@ -213,7 +213,7 @@ function drawDiff() {
   el.replaceChildren(svg.node());
   el.parentElement.classList.toggle("overflows", Wd > el.parentElement.clientWidth);
   document.getElementById("diff-sub").textContent = unit === "nok"
-    ? "Endring i milliarder kroner. Blå er økning, rød er nedgang. Tallene i midten viser 2026 → 2027."
+    ? "Endring i mrd. kr. Blå er økning, rød er nedgang. Tallene i midten viser 2026 → 2027."
     : "Endring i prosent av 2026-beløpet. Små beløp kan gi store prosentvise endringer.";
 }
 

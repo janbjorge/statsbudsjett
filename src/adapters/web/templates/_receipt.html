@@ -1,15 +1,15 @@
 {# Tax receipt: the 100-kroner bar and the receipt for the entered amount #}
 <div id="receipt-out">
-  <div class="stack" role="img" aria-label="Fordeling av 100 kroner">
+  <div class="stack" role="img" aria-label="Fordeling av 100 kr">
     {% for g in receipt %}<div style="flex:{{ g.share }};background:var(--g-{{ group_slot(g.name) }})" data-tip="<b>{{ g.name }}</b><br>{{ g.share|nb1 }} kr av hver 100-lapp"></div>{% endfor %}
   </div>
   <div class="legend">
     {% for g in receipt %}<span><i class="sw" style="background:var(--g-{{ group_slot(g.name) }})"></i>{{ g.name }} {{ g.share|nb1 }} kr</span>{% endfor %}
   </div>
   <p class="note">Forenklet: skatten din havner i en felles pott sammen med andre inntekter og penger fra oljefondet.
-    Beløpet er fordelt etter hvor stor del av utgiftene hvert formål utgjør.</p>
+    Beløpet er fordelt etter hvor stor del av utgiftene hvert område utgjør.</p>
   <div class="receipt" aria-live="polite">
-    <h3>KVITTERING</h3><div class="c">Statsbudsjettet 2027 · din skatt fordelt</div>
+    <h3>SLIK FORDELES SKATTEN DIN</h3><div class="c">Statsbudsjettet 2027</div>
     {% for g in receipt %}
     <details {{ "open" if loop.index <= 3 }}>
       <summary class="row g"><span class="n">{{ g.name }}</span><span class="d"></span><span>{{ g.kroner|kr }}</span></summary>

@@ -7,7 +7,7 @@
     "Arbeid, familie og integrering",
     "Utdanning og forskning",
     "Samferdsel",
-    "Øvrige formål"
+    "Øvrige områder"
   ],
   "income": [
     "Skatt på inntekt og formue",
@@ -101,7 +101,7 @@
       {
         "level": 1,
         "source": "Statsbudsjettet 2026",
-        "target": "Øvrige formål",
+        "target": "Øvrige områder",
         "beløp": 379.079885
       },
       {
@@ -250,55 +250,55 @@
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Justis og beredskap",
         "beløp": 60.611972
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Klima, miljø og energi",
         "beløp": 47.470339
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Kultur og medier",
         "beløp": 27.038755
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Landbruk og mat",
         "beløp": 34.846288
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Momskompensasjon",
         "beløp": 47.95
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Næring og fiskeri",
         "beløp": 26.010489
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Renter på statsgjeld",
         "beløp": 20.0814
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Statsforvaltning og annet",
         "beløp": 58.169709
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Utenriks og bistand",
         "beløp": 56.900933
       }
@@ -385,7 +385,7 @@
       {
         "level": 1,
         "source": "Statsbudsjettet 2027",
-        "target": "Øvrige formål",
+        "target": "Øvrige områder",
         "beløp": 400.278697
       },
       {
@@ -534,55 +534,55 @@
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Justis og beredskap",
         "beløp": 65.111083
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Klima, miljø og energi",
         "beløp": 49.523954
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Kultur og medier",
         "beløp": 28.05942
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Landbruk og mat",
         "beløp": 38.495624
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Momskompensasjon",
         "beløp": 51.92
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Næring og fiskeri",
         "beløp": 26.775598
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Renter på statsgjeld",
         "beløp": 24.399107
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Statsforvaltning og annet",
         "beløp": 56.944483
       },
       {
         "level": 2,
-        "source": "Øvrige formål",
+        "source": "Øvrige områder",
         "target": "Utenriks og bistand",
         "beløp": 59.049428
       }
@@ -591,7 +591,7 @@
   "posts": [
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1,
       "kn": "H.M. Kongen og H.M. Dronningen",
@@ -602,7 +602,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1,
       "kn": "H.M. Kongen og H.M. Dronningen",
@@ -613,7 +613,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 20,
       "kn": "Statsministerens kontor",
@@ -624,7 +624,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 21,
       "kn": "Statsrådet",
@@ -635,7 +635,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 24,
       "kn": "Regjeringsadvokaten",
@@ -646,7 +646,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 24,
       "kn": "Regjeringsadvokaten",
@@ -657,7 +657,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 41,
       "kn": "Stortinget",
@@ -668,7 +668,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 41,
       "kn": "Stortinget",
@@ -679,7 +679,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 41,
       "kn": "Stortinget",
@@ -690,7 +690,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 41,
       "kn": "Stortinget",
@@ -701,7 +701,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 41,
       "kn": "Stortinget",
@@ -712,7 +712,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 42,
       "kn": "Stortingets ombudsnemnd for Forsvaret",
@@ -723,7 +723,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 42,
       "kn": "Stortingets ombudsnemnd for Forsvaret",
@@ -734,7 +734,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 43,
       "kn": "Stortingets ombud for kontroll med forvaltningen",
@@ -745,7 +745,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 44,
       "kn": "Stortingets kontrollutvalg for etterretnings-, overvåkings- og sikkerhetstjeneste",
@@ -756,7 +756,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 45,
       "kn": "Norges institusjon for menneskerettigheter",
@@ -767,7 +767,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 51,
       "kn": "Riksrevisjonen",
@@ -778,7 +778,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 51,
       "kn": "Riksrevisjonen",
@@ -789,7 +789,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 51,
       "kn": "Riksrevisjonen",
@@ -800,7 +800,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 51,
       "kn": "Riksrevisjonen",
@@ -811,7 +811,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 55,
       "kn": "Granskingskommisjon for å undersøke forhold som har blitt aktualisert gjennom offentliggjøringen av Epstein-dokumentene",
@@ -822,7 +822,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 61,
       "kn": "Høyesterett",
@@ -833,7 +833,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 100,
       "kn": "Utenriksdepartementet",
@@ -844,7 +844,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 100,
       "kn": "Utenriksdepartementet",
@@ -855,7 +855,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 100,
       "kn": "Utenriksdepartementet",
@@ -866,7 +866,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 100,
       "kn": "Utenriksdepartementet",
@@ -877,7 +877,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 100,
       "kn": "Utenriksdepartementet",
@@ -888,7 +888,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 103,
       "kn": "Regjeringens representasjon",
@@ -899,7 +899,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 104,
       "kn": "Kongefamiliens offisielle reiser til utlandet",
@@ -910,7 +910,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 105,
       "kn": "Direktoratet for eksportkontroll og sanksjoner",
@@ -921,7 +921,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 116,
       "kn": "Internasjonale organisasjoner",
@@ -932,7 +932,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 117,
       "kn": "EØS-finansieringsordningene",
@@ -943,7 +943,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 117,
       "kn": "EØS-finansieringsordningene",
@@ -954,7 +954,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 118,
       "kn": "Utenrikspolitiske satsinger",
@@ -965,7 +965,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 118,
       "kn": "Utenrikspolitiske satsinger",
@@ -976,7 +976,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 118,
       "kn": "Utenrikspolitiske satsinger",
@@ -987,7 +987,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 118,
       "kn": "Utenrikspolitiske satsinger",
@@ -998,7 +998,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 118,
       "kn": "Utenrikspolitiske satsinger",
@@ -1009,7 +1009,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 118,
       "kn": "Utenrikspolitiske satsinger",
@@ -1020,7 +1020,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 118,
       "kn": "Utenrikspolitiske satsinger",
@@ -1031,7 +1031,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 118,
       "kn": "Utenrikspolitiske satsinger",
@@ -1042,7 +1042,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 140,
       "kn": "Utenriksdepartementet",
@@ -1053,7 +1053,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 141,
       "kn": "Direktoratet for utviklingssamarbeid (Norad)",
@@ -1064,7 +1064,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 141,
       "kn": "Direktoratet for utviklingssamarbeid (Norad)",
@@ -1075,7 +1075,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 144,
       "kn": "Norsk senter for utvekslingssamarbeid (Norec)",
@@ -1086,7 +1086,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 144,
       "kn": "Norsk senter for utvekslingssamarbeid (Norec)",
@@ -1097,7 +1097,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 144,
       "kn": "Norsk senter for utvekslingssamarbeid (Norec)",
@@ -1108,7 +1108,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 144,
       "kn": "Norsk senter for utvekslingssamarbeid (Norec)",
@@ -1119,7 +1119,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 150,
       "kn": "Humanitær bistand",
@@ -1130,7 +1130,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 150,
       "kn": "Humanitær bistand",
@@ -1141,7 +1141,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 150,
       "kn": "Humanitær bistand",
@@ -1152,7 +1152,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 151,
       "kn": "Fred, sikkerhet og globalt samarbeid",
@@ -1163,7 +1163,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 151,
       "kn": "Fred, sikkerhet og globalt samarbeid",
@@ -1174,7 +1174,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 151,
       "kn": "Fred, sikkerhet og globalt samarbeid",
@@ -1185,7 +1185,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 151,
       "kn": "Fred, sikkerhet og globalt samarbeid",
@@ -1196,7 +1196,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 152,
       "kn": "Menneskerettigheter",
@@ -1207,7 +1207,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 152,
       "kn": "Menneskerettigheter",
@@ -1218,7 +1218,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 159,
       "kn": "Regionbevilgninger",
@@ -1229,7 +1229,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 159,
       "kn": "Regionbevilgninger",
@@ -1240,7 +1240,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 159,
       "kn": "Regionbevilgninger",
@@ -1251,7 +1251,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 159,
       "kn": "Regionbevilgninger",
@@ -1262,7 +1262,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 159,
       "kn": "Regionbevilgninger",
@@ -1273,7 +1273,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 159,
       "kn": "Regionbevilgninger",
@@ -1284,7 +1284,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 159,
       "kn": "Regionbevilgninger",
@@ -1295,7 +1295,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 160,
       "kn": "Helse",
@@ -1306,7 +1306,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 160,
       "kn": "Helse",
@@ -1317,7 +1317,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 161,
       "kn": "Utdanning, forskning og offentlige institusjoner",
@@ -1328,7 +1328,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 161,
       "kn": "Utdanning, forskning og offentlige institusjoner",
@@ -1339,7 +1339,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 161,
       "kn": "Utdanning, forskning og offentlige institusjoner",
@@ -1350,7 +1350,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 161,
       "kn": "Utdanning, forskning og offentlige institusjoner",
@@ -1361,7 +1361,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 162,
       "kn": "Næringsutvikling, matsystemer og fornybar energi",
@@ -1372,7 +1372,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 162,
       "kn": "Næringsutvikling, matsystemer og fornybar energi",
@@ -1383,7 +1383,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 162,
       "kn": "Næringsutvikling, matsystemer og fornybar energi",
@@ -1394,7 +1394,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 163,
       "kn": "Klima, miljø og hav",
@@ -1405,7 +1405,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 163,
       "kn": "Klima, miljø og hav",
@@ -1416,7 +1416,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 164,
       "kn": "Likestilling",
@@ -1427,7 +1427,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 164,
       "kn": "Likestilling",
@@ -1438,7 +1438,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 164,
       "kn": "Likestilling",
@@ -1449,7 +1449,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 165,
       "kn": "Norfund",
@@ -1460,7 +1460,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 165,
       "kn": "Norfund",
@@ -1471,7 +1471,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 165,
       "kn": "Norfund",
@@ -1482,7 +1482,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 165,
       "kn": "Norfund",
@@ -1493,7 +1493,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 170,
       "kn": "Sivilt samfunn",
@@ -1504,7 +1504,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 171,
       "kn": "FNs utviklingsarbeid",
@@ -1515,7 +1515,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 171,
       "kn": "FNs utviklingsarbeid",
@@ -1526,7 +1526,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 171,
       "kn": "FNs utviklingsarbeid",
@@ -1537,7 +1537,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 172,
       "kn": "Multilaterale finansinstitusjoner og gjeldslette",
@@ -1548,7 +1548,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 172,
       "kn": "Multilaterale finansinstitusjoner og gjeldslette",
@@ -1559,7 +1559,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 172,
       "kn": "Multilaterale finansinstitusjoner og gjeldslette",
@@ -1570,7 +1570,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Utenriks og bistand",
       "k": 179,
       "kn": "Flyktningtiltak i Norge",
@@ -2703,7 +2703,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 300,
       "kn": "Kultur- og likestillingsdepartementet",
@@ -2714,7 +2714,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 300,
       "kn": "Kultur- og likestillingsdepartementet",
@@ -2725,7 +2725,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 300,
       "kn": "Kultur- og likestillingsdepartementet",
@@ -2736,7 +2736,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 300,
       "kn": "Kultur- og likestillingsdepartementet",
@@ -2747,7 +2747,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 315,
       "kn": "Frivillighetsformål",
@@ -2758,7 +2758,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 315,
       "kn": "Frivillighetsformål",
@@ -2769,7 +2769,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 315,
       "kn": "Frivillighetsformål",
@@ -2780,7 +2780,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 315,
       "kn": "Frivillighetsformål",
@@ -2791,7 +2791,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 315,
       "kn": "Frivillighetsformål",
@@ -2802,7 +2802,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 315,
       "kn": "Frivillighetsformål",
@@ -2813,7 +2813,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 315,
       "kn": "Frivillighetsformål",
@@ -2824,7 +2824,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 315,
       "kn": "Frivillighetsformål",
@@ -2835,7 +2835,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 315,
       "kn": "Frivillighetsformål",
@@ -2846,7 +2846,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 315,
       "kn": "Frivillighetsformål",
@@ -2857,7 +2857,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 320,
       "kn": "Kulturdirektoratet og Kulturrådet m.m.",
@@ -2868,7 +2868,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 320,
       "kn": "Kulturdirektoratet og Kulturrådet m.m.",
@@ -2879,7 +2879,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 320,
       "kn": "Kulturdirektoratet og Kulturrådet m.m.",
@@ -2890,7 +2890,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 320,
       "kn": "Kulturdirektoratet og Kulturrådet m.m.",
@@ -2901,7 +2901,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 320,
       "kn": "Kulturdirektoratet og Kulturrådet m.m.",
@@ -2912,7 +2912,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 320,
       "kn": "Kulturdirektoratet og Kulturrådet m.m.",
@@ -2923,7 +2923,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 320,
       "kn": "Kulturdirektoratet og Kulturrådet m.m.",
@@ -2934,7 +2934,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 320,
       "kn": "Kulturdirektoratet og Kulturrådet m.m.",
@@ -2945,7 +2945,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 322,
       "kn": "Bygg og offentlige rom",
@@ -2956,7 +2956,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 322,
       "kn": "Bygg og offentlige rom",
@@ -2967,7 +2967,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 322,
       "kn": "Bygg og offentlige rom",
@@ -2978,7 +2978,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 322,
       "kn": "Bygg og offentlige rom",
@@ -2989,7 +2989,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 323,
       "kn": "Musikk og scenekunst",
@@ -3000,7 +3000,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 323,
       "kn": "Musikk og scenekunst",
@@ -3011,7 +3011,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 323,
       "kn": "Musikk og scenekunst",
@@ -3022,7 +3022,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 323,
       "kn": "Musikk og scenekunst",
@@ -3033,7 +3033,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 323,
       "kn": "Musikk og scenekunst",
@@ -3044,7 +3044,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 325,
       "kn": "Allmenne kulturformål",
@@ -3055,7 +3055,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 325,
       "kn": "Allmenne kulturformål",
@@ -3066,7 +3066,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 325,
       "kn": "Allmenne kulturformål",
@@ -3077,7 +3077,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 325,
       "kn": "Allmenne kulturformål",
@@ -3088,7 +3088,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 325,
       "kn": "Allmenne kulturformål",
@@ -3099,7 +3099,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 325,
       "kn": "Allmenne kulturformål",
@@ -3110,7 +3110,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 325,
       "kn": "Allmenne kulturformål",
@@ -3121,7 +3121,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 325,
       "kn": "Allmenne kulturformål",
@@ -3132,7 +3132,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 326,
       "kn": "Språk- og bibliotekformål",
@@ -3143,7 +3143,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 326,
       "kn": "Språk- og bibliotekformål",
@@ -3154,7 +3154,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 326,
       "kn": "Språk- og bibliotekformål",
@@ -3165,7 +3165,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 326,
       "kn": "Språk- og bibliotekformål",
@@ -3176,7 +3176,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 326,
       "kn": "Språk- og bibliotekformål",
@@ -3187,7 +3187,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 326,
       "kn": "Språk- og bibliotekformål",
@@ -3198,7 +3198,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 326,
       "kn": "Språk- og bibliotekformål",
@@ -3209,7 +3209,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 327,
       "kn": "Nidaros domkirkes restaureringsarbeider mv.",
@@ -3220,7 +3220,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 327,
       "kn": "Nidaros domkirkes restaureringsarbeider mv.",
@@ -3231,7 +3231,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 327,
       "kn": "Nidaros domkirkes restaureringsarbeider mv.",
@@ -3242,7 +3242,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 328,
       "kn": "Museer m.m.",
@@ -3253,7 +3253,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 328,
       "kn": "Museer m.m.",
@@ -3264,7 +3264,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 329,
       "kn": "Arkivformål",
@@ -3275,7 +3275,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 329,
       "kn": "Arkivformål",
@@ -3286,7 +3286,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 329,
       "kn": "Arkivformål",
@@ -3297,7 +3297,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 329,
       "kn": "Arkivformål",
@@ -3308,7 +3308,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 334,
       "kn": "Film- og dataspillformål",
@@ -3319,7 +3319,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 334,
       "kn": "Film- og dataspillformål",
@@ -3330,7 +3330,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 334,
       "kn": "Film- og dataspillformål",
@@ -3341,7 +3341,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 334,
       "kn": "Film- og dataspillformål",
@@ -3352,7 +3352,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 334,
       "kn": "Film- og dataspillformål",
@@ -3363,7 +3363,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 334,
       "kn": "Film- og dataspillformål",
@@ -3374,7 +3374,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 335,
       "kn": "Medieformål",
@@ -3385,7 +3385,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 335,
       "kn": "Medieformål",
@@ -3396,7 +3396,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 335,
       "kn": "Medieformål",
@@ -3407,7 +3407,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 335,
       "kn": "Medieformål",
@@ -3418,7 +3418,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 335,
       "kn": "Medieformål",
@@ -3429,7 +3429,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 335,
       "kn": "Medieformål",
@@ -3440,7 +3440,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 335,
       "kn": "Medieformål",
@@ -3451,7 +3451,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 337,
       "kn": "Kompensasjons- og vederlagsordninger",
@@ -3462,7 +3462,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 337,
       "kn": "Kompensasjons- og vederlagsordninger",
@@ -3473,7 +3473,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 339,
       "kn": "Pengespill, lotterier og stiftelser",
@@ -3484,7 +3484,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 339,
       "kn": "Pengespill, lotterier og stiftelser",
@@ -3495,7 +3495,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 350,
       "kn": "Sekretariatet for Diskrimineringsnemnda",
@@ -3506,7 +3506,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 351,
       "kn": "Likestilling",
@@ -3517,7 +3517,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 351,
       "kn": "Likestilling",
@@ -3528,7 +3528,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 351,
       "kn": "Likestilling",
@@ -3539,7 +3539,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 351,
       "kn": "Likestilling",
@@ -3550,7 +3550,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 352,
       "kn": "Nedsatt funksjonsevne",
@@ -3561,7 +3561,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 352,
       "kn": "Nedsatt funksjonsevne",
@@ -3572,7 +3572,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 352,
       "kn": "Nedsatt funksjonsevne",
@@ -3583,7 +3583,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 352,
       "kn": "Nedsatt funksjonsevne",
@@ -3594,7 +3594,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Kultur og medier",
       "k": 353,
       "kn": "Likestillings- og diskrimineringsombudet",
@@ -3605,7 +3605,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 400,
       "kn": "Justis- og beredskapsdepartementet",
@@ -3616,7 +3616,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 400,
       "kn": "Justis- og beredskapsdepartementet",
@@ -3627,7 +3627,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 400,
       "kn": "Justis- og beredskapsdepartementet",
@@ -3638,7 +3638,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 400,
       "kn": "Justis- og beredskapsdepartementet",
@@ -3649,7 +3649,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 410,
       "kn": "Domstolene",
@@ -3660,7 +3660,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 410,
       "kn": "Domstolene",
@@ -3671,7 +3671,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 410,
       "kn": "Domstolene",
@@ -3682,7 +3682,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 414,
       "kn": "Forliksråd og andre domsutgifter",
@@ -3693,7 +3693,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 414,
       "kn": "Forliksråd og andre domsutgifter",
@@ -3704,7 +3704,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 430,
       "kn": "Kriminalomsorgen",
@@ -3715,7 +3715,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 430,
       "kn": "Kriminalomsorgen",
@@ -3726,7 +3726,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 430,
       "kn": "Kriminalomsorgen",
@@ -3737,7 +3737,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 430,
       "kn": "Kriminalomsorgen",
@@ -3748,7 +3748,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 430,
       "kn": "Kriminalomsorgen",
@@ -3759,7 +3759,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 430,
       "kn": "Kriminalomsorgen",
@@ -3770,7 +3770,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 432,
       "kn": "Høyskolen for kriminalomsorg",
@@ -3781,7 +3781,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 433,
       "kn": "Konfliktrådet",
@@ -3792,7 +3792,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 433,
       "kn": "Konfliktrådet",
@@ -3803,7 +3803,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 433,
       "kn": "Konfliktrådet",
@@ -3814,7 +3814,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 440,
       "kn": "Politiet",
@@ -3825,7 +3825,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 440,
       "kn": "Politiet",
@@ -3836,7 +3836,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 440,
       "kn": "Politiet",
@@ -3847,7 +3847,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 440,
       "kn": "Politiet",
@@ -3858,7 +3858,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 440,
       "kn": "Politiet",
@@ -3869,7 +3869,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 440,
       "kn": "Politiet",
@@ -3880,7 +3880,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 440,
       "kn": "Politiet",
@@ -3891,7 +3891,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 440,
       "kn": "Politiet",
@@ -3902,7 +3902,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 440,
       "kn": "Politiet",
@@ -3913,7 +3913,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 442,
       "kn": "Politihøgskolen",
@@ -3924,7 +3924,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 443,
       "kn": "Påtalemyndigheten i politiet",
@@ -3935,7 +3935,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 444,
       "kn": "Politiets sikkerhetstjeneste (PST)",
@@ -3946,7 +3946,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 444,
       "kn": "Politiets sikkerhetstjeneste (PST)",
@@ -3957,7 +3957,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 445,
       "kn": "Den høyere påtalemyndighet",
@@ -3968,7 +3968,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 448,
       "kn": "Grensekommissæren",
@@ -3979,7 +3979,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 451,
       "kn": "Direktoratet for samfunnssikkerhet og beredskap",
@@ -3990,7 +3990,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 451,
       "kn": "Direktoratet for samfunnssikkerhet og beredskap",
@@ -4001,7 +4001,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 451,
       "kn": "Direktoratet for samfunnssikkerhet og beredskap",
@@ -4012,7 +4012,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 451,
       "kn": "Direktoratet for samfunnssikkerhet og beredskap",
@@ -4023,7 +4023,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 451,
       "kn": "Direktoratet for samfunnssikkerhet og beredskap",
@@ -4034,7 +4034,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 451,
       "kn": "Direktoratet for samfunnssikkerhet og beredskap",
@@ -4045,7 +4045,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 452,
       "kn": "Sentral krisehåndtering",
@@ -4056,7 +4056,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 453,
       "kn": "Klareringsdirektoratet",
@@ -4067,7 +4067,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 454,
       "kn": "Redningshelikoptertjenesten",
@@ -4078,7 +4078,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 454,
       "kn": "Redningshelikoptertjenesten",
@@ -4089,7 +4089,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 455,
       "kn": "Redningstjenesten",
@@ -4100,7 +4100,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 455,
       "kn": "Redningstjenesten",
@@ -4111,7 +4111,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 455,
       "kn": "Redningstjenesten",
@@ -4122,7 +4122,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 455,
       "kn": "Redningstjenesten",
@@ -4133,7 +4133,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 455,
       "kn": "Redningstjenesten",
@@ -4144,7 +4144,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 457,
       "kn": "Nasjonal sikkerhetsmyndighet",
@@ -4155,7 +4155,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 457,
       "kn": "Nasjonal sikkerhetsmyndighet",
@@ -4166,7 +4166,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 460,
       "kn": "Spesialenheten for politisaker",
@@ -4177,7 +4177,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 461,
       "kn": "Advokattilsynet",
@@ -4188,7 +4188,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 466,
       "kn": "Særskilte straffesaksutgifter m.m.",
@@ -4199,7 +4199,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 466,
       "kn": "Særskilte straffesaksutgifter m.m.",
@@ -4210,7 +4210,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 467,
       "kn": "Norsk Lovtidend",
@@ -4221,7 +4221,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 468,
       "kn": "Kommisjonen for gjenopptakelse av straffesaker",
@@ -4232,7 +4232,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 470,
       "kn": "Fri rettshjelp",
@@ -4243,7 +4243,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 470,
       "kn": "Fri rettshjelp",
@@ -4254,7 +4254,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 471,
       "kn": "Statens erstatningsansvar og Stortingets rettferdsvederlagsordning",
@@ -4265,7 +4265,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 471,
       "kn": "Statens erstatningsansvar og Stortingets rettferdsvederlagsordning",
@@ -4276,7 +4276,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 471,
       "kn": "Statens erstatningsansvar og Stortingets rettferdsvederlagsordning",
@@ -4287,7 +4287,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 473,
       "kn": "Statens sivilrettsforvaltning",
@@ -4298,7 +4298,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 473,
       "kn": "Statens sivilrettsforvaltning",
@@ -4309,7 +4309,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 473,
       "kn": "Statens sivilrettsforvaltning",
@@ -4320,7 +4320,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 475,
       "kn": "Bobehandling",
@@ -4331,7 +4331,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 475,
       "kn": "Bobehandling",
@@ -4342,7 +4342,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 480,
       "kn": "Svalbardbudsjettet",
@@ -4353,7 +4353,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 481,
       "kn": "Samfunnet Jan Mayen",
@@ -4364,7 +4364,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 490,
       "kn": "Utlendingsdirektoratet",
@@ -4375,7 +4375,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 490,
       "kn": "Utlendingsdirektoratet",
@@ -4386,7 +4386,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 490,
       "kn": "Utlendingsdirektoratet",
@@ -4397,7 +4397,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 490,
       "kn": "Utlendingsdirektoratet",
@@ -4408,7 +4408,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 490,
       "kn": "Utlendingsdirektoratet",
@@ -4419,7 +4419,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 490,
       "kn": "Utlendingsdirektoratet",
@@ -4430,7 +4430,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 490,
       "kn": "Utlendingsdirektoratet",
@@ -4441,7 +4441,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 490,
       "kn": "Utlendingsdirektoratet",
@@ -4452,7 +4452,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 490,
       "kn": "Utlendingsdirektoratet",
@@ -4463,7 +4463,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 490,
       "kn": "Utlendingsdirektoratet",
@@ -4474,7 +4474,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 490,
       "kn": "Utlendingsdirektoratet",
@@ -4485,7 +4485,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 490,
       "kn": "Utlendingsdirektoratet",
@@ -4496,7 +4496,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 490,
       "kn": "Utlendingsdirektoratet",
@@ -4507,7 +4507,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 491,
       "kn": "Utlendingsnemnda",
@@ -4518,7 +4518,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Justis og beredskap",
       "k": 491,
       "kn": "Utlendingsnemnda",
@@ -4529,7 +4529,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 500,
       "kn": "Kommunal- og distriktsdepartementet",
@@ -4540,7 +4540,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 500,
       "kn": "Kommunal- og distriktsdepartementet",
@@ -4551,7 +4551,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 500,
       "kn": "Kommunal- og distriktsdepartementet",
@@ -4562,7 +4562,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 500,
       "kn": "Kommunal- og distriktsdepartementet",
@@ -4573,7 +4573,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 500,
       "kn": "Kommunal- og distriktsdepartementet",
@@ -4584,7 +4584,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 553,
       "kn": "Regional- og distriktsutvikling",
@@ -4595,7 +4595,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 553,
       "kn": "Regional- og distriktsutvikling",
@@ -4606,7 +4606,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 553,
       "kn": "Regional- og distriktsutvikling",
@@ -4617,7 +4617,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 553,
       "kn": "Regional- og distriktsutvikling",
@@ -4628,7 +4628,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 553,
       "kn": "Regional- og distriktsutvikling",
@@ -4639,7 +4639,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 553,
       "kn": "Regional- og distriktsutvikling",
@@ -4650,7 +4650,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 554,
       "kn": "Kompetansesenter for distriktsutvikling",
@@ -4661,7 +4661,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 554,
       "kn": "Kompetansesenter for distriktsutvikling",
@@ -4672,7 +4672,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 560,
       "kn": "Samiske formål",
@@ -4683,7 +4683,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 560,
       "kn": "Samiske formål",
@@ -4694,7 +4694,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 560,
       "kn": "Samiske formål",
@@ -4705,7 +4705,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 563,
       "kn": "Internasjonalt reindriftssenter",
@@ -4716,7 +4716,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 563,
       "kn": "Internasjonalt reindriftssenter",
@@ -4727,7 +4727,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 567,
       "kn": "Nasjonale minoriteter",
@@ -4738,7 +4738,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 567,
       "kn": "Nasjonale minoriteter",
@@ -4749,7 +4749,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 567,
       "kn": "Nasjonale minoriteter",
@@ -4760,7 +4760,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 567,
       "kn": "Nasjonale minoriteter",
@@ -4771,7 +4771,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 567,
       "kn": "Nasjonale minoriteter",
@@ -4782,7 +4782,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 567,
       "kn": "Nasjonale minoriteter",
@@ -5024,7 +5024,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 581,
       "kn": "Bolig- og bomiljøtiltak",
@@ -5035,7 +5035,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 581,
       "kn": "Bolig- og bomiljøtiltak",
@@ -5046,7 +5046,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 590,
       "kn": "Planlegging og byutvikling",
@@ -5057,7 +5057,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 590,
       "kn": "Planlegging og byutvikling",
@@ -5068,7 +5068,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 590,
       "kn": "Planlegging og byutvikling",
@@ -5079,7 +5079,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 590,
       "kn": "Planlegging og byutvikling",
@@ -5090,7 +5090,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 590,
       "kn": "Planlegging og byutvikling",
@@ -5101,7 +5101,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 590,
       "kn": "Planlegging og byutvikling",
@@ -5112,7 +5112,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 595,
       "kn": "Statens kartverk",
@@ -5123,7 +5123,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 595,
       "kn": "Statens kartverk",
@@ -7455,7 +7455,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7466,7 +7466,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7477,7 +7477,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7488,7 +7488,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7499,7 +7499,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7510,7 +7510,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7521,7 +7521,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7532,7 +7532,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7543,7 +7543,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7554,7 +7554,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7565,7 +7565,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7576,7 +7576,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7587,7 +7587,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7598,7 +7598,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7609,7 +7609,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7620,7 +7620,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7631,7 +7631,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7642,7 +7642,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 900,
       "kn": "Nærings- og fiskeridepartementet",
@@ -7653,7 +7653,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 901,
       "kn": "Havbunns- og kystkartlegging",
@@ -7664,7 +7664,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 901,
       "kn": "Havbunns- og kystkartlegging",
@@ -7675,7 +7675,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 902,
       "kn": "Justervesenet",
@@ -7686,7 +7686,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 902,
       "kn": "Justervesenet",
@@ -7697,7 +7697,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 902,
       "kn": "Justervesenet",
@@ -7708,7 +7708,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 903,
       "kn": "Norsk akkreditering",
@@ -7719,7 +7719,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 904,
       "kn": "Brønnøysundregistrene",
@@ -7730,7 +7730,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 904,
       "kn": "Brønnøysundregistrene",
@@ -7741,7 +7741,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 905,
       "kn": "Norges geologiske undersøkelse",
@@ -7752,7 +7752,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 905,
       "kn": "Norges geologiske undersøkelse",
@@ -7763,7 +7763,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 906,
       "kn": "Direktoratet for mineralforvaltning med Bergmesteren for Svalbard",
@@ -7774,7 +7774,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 906,
       "kn": "Direktoratet for mineralforvaltning med Bergmesteren for Svalbard",
@@ -7785,7 +7785,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 906,
       "kn": "Direktoratet for mineralforvaltning med Bergmesteren for Svalbard",
@@ -7796,7 +7796,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 906,
       "kn": "Direktoratet for mineralforvaltning med Bergmesteren for Svalbard",
@@ -7807,7 +7807,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 907,
       "kn": "Norsk nukleær dekommisjonering",
@@ -7818,7 +7818,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 907,
       "kn": "Norsk nukleær dekommisjonering",
@@ -7829,7 +7829,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 907,
       "kn": "Norsk nukleær dekommisjonering",
@@ -7840,7 +7840,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 907,
       "kn": "Norsk nukleær dekommisjonering",
@@ -7851,7 +7851,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 907,
       "kn": "Norsk nukleær dekommisjonering",
@@ -7862,7 +7862,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 908,
       "kn": "Institutt for energiteknikk",
@@ -7873,7 +7873,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 909,
       "kn": "Tiltak for sysselsetting av sjøfolk",
@@ -7884,7 +7884,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 910,
       "kn": "Sjøfartsdirektoratet",
@@ -7895,7 +7895,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 911,
       "kn": "Konkurransetilsynet",
@@ -7906,7 +7906,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 911,
       "kn": "Konkurransetilsynet",
@@ -7917,7 +7917,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 912,
       "kn": "Klagenemndssekretariatet",
@@ -7928,7 +7928,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 916,
       "kn": "Kystverket",
@@ -7939,7 +7939,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 916,
       "kn": "Kystverket",
@@ -7950,7 +7950,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 916,
       "kn": "Kystverket",
@@ -7961,7 +7961,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 916,
       "kn": "Kystverket",
@@ -7972,7 +7972,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 916,
       "kn": "Kystverket",
@@ -7983,7 +7983,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 916,
       "kn": "Kystverket",
@@ -7994,7 +7994,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 916,
       "kn": "Kystverket",
@@ -8005,7 +8005,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 916,
       "kn": "Kystverket",
@@ -8016,7 +8016,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 917,
       "kn": "Fiskeridirektoratet",
@@ -8027,7 +8027,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 917,
       "kn": "Fiskeridirektoratet",
@@ -8038,7 +8038,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 917,
       "kn": "Fiskeridirektoratet",
@@ -8049,7 +8049,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 919,
       "kn": "Diverse fiskeriformål",
@@ -8060,7 +8060,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 919,
       "kn": "Diverse fiskeriformål",
@@ -8071,7 +8071,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 919,
       "kn": "Diverse fiskeriformål",
@@ -8082,7 +8082,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 919,
       "kn": "Diverse fiskeriformål",
@@ -8093,7 +8093,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 919,
       "kn": "Diverse fiskeriformål",
@@ -8104,7 +8104,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 919,
       "kn": "Diverse fiskeriformål",
@@ -8115,7 +8115,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 919,
       "kn": "Diverse fiskeriformål",
@@ -8126,7 +8126,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 920,
       "kn": "Norges forskningsråd",
@@ -8137,7 +8137,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 920,
       "kn": "Norges forskningsråd",
@@ -8148,7 +8148,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 920,
       "kn": "Norges forskningsråd",
@@ -8159,7 +8159,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 920,
       "kn": "Norges forskningsråd",
@@ -8170,7 +8170,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 922,
       "kn": "Romvirksomhet",
@@ -8181,7 +8181,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 922,
       "kn": "Romvirksomhet",
@@ -8192,7 +8192,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 922,
       "kn": "Romvirksomhet",
@@ -8203,7 +8203,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 922,
       "kn": "Romvirksomhet",
@@ -8214,7 +8214,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 922,
       "kn": "Romvirksomhet",
@@ -8225,7 +8225,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 922,
       "kn": "Romvirksomhet",
@@ -8236,7 +8236,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 922,
       "kn": "Romvirksomhet",
@@ -8247,7 +8247,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 923,
       "kn": "Havforskningsinstituttet",
@@ -8258,7 +8258,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 923,
       "kn": "Havforskningsinstituttet",
@@ -8269,7 +8269,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 923,
       "kn": "Havforskningsinstituttet",
@@ -8280,7 +8280,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 923,
       "kn": "Havforskningsinstituttet",
@@ -8291,7 +8291,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 923,
       "kn": "Havforskningsinstituttet",
@@ -8302,7 +8302,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 924,
       "kn": "Internasjonale samarbeidsprogrammer",
@@ -8313,7 +8313,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 928,
       "kn": "Annen marin forskning og utvikling",
@@ -8324,7 +8324,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 928,
       "kn": "Annen marin forskning og utvikling",
@@ -8335,7 +8335,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 928,
       "kn": "Annen marin forskning og utvikling",
@@ -8346,7 +8346,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 930,
       "kn": "Design og arkitektur Norge",
@@ -8357,7 +8357,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 935,
       "kn": "Patentstyret",
@@ -8368,7 +8368,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 936,
       "kn": "Klagenemnda for industrielle rettigheter",
@@ -8379,7 +8379,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 940,
       "kn": "Internasjonaliseringstiltak",
@@ -8390,7 +8390,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 940,
       "kn": "Internasjonaliseringstiltak",
@@ -8401,7 +8401,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 940,
       "kn": "Internasjonaliseringstiltak",
@@ -8412,7 +8412,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 950,
       "kn": "Forvaltning av statlig eierskap",
@@ -8423,7 +8423,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 951,
       "kn": "Store Norske Spitsbergen Kulkompani AS",
@@ -8434,7 +8434,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 951,
       "kn": "Store Norske Spitsbergen Kulkompani AS",
@@ -8445,7 +8445,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 952,
       "kn": "Investinor AS",
@@ -8456,7 +8456,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 954,
       "kn": "Petoro AS",
@@ -8467,7 +8467,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1100,
       "kn": "Landbruks- og matdepartementet",
@@ -8478,7 +8478,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1100,
       "kn": "Landbruks- og matdepartementet",
@@ -8489,7 +8489,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1100,
       "kn": "Landbruks- og matdepartementet",
@@ -8500,7 +8500,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1100,
       "kn": "Landbruks- og matdepartementet",
@@ -8511,7 +8511,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1115,
       "kn": "Mattilsynet",
@@ -8522,7 +8522,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1115,
       "kn": "Mattilsynet",
@@ -8533,7 +8533,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1115,
       "kn": "Mattilsynet",
@@ -8544,7 +8544,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1135,
       "kn": "Veterinærinstituttet",
@@ -8555,7 +8555,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1136,
       "kn": "Norsk institutt for bioøkonomi",
@@ -8566,7 +8566,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1137,
       "kn": "Forskning og innovasjon",
@@ -8577,7 +8577,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1137,
       "kn": "Forskning og innovasjon",
@@ -8588,7 +8588,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1137,
       "kn": "Forskning og innovasjon",
@@ -8599,7 +8599,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1137,
       "kn": "Forskning og innovasjon",
@@ -8610,7 +8610,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1138,
       "kn": "Støtte til organisasjoner m.m.",
@@ -8621,7 +8621,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1138,
       "kn": "Støtte til organisasjoner m.m.",
@@ -8632,7 +8632,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1138,
       "kn": "Støtte til organisasjoner m.m.",
@@ -8643,7 +8643,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1138,
       "kn": "Støtte til organisasjoner m.m.",
@@ -8654,7 +8654,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1138,
       "kn": "Støtte til organisasjoner m.m.",
@@ -8665,7 +8665,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1139,
       "kn": "Genressurser, miljø- og ressursregistreringer",
@@ -8676,7 +8676,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1139,
       "kn": "Genressurser, miljø- og ressursregistreringer",
@@ -8687,7 +8687,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1139,
       "kn": "Genressurser, miljø- og ressursregistreringer",
@@ -8698,7 +8698,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1139,
       "kn": "Genressurser, miljø- og ressursregistreringer",
@@ -8709,7 +8709,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1140,
       "kn": "Høstbare viltressurser - forvaltning og tilskudd til viltformål (Viltfondet) m.m.",
@@ -8720,7 +8720,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1140,
       "kn": "Høstbare viltressurser - forvaltning og tilskudd til viltformål (Viltfondet) m.m.",
@@ -8731,7 +8731,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1140,
       "kn": "Høstbare viltressurser - forvaltning og tilskudd til viltformål (Viltfondet) m.m.",
@@ -8742,7 +8742,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1141,
       "kn": "Høstbare viltressurser - jegerprøve, tilskudd til organisasjoner m.m.",
@@ -8753,7 +8753,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1141,
       "kn": "Høstbare viltressurser - jegerprøve, tilskudd til organisasjoner m.m.",
@@ -8764,7 +8764,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1142,
       "kn": "Landbruksdirektoratet",
@@ -8775,7 +8775,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1142,
       "kn": "Landbruksdirektoratet",
@@ -8786,7 +8786,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1142,
       "kn": "Landbruksdirektoratet",
@@ -8797,7 +8797,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1142,
       "kn": "Landbruksdirektoratet",
@@ -8808,7 +8808,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1142,
       "kn": "Landbruksdirektoratet",
@@ -8819,7 +8819,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1142,
       "kn": "Landbruksdirektoratet",
@@ -8830,7 +8830,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1142,
       "kn": "Landbruksdirektoratet",
@@ -8841,7 +8841,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1142,
       "kn": "Landbruksdirektoratet",
@@ -8852,7 +8852,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1142,
       "kn": "Landbruksdirektoratet",
@@ -8863,7 +8863,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1142,
       "kn": "Landbruksdirektoratet",
@@ -8874,7 +8874,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1142,
       "kn": "Landbruksdirektoratet",
@@ -8885,7 +8885,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1142,
       "kn": "Landbruksdirektoratet",
@@ -8896,7 +8896,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1142,
       "kn": "Landbruksdirektoratet",
@@ -8907,7 +8907,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1142,
       "kn": "Landbruksdirektoratet",
@@ -8918,7 +8918,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1142,
       "kn": "Landbruksdirektoratet",
@@ -8929,7 +8929,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1142,
       "kn": "Landbruksdirektoratet",
@@ -8940,7 +8940,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1142,
       "kn": "Landbruksdirektoratet",
@@ -8951,7 +8951,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1148,
       "kn": "Naturskade - erstatninger",
@@ -8962,7 +8962,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1149,
       "kn": "Verdiskapings- og utviklingstiltak i landbruket",
@@ -8973,7 +8973,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1149,
       "kn": "Verdiskapings- og utviklingstiltak i landbruket",
@@ -8984,7 +8984,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1149,
       "kn": "Verdiskapings- og utviklingstiltak i landbruket",
@@ -8995,7 +8995,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1150,
       "kn": "Til gjennomføring av jordbruksavtalen m.m.",
@@ -9006,7 +9006,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1150,
       "kn": "Til gjennomføring av jordbruksavtalen m.m.",
@@ -9017,7 +9017,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1150,
       "kn": "Til gjennomføring av jordbruksavtalen m.m.",
@@ -9028,7 +9028,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1150,
       "kn": "Til gjennomføring av jordbruksavtalen m.m.",
@@ -9039,7 +9039,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1150,
       "kn": "Til gjennomføring av jordbruksavtalen m.m.",
@@ -9050,7 +9050,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1150,
       "kn": "Til gjennomføring av jordbruksavtalen m.m.",
@@ -9061,7 +9061,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1150,
       "kn": "Til gjennomføring av jordbruksavtalen m.m.",
@@ -9072,7 +9072,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1150,
       "kn": "Til gjennomføring av jordbruksavtalen m.m.",
@@ -9083,7 +9083,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1150,
       "kn": "Til gjennomføring av jordbruksavtalen m.m.",
@@ -9094,7 +9094,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1151,
       "kn": "Til gjennomføring av reindriftsavtalen",
@@ -9105,7 +9105,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1151,
       "kn": "Til gjennomføring av reindriftsavtalen",
@@ -9116,7 +9116,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1151,
       "kn": "Til gjennomføring av reindriftsavtalen",
@@ -9127,7 +9127,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1151,
       "kn": "Til gjennomføring av reindriftsavtalen",
@@ -9138,7 +9138,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1152,
       "kn": "Innovasjon Norge",
@@ -9149,7 +9149,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1152,
       "kn": "Innovasjon Norge",
@@ -9160,7 +9160,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1161,
       "kn": "Myndighetsoppgaver og sektorpolitiske oppgaver på statsgrunn",
@@ -9171,7 +9171,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Landbruk og mat",
       "k": 1161,
       "kn": "Myndighetsoppgaver og sektorpolitiske oppgaver på statsgrunn",
@@ -9732,7 +9732,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1400,
       "kn": "Klima- og miljødepartementet",
@@ -9743,7 +9743,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1400,
       "kn": "Klima- og miljødepartementet",
@@ -9754,7 +9754,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1400,
       "kn": "Klima- og miljødepartementet",
@@ -9765,7 +9765,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1400,
       "kn": "Klima- og miljødepartementet",
@@ -9776,7 +9776,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1400,
       "kn": "Klima- og miljødepartementet",
@@ -9787,7 +9787,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1410,
       "kn": "Kunnskap om klima og miljø",
@@ -9798,7 +9798,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1410,
       "kn": "Kunnskap om klima og miljø",
@@ -9809,7 +9809,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1410,
       "kn": "Kunnskap om klima og miljø",
@@ -9820,7 +9820,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1410,
       "kn": "Kunnskap om klima og miljø",
@@ -9831,7 +9831,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1411,
       "kn": "Artsdatabanken",
@@ -9842,7 +9842,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1411,
       "kn": "Artsdatabanken",
@@ -9853,7 +9853,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1411,
       "kn": "Artsdatabanken",
@@ -9864,7 +9864,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1412,
       "kn": "Meteorologiformål",
@@ -9875,7 +9875,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1412,
       "kn": "Meteorologiformål",
@@ -9886,7 +9886,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -9897,7 +9897,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -9908,7 +9908,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -9919,7 +9919,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -9930,7 +9930,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -9941,7 +9941,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -9952,7 +9952,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -9963,7 +9963,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -9974,7 +9974,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -9985,7 +9985,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -9996,7 +9996,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10007,7 +10007,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10018,7 +10018,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10029,7 +10029,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10040,7 +10040,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10051,7 +10051,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10062,7 +10062,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10073,7 +10073,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10084,7 +10084,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10095,7 +10095,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10106,7 +10106,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10117,7 +10117,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10128,7 +10128,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10139,7 +10139,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10150,7 +10150,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10161,7 +10161,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10172,7 +10172,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10183,7 +10183,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1420,
       "kn": "Miljødirektoratet",
@@ -10194,7 +10194,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1422,
       "kn": "Miljøvennlig skipsfart",
@@ -10205,7 +10205,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1422,
       "kn": "Miljøvennlig skipsfart",
@@ -10216,7 +10216,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1423,
       "kn": "Radioaktiv forurensning i det ytre miljø",
@@ -10227,7 +10227,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1424,
       "kn": "Statens villreinfond",
@@ -10238,7 +10238,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1424,
       "kn": "Statens villreinfond",
@@ -10249,7 +10249,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1425,
       "kn": "Fisketiltak",
@@ -10260,7 +10260,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1425,
       "kn": "Fisketiltak",
@@ -10271,7 +10271,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1428,
       "kn": "Enova SF",
@@ -10282,7 +10282,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1428,
       "kn": "Enova SF",
@@ -10293,7 +10293,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1428,
       "kn": "Enova SF",
@@ -10304,7 +10304,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1429,
       "kn": "Riksantikvaren",
@@ -10315,7 +10315,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1429,
       "kn": "Riksantikvaren",
@@ -10326,7 +10326,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1429,
       "kn": "Riksantikvaren",
@@ -10337,7 +10337,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1429,
       "kn": "Riksantikvaren",
@@ -10348,7 +10348,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1429,
       "kn": "Riksantikvaren",
@@ -10359,7 +10359,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1429,
       "kn": "Riksantikvaren",
@@ -10370,7 +10370,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1429,
       "kn": "Riksantikvaren",
@@ -10381,7 +10381,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1429,
       "kn": "Riksantikvaren",
@@ -10392,7 +10392,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1429,
       "kn": "Riksantikvaren",
@@ -10403,7 +10403,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1429,
       "kn": "Riksantikvaren",
@@ -10414,7 +10414,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1429,
       "kn": "Riksantikvaren",
@@ -10425,7 +10425,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1429,
       "kn": "Riksantikvaren",
@@ -10436,7 +10436,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1429,
       "kn": "Riksantikvaren",
@@ -10447,7 +10447,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1432,
       "kn": "Norsk kulturminnefond",
@@ -10458,7 +10458,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1471,
       "kn": "Norsk Polarinstitutt",
@@ -10469,7 +10469,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1471,
       "kn": "Norsk Polarinstitutt",
@@ -10480,7 +10480,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1471,
       "kn": "Norsk Polarinstitutt",
@@ -10491,7 +10491,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1471,
       "kn": "Norsk Polarinstitutt",
@@ -10502,7 +10502,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1471,
       "kn": "Norsk Polarinstitutt",
@@ -10513,7 +10513,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1472,
       "kn": "Svalbards miljøvernfond",
@@ -10524,7 +10524,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1473,
       "kn": "Kings Bay AS",
@@ -10535,7 +10535,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1474,
       "kn": "Fram - Nordområdesenter for klima- og miljøforskning",
@@ -10546,7 +10546,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1474,
       "kn": "Fram - Nordområdesenter for klima- og miljøforskning",
@@ -10557,7 +10557,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1474,
       "kn": "Fram - Nordområdesenter for klima- og miljøforskning",
@@ -10568,7 +10568,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1481,
       "kn": "Klimakvoter",
@@ -10579,7 +10579,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1481,
       "kn": "Klimakvoter",
@@ -10590,7 +10590,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1481,
       "kn": "Klimakvoter",
@@ -10601,7 +10601,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1482,
       "kn": "Internasjonale klima- og utviklingstiltak",
@@ -10612,7 +10612,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1482,
       "kn": "Internasjonale klima- og utviklingstiltak",
@@ -10623,7 +10623,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1482,
       "kn": "Internasjonale klima- og utviklingstiltak",
@@ -10634,7 +10634,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1500,
       "kn": "Digitaliserings- og forvaltningsdepartementet",
@@ -10645,7 +10645,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1500,
       "kn": "Digitaliserings- og forvaltningsdepartementet",
@@ -10656,7 +10656,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1500,
       "kn": "Digitaliserings- og forvaltningsdepartementet",
@@ -10667,7 +10667,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1500,
       "kn": "Digitaliserings- og forvaltningsdepartementet",
@@ -10678,7 +10678,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1500,
       "kn": "Digitaliserings- og forvaltningsdepartementet",
@@ -10689,7 +10689,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1510,
       "kn": "Departementenes sikkerhets- og serviceorganisasjon",
@@ -10700,7 +10700,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1510,
       "kn": "Departementenes sikkerhets- og serviceorganisasjon",
@@ -10711,7 +10711,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1510,
       "kn": "Departementenes sikkerhets- og serviceorganisasjon",
@@ -10722,7 +10722,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1510,
       "kn": "Departementenes sikkerhets- og serviceorganisasjon",
@@ -10733,7 +10733,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1511,
       "kn": "Prosjekter tilknyttet nytt regjeringskvartal",
@@ -10744,7 +10744,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1511,
       "kn": "Prosjekter tilknyttet nytt regjeringskvartal",
@@ -10755,7 +10755,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1512,
       "kn": "Diverse fellestjenester",
@@ -10766,7 +10766,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1512,
       "kn": "Diverse fellestjenester",
@@ -10777,7 +10777,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1515,
       "kn": "Departementenes digitaliseringsorganisasjon",
@@ -10788,7 +10788,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1515,
       "kn": "Departementenes digitaliseringsorganisasjon",
@@ -10799,7 +10799,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1515,
       "kn": "Departementenes digitaliseringsorganisasjon",
@@ -10810,7 +10810,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1515,
       "kn": "Departementenes digitaliseringsorganisasjon",
@@ -10821,7 +10821,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1520,
       "kn": "Statsforvalterne",
@@ -10832,7 +10832,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1520,
       "kn": "Statsforvalterne",
@@ -10843,7 +10843,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1530,
       "kn": "Byggeprosjekter utenfor husleieordningen",
@@ -10854,7 +10854,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1530,
       "kn": "Byggeprosjekter utenfor husleieordningen",
@@ -10865,7 +10865,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1530,
       "kn": "Byggeprosjekter utenfor husleieordningen",
@@ -10876,7 +10876,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1530,
       "kn": "Byggeprosjekter utenfor husleieordningen",
@@ -10887,7 +10887,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1531,
       "kn": "Eiendommer til kongelige formål",
@@ -10898,7 +10898,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1531,
       "kn": "Eiendommer til kongelige formål",
@@ -10909,7 +10909,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1533,
       "kn": "Eiendommer utenfor husleieordningen",
@@ -10920,7 +10920,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1533,
       "kn": "Eiendommer utenfor husleieordningen",
@@ -10931,7 +10931,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1534,
       "kn": "Erstatningslokaler for departementene",
@@ -10942,7 +10942,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1540,
       "kn": "Digitaliseringsdirektoratet",
@@ -10953,7 +10953,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1540,
       "kn": "Digitaliseringsdirektoratet",
@@ -10964,7 +10964,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1540,
       "kn": "Digitaliseringsdirektoratet",
@@ -10975,7 +10975,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1540,
       "kn": "Digitaliseringsdirektoratet",
@@ -10986,7 +10986,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1540,
       "kn": "Digitaliseringsdirektoratet",
@@ -10997,7 +10997,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1540,
       "kn": "Digitaliseringsdirektoratet",
@@ -11008,7 +11008,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1540,
       "kn": "Digitaliseringsdirektoratet",
@@ -11019,7 +11019,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1540,
       "kn": "Digitaliseringsdirektoratet",
@@ -11030,7 +11030,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1540,
       "kn": "Digitaliseringsdirektoratet",
@@ -11041,7 +11041,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1540,
       "kn": "Digitaliseringsdirektoratet",
@@ -11052,7 +11052,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1541,
       "kn": "Digitaliserings- og ekompolitikk",
@@ -11063,7 +11063,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1541,
       "kn": "Digitaliserings- og ekompolitikk",
@@ -11074,7 +11074,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1541,
       "kn": "Digitaliserings- og ekompolitikk",
@@ -11085,7 +11085,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1542,
       "kn": "Internasjonalt samarbeid",
@@ -11096,7 +11096,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1542,
       "kn": "Internasjonalt samarbeid",
@@ -11107,7 +11107,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1542,
       "kn": "Internasjonalt samarbeid",
@@ -11118,7 +11118,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1543,
       "kn": "Nasjonal kommunikasjonsmyndighet",
@@ -11129,7 +11129,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1543,
       "kn": "Nasjonal kommunikasjonsmyndighet",
@@ -11140,7 +11140,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1543,
       "kn": "Nasjonal kommunikasjonsmyndighet",
@@ -11151,7 +11151,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1543,
       "kn": "Nasjonal kommunikasjonsmyndighet",
@@ -11162,7 +11162,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1543,
       "kn": "Nasjonal kommunikasjonsmyndighet",
@@ -11173,7 +11173,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1545,
       "kn": "Datatilsynet",
@@ -11184,7 +11184,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1546,
       "kn": "Personvernnemnda",
@@ -11195,7 +11195,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1560,
       "kn": "Tariffavtalte avsetninger mv.",
@@ -11206,7 +11206,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1560,
       "kn": "Tariffavtalte avsetninger mv.",
@@ -11217,7 +11217,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1560,
       "kn": "Tariffavtalte avsetninger mv.",
@@ -11228,7 +11228,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1560,
       "kn": "Tariffavtalte avsetninger mv.",
@@ -11239,7 +11239,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1565,
       "kn": "Boliglånsordningen i Statens pensjonskasse",
@@ -11250,7 +11250,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1565,
       "kn": "Boliglånsordningen i Statens pensjonskasse",
@@ -11261,7 +11261,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1566,
       "kn": "Yrkesskadeforsikring",
@@ -11272,7 +11272,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1567,
       "kn": "Gruppelivsforsikring",
@@ -11283,7 +11283,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1600,
       "kn": "Finansdepartementet",
@@ -11294,7 +11294,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1600,
       "kn": "Finansdepartementet",
@@ -11305,7 +11305,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1600,
       "kn": "Finansdepartementet",
@@ -11316,7 +11316,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1600,
       "kn": "Finansdepartementet",
@@ -11327,7 +11327,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1600,
       "kn": "Finansdepartementet",
@@ -11338,7 +11338,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1602,
       "kn": "Finanstilsynet",
@@ -11349,7 +11349,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1602,
       "kn": "Finanstilsynet",
@@ -11360,7 +11360,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1602,
       "kn": "Finanstilsynet",
@@ -11371,7 +11371,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1605,
       "kn": "Direktoratet for forvaltning og økonomistyring",
@@ -11382,7 +11382,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1605,
       "kn": "Direktoratet for forvaltning og økonomistyring",
@@ -11393,7 +11393,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1605,
       "kn": "Direktoratet for forvaltning og økonomistyring",
@@ -11404,7 +11404,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1610,
       "kn": "Tolletaten",
@@ -11415,7 +11415,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1610,
       "kn": "Tolletaten",
@@ -11426,7 +11426,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1618,
       "kn": "Skatteetaten",
@@ -11437,7 +11437,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1618,
       "kn": "Skatteetaten",
@@ -11448,7 +11448,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1618,
       "kn": "Skatteetaten",
@@ -11459,7 +11459,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1618,
       "kn": "Skatteetaten",
@@ -11470,7 +11470,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1618,
       "kn": "Skatteetaten",
@@ -11481,7 +11481,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1618,
       "kn": "Skatteetaten",
@@ -11492,7 +11492,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1619,
       "kn": "Skatteklagenemnda",
@@ -11503,7 +11503,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1620,
       "kn": "Statistisk sentralbyrå",
@@ -11514,7 +11514,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1620,
       "kn": "Statistisk sentralbyrå",
@@ -11525,7 +11525,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1620,
       "kn": "Statistisk sentralbyrå",
@@ -11536,7 +11536,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Momskompensasjon",
       "k": 1632,
       "kn": "Kompensasjon for merverdiavgift",
@@ -11547,7 +11547,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Momskompensasjon",
       "k": 1632,
       "kn": "Kompensasjon for merverdiavgift",
@@ -11558,7 +11558,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Momskompensasjon",
       "k": 1633,
       "kn": "Nettoordning, statlig betalt merverdiavgift",
@@ -11569,7 +11569,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 1635,
       "kn": "Forskuttering av erstatningskrav",
@@ -11580,7 +11580,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Renter på statsgjeld",
       "k": 1650,
       "kn": "Statsgjeld, renter mv.",
@@ -11899,7 +11899,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1800,
       "kn": "Energidepartementet",
@@ -11910,7 +11910,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1800,
       "kn": "Energidepartementet",
@@ -11921,7 +11921,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1800,
       "kn": "Energidepartementet",
@@ -11932,7 +11932,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1800,
       "kn": "Energidepartementet",
@@ -11943,7 +11943,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1800,
       "kn": "Energidepartementet",
@@ -11954,7 +11954,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1800,
       "kn": "Energidepartementet",
@@ -11965,7 +11965,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1800,
       "kn": "Energidepartementet",
@@ -11976,7 +11976,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1810,
       "kn": "Sokkeldirektoratet",
@@ -11987,7 +11987,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1810,
       "kn": "Sokkeldirektoratet",
@@ -11998,7 +11998,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1810,
       "kn": "Sokkeldirektoratet",
@@ -12009,7 +12009,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1820,
       "kn": "Norges vassdrags- og energidirektorat",
@@ -12020,7 +12020,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1820,
       "kn": "Norges vassdrags- og energidirektorat",
@@ -12031,7 +12031,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1820,
       "kn": "Norges vassdrags- og energidirektorat",
@@ -12042,7 +12042,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1820,
       "kn": "Norges vassdrags- og energidirektorat",
@@ -12053,7 +12053,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1820,
       "kn": "Norges vassdrags- og energidirektorat",
@@ -12064,7 +12064,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1820,
       "kn": "Norges vassdrags- og energidirektorat",
@@ -12075,7 +12075,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1820,
       "kn": "Norges vassdrags- og energidirektorat",
@@ -12086,7 +12086,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1820,
       "kn": "Norges vassdrags- og energidirektorat",
@@ -12097,7 +12097,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1820,
       "kn": "Norges vassdrags- og energidirektorat",
@@ -12108,7 +12108,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1820,
       "kn": "Norges vassdrags- og energidirektorat",
@@ -12119,7 +12119,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1820,
       "kn": "Norges vassdrags- og energidirektorat",
@@ -12130,7 +12130,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1820,
       "kn": "Norges vassdrags- og energidirektorat",
@@ -12141,7 +12141,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1820,
       "kn": "Norges vassdrags- og energidirektorat",
@@ -12152,7 +12152,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1820,
       "kn": "Norges vassdrags- og energidirektorat",
@@ -12163,7 +12163,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1825,
       "kn": "Energieffektivisering og -omlegging",
@@ -12174,7 +12174,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1825,
       "kn": "Energieffektivisering og -omlegging",
@@ -12185,7 +12185,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1850,
       "kn": "Klima, industri og teknologi",
@@ -12196,7 +12196,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1850,
       "kn": "Klima, industri og teknologi",
@@ -12207,7 +12207,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1850,
       "kn": "Klima, industri og teknologi",
@@ -12218,7 +12218,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1850,
       "kn": "Klima, industri og teknologi",
@@ -12229,7 +12229,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1850,
       "kn": "Klima, industri og teknologi",
@@ -12240,7 +12240,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1850,
       "kn": "Klima, industri og teknologi",
@@ -12251,7 +12251,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1860,
       "kn": "Havindustritilsynet",
@@ -12262,7 +12262,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1860,
       "kn": "Havindustritilsynet",
@@ -12273,7 +12273,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Klima, miljø og energi",
       "k": 1860,
       "kn": "Havindustritilsynet",
@@ -12284,7 +12284,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 2309,
       "kn": "Tilfeldige utgifter",
@@ -12383,7 +12383,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 2412,
       "kn": "Husbanken - Bolig- og bygningsdirektoratet",
@@ -12394,7 +12394,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 2412,
       "kn": "Husbanken - Bolig- og bygningsdirektoratet",
@@ -12405,7 +12405,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 2412,
       "kn": "Husbanken - Bolig- og bygningsdirektoratet",
@@ -12416,7 +12416,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 2412,
       "kn": "Husbanken - Bolig- og bygningsdirektoratet",
@@ -12427,7 +12427,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 2412,
       "kn": "Husbanken - Bolig- og bygningsdirektoratet",
@@ -12438,7 +12438,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 2421,
       "kn": "Innovasjon Norge",
@@ -12449,7 +12449,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 2421,
       "kn": "Innovasjon Norge",
@@ -12460,7 +12460,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 2421,
       "kn": "Innovasjon Norge",
@@ -12471,7 +12471,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 2421,
       "kn": "Innovasjon Norge",
@@ -12482,7 +12482,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 2421,
       "kn": "Innovasjon Norge",
@@ -12493,7 +12493,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 2421,
       "kn": "Innovasjon Norge",
@@ -12504,7 +12504,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 2421,
       "kn": "Innovasjon Norge",
@@ -12515,7 +12515,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 2426,
       "kn": "Siva SF",
@@ -12526,7 +12526,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 2426,
       "kn": "Siva SF",
@@ -12537,7 +12537,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 2445,
       "kn": "Statsbygg",
@@ -12548,7 +12548,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 2445,
       "kn": "Statsbygg",
@@ -12559,7 +12559,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 2445,
       "kn": "Statsbygg",
@@ -12570,7 +12570,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 2445,
       "kn": "Statsbygg",
@@ -12581,7 +12581,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 2445,
       "kn": "Statsbygg",
@@ -12592,7 +12592,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 2445,
       "kn": "Statsbygg",
@@ -12603,7 +12603,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 2445,
       "kn": "Statsbygg",
@@ -12614,7 +12614,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 2445,
       "kn": "Statsbygg",
@@ -12625,7 +12625,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Statsforvaltning og annet",
       "k": 2445,
       "kn": "Statsbygg",
@@ -12636,7 +12636,7 @@
     },
     {
       "s": "utgift",
-      "g": "Øvrige formål",
+      "g": "Øvrige områder",
       "l": "Næring og fiskeri",
       "k": 2460,
       "kn": "Eksportfinansiering Norge",
@@ -25464,7 +25464,7 @@
     },
     {
       "level": 1,
-      "key": "Øvrige formål",
+      "key": "Øvrige områder",
       "parent": null,
       "y2026": 379.079885,
       "y2027": 400.278697,
@@ -25582,7 +25582,7 @@
     {
       "level": 2,
       "key": "Justis og beredskap",
-      "parent": "Øvrige formål",
+      "parent": "Øvrige områder",
       "y2026": 60.611972,
       "y2027": 65.111083,
       "change": 4.499111,
@@ -25591,7 +25591,7 @@
     {
       "level": 2,
       "key": "Renter på statsgjeld",
-      "parent": "Øvrige formål",
+      "parent": "Øvrige områder",
       "y2026": 20.0814,
       "y2027": 24.399107,
       "change": 4.317707,
@@ -25600,7 +25600,7 @@
     {
       "level": 2,
       "key": "Momskompensasjon",
-      "parent": "Øvrige formål",
+      "parent": "Øvrige områder",
       "y2026": 47.95,
       "y2027": 51.92,
       "change": 3.97,
@@ -25609,7 +25609,7 @@
     {
       "level": 2,
       "key": "Landbruk og mat",
-      "parent": "Øvrige formål",
+      "parent": "Øvrige områder",
       "y2026": 34.846288,
       "y2027": 38.495624,
       "change": 3.649336,
@@ -25636,7 +25636,7 @@
     {
       "level": 2,
       "key": "Utenriks og bistand",
-      "parent": "Øvrige formål",
+      "parent": "Øvrige områder",
       "y2026": 56.900933,
       "y2027": 59.049428,
       "change": 2.148495,
@@ -25645,7 +25645,7 @@
     {
       "level": 2,
       "key": "Klima, miljø og energi",
-      "parent": "Øvrige formål",
+      "parent": "Øvrige områder",
       "y2026": 47.470339,
       "y2027": 49.523954,
       "change": 2.053615,
@@ -25681,7 +25681,7 @@
     {
       "level": 2,
       "key": "Kultur og medier",
-      "parent": "Øvrige formål",
+      "parent": "Øvrige områder",
       "y2026": 27.038755,
       "y2027": 28.05942,
       "change": 1.020665,
@@ -25708,7 +25708,7 @@
     {
       "level": 2,
       "key": "Næring og fiskeri",
-      "parent": "Øvrige formål",
+      "parent": "Øvrige områder",
       "y2026": 26.010489,
       "y2027": 26.775598,
       "change": 0.765109,
@@ -25798,7 +25798,7 @@
     {
       "level": 2,
       "key": "Statsforvaltning og annet",
-      "parent": "Øvrige formål",
+      "parent": "Øvrige områder",
       "y2026": 58.169709,
       "y2027": 56.944483,
       "change": -1.225226,

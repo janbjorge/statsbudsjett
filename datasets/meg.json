@@ -10,8 +10,8 @@
       "kind": "betaler",
       "same_kroner": null,
       "who": null,
-      "title_nb": "Moms på elbil fra 150 000 kroner",
-      "summary_nb": "Elbiler har i dag momsfritak for de første 300 000 kronene av prisen. Grensen halveres til 150 000 kroner, så du betaler moms på en større del av prisen når du kjøper eller leaser en ny elbil.",
+      "title_nb": "Moms på elbil fra 150 000 kr",
+      "summary_nb": "Elbiler har i dag momsfritak for de første 300 000 kronene av prisen. Grensen halveres til 150 000 kr, så du betaler moms på en større del av prisen når du kjøper eller leaser en ny elbil.",
       "effect": "minus",
       "amounts": [
         {
@@ -173,7 +173,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Alle elektriske varebiler slipper trafikkforsikringsavgift",
-      "summary_nb": "I dag er bare lette elektriske varebiler fritatt for trafikkforsikringsavgift. Nå utvides fritaket til alle elektriske varebiler, noe som gir en lettelse på drøyt 3 400 kroner i året per bil.",
+      "summary_nb": "I dag er bare lette elektriske varebiler fritatt for trafikkforsikringsavgift. Nå utvides fritaket til alle elektriske varebiler, noe som gir en lettelse på drøyt 3 400 kr i året per bil.",
       "effect": "pluss",
       "amounts": [
         {
@@ -219,7 +219,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Billigere månedskort i kollektivtrafikken videreføres",
-      "summary_nb": "Prisreduksjonen på om lag 100 kroner på månedskort, som kom i 2026, holdes på samme nivå i 2027. Staten bruker 620 millioner kroner på dette.",
+      "summary_nb": "Prisreduksjonen på om lag 100 kr på månedskort, som kom i 2026, holdes på samme nivå i 2027. Staten bruker 620 mill. kr på dette.",
       "effect": "uendret",
       "amounts": [
         {
@@ -245,14 +245,14 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Billettprisene på riksveiferjene justeres for prisvekst",
-      "summary_nb": "Budsjettet regner med at billettprisene på riksveiferjene øker med 3,7 prosent fra 1. januar.",
+      "summary_nb": "Budsjettet regner med at billettprisene på riksveiferjene øker med 3,7 % fra 1. januar.",
       "effect": "minus",
       "amounts": [
         {
           "label_nb": "Antatt prisjustering av ferjetakster",
           "y2026": null,
           "y2027": 3.7,
-          "unit": "prosent"
+          "unit": "%"
         }
       ],
       "source_title": "Prop. 1 S (2026–2027) Samferdselsdepartementet",
@@ -271,14 +271,14 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Lavere inntektsskatt i Finnmark og Nord-Troms videreføres",
-      "summary_nb": "Personer i Finnmark og Nord-Troms betaler fortsatt 18,5 prosent skatt på alminnelig inntekt, mot 22 prosent ellers i landet.",
+      "summary_nb": "Personer i Finnmark og Nord-Troms betaler fortsatt 18,5 % skatt på alminnelig inntekt, mot 22 % ellers i landet.",
       "effect": "uendret",
       "amounts": [
         {
           "label_nb": "Skatt på alminnelig inntekt i Finnmark og Nord-Troms",
           "y2026": 18.5,
           "y2027": 18.5,
-          "unit": "prosent"
+          "unit": "%"
         }
       ],
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
@@ -297,7 +297,7 @@
       "same_kroner": true,
       "who": null,
       "title_nb": "Ekstra skattefradrag i Finnmark og Nord-Troms står fast",
-      "summary_nb": "Det særskilte fradraget for dem som bor i Finnmark og Nord-Troms er 45 000 kroner også i 2027.",
+      "summary_nb": "Det særskilte fradraget for dem som bor i Finnmark og Nord-Troms er 45 000 kr også i 2027.",
       "effect": "minus",
       "amounts": [
         {
@@ -323,14 +323,14 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Gratis barnehage i Finnmark og Nord-Troms fortsetter",
-      "summary_nb": "Regjeringen viderefører gratis barnehage i Finnmark og Nord-Troms. I de minst sentrale kommunene ellers er maksprisen fortsatt 700 kroner i måneden.",
+      "summary_nb": "Regjeringen viderefører gratis barnehage i Finnmark og Nord-Troms. I de minst sentrale kommunene ellers er maksprisen fortsatt 700 kr i måneden.",
       "effect": "uendret",
       "amounts": [
         {
           "label_nb": "Makspris barnehage i de minst sentrale kommunene",
           "y2026": null,
           "y2027": 700,
-          "unit": "kr per måned"
+          "unit": "kr/mnd"
         }
       ],
       "source_title": "Prop. 1 S (2026–2027) Statsbudsjettet (Gul bok)",
@@ -368,7 +368,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Beredskapsstøtten til kommunene utvides til hele Finnmark",
-      "summary_nb": "Støtteordningen for bedre beredskap i kommunene utvides fra Øst-Finnmark til hele Finnmark, og blir på 12 millioner kroner fra 2027.",
+      "summary_nb": "Støtteordningen for bedre beredskap i kommunene utvides fra Øst-Finnmark til hele Finnmark, og blir på 12 mill. kr fra 2027.",
       "effect": "pluss",
       "amounts": [
         {
@@ -393,8 +393,8 @@
       "kind": null,
       "same_kroner": null,
       "who": "Regionale flyruter",
-      "title_nb": "2,6 milliarder til statlig kjøpte regionale flyruter",
-      "summary_nb": "Staten bruker 2,6 milliarder kroner på å kjøpe regionale flyruter der markedet ikke gir godt nok tilbud alene.",
+      "title_nb": "2,6 mrd. kr til statlig kjøpte regionale flyruter",
+      "summary_nb": "Staten bruker 2,6 mrd. kr på å kjøpe regionale flyruter der markedet ikke gir godt nok tilbud alene.",
       "effect": "uendret",
       "amounts": [
         {
@@ -439,7 +439,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Fast fjernvarmepris på 0,63 kr/kWh i Longyearbyen",
-      "summary_nb": "Prisen på fjernvarme for husholdninger i Longyearbyen foreslås satt til 0,63 kroner per kWh i Svalbardpris-ordningen. Boliger på Svalbard bruker om lag dobbelt så mye fjernvarme som boliger på fastlandet.",
+      "summary_nb": "Prisen på fjernvarme for husholdninger i Longyearbyen foreslås satt til 0,63 kr per kWh i Svalbardpris-ordningen. Boliger på Svalbard bruker om lag dobbelt så mye fjernvarme som boliger på fastlandet.",
       "effect": "pluss",
       "amounts": [
         {
@@ -465,8 +465,8 @@
       "kind": "tilbud",
       "same_kroner": null,
       "who": null,
-      "title_nb": "54 millioner mer til kamp mot pukkellaks",
-      "summary_nb": "Innsatsen mot den fremmede arten pukkellaks økes med 54 millioner kroner, til totalt 81 millioner i 2027. Pengene skal blant annet gå til nye feller, særlig i Altaelva.",
+      "title_nb": "54 mill. kr mer til kamp mot pukkellaks",
+      "summary_nb": "Innsatsen mot den fremmede arten pukkellaks økes med 54 mill. kr, til totalt 81 mill. kr i 2027. Pengene skal blant annet gå til nye feller, særlig i Altaelva.",
       "effect": "pluss",
       "amounts": [
         {
@@ -505,7 +505,7 @@
           "label_nb": "Trygdeavgift på næringsinntekt fra fiske og fangst",
           "y2026": 7.6,
           "y2027": 7.4,
-          "unit": "prosent"
+          "unit": "%"
         }
       ],
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
@@ -524,14 +524,14 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Produktavgiften på fangst går ned",
-      "summary_nb": "Produktavgiften, som er en andel av førstehåndsverdien av fisken, foreslås redusert fra 1,6 til 1,2 prosent.",
+      "summary_nb": "Produktavgiften, som er en andel av førstehåndsverdien av fisken, foreslås redusert fra 1,6 til 1,2 %.",
       "effect": "pluss",
       "amounts": [
         {
           "label_nb": "Produktavgift til folketrygden for fiskeri, hval- og selfangst",
           "y2026": 1.6,
           "y2027": 1.2,
-          "unit": "prosent av førstehåndsverdien"
+          "unit": "% av førstehåndsverdien"
         }
       ],
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
@@ -550,14 +550,14 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Fiskerfradraget står fast",
-      "summary_nb": "Det særskilte fradraget for fiskere og fangstfolk er fortsatt 30 prosent, med en øvre grense på 160 000 kroner.",
+      "summary_nb": "Det særskilte fradraget for fiskere og fangstfolk er fortsatt 30 %, med en øvre grense på 160 000 kr.",
       "effect": "uendret",
       "amounts": [
         {
           "label_nb": "Fiskerfradrag, sats",
           "y2026": 30,
           "y2027": 30,
-          "unit": "prosent"
+          "unit": "%"
         },
         {
           "label_nb": "Fiskerfradrag, øvre grense",
@@ -582,7 +582,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Høyere CO2-avgift for fiske i nære farvann",
-      "summary_nb": "CO2-avgiften for fiske i nære farvann øker med 13 prosent utover prisveksten. For fiske i fjerne farvann blir avgiften bare prisjustert.",
+      "summary_nb": "CO2-avgiften for fiske i nære farvann øker med 13 % utover prisveksten. For fiske i fjerne farvann blir avgiften bare prisjustert.",
       "effect": "minus",
       "amounts": [
         {
@@ -607,7 +607,7 @@
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
       "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
       "page": 175,
-      "caveat_nb": "Nære farvann er mindre enn 250 nautiske mil fra kysten. I 2026 var satsene 4,42 kroner (nære farvann), 2,76 kroner (både nære og fjerne) og 1,11 kroner (fjerne farvann) per liter."
+      "caveat_nb": "Nære farvann er mindre enn 250 nautiske mil fra kysten. I 2026 var satsene 4,42 kr (nære farvann), 2,76 kr (både nære og fjerne) og 1,11 kr (fjerne farvann) per liter."
     },
     {
       "id": "co2-kompensasjon-fiskeflaten",
@@ -620,7 +620,7 @@
       "same_kroner": null,
       "who": "Fiskeflåten",
       "title_nb": "Mindre CO2-kompensasjon til fiskeflåten",
-      "summary_nb": "Ordningen som kompenserer fiskerne for CO2-avgift reduseres med 165 millioner kroner, fordi fiskeflåten slapp CO2-avgift i flere måneder i 2026.",
+      "summary_nb": "Ordningen som kompenserer fiskerne for CO2-avgift reduseres med 165 mill. kr, fordi fiskeflåten slapp CO2-avgift i flere måneder i 2026.",
       "effect": "minus",
       "amounts": [
         {
@@ -672,20 +672,20 @@
       "same_kroner": null,
       "who": "Oppdrettsselskapene",
       "title_nb": "Grunnrenteskatten på havbruk er uendret",
-      "summary_nb": "Satsen i grunnrenteskatten på havbruk er den samme i 2027 som i 2026. Det gis fortsatt et bunnfradrag på 70 millioner kroner per konsern.",
+      "summary_nb": "Satsen i grunnrenteskatten på havbruk er den samme i 2027 som i 2026. Det gis fortsatt et bunnfradrag på 70 mill. kr per konsern.",
       "effect": "uendret",
       "amounts": [
         {
           "label_nb": "Grunnrenteskatt havbruk (formell sats)",
           "y2026": 32.1,
           "y2027": 32.1,
-          "unit": "prosent"
+          "unit": "%"
         }
       ],
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
       "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
       "page": 26,
-      "caveat_nb": "Den formelle satsen på 32,1 prosent tilsvarer en effektiv sats på 25 prosent. Fra 2027 kan avgift på oppdrettsfisk bare trekkes fra for tillatelser som er grunnrenteskattepliktige."
+      "caveat_nb": "Den formelle satsen på 32,1 % tilsvarer en effektiv sats på 25 %. Fra 2027 kan avgift på oppdrettsfisk bare trekkes fra for tillatelser som er grunnrenteskattepliktige."
     },
     {
       "id": "trygdeavgift-naeringsinntekt",
@@ -705,7 +705,7 @@
           "label_nb": "Trygdeavgift på annen næringsinntekt",
           "y2026": 10.8,
           "y2027": 10.6,
-          "unit": "prosent"
+          "unit": "%"
         }
       ],
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
@@ -732,13 +732,13 @@
           "label_nb": "Maksimal marginalskatt på utbytte inkl. selskapsskatt",
           "y2026": 51.5,
           "y2027": 51.5,
-          "unit": "prosent"
+          "unit": "%"
         }
       ],
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
       "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
       "page": 27,
-      "caveat_nb": "Selskapsskatten er 22 prosent, og utbytte ganges fortsatt med 1,72 før det skattlegges."
+      "caveat_nb": "Selskapsskatten er 22 %, og utbytte ganges fortsatt med 1,72 før det skattlegges."
     },
     {
       "id": "arbeidsgiveravgift-uendret",
@@ -751,20 +751,20 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Arbeidsgiveravgiften er uendret",
-      "summary_nb": "Satsene for arbeidsgiveravgift er de samme som i 2026. I sone I er satsen fortsatt 14,1 prosent.",
+      "summary_nb": "Satsene for arbeidsgiveravgift er de samme som i 2026. I sone I er satsen fortsatt 14,1 %.",
       "effect": "uendret",
       "amounts": [
         {
           "label_nb": "Arbeidsgiveravgift, sone I",
           "y2026": 14.1,
           "y2027": 14.1,
-          "unit": "prosent"
+          "unit": "%"
         }
       ],
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
       "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
       "page": 27,
-      "caveat_nb": "Satsene i sone Ia–V er også uendret. Fribeløpet i sone Ia er 850 000 kroner per foretak i 2027."
+      "caveat_nb": "Satsene i sone Ia–V er også uendret. Fribeløpet i sone Ia er 850 000 kr per foretak i 2027."
     },
     {
       "id": "skattefunn-innstramming",
@@ -777,7 +777,7 @@
       "same_kroner": null,
       "who": "Bedrifter",
       "title_nb": "Strengere regler for Skattefunn",
-      "summary_nb": "For å hindre misbruk får Skattefunn et samlet tak på 25 millioner kroner for konsern, og kostnader før prosjektet er godkjent gir ikke lenger fradrag.",
+      "summary_nb": "For å hindre misbruk får Skattefunn et samlet tak på 25 mill. kr for konsern, og kostnader før prosjektet er godkjent gir ikke lenger fradrag.",
       "effect": "blandet",
       "amounts": [
         {
@@ -803,7 +803,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Mindre penger til næringsstøtte og Innovasjon Norge",
-      "summary_nb": "Statens støtteordninger for næringslivet får om lag 300 millioner kroner mindre. Blant annet avvikles Miljøteknologiordningen i Innovasjon Norge.",
+      "summary_nb": "Statens støtteordninger for næringslivet får om lag 300 mill. kr mindre. Blant annet avvikles Miljøteknologiordningen i Innovasjon Norge.",
       "effect": "minus",
       "amounts": [
         {
@@ -829,7 +829,7 @@
       "same_kroner": null,
       "who": "Frivillige lag",
       "title_nb": "Full momskompensasjon for frivillige lag også i 2027",
-      "summary_nb": "Frivillige organisasjoner og idrettslag får fortsatt full momskompensasjon. Ordningen økes med 171 millioner til 3,25 milliarder kroner.",
+      "summary_nb": "Frivillige organisasjoner og idrettslag får fortsatt full momskompensasjon. Ordningen økes med 171 mill. kr til 3,25 mrd. kr.",
       "effect": "pluss",
       "amounts": [
         {
@@ -855,7 +855,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Høyere bunnfradrag i formuesskatten",
-      "summary_nb": "Du betaler formuesskatt først når nettoformuen er over 1 990 000 kroner, opp fra 1 900 000. For ektepar er grensen 3 980 000 kroner.",
+      "summary_nb": "Du betaler formuesskatt først når nettoformuen er over 1 990 000 kr, opp fra 1 900 000. For ektepar er grensen 3 980 000 kr.",
       "effect": "pluss",
       "amounts": [
         {
@@ -874,7 +874,7 @@
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
       "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
       "page": 92,
-      "caveat_nb": "Grensen for trinn 2 (21,5 mill. kroner) og for lav verdsetting av primærbolig (14 mill. kroner) holdes nominelt uendret."
+      "caveat_nb": "Grensen for trinn 2 (21,5 mill. kr) og for lav verdsetting av primærbolig (14 mill. kr) holdes nominelt uendret."
     },
     {
       "id": "aksjesparekonto-euronext-growth",
@@ -906,14 +906,14 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "BSU er uendret",
-      "summary_nb": "Boligsparing for ungdom gir fortsatt 10 prosent skattefradrag, og du kan spare inntil 27 500 kroner i året.",
+      "summary_nb": "Boligsparing for ungdom gir fortsatt 10 % skattefradrag, og du kan spare inntil 27 500 kr i året.",
       "effect": "uendret",
       "amounts": [
         {
           "label_nb": "BSU, sats for skattefradrag",
           "y2026": 10,
           "y2027": 10,
-          "unit": "prosent"
+          "unit": "%"
         },
         {
           "label_nb": "BSU, maksimalt årlig sparebeløp",
@@ -925,7 +925,7 @@
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
       "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
       "page": 29,
-      "caveat_nb": "Maksimalt samlet sparebeløp er fortsatt 300 000 kroner."
+      "caveat_nb": "Maksimalt samlet sparebeløp er fortsatt 300 000 kr."
     },
     {
       "id": "ips-uendret",
@@ -938,7 +938,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Fradrag for pensjonssparing (IPS) er uendret",
-      "summary_nb": "Du kan fortsatt få fradrag for inntil 25 000 kroner i året som du sparer i individuell pensjonssparing (IPS).",
+      "summary_nb": "Du kan fortsatt få fradrag for inntil 25 000 kr i året som du sparer i individuell pensjonssparing (IPS).",
       "effect": "uendret",
       "amounts": [
         {
@@ -963,8 +963,8 @@
       "kind": "far",
       "same_kroner": null,
       "who": "Jordbruket",
-      "title_nb": "Jordbruksavtalen gir 3,66 milliarder i økte inntektsmuligheter",
-      "summary_nb": "Avtalen med bondeorganisasjonene øker inntektsmulighetene i jordbruket med 3 660 millioner kroner, og 3 237 millioner av dette er økte bevilgninger over statsbudsjettet.",
+      "title_nb": "Jordbruksavtalen gir 3,66 mrd. kr i økte inntektsmuligheter",
+      "summary_nb": "Avtalen med bondeorganisasjonene øker inntektsmulighetene i jordbruket med 3 660 mill. kr, og 3 237 mill. kr av dette er økte bevilgninger over statsbudsjettet.",
       "effect": "pluss",
       "amounts": [
         {
@@ -1015,7 +1015,7 @@
       "same_kroner": true,
       "who": null,
       "title_nb": "Jordbruksfradraget står fast",
-      "summary_nb": "Det særskilte fradraget i næringsinntekt fra jordbruk er det samme som i 2026: et fast fradrag på 99 600 kroner, pluss 38 prosent av inntekten utover dette, og maksimalt 208 900 kroner.",
+      "summary_nb": "Det særskilte fradraget i næringsinntekt fra jordbruk er det samme som i 2026: et fast fradrag på 99 600 kr, pluss 38 % av inntekten utover dette, og maksimalt 208 900 kr.",
       "effect": "minus",
       "amounts": [
         {
@@ -1028,7 +1028,7 @@
           "label_nb": "Sats utover inntektsuavhengig fradrag",
           "y2026": 38,
           "y2027": 38,
-          "unit": "prosent"
+          "unit": "%"
         },
         {
           "label_nb": "Maksimalt samlet jordbruksfradrag",
@@ -1053,7 +1053,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Mer penger til investeringer i landbruket",
-      "summary_nb": "Landbrukets utviklingsfond, som gir støtte til blant annet investeringer og utvikling i landbruket, får 330 millioner kroner mer. Investeringer for å møte dyrevelferdskrav og klima- og miljøtiltak prioriteres.",
+      "summary_nb": "Landbrukets utviklingsfond, som gir støtte til blant annet investeringer og utvikling i landbruket, får 330 mill. kr mer. Investeringer for å møte dyrevelferdskrav og klima- og miljøtiltak prioriteres.",
       "effect": "pluss",
       "amounts": [
         {
@@ -1066,7 +1066,7 @@
       "source_title": "Prop. 1 S (2026–2027) Landbruks- og matdepartementet",
       "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175272/",
       "page": 100,
-      "caveat_nb": "Tilskuddsrammen (det som deles ut fra fondet) øker med 250 mill. kroner til 3 047,7 mill. kroner."
+      "caveat_nb": "Tilskuddsrammen (det som deles ut fra fondet) øker med 250 mill. kr til 3 047,7 mill. kr."
     },
     {
       "id": "stromstotte-jordbruk-2029",
@@ -1098,7 +1098,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Kraftig økning i CO2-avgiften for veksthus",
-      "summary_nb": "Veksthus har en lavere sats i CO2-avgiften på gass til oppvarming. Satsen for naturgass øker fra 0,95 til 2,71 kroner per standardkubikkmeter. Økningen skal tas med i kostnadene i jordbruksoppgjøret og dermed kompenseres over tid.",
+      "summary_nb": "Veksthus har en lavere sats i CO2-avgiften på gass til oppvarming. Satsen for naturgass øker fra 0,95 til 2,71 kr per standardkubikkmeter. Økningen skal tas med i kostnadene i jordbruksoppgjøret og dermed kompenseres over tid.",
       "effect": "minus",
       "amounts": [
         {
@@ -1111,7 +1111,7 @@
       "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
       "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
       "page": 175,
-      "caveat_nb": "Satsen for LPG til veksthus øker fra 1,43 til 4,08 kroner per kilo. Veksthusnæringen er omfattet av strømstøtteordningen."
+      "caveat_nb": "Satsen for LPG til veksthus øker fra 1,43 til 4,08 kr per kilo. Veksthusnæringen er omfattet av strømstøtteordningen."
     },
     {
       "id": "skog-jordbruksavtalen",
@@ -1124,7 +1124,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Litt mer til skogbruket i jordbruksavtalen",
-      "summary_nb": "Pengene til skog i jordbruksavtalen øker med 10 millioner kroner. Samtidig kuttes tilskuddet til tømmerkaier fordi de viktigste kaiene er bygget.",
+      "summary_nb": "Pengene til skog i jordbruksavtalen øker med 10 mill. kr. Samtidig kuttes tilskuddet til tømmerkaier fordi de viktigste kaiene er bygget.",
       "effect": "blandet",
       "amounts": [
         {
@@ -1137,7 +1137,7 @@
       "source_title": "Regjeringen styrker norsk matproduksjon",
       "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringen-styrker-norsk-matproduksjon/id3173404/",
       "page": null,
-      "caveat_nb": "Bevilgningen til tømmerkaier og skogsveier er foreslått redusert med 31,1 millioner kroner."
+      "caveat_nb": "Bevilgningen til tømmerkaier og skogsveier er foreslått redusert med 31,1 mill. kr."
     },
     {
       "id": "barnetrygd-uendret",
@@ -1150,7 +1150,7 @@
       "same_kroner": true,
       "who": null,
       "title_nb": "Barnetrygden blir stående på 2 012 kr i måneden",
-      "summary_nb": "Barnetrygden økes ikke i 2027. Den er fortsatt 2 012 kroner i måneden per barn under 18 år. Enslige forsørgere får fortsatt utvidet barnetrygd, og noen får i tillegg småbarnstillegg.",
+      "summary_nb": "Barnetrygden økes ikke i 2027. Den er fortsatt 2 012 kr i måneden per barn under 18 år. Enslige forsørgere får fortsatt utvidet barnetrygd, og noen får i tillegg småbarnstillegg.",
       "effect": "minus",
       "amounts": [
         {
@@ -1188,7 +1188,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Engangsstønaden ved fødsel kuttes til 67 100 kr",
-      "summary_nb": "Engangsstønaden går til mødre (og noen fedre) som ikke har rett til foreldrepenger. Den foreslås redusert fra 92 648 til 67 100 kroner per barn for barn født eller adoptert fra 1. juli 2027.",
+      "summary_nb": "Engangsstønaden går til mødre (og noen fedre) som ikke har rett til foreldrepenger. Den foreslås redusert fra 92 648 til 67 100 kr per barn for barn født eller adoptert fra 1. juli 2027.",
       "effect": "minus",
       "amounts": [
         {
@@ -1233,7 +1233,7 @@
       "same_kroner": true,
       "who": null,
       "title_nb": "Kontantstøtten holdes på 7 500 kr i måneden",
-      "summary_nb": "Kontantstøtte for barn mellom 13 og 19 måneder som ikke har full barnehageplass, videreføres med samme satser. Full sats er 7 500 kroner i måneden, og den blir lavere jo flere timer barnet er i barnehagen.",
+      "summary_nb": "Kontantstøtte for barn mellom 13 og 19 måneder som ikke har full barnehageplass, videreføres med samme satser. Full sats er 7 500 kr i måneden, og den blir lavere jo flere timer barnet er i barnehagen.",
       "effect": "minus",
       "amounts": [
         {
@@ -1265,7 +1265,7 @@
       "same_kroner": true,
       "who": null,
       "title_nb": "Barnehageprisen holdes på 1 200 kr i måneden",
-      "summary_nb": "Makspris for en heltidsplass i barnehage blir fortsatt 1 200 kroner i måneden. I de minst sentrale kommunene er prisen 700 kroner, og i Finnmark og deler av Nord-Troms er barnehagen gratis.",
+      "summary_nb": "Makspris for en heltidsplass i barnehage blir fortsatt 1 200 kr i måneden. I de minst sentrale kommunene er prisen 700 kr, og i Finnmark og deler av Nord-Troms er barnehagen gratis.",
       "effect": "pluss",
       "amounts": [
         {
@@ -1316,7 +1316,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "20 timer gratis barnehage for lavinntektsfamilier",
-      "summary_nb": "Barn mellom 2 og 5 år i familier med lav inntekt får fortsatt 20 timer gratis barnehage i uken. Inntektsgrensen settes til 718 780 kroner i året.",
+      "summary_nb": "Barn mellom 2 og 5 år i familier med lav inntekt får fortsatt 20 timer gratis barnehage i uken. Inntektsgrensen settes til 718 780 kr i året.",
       "effect": "uendret",
       "amounts": [
         {
@@ -1361,7 +1361,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Mer undervisning i små grupper fra høsten 2027",
-      "summary_nb": "Et nytt tilskudd på 465 millioner kroner høsten 2027 skal gi mer undervisning i små grupper, i tillegg til lærernormen. Pengene gjelder særlig 1., 2., 5. og 8. trinn.",
+      "summary_nb": "Et nytt tilskudd på 465 mill. kr høsten 2027 skal gi mer undervisning i små grupper, i tillegg til lærernormen. Pengene gjelder særlig 1., 2., 5. og 8. trinn.",
       "effect": "blandet",
       "amounts": [],
       "source_title": "Det viktigaste først i skulen",
@@ -1380,7 +1380,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Mer penger til bøker i skole og barnehage",
-      "summary_nb": "Støtten til fysiske lærebøker, skolebibliotek og bøker i barnehagen slås sammen og økes med over 94 millioner kroner, til 339,5 millioner.",
+      "summary_nb": "Støtten til fysiske lærebøker, skolebibliotek og bøker i barnehagen slås sammen og økes med over 94 mill. kr, til 339,5 mill. kr.",
       "effect": "pluss",
       "amounts": [],
       "source_title": "Det viktigaste først i skulen",
@@ -1399,7 +1399,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Foreldrefradraget for barnepass er uendret",
-      "summary_nb": "Utgifter til barnehage, SFO og annet barnepass kan fortsatt trekkes fra på skatten med inntil 15 000 kroner for ett barn og 10 000 kroner ekstra per barn utover det første.",
+      "summary_nb": "Utgifter til barnehage, SFO og annet barnepass kan fortsatt trekkes fra på skatten med inntil 15 000 kr for ett barn og 10 000 kr ekstra per barn utover det første.",
       "effect": "uendret",
       "amounts": [
         {
@@ -1443,7 +1443,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Mer penger til barnevernet",
-      "summary_nb": "Det statlige barnevernet får om lag 510 millioner kroner mer fordi flere barn ventes å trenge plass på barnevernsinstitusjon i 2027.",
+      "summary_nb": "Det statlige barnevernet får om lag 510 mill. kr mer fordi flere barn ventes å trenge plass på barnevernsinstitusjon i 2027.",
       "effect": "pluss",
       "amounts": [],
       "source_title": "Prop. 1 S (2026–2027) Statsbudsjettet 2027 (Gul bok)",
@@ -1489,7 +1489,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Basislånet øker med litt over 7 000 kr",
-      "summary_nb": "Basislånet fra Lånekassen skal heretter følge lønnsveksten (grunnbeløpet i folketrygden) i stedet for prisveksten. For studieåret 2027–28 betyr det 4,21 prosent mer, litt over 7 000 kroner.",
+      "summary_nb": "Basislånet fra Lånekassen skal heretter følge lønnsveksten (grunnbeløpet i folketrygden) i stedet for prisveksten. For studieåret 2027–28 betyr det 4,21 % mer, litt over 7 000 kr.",
       "effect": "pluss",
       "amounts": [
         {
@@ -1515,7 +1515,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Andre stipend og lån justeres for prisvekst",
-      "summary_nb": "De øvrige satsene i studiestøtten, utenom basislånet og borteboerstipendet, økes med 3,8 prosent for å holde tritt med prisene.",
+      "summary_nb": "De øvrige satsene i studiestøtten, utenom basislånet og borteboerstipendet, økes med 3,8 % for å holde tritt med prisene.",
       "effect": "pluss",
       "amounts": [],
       "source_title": "Prop. 1 S (2026–2027) Kunnskapsdepartementet",
@@ -1553,7 +1553,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Strømstøtte skal hindre høyere husleie i studentboliger",
-      "summary_nb": "Studentsamskipnader og studentboligstiftelser får 60 millioner kroner i strømstøtte. Den gjelder boliger med felles strømmåling og skal hindre at husleien må settes opp.",
+      "summary_nb": "Studentsamskipnader og studentboligstiftelser får 60 mill. kr i strømstøtte. Den gjelder boliger med felles strømmåling og skal hindre at husleien må settes opp.",
       "effect": "pluss",
       "amounts": [],
       "source_title": "Ei historisk endring av studielån og stipend",
@@ -1572,14 +1572,14 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Folkehøgskoleelever får mindre av lånet gjort om til stipend",
-      "summary_nb": "I dag kan 40 prosent av basislånet gjøres om til stipend når du fullfører folkehøgskole. Dette foreslås kuttet til 15 prosent, altså det samme som studenter får for beståtte studiepoeng.",
+      "summary_nb": "I dag kan 40 % av basislånet gjøres om til stipend når du fullfører folkehøgskole. Dette foreslås kuttet til 15 %, altså det samme som studenter får for beståtte studiepoeng.",
       "effect": "minus",
       "amounts": [
         {
           "label_nb": "Andel av basislånet som blir stipend",
           "y2026": 40,
           "y2027": 15,
-          "unit": "prosent"
+          "unit": "%"
         }
       ],
       "source_title": "Prop. 1 S (2026–2027) Statsbudsjettet 2027 (Gul bok)",
@@ -1618,8 +1618,8 @@
       "kind": "far",
       "same_kroner": null,
       "who": null,
-      "title_nb": "Minstepensjonen økte med 8 000 kroner i året fra mai 2026",
-      "summary_nb": "Satsene for minstepensjon ble hevet med 8 000 kroner i året, i tillegg til den vanlige reguleringen. Økningen gjelder fra 1. mai 2026 og videreføres.",
+      "title_nb": "Minstepensjonen økte med 8 000 kr i året fra mai 2026",
+      "summary_nb": "Satsene for minstepensjon ble hevet med 8 000 kr i året, i tillegg til den vanlige reguleringen. Økningen gjelder fra 1. mai 2026 og videreføres.",
       "effect": "pluss",
       "amounts": [],
       "source_title": "Prop. 1 S (2026–2027) Arbeids- og inkluderingsdepartementet",
@@ -1638,7 +1638,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Støtte til 1 750 nye eller fornyede sykehjems- og omsorgsplasser",
-      "summary_nb": "Staten vil bruke fire milliarder kroner på å hjelpe kommunene med å bygge og fornye rundt 1 750 sykehjems- og omsorgsplasser i 2027, 250 flere enn i år.",
+      "summary_nb": "Staten vil bruke 4 mrd. kr på å hjelpe kommunene med å bygge og fornye rundt 1 750 sykehjems- og omsorgsplasser i 2027, 250 flere enn i år.",
       "effect": "pluss",
       "amounts": [
         {
@@ -1665,7 +1665,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Kortere ventetid på høreapparat",
-      "summary_nb": "Regjeringen bruker 16,5 millioner kroner på flere undersøkelser og bedre henvisninger. Høreapparatgarantien sier at ventetiden skal være maks fire måneder.",
+      "summary_nb": "Regjeringen bruker 16,5 mill. kr på flere undersøkelser og bedre henvisninger. Høreapparatgarantien sier at ventetiden skal være maks fire måneder.",
       "effect": "pluss",
       "amounts": [],
       "source_title": "Regjeringa foreslår over fire milliardar kroner til Eldreløftet",
@@ -1685,8 +1685,8 @@
       "kind": "betaler",
       "same_kroner": null,
       "who": null,
-      "title_nb": "Egenandelstaket øker til 3 406 kroner",
-      "summary_nb": "Du må betale litt mer selv før du får frikort for lege, psykolog, medisiner på blå resept og lignende. Taket øker fra 3 278 kroner i 2026 til 3 406 kroner i 2027.",
+      "title_nb": "Egenandelstaket øker til 3 406 kr",
+      "summary_nb": "Du må betale litt mer selv før du får frikort for lege, psykolog, medisiner på blå resept og lignende. Taket øker fra 3 278 kr i 2026 til 3 406 kr i 2027.",
       "effect": "minus",
       "amounts": [
         {
@@ -1732,7 +1732,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Høyere gravferdsstønad, men større egenandel for båretransport",
-      "summary_nb": "Den behovsprøvde gravferdsstønaden øker til 37 000 kroner, mens dødsboets egenandel for båretransport øker til 7 400 kroner. Dødsbo med lite eller ingen midler skal komme like godt eller bedre ut.",
+      "summary_nb": "Den behovsprøvde gravferdsstønaden øker til 37 000 kr, mens dødsboets egenandel for båretransport øker til 7 400 kr. Dødsbo med lite eller ingen midler skal komme like godt eller bedre ut.",
       "effect": "blandet",
       "amounts": [
         {
@@ -1763,8 +1763,8 @@
       "kind": "far",
       "same_kroner": null,
       "who": null,
-      "title_nb": "Støtten til parykk øker med 19 prosent for dem over 30 år",
-      "summary_nb": "Personer over 30 år som har mistet håret på grunn av sykdom, får høyere støtte til parykk. Ordinær sats går fra 6 265 til 7 455 kroner i året, og forhøyet sats fra 16 220 til 19 302 kroner.",
+      "title_nb": "Støtten til parykk øker med 19 % for dem over 30 år",
+      "summary_nb": "Personer over 30 år som har mistet håret på grunn av sykdom, får høyere støtte til parykk. Ordinær sats går fra 6 265 til 7 455 kr i året, og forhøyet sats fra 16 220 til 19 302 kr.",
       "effect": "pluss",
       "amounts": [
         {
@@ -1815,7 +1815,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Lavere grunnstønad for voksne 18–30 år med cøliaki",
-      "summary_nb": "Personer mellom 18 og 30 år med cøliaki flyttes fra sats 2 (i dag 1 146 kroner i måneden) til sats 1 (i dag 752 kroner i måneden), samme sats som de over 30 år. Barn beholder sats 2.",
+      "summary_nb": "Personer mellom 18 og 30 år med cøliaki flyttes fra sats 2 (i dag 1 146 kr i måneden) til sats 1 (i dag 752 kr i måneden), samme sats som de over 30 år. Barn beholder sats 2.",
       "effect": "minus",
       "amounts": [],
       "source_title": "Prop. 1 S (2026–2027) Arbeids- og inkluderingsdepartementet",
@@ -1910,8 +1910,8 @@
       "kind": "tilbud",
       "same_kroner": null,
       "who": null,
-      "title_nb": "50 millioner for raskere behandling av sykepenger",
-      "summary_nb": "Nav får 50 millioner kroner blant annet til å korte ned behandlingstiden for sykepenger. Det gjelder både søknader fra arbeidstakere og refusjon til arbeidsgivere.",
+      "title_nb": "50 mill. kr for raskere behandling av sykepenger",
+      "summary_nb": "Nav får 50 mill. kr blant annet til å korte ned behandlingstiden for sykepenger. Det gjelder både søknader fra arbeidstakere og refusjon til arbeidsgivere.",
       "effect": "pluss",
       "amounts": [],
       "source_title": "Vil ha kortare saksbehandlingstid for sjukepengar",
@@ -1931,7 +1931,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Mer samarbeid mellom Nav og helsetjenesten om sykmeldte",
-      "summary_nb": "78 millioner kroner går til tettere samarbeid mellom Nav og kommunehelsetjenesten, bedre beslutningsstøtte for legene som sykmelder og bedre utveksling av informasjon mellom Nav og helsetjenesten.",
+      "summary_nb": "78 mill. kr går til tettere samarbeid mellom Nav og kommunehelsetjenesten, bedre beslutningsstøtte for legene som sykmelder og bedre utveksling av informasjon mellom Nav og helsetjenesten.",
       "effect": "blandet",
       "amounts": [],
       "source_title": "78 millioner kroner for få ned sykefraværet",
@@ -1951,7 +1951,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Flere tiltak fra Nav for å komme i jobb",
-      "summary_nb": "Pengene til arbeidsmarkedstiltak, som jobbstøtte og lønnstilskudd, økes med 50 millioner kroner. Det åpner for mer individuell jobbstøtte og et forsøk med fireårig lønnstilskudd for unge.",
+      "summary_nb": "Pengene til arbeidsmarkedstiltak, som jobbstøtte og lønnstilskudd, økes med 50 mill. kr. Det åpner for mer individuell jobbstøtte og et forsøk med fireårig lønnstilskudd for unge.",
       "effect": "pluss",
       "amounts": [],
       "source_title": "Prop. 1 S (2026–2027) Arbeids- og inkluderingsdepartementet",
@@ -1971,7 +1971,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "300 flere plasser i varig tilrettelagt arbeid",
-      "summary_nb": "Det settes av 49 millioner kroner til om lag 300 flere plasser i varig tilrettelagt arbeid (VTA).",
+      "summary_nb": "Det settes av 49 mill. kr til om lag 300 flere plasser i varig tilrettelagt arbeid (VTA).",
       "effect": "pluss",
       "amounts": [
         {
@@ -1997,7 +1997,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Forsøk med ungdomsprogram fortsetter",
-      "summary_nb": "Forsøket med et arbeidsrettet fulltidsprogram for unge, med egen ytelse uten medisinske krav, får 194 millioner kroner i 2027.",
+      "summary_nb": "Forsøket med et arbeidsrettet fulltidsprogram for unge, med egen ytelse uten medisinske krav, får 194 mill. kr i 2027.",
       "effect": "pluss",
       "amounts": [
         {
@@ -2023,7 +2023,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Norgespris på strøm øker fra 40 til 45 øre",
-      "summary_nb": "Den faste Norgesprisen på strøm og fjernvarme foreslås hevet med 5 øre til 45 øre per kWh (uten mva). Regjeringen anslår at en typisk husholdning i Sørvest-Norge likevel kan spare om lag 8 700 kroner med Norgespris.",
+      "summary_nb": "Den faste Norgesprisen på strøm og fjernvarme foreslås hevet med 5 øre til 45 øre per kWh (uten mva). Regjeringen anslår at en typisk husholdning i Sørvest-Norge likevel kan spare om lag 8 700 kr med Norgespris.",
       "effect": "minus",
       "amounts": [
         {
@@ -2049,7 +2049,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Strømstøtten slår inn fra 79 øre",
-      "summary_nb": "For dem som ikke har Norgespris, øker grensen for strømstøtte fra 77 til 79 øre per kWh (uten mva). Staten dekker fortsatt 90 prosent av prisen over grensen.",
+      "summary_nb": "For dem som ikke har Norgespris, øker grensen for strømstøtte fra 77 til 79 øre per kWh (uten mva). Staten dekker fortsatt 90 % av prisen over grensen.",
       "effect": "minus",
       "amounts": [
         {
@@ -2102,13 +2102,13 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Lavere toll på klær og tekstiler",
-      "summary_nb": "Tollen på klær og tekstiler som tepper, håndklær og gardiner kuttes til én sats på 5 prosent. Det gjør det billigere for norske butikker å importere klær.",
+      "summary_nb": "Tollen på klær og tekstiler som tepper, håndklær og gardiner kuttes til én sats på 5 %. Det gjør det billigere for norske butikker å importere klær.",
       "effect": "pluss",
       "amounts": [],
       "source_title": "Regjeringen foreslår lavere tollavgift",
       "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringen-foreslar-lavere-tollavgift/id3174660/",
       "page": null,
-      "caveat_nb": "I dag varierer tollen mellom 5,6 og 10,7 prosent."
+      "caveat_nb": "I dag varierer tollen mellom 5,6 og 10,7 %."
     },
     {
       "id": "post-en-dag-i-uka",
@@ -2142,7 +2142,7 @@
       "same_kroner": true,
       "who": null,
       "title_nb": "Grensene for boutgifter i bostøtten følger ikke prisveksten",
-      "summary_nb": "Om lag 92 900 husstander ventes å få bostøtte hver måned i 2027, i snitt 43 600 kroner i året. Grensene for hvor store boutgifter som regnes med, holdes på samme kronebeløp som i 2026.",
+      "summary_nb": "Om lag 92 900 husstander ventes å få bostøtte hver måned i 2027, i snitt 43 600 kr i året. Grensene for hvor store boutgifter som regnes med, holdes på samme kronebeløp som i 2026.",
       "effect": "minus",
       "amounts": [
         {
@@ -2170,7 +2170,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Mål om behandling innen 60 dager på sykehus",
-      "summary_nb": "Sykehusene får 250 milliarder kroner. Målet er at alle pasienter på sikt skal ha startet behandling innen 60 dager etter henvisning.",
+      "summary_nb": "Sykehusene får 250 mrd. kr. Målet er at alle pasienter på sikt skal ha startet behandling innen 60 dager etter henvisning.",
       "effect": "pluss",
       "amounts": [],
       "source_title": "Legger til rette for nye, ambisiøse ventetidsmål for sykehusene",
@@ -2190,7 +2190,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Flere lavterskeltilbud innen psykisk helse",
-      "summary_nb": "Psykisk helse får 300 millioner kroner mer. Pengene går blant annet til flere døgnplasser og flere lavterskeltilbud i kommunene, der du kan få hjelp tidlig.",
+      "summary_nb": "Psykisk helse får 300 mill. kr mer. Pengene går blant annet til flere døgnplasser og flere lavterskeltilbud i kommunene, der du kan få hjelp tidlig.",
       "effect": "pluss",
       "amounts": [],
       "source_title": "300 millioner kroner mer til psykisk helse",
@@ -2228,7 +2228,7 @@
       "same_kroner": null,
       "who": null,
       "title_nb": "Bedre mobildekning i togtunneler",
-      "summary_nb": "135 millioner kroner går til bedre nettdekning i jernbanetunneler. Reisende gjennom Drammenstunnelen og Ulrikstunnelen kan få mobildekning for første gang.",
+      "summary_nb": "135 mill. kr går til bedre nettdekning i jernbanetunneler. Reisende gjennom Drammenstunnelen og Ulrikstunnelen kan få mobildekning for første gang.",
       "effect": "pluss",
       "amounts": [],
       "source_title": "Betre nettdekning på jernbana",

@@ -27,7 +27,7 @@ GROUPS = [
     "Arbeid, familie og integrering",
     "Utdanning og forskning",
     "Samferdsel",
-    "Øvrige formål",
+    "Øvrige områder",
 ]
 INCOME = [
     "Skatt på inntekt og formue",
@@ -57,7 +57,7 @@ expense_group = (
     .when(omr.is_in([9, 11])).then(pl.lit("Arbeid, familie og integrering"))
     .when(omr == 7).then(pl.lit("Utdanning og forskning"))
     .when(omr.is_in([21, 22])).then(pl.lit("Samferdsel"))
-    .otherwise(pl.lit("Øvrige formål"))
+    .otherwise(pl.lit("Øvrige områder"))
 )
 
 # None means the group has no breakdown and ends in the middle column
