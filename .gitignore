@@ -1,5 +1,6 @@
 .venv/
 __pycache__/
+*.local.md
 # Downloaded source files; recreate with `uv run python download.py`
 data/*
 # Verified facts are written by agent sessions, not downloaded
