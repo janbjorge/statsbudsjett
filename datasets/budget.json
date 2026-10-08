@@ -18276,7 +18276,7 @@
       "k": 352,
       "kn": "Nedsatt funksjonsevne",
       "s": "utgift",
-      "v": 0.3876,
+      "v": 0.3877,
       "v26": 0.3725
     },
     {
@@ -25265,137 +25265,218 @@
     {
       "year": 2001,
       "value": 3.0,
-      "forecast": false
+      "forecast": false,
+      "spend": 3.9,
+      "expected": 4.0,
+      "size": 613.3
     },
     {
       "year": 2002,
       "value": 5.2,
-      "forecast": false
+      "forecast": false,
+      "spend": 4.8,
+      "expected": 4.0,
+      "size": 608.4
     },
     {
       "year": 2003,
       "value": 5.8,
-      "forecast": false
+      "forecast": false,
+      "spend": 5.5,
+      "expected": 4.0,
+      "size": 844.5
     },
     {
       "year": 2004,
       "value": 6.4,
-      "forecast": false
+      "forecast": false,
+      "spend": 4.6,
+      "expected": 4.0,
+      "size": 1015.4
     },
     {
       "year": 2005,
       "value": 6.7,
-      "forecast": false
+      "forecast": false,
+      "spend": 4.2,
+      "expected": 4.0,
+      "size": 1397.8
     },
     {
       "year": 2006,
       "value": 6.3,
-      "forecast": false
+      "forecast": false,
+      "spend": 3.0,
+      "expected": 4.0,
+      "size": 1782.2
     },
     {
       "year": 2007,
       "value": 6.1,
-      "forecast": false
+      "forecast": false,
+      "spend": 2.4,
+      "expected": 4.0,
+      "size": 2016.9
     },
     {
       "year": 2008,
       "value": 6.9,
-      "forecast": false
+      "forecast": false,
+      "spend": 2.6,
+      "expected": 4.0,
+      "size": 2273.3
     },
     {
       "year": 2009,
       "value": 10.3,
-      "forecast": false
+      "forecast": false,
+      "spend": 3.8,
+      "expected": 4.0,
+      "size": 2636.8
     },
     {
       "year": 2010,
       "value": 11.2,
-      "forecast": false
+      "forecast": false,
+      "spend": 3.7,
+      "expected": 4.0,
+      "size": 3074.5
     },
     {
       "year": 2011,
       "value": 9.9,
-      "forecast": false
+      "forecast": false,
+      "spend": 3.0,
+      "expected": 4.0,
+      "size": 3309.0
     },
     {
       "year": 2012,
       "value": 11.6,
-      "forecast": false
+      "forecast": false,
+      "spend": 3.4,
+      "expected": 4.0,
+      "size": 3813.6
     },
     {
       "year": 2013,
       "value": 12.3,
-      "forecast": false
+      "forecast": false,
+      "spend": 3.3,
+      "expected": 4.0,
+      "size": 5034.8
     },
     {
       "year": 2014,
       "value": 13.7,
-      "forecast": false
+      "forecast": false,
+      "spend": 3.0,
+      "expected": 4.0,
+      "size": 6427.5
     },
     {
       "year": 2015,
       "value": 14.7,
-      "forecast": false
+      "forecast": false,
+      "spend": 2.7,
+      "expected": 4.0,
+      "size": 7471.2
     },
     {
       "year": 2016,
       "value": 16.7,
-      "forecast": false
+      "forecast": false,
+      "spend": 2.7,
+      "expected": 4.0,
+      "size": 7506.8
     },
     {
       "year": 2017,
       "value": 17.2,
-      "forecast": false
+      "forecast": false,
+      "spend": 2.9,
+      "expected": 4.0,
+      "size": 8483.7
     },
     {
       "year": 2018,
       "value": 15.8,
-      "forecast": false
+      "forecast": false,
+      "spend": 2.4,
+      "expected": 3.0,
+      "size": 8251.4
     },
     {
       "year": 2019,
       "value": 17.1,
-      "forecast": false
+      "forecast": false,
+      "spend": 2.8,
+      "expected": 3.0,
+      "size": 10083.8
     },
     {
       "year": 2020,
       "value": 23.6,
-      "forecast": false
+      "forecast": false,
+      "spend": 3.6,
+      "expected": 3.0,
+      "size": 10908.5
     },
     {
       "year": 2021,
       "value": 21.9,
-      "forecast": false
+      "forecast": false,
+      "spend": 3.1,
+      "expected": 3.0,
+      "size": 12340.1
     },
     {
       "year": 2022,
       "value": 19.7,
-      "forecast": false
+      "forecast": false,
+      "spend": 2.6,
+      "expected": 3.0,
+      "size": 12429.3
     },
     {
       "year": 2023,
       "value": 20.1,
-      "forecast": false
+      "forecast": false,
+      "spend": 2.9,
+      "expected": 3.0,
+      "size": 15756.7
     },
     {
       "year": 2024,
       "value": 21.5,
-      "forecast": false
+      "forecast": false,
+      "spend": 2.6,
+      "expected": 3.0,
+      "size": 19741.6
     },
     {
       "year": 2025,
       "value": 24.5,
-      "forecast": false
+      "forecast": false,
+      "spend": 2.6,
+      "expected": 3.0,
+      "size": 21267.9
     },
     {
       "year": 2026,
       "value": 26.5,
-      "forecast": false
+      "forecast": false,
+      "spend": 2.7,
+      "expected": 3.0,
+      "size": null
     },
     {
       "year": 2027,
       "value": 26.6,
-      "forecast": true
+      "forecast": true,
+      "spend": 2.7,
+      "expected": 3.0,
+      "size": null
     }
   ],
   "diff": [

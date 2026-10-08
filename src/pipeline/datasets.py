@@ -99,16 +99,25 @@ def kommuner() -> list[dict]:
 
 
 def fund_share() -> list[dict]:
-    """Share of budget spending covered by the oil fund, NB 2027 figure 3.4."""
-    d = sheet_rows(NB3, "Fig3-4").filter(pl.col("column_0").str.contains(r"^\d{4}$"))
-    return (
-        d.select(
-            year=pl.col("column_0").cast(pl.Int64),
-            value=pl.coalesce(pl.col("column_1"), pl.col("column_2")).cast(pl.Float64),
-            forecast=pl.col("column_1").is_null(),
-        )
-        .to_dicts()
+    """The oil fund per year from NB 2027 chapter 3: share of budget spending it covers (figure 3.4),
+    share of the fund spent and the expected return (figure 3.3), and its value in mrd. kr (figure 3.6)."""
+    def years(sheet: str) -> pl.DataFrame:
+        d = sheet_rows(NB3, sheet).filter(pl.col("column_0").str.contains(r"^\d{4}$"))
+        return d.with_columns(year=pl.col("column_0").cast(pl.Int64))
+
+    share = years("Fig3-4").select(
+        "year",
+        value=pl.coalesce(pl.col("column_1"), pl.col("column_2")).cast(pl.Float64),
+        forecast=pl.col("column_1").is_null(),
     )
+    spend = years("Fig3-3").select(
+        "year",
+        spend=pl.coalesce(pl.col("column_1"), pl.col("column_4")).cast(pl.Float64),
+        expected=pl.coalesce(pl.col("column_2"), pl.col("column_3")).cast(pl.Float64),
+    )
+    # 2026 in figure 3.6 is not the market value so far that year (figure 3.5), so the series ends at 2025 (METHOD.md)
+    size = years("Fig3-6").filter(pl.col("year") <= 2025).select("year", size=pl.col("column_5").cast(pl.Float64))
+    return share.join(spend, on="year", how="left").join(size, on="year", how="left").sort("year").to_dicts()
 
 
 PERSONA = ROOT / "data/persona"

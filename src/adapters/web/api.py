@@ -236,6 +236,9 @@ class FundYear(Out):
     aar: int
     andel_prosent: float
     prognose: bool
+    uttak_prosent_av_fondet: float
+    forventet_realavkastning_prosent: float
+    fondsverdi_mrd_kr: float | None
 
 
 def _fact(f: Fact) -> FactOut:
@@ -405,8 +408,18 @@ def build(queries: Queries) -> FastAPI:
             inntekter_per_innbygger=[PerPerson(navn=r.name, kr=r.kroner) for r in e.income],
         )
 
-    @api.get("/oljefond", summary="Share of budget spending covered by the oil fund, per year (NB 2027 figure 3.4)")
+    @api.get(
+        "/oljefond",
+        summary="The oil fund per year: share of budget spending it covers, share of the fund spent, expected return"
+        " and year-end value (NB 2027 figures 3.3, 3.4 and 3.6)",
+    )
     def fund() -> list[FundYear]:
-        return [FundYear(aar=f.year, andel_prosent=f.share, prognose=f.forecast) for f in queries.budget.fund]
+        return [
+            FundYear(
+                aar=f.year, andel_prosent=f.share, prognose=f.forecast, uttak_prosent_av_fondet=f.spend,
+                forventet_realavkastning_prosent=f.expected, fondsverdi_mrd_kr=f.size,
+            )
+            for f in queries.budget.fund
+        ]
 
     return api

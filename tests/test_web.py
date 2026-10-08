@@ -19,6 +19,17 @@ def test_front_page_renders_every_section() -> None:
         assert f'id="{anchor}"' in html
 
 
+def test_oil_section_shows_fund_size_spending_and_share() -> None:
+    html = client.get("/").text
+    # NB 2027 figures 3.6 (21 267,9 / 613,3 mrd. kr), 3.3 and 3.4
+    assert "<b>26,6 %</b> av utgiftene i statsbudsjettet. I 2001 var andelen 3,0 %" in html
+    assert "Uttaket er 2,7 % av fondet i 2027 og var 3,9 % i 2001" in html
+    assert "21\u00a0267,9 mrd. kr ved utgangen av 2025 og 613,3 mrd. kr ved utgangen av 2001" in html
+    assert 'href="#utforsk"' in html
+    for key in ("size", "spend", "share"):
+        assert f'data-key="{key}"' in html
+
+
 def test_shared_family_link_shows_the_tax_effect() -> None:
     html = client.get(f"/?{FAMILY}").text
     assert "3 076 kr lavere skatt" in html

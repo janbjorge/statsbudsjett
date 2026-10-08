@@ -134,7 +134,9 @@ def tojson_kommuner(kommuner: tuple[Kommune, ...]) -> str:
 
 
 def tojson_fund(fund: tuple[FundYear, ...]) -> str:
-    return json.dumps([{"year": f.year, "value": f.share, "forecast": f.forecast} for f in fund])
+    return json.dumps(
+        [{"year": f.year, "share": f.share, "forecast": f.forecast, "spend": f.spend, "expected": f.expected, "size": f.size} for f in fund]
+    )
 
 
 templates.env.filters |= {"tojson_nodes": tojson_nodes, "tojson_kommuner": tojson_kommuner, "tojson_fund": tojson_fund}

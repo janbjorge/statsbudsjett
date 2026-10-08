@@ -66,8 +66,11 @@ class Kommune:
 @dataclass(frozen=True, slots=True)
 class FundYear:
     year: int
-    share: float
+    share: float  # % of budget spending covered by the fund
     forecast: bool
+    spend: float  # % of the fund spent
+    expected: float  # expected real return, % of the fund
+    size: float | None  # market value at year end, mrd. kr
 
 
 @dataclass(frozen=True, slots=True)

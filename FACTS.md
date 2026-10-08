@@ -70,7 +70,8 @@ Site quirks:
 
 - Population 5 636 995: the sum of "innbyggartal per 1.7.2026" in Grønt hefte tabell F, over 357 kommuner (src/pipeline/datasets.py:78).
 - Frie inntekter per kommune 2026 and 2027 come from Grønt hefte tabell 3, in 1 000 kr. The two tables spell some kommune names differently, so they are joined on the 4-digit number.
-- The oil fund share of budget spending (26,6 % in 2027, 3,0 % in 2001) is NB 2027 figure 3.4, sheet `Fig3-4` in kap_3_nb_2027.xlsx (src/pipeline/datasets.py:100). Our own Sankey ratio differs (different denominator), so the page quotes the official figure.
+- The oil fund share of budget spending (26,6 % in 2027, 3,0 % in 2001) is NB 2027 figure 3.4, sheet `Fig3-4` in kap_3_nb_2027.xlsx (src/pipeline/datasets.py:101 fund_share). Our own Sankey ratio differs (different denominator), so the page quotes the official figure.
+- The #olje section has three charts on one year axis, all from the same workbook: the budget share above, the share of the fund spent next to the expected real return (figure 3.3, sheet `Fig3-3`, 3,9 % against 4 % in 2001, 2,7 % against 3 % in 2027), and fund value at year end (figure 3.6, sheet `Fig3-6`, 613,3 mrd. kr in 2001, 21 267,9 in 2025). The text states these side by side and takes no stance (METHOD.md §8). /api/oljefond returns all four series.
 
 ## 6. "For deg" facts and verification
 

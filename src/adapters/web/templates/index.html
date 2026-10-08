@@ -101,10 +101,26 @@
 
   <section id="olje">
     <h2>Oljepengene</h2>
-    {% set last = fund[-1] %}
-    <p class="lede">I {{ last.year }} dekker penger fra oljefondet <b>{{ last.share|nb1 }} %</b> av utgiftene i statsbudsjettet. I {{ fund[0].year }} var andelen {{ fund[0].share|nb1 }} %.</p>
-    <div class="card"><div class="fund" data-fund="{{ fund|tojson_fund }}"></div></div>
-    <p class="note" style="margin-top:12px">Kilde: Nasjonalbudsjettet 2027, figur 3.4. Andelen er Finansdepartementets beregning, og 2027 er regjeringens forslag.</p>
+    {% set first, last = fund[0], fund[-1] %}
+    {% set sized = fund|selectattr("size")|list %}
+    {% set data = fund|tojson_fund %}
+    <p class="lede">I {{ last.year }} dekker penger fra oljefondet <b>{{ last.share|nb1 }} %</b> av utgiftene i statsbudsjettet. I {{ first.year }} var andelen {{ first.share|nb1 }} %.</p>
+    <p>Uttaket er {{ last.spend|nb1 }} % av fondet i {{ last.year }} og var {{ first.spend|nb1 }} % i {{ first.year }}.
+      Fondet var verdt {{ sized[-1].size|num }} mrd. kr ved utgangen av {{ sized[-1].year }} og {{ sized[0].size|num }} mrd. kr ved utgangen av {{ sized[0].year }}.
+      <a href="#utforsk">Se hva pengene i budsjettet går til</a>.</p>
+    <div class="card"><h3>Andel av utgiftene i statsbudsjettet</h3><p class="muted small" style="margin:0 0 12px">Penger fra fondet, prosent av utgiftene</p>
+      <div class="fund" data-key="share" data-fund="{{ data }}"></div></div>
+    <div class="card" style="margin-top:12px"><h3>Uttak av fondet</h3><p class="muted small" style="margin:0 0 12px">Prosent av fondets verdi. Stiplet linje: forventet realavkastning, som handlingsregelen sier at bruken over tid skal følge</p>
+      <div class="fund" data-key="spend" data-fund="{{ data }}"></div></div>
+    <div class="card" style="margin-top:12px"><h3>Fondets verdi</h3><p class="muted small" style="margin:0 0 12px">Markedsverdi ved årsslutt, mrd. kr</p>
+      <div class="fund" data-key="size" data-fund="{{ data }}"></div></div>
+    <details style="margin-top:12px"><summary>Vis tallene som tabell</summary>
+      <table class="tbl">
+        <thead><tr><th>År</th><th>Andel av utgiftene, %</th><th>Uttak, % av fondet</th><th>Forventet realavkastning, %</th><th>Fondets verdi, mrd. kr</th></tr></thead>
+        <tbody>{% for f in fund %}<tr><td>{{ f.year }}{{ " (forslag)" if f.forecast }}</td><td>{{ f.share|nb1 }}</td><td>{{ f.spend|nb1 }}</td><td>{{ f.expected|nb1 }}</td><td>{{ f.size|nb1 if f.size else "–" }}</td></tr>{% endfor %}</tbody>
+      </table>
+    </details>
+    <p class="note" style="margin-top:12px">Kilde: Nasjonalbudsjettet 2027, figur 3.3, 3.4 og 3.6. Tallene er Finansdepartementets, og {{ last.year }} er regjeringens forslag. Fondets verdi er i kroner uten justering for prisvekst, og en svakere krone gjør den høyere.</p>
   </section>
 
   <section id="feil">

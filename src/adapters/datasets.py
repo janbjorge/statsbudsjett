@@ -47,7 +47,7 @@ class JsonDatasets:
                 Kommune(k["nr"], k["navn"], k["fylke"], k["pop"], k["frie26"], k["frie27"], k["vekst"], k["skatteindeks"])
                 for k in d["kommuner"]
             ),
-            fund=tuple(FundYear(f["year"], f["value"], f["forecast"]) for f in d["fund"]),
+            fund=tuple(FundYear(f["year"], f["value"], f["forecast"], f["spend"], f["expected"], f["size"]) for f in d["fund"]),
         )
 
     def _read_facts(self) -> list[Fact]:

@@ -73,3 +73,10 @@ The pages show the budget the way Finansdepartementet presents it, without oil m
 ## 7. Kommuner
 
 - Frie inntekter (tax plus rammetilskudd) per person compares kommuner, and the national average is total frie inntekter divided by total population. It is not all money a kommune has. Earmarked grants, fees and VAT compensation are left out, as on the government's own page.
+
+## 8. The oil fund
+
+- Fund value is the market value at year end in nominal kroner, from NB 2027 figure 3.6. It is not adjusted for prices, and a weaker krone raises it; the page says so under the charts.
+- Figure 3.6 also has a 2026 value (22 683,4 mrd. kr), but the fund was worth 21 919 mrd. kr on 23 September 2026 (figure 3.5), so that value is not a year-end market value. The series stops at 2025, whose value matches 31 December 2025 in figure 3.5 (src/pipeline/datasets.py fund_share).
+- "Forventet realavkastning" is the expected real return in figure 3.3: 4 % to 2017 and 3 % from 2018, drawn as steps.
+- The section states the numbers side by side and takes no stance (jb 2026-10-08): titles name the measure, and the text has no "men" or "likevel" and no scenarios of our own.

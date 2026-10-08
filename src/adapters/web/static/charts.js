@@ -136,26 +136,43 @@ function drawStrip(el) {
   el.replaceChildren(svg.node());
 }
 
-// ---------- oil fund share over time ----------
+// ---------- the oil fund over time: one small chart per measure, sharing the year axis ----------
+const FUND = {
+  size: { unit: v => nb.format(v) + " mrd. kr", axis: v => nb.format(v), tip: v => nb.format(v) + " mrd. kr ved årsslutt" },
+  spend: { unit: v => nb1.format(v) + " %", axis: v => v + " %", tip: v => nb1.format(v) + " % av fondet", ref: "expected" },
+  share: { unit: v => nb1.format(v) + " %", axis: v => v + " %", tip: v => nb1.format(v) + " % av utgiftene" },
+};
 function drawFund(el) {
-  const s = JSON.parse(el.dataset.fund), last = s[s.length - 1];
-  const W = el.clientWidth || 800, H = Math.max(240, Math.min(360, W * 0.4)), m = { l: 36, r: 16, t: 20, b: 28 };
-  const x = d3.scaleLinear().domain(d3.extent(s, d => d.year)).range([m.l, W - m.r]);
-  const y = d3.scaleLinear().domain([0, d3.max(s, d => d.value) * 1.1]).nice().range([H - m.b, m.t]);
+  const key = el.dataset.key, c = FUND[key], all = JSON.parse(el.dataset.fund);
+  const s = all.filter(d => d[key] != null).map(d => ({ ...d, value: d[key] })), last = s[s.length - 1];
+  const W = el.clientWidth || 800, H = Math.max(180, Math.min(260, W * 0.3)), m = { l: key === "size" ? 52 : 36, r: 16, t: 20, b: 28 };
+  const x = d3.scaleLinear().domain(d3.extent(all, d => d.year)).range([m.l, W - m.r]);
+  const top = d3.max(s, d => Math.max(d.value, c.ref ? d[c.ref] : 0));
+  const y = d3.scaleLinear().domain([0, top * 1.1]).nice().range([H - m.b, m.t]);
   const svg = d3.create("svg").attr("viewBox", [0, 0, W, H]);
   svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - m.b})`)
     .call(d3.axisBottom(x).ticks(W < 500 ? 4 : 9).tickFormat(d3.format("d")).tickSizeOuter(0));
   svg.append("g").attr("class", "axis").attr("transform", `translate(${m.l},0)`)
-    .call(d3.axisLeft(y).ticks(5).tickSize(-(W - m.l - m.r)).tickFormat(v => v + " %"))
+    .call(d3.axisLeft(y).ticks(4).tickSize(-(W - m.l - m.r)).tickFormat(c.axis))
     .call(g => g.select(".domain").remove()).call(g => g.selectAll(".tick line").attr("stroke", cssVar("--hairline")));
+  if (c.ref) {
+    // A step: the expected return changes between two years, it does not slide
+    const steps = s.flatMap((d, i) => i && s[i - 1][c.ref] !== d[c.ref] ? [[d.year, s[i - 1][c.ref]], [d.year, d[c.ref]]] : [[d.year, d[c.ref]]]);
+    svg.append("path").datum(steps).attr("fill", "none").attr("stroke", cssVar("--text-muted")).attr("stroke-width", 1.5)
+      .attr("stroke-dasharray", "2 4").attr("d", d3.line().x(p => x(p[0])).y(p => y(p[1])));
+    svg.append("text").attr("x", x(s[0].year) + 4).attr("y", y(s[0][c.ref]) - 8).attr("font-size", 12)
+      .attr("fill", cssVar("--text-secondary")).text("Forventet realavkastning");
+  }
   const line = d3.line().x(d => x(d.year)).y(d => y(d.value));
   const actual = s.filter(d => !d.forecast);
   svg.append("path").datum(actual).attr("fill", "none").attr("stroke", cssVar("--series-1")).attr("stroke-width", 2).attr("d", line);
-  svg.append("path").datum([actual[actual.length - 1], last]).attr("fill", "none").attr("stroke", cssVar("--series-1"))
+  if (last.forecast) svg.append("path").datum([actual[actual.length - 1], last]).attr("fill", "none").attr("stroke", cssVar("--series-1"))
     .attr("stroke-width", 2).attr("stroke-dasharray", "4 4").attr("d", line);
-  svg.append("circle").attr("cx", x(last.year)).attr("cy", y(last.value)).attr("r", 5).attr("fill", cssVar("--series-1")).attr("stroke", cssVar("--surface-1")).attr("stroke-width", 2);
-  svg.append("text").attr("x", x(last.year) - 8).attr("y", y(last.value) - 12).attr("text-anchor", "end").attr("font-size", 13).attr("font-weight", 650)
-    .attr("fill", cssVar("--text-primary")).text(`${last.year}: ${nb1.format(last.value)} %`);
+  for (const [d, anchor, dx] of [[s[0], "start", 0], [last, "end", -8]]) {
+    svg.append("circle").attr("cx", x(d.year)).attr("cy", y(d.value)).attr("r", 5).attr("fill", cssVar("--series-1")).attr("stroke", cssVar("--surface-1")).attr("stroke-width", 2);
+    svg.append("text").attr("x", x(d.year) + dx).attr("y", y(d.value) - 12).attr("text-anchor", anchor).attr("font-size", 13).attr("font-weight", 650)
+      .attr("fill", cssVar("--text-primary")).text(`${d.year}: ${c.unit(d.value)}`);
+  }
   const hover = svg.append("g").style("display", "none");
   hover.append("line").attr("y1", m.t).attr("y2", H - m.b).attr("stroke", cssVar("--text-muted"));
   hover.append("circle").attr("r", 4).attr("fill", cssVar("--series-1"));
@@ -166,7 +183,8 @@ function drawFund(el) {
       hover.style("display", null);
       hover.select("line").attr("x1", x(d.year)).attr("x2", x(d.year));
       hover.select("circle").attr("cx", x(d.year)).attr("cy", y(d.value));
-      showTip(ev, `<b>${d.year}</b>${d.forecast ? " (forslag)" : ""}<br>${nb1.format(d.value)} % av utgiftene`);
+      const ref = c.ref ? `<br>Forventet realavkastning: ${nb1.format(d[c.ref])} %` : "";
+      showTip(ev, `<b>${d.year}</b>${d.forecast ? " (forslag)" : ""}<br>${c.tip(d.value)}${ref}`);
     })
     .on("mouseleave", () => { hover.style("display", "none"); hideTip(); });
   el.replaceChildren(svg.node());
@@ -176,7 +194,7 @@ function drawFund(el) {
 function drawAll() {
   document.querySelectorAll(".treemap[data-nodes]").forEach(drawTreemap);
   document.querySelectorAll(".strip").forEach(drawStrip);
-  document.querySelectorAll(".fund[data-fund]").forEach(drawFund);
+  document.querySelectorAll(".fund[data-key]").forEach(drawFund);
   document.dispatchEvent(new Event("charts:redraw"));
 }
 

@@ -23,7 +23,7 @@ Read-only, no key, CORS open. Field names carry their unit: `_mrd_kr` is billion
 - [One kommune]({{ base }}api/kommune?k=Bergen) and [all kommuner]({{ base }}api/kommuner): frie inntekter (unrestricted income) per innbygger
 - [Tax receipt]({{ base }}api/kvittering?skatt=150000): where a given tax amount goes
 - [Everyday units]({{ base }}api/visste-du): per innbygger, per day, per second
-- [Oil fund share over time]({{ base }}api/oljefond)
+- [Oil fund over time: budget share, share of the fund spent, fund value]({{ base }}api/oljefond)
 
 ## Downloads
 
