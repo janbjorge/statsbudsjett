@@ -1,20 +1,15 @@
 {% extends "base.html" %}
 {# No charts here, so no d3 #}
 {% block d3 %}{% endblock %}
-{% block title %}Tilbud og næringer i statsbudsjettet 2027 | Budsjettlupa{% endblock %}
+{% block title %}Hele statsbudsjettet 2027 kort fortalt | Budsjettlupa{% endblock %}
 {% from "_fact.html" import amt, card %}
-{% block main %}
-  <section>
-    <p class="muted" style="margin:0"><a href="/">← Budsjettlupa</a></p>
-    <h1>Tilbud og næringer</h1>
-    <p class="lede">Endringer i offentlige tilbud og for næringer, lag og bedrifter,
-      sortert etter hvem de gjelder. De endrer ikke hva du betaler eller får utbetalt selv. Det ser du under <a href="/#meg">For deg</a>.</p>
-    <div class="chips">
-      {% for s in sections %}<a class="chip" href="#g{{ loop.index }}">{{ s.label }} ({{ s.changed|length + s.unchanged|length }})</a>{% endfor %}
-    </div>
-  </section>
-  {% for s in sections %}
-  <section class="facts" id="g{{ loop.index }}">
+{% set people = sections|rejectattr("label", "in", areas)|list %}
+{% set parts = sections|selectattr("label", "in", areas)|list %}
+{% macro chips(list, start) %}<div class="chips">
+  {% for s in list %}<a class="chip" href="#g{{ start + loop.index }}">{{ s.label }} ({{ s.changed|length + s.unchanged|length }})</a>{% endfor %}
+</div>{% endmacro %}
+{% macro block(s, n) %}
+  <section class="facts" id="g{{ n }}">
     <h2>{{ s.label }}</h2>
     {% for f in s.changed %}{{ card(f, "du") }}{% endfor %}
     {% if s.unchanged %}
@@ -23,5 +18,18 @@
     </div>
     {% endif %}
   </section>
-  {% endfor %}
+{% endmacro %}
+{% block main %}
+  <section>
+    <p class="muted" style="margin:0"><a href="/">← Budsjettlupa</a></p>
+    <h1>Hele budsjettet</h1>
+    <p class="lede">De største endringene i statsbudsjettet 2027, kort fortalt. Hver sak lenker til kilden hos regjeringen,
+      der du finner detaljene. Det du selv betaler eller får utbetalt, ser du under <a href="/#meg">For deg</a>.</p>
+    <h3>Etter hvem det gjelder</h3>
+    {{ chips(people, 0) }}
+    {% if parts %}<h3>Etter del av budsjettet</h3>
+    {{ chips(parts, people|length) }}{% endif %}
+  </section>
+  {% for s in people %}{{ block(s, loop.index) }}{% endfor %}
+  {% for s in parts %}{{ block(s, people|length + loop.index) }}{% endfor %}
 {% endblock %}

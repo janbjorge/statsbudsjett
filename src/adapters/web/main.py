@@ -20,7 +20,7 @@ from adapters.web import api, fmt, telemetry
 from adapters.web.params import kroner, profile_from, profile_query
 from app.queries import Queries
 from core.budget import FundYear, Kommune, Node, Side
-from core.facts import ASKED, KID_BANDS, PERSONAS
+from core.facts import AREAS, ASKED, KID_BANDS, PERSONAS
 from core.tax import Business
 
 HERE = Path(__file__).parent
@@ -265,7 +265,7 @@ def flows_page(request: Request, vis: Q = "") -> HTMLResponse:
 
 @app.get("/tilbud", response_class=HTMLResponse)
 def services_page(request: Request) -> HTMLResponse:
-    return templates.TemplateResponse(request, "tilbud.html", {"sections": queries.general()})
+    return templates.TemplateResponse(request, "tilbud.html", {"sections": queries.general(), "areas": set(AREAS.values())})
 
 
 @app.get("/visste-du", response_class=HTMLResponse)

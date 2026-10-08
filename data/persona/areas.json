@@ -1,0 +1,1734 @@
+[
+  {
+    "id": "kommune-frie-inntekter-2027",
+    "area": "kommune",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Kommunene får 3,2 mrd. kr mer i frie inntekter",
+    "summary_nb": "De frie inntektene til kommuner og fylkeskommuner øker med 3,2 mrd. kr ut over pris- og lønnsvekst. Etter at flere eldre og andre befolkningsendringer er dekket, gjenstår 0,5 mrd. kr, mot 5,5 mrd. kr i 2026.",
+    "effect": "pluss",
+    "kind": "far",
+    "who": "Kommunene",
+    "amounts": [
+      {
+        "label_nb": "Realvekst i frie inntekter",
+        "y2026": 8.4,
+        "y2027": 3.2,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Handlingsrom etter demografikostnader",
+        "y2026": 5.5,
+        "y2027": 0.5,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Vekst til kommunene",
+        "y2026": null,
+        "y2027": 2.6,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Vekst til fylkeskommunene",
+        "y2026": null,
+        "y2027": 0.6,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "Veksten i frie inntekter på 3,2 mrd. kroner gir kommunesektoren eit anslått handlingsrom ut over meirkostnadar til demografi på 0,5 mrd. kroner. Regjeringa følgjer då opp lovnadene som vart gitt i kommuneproposisjonen. Det er tatt omsyn til at anslaget for demografikostnadar er nedjustert frå 3,0 til 2,7 mrd. kroner etter at kommuneproposisjonen vart behandla i Stortinget. I tråd med signala i kommuneproposisjonen foreslår regjeringa at handlingsrommet på 0,5 mrd. kroner blir fordelt med 80 pst. på kommunane og 20 pst. på fylkeskommunane. Kommunane vil da få ein vekst i frie inntekter på 2,6 mrd. kroner, medan fylkeskommunane får ein vekst på 0,6 mrd. kroner",
+    "extra_quotes": [
+      {
+        "quote": "I saldert budsjett for 2026 vart det lagt opp til ein realvekst i dei frie inntektene på 8,4 mrd. kroner rekna frå inntektsnivået i revidert nasjonalbudsjett for 2025. Når ein trekk frå anslåtte meirkostnadar til demografi på 2,9 mrd. kroner, vart det dermed lagt opp til eit handlingsrom på 5,5 mrd. kroner.",
+        "page": 19
+      }
+    ],
+    "source_file": "data/text/prp202620270001kdddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Kommunal- og distriktsdepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175192/",
+    "page": 20,
+    "caveat_nb": "Tallene for 2026 er fra saldert budsjett og regnet fra et annet inntektsnivå."
+  },
+  {
+    "id": "kommune-samanslaing-tilskudd",
+    "area": "kommune",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Fast støtte til kommuner som slår seg sammen",
+    "summary_nb": "Søknadsbaserte ordninger erstattes med faste tilskudd. Hver kommune som utreder sammenslåing får 1 mill. kr, og to kommuner som slår seg sammen får minst 40 mill. kr til engangskostnader.",
+    "effect": "pluss",
+    "kind": "regel",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Minstebeløp for engangskostnader, to kommuner",
+        "y2026": null,
+        "y2027": 40,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Regjeringa slår saman dagens støtte til informasjon, innbyggarhøyring og utgreiing av samanslåing til eitt tilskot på éin million kroner per kommune.\n Det blir i tillegg etablert ein standardisert modell for delvis kompensasjon av eingongskostnader. Tilskotet blir utbetalt automatisk etter at samanslåinga er vedteke.\n Minstebeløpet er på 40 millionar kroner for to kommunar som slår seg saman.",
+    "source_file": "data/saker/id3173707.txt",
+    "source_title": "Nye verkemiddel for frivillige kommunesamanslåingar",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/nye-verkemiddel-for-frivillige-kommunesamanslaingar/id3173707/",
+    "page": null,
+    "caveat_nb": "Sammenslåingene er frivillige."
+  },
+  {
+    "id": "kommune-vindkraft-forskudd",
+    "area": "kommune",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Vindkraftkommuner kan få avgiftsinntekter på forskudd",
+    "summary_nb": "Staten kan betale kommuner med vindkraft deler av produksjonsavgiften fra byggestart, i stedet for først når anlegget er i drift. Forskuddet er 50 % av forventet avgift per år.",
+    "effect": "pluss",
+    "kind": "regel",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Årlig forskudd, andel av forventet avgift",
+        "y2026": null,
+        "y2027": 50,
+        "unit": "%"
+      }
+    ],
+    "quote": "For å betre situasjonen foreslår regjeringa ei frivillig ordning der staten forskoterer inntekter frå produksjonsavgifta på landbasert vindkraft til vertskommunane frå byggestart og fram til anlegget er sett i full drift. Det årlege forskotet utgjer 50 prosent av forventa avgift.",
+    "source_file": "data/saker/id3174254.txt",
+    "source_title": "Regjeringa vil gi vindkraftinntekter til vertskommunane tidlegare",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringa-vil-gi-vindkraftinntekter-til-vertskommunane-tidlegare/id3174254/",
+    "page": null,
+    "caveat_nb": "Ordningen er frivillig. Forskuddet trekkes fra senere avgiftsinntekter, og kommunen må betale tilbake hvis anlegget ikke blir bygd."
+  },
+  {
+    "id": "helse-hod-totalt-2027",
+    "area": "helse",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Helsebudsjettet øker med 13,8 mrd. kr",
+    "summary_nb": "Helse- og omsorgsdepartementet får om lag 319,6 mrd. kr i 2027. Det er om lag 13,8 mrd. kr mer enn i saldert budsjett 2026, en økning på 4,5 %.",
+    "effect": "pluss",
+    "kind": "utgift",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Helse- og omsorgsdepartementet i alt",
+        "y2026": 305764.8,
+        "y2027": 319561.7,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Økning fra 2026",
+        "y2026": null,
+        "y2027": 13.8,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Økning i prosent",
+        "y2026": null,
+        "y2027": 4.5,
+        "unit": "%"
+      }
+    ],
+    "quote": "Helse- og omsorgsdepartementets samlede budsjettforslag er om lag 319,6 mrd. kroner, jf. tabell 2.1. Dette er fordelt med 270,8 mrd. kroner på programområde 10, Helse og omsorg, og 48,8 mrd. kroner på programområde 30, Helsetjenester, folketrygden. Samlet foreslås om lag 13,8 mrd. kroner mer enn i saldert budsjett for 2026. Dette svarer til en økning på 4,5 pst.",
+    "extra_quotes": [
+      {
+        "quote": "Sum Helse- og omsorgsdepartementet 305 764,8 319 561,7 4,5",
+        "page": 27
+      }
+    ],
+    "source_file": "data/text/prp202620270001hoddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Helse- og omsorgsdepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175316/",
+    "page": 27,
+    "caveat_nb": "Tallene er i løpende kroner, så en del av økningen dekker pris- og lønnsvekst."
+  },
+  {
+    "id": "helse-sykehus-driftsbevilgning",
+    "area": "helse",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Sykehusene får 2,6 mrd. kr mer til drift",
+    "summary_nb": "De regionale helseforetakene får 3 065 mill. kr mer, og 2 560 mill. kr av dette skal dekke at befolkningen blir større og eldre. 60 mill. kr går til beredskap, blant annet tilfluktsrom. Etter innsparinger, blant annet på laboratorier, er økningen 2 600 mill. kr.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Økt driftsbevilgning før innsparinger",
+        "y2026": null,
+        "y2027": 3065,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Til flere og eldre pasienter",
+        "y2026": null,
+        "y2027": 2560,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Til beredskap",
+        "y2026": null,
+        "y2027": 60,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Økning etter innsparinger",
+        "y2026": null,
+        "y2027": 2600,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Det foreslås å øke de regionale helseforetakenes driftsbevilgninger med 3 065 mill. kroner. Av dette skal 2 560 mill. kroner gå til økt aktivitet som følge av demografiske endringer. Videre skal 130 mill. kroner gå til blant annet spesialisert rusbehandling for barn og unge og døgnplasser i psykisk helsevern som en del av opptrappingsplan psykisk helsevern. Forslaget omfatter også 60 mill. kroner til økte beredskapsbehov i sektoren, og legger dermed til rette for å håndtere økte kapitalkostnader forbundet med tilfluktsrom ved Sykehuset Østfold og Oslo universitetssykehus. I tillegg kommer pris- og lønnsjustering av bevilgningene på 3,5 prosent.",
+    "extra_quotes": [
+      {
+        "quote": "Fratrukket innsparingstiltakene i 2027 øker driftsbevilgningene med 2 600 mill. kroner fra saldert budsjett 2026.",
+        "page": 28
+      }
+    ],
+    "source_file": "data/text/prp202620270001hoddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Helse- og omsorgsdepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175316/",
+    "page": 28,
+    "caveat_nb": "I tillegg kommer pris- og lønnsjustering på 3,5 %."
+  },
+  {
+    "id": "helse-kutt-tilskudd-hvpu",
+    "area": "helse",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Kutt i tilskudd på helsebudsjettet",
+    "summary_nb": "Vertskommunetilskuddet (HVPU) fases ut, og mange kommuner mister det allerede i 2027. Det sparer 219 mill. kr. Tilskuddsordninger kuttes med 54 mill. kr, og de fleste tilskudd får ikke prisjustering, som frigjør 221 mill. kr til andre formål.",
+    "effect": "minus",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Innsparing på vertskommunetilskuddet",
+        "y2026": null,
+        "y2027": 219,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Kutt i tilskuddsordninger",
+        "y2026": null,
+        "y2027": 54,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Innsparing ved ingen prisjustering",
+        "y2026": null,
+        "y2027": 221,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Det foreslås å gradvis avvikle vertskommunetilskuddet HVPU, der en rekke kommuner mister tilskuddet allerede i 2027, mens det avvikles over noen år for kommunene med størst andel gjenlevende beboere sett opp mot innbyggerantall. Dette gir en innsparing på 219 mill. kroner i 2027 utover vanlig nedtrekk som følge av frafall av beboere. Det foreslås et kutt i tilskuddsordninger tilsvarende 54 mill. kroner. Det foreslås videre at tilskuddsposter i all hovedsak videreføres nominelt svarende til en samlet innsparing til andre prioriterte formål innenfor departementets budsjettrammer på 221 mill. kroner.",
+    "source_file": "data/text/prp202620270001hoddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Helse- og omsorgsdepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175316/",
+    "page": 33,
+    "caveat_nb": null
+  },
+  {
+    "id": "helse-kvinnehelseforskning-dobles",
+    "area": "helse",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Forskning på kvinnehelse får 40 mill. kr",
+    "summary_nb": "De øremerkede pengene til forskning på kvinnehelse dobles fra 20 mill. kr til 40 mill. kr. Pengene kommer i tillegg til de ordinære forskningsmidlene.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Øremerket kvinnehelseforskning",
+        "y2026": 20,
+        "y2027": 40,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Derfor vil regjeringen doble den øremerkede satsingen på kvinnehelseforskning over Helse- og omsorgsdepartementets budsjett fra 20 til 40 millioner kroner i statsbudsjettet for 2027.",
+    "source_file": "data/saker/id3174120.txt",
+    "source_title": "Dobler øremerkede midler til kvinnehelseforskning",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/dobler-oremerkede-midler-til-kvinnehelseforskning/id3174120/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "forsvar-budsjett-191-7-mrd",
+    "area": "forsvar",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Forsvarsbudsjettet øker med 6,5 mrd. kr",
+    "summary_nb": "Forsvarssektoren får 191,7 mrd. kr i 2027. Regjeringen legger 6,5 mrd. kr ekstra inn i forsvarsbudsjettet, i tråd med langtidsplanen.",
+    "effect": "pluss",
+    "kind": "utgift",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Forsvarssektoren totalt",
+        "y2026": null,
+        "y2027": 191.7,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Økning i forsvarsbudsjettet",
+        "y2026": null,
+        "y2027": 6.5,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "Regjeringen foreslår 191,7 milliarder kroner til forsvarssektoren i statsbudsjettet for 2027.\n – Dette er et statsbudsjett som prioriterer sikkerhet og forsvar. Regjeringen foreslår å styrke forsvarsbudsjettet med 6,5 milliarder kroner i tråd med oppfølgingen av langtidsplanen.",
+    "source_file": "data/saker/id3174288.txt",
+    "source_title": "Foreslår å styrke forsvarsevnen med 6,5 milliarder kroner",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/foreslar-a-styrke-forsvarsevnen-med-65-milliarder-kroner/id3174288/",
+    "page": null,
+    "caveat_nb": "Totalen omfatter også den militære støtten til Ukraina."
+  },
+  {
+    "id": "forsvar-driftsramme-2-8-mrd",
+    "area": "forsvar",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Forsvaret får 2,8 mrd. kr mer til drift",
+    "summary_nb": "Forsvarets driftsbudsjett øker med om lag 2,8 mrd. kr, i tillegg til pris- og lønnskompensasjon. Pengene går til øving, vedlikehold og flere vernepliktige, ansatte og reservister.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Økning i Forsvarets driftsramme",
+        "y2026": null,
+        "y2027": 2.8,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "Regjeringen foreslår å styrke Forsvarets driftsramme med om lag 2,8 milliarder kroner i 2027. I tillegg kommer pris- og lønnskompensasjon. Dette vil gi rom for å opprettholde et høyt aktivitetsnivå, forbedre beredskapen, bygge opp styrkestrukturen og legge til rette for overganger fra gammelt til nytt materiell. Samtidig legges til rette for flere vernepliktige, ansatte og reservister i løpet av 2027.",
+    "source_file": "data/saker/id3174288.txt",
+    "source_title": "Foreslår å styrke forsvarsevnen med 6,5 milliarder kroner",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/foreslar-a-styrke-forsvarsevnen-med-65-milliarder-kroner/id3174288/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "forsvar-bygg-anlegg-7-8-mrd",
+    "area": "forsvar",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Mer penger til militære bygg og anlegg",
+    "summary_nb": "Om lag 7,8 mrd. kr går til å bygge og pusse opp militære bygg, øvingsfelt, lager og kvarter. Det er om lag 1,6 mrd. kr mer enn i 2026.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Investeringer i eiendom, bygg og anlegg",
+        "y2026": null,
+        "y2027": 7.8,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Økning fra 2026",
+        "y2026": null,
+        "y2027": 1.6,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "Regjeringen vil bruke om lag 7,8 milliarder kroner til å investere i og oppgradere militær eiendom, bygg og anlegg i 2027. Dette gjelder for eksempel vedlikeholdsfasiliteter, øvingsfelt, lagerbygg og kvarter. Dette er en økning på om lag 1,6 milliarder kroner fra 2026.",
+    "source_file": "data/saker/id3174293.txt",
+    "source_title": "Investerer mer i bygg, anlegg og kritisk infrastruktur for Forsvaret",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/investerer-mer-i-bygg-anlegg-og-kritisk-infrastruktur-for-forsvaret/id3174293/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "forsvar-industri-produksjonskapasitet",
+    "area": "forsvar",
+    "personas": [],
+    "detail": null,
+    "title_nb": "516 mill. kr til økt produksjon i forsvarsindustrien",
+    "summary_nb": "Staten gir 516 mill. kr til norsk forsvarsindustri for å øke produksjonen, blant annet av rakettmotorer og sprengstoff. Det er en del av en plan på om lag 8,4 mrd. kr fram til 2036.",
+    "effect": "pluss",
+    "kind": "far",
+    "who": "Forsvarsindustrien",
+    "amounts": [
+      {
+        "label_nb": "Støtte til produksjonskapasitet",
+        "y2026": null,
+        "y2027": 516,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "I forslaget til statsbudsjett prioriterer regjeringen å sette av 516 millioner kroner for å øke produksjonskapasiteten i 2027. Dette er en del av den strategiske satsingen på forsvarsindustri, som regjeringen la frem i revidert langtidsplan på om lag 8,4 milliarder kroner frem til 2036.",
+    "source_file": "data/saker/id3174290.txt",
+    "source_title": "Øker produksjonskapasiteten i norsk forsvarsindustri",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/oker-produksjonskapasiteten-i-norsk-forsvarsindustri/id3174290/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "beredskap-redningshelikopter",
+    "area": "forsvar",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Mer penger til redningshelikoptrene",
+    "summary_nb": "Driften av redningshelikoptertjenesten får 295 mill. kr mer. I tillegg går om lag 890 mill. kr til nye helikoptre, en ny base i Bodø og overføring av Tromsø-basen til Forsvaret.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Økning i driftsbudsjettet",
+        "y2026": null,
+        "y2027": 295,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Investeringer i redningshelikoptre og baser",
+        "y2026": null,
+        "y2027": 890,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Regjeringen foreslår å øke driftsbudsjettet til redningshelikoptertjenesten med 295 millioner kroner i 2027. Samtidig foreslås det å bevilge om lag 890 millioner kroner til videre investering i redningshelikopterkapasiteten, inkludert bygging av ny redningshelikopterbase i Bodø, videreføring av anskaffelsen av de nye redningshelikoptrene og forberedelser til at Forsvaret skal overta som operatør av Tromsøbasen.",
+    "source_file": "data/saker/id3174530.txt",
+    "source_title": "Regjeringen styrker redningshelikopterberedskapen",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringen-styrker-redningshelikopterberedskapen/id3174530/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "beredskap-nytt-nodnett",
+    "area": "forsvar",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Nytt nødnett får 200 mill. kr mer",
+    "summary_nb": "Arbeidet med et nytt nødnett for politi, helse og brann får 200 mill. kr mer, og totalt 324,5 mill. kr i 2027. Alle brukere skal over på det nye nettet innen utgangen av 2031.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Økning til nytt nødnett",
+        "y2026": null,
+        "y2027": 200,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Total bevilgning til nytt nødnett",
+        "y2026": null,
+        "y2027": 324.5,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Regjeringa foreslår derfor å auke løyvinga til prosjektet med 200 millionar kroner i 2027, slik at den totale løyvinga blir på 324,5 millionar kroner i 2027.",
+    "source_file": "data/saker/id3173745.txt",
+    "source_title": "Foreslår 200 millionar kroner meir til arbeidet med nytt nødnett",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/foreslar-200-millioner-kroner-til-arbeidet-med-nytt-nodnett/id3173745/",
+    "page": null,
+    "caveat_nb": "Beslutningen om selve investeringen i nytt nødnett er ikke tatt ennå."
+  },
+  {
+    "id": "beredskap-drivstofflager-dobles",
+    "area": "forsvar",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Beredskapslagrene for drivstoff skal dobles",
+    "summary_nb": "Regjeringen vil øke lagrene av drivstoff fra 20 til 40–45 dager med innenlands forbruk. Økningen skal etter planen fases inn over tre år.",
+    "effect": "pluss",
+    "kind": "regel",
+    "who": null,
+    "amounts": [],
+    "quote": "Regjeringa vil styrke drivstoffberedskapen og foreslår om lag ei dobling av dagens beredskapslager frå 20 til 40–45 dagar med innanlandsk forbruk.",
+    "source_file": "data/saker/id3174954.txt",
+    "source_title": "Regjeringa foreslår: Dobling av beredskapslagera for drivstoff",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringa-foreslar-dobling-av-beredskapslagera-for-drivstoff/id3174954/",
+    "page": null,
+    "caveat_nb": "Forslaget sendes først på høring innen utgangen av november 2026."
+  },
+  {
+    "id": "politi-driftsbudsjett-2027",
+    "area": "justis",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Politiet får 732 mill. kr mer til drift",
+    "summary_nb": "Politiets driftsbudsjett øker med 732,4 mill. kr. I tillegg får politiet 500 mill. kr til et nytt program for digitalisering.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Økning i driftsbudsjettet",
+        "y2026": null,
+        "y2027": 732.4,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Digitalisering av politiet",
+        "y2026": null,
+        "y2027": 500,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Ap-regjeringens forslag er å øke politiets driftsbudsjett med 732,4 millioner kroner, nominelt. Styrkingen er medregnet et effektiviseringskrav på 135 millioner kroner. I tillegg til den generelle styrkingen, får politiet 500 millioner til helhetlig digitalisering av politiet.",
+    "source_file": "data/saker/id3174531.txt",
+    "source_title": "Økt budsjett til politiet",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/okt-budsjett-til-politiet/id3174531/",
+    "page": null,
+    "caveat_nb": "Økningen er nominell, og politiet må samtidig spare 135 mill. kr på effektivisering."
+  },
+  {
+    "id": "pst-250-mill",
+    "area": "justis",
+    "personas": [],
+    "detail": null,
+    "title_nb": "PST får 250 mill. kr mer",
+    "summary_nb": "Bevilgningen til Politiets sikkerhetstjeneste øker med 250 mill. kr. Det er 13 % mer enn i 2026.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Økning til PST",
+        "y2026": null,
+        "y2027": 250,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Økning fra 2026",
+        "y2026": null,
+        "y2027": 13,
+        "unit": "%"
+      }
+    ],
+    "quote": "foreslår regjeringen å øke bevilgningen til PST med 250 millioner kroner, en budsjettøkning på 13 prosent fra 2026 til 2027.",
+    "source_file": "data/saker/id3176492.txt",
+    "source_title": "Styrker PST med 250 millioner",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/styrker-pst-med-250-millioner/id3176492/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "barne-ungdomskriminalitet-800-mill",
+    "area": "justis",
+    "personas": [],
+    "detail": null,
+    "title_nb": "120 mill. kr mer mot barne- og ungdomskriminalitet",
+    "summary_nb": "Arbeidet mot kriminalitet blant barn og unge får 120 mill. kr mer. Til sammen går rundt 800 mill. kr til dette i 2027, blant annet til barnevernsinstitusjoner, konfliktrådet og domstolene.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Ny økning i 2027",
+        "y2026": null,
+        "y2027": 120,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Samlet i 2027",
+        "y2026": null,
+        "y2027": 800,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "De rundt 120 millionene er den tredje trinnvise økningen i «trygghetspakken». 450 millioner i fjor, 230 millioner i år, og nå foreslår regjeringen 120 millioner til, videreført år for år. Samlet betyr det rundt 800 millioner i 2027, og 1,9 milliarder totalt i treårsperioden fra 2025 til 2027.",
+    "source_file": "data/saker/id3174538.txt",
+    "source_title": "800 millioner til innsatsen mot barne- og ungdomskriminalitet",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/800-millioner-til-innsatsen-mot-barne-og-ungdomskriminalitet/id3174538/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "nytt-oslo-fengsel-246-mill",
+    "area": "justis",
+    "personas": [],
+    "detail": null,
+    "title_nb": "246 mill. kr til å bygge nytt Oslo fengsel",
+    "summary_nb": "Byggingen av nytt Oslo fengsel på Grønland starter med 246 mill. kr i 2027. Fengselet får 144 plasser og skal etter planen åpne i 2031.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Nytt Oslo fengsel",
+        "y2026": null,
+        "y2027": 246,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "For å øke fengselskapasiteten på Østlandet og sørge for at gamle Oslo fengsel blir erstattet som planlagt, foreslår Arbeiderparti-regjeringen 246 millioner kroner til byggeprosjektet for nytt Oslo fengsel på Grønland.",
+    "source_file": "data/saker/id3174292.txt",
+    "source_title": "246 millioner til byggingen av Oslo fengsel",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/246-millioner-til-byggingen-av-oslo-fengsel/id3174292/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "domstoler-minimumsbemanning",
+    "area": "justis",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Kravet om minimumsbemanning i tingrettene fjernes",
+    "summary_nb": "Tingrettene og jordskifterettene skal ikke lenger ha en fast minimumsbemanning. Domstoladministrasjonen kan da flytte ansatte etter behov og bruke penger som blir frigjort, på digitale løsninger.",
+    "effect": "blandet",
+    "kind": "regel",
+    "who": null,
+    "amounts": [],
+    "quote": "Derfor foreslår Arbeiderparti-regjeringen å oppheve kravet til minimumsbemanning i tingrettene og jordskifterettene, for å sikre mer effektiv utnyttelse av personalressursene og samtidig frigjøre midler til denne typen tiltak.",
+    "source_file": "data/saker/id3174294.txt",
+    "source_title": "Digitalisering skal øke tilgangen til domstolene",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/digitalisering-skal-oke-tilgangen-til-domstolene/id3174294/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "samferdsel-totalt-2027",
+    "area": "samferdsel",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Samferdselsbudsjettet øker med 2,4 %",
+    "summary_nb": "Samferdselsdepartementet får 105 mrd. kr i 2027, mot 102,5 mrd. kr i 2026. Vei får 51,7 mrd. kr, mens kjøp av posttjenester går ned med 24,4 %.",
+    "effect": "pluss",
+    "kind": "utgift",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Samferdselsdepartementet totalt",
+        "y2026": 102511.6,
+        "y2027": 104977.8,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Vei",
+        "y2026": 50404.8,
+        "y2027": 51676.0,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Posttjenester",
+        "y2026": 2012.0,
+        "y2027": 1520.7,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "21.30 Vegformål 50 404,8 51 676,0 2,5 21.40 Særskilde transporttiltak 8 907,0 9 090,9 2,1 21.50 Jernbaneformål 31 696,9 33 721,6 6,4 Sum før lånetransaksjonar 96 483,4 98 387,7 2,0 Lånetransaksjonar 4 016,2 5 069,4 26,2 Sum Innanlands transport 100 499,6 103 457,1 2,9 Programområde 22 Posttenester 22.10 Posttenester 2 012,0 1 520,7 -24,4 Sum Posttenester 2 012,0 1 520,7 -24,4 Sum Samferdselsdepartementet 102 511,6 104 977,8 2,4",
+    "source_file": "data/text/prp202620270001_sddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Samferdselsdepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175333/",
+    "page": 14,
+    "caveat_nb": "Tallene er nominelle og ikke justert for prisvekst."
+  },
+  {
+    "id": "drift-vedlikehold-vei-jernbane",
+    "area": "samferdsel",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Mer penger til drift og vedlikehold av vei og jernbane",
+    "summary_nb": "Drift og vedlikehold av riksveier og jernbane får 20,9 mrd. kr, mot 19,8 mrd. kr i 2026. Små investeringer og fornying går ned fra 11,2 til 10,8 mrd. kr.",
+    "effect": "blandet",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Drift og vedlikehold av riksvei og jernbane",
+        "y2026": 19.8,
+        "y2027": 20.9,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Små investeringer og fornying",
+        "y2026": 11.2,
+        "y2027": 10.8,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "Drift og vedlikehald av riksveg og jernbane 19,8 20,9 Mindre investeringar og fornying 11,2 10,8",
+    "source_file": "data/text/prp202620270001_sddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Samferdselsdepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175333/",
+    "page": 15,
+    "caveat_nb": null
+  },
+  {
+    "id": "jernbane-32-mrd",
+    "area": "samferdsel",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Jernbanen får 1,6 mrd. kr mer",
+    "summary_nb": "Jernbanen får 32,4 mrd. kr i 2027, 1,6 mrd. kr mer enn i 2026. Av dette går 13,6 mrd. kr til drift, vedlikehold og fornying av jernbanenettet.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Jernbane totalt",
+        "y2026": null,
+        "y2027": 32.4,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Økning fra 2026",
+        "y2026": null,
+        "y2027": 1.6,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Drift, vedlikehold og fornying",
+        "y2026": null,
+        "y2027": 13.6,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "Regjeringa foreslår å løyve i alt 32,4 milliardar kroner til jernbana i 2027. Dette er ein auke på 1,6 milliardar kroner frå saldert budsjett 2026. Av dette er 13,6 milliardar kroner foreslått til drift, vedlikehald og fornying av jernbanenettet.",
+    "source_file": "data/saker/id3175561.txt",
+    "source_title": "Framleis høge ambisjonar for samferdsel",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/framleis-hoge-ambisjonar-for-samferdsel/id3175561/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "e39-smiene-harestad",
+    "area": "samferdsel",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Oppstart av E39 Smiene–Harestad i Rogaland",
+    "summary_nb": "Den 4,5 km lange veien mellom Stavanger og Randaberg bygges ut til fire felt og kobles til Rogfast-tunnelen. Kostnadsrammen er 6,6 mrd. kr, finansiert av staten og bompenger.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Kostnadsramme",
+        "y2026": null,
+        "y2027": 6.6,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Styringsramme",
+        "y2026": null,
+        "y2027": 5.6,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "I statsbudsjettet for 2027 foreslår Samferdselsdepartementet at prosjektet skal bli gjennomført innanfor ein kostnadsramme på 6,6 milliardar kroner. Styringsramma er satt til 5,6 milliardar kroner.",
+    "source_file": "data/saker/id3175551.txt",
+    "source_title": "Foreslår å starte opp E39 Smiene–Harestad",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/foreslar-a-starte-opp-e39-smieneharestad/id3175551/",
+    "page": null,
+    "caveat_nb": "Anleggsstart er planlagt sent i 2027 eller tidlig i 2028."
+  },
+  {
+    "id": "ryfast-ekstra-bomtilskudd-avvikles",
+    "area": "samferdsel",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Ekstra statlig rabatt på bompenger i Ryfast tas bort",
+    "summary_nb": "Det ekstra statlige tilskuddet som ga 33 % lavere bompenger i Ryfast, avvikles etter 2026. Det vanlige tilskuddet på rundt 54 mill. kr fortsetter, så takstene går tilbake til nivået før den ekstra rabatten.",
+    "effect": "minus",
+    "kind": "betaler",
+    "who": "Bilister i Ryfast",
+    "amounts": [
+      {
+        "label_nb": "Ekstra rabatt, kostnad 2025–2026",
+        "y2026": 204,
+        "y2027": null,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Vanlig statlig tilskudd i 2027",
+        "y2026": null,
+        "y2027": 54,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Det ekstraordinære tilskotet har hatt ein kostnad på 204 millionar kroner, medan trafikkauken berre har gitt prosjektet om lag 15 millionar kroner i auka inntekter. Det ekstraordinære statlege tilskotet kom i tillegg til den opphavelege tilskotsordninga for reduserte bompengar utanfor byområda. Ryfast har sidan opninga fått tilskot gjennom denne ordninga kvart år, og dette held fram. Dette statlege bidraget gjer takstane om lag 10 prosent lågare enn utan denne ordninga. I 2027 kjem det om lag 54 millionar kronar i tilskot til prosjektet frå staten.",
+    "source_file": "data/saker/id3175560.txt",
+    "source_title": "Rv 13 Ryfast: Framleis statleg bidrag til reduserte bompengar, men slutt på ekstra tilskot",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/rv-13-ryfast-framleis-statleg-bidrag-til-reduserte-bompengar-men-slutt-pa-ekstra-tilskot/id3175560/",
+    "page": null,
+    "caveat_nb": "Statens vegvesen fant at økt trafikk bare ga rundt 15 mill. kr i inntekter."
+  },
+  {
+    "id": "hurtigbatprogrammet-246-mill",
+    "area": "samferdsel",
+    "personas": [],
+    "detail": null,
+    "title_nb": "246,7 mill. kr til utslippsfrie hurtigbåter",
+    "summary_nb": "Hurtigbåtprogrammet får 246,7 mill. kr. Fylkeskommunene kan søke om støtte til hurtigbåter med svært lave eller ingen utslipp.",
+    "effect": "pluss",
+    "kind": "far",
+    "who": "Fylkeskommunene",
+    "amounts": [
+      {
+        "label_nb": "Hurtigbåtprogrammet",
+        "y2026": null,
+        "y2027": 246.7,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Arbeiderparti-regjeringen foreslår 246,7 millioner kroner til Hurtigbåtprogrammet.",
+    "source_file": "data/saker/id3173849.txt",
+    "source_title": "Vil ha flere utslippsfrie hurtigbåter langs kysten",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/vil-ha-flere-utslippsfrie-hurtigbater-langs-kysten/id3173849/",
+    "page": null,
+    "caveat_nb": "Pengene ligger på Klima- og miljødepartementets budsjett."
+  },
+  {
+    "id": "enova-kutt-2027",
+    "area": "klima",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Mindre penger til Enova",
+    "summary_nb": "Bevilgningen til Klima- og energifondet, som Enova forvalter, kuttes fra 6,6 mrd. kr i 2026 til 3 mrd. kr i 2027. Fondet har fortsatt store midler fra tidligere år.",
+    "effect": "minus",
+    "kind": "far",
+    "who": "Enova",
+    "amounts": [
+      {
+        "label_nb": "Bevilgning til Klima- og energifondet over KLDs budsjett",
+        "y2026": 6.6,
+        "y2027": 3,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "I statsbudsjettet for 2027 foreslår regjeringen å kutte bevilgningen til Klima- og energifondet over KLDs budsjett fra 6,6 milliarder kroner i saldert budsjett 2026 til 3 milliarder kroner i 2027.",
+    "source_file": "data/saker/id3176621.txt",
+    "source_title": "Enova – redusert bevilgning til klima- og energifondet",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/enova-redusert-bevilgning-til-klima-og-energifondet/id3176621/",
+    "page": null,
+    "caveat_nb": "Regjeringen anslår at fondet har 36 mrd. kr ved inngangen til 2027."
+  },
+  {
+    "id": "klimakvoter-fullmakt-2027",
+    "area": "klima",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Staten kan kjøpe flere klimakvoter i utlandet",
+    "summary_nb": "Regjeringen ber om lov til å inngå avtaler om kjøp av klimakvoter for opptil 26,1 mrd. kr. Grensen var 15 mrd. kr i fjor. Kvotene kjøpes fra andre land under Parisavtalen.",
+    "effect": "pluss",
+    "kind": "regel",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Ramme for avtaler om kjøp av klimakvoter",
+        "y2026": 15,
+        "y2027": 26.1,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "Regjeringen foreslår å be Stortinget om lov til å inngå avtaler om kjøp av klimakvoter for opptil 26,1 milliarder kroner. Det er en økning fra 15 milliarder kroner i fjorårets budsjett.",
+    "source_file": "data/saker/id3176626.txt",
+    "source_title": "Vil kjøpe flere klimakvoter",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/vil-kjope-flere-klimakvoter/id3176626/",
+    "page": null,
+    "caveat_nb": "Beløpet er en øvre ramme for avtaler over flere år, ikke en utgift i 2027."
+  },
+  {
+    "id": "norgespris-stromstotte-totalt-2027",
+    "area": "klima",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Staten venter å bruke mer på Norgespris og strømstøtte",
+    "summary_nb": "Staten setter av 12 000 mill. kr til Norgespris på strøm i 2027, mot 9 100 mill. kr i 2026. Strømstøtten til husholdninger får 3 500 mill. kr, mot 1 900 mill. kr.",
+    "effect": "pluss",
+    "kind": "utgift",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Norgespris for strøm",
+        "y2026": 9100,
+        "y2027": 12000,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Strømstøtteordningen",
+        "y2026": 1900,
+        "y2027": 3500,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "75 Straumstønadsordning, overslagsløyving 4 383 653 1 900 000 3 500 000\n76 Straumstønad for nærvarme, kan overførast 1 067 4 500\n77 Noregspris for straum, overslagsløyving 1 456 357 9 100 000 12 000 000",
+    "source_file": "data/text/prp202620270001_eddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Energidepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175070/",
+    "page": 86,
+    "caveat_nb": "Dette er anslag. Hva staten faktisk betaler, avhenger av strømprisene."
+  },
+  {
+    "id": "oslofjorden-2027",
+    "area": "klima",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Mer penger til tiltak i Oslofjorden",
+    "summary_nb": "Tiltakene for Oslofjorden får 18,4 mill. kr mer, til om lag 253 mill. kr i 2027. En ny plan for fjorden legges fram i 2027.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Økning til tiltak i Oslofjorden",
+        "y2026": null,
+        "y2027": 18.4,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Samlet til tiltak i Oslofjorden",
+        "y2026": null,
+        "y2027": 253,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Regjeringen vil i 2027 derfor øke midlene til tiltak i Oslofjorden med 18,4 mill. kroner til om lag 253 mill. kroner.",
+    "source_file": "data/text/prp202620270001klddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Klima- og miljødepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175616/",
+    "page": 28,
+    "caveat_nb": null
+  },
+  {
+    "id": "villrein-2027",
+    "area": "klima",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Mer penger til villrein",
+    "summary_nb": "Arbeidet med villrein får 40,5 mill. kr mer, til 124,2 mill. kr. Pengene går blant annet til å stenge veier, parkeringsplasser og turisthytter i villreinområder.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Økning til villreinarbeid",
+        "y2026": null,
+        "y2027": 40.5,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Samlet til villreinarbeid",
+        "y2026": null,
+        "y2027": 124.2,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "I årets budsjett foreslår vi derfor å styrke arbeidet med 40,5 millionar kroner til 124,2 millionar kroner.",
+    "source_file": "data/saker/id3174003.txt",
+    "source_title": "40 millionar kroner til å redde villreinen",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/40-millionar-kroner-til-a-redde-villreinen/id3174003/",
+    "page": null,
+    "caveat_nb": "25 mill. kr av økningen kommer fra Statens villreinfond."
+  },
+  {
+    "id": "petroleumsinntekter-2027",
+    "area": "naering",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Lavere inntekter fra olje og gass",
+    "summary_nb": "Statens netto inntekter fra olje og gass anslås til om lag 568 mrd. kr i 2027. Det er lavere enn de om lag 671 mrd. kr som ventes i 2026.",
+    "effect": "minus",
+    "kind": "far",
+    "who": "Staten",
+    "amounts": [
+      {
+        "label_nb": "Statens netto kontantstrøm fra petroleumsvirksomheten",
+        "y2026": 671,
+        "y2027": 568,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "Statens netto kontantstraum frå petroleumsverksemda blir rekna til om lag 671 milliardar kroner i 2026. Anslaget for 2027 er om lag 568 milliardar kroner.",
+    "source_file": "data/saker/id3174256.txt",
+    "source_title": "Høg produksjon og store inntekter frå petroleumsverksemda",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/hog-produksjon-og-store-inntekter-fra-petroleumsverksemda/id3174256/",
+    "page": null,
+    "caveat_nb": "Begge tallene er anslag og avhenger av olje- og gassprisene."
+  },
+  {
+    "id": "aksjeeierregister-2027",
+    "area": "naering",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Nytt aksjeeierregister som oppdateres løpende",
+    "summary_nb": "Brønnøysundregistrene og Skatteetaten skal lage et register som viser hvem som eier aksjer, oppdatert fortløpende. Prosjektet får 100 mill. kr i 2027 og skal koste 1 510 mill. kr til sammen fram til 2030.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Bevilgning i 2027",
+        "y2026": null,
+        "y2027": 100,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Samlet kostnadsramme",
+        "y2026": null,
+        "y2027": 1510,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "I 2027 foreslås det en bevilgning på 100 millioner kroner til å starte prosjektet, som gjennomføres av Skatteetaten og Brønnøysundregistrene i fellesskap og skal være ferdig ved utgangen av 2030. Samlet kostnadsramme er 1 510 millioner kroner.",
+    "source_file": "data/saker/id3174661.txt",
+    "source_title": "Regjeringen vil gjøre det enklere å få vite hvem som eier aksjer",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringen-vil-gjore-det-enklere-a-fa-vite-hvem-som-eier-aksjer/id3174661/",
+    "page": null,
+    "caveat_nb": "Den årlige aksjonærregisteroppgaven for selskapene faller bort når registeret er på plass."
+  },
+  {
+    "id": "investinor-gjenbruk-kapital",
+    "area": "naering",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Investinor kan bruke tilbakeførte fondsmidler på nytt",
+    "summary_nb": "Penger fra avsluttede statlige såkornfond og Koinvesteringsfondet for Nord-Norge kan gå tilbake til Investinor. Det kan gi Investinor om lag 1 mrd. kr mer å investere de kommende årene.",
+    "effect": "pluss",
+    "kind": "regel",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Mulig økt kapital til Investinor de kommende årene",
+        "y2026": null,
+        "y2027": 1,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "Sammen med realiseringer fra pre-såkorn -\nfondordningen kan dette bidra til en ytterligere\nstyrking av Investinor på om lag 1 mrd. kroner i\nde kommende årene.",
+    "source_file": "data/text/prp202620270001nfddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Nærings- og fiskeridepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175167/",
+    "page": 15,
+    "caveat_nb": "Beløpet fordeles over flere år og kommer ikke som ny bevilgning i 2027."
+  },
+  {
+    "id": "deksa-eksportkontroll-2027",
+    "area": "naering",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Mer penger til eksportkontroll",
+    "summary_nb": "Direktoratet for eksportkontroll og sanksjoner (DEKSA) får 11,3 mill. kr mer. Antallet søknader om eksport av forsvarsmateriell øker kraftig.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Økning til DEKSA",
+        "y2026": null,
+        "y2027": 11.3,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Regjeringen forslår å styrke Direktoratet for eksportkontroll og sanksjoner (DEKSA) med 11,3 millioner kroner, for at de skal kunne behandle søknader raskere.",
+    "source_file": "data/saker/id3174276.txt",
+    "source_title": "Vil behandle saker om eksportkontroll raskere",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/vil-behandle-saker-om-eksportkontroll-raskere/id3174276/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "besoksbidrag-2027",
+    "area": "naering",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Kommuner kan kreve besøksbidrag fra turister",
+    "summary_nb": "Kommuner med mye turisme skal kunne kreve et besøksbidrag på overnatting og cruise. Målet er at de første kan starte innkrevingen i første halvår 2027.",
+    "effect": "blandet",
+    "kind": "regel",
+    "who": null,
+    "amounts": [],
+    "quote": "Arbeidet for å gi kommunene\nmulighet til å innføre et besøksbidrag på overnat -\nting og cruisevirksomhet fortsetter, med mål om\nat kommuner med særlig stor belastning fra reise-\nlivet kan starte innkreving i løpet av første halvår\n2027.",
+    "source_file": "data/text/prp202620270001nfddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Nærings- og fiskeridepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175167/",
+    "page": 16,
+    "caveat_nb": "Det er opp til hver kommune om den vil innføre besøksbidrag."
+  },
+  {
+    "id": "trygd-folketrygden-totalt",
+    "area": "trygd",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Folketrygden koster 708 mrd. kr, 44 mrd. kr mer",
+    "summary_nb": "Utgiftene til folketrygden under Arbeids- og inkluderingsdepartementet er anslått til om lag 708 mrd. kr i 2027. Økningen på 44 mrd. kr skyldes mest lønnsvekst og trygdeoppgjøret, og at det blir flere alderspensjonister.",
+    "effect": "pluss",
+    "kind": "utgift",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Folketrygden (Arbeids- og inkluderingsdepartementet)",
+        "y2026": null,
+        "y2027": 708,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Økning fra 2026",
+        "y2026": null,
+        "y2027": 44,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "Dei samla utgiftene til folketrygda under Arbeids- og inkluderingsdepartementet sitt budsjett er anslått til å vere om lag 708 milliardar kroner neste år. Det er ein auke på 44 milliardar kroner.",
+    "extra_quotes": [
+      {
+        "quote": "Mykje av auken i folketrygda kjem av lønsvekst og verknader av trygdeoppgjeret, men det er også andre endringar som påverkar anslaget for utgifter under den enkelte ytinga. Ei viktig forklaring på dei auka utgiftene utover trygdeoppgjeret er at det blir fleire mottakarar av alderspensjon.",
+        "page": null
+      }
+    ],
+    "source_file": "data/saker/id3176081.txt",
+    "source_title": "Folketrygdens utgifter",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/folketrygdens-utgifter/id3176081/",
+    "page": null,
+    "caveat_nb": "Sammenlignet med saldert budsjett 2026, i løpende kroner."
+  },
+  {
+    "id": "trygd-alderspensjon-378-mrd",
+    "area": "trygd",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Alderspensjon koster 26 mrd. kr mer",
+    "summary_nb": "Utgiftene til alderspensjon fra folketrygden blir 378 mrd. kr i 2027, i overkant av 26 mrd. kr eller 7,4 % mer. Pensjonsreformen anslås å holde utgiftene om lag 27 mrd. kr lavere enn de ellers ville vært.",
+    "effect": "pluss",
+    "kind": "utgift",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Alderspensjon",
+        "y2026": null,
+        "y2027": 378,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Økning fra 2026",
+        "y2026": null,
+        "y2027": 26,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Økning i prosent",
+        "y2026": null,
+        "y2027": 7.4,
+        "unit": "%"
+      },
+      {
+        "label_nb": "Innsparing fra pensjonsreformen",
+        "y2026": null,
+        "y2027": 27,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "Det er venta at utgiftene til alderspensjon frå folketrygda i 2027 vil vere 378 milliardar kroner. Dette er ein auke på i overkant av 26 milliardar kroner, eller 7,4 prosent. Nordmenn blir stadig eldre. Fram mot 2060 vil veksten i befolkninga i stor grad komme blant personar over 75 år. Pensjonsreforma dempar veksten i utgifter til alderspensjon, og i 2027 er det anslått at reforma aleine vil redusere utgiftene til alderspensjon med om lag 27 milliarder kroner.",
+    "source_file": "data/saker/id3176081.txt",
+    "source_title": "Folketrygdens utgifter",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/folketrygdens-utgifter/id3176081/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "trygd-ufore-og-aap",
+    "area": "trygd",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Uføretrygd koster 9 mrd. kr mer, AAP 3 mrd. kr mer",
+    "summary_nb": "Uføretrygden koster om lag 150 mrd. kr, i overkant av 9 mrd. kr mer. Arbeidsavklaringspenger (AAP) koster 59 mrd. kr, i overkant av 3 mrd. kr mer. Mest skyldes trygdeoppgjøret, men det ventes også flere mottakere.",
+    "effect": "pluss",
+    "kind": "utgift",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Uføretrygd",
+        "y2026": null,
+        "y2027": 150,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Økning uføretrygd",
+        "y2026": null,
+        "y2027": 9,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Arbeidsavklaringspenger",
+        "y2026": null,
+        "y2027": 59,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Økning AAP",
+        "y2026": null,
+        "y2027": 3,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "Det er venta at utgiftene til arbeidsavklaringspengane (AAP) vil bli 59 milliardar kroner. Det inneber ein auke på i overkant av 3 milliardar kroner. Det er hovudsakleg effekten av trygdeoppgjeret som bidrar til auken, men også ei forventa auke i talet på AAP-mottakarar. Det er venta at utgiftene til uføretrygd vil bli om lag 150 milliardar kroner. Dette inneber ein auke på i overkant av 9 milliardar kroner. Hovudforklaringa på dette er effekten av trygdeoppgjeret, som gjer at grunnbeløpet i folketrygda aukar. Det er også venta fleire mottakarar.",
+    "source_file": "data/saker/id3176081.txt",
+    "source_title": "Folketrygdens utgifter",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/folketrygdens-utgifter/id3176081/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "trygd-sykepenger-72-mrd",
+    "area": "trygd",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Sykepenger koster 5 mrd. kr mer",
+    "summary_nb": "Utgiftene til sykepenger ventes å øke med 5 mrd. kr, til om lag 72 mrd. kr. Nav behandler flere saker raskere, og det gir høyere utbetalinger.",
+    "effect": "pluss",
+    "kind": "utgift",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Sykepenger",
+        "y2026": null,
+        "y2027": 72,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Økning fra 2026",
+        "y2026": null,
+        "y2027": 5,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "Utgiftene til sjukepengar er venta å auke med 5 milliardar kroner, til om lag 72 milliardar kroner. I 2026 har anslaget for utgifter til sjukepengar for arbeidstakarar auka som følge av den intensiverte innsatsen i Arbeids- og velferdsetaten på sjukepengeområdet.",
+    "extra_quotes": [
+      {
+        "quote": "For 2027 blir det samtidig lagt til grunn at utbetalingane vil gå noko ned samanlikna med nivået på utgiftene i 2026.",
+        "page": null
+      }
+    ],
+    "source_file": "data/saker/id3176081.txt",
+    "source_title": "Folketrygdens utgifter",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/folketrygdens-utgifter/id3176081/",
+    "page": null,
+    "caveat_nb": "Økningen er målt mot saldert budsjett 2026. Mot det som faktisk ventes utbetalt i 2026, går sykepengene noe ned."
+  },
+  {
+    "id": "trygd-nav-utbetalingslosning",
+    "area": "trygd",
+    "personas": [],
+    "detail": null,
+    "title_nb": "330 mill. kr til nytt utbetalingssystem i Nav",
+    "summary_nb": "Nav får over 330 mill. kr til å starte moderniseringen av systemet som betaler ut ytelser. Målet er færre feil, forsinkelser og manglende utbetalinger.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Modernisering av utbetalingsløsningen",
+        "y2026": null,
+        "y2027": 330,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Regjeringa set av over 330 millionar kroner til å starte moderniseringa av løysinga Nav bruker til utbetalingar.",
+    "extra_quotes": [
+      {
+        "quote": "Prosjektet skal auke tryggleiken for at Nav kan betale ut ytingar, og redusere risikoen for feil, forseinkingar eller manglande utbetalingar.",
+        "page": null
+      }
+    ],
+    "source_file": "data/saker/id3175633.txt",
+    "source_title": "Regjeringa prioriterer modernisering av utbetalingsløysingane i Nav",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringa-prioriterer-modernisering-av-utbetalingsloysingane-i-nav/id3175633/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "universiteter-hoyskoler-50-mrd",
+    "area": "forskning",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Universiteter og høyskoler får 50,3 mrd. kr",
+    "summary_nb": "Rammen til universiteter og høyskoler øker med 289,6 mill. kr utover prisveksten. Det er 0,6 % mer.",
+    "effect": "pluss",
+    "kind": "far",
+    "who": "Universitetene",
+    "amounts": [
+      {
+        "label_nb": "Rammebevilgning",
+        "y2026": null,
+        "y2027": 50.3,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Økning utover prisvekst",
+        "y2026": null,
+        "y2027": 289.6,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Realøkning",
+        "y2026": null,
+        "y2027": 0.6,
+        "unit": "%"
+      }
+    ],
+    "quote": "I 2027 foreslår regjeringa å gi universiteta og høgskulane ei rammeløyving på 50,3 milliardar kroner. Det er ein auke på 289,6 millionar kroner frå 2026 utover justeringa for prisvekst, tilsvarande 0,6 prosent av løyvinga.",
+    "source_file": "data/saker/id3174272.txt",
+    "source_title": "Regjeringa satsar på høgare utdanning og forsking",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringa-satsar-pa-hogare-utdanning-og-forsking/id3174272/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "fou-realnedgang",
+    "area": "forskning",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Litt mindre til forskning og utvikling",
+    "summary_nb": "Staten bruker 51,5 mrd. kr på forskning og utvikling. Justert for prisvekst er det 1,1 % mindre enn i 2026, mest fordi byggeprosjekter trenger mindre penger.",
+    "effect": "minus",
+    "kind": "utgift",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Forskning og utvikling",
+        "y2026": null,
+        "y2027": 51.5,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Realnedgang",
+        "y2026": null,
+        "y2027": 1.1,
+        "unit": "%"
+      }
+    ],
+    "quote": "Av heile budsjettforslaget for 2027 bereknar regjeringa at til saman 51,5 milliardar kronar går til FoU. Det inneber ein realnedgang på 1,1 prosent frå 2026-budsjettet. Realnedgangen kjem i hovudsak av tekniske endringar i budsjettet, særleg reduksjon i løyvingsbehovet til byggeprosjekt i tråd med framdrifta i prosjekta.",
+    "source_file": "data/saker/id3174272.txt",
+    "source_title": "Regjeringa satsar på høgare utdanning og forsking",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringa-satsar-pa-hogare-utdanning-og-forsking/id3174272/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "kvanteteknologi-livsvitenskap",
+    "area": "forskning",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Over 600 mill. kr til kvanteteknologi og livsvitenskap",
+    "summary_nb": "Kvanteteknologi får 295 mill. kr. Livsvitenskap, med bioteknologi, nevroteknologi og kjemi, får 333 mill. kr.",
+    "effect": "pluss",
+    "kind": "far",
+    "who": "Forskningen",
+    "amounts": [
+      {
+        "label_nb": "Kvanteteknologi",
+        "y2026": null,
+        "y2027": 295,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Livsvitenskap",
+        "y2026": null,
+        "y2027": 333,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "295 millionar kroner til ein styrka satsing på kvanteteknologi 333 millionar kroner til ein satsing på livsvitskap, inkludert bioteknologi, nevroteknologi og styrking av norsk kjemiforsking.",
+    "source_file": "data/saker/id3174272.txt",
+    "source_title": "Regjeringa satsar på høgare utdanning og forsking",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringa-satsar-pa-hogare-utdanning-og-forsking/id3174272/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "studieplasser-ingenior",
+    "area": "forskning",
+    "personas": [],
+    "detail": null,
+    "title_nb": "150 nye studieplasser og 120 mill. kr til ingeniørfag",
+    "summary_nb": "Det kommer 150 nye studieplasser, blant annet i sykepleie, jordmor og kvanteteknologi. De treårige ingeniørutdanningene får 120 mill. kr.",
+    "effect": "blandet",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Ingeniørutdanningene",
+        "y2026": null,
+        "y2027": 120,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Regjeringa foreslår 150 nye studieplassar innanfor utdanningar som vi veit er viktige for å møte framtidig etterspurnad: bioingeniør, vernepleie, sjukepleie, jordmor, maskinoffiser og kvanteteknologi. Regjeringa vil også bruke 120 millionar kroner på dei treårige ingeniørutdanningane.",
+    "source_file": "data/saker/id3174272.txt",
+    "source_title": "Regjeringa satsar på høgare utdanning og forsking",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringa-satsar-pa-hogare-utdanning-og-forsking/id3174272/",
+    "page": null,
+    "caveat_nb": "Studieplassene betales ved å flytte penger innenfor rammen til universitetene og høyskolene."
+  },
+  {
+    "id": "ki-120-mill-digitalisering",
+    "area": "forskning",
+    "personas": [],
+    "detail": null,
+    "title_nb": "120 mill. kr mer til kunstig intelligens",
+    "summary_nb": "Over 120 mill. kr ekstra går til KI i offentlig sektor og KI-sikkerhet. KI og nye digitaliseringstiltak koster til sammen om lag 2,2 mrd. kr.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Mer til KI",
+        "y2026": null,
+        "y2027": 120,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "KI og nye digitaliseringstiltak",
+        "y2026": null,
+        "y2027": 2.2,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "Regjeringa foreslår å styrke satsinga på kunstig intelligens med over 120 millionar kroner. Satsinga skal bidra til betre og meir effektive offentlege tenester, auka produktivitet og styrka arbeid med KI-sikkerheit. Samla foreslår regjeringa ei satsing på KI og nye digitaliseringstiltak i 2027 på om lag 2,2 milliardar kroner.",
+    "source_file": "data/saker/id3173740.txt",
+    "source_title": "Vil styrke satsinga på KI med over 120 millionar og vil samla bruke 2,2 milliardar på nye digitaliseringstiltak",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/foreslar-kraftfull-satsing-pa-ki-og-digitalisering/id3173740/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "kulturbudsjett-total",
+    "area": "kultur",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Kulturbudsjettet øker med 946 mill. kr",
+    "summary_nb": "Kultur- og likestillingsdepartementet får 28,1 mrd. kr i 2027. Det er om lag 946 mill. kr mer enn i 2026.",
+    "effect": "pluss",
+    "kind": "utgift",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Kultur- og likestillingsdepartementet",
+        "y2026": null,
+        "y2027": 28.1,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Økning fra 2026",
+        "y2026": null,
+        "y2027": 946,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Arbeidarparti-regjeringa foreslår ei løyving over Kultur- og likestillingsdepartementet sitt budsjett på rekordstore 28,1 milliardar kroner. Det er ein auke på om lag 946 millionar kroner frå 2026.",
+    "source_file": "data/saker/id3174117.txt",
+    "source_title": "Eit rekordstort kulturbudsjett for fellesskap",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/eit-rekordstort-kulturbudsjett-for-fellesskap/id3174117/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "mediestotte-og-nrk",
+    "area": "kultur",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Mer til mediestøtte, NRK får 8 mrd. kr",
+    "summary_nb": "Mediestøtten øker med 40 mill. kr, mest til produksjonstilskudd for nyhetsmedier. NRK får fortsatt 8 mrd. kr.",
+    "effect": "pluss",
+    "kind": "far",
+    "who": "Mediene",
+    "amounts": [
+      {
+        "label_nb": "Mer til mediestøtte",
+        "y2026": null,
+        "y2027": 40,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Til produksjonstilskudd",
+        "y2026": null,
+        "y2027": 30,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Tilskudd til NRK",
+        "y2026": null,
+        "y2027": 8,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "å styrke mediestøtteordningene med 40 mill. kroner, hvorav 30 mill. til produksjonstilskuddet for nyhets- og aktualitetsmedier og 10 mill. kroner til innovasjons- og utviklingstiltak som kan bidra til å øke unges nyhetskonsum, – å sette av 10 mill. kroner til drift av nytt Senter for forsking på det offentlige ordskiftet, – å videreføre tilskuddet på 20 mill. kroner til Tenk – et nytt uavhengig senter med formål å øke kildebevisstheten og motstandskraften mot desinformasjon blant unge, – å videreføre tilskuddet til NRK med 8 mrd. kroner.",
+    "source_file": "data/text/prp202620270001kuddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Kultur- og likestillingsdepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3176084/",
+    "page": 14,
+    "caveat_nb": "NRK-bevilgningen kan kuttes med inntil 0,4 % i året i perioden 2027–2030."
+  },
+  {
+    "id": "film-75-mill",
+    "area": "kultur",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Filmfeltet får 75 mill. kr mer",
+    "summary_nb": "Mest går til Filmfondet. Resten går til insentivordningen for film- og serieproduksjon og en ny ordning for digitalt kinoutstyr.",
+    "effect": "pluss",
+    "kind": "far",
+    "who": "Filmbransjen",
+    "amounts": [
+      {
+        "label_nb": "Mer til film",
+        "y2026": null,
+        "y2027": 75,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Filmfondet",
+        "y2026": null,
+        "y2027": 47,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Insentivordningen",
+        "y2026": null,
+        "y2027": 15,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Digitalt kinoutstyr",
+        "y2026": null,
+        "y2027": 5,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Regjeringa foreslår auka løyvingar til Filmfondet, insentivordninga og ei ny tilskotsordning for oppgradering av digitalt kinoutstyr. 47 millionar kroner går til Filmfondet, 15 millionar til insentivordninga for film- og serieproduksjon og 5 millionar kroner til ei ny tilskotsordning for oppgradering av digitalt kinoutstyr. Løyvingane til film- og dataspillformål, inkludert prisomrekning, aukar med totalt om lag 75 millionar kroner.",
+    "source_file": "data/saker/id3174115.txt",
+    "source_title": "Arbeidarparti-regjeringa styrker filmfeltet med 75 millionar kroner",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/arbeidarparti-regjeringa-styrker-filmfeltet-med-75-millionar-kroner/id3174115/",
+    "page": null,
+    "caveat_nb": "De 75 mill. kr inkluderer prisjustering."
+  },
+  {
+    "id": "kyrkjebygg-527-mill",
+    "area": "kultur",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Mer penger til gamle kirkebygg",
+    "summary_nb": "Tilskuddet til kulturhistorisk verdifulle kirker blir 527,4 mill. kr. Det er 127,4 mill. kr mer enn i 2026.",
+    "effect": "pluss",
+    "kind": "far",
+    "who": "Kirkene",
+    "amounts": [
+      {
+        "label_nb": "Tilskudd til kirkebygg",
+        "y2026": null,
+        "y2027": 527.4,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Økning",
+        "y2026": null,
+        "y2027": 127.4,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Framlegget til løyving på 527,4 millionar kroner til tilskotsordninga i 2027, inneber ein auke på 127,4 millionar kroner samanlikna med løyvinga i 2026.",
+    "source_file": "data/saker/id3173498.txt",
+    "source_title": "Aukar løyva til kulturhistorisk verdifulle kyrkjebygg",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/aukar-loyva-til-kulturhistorisk-verdifulle-kyrkjebygg/id3173498/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "toppidrettssenter-sognsvann",
+    "area": "kultur",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Staten dekker 90 % av nytt toppidrettssenter",
+    "summary_nb": "Nytt toppidrettssenter på Sognsvann. Staten dekker 90 % av kostnaden, delt mellom statsbudsjettet og spillemidlene. Over statsbudsjettet er det 518 mill. kr totalt, 21 mill. kr i 2027.",
+    "effect": "pluss",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Statens andel av kostnaden",
+        "y2026": null,
+        "y2027": 90,
+        "unit": "%"
+      },
+      {
+        "label_nb": "Over statsbudsjettet totalt",
+        "y2026": null,
+        "y2027": 518,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Bevilgning i 2027",
+        "y2026": null,
+        "y2027": 21,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Regjeringa foreslår at staten dekker 90 prosent av kostnadene, fordelt med 40 prosent frå statsbudsjettet og 50 prosent frå spelemidlane. Dei resterande 10 prosentane, samt eventuelle kostnadsoverskridingar, skal dekkast av Noregs idrettsforbund. 518 millionar kroner er foreslått over statsbudsjettet for heile prosessen, medan løyvingsframlegget for 2027 er 21 millionar kroner.",
+    "source_file": "data/saker/id3174112.txt",
+    "source_title": "Regjeringa vil ha nytt nasjonalt toppidrettssenter",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringa-vil-ha-nytt-nasjonalt-toppidrettssenter/id3174112/",
+    "page": null,
+    "caveat_nb": "Hele prosjektet er kostnadsregnet til nær 1,3 mrd. kr og bygges over tre år."
+  },
+  {
+    "id": "bistand-total-57-mrd",
+    "area": "utenriks",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Bistanden blir 57,6 mrd. kr",
+    "summary_nb": "Bistanden blir 57 597,1 mill. kr i 2027. Det er 0,93 % av bruttonasjonalinntekten og om lag 1 mrd. kr mer enn i 2026.",
+    "effect": "pluss",
+    "kind": "utgift",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Bistandsramme",
+        "y2026": null,
+        "y2027": 57597.1,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Andel av BNI",
+        "y2026": null,
+        "y2027": 0.93,
+        "unit": "%"
+      },
+      {
+        "label_nb": "Økning fra 2026",
+        "y2026": null,
+        "y2027": 1,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "Regjeringen foreslår en bistandsramme på til sammen 57 597,1 mill. kroner i 2027, fordelt med: –5 3 283,6 mill. kroner på Utenriksdepartementets budsjett. Av dette er 51 141,6 mill. kroner under programområde 03 Internasjonal bistand og inkluderer ODA-godkjente flyktningutgifter i Norge på anslagsvis 2 580,9 mill. kroner i 2027. I tillegg utgjør ODA-andelen av Utenriksdepartementets drift, som bevilges på kap. 100, post 01 og post 45 under programområde 02 Utenriksforvaltning, 2 142 mill. kroner. –4 097,9 mill. kroner på Klima- og miljødepartementets budsjett. Av dette er 4 082,4 mill. kroner under kap. 1482 Internasjonale klima- og utviklingstiltak til Klima- og skoginitiativet, 10 mill. kroner til sekretariatet for FNs klimakonvensjon (UN FCCC) og 5,5 mill. kroner til Koalisjonen for klima og ren luft (CCAC) under kap. 1400, post 76 Støtte til nasjonale og internasjonale miljøtiltak. – 110,3 mill. kroner på Finansdepartementets budsjett. 62,6 mill. kroner til nettoordning for merverdiavgift, 42,4 mill. kroner til bistandsprosjekter under Riksrevisjonen og til sammen 5,3 mill. kroner i mindre rammeoverføringer til Direktoratet for forvaltning og økonomistyring, Statens innkjøpssenter og Statistisk sentralbyrå. – 87,8 mill. kroner på Digitaliserings- og forvaltningsdepartementets budsjett etter rammeoverføringer til Departementenes digitaliseringsorganisasjon og Departementenes sikkerhets- og serviceorganisasjon. – 17,6 mill. kroner på Kunnskapsdepartementets budsjett for ODA-andelen til forskning under Norges forskningsråds driftsbudsjett. Regjeringens forslag ti l bistandsbudsjett for 2027 tilsvarer 0,93 pst. av anslått bruttonasjonalinntekt (BNI) for neste år. Forslaget er en økning på om lag 1 mrd. kroner sammenlignet med saldert budsjett for 2026.",
+    "source_file": "data/text/prp202620270001_uddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Utenriksdepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175636/",
+    "page": 75,
+    "caveat_nb": null
+  },
+  {
+    "id": "norfund-2-4-mrd",
+    "area": "utenriks",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Norfund får 2,4 mrd. kr mer",
+    "summary_nb": "Norfund får 5,6 mrd. kr, en økning på 75 %. Pengene skal investeres i bedrifter i utviklingsland. Flere andre bistandsposter går ned for å betale for dette.",
+    "effect": "pluss",
+    "kind": "far",
+    "who": "Norfund",
+    "amounts": [
+      {
+        "label_nb": "Økning",
+        "y2026": null,
+        "y2027": 2.4,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Norfund i alt",
+        "y2026": null,
+        "y2027": 5.6,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Økning i prosent",
+        "y2026": null,
+        "y2027": 75,
+        "unit": "%"
+      }
+    ],
+    "quote": "Regjeringen foreslår å styrke Norfund med 2,4 milliarder kroner i 2027, en økning på 75 prosent, til 5,6 milliarder kroner.",
+    "source_file": "data/saker/id3174278.txt",
+    "source_title": "Rekordtildeling til jobbskaping i utviklingsland – 2,4 milliarder mer til Norfund",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/rekordtildeling-til-jobbskaping-i-utviklingsland-24-milliarder-mer-til-norfund/id3174278/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "klima-miljo-hav-kutt",
+    "area": "utenriks",
+    "personas": [],
+    "detail": null,
+    "title_nb": "300 mill. kr mindre til klima og miljø i bistanden",
+    "summary_nb": "Bistandsposten for klima og miljø går ned med 300 mill. kr til 1 243,8 mill. kr. Pengene flyttes til Norfund.",
+    "effect": "minus",
+    "kind": "far",
+    "who": "Klimatiltak i utviklingsland",
+    "amounts": [
+      {
+        "label_nb": "Bevilgning",
+        "y2026": null,
+        "y2027": 1243.8,
+        "unit": "mill. kr"
+      },
+      {
+        "label_nb": "Reduksjon",
+        "y2026": null,
+        "y2027": 300,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "Det foreslås bevilget 1 243,8 mill. kroner i 2027. Det er en reduksjon på 300 mill. kroner",
+    "source_file": "data/text/prp202620270001_uddddpdfs.txt",
+    "source_title": "Prop. 1 S (2026–2027) Utenriksdepartementet",
+    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-s-20262027/id3175636/",
+    "page": 183,
+    "caveat_nb": "Samtidig får Norfund og Klimainvesteringsfondet mer, og målet for klimafinansiering heves til 30 mrd. kr i året innen 2035."
+  },
+  {
+    "id": "ukraina-85-mrd",
+    "area": "utenriks",
+    "personas": [],
+    "detail": null,
+    "title_nb": "Ukraina får 85 mrd. kr, samme nivå som før",
+    "summary_nb": "Støtten til Ukraina videreføres med 85 mrd. kr. Av dette går 70 mrd. kr til militære formål og 15 mrd. kr til sivil og humanitær støtte.",
+    "effect": "uendret",
+    "kind": "far",
+    "who": "Ukraina",
+    "amounts": [
+      {
+        "label_nb": "Støtte i alt",
+        "y2026": null,
+        "y2027": 85,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Militær støtte",
+        "y2026": null,
+        "y2027": 70,
+        "unit": "mrd. kr"
+      },
+      {
+        "label_nb": "Sivil og humanitær støtte",
+        "y2026": null,
+        "y2027": 15,
+        "unit": "mrd. kr"
+      }
+    ],
+    "quote": "Regjeringen foreslår å videreføre den norske støtten til Ukraina med totalt 85 milliarder kroner i 2027. Støtten fordeles med 70 milliarder kroner til militære formål og 15 milliarder kroner til sivil og humanitær støtte gjennom Nansen-programmet.",
+    "source_file": "data/saker/id3174281.txt",
+    "source_title": "Regjeringen viderefører sterk støtte til Ukraina",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/regjeringen-videreforer-sterk-stotte-til-ukraina/id3174281/",
+    "page": null,
+    "caveat_nb": null
+  },
+  {
+    "id": "fordrevne-ukraina-363-mill",
+    "area": "utenriks",
+    "personas": [],
+    "detail": null,
+    "title_nb": "363 mill. kr til å ta imot fordrevne fra Ukraina",
+    "summary_nb": "UDI, politiet, UNE og IMDi får fortsatt en midlertidig ekstrabevilgning. Budsjettet regner med om lag 8 000 asylsøkere fra Ukraina.",
+    "effect": "uendret",
+    "kind": "tilbud",
+    "who": null,
+    "amounts": [
+      {
+        "label_nb": "Midlertidig bevilgning",
+        "y2026": null,
+        "y2027": 363,
+        "unit": "mill. kr"
+      }
+    ],
+    "quote": "For å håndtere nye ankomster fra Ukraina og ukrainere som allerede befinner seg i Norge, foreslår Arbeiderparti-regjeringen en midlertidig bevilgning på 363 millioner kroner til Utlendingsdirektoratet (UDI), politiet, Utlendingsnemnda (UNE) og Integrerings- og mangfoldsdirektoratet (IMDi).",
+    "source_file": "data/saker/id3174539.txt",
+    "source_title": "Håndtering av fordrevne fra Ukraina",
+    "source_url": "https://www.regjeringen.no/no/aktuelt/handtering-av-fordrevne-fra-ukraina/id3174539/",
+    "page": null,
+    "caveat_nb": null
+  }
+]

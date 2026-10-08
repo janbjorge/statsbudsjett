@@ -20,6 +20,7 @@ class Kind(StrEnum):
     FAR = "far"
     TILBUD = "tilbud"
     REGEL = "regel"
+    UTGIFT = "utgift"  # a spending total (folketrygden, forsvaret): more money, not a better service
 
 
 # {} is the subject: "Du", "Dere", or who a general change hits
@@ -36,6 +37,9 @@ LABEL = {
     (Kind.REGEL, Effect.PLUSS): "◆ Romsligere regler",
     (Kind.REGEL, Effect.MINUS): "◆ Strengere regler",
     (Kind.REGEL, Effect.BLANDET): "◆ Endrede regler",
+    (Kind.UTGIFT, Effect.PLUSS): "▲ Mer penger",
+    (Kind.UTGIFT, Effect.MINUS): "▼ Mindre penger",
+    (Kind.UTGIFT, Effect.BLANDET): "◆ Mer og mindre",
 }
 # Same kroner while prices rise: the amount itself does not change, its value does
 REAL_LABEL = {Kind.BETALER: "▼ Reelt billigere", Kind.FAR: "▼ Reelt mindre verdt"}
@@ -57,6 +61,21 @@ PERSONAS = {
     "sparer": "Sparer eller har formue",
 }
 EVERYONE = "husholdning"
+# Parts of the budget no household profile covers, in the order /tilbud shows them after the profiles.
+# Keys match `area` in data/persona/*.json; a fact with an area has no personas and never shows on "For deg"
+AREAS = {
+    "kommune": "Kommunene",
+    "helse": "Helse og omsorg",
+    "forsvar": "Forsvar og beredskap",
+    "justis": "Politi og rettsvesen",
+    "samferdsel": "Samferdsel",
+    "klima": "Klima, energi og miljø",
+    "naering": "Næringsliv",
+    "trygd": "Folketrygd og Nav",
+    "forskning": "Utdanning og forskning",
+    "kultur": "Kultur, medier og idrett",
+    "utenriks": "Bistand og utenriks",
+}
 # The form asks only for these; Profile.situations reads the rest from the incomes and children.
 # "naeringsdrivende" is still asked, since an aksjeselskap owner has wage, not næringsinntekt
 ASKED = ("student", "syk_ufor", "arbeidsledig", "naeringsdrivende", "bilist", "bilkjoper", "distrikt_nord", "sparer")
@@ -89,6 +108,7 @@ class Fact:
     kind: Kind | None = None
     same_kroner: bool = False
     who: str | None = None  # a sector, organisation or companies, when the change is not a household's
+    area: str | None = None  # a part of the budget (AREAS) for facts that concern no household profile
 
     def label(self, subject: str) -> str:
         """Badge text; `subject` is "du" or "dere" (Profile.subject), never "deg"."""
@@ -194,7 +214,7 @@ class Group:
 def is_general(f: Fact) -> bool:
     """A change to a public service (more money to barnevernet) or to a sector or companies (fiskeflåten, konsern).
     It does not change what a household pays, gets or must follow, so it has its own page, not "For deg" (METHOD.md §6)."""
-    return (f.kind is Kind.TILBUD and f.effect is not Effect.UENDRET) or f.who is not None
+    return (f.kind is Kind.TILBUD and f.effect is not Effect.UENDRET) or f.who is not None or f.area is not None
 
 
 def wallet(f: Fact) -> Wallet:
@@ -232,7 +252,7 @@ def select(facts: list[Fact], profile: Profile) -> list[Section]:
     for p in chosen:
         mine = [
             f for f in facts
-            if f.id not in seen and fits(f)
+            if f.id not in seen and f.personas and fits(f)
             and (f.personas[0] == p or (p in f.personas and f.personas[0] not in chosen))
         ]
         mine.sort(key=lambda f: ORDER[f.effect])
@@ -247,7 +267,16 @@ def select(facts: list[Fact], profile: Profile) -> list[Section]:
 
 
 def general(facts: list[Fact]) -> list[Section]:
-    """Every general fact, grouped by who it is for, with those for everyone first."""
+    """Every general fact: by who it is for, with those for everyone first, then by part of the budget."""
     every = Profile(personas=frozenset(PERSONAS))
-    sections = select([f for f in facts if is_general(f)], every)
-    return sorted(sections, key=lambda s: s.label != "Gjelder alle")
+    people = select([f for f in facts if is_general(f) and f.area is None], every)
+    areas = []
+    for key, label in AREAS.items():
+        mine = sorted((f for f in facts if f.area == key), key=lambda f: ORDER[f.effect])
+        if mine:
+            areas.append(Section(
+                label=label,
+                changed=tuple(f for f in mine if f.effect is not Effect.UENDRET),
+                unchanged=tuple(f for f in mine if f.effect is Effect.UENDRET),
+            ))
+    return sorted(people, key=lambda s: s.label != "Gjelder alle") + areas

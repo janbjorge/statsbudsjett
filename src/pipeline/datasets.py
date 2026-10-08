@@ -5,6 +5,7 @@ from pathlib import Path
 
 import polars as pl
 
+from core.facts import AREAS
 from pipeline import verify
 from pipeline.flows import (
     FILES,
@@ -179,10 +180,18 @@ def meg() -> dict:
                 raise SystemExit(f"{it['id']}: quotes no longer say {words!r}, or the effect changed")
             it["effect"] = effect
             it["same_kroner"] = True
-        it["who"] = who.get(it["id"])
-        if it["effect"] != "uendret" and it.get("kind") not in ("betaler", "far", "tilbud", "regel"):
-            raise SystemExit(f"{it['id']}: a change needs a kind (betaler, far, tilbud or regel)")
-    keep = ("id", "personas", "detail", "under_18", "kind", "same_kroner", "who", "title_nb", "summary_nb", "effect", "amounts", "source_title", "source_url", "page", "caveat_nb")
+        it["who"] = who.get(it["id"], it.get("who"))
+        # A part of the budget no profile covers: no personas, and a name for the badge when money goes to someone
+        if (area := it.get("area")) is not None:
+            if area not in AREAS or it["personas"]:
+                raise SystemExit(f"{it['id']}: area {area!r} unknown, or the fact also has personas")
+            if it.get("kind") in ("betaler", "far") and not it["who"]:
+                raise SystemExit(f"{it['id']}: says who pays or gets, so it needs a who")
+        if it["effect"] != "uendret" and it.get("kind") not in ("betaler", "far", "tilbud", "regel", "utgift"):
+            raise SystemExit(f"{it['id']}: a change needs a kind (betaler, far, tilbud, regel or utgift)")
+        if it.get("kind") == "utgift" and it.get("area") is None:
+            raise SystemExit(f"{it['id']}: a spending total belongs to a part of the budget, so it needs an area")
+    keep = ("id", "personas", "detail", "under_18", "kind", "same_kroner", "who", "area", "title_nb", "summary_nb", "effect", "amounts", "source_title", "source_url", "page", "caveat_nb")
     tax = json.loads((PERSONA / "tax.json").read_text())
     return {
         "items": [{k: it.get(k) for k in keep} for it in items],

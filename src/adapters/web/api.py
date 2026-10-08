@@ -14,7 +14,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from adapters.web.params import Kroner, ProfileQuery, profile_query
 from app.queries import Queries
 from core import budget as b
-from core.facts import PERSONAS, Effect, Fact, Kind
+from core.facts import AREAS, PERSONAS, Effect, Fact, Kind
 from core.tax import Business
 
 DESCRIPTION = """\
@@ -169,6 +169,7 @@ class FactOut(Out):
     effekt: Effect
     type: Kind | None
     gjelder: str | None = Field(description="The sector, organisation or companies the change hits; null when it is a household's")
+    omrade: str | None = Field(description="The part of the budget (Forsvar og beredskap, Samferdsel) for changes no household profile covers")
     under_18: bool
     forbehold: str | None
     belop: list[Amount]
@@ -240,7 +241,7 @@ class FundYear(Out):
 def _fact(f: Fact) -> FactOut:
     return FactOut(
         id=f.id, personer=list(f.personas), tittel=f.title, oppsummering=f.summary,
-        effekt=f.effect, type=f.kind, gjelder=f.who, under_18=f.under_18, forbehold=f.caveat,
+        effekt=f.effect, type=f.kind, gjelder=f.who, omrade=AREAS.get(f.area or ""), under_18=f.under_18, forbehold=f.caveat,
         belop=[Amount(navn=a.label, verdi_2026=a.y2026, verdi_2027=a.y2027, enhet=a.unit) for a in f.amounts],
         kilde=Source(tittel=f.source_title, url=f.source_url, side=f.page),
     )
@@ -390,7 +391,7 @@ def build(queries: Queries) -> FastAPI:
     def facts() -> list[FactOut]:
         return [_fact(f) for f in queries.facts()]
 
-    @api.get("/tilbud", summary="Changes to public services and sectors (barnevernet, fiskeflåten), grouped by who they are for")
+    @api.get("/tilbud", summary="The changes in the budget beyond the household: public services, sectors and each part of the budget")
     def general() -> list[Section]:
         return [Section(navn=s.label, endret=[_fact(f) for f in s.changed], uendret=[_fact(f) for f in s.unchanged]) for s in queries.general()]
 

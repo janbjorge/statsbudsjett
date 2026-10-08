@@ -171,6 +171,8 @@ def test_for_deg_links_to_the_general_changes_instead_of_listing_them() -> None:
     assert "Mer penger til barnevernet" not in html and f"{m.n_general} endringer i offentlige tilbud og for næringer gjelder dere" in html
     page = client.get("/tilbud").text
     assert "Mer penger til barnevernet" in page and "Fiskeflåten får mindre" in page and 'aria-current="page"' in page
+    # Then each part of the budget, after the profiles
+    assert "Etter del av budsjettet" in page and page.index("Fisker eller oppdretter</h2>") < page.index("Forsvar og beredskap</h2>")
 
 
 def test_one_person_is_du_in_the_badges_not_deg() -> None:

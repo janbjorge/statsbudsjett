@@ -1,7 +1,8 @@
 {# A "For deg" or /tilbud fact: its amounts, source and card #}
 {% macro amt(a) -%}
   {{ a.label }}:
-  {% if a.y2026 is not none and a.y2026 != a.y2027 %}{{ a.y2026|num }} → <b>{{ a.y2027|num }}</b> {{ a.unit }}
+  {% if a.y2027 is none %}<b>{{ a.y2026|num }}</b> {{ a.unit }}
+  {%- elif a.y2026 is not none and a.y2026 != a.y2027 %}{{ a.y2026|num }} → <b>{{ a.y2027|num }}</b> {{ a.unit }}
   {%- else %}<b>{{ a.y2027|num }}</b> {{ a.unit }}{% if a.y2026 is not none %} (som i 2026){% endif %}{% endif %}
 {%- endmacro %}
 {% macro source(f) -%}<a href="{{ f.source_url }}" rel="noopener">Kilde: {{ f.source_title }}{% if f.page %}, side {{ f.page }}{% endif %} ↗</a>{%- endmacro %}

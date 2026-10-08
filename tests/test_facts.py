@@ -1,7 +1,7 @@
 """Which facts a household sees (METHOD.md §6)."""
 
 from adapters.datasets import JsonDatasets
-from core.facts import ASKED, PERSONAS, WALLET_LABEL, Effect, Kind, Profile, Wallet, by_wallet, general, is_general, select, wallet
+from core.facts import AREAS, ASKED, PERSONAS, WALLET_LABEL, Effect, Kind, Profile, Wallet, by_wallet, general, is_general, select, wallet
 from core.tax import Adult, Business
 
 FACTS = JsonDatasets().facts()
@@ -141,3 +141,18 @@ def test_general_changes_leave_for_deg_for_their_own_page() -> None:
     assert not is_general(by_id["elavgift-7-32"])
     regel = next(f for f in FACTS if f.kind is Kind.REGEL and f.effect is not Effect.UENDRET and not is_general(f))
     assert wallet(regel) is Wallet.REGEL
+
+
+def test_parts_of_the_budget_follow_the_profiles_and_never_reach_for_deg() -> None:
+    """Forsvar, folketrygden or bistand concern no household profile; /tilbud lists them after the profiles (METHOD.md §6)."""
+    shown = general(FACTS)
+    labels = [s.label for s in shown]
+    parts = [label for label in labels if label in AREAS.values()]
+    assert parts == [label for label in AREAS.values() if label in parts] and len(parts) >= 8
+    assert labels[-len(parts):] == parts
+    every = Profile(personas=frozenset(PERSONAS), kids={"1-5": 1})
+    assert not {f.id for s in select([f for f in FACTS if not is_general(f)], every) for f in s.changed + s.unchanged} & {f.id for f in FACTS if f.area}
+    # A spending total says only that more or less money goes there
+    totals = [f for f in FACTS if f.kind is Kind.UTGIFT]
+    assert totals and all(f.area for f in totals)
+    assert {f.label("du") for f in totals} <= {"▲ Mer penger", "▼ Mindre penger", "◆ Mer og mindre", "■ Står fast"}
