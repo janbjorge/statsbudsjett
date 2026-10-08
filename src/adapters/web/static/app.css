@@ -1,11 +1,14 @@
 :root {
   color-scheme: light;
-  --surface-0: #f4f3f0; --surface-1: #fcfcfb; --surface-2: #efeeea;
-  --text-primary: #1f1f1d; --text-secondary: #52514e; --text-muted: #7a7974;
-  --hairline: #e4e3df;
+  /* "Nordlys": cool snow-white page, spruce-green accent, a fjord-to-forest night sky behind the front-page hero */
+  --surface-0: #f3f7f5; --surface-1: #ffffff; --surface-2: #e6efeb;
+  --text-primary: #16232b; --text-secondary: #3f4f57; --text-muted: #5b6a70;
+  --hairline: #d9e3de;
+  --hero-bg: linear-gradient(120deg, #0c1f2c 0%, #0f3b44 55%, #1d5a4a 100%);
+  --hero-ink: #effaf5; --hero-soft: #a6cbbf; --hero-link: #9df0c8;
   --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; --series-4: #eda100;
   --series-5: #e87ba4; --series-6: #008300; --series-7: #4a3aa7; --series-8: #e34948;
-  --other: #a3a29c; --up: #2a78d6; --down: #e34948; --accent: #2a78d6;
+  --other: #a3a29c; --up: #1d6a96; --down: #e34948; --accent: #0f7a63;
   /* Badges: more, less, mixed or about the same. Text colours, at least 4.9:1 on surface-1 */
   --good: #1a7f37; --bad: #c62a2a; --mixed: #8a6100;
   /* The type scale. Every font-size uses one of these, at weight 400 or 650 (tests/test_type_scale.py).
@@ -16,23 +19,25 @@
 @media (prefers-color-scheme: dark) {
   :root:where(:not([data-theme="light"])) {
     color-scheme: dark;
-    --surface-0: #121211; --surface-1: #1a1a19; --surface-2: #242422;
-    --text-primary: #ecebe6; --text-secondary: #c3c2b7; --text-muted: #8f8e86;
-    --hairline: #2e2e2b;
+    --surface-0: #0d181c; --surface-1: #132228; --surface-2: #1b2e35;
+    --text-primary: #e8f1ee; --text-secondary: #b5c7c1; --text-muted: #8aa19a;
+    --hairline: #24393f;
+    --hero-bg: linear-gradient(120deg, #07121a 0%, #0b2c33 55%, #123f36 100%);
     --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
     --series-5: #d55181; --series-6: #008300; --series-7: #9085e9; --series-8: #e66767;
-    --other: #6b6a65; --up: #3987e5; --down: #e66767; --accent: #3987e5;
+    --other: #6b6a65; --up: #6cb4e0; --down: #e66767; --accent: #4fd1a5;
     --good: #3fb950; --bad: #e66767; --mixed: #d4a72c;
   }
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --surface-0: #121211; --surface-1: #1a1a19; --surface-2: #242422;
-  --text-primary: #ecebe6; --text-secondary: #c3c2b7; --text-muted: #8f8e86;
-  --hairline: #2e2e2b;
+  --surface-0: #0d181c; --surface-1: #132228; --surface-2: #1b2e35;
+  --text-primary: #e8f1ee; --text-secondary: #b5c7c1; --text-muted: #8aa19a;
+  --hairline: #24393f;
+  --hero-bg: linear-gradient(120deg, #07121a 0%, #0b2c33 55%, #123f36 100%);
   --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --series-4: #c98500;
   --series-5: #d55181; --series-6: #008300; --series-7: #9085e9; --series-8: #e66767;
-  --other: #6b6a65; --up: #3987e5; --down: #e66767; --accent: #3987e5;
+  --other: #6b6a65; --up: #6cb4e0; --down: #e66767; --accent: #4fd1a5;
   --good: #3fb950; --bad: #e66767; --mixed: #d4a72c;
 }
 * { box-sizing: border-box; }
@@ -107,6 +112,12 @@ html:has(.nav-sheet:popover-open) { overflow: hidden; }
 .theme-row[aria-pressed="true"] .switch { background: var(--accent); }
 .theme-row[aria-pressed="true"] .switch::after { transform: translateX(18px); }
 main { max-width: 1120px; margin: 0 auto; padding: 0 16px 80px; }
+/* The front-page hero sits on a full-width band; border-image paints past the column without causing a scrollbar */
+.hero { border-image: var(--hero-bg) fill 0 / / 0 100vmax; padding-bottom: 40px; color: var(--hero-ink); }
+.hero h1, .hero .hero-num { color: var(--hero-ink); }
+.hero .muted, .hero .hero-num small, .hero .tile .k, .hero .tile .s { color: var(--hero-soft); }
+.hero a { color: var(--hero-link); }
+.hero .card { background: rgb(255 255 255 / .07); border-color: rgb(255 255 255 / .16); }
 section { padding: 56px 0 8px; }
 h1 { font-size: var(--t-title); line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 12px; font-weight: 650; }
 h2 { font-size: var(--t-heading); letter-spacing: -0.01em; font-weight: 650; margin: 0 0 8px; line-height: 1.15; }
