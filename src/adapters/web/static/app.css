@@ -173,8 +173,12 @@ label.field { display: block; font-weight: 650; margin-bottom: 6px; }
 .fact p { margin: 6px 0 0; color: var(--text-secondary); font-size: var(--t-body); }
 .fact .amts { margin: 8px 0 0; display: grid; gap: 2px; font-size: var(--t-body); }
 .fact .amts b { font-weight: 650; }
-.fact .meta { margin-top: 8px; font-size: var(--t-small); color: var(--text-muted); }
+.fact .meta { margin-top: 8px; font-size: var(--t-small); color: var(--text-muted); display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
 .fact .meta a { color: var(--text-muted); }
+.fact .meta summary { cursor: pointer; color: var(--accent); }
+/* Opened, the caveat takes its own line under the source */
+.fact .meta details[open] { flex-basis: 100%; }
+.fact .meta details p { margin: 4px 0 0; color: var(--text-secondary); font-size: var(--t-small); }
 .badge { font-size: var(--t-small); font-weight: 650; padding: 2px 8px; border-radius: 999px; border: 1px solid currentColor; flex: none; max-width: 100%; }
 .badge.pluss { color: var(--good); } .badge.minus { color: var(--bad); }
 .badge.blandet { color: var(--mixed); } .badge.uendret { color: var(--text-muted); }
