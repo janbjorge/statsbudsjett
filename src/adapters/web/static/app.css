@@ -204,9 +204,6 @@ details.all > .facts { margin-top: 0; }
 .share { font: inherit; font-size: var(--t-small); background: none; border: 1px solid var(--hairline); color: var(--text-secondary); border-radius: 8px; padding: 6px 12px; cursor: pointer; }
 
 /* 100-kr bar */
-.stack { display: flex; height: 44px; border-radius: 8px; overflow: hidden; gap: 2px; margin: 16px 0 8px; }
-.stack div { min-width: 2px; cursor: pointer; transition: opacity .15s; }
-.stack.focus div:not(.on) { opacity: .25; }
 .legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: var(--t-small); color: var(--text-secondary); }
 .legend span { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
 .sw { width: 10px; height: 10px; border-radius: 2px; display: inline-block; flex: none; }

@@ -174,8 +174,6 @@ def index(
     naering: QL = None,
     naering_type: QL = None,
     skatt: Q = "",
-    side: Q = "utgift",
-    sti: Q = "",
     k: Q = "",
 ) -> HTMLResponse:
     m = queries.meg(profile_from(meg, barn, lonn, pensjon, naering, naering_type))
@@ -187,7 +185,6 @@ def index(
         "tax_kroner": tax_kroner,
         "receipt": queries.receipt(tax_kroner),
         "income": queries.income(),
-        "t": queries.tree(_side(side), sti),
         "changes": queries.changes(),
         "kv": queries.kommune(k),
         "kommuner": queries.budget.kommuner,
@@ -231,7 +228,7 @@ def tree_fragment(request: Request, side: Q = "utgift", sti: Q = "", kap: Q = ""
     if kap.isdigit() and any(p.kap == int(kap) for p in queries.budget.posts):
         s, sti = queries.chapter_path(int(kap))
     if _not_htmx(request):
-        return RedirectResponse(f"/?{urlencode({'side': s, 'sti': sti})}#utforsk")
+        return RedirectResponse(f"/flyt?{urlencode({'side': s, 'sti': sti})}#utforsk")
     return templates.TemplateResponse(request, "_tree.html", {"t": queries.tree(s, sti)})
 
 
@@ -260,16 +257,12 @@ def flow_detail_fragment(request: Request, vis: Q = "") -> Response:
 
 
 @app.get("/flyt", response_class=HTMLResponse)
-def flows_page(request: Request, vis: Q = "") -> HTMLResponse:
+def flows_page(request: Request, vis: Q = "", side: Q = "utgift", sti: Q = "") -> HTMLResponse:
     d = data.raw("budget.json")
     payload = {"groups": d["groups"], "income": d["income"], "flows": d["flows"], "diff": d["diff"]}
-    # Spending as the Sankey draws it: the income flows into the total, so the tiles and the chart agree
-    spent = {y: sum(f["beløp"] for f in d["flows"][y] if f["level"] == 0) for y in ("2026", "2027")}
     return templates.TemplateResponse(request, "flyt.html", {
         "payload": orjson.dumps(payload).decode().replace("</", "<\\/"),
-        "spent": spent,
-        "fund": next(r for r in d["diff"] if r["level"] == 0 and r["key"] == "Overføring fra oljefondet"),
-        "top": max((r for r in d["diff"] if r["level"] == 1), key=lambda r: r["change"]),
+        "t": queries.tree(_side(side), sti),
         "fd": queries.flow_detail(vis) if vis else None,
     })
 
@@ -286,7 +279,7 @@ def everyday_page(request: Request) -> HTMLResponse:
 
 @app.get("/oljefondet", response_class=HTMLResponse)
 def oil_page(request: Request) -> HTMLResponse:
-    return templates.TemplateResponse(request, "olje.html", {"parts": queries.budget.fund_parts})
+    return templates.TemplateResponse(request, "olje.html", {"parts": queries.budget.fund_parts, "fund": queries.budget.fund})
 
 
 @app.get("/olje")
@@ -310,10 +303,10 @@ def llms_txt(request: Request) -> Response:
 @app.get("/robots.txt", response_class=PlainTextResponse)
 def robots_txt(request: Request) -> str:
     """Crawlers may read every page and the JSON API, but not the endless query-string variants of the pages:
-    GPTBot walked about 1 200 tree paths (/?sti=) in three hours. The same data is one API call away.
+    GPTBot walked about 1 200 tree paths (then /?sti=, now /flyt?sti=) in three hours. The same data is one API call away.
     The rules name page paths only, so /api/utforsk?sti= stays open."""
-    disallow = [f"/?*{key}=" for key in ("sti", "skatt", "lonn", "pensjon", "naering")]
-    disallow += ["/flyt?*vis="]
+    disallow = [f"/?*{key}=" for key in ("skatt", "lonn", "pensjon", "naering")]
+    disallow += [f"/flyt?*{key}=" for key in ("vis", "sti")]
     disallow += ["/utforsk", "/kvittering", "/meg", "/sok", "/kommune", "/flyt/del"]  # HTMX fragments, or redirects to /?…
     return (
         f"# For AI agents: read {request.base_url}llms.txt, then use the JSON API\n"

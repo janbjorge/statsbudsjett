@@ -5,10 +5,11 @@
   {%- elif a.y2026 is not none and a.y2026 != a.y2027 %}{{ a.y2026|num }} → <b>{{ a.y2027|num }}</b> {{ a.unit }}
   {%- else %}<b>{{ a.y2027|num }}</b> {{ a.unit }}{% if a.y2026 is not none %} (som i 2026){% endif %}{% endif %}
 {%- endmacro %}
-{% macro card(f, subject, situation="") %}
+{# badge=False where the group heading already says which way it goes ("For deg") #}
+{% macro card(f, subject, situation="", badge=True) %}
 <article class="fact">
-  <div class="top"><h4>{{ f.title }}</h4><span class="badge {{ f.tone }}">{{ f.label(subject) }}</span></div>
-  <p>{{ f.summary }}</p>
+  <div class="top"><h4>{{ f.title }}</h4>{% if badge %}<span class="badge {{ f.tone }}">{{ f.label(subject) }}</span>{% endif %}</div>
+  {% if f.summary %}<p>{{ f.summary }}</p>{% endif %}
   {% if f.amounts %}<div class="amts">{% for a in f.amounts %}<div>{{ amt(a) }}</div>{% endfor %}</div>{% endif %}
   {# One quiet line: the source, and the caveat one tap away (docs/plan-density.md step 3) #}
   <div class="meta">{% if situation %}<span class="tag">{{ situation }}</span>{% endif %}

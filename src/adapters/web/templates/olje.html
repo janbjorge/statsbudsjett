@@ -8,10 +8,8 @@
 {% endblock %}
 {% block main %}
   <section>
-    <p class="muted" style="margin:0"><a href="/">← Budsjettlupa</a></p>
     <h1>Avkastning {{ last.returns|nb1 }} mrd. kr. Olje inn {{ last.oil|nb1 }}</h1>
-    <p class="lede">Ved utgangen av {{ last.year }} var fondet <b>{{ last.size|nb1 }} mrd. kr</b>.
-      Olje inn {{ last.oil|nb1 }} mrd. kr, uttak {{ last.withdraw|nb1 }} mrd. kr, kronekurs {{ last.krone|nb1 }} mrd. kr.</p>
+    <p class="lede">Ved utgangen av {{ last.year }} var fondet <b>{{ last.size|nb1 }} mrd. kr</b>. Dette har bygd det opp, summert fra 1996:</p>
     <div class="grid tiles">
       <div class="card tile"><div class="k">Avkastning</div><div class="v">{{ last.returns|nb1 }} mrd.</div><div class="s">renter, utbytte og kursgevinster, etter kostnader</div></div>
       <div class="card tile"><div class="k">Olje inn</div><div class="v">{{ last.oil|nb1 }} mrd.</div><div class="s">penger fra olje og gass inn i fondet</div></div>
@@ -22,7 +20,7 @@
 
   <section>
     <h2>Bidrag til fondets verdi</h2>
-    <p class="lede">Tallene over er summer fra 1996 til utgangen av {{ last.year }}. Figuren viser hvordan hver del har bygd seg opp år for år.</p>
+    <p class="lede">Hvordan hver del har bygd seg opp år for år.</p>
     <div class="card">
       <div class="legend" style="margin-bottom:12px">
         <span><i class="sw" style="background:var(--text-primary)"></i>Fondets verdi</span>
@@ -41,6 +39,22 @@
     </details>
     <p class="note" style="margin-top:12px">Kilde: Nasjonalbudsjettet 2027, figur 3.6. Tallene er akkumulerte bidrag til markedsverdien, i mrd. kr uten justering for prisvekst.
       Uttak er negativt. Avkastning og kronekurs kan også være negative i enkeltår. I noen år summerer de fire bidragene til 0,1 mrd. kr unna verdien, slik kilden er avrundet.
-      <a href="/#olje">Andel av budsjettet og uttak i prosent</a>.</p>
+      <a href="/#olje">Hvor mye av budsjettet oljepengene dekker</a>.</p>
+  </section>
+
+  <section>
+    {% set first, last = fund[0], fund[-1] %}
+    <h2>Uttaket fra fondet</h2>
+    <p class="lede">I {{ last.year }} tas {{ last.spend|nb1 }} % av fondet ut til statsbudsjettet, mot {{ first.spend|nb1 }} % i {{ first.year }}.
+      Handlingsregelen sier at bruken over tid skal følge den forventede realavkastningen.</p>
+    <div class="card"><h3>Uttak av fondet</h3><p class="muted small" style="margin:0 0 12px">Prosent av fondets verdi. Stiplet linje: forventet realavkastning</p>
+      <div class="fund" data-key="spend" data-fund="{{ fund|tojson_fund }}"></div></div>
+    <details style="margin-top:12px"><summary>Vis tallene som tabell</summary>
+      <div class="tbl-scroll"><table class="tbl">
+        <thead><tr><th>År</th><th>Andel av utgiftene, %</th><th>Uttak, % av fondet</th><th>Forventet realavkastning, %</th><th>Fondets verdi, mrd. kr</th></tr></thead>
+        <tbody>{% for f in fund %}<tr><td>{{ f.year }}{{ " (forslag)" if f.forecast }}</td><td>{{ f.share|nb1 }}</td><td>{{ f.spend|nb1 }}</td><td>{{ f.expected|nb1 }}</td><td>{{ f.size|nb1 if f.size else "–" }}</td></tr>{% endfor %}</tbody>
+      </table></div>
+    </details>
+    <p class="note" style="margin-top:12px">Kilde: Nasjonalbudsjettet 2027, figur 3.3, 3.4 og 3.6. Tallene er Finansdepartementets, og {{ last.year }} er regjeringens forslag.</p>
   </section>
 {% endblock %}

@@ -1,22 +1,13 @@
 {% extends "base.html" %}
-{% block title %}Pengestrømmen i statsbudsjettet 2027 | Budsjettlupa{% endblock %}
+{% block title %}Hele statsbudsjettet 2027: pengestrømmen og alle poster | Budsjettlupa{% endblock %}
 {% block head %}
 <script src="{{ static_url('d3-sankey.min.js') }}" defer></script>
 <script src="{{ static_url('flyt.js') }}" defer></script>
 {% endblock %}
 {% block main %}
   <section>
-    <p class="muted" style="margin:0"><a href="/">← Budsjettlupa</a></p>
-    <h1>Pengestrømmen 2026 og 2027</h1>
-    <p class="lede">Diagrammene viser hvor pengene kommer fra og hvor de går. Oljeinntektene går rett til oljefondet, og overføringen fra fondet
-      dekker det som mangler. Lån er holdt utenfor. Alle tall i mrd. kr.</p>
-    {% set a, b = spent["2026"], spent["2027"] %}
-    <div class="grid tiles">
-      <div class="card tile"><div class="k">Utgifter 2027</div><div class="v">{{ b|nb1 }} mrd.</div><div class="s">utenom olje og lån</div></div>
-      <div class="card tile"><div class="k">Endring fra 2026</div><div class="v">{{ (b - a)|signed1 }} mrd.</div><div class="s">{{ ((b - a) / a * 100)|signed1 }} % før prisvekst</div></div>
-      <div class="card tile"><div class="k">Fra oljefondet</div><div class="v">{{ fund.y2027|nb1 }} mrd.</div><div class="s">{{ fund.change|signed1 }} mrd. fra 2026</div></div>
-      <div class="card tile"><div class="k">Største økning</div><div class="v">{{ top.key }}</div><div class="s">{{ top.change|signed1 }} mrd. ({{ top.pct|signed1 }} %)</div></div>
-    </div>
+    <h1>Hele budsjettet</h1>
+    <p class="lede">Hvor pengene kommer fra og hvor de går, i 2026 og 2027. Under kan du klikke deg ned til hver post eller søke. Alle tall i mrd. kr.</p>
   </section>
 
   <section class="flow">
@@ -35,6 +26,15 @@
 
   <section class="flow" id="del">
     {% include "_flow_detail.html" %}
+  </section>
+
+  <section id="utforsk">
+    <h2>Utforsk hver post</h2>
+    <p class="lede">Klikk deg ned fra de store områdene til hver enkelt post, eller søk etter noe du lurer på.</p>
+    <input type="search" name="q" placeholder="Søk, f.eks. politi, barnehage, NRK, vei" aria-label="Søk i budsjettet"
+           hx-get="/sok" hx-target="#results" hx-swap="outerHTML" hx-trigger="input changed delay:250ms, search">
+    <div id="results" class="results"></div>
+    {% include "_tree.html" %}
   </section>
 
   <section class="flow">

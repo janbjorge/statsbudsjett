@@ -24,31 +24,23 @@
     <a class="brand" href="/#oversikt">Budsjettlupa</a>
     <div class="nav-links">
       <a href="/#meg">For deg</a>
-      <a href="/#skatt">Skatten din</a>
-      <a href="/#utforsk">Utforsk</a>
-      <a href="/#kommune">Kommunen din</a>
-      <a href="/flyt"{% if request.url.path == "/flyt" %} aria-current="page"{% endif %}>Pengestrømmen</a>
-      <a href="/tilbud"{% if request.url.path == "/tilbud" %} aria-current="page"{% endif %}>Hele budsjettet</a>
+      <a href="/flyt"{% if request.url.path == "/flyt" %} aria-current="page"{% endif %}>Hele budsjettet</a>
+      <a href="/tilbud"{% if request.url.path == "/tilbud" %} aria-current="page"{% endif %}>Alle endringene</a>
+      <a href="/oljefondet"{% if request.url.path == "/oljefondet" %} aria-current="page"{% endif %}>Oljefondet</a>
     </div>
     <details class="more">
       <summary>Mer ▾</summary>
       <div class="menu">
-        <a href="/#inntekter">Hvor pengene kommer fra</a>
-        <a href="/#endringer">Største endringer</a>
-        <a href="/#olje">Oljepengene</a>
-        <a href="/oljefondet"{% if request.url.path == "/oljefondet" %} aria-current="page"{% endif %}>Oljefondets verdi</a>
         <a href="/visste-du"{% if request.url.path == "/visste-du" %} aria-current="page"{% endif %}>Visste du?</a>
         <a href="/ki"{% if request.url.path == "/ki" %} aria-current="page"{% endif %}>Spør en KI</a>
-        <a href="/#ordliste">Ordliste</a>
-        <a href="/#feil">Fant du en feil?</a>
       </div>
     </details>
     <button class="theme" type="button" data-theme-toggle>Mørk</button>
   </div>
 </nav>
 {# Phones: a button in thumb reach opens the menu as a sheet from the bottom (popover, so the browser handles closing) #}
-{% set pages = [("/", "Forsiden"), ("/flyt", "Pengestrømmen"), ("/tilbud", "Hele budsjettet"), ("/oljefondet", "Oljefondets verdi"), ("/visste-du", "Visste du?"), ("/ki", "Spør en KI")] %}
-{% set sections = [("meg", "For deg"), ("skatt", "Skatten din"), ("inntekter", "Hvor pengene kommer fra"), ("utforsk", "Utforsk"), ("endringer", "Største endringer"), ("kommune", "Kommunen din"), ("olje", "Oljepengene"), ("ordliste", "Ordliste"), ("feil", "Fant du en feil?")] %}
+{% set pages = [("/", "Forsiden"), ("/flyt", "Hele budsjettet"), ("/tilbud", "Alle endringene"), ("/oljefondet", "Oljefondet"), ("/visste-du", "Visste du?"), ("/ki", "Spør en KI")] %}
+{% set sections = [("meg", "For deg"), ("endringer", "Hva endres"), ("skatt", "Skatten din"), ("kommune", "Kommunen din"), ("olje", "Oljepengene")] %}
 <button class="nav-fab" type="button" popovertarget="nav-sheet">Meny <span aria-hidden="true">☰</span></button>
 <div class="nav-sheet" id="nav-sheet" popover role="dialog" aria-label="Meny">
   <div class="sheet-head"><b>Meny</b>
@@ -74,7 +66,8 @@
     <p>Begge årene er regjeringens forslag, ikke vedtatt budsjett. Beløpene er ikke justert for prisvekst.</p>
     <p><b>Last ned tallene:</b> <a href="/data/poster-2027.csv">alle poster (CSV)</a> · <a href="/data/kommuner-2027.csv">kommuner (CSV)</a> · <a href="/data/budget.json">alt (JSON)</a> · <a href="/ki">bruk tallene med ChatGPT eller annen KI</a></p>
     <p class="muted">Dette er en uavhengig framstilling av offentlige tall, ikke en offisiell side fra regjeringen.
-      Koden bak siden er åpen: <a href="https://github.com/janbjorge/statsbudsjett">se koden</a> eller <a href="/#feil">si fra om en feil</a>.</p>
+      Koden bak siden er åpen: <a href="https://github.com/janbjorge/statsbudsjett">se koden</a>.
+      Fant du en feil? <a href="https://github.com/janbjorge/statsbudsjett/issues/new">Si fra på GitHub</a>.</p>
   </footer>
 </main>
 <div class="tip" id="tip"></div>

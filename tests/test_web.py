@@ -16,35 +16,39 @@ FAMILY_ARGS = ("barnefamilie,arbeidstaker,bilist", "0,2,0,0", "650000,650000", "
 
 def test_front_page_renders_every_section() -> None:
     html = client.get("/").text
-    for anchor in ("oversikt", "meg", "skatt", "inntekter", "utforsk", "endringer", "kommune", "olje", "feil", "ordliste"):
+    for anchor in ("oversikt", "meg", "endringer", "skatt", "kommune", "olje"):
         assert f'id="{anchor}"' in html
+    # docs/plan-simplify.md: each term is explained where it is used, errors go to GitHub from the footer,
+    # income and the budget tree live on /flyt
+    for gone in ("ordliste", "feil", "inntekter", "utforsk"):
+        assert f'id="{gone}"' not in html
+    assert "github.com/janbjorge/statsbudsjett/issues/new" in html
 
 
 def test_oil_page_states_the_2025_split() -> None:
     html = client.get("/oljefondet").text
     # NB 2027 figure 3.6 at year-end 2025, nb1 grouping
     assert "Avkastning 13\u00a0371,9 mrd. kr. Olje inn 9\u00a0561,9" in html
-    assert "9\u00a0561,9 mrd. kr" in html
-    assert "\u22124\u00a0057,3 mrd. kr" in html
-    assert "2\u00a0391,4 mrd. kr" in html
-    assert "21\u00a0267,9 mrd. kr" in html
+    # Each total once on the page (the head repeats them for link previews): the tiles, and the fund's value in the lede
+    main = html[html.index("<main>"):]
+    for v in ("9\u00a0561,9 mrd.", "\u22124\u00a0057,3 mrd.", "2\u00a0391,4 mrd.", "21\u00a0267,9 mrd. kr"):
+        assert main.count(v) == 1, v
     assert "kursgevinster" in html
     assert 'data-parts="' in html
+    # The withdrawal rate moved here from the front page (NB 2027 figure 3.3)
+    assert "I 2027 tas 2,7 % av fondet ut til statsbudsjettet, mot 3,9 % i 2001" in html
+    assert 'data-key="spend"' in html
     assert "<title>Avkastning 13\u00a0371,9 mrd. kr. Olje inn 9\u00a0561,9</title>" in html
     assert 'href="/oljefondet"' in client.get("/").text
     r = client.get("/olje", follow_redirects=False)
     assert r.status_code == 301 and r.headers["location"] == "/oljefondet"
 
 
-def test_oil_section_shows_fund_size_spending_and_share() -> None:
+def test_oil_section_shows_the_budget_share() -> None:
     html = client.get("/").text
-    # NB 2027 figures 3.6 (21 267,9 / 613,3 mrd. kr), 3.3 and 3.4
-    assert "<b>26,6 %</b> av utgiftene i statsbudsjettet. I 2001 var andelen 3,0 %" in html
-    assert "Uttaket er 2,7 % av fondet i 2027 og var 3,9 % i 2001" in html
-    assert "21\u00a0267,9 mrd. kr ved utgangen av 2025 og 613,3 mrd. kr ved utgangen av 2001" in html
-    assert 'href="#utforsk"' in html
-    for key in ("size", "spend", "share"):
-        assert f'data-key="{key}"' in html
+    # NB 2027 figure 3.4; the withdrawal rate and the fund's value are on /oljefondet
+    assert "Oljefondet dekker en mye større del av utgiftene enn i 2001" in html
+    assert 'data-key="share"' in html and 'data-key="spend"' not in html and 'data-key="size"' not in html
 
 
 def test_shared_family_link_shows_the_tax_effect() -> None:
@@ -61,7 +65,8 @@ def test_fragment_sets_a_shareable_url() -> None:
 def test_fragments_redirect_to_the_full_page_without_htmx() -> None:
     for url in (f"/meg?{FAMILY}", "/kvittering?skatt=1000", "/utforsk?sti=g:Forsvar", "/kommune?k=Bergen"):
         r = client.get(url, follow_redirects=False)
-        assert r.status_code == 307 and r.headers["location"].startswith("/?"), url
+        page = "/flyt?" if url.startswith("/utforsk") else "/?"
+        assert r.status_code == 307 and r.headers["location"].startswith(page), url
         # the redirect is cacheable, so a cache must not hand it to the HTMX request for the same URL
         assert "HX-Request" in r.headers["vary"], url
 
@@ -163,7 +168,8 @@ def test_flows_page_and_downloads() -> None:
     page = client.get("/flyt").text
     assert 'id="sankey"' in page and 'id="flyt-data"' in page
     assert 'aria-current="page"' in page  # the shared site nav marks where we are
-    assert "Største økning" in page  # the tiles come with the page, not from JavaScript, so nothing jumps when it runs
+    assert 'id="utforsk"' in page and 'id="tree"' in page  # the budget tree moved here from the front page
+    assert 'href="/flyt?side=' in client.get("/flyt?sti=g:Forsvar").text
     assert client.get("/data/poster-2027.csv").text.startswith("side,gruppe")
     assert client.get("/helse").text == "ok"
 

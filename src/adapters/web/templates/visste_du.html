@@ -4,7 +4,6 @@
 {% block title %}Visste du? Statsbudsjettet 2027 i hverdagstall | Budsjettlupa{% endblock %}
 {% block main %}
   <section>
-    <p class="muted" style="margin:0"><a href="/">← Budsjettlupa</a></p>
     <h1>Visste du?</h1>
     <p class="lede">Statsbudsjettet for 2027 regnet om til kroner per innbygger, per dag og per sekund. Vil du se hva budsjettet
       betyr for deg, finner du det under <a href="/#meg">For deg</a>.</p>
@@ -30,31 +29,7 @@
       (<a href="https://fragor.riksbank.se/org/riksbank/d/sedlarnas-tjocklek/">Riksbanken</a>). En fotballbane er 105 × 68 m
       (<a href="https://www.fotball.no/lov-og-reglement/klubblisens/tl-og-obos/retningslinjer/retningslinjer-infrastruktur/">NFF</a>).
       Operaen kostet 4 278 mill. kr i 2009-kroner (<a href="https://www.ntnu.no/concept/nytt-operahus">NTNU Concept</a>), så operahusene blander kroneverdien fra to år.</p>
-  </section>
-
-  <section>
-    <h2>Utgiftene per innbygger</h2>
-    <table class="tbl">
-      <thead><tr><th>Område</th><th>I året</th><th>Per dag</th></tr></thead>
-      <tbody>
-      {% for r in e.spending %}
-        <tr><td><i class="sw" style="background:var(--g-{{ group_slot(r.name) }});margin-right:8px"></i>{{ r.name }}</td><td class="num">{{ r.kroner|kr }}</td><td class="num">{{ (r.kroner / 365)|kr }}</td></tr>
-      {% endfor %}
-      </tbody>
-    </table>
-  </section>
-
-  <section>
-    <h2>Inntektene per innbygger</h2>
-    <table class="tbl">
-      <thead><tr><th>Kilde</th><th>I året</th><th>Per dag</th></tr></thead>
-      <tbody>
-      {% for r in e.income %}
-        <tr><td>{{ r.name }}</td><td class="num">{{ r.kroner|kr }}</td><td class="num">{{ (r.kroner / 365)|kr }}</td></tr>
-      {% endfor %}
-      </tbody>
-    </table>
-    <p class="note" style="margin-top:12px">Alle tall er budsjettet utenom olje, slik resten av siden viser det. Per innbygger er beløpet delt på
-      {{ e.population|nb }} innbyggere, folketallet i Grønt hefte 2027. Dagstallene er delt på 365 og sekundtallet på antall sekunder i 2027.</p>
+    <p class="note" style="margin-top:12px">Alle tall er budsjettet utenom olje. Per innbygger er beløpet delt på {{ e.population|nb }} innbyggere, folketallet i Grønt hefte 2027.
+    Dagstallene er delt på 365 og sekundtallet på antall sekunder i 2027. <a href="/#skatt">Slik fordeles skatten din</a>.</p>
   </section>
 {% endblock %}

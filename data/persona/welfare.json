@@ -25,7 +25,7 @@
     ],
     "detail": "minstepensjon",
     "title_nb": "Minstepensjonen økte med 8 000 kr i året fra mai 2026",
-    "summary_nb": "Satsene for minstepensjon ble hevet med 8 000 kr i året, i tillegg til den vanlige reguleringen. Økningen gjelder fra 1. mai 2026 og videreføres.",
+    "summary_nb": "Satsene ble hevet i tillegg til den vanlige reguleringen. Økningen videreføres.",
     "effect": "pluss",
     "kind": "far",
     "amounts": [],
@@ -89,7 +89,7 @@
     ],
     "detail": "egenandeler",
     "title_nb": "Egenandelstaket øker til 3 406 kr",
-    "summary_nb": "Du må betale litt mer selv før du får frikort for lege, psykolog, medisiner på blå resept og lignende. Taket øker fra 3 278 kr i 2026 til 3 406 kr i 2027.",
+    "summary_nb": "Du må betale litt mer selv før du får frikort for lege, psykolog, medisiner på blå resept og lignende.",
     "effect": "minus",
     "kind": "betaler",
     "amounts": [
@@ -120,7 +120,7 @@
     ],
     "detail": "barn og unge",
     "title_nb": "Ungdom under 18 år slipper fortsatt egenandeler",
-    "summary_nb": "Siden 1. august 2026 har barn og unge under 18 år sluppet egenandeler hos lege, psykolog og lignende. Før gikk grensen ved 16 år. Dette videreføres i 2027.",
+    "summary_nb": "Siden 1. august 2026 har barn og unge under 18 år sluppet egenandeler hos lege, psykolog og lignende. Før gikk grensen ved 16 år.",
     "effect": "uendret",
     "amounts": [],
     "quote": "Fra 1. august 2026 ble aldersgrensen for betaling av alle egenandeler under takordningen økt fra 16 til 18 år. Det foreslås å videreføre dette tiltaket",
@@ -138,7 +138,7 @@
     ],
     "detail": "dødsfall i familien",
     "title_nb": "Høyere gravferdsstønad, men større egenandel for båretransport",
-    "summary_nb": "Den behovsprøvde gravferdsstønaden øker til 37 000 kr, mens dødsboets egenandel for båretransport øker til 7 400 kr. Dødsbo med lite eller ingen midler skal komme like godt eller bedre ut.",
+    "summary_nb": "Dødsbo med lite eller ingen midler skal komme like godt eller bedre ut.",
     "effect": "blandet",
     "kind": "far",
     "amounts": [
@@ -169,7 +169,7 @@
     ],
     "detail": "parykk",
     "title_nb": "Støtten til parykk øker med 19 % for dem over 30 år",
-    "summary_nb": "Personer over 30 år som har mistet håret på grunn av sykdom, får høyere støtte til parykk. Ordinær sats går fra 6 265 til 7 455 kr i året, og forhøyet sats fra 16 220 til 19 302 kr.",
+    "summary_nb": "Personer over 30 år som har mistet håret på grunn av sykdom, får høyere støtte til parykk.",
     "effect": "pluss",
     "kind": "far",
     "amounts": [
@@ -408,7 +408,7 @@
     ],
     "detail": "unge",
     "title_nb": "Forsøk med ungdomsprogram fortsetter",
-    "summary_nb": "Forsøket med et arbeidsrettet fulltidsprogram for unge, med egen ytelse uten medisinske krav, får 194 mill. kr i 2027.",
+    "summary_nb": "Det er et arbeidsrettet fulltidsprogram for unge, med egen ytelse uten medisinske krav.",
     "effect": "pluss",
     "kind": "tilbud",
     "amounts": [
@@ -433,7 +433,7 @@
     ],
     "detail": "strøm",
     "title_nb": "Norgespris på strøm øker fra 40 til 45 øre",
-    "summary_nb": "Den faste Norgesprisen på strøm og fjernvarme foreslås hevet med 5 øre til 45 øre per kWh (uten mva). Regjeringen anslår at en typisk husholdning i Sørvest-Norge likevel kan spare om lag 8 700 kr med Norgespris.",
+    "summary_nb": "Den faste Norgesprisen på strøm og fjernvarme foreslås hevet. Regjeringen anslår at en typisk husholdning i Sørvest-Norge likevel kan spare om lag 8 700 kr med Norgespris.",
     "effect": "minus",
     "kind": "betaler",
     "amounts": [
@@ -458,7 +458,7 @@
     ],
     "detail": "strøm",
     "title_nb": "Strømstøtten slår inn fra 79 øre",
-    "summary_nb": "For dem som ikke har Norgespris, øker grensen for strømstøtte fra 77 til 79 øre per kWh (uten mva). Staten dekker fortsatt 90 % av prisen over grensen.",
+    "summary_nb": "For dem som ikke har Norgespris, øker grensen for strømstøtte. Staten dekker fortsatt 90 % av prisen over grensen.",
     "effect": "minus",
     "kind": "far",
     "amounts": [
@@ -483,7 +483,7 @@
     ],
     "detail": "strøm",
     "title_nb": "Elavgiften øker litt, til 7,32 øre per kWh",
-    "summary_nb": "Avgiften på strøm prisjusteres fra 7,13 til 7,32 øre per kWh.",
+    "summary_nb": "Avgiften på strøm prisjusteres.",
     "effect": "minus",
     "kind": "betaler",
     "amounts": [
@@ -546,7 +546,7 @@
     ],
     "detail": "bostøtte",
     "title_nb": "Grensene for boutgifter i bostøtten følger ikke prisveksten",
-    "summary_nb": "Om lag 92 900 husstander ventes å få bostøtte hver måned i 2027, i snitt 43 600 kr i året. Grensene for hvor store boutgifter som regnes med, er de samme i kroner som i 2026 og følger ikke prisveksten.",
+    "summary_nb": "Om lag 92 900 husstander ventes å få bostøtte hver måned i 2027. Grensene for hvor store boutgifter som regnes med, er de samme i kroner som i 2026 og følger ikke prisveksten.",
     "effect": "minus",
     "kind": "far",
     "amounts": [

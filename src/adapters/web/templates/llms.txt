@@ -33,10 +33,11 @@ Read-only, no key, CORS open. Field names carry their unit: `_mrd_kr` is billion
 
 ## Pages
 
-- [Explorer]({{ base }}): overview, "For deg", tax receipt, budget tree, changes, kommune, oil money
-- [Money flows]({{ base }}flyt): Sankey diagram for 2026, 2027 and the difference
+- [Front page]({{ base }}): overview, "For deg", biggest changes, tax receipt, kommune, oil money share
+- [Hele budsjettet]({{ base }}flyt): Sankey diagram for 2026 and 2027, the budget tree with search down to each post, and the 2026 → 2027 change
+- [Alle endringene]({{ base }}tilbud): changes to public services, sectors and each part of the budget, with sources
 - [Visste du?]({{ base }}visste-du): totals in everyday units
-- [Oljefondets verdi]({{ base }}oljefondet): what built the fund (oil in, withdrawals, returns, the krone)
+- [Oljefondet]({{ base }}oljefondet): what built the fund (oil in, withdrawals, returns, the krone) and the share spent each year
 - [Spør en KI]({{ base }}ki): how readers can point ChatGPT, Claude or their own GPT at this site
 
 ## Method and sources

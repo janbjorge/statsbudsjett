@@ -2,6 +2,10 @@
 
 Finished requests from jb, newest first. Each quotes the request and says what was built.
 
+## 2026-10-09
+
+- [x] **Simplify, insight first, each thing said once** (jb: "i dont think we need the 'ordliste'"; "Simplefies, and make sure we focus on insiight"; "De-deupliation of information"; after a full re-check, "lets do the recommendations"). Plan, findings and results in docs/plan-simplify.md. Ordliste and "Fant du en feil?" removed (a footer line links to GitHub issues). 7 part facts merged into their whole, with their quotes kept as extra quotes, so pipeline.verify still checks every number (201/201). 96 summaries changed so a card states each number once; the "For deg" badge shows only where it adds to the group heading. Forsvar now shows the press release's own nominal increase (11,9 mrd. kr, as in Gul bok) next to the 6,5 mrd. kr styrking, and folketrygden and sykehusene say which kind of number they give. The treemap and search moved to `/flyt`, now "Hele budsjettet"; `/tilbud` is "Alle endringene". Income bars, the stacked tax bar, the fund-value chart and the `/visste-du` tables are gone, since other views show the same. The withdrawal-rate chart moved to `/oljefondet`. Front-page sections open with a finding from the data (METHOD.md §4). Phone screens: `/` 21.7 → 14.1, with the family example 27.8 → 19.1, `/tilbud` 35.2 → 31.8.
+
 ## 2026-10-08
 
 - [x] **Nordic colours** (jb: "its to dark? It needs a new color pallet or something, its pretty boring"; picked "Nordlys" from four mockups): cool snow-white page, spruce-green accent (`#0f7a63`), and the front-page hero on a fjord-to-forest gradient band (`.hero`, painted full width with `border-image` so nothing scrolls sideways). "Up" numbers are fjord blue. Dark mode is a blue-green night instead of near-black. All text colours are at least 4.5:1. The icon is green too. Chart series colours are unchanged.

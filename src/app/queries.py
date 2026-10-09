@@ -13,9 +13,12 @@ class Overview:
     total: float
     total_2026: float
     fund: float
+    fund_2026: float
     fund_share: float
     top_group: str
     top_amount: float
+    grew_most: str  # the spending group with the largest increase from 2026, in kroner
+    grew_most_by: float
 
     @property
     def change(self) -> float:
@@ -60,6 +63,11 @@ class MegView:
 class IncomeRow:
     name: str
     amount: float
+    amount_2026: float
+
+    @property
+    def change(self) -> float:
+        return self.amount - self.amount_2026
 
 
 class Queries:
@@ -74,13 +82,18 @@ class Queries:
         bud = self.budget
         total = bud.total(2027)
         top = max(bud.level(2027, 1), key=lambda f: f.amount)
+        before = {f.target: f.amount for f in bud.level(2026, 1)}
+        grew = max(bud.level(2027, 1), key=lambda f: f.amount - before.get(f.target, 0.0))
         return Overview(
             total=total,
             total_2026=bud.total(2026),
             fund=bud.income_amount(2027, "Overføring fra oljefondet"),
+            fund_2026=bud.income_amount(2026, "Overføring fra oljefondet"),
             fund_share=next(f.share for f in bud.fund if f.year == 2027),
             top_group=top.target,
             top_amount=top.amount,
+            grew_most=grew.target,
+            grew_most_by=grew.amount - before.get(grew.target, 0.0),
         )
 
     def meg(self, profile: Profile) -> MegView:
@@ -112,7 +125,7 @@ class Queries:
 
     def income(self) -> list[IncomeRow]:
         bud = self.budget
-        return [IncomeRow(s, bud.income_amount(2027, s)) for s in bud.income]
+        return [IncomeRow(s, bud.income_amount(2027, s), bud.income_amount(2026, s)) for s in bud.income]
 
     def tree(self, side: b.Side, path: str) -> b.TreeLevel:
         return b.tree(self.budget, side, path)

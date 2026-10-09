@@ -6,7 +6,7 @@
     ],
     "detail": "elbil",
     "title_nb": "Moms på elbil fra 150 000 kr",
-    "summary_nb": "Elbiler har i dag momsfritak for de første 300 000 kronene av prisen. Grensen halveres til 150 000 kr, så du betaler moms på en større del av prisen når du kjøper eller leaser en ny elbil.",
+    "summary_nb": "Du betaler moms på en større del av prisen når du kjøper eller leaser en ny elbil.",
     "effect": "minus",
     "kind": "betaler",
     "amounts": [
@@ -31,24 +31,7 @@
     ],
     "detail": "fossilbil",
     "title_nb": "Avgiftene på bensin og diesel holdes reelt uendret",
-    "summary_nb": "CO2-avgiften går opp og veibruksavgiften går ned. Samlet holdes avgiftene på bensin og diesel uendret når man tar hensyn til prisveksten.",
-    "effect": "uendret",
-    "amounts": [],
-    "quote": "Veibruksavgiften på mineralolje, biodiesel og bensin foreslås derfor redusert med 1,2 mrd. kr oner i 2027, slik at de samlede avgiftene på bensin og diesel til bruk i veitrafikken holdes reelt uendret.",
-    "source_file": "data/text/prp202620270001ls0dddpdfs.txt",
-    "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
-    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
-    "page": 20,
-    "caveat_nb": "Gjelder bensin og diesel til bruk i veitrafikken."
-  },
-  {
-    "id": "veibruksavgift-bensin-diesel",
-    "personas": [
-      "bilist"
-    ],
-    "detail": "fossilbil",
-    "title_nb": "Lavere veibruksavgift på bensin og diesel",
-    "summary_nb": "Veibruksavgiften per liter går ned for både bensin og diesel. Det veier opp for at CO2-avgiften øker, slik at de samlede avgiftene holdes uendret når man tar hensyn til prisveksten.",
+    "summary_nb": "CO2-avgiften går opp og veibruksavgiften ned.",
     "effect": "uendret",
     "amounts": [
       {
@@ -58,29 +41,11 @@
         "unit": "kr/liter"
       },
       {
-        "label_nb": "Veibruksavgift på diesel (mineralolje)",
+        "label_nb": "Veibruksavgift på diesel",
         "y2026": 2.28,
         "y2027": 1.84,
         "unit": "kr/liter"
-      }
-    ],
-    "quote": "Bensin, kr/liter .................................................................................. 3,77 3,37 -10,6 Mineralolje, kr/liter .......................................................................... 2,28 1,84 -19,3",
-    "source_file": "data/text/prp202620270001ls0dddpdfs.txt",
-    "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
-    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
-    "page": 33,
-    "caveat_nb": null
-  },
-  {
-    "id": "co2-avgift-bensin-diesel",
-    "personas": [
-      "bilist"
-    ],
-    "detail": "fossilbil",
-    "title_nb": "Høyere CO2-avgift på bensin og diesel",
-    "summary_nb": "CO2-avgiften på bensin og diesel øker. Samtidig går veibruksavgiften ned, så de samlede avgiftene holdes uendret når man tar hensyn til prisveksten.",
-    "effect": "uendret",
-    "amounts": [
+      },
       {
         "label_nb": "CO2-avgift på bensin",
         "y2026": 3.8,
@@ -88,34 +53,50 @@
         "unit": "kr/liter"
       },
       {
-        "label_nb": "CO2-avgift på diesel (mineralolje, generell sats)",
+        "label_nb": "CO2-avgift på diesel",
         "y2026": 4.42,
         "y2027": 5.13,
         "unit": "kr/liter"
       }
     ],
-    "quote": "CO2-avgift på mineralske produkter Bensin, kr/liter .................................................................................. 3,80 4,40 15,8 Mineralolje, kr/liter generell sats................................................................................... 4,42 5,13 16,1",
+    "quote": "Veibruksavgiften på mineralolje, biodiesel og bensin foreslås derfor redusert med 1,2 mrd. kr oner i 2027, slik at de samlede avgiftene på bensin og diesel til bruk i veitrafikken holdes reelt uendret.",
     "source_file": "data/text/prp202620270001ls0dddpdfs.txt",
     "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
     "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
-    "page": 34,
-    "caveat_nb": null
+    "page": 20,
+    "caveat_nb": "Gjelder bensin og diesel til bruk i veitrafikken.",
+    "extra_quotes": [
+      {
+        "quote": "Bensin, kr/liter .................................................................................. 3,77 3,37 -10,6 Mineralolje, kr/liter .......................................................................... 2,28 1,84 -19,3",
+        "page": 33
+      },
+      {
+        "quote": "CO2-avgift på mineralske produkter Bensin, kr/liter .................................................................................. 3,80 4,40 15,8 Mineralolje, kr/liter generell sats................................................................................... 4,42 5,13 16,1",
+        "page": 34
+      }
+    ]
   },
   {
     "id": "trafikkforsikringsavgift-personbil",
     "personas": [
       "bilist"
     ],
-    "detail": "fossilbil",
-    "title_nb": "Trafikkforsikringsavgiften for vanlige biler øker litt",
-    "summary_nb": "Avgiften du betaler gjennom bilforsikringen for personbiler og varebiler justeres opp med prisveksten.",
+    "detail": null,
+    "title_nb": "Trafikkforsikringsavgiften øker litt",
+    "summary_nb": "Avgiften betales gjennom bilforsikringen og følger prisveksten. Elbiler har en høyere sats.",
     "effect": "minus",
     "kind": "betaler",
     "amounts": [
       {
-        "label_nb": "Trafikkforsikringsavgift for personbiler, varebiler mv.",
+        "label_nb": "Personbil og varebil",
         "y2026": 6.52,
         "y2027": 6.7,
+        "unit": "kr/døgn"
+      },
+      {
+        "label_nb": "Elbil",
+        "y2026": 9.16,
+        "y2027": 9.41,
         "unit": "kr/døgn"
       }
     ],
@@ -124,32 +105,13 @@
     "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
     "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
     "page": 33,
-    "caveat_nb": "2027-satsene gjelder forsikringer som tegnes eller har hovedforfall etter 1. mars 2027."
-  },
-  {
-    "id": "trafikkforsikringsavgift-elbil",
-    "personas": [
-      "bilist"
-    ],
-    "detail": "elbil",
-    "title_nb": "Trafikkforsikringsavgiften for elbil øker litt",
-    "summary_nb": "Elbiler har en høyere sats i trafikkforsikringsavgiften enn bensin- og dieselbiler. Satsen justeres opp med prisveksten.",
-    "effect": "minus",
-    "kind": "betaler",
-    "amounts": [
+    "caveat_nb": "2027-satsene gjelder forsikringer som tegnes eller har hovedforfall etter 1. mars 2027.",
+    "extra_quotes": [
       {
-        "label_nb": "Trafikkforsikringsavgift for elbiler",
-        "y2026": 9.16,
-        "y2027": 9.41,
-        "unit": "kr/døgn"
+        "quote": "Elbiler ................................................................................................. 9,16 9,41 2,7",
+        "page": 33
       }
-    ],
-    "quote": "Elbiler ................................................................................................. 9,16 9,41 2,7",
-    "source_file": "data/text/prp202620270001ls0dddpdfs.txt",
-    "source_title": "Prop. 1 LS (2026–2027) Skatter og avgifter 2027",
-    "source_url": "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/",
-    "page": 33,
-    "caveat_nb": "2027-satsene gjelder forsikringer som tegnes eller har hovedforfall etter 1. mars 2027."
+    ]
   },
   {
     "id": "elektriske-varebiler-fritak",
@@ -159,7 +121,7 @@
     ],
     "detail": "elbil",
     "title_nb": "Alle elektriske varebiler slipper trafikkforsikringsavgift",
-    "summary_nb": "I dag er bare lette elektriske varebiler fritatt for trafikkforsikringsavgift. Nå utvides fritaket til alle elektriske varebiler, noe som gir en lettelse på drøyt 3 400 kr i året per bil.",
+    "summary_nb": "I dag er bare lette elektriske varebiler fritatt for trafikkforsikringsavgift.",
     "effect": "pluss",
     "kind": "betaler",
     "amounts": [
@@ -203,7 +165,7 @@
     ],
     "detail": null,
     "title_nb": "Billigere månedskort i kollektivtrafikken videreføres",
-    "summary_nb": "Prisreduksjonen på om lag 100 kr på månedskort, som kom i 2026, holdes på samme nivå i 2027. Staten bruker 620 mill. kr på dette.",
+    "summary_nb": "Prisreduksjonen på om lag 100 kr på månedskort, som kom i 2026, holdes på samme nivå i 2027.",
     "effect": "uendret",
     "amounts": [
       {
@@ -227,7 +189,7 @@
     ],
     "detail": null,
     "title_nb": "Billettprisene på riksveiferjene justeres for prisvekst",
-    "summary_nb": "Budsjettet regner med at billettprisene på riksveiferjene øker med 3,7 % fra 1. januar.",
+    "summary_nb": "Budsjettet regner med at billettprisene på riksveiferjene øker fra 1. januar.",
     "effect": "minus",
     "kind": "betaler",
     "amounts": [
@@ -276,7 +238,7 @@
     ],
     "detail": null,
     "title_nb": "Ekstra skattefradrag i Finnmark og Nord-Troms står fast",
-    "summary_nb": "Det særskilte fradraget for dem som bor i Finnmark og Nord-Troms er 45 000 kr også i 2027.",
+    "summary_nb": "",
     "effect": "uendret",
     "kind": "far",
     "amounts": [
@@ -301,7 +263,7 @@
     ],
     "detail": null,
     "title_nb": "Gratis barnehage i Finnmark og Nord-Troms fortsetter",
-    "summary_nb": "Regjeringen viderefører gratis barnehage i Finnmark og Nord-Troms. I de minst sentrale kommunene ellers er maksprisen fortsatt 700 kr i måneden.",
+    "summary_nb": "I de minst sentrale kommunene ellers er maksprisen fortsatt 700 kr i måneden.",
     "effect": "uendret",
     "amounts": [
       {
@@ -342,7 +304,7 @@
     ],
     "detail": null,
     "title_nb": "Beredskapsstøtten til kommunene utvides til hele Finnmark",
-    "summary_nb": "Støtteordningen for bedre beredskap i kommunene utvides fra Øst-Finnmark til hele Finnmark, og blir på 12 mill. kr fra 2027.",
+    "summary_nb": "Støtteordningen for bedre beredskap i kommunene utvides fra Øst-Finnmark til hele Finnmark.",
     "effect": "pluss",
     "kind": "tilbud",
     "amounts": [
@@ -367,7 +329,7 @@
     ],
     "detail": null,
     "title_nb": "2,6 mrd. kr til statlig kjøpte regionale flyruter",
-    "summary_nb": "Staten bruker 2,6 mrd. kr på å kjøpe regionale flyruter der markedet ikke gir godt nok tilbud alene.",
+    "summary_nb": "Staten kjøper regionale flyruter der markedet ikke gir godt nok tilbud alene.",
     "effect": "uendret",
     "amounts": [
       {
@@ -435,7 +397,7 @@
     ],
     "detail": null,
     "title_nb": "54 mill. kr mer til kamp mot pukkellaks",
-    "summary_nb": "Innsatsen mot den fremmede arten pukkellaks økes med 54 mill. kr, til totalt 81 mill. kr i 2027. Pengene skal blant annet gå til nye feller, særlig i Altaelva.",
+    "summary_nb": "Innsatsen mot den fremmede arten pukkellaks økes. Pengene skal blant annet gå til nye feller, særlig i Altaelva.",
     "effect": "pluss",
     "kind": "tilbud",
     "amounts": [
@@ -466,7 +428,7 @@
     ],
     "detail": null,
     "title_nb": "Lavere trygdeavgift for fiskere",
-    "summary_nb": "Trygdeavgiften på næringsinntekt fra fiske og fangst går ned med 0,2 prosentpoeng.",
+    "summary_nb": "",
     "effect": "pluss",
     "kind": "betaler",
     "amounts": [
@@ -491,7 +453,7 @@
     ],
     "detail": null,
     "title_nb": "Produktavgiften på fangst går ned",
-    "summary_nb": "Produktavgiften, som er en andel av førstehåndsverdien av fisken, foreslås redusert fra 1,6 til 1,2 %.",
+    "summary_nb": "",
     "effect": "pluss",
     "kind": "betaler",
     "amounts": [
@@ -516,7 +478,7 @@
     ],
     "detail": null,
     "title_nb": "Fiskerfradraget står fast",
-    "summary_nb": "Det særskilte fradraget for fiskere og fangstfolk er fortsatt 30 %, med en øvre grense på 160 000 kr.",
+    "summary_nb": "",
     "effect": "uendret",
     "amounts": [
       {
@@ -633,7 +595,7 @@
     ],
     "detail": null,
     "title_nb": "Grunnrenteskatten på havbruk er uendret",
-    "summary_nb": "Satsen i grunnrenteskatten på havbruk er den samme i 2027 som i 2026. Det gis fortsatt et bunnfradrag på 70 mill. kr per konsern.",
+    "summary_nb": "Det gis fortsatt et bunnfradrag på 70 mill. kr per konsern.",
     "effect": "uendret",
     "amounts": [
       {
@@ -657,7 +619,7 @@
     ],
     "detail": null,
     "title_nb": "Lavere trygdeavgift på næringsinntekt",
-    "summary_nb": "Selvstendig næringsdrivende betaler 0,2 prosentpoeng mindre i trygdeavgift på næringsinntekten.",
+    "summary_nb": "Selvstendig næringsdrivende betaler mindre i trygdeavgift på næringsinntekten.",
     "effect": "pluss",
     "kind": "betaler",
     "amounts": [
@@ -683,7 +645,7 @@
     ],
     "detail": null,
     "title_nb": "Uendret skatt på utbytte",
-    "summary_nb": "Samlet skatt på utbytte, inkludert selskapsskatten, er den samme i 2027 som i 2026.",
+    "summary_nb": "",
     "effect": "uendret",
     "amounts": [
       {
@@ -707,7 +669,7 @@
     ],
     "detail": null,
     "title_nb": "Arbeidsgiveravgiften er uendret",
-    "summary_nb": "Satsene for arbeidsgiveravgift er de samme som i 2026. I sone I er satsen fortsatt 14,1 %.",
+    "summary_nb": "",
     "effect": "uendret",
     "amounts": [
       {
@@ -756,7 +718,7 @@
     ],
     "detail": null,
     "title_nb": "Lavere toll på klær og tekstiler",
-    "summary_nb": "Tollen på klær og tekstiler settes til én felles sats på 5 %. Det gjør import billigere for norske butikker.",
+    "summary_nb": "Det gjør import billigere for norske butikker.",
     "effect": "pluss",
     "amounts": [
       {
@@ -780,7 +742,7 @@
     ],
     "detail": null,
     "title_nb": "Mindre penger til næringsstøtte og Innovasjon Norge",
-    "summary_nb": "Statens støtteordninger for næringslivet får om lag 300 mill. kr mindre. Blant annet avvikles Miljøteknologiordningen i Innovasjon Norge.",
+    "summary_nb": "Blant annet avvikles Miljøteknologiordningen i Innovasjon Norge.",
     "effect": "minus",
     "kind": "tilbud",
     "amounts": [
@@ -805,7 +767,7 @@
     ],
     "detail": null,
     "title_nb": "Full momskompensasjon for frivillige lag også i 2027",
-    "summary_nb": "Frivillige organisasjoner og idrettslag får fortsatt full momskompensasjon. Ordningen økes med 171 mill. kr til 3,25 mrd. kr.",
+    "summary_nb": "Frivillige organisasjoner og idrettslag får fortsatt full momskompensasjon. Ordningen økes med 171 mill. kr.",
     "effect": "pluss",
     "kind": "far",
     "amounts": [
@@ -830,7 +792,7 @@
     ],
     "detail": null,
     "title_nb": "Høyere bunnfradrag i formuesskatten",
-    "summary_nb": "Du betaler formuesskatt først når nettoformuen er over 1 990 000 kr, opp fra 1 900 000. For ektepar er grensen 3 980 000 kr.",
+    "summary_nb": "Du betaler formuesskatt først når nettoformuen er over 1 990 000 kr.",
     "effect": "pluss",
     "kind": "betaler",
     "amounts": [
@@ -879,7 +841,7 @@
     ],
     "detail": null,
     "title_nb": "BSU er uendret",
-    "summary_nb": "Boligsparing for ungdom gir fortsatt 10 % skattefradrag, og du kan spare inntil 27 500 kr i året.",
+    "summary_nb": "Boligsparing for ungdom gir fortsatt skattefradrag.",
     "effect": "uendret",
     "amounts": [
       {
@@ -933,7 +895,7 @@
     ],
     "detail": null,
     "title_nb": "Jordbruksavtalen gir 3,66 mrd. kr i økte inntektsmuligheter",
-    "summary_nb": "Avtalen med bondeorganisasjonene øker inntektsmulighetene i jordbruket med 3 660 mill. kr, og 3 237 mill. kr av dette er økte bevilgninger over statsbudsjettet.",
+    "summary_nb": "Avtalen med bondeorganisasjonene øker inntektsmulighetene i jordbruket.",
     "effect": "pluss",
     "kind": "far",
     "amounts": [
@@ -1061,7 +1023,7 @@
     ],
     "detail": "veksthus",
     "title_nb": "Kraftig økning i CO2-avgiften for veksthus",
-    "summary_nb": "Veksthus har en lavere sats i CO2-avgiften på gass til oppvarming. Satsen for naturgass øker fra 0,95 til 2,71 kr per standardkubikkmeter. Økningen skal tas med i kostnadene i jordbruksoppgjøret og dermed kompenseres over tid.",
+    "summary_nb": "Veksthus har en lavere sats i CO2-avgiften på gass til oppvarming. Økningen skal tas med i kostnadene i jordbruksoppgjøret og dermed kompenseres over tid.",
     "effect": "minus",
     "kind": "betaler",
     "amounts": [

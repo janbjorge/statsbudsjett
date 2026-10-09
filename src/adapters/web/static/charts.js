@@ -148,16 +148,15 @@ function drawStrip(el) {
   el.replaceChildren(svg.node());
 }
 
-// ---------- the oil fund over time: one small chart per measure, sharing the year axis ----------
+// ---------- the oil fund over time: the budget share on /, the share spent on /oljefondet ----------
 const FUND = {
-  size: { unit: v => nb.format(v) + " mrd. kr", axis: v => nb.format(v), tip: v => nb.format(v) + " mrd. kr ved årsslutt" },
   spend: { unit: v => nb1.format(v) + " %", axis: v => v + " %", tip: v => nb1.format(v) + " % av fondet", ref: "expected" },
   share: { unit: v => nb1.format(v) + " %", axis: v => v + " %", tip: v => nb1.format(v) + " % av utgiftene" },
 };
 function drawFund(el) {
   const key = el.dataset.key, c = FUND[key], all = JSON.parse(el.dataset.fund);
   const s = all.filter(d => d[key] != null).map(d => ({ ...d, value: d[key] })), last = s[s.length - 1];
-  const W = el.clientWidth || 800, H = Math.max(180, Math.min(260, W * 0.3)), m = { l: key === "size" ? 52 : 36, r: 16, t: 20, b: 28 };
+  const W = el.clientWidth || 800, H = Math.max(180, Math.min(260, W * 0.3)), m = { l: 36, r: 16, t: 20, b: 28 };
   const x = d3.scaleLinear().domain(d3.extent(all, d => d.year)).range([m.l, W - m.r]);
   const top = d3.max(s, d => Math.max(d.value, c.ref ? d[c.ref] : 0));
   const y = d3.scaleLinear().domain([0, top * 1.1]).nice().range([H - m.b, m.t]);

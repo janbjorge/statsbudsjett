@@ -108,7 +108,7 @@ def test_robots_txt_sends_crawlers_to_the_api() -> None:
     assert "http://testserver/llms.txt" in text and "http://testserver/api/openapi.json" in text
     assert "Allow: /api/\n" in text
     rules = [line.split(": ", 1)[1] for line in text.splitlines() if line.startswith("Disallow")]
-    assert "/?*sti=" in rules and "/utforsk" in rules
+    assert "/flyt?*sti=" in rules and "/utforsk" in rules
     assert not any(r.startswith(("/api", "/*")) for r in rules)  # no rule reaches /api/utforsk?sti=
     assert "/" not in rules  # the pages themselves stay crawlable
     assert "Sitemap: http://testserver/sitemap.xml\n" in text

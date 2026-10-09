@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {# No charts here, so no d3 #}
 {% block d3 %}{% endblock %}
-{% block title %}Hele statsbudsjettet 2027 kort fortalt | Budsjettlupa{% endblock %}
+{% block title %}Alle endringene i statsbudsjettet 2027 | Budsjettlupa{% endblock %}
 {% from "_fact.html" import amt, card %}
 {% set people = sections|rejectattr("label", "in", areas)|list %}
 {% set parts = sections|selectattr("label", "in", areas)|list %}
@@ -27,8 +27,7 @@
 {% endmacro %}
 {% block main %}
   <section>
-    <p class="muted" style="margin:0"><a href="/">← Budsjettlupa</a></p>
-    <h1>Hele budsjettet</h1>
+    <h1>Alle endringene</h1>
     <p class="lede">De største endringene i statsbudsjettet 2027, kort fortalt. Hver sak lenker til kilden hos regjeringen,
       der du finner detaljene. Det du selv betaler eller får utbetalt, ser du under <a href="/#meg">For deg</a>.</p>
     <h3>Etter hvem det gjelder</h3>
