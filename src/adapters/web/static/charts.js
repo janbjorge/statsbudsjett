@@ -161,33 +161,65 @@ function drawFund(el) {
   const top = d3.max(s, d => Math.max(d.value, c.ref ? d[c.ref] : 0));
   const y = d3.scaleLinear().domain([0, top * 1.1]).nice().range([H - m.b, m.t]);
   const svg = d3.create("svg").attr("viewBox", [0, 0, W, H]);
+  el.replaceChildren(svg.node());  // in the page from the start, so labels can be measured where they land
   svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - m.b})`)
     .call(d3.axisBottom(x).ticks(W < 500 ? 4 : 9).tickFormat(d3.format("d")).tickSizeOuter(0));
   svg.append("g").attr("class", "axis").attr("transform", `translate(${m.l},0)`)
     .call(d3.axisLeft(y).ticks(4).tickSize(-(W - m.l - m.r)).tickFormat(c.axis))
     .call(g => g.select(".domain").remove()).call(g => g.selectAll(".tick line").attr("stroke", cssVar("--hairline")));
+  // Every drawn line as points in SVG units, so labels can keep off them
+  const lines = [s.map(d => [x(d.year), y(d.value)])];
   if (c.ref) {
     // A step: the expected return changes between two years, it does not slide
     const steps = s.flatMap((d, i) => i && s[i - 1][c.ref] !== d[c.ref] ? [[d.year, s[i - 1][c.ref]], [d.year, d[c.ref]]] : [[d.year, d[c.ref]]]);
     svg.append("path").datum(steps).attr("fill", "none").attr("stroke", cssVar("--text-muted")).attr("stroke-width", 1.5)
       .attr("stroke-dasharray", "2 4").attr("d", d3.line().x(p => x(p[0])).y(p => y(p[1])));
-    // Label the middle of the first level, clear of the end labels
-    const level = s.filter(d => d[c.ref] === s[0][c.ref]), mid = level[Math.floor(level.length / 2)];
-    svg.append("text").attr("x", x(mid.year)).attr("y", y(mid[c.ref]) - 8).attr("text-anchor", "middle").attr("class", "chart-note")
-      .attr("fill", cssVar("--text-secondary")).text(`Forventet realavkastning, ${nb.format(mid[c.ref])} %`);
+    lines.push(steps.map(p => [x(p[0]), y(p[1])]));
   }
   const line = d3.line().x(d => x(d.year)).y(d => y(d.value));
   const actual = s.filter(d => !d.forecast);
   svg.append("path").datum(actual).attr("fill", "none").attr("stroke", cssVar("--series-1")).attr("stroke-width", 2).attr("d", line);
   if (last.forecast) svg.append("path").datum([actual[actual.length - 1], last]).attr("fill", "none").attr("stroke", cssVar("--series-1"))
     .attr("stroke-width", 2).attr("stroke-dasharray", "4 4").attr("d", line);
-  // End labels go on the side away from the line: below when the neighbouring point or the dashed level is higher,
-  // kept above the x axis
-  for (const [d, near, anchor, dx] of [[s[0], s[1], "start", 8], [last, actual[actual.length - (last.forecast ? 1 : 2)], "end", -8]]) {
-    const below = near.value > d.value || (c.ref && d[c.ref] > d.value);
+  // Labels take the first spot, of a few tried in order, where they cover no line, no other label and stay in the plot.
+  // Measured in the page, since text width differs between fonts and browsers
+  const taken = [];
+  const clear = b => b.x >= 0 && b.x + b.width <= W && b.y >= 0 && b.y + b.height <= H - m.b
+    && !taken.some(t => b.x < t.x + t.width && t.x < b.x + b.width && b.y < t.y + t.height && t.y < b.y + b.height)
+    && !lines.some(pts => pts.some((p, i) => {
+      if (!i) return false;
+      // Points every 2 px along the segment from the previous point
+      const [ax, ay] = pts[i - 1], n = Math.ceil(Math.hypot(p[0] - ax, p[1] - ay) / 2);
+      return Array.from({ length: n + 1 }, (_, k) => [ax + (p[0] - ax) * k / (n || 1), ay + (p[1] - ay) * k / (n || 1)])
+        .some(([px, py]) => px > b.x - 2 && px < b.x + b.width + 2 && py > b.y - 2 && py < b.y + b.height + 2);
+    }));
+  // keep: an end label must show, so it takes the last spot when none is free; other labels are dropped
+  const place = (text, spots, keep = false) => {
+    for (const [px, py] of spots) {
+      text.attr("x", px).attr("y", py);
+      const b = text.node().getBBox();
+      if (clear(b)) { taken.push(b); return; }
+    }
+    if (keep) taken.push(text.node().getBBox());
+    else text.remove();
+  };
+  for (const d of [s[0], last]) {
     svg.append("circle").attr("cx", x(d.year)).attr("cy", y(d.value)).attr("r", 5).attr("fill", cssVar("--series-1")).attr("stroke", cssVar("--surface-1")).attr("stroke-width", 2);
-    svg.append("text").attr("x", x(d.year) + dx).attr("y", below ? Math.min(y(d.value) + 22, H - m.b - 6) : y(d.value) - 12).attr("text-anchor", anchor).attr("class", "chart-label")
-      .attr("fill", cssVar("--text-primary")).text(`${d.year}: ${c.unit(d.value)}`);
+    taken.push({ x: x(d.year) - 6, y: y(d.value) - 6, width: 12, height: 12 });
+  }
+  for (const [d, anchor, dx] of [[s[0], "start", 8], [last, "end", -8]]) {
+    const text = svg.append("text").attr("text-anchor", anchor).attr("class", "chart-label").attr("fill", cssVar("--text-primary")).text(`${d.year}: ${c.unit(d.value)}`);
+    const px = x(d.year) + dx, py = y(d.value);
+    // Above or below the point, then further up in steps, then the top edge above the plot
+    place(text, [...[-12, 22, -30, 40, -48, -66, -84, -102].map(dy => [px, py + dy]), [px, m.t - 4]], true);
+  }
+  if (c.ref) {
+    // The dashed level's name, along its first stretch from the middle outwards; the card's subtitle names it if no spot is free
+    const level = s.filter(d => d[c.ref] === s[0][c.ref]), mid = Math.floor(level.length / 2);
+    const order = level.map((d, i) => [d, Math.abs(i - mid)]).sort((a, b) => a[1] - b[1]).map(([d]) => d);
+    const text = svg.append("text").attr("text-anchor", "middle").attr("class", "chart-note")
+      .attr("fill", cssVar("--text-secondary")).text(`Forventet realavkastning, ${nb.format(level[0][c.ref])} %`);
+    place(text, order.flatMap(d => [[x(d.year), y(d[c.ref]) - 8], [x(d.year), y(d[c.ref]) + 18]]));
   }
   const hover = svg.append("g").style("display", "none");
   hover.append("line").attr("y1", m.t).attr("y2", H - m.b).attr("stroke", cssVar("--text-muted"));
@@ -203,7 +235,6 @@ function drawFund(el) {
       showTip(ev, `<b>${d.year}</b>${d.forecast ? " (forslag)" : ""}<br>${c.tip(d.value)}${ref}`);
     })
     .on("mouseleave", () => { hover.style("display", "none"); hideTip(); });
-  el.replaceChildren(svg.node());
 }
 
 const FUND_PARTS = [
@@ -235,6 +266,7 @@ function drawFundParts(el) {
   const hi = d3.max(s, d => d3.max(FUND_PARTS, c => d[c.key]));
   const y = d3.scaleLinear().domain([Math.min(0, lo) * 1.08, hi * 1.12]).nice().range([H - m.b, m.t]);
   const svg = d3.create("svg").attr("viewBox", [0, 0, W, H]);
+  el.replaceChildren(svg.node());  // in the page from the start, so labels can be measured where they land
   svg.append("g").attr("class", "axis").attr("transform", `translate(0,${H - m.b})`)
     .call(d3.axisBottom(x).ticks(W < 500 ? 4 : 9).tickFormat(d3.format("d")).tickSizeOuter(0));
   svg.append("g").attr("class", "axis").attr("transform", `translate(${m.l},0)`)

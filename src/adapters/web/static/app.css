@@ -320,7 +320,7 @@ code { overflow-wrap: anywhere; background: var(--surface-1); border: 1px solid 
 .hscroll { overflow-x: auto; -webkit-overflow-scrolling: touch; padding: 12px; }
 .hscroll svg { display: block; width: auto; max-width: none; }
 .swipe { display: none; }
-.hscroll.overflows + .swipe { display: block; }
+.hscroll.overflows + .swipe, .swipe:has(+ .hscroll.overflows) { display: block; }
 .node-label { font-size: var(--t-small); fill: var(--text-primary); paint-order: stroke; stroke: var(--surface-1); stroke-width: 3px; stroke-linejoin: round; }
 .node-label .val { fill: var(--text-secondary); }
 .node-label.big { font-size: var(--t-body); font-weight: 650; }
