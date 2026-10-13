@@ -3,14 +3,17 @@
 Input and output are pydantic v2 models, so the schema documents every field.
 Field names carry their unit: `_mrd_kr` is billions of kroner, `_kr` is kroner, `_prosent` is percent.
 The core mixes units (the tree is in mrd. kr, per-person figures and kommune money in kr), so this adapter names them.
+Wherever an agent would go next, the answer holds the absolute URL (`lenke`), so it follows links instead of writing them.
 """
 
+from dataclasses import replace
 from datetime import date
 from typing import Annotated
 
 from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, ConfigDict, Field
+from starlette.datastructures import URL
 
 from adapters.web.params import Kroner, ProfileQuery, profile_query
 from app.queries import Queries
@@ -26,6 +29,7 @@ Units are in the field names: `_mrd_kr` is billions of kroner, `_kr` is kroner, 
 Totals are the non-oil budget: petroleum income, the transfer to the oil fund and loan transactions (posts 90–99)
 are left out, and the transfer from the oil fund counts as income. Amounts are the proposals for 2026 and 2027
 (Gul bok), in nominal kroner. The spending group names are this site's own. Method: /llms.txt links to it.
+Answers link onward with absolute URLs in `lenke`, `legg_til` and `fjern`; follow those rather than building a URL.
 """
 
 
@@ -34,6 +38,11 @@ TAX_SOURCE_TITLE = "Prop. 1 LS (2026–2027) Skatter og avgifter 2027"
 
 class Out(BaseModel):
     model_config = ConfigDict(frozen=True)
+
+
+class Link(Out):
+    navn: str
+    lenke: str
 
 
 class Overview(Out):
@@ -46,8 +55,8 @@ class Overview(Out):
     storste_gruppe: str
     storste_gruppe_mrd_kr_2027: float
     innbyggere: int
-    grupper: list[str]
-    inntektskilder: list[str]
+    grupper: list[Link] = Field(description="Spending groups, each linked to /api/flyt for its chapters and posts")
+    inntektskilder: list[Link] = Field(description="Income sources, each linked to /api/flyt for its chapters and posts")
 
 
 class Named(Out):
@@ -64,6 +73,7 @@ class TreeNode(Out):
     mrd_kr_2026: float | None
     endring_mrd_kr: float | None
     sti: str | None = Field(description="Pass as `sti` to go one level down; null for a post")
+    lenke: str | None = Field(description="The level below in /api/utforsk; null for a post")
 
 
 class FlowChapter(Out):
@@ -81,6 +91,7 @@ class FlowDetail(Out):
 class Crumb(Out):
     sti: str
     navn: str
+    lenke: str
 
 
 class Tree(Out):
@@ -99,6 +110,7 @@ class Hit(Out):
     kap: int
     post: int | None
     mrd_kr_2027: float
+    lenke: str = Field(description="The chapter in /api/utforsk, with its posts")
 
 
 class Change(Out):
@@ -122,6 +134,7 @@ class KommuneRow(Out):
     fylke: str | None
     innbyggere: int
     frie_inntekter_per_innbygger_kr_2027: float
+    lenke: str = Field(description="This kommune in /api/kommune")
 
 
 class KommuneDetail(KommuneRow):
@@ -215,7 +228,12 @@ class Meg(Out):
     profil: ProfileOut = Field(description="The household as understood; unknown values are dropped")
     skatt: Tax
     seksjoner: list[Section]
-    lenke: str = Field(description="Path to the same result on the site")
+    lenke: str = Field(description="The same result on the site")
+    kvittering: str = Field(description="Where this household's 2027 tax goes, in /api/kvittering")
+    legg_til: dict[str, str] = Field(description="For each situation in `meg` the household is not in: this answer with it added")
+    fjern: dict[str, str] = Field(
+        description="For each situation chosen in `meg`: this answer without it. Those that `barn`, `lonn`, `pensjon` or `naering` tell stay"
+    )
 
 
 class PerPerson(Out):
@@ -265,11 +283,17 @@ def _fact(f: Fact) -> FactOut:
     )
 
 
-def _node(n: b.Node, path: str) -> TreeNode:
+def _link(url: URL, **params: str) -> str:
+    return str(url.include_query_params(**params))
+
+
+def _node(n: b.Node, side: b.Side, path: str, tree: URL) -> TreeNode:
+    """`tree` is /api/utforsk; the node links to the level below it."""
     return TreeNode(
         navn=n.name, gruppe=n.group, kap=n.kap, post=n.post,
         mrd_kr_2027=n.v2027, mrd_kr_2026=n.v2026, endring_mrd_kr=n.change,
         sti=path if n.has_children else None,
+        lenke=_link(tree, side=side, sti=path) if n.has_children else None,
     )
 
 
@@ -288,14 +312,16 @@ def build(queries: Queries) -> FastAPI:
         return {**api.openapi(), "servers": [{"url": str(request.url.replace(path=request.url.path.removesuffix("/openapi.json"), query=""))}]}
 
     @api.get("/oversikt", summary="Headline totals for 2027 and 2026")
-    def overview() -> Overview:
-        o, bud = queries.overview(), queries.budget
+    def overview(request: Request) -> Overview:
+        o, bud, flyt = queries.overview(), queries.budget, request.url_for("flow")
         return Overview(
             utgifter_mrd_kr_2027=o.total, utgifter_mrd_kr_2026=o.total_2026,
             endring_mrd_kr=o.change, endring_prosent=o.change_pct,
             fra_oljefondet_mrd_kr_2027=o.fund, oljefond_andel_av_utgiftene_prosent_2027=o.fund_share,
             storste_gruppe=o.top_group, storste_gruppe_mrd_kr_2027=o.top_amount,
-            innbyggere=bud.population, grupper=list(bud.groups), inntektskilder=list(bud.income),
+            innbyggere=bud.population,
+            grupper=[Link(navn=g, lenke=_link(flyt, vis=g)) for g in bud.groups],
+            inntektskilder=[Link(navn=i, lenke=_link(flyt, vis=i)) for i in bud.income],
         )
 
     @api.get("/inntekter", summary="Income sources in 2027")
@@ -304,38 +330,55 @@ def build(queries: Queries) -> FastAPI:
 
     @api.get("/utforsk", summary="One level of the budget tree: group → area → chapter → post")
     def tree(
+        request: Request,
         side: Annotated[b.Side, Query(description="utgift (spending) or inntekt (income)")] = b.Side.UTGIFT,
         sti: Annotated[str, Query(description="Path from a previous answer's `sti`; empty for the top level")] = "",
     ) -> Tree:
-        t = queries.tree(side, sti)
+        t, here = queries.tree(side, sti), request.url_for("tree")
         base = t.crumbs[-1][0]
         return Tree(
-            side=t.side, sti=base, brodsmuler=[Crumb(sti=p, navn=n) for p, n in t.crumbs],
-            her=_node(t.node, base),
-            under=[_node(n, f"{base}/{n.key}".strip("/")) for n in t.children],
+            side=t.side, sti=base, brodsmuler=[Crumb(sti=p, navn=n, lenke=_link(here, side=t.side, sti=p)) for p, n in t.crumbs],
+            her=_node(t.node, t.side, base, here),
+            under=[_node(n, t.side, f"{base}/{n.key}".strip("/"), here) for n in t.children],
         )
 
     @api.get(
         "/flyt", summary="One node of the Pengestrømmen chart broken into chapters and posts",
         responses={404: {"description": "No income source, group or sub-group has that name"}},
     )
-    def flow(vis: Annotated[str, Query(description="Name of an income source, group or sub-group, e.g. Alderspensjon (see /oversikt)")]) -> FlowDetail:
+    def flow(
+        request: Request,
+        vis: Annotated[str, Query(description="Name of an income source, group or sub-group, e.g. Alderspensjon (see /oversikt)")],
+    ) -> FlowDetail:
         fd = queries.flow_detail(vis)
         if fd is None:
             raise HTTPException(404, "Ukjent navn. Bruk en inntektskilde, en gruppe eller en undergruppe fra Pengestrømmen.")
+        tree = request.url_for("tree")
         return FlowDetail(
-            side=fd.side, her=_node(fd.node, fd.path),
+            side=fd.side, her=_node(fd.node, fd.side, fd.path, tree),
             kapitler=[
-                FlowChapter(kapittel=_node(c.node, queries.chapter_path(c.node.kap or 0)[1]), poster=[_node(n, "") for n in c.posts])
+                FlowChapter(
+                    kapittel=_node(c.node, *queries.chapter_path(c.node.kap or 0), tree),
+                    poster=[_node(n, fd.side, "", tree) for n in c.posts],
+                )
                 for c in fd.chapters
             ],
             kapitler_borte_mrd_kr_2026=fd.gone_2026,
         )
 
     @api.get("/sok", summary="Search chapter and post names (at least 2 characters)")
-    def search(q: str = "") -> list[Hit]:
+    def search(request: Request, q: str = "") -> list[Hit]:
+        tree = request.url_for("tree")
+
+        def chapter(kap: int) -> str:
+            side, sti = queries.chapter_path(kap)
+            return _link(tree, side=side, sti=sti)
+
         return [
-            Hit(tittel=h.title, side=h.side, gruppe=h.group, omrade=h.area, kap=h.kap, post=h.post, mrd_kr_2027=h.v2027)
+            Hit(
+                tittel=h.title, side=h.side, gruppe=h.group, omrade=h.area, kap=h.kap, post=h.post, mrd_kr_2027=h.v2027,
+                lenke=chapter(h.kap),
+            )
             for h in queries.search(q)
         ]
 
@@ -345,14 +388,21 @@ def build(queries: Queries) -> FastAPI:
         return Changes(opp=[_change(x) for x in c.up], ned=[_change(x) for x in c.down], kapitler_uten_sammenligning=c.unmatched)
 
     @api.get("/kommuner", summary="Every kommune with frie inntekter (unrestricted income) per innbygger in 2027")
-    def kommuner() -> list[KommuneRow]:
+    def kommuner(request: Request) -> list[KommuneRow]:
+        one = request.url_for("kommune")
         return [
-            KommuneRow(nr=k.nr, navn=k.name, fylke=k.fylke, innbyggere=k.population, frie_inntekter_per_innbygger_kr_2027=k.per_person)
+            KommuneRow(
+                nr=k.nr, navn=k.name, fylke=k.fylke, innbyggere=k.population, frie_inntekter_per_innbygger_kr_2027=k.per_person,
+                lenke=_link(one, k=k.nr),
+            )
             for k in queries.budget.kommuner
         ]
 
     @api.get("/kommune", summary="Frie inntekter for one kommune", responses={404: {"description": "No kommune matches"}})
-    def kommune(k: Annotated[str, Query(description="Kommune number (4 digits) or name, e.g. 4601 or Bergen. Two kommuner share a name: write Herøy (Nordland)")]) -> KommuneDetail:
+    def kommune(
+        request: Request,
+        k: Annotated[str, Query(description="Kommune number (4 digits) or name, e.g. 4601 or Bergen. Two kommuner share a name: write Herøy (Nordland)")],
+    ) -> KommuneDetail:
         found = b.find_kommune(queries.budget, k)
         if found is None:
             raise HTTPException(404, f"Fant ingen kommune som heter {k!r}. Se /api/kommuner.")
@@ -362,7 +412,7 @@ def build(queries: Queries) -> FastAPI:
             frie_inntekter_kr_2026=found.frie2026, frie_inntekter_kr_2027=found.frie2027, vekst_prosent=found.growth,
             skatteinngang_indeks=found.tax_index,
             frie_inntekter_per_innbygger_kr_2027=found.per_person, landssnitt_per_innbygger_kr_2027=v.average_per_person,
-            rangering=v.rank, antall_kommuner=v.count,
+            rangering=v.rank, antall_kommuner=v.count, lenke=_link(request.url_for("kommune"), k=found.nr),
         )
 
     @api.get("/kvittering", summary="Where a given amount of tax goes, split like 2027 spending")
@@ -384,9 +434,11 @@ def build(queries: Queries) -> FastAPI:
             "Business income leaves out the skjermingsfradrag."
         ),
     )
-    def meg(q: Annotated[ProfileQuery, Query()]) -> Meg:
+    def meg(request: Request, q: Annotated[ProfileQuery, Query()]) -> Meg:
         profile = q.profile()
         m = queries.meg(profile)
+        here = request.url_for("meg")
+        told = replace(profile, personas=frozenset()).situations  # what removing a choice from `meg` cannot undo
         return Meg(
             profil=ProfileOut(
                 meg=list(q.meg), situasjoner=[p for p in PERSONAS if p in profile.situations], barn=profile.kids,
@@ -402,7 +454,16 @@ def build(queries: Queries) -> FastAPI:
                 lonnsvekst_kilde_side=m.growth_pages[0], pensjonsvekst_kilde_side=m.growth_pages[1],
             ),
             seksjoner=[Section(navn=s.label, endret=[_fact(f) for f in s.changed], uendret=[_fact(f) for f in s.unchanged]) for s in m.sections],
-            lenke=f"/?{profile_query(profile)}#meg",
+            lenke=f"{request.base_url}?{profile_query(profile)}#meg",
+            kvittering=_link(request.url_for("receipt"), skatt=str(m.tax_kroner)),
+            legg_til={
+                p: str(here.replace(query=profile_query(replace(profile, personas=profile.personas | {p}))))
+                for p in PERSONAS if p not in profile.situations
+            },
+            fjern={
+                p: str(here.replace(query=profile_query(replace(profile, personas=profile.personas - {p}))))
+                for p in PERSONAS if p in profile.personas and p not in told
+            },
         )
 
     @api.get("/fakta", summary="Every verified \"For deg\" fact with its source document and page")

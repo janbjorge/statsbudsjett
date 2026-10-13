@@ -1,11 +1,15 @@
 """The JSON API under /api and /llms.txt, for agents."""
 
+from urllib.parse import parse_qs, urlsplit
+from urllib.robotparser import RobotFileParser
+
 from fastapi.testclient import TestClient
 
 from adapters.web.main import app, queries
 from adapters.web.params import MAX_INCOME, ProfileQuery
 
 client = TestClient(app)
+BASE = "http://testserver/"
 
 
 def test_openapi_lists_every_endpoint() -> None:
@@ -32,10 +36,17 @@ def test_overview_matches_the_page() -> None:
     assert len(o["grupper"]) == 8
 
 
+def test_overview_links_each_flow_node() -> None:
+    o = client.get("/api/oversikt").json()
+    for node in o["grupper"] + o["inntektskilder"]:
+        assert node["lenke"].startswith(f"{BASE}api/flyt?vis="), node
+        assert client.get(node["lenke"]).json()["her"]["navn"] == node["navn"]
+
+
 def test_meg_gives_the_same_tax_change_as_the_page() -> None:
     r = client.get("/api/meg?meg=barnefamilie,arbeidstaker,bilist&barn=0,2,0,0&lonn=650000,650000&pensjon=0,0").json()
     assert round(r["skatt"]["endring_kr"]) == -3076  # the page says "3 076 kr lavere skatt" (tests/test_web.py)
-    assert r["lenke"].startswith("/?meg=barnefamilie")
+    assert r["lenke"].startswith(f"{BASE}?meg=barnefamilie,arbeidstaker,bilist&barn=0,2,0,0,0&lonn=650000,650000")
     assert r["skatt"]["kilde"]["url"] == "https://www.regjeringen.no/no/dokumenter/prop.-1-ls-20262027/id3176120/"
     assert r["skatt"]["lonnsvekst_kilde_side"] == 80  # "anslått lønnsvekst på 4,0 pst." (data/persona/tax.json)
     fact = r["seksjoner"][0]["endret"][0]
@@ -51,25 +62,53 @@ def test_meg_takes_business_income() -> None:
     assert r["profil"]["situasjoner"] == ["bonde", "naeringsdrivende"]
 
 
-def test_tree_paths_lead_one_level_down() -> None:
+def test_meg_links_add_and_drop_one_situation() -> None:
+    r = client.get("/api/meg?meg=student,arbeidstaker&lonn=120000").json()
+    assert "student" not in r["legg_til"] and "arbeidstaker" not in r["legg_til"]
+    assert r["fjern"].keys() == {"student"}  # arbeidstaker follows from lonn, so dropping it from meg changes nothing
+    car = client.get(r["legg_til"]["bilist"]).json()
+    assert car["profil"]["meg"] == ["student", "arbeidstaker", "bilist"] and car["profil"]["voksne"] == r["profil"]["voksne"]
+    assert client.get(car["fjern"]["bilist"]).json()["profil"] == r["profil"]
+    assert all(url.startswith(f"{BASE}api/meg?") for url in [*r["legg_til"].values(), *r["fjern"].values()])
+    receipt = client.get(r["kvittering"]).json()
+    assert receipt["skatt_kr"] == round(r["skatt"]["skatt_2027_kr"])
+
+
+def test_tree_links_lead_one_level_down_and_back_up() -> None:
     top = client.get("/api/utforsk").json()
     child = top["under"][0]
-    below = client.get("/api/utforsk", params={"sti": child["sti"]}).json()
+    assert child["lenke"].startswith(f"{BASE}api/utforsk?side=utgift&sti=")
+    below = client.get(child["lenke"]).json()
     assert below["her"]["navn"] == child["navn"]
     assert abs(sum(n["mrd_kr_2027"] for n in below["under"]) - child["mrd_kr_2027"]) < 1e-6
+    assert client.get(below["brodsmuler"][0]["lenke"]).json() == top
+    assert client.get("/api/utforsk", params={"sti": child["sti"]}).json() == below  # `sti` still works for a hand-built URL
 
 
 def test_flow_chapters_lead_into_the_tree() -> None:
-    flow = client.get("/api/flyt", params={"vis": "Folketrygden"}).json()
-    chapter = flow["kapitler"][0]["kapittel"]
-    assert client.get("/api/utforsk", params={"sti": chapter["sti"]}).json()["her"]["navn"] == chapter["navn"]
+    for vis in ("Folketrygden", "Skatt på inntekt og formue"):  # a spending group and an income source
+        flow = client.get("/api/flyt", params={"vis": vis}).json()
+        chapter = flow["kapitler"][0]["kapittel"]
+        assert client.get(chapter["lenke"]).json()["her"]["navn"] == chapter["navn"], vis
+        assert flow["kapitler"][0]["poster"][0]["lenke"] is None
     assert client.get("/api/flyt", params={"vis": "tull"}).status_code == 404
+
+
+def test_search_hits_link_to_their_chapter() -> None:
+    for hit in client.get("/api/sok?q=politi").json():
+        assert {post["kap"] for post in client.get(hit["lenke"]).json()["under"]} == {hit["kap"]}, hit
 
 
 def test_kommune_by_name_and_unknown() -> None:
     k = client.get("/api/kommune?k=Bergen").json()
     assert k["nr"] == "4601" and k["frie_inntekter_per_innbygger_kr_2027"] > 10_000  # kroner, not thousands
     assert client.get("/api/kommune?k=Atlantis").status_code == 404
+
+
+def test_every_kommune_links_to_its_numbers() -> None:
+    rows = client.get("/api/kommuner").json()
+    assert [r["lenke"] for r in rows] == [f"{BASE}api/kommune?k={r['nr']}" for r in rows]
+    assert client.get(rows[0]["lenke"]).json()["nr"] == rows[0]["nr"]
 
 
 def test_bad_input_never_errors() -> None:
@@ -94,6 +133,20 @@ def test_llms_txt_links_resolve() -> None:
         assert client.get(url.removeprefix(base.rstrip("/"))).status_code == 200, url
 
 
+def test_llms_txt_starts_with_ready_households() -> None:
+    text = client.get("/llms.txt").text
+    start = text.split("## Start here")[1].split("\n## ")[0]
+    assert text.index("## Start here") < text.index("## JSON API")
+    households = [part.split(")")[0] for part in start.split("](")[1:]]
+    assert len(households) >= 8 and all(url.startswith(f"{BASE}api/meg?") for url in households)
+    profiles = [client.get(url).json()["profil"] for url in households]
+    assert len({str(p) for p in profiles}) == len(profiles)  # each a different household
+    for url in households:  # none falls back to the made-up default of one adult earning 500 000 kr
+        assert parse_qs(urlsplit(url).query).keys() & {"lonn", "pensjon", "naering"}, url
+    for name in ("`lonn`", "`pensjon`", "`naering`", "`barn`", "`legg_til`", "`fjern`", "kvittering?skatt="):
+        assert name in start, name
+
+
 def test_pages_point_agents_to_llms_txt() -> None:
     r = client.get("/")
     assert '</llms.txt>; rel="alternate"' in r.headers["link"]
@@ -112,6 +165,18 @@ def test_robots_txt_sends_crawlers_to_the_api() -> None:
     assert not any(r.startswith(("/api", "/*")) for r in rules)  # no rule reaches /api/utforsk?sti=
     assert "/" not in rules  # the pages themselves stay crawlable
     assert "Sitemap: http://testserver/sitemap.xml\n" in text
+
+
+def test_robots_txt_lets_chat_agents_open_every_page() -> None:
+    robots = RobotFileParser()
+    robots.parse(client.get("/robots.txt").text.splitlines())
+    household = f"{BASE}?meg=student&barn=0,0,0,0,0&lonn=120000&pensjon=0"
+    for agent in ("ChatGPT-User", "Claude-User", "Perplexity-User"):
+        for url in (household, f"{BASE}flyt?vis=Alderspensjon", f"{BASE}api/meg?lonn=120000"):
+            assert robots.can_fetch(agent, url), (agent, url)
+    for crawler in ("GPTBot", "ClaudeBot", "Googlebot"):
+        assert robots.can_fetch(crawler, f"{BASE}api/utforsk?sti=g:Folketrygden") and robots.can_fetch(crawler, f"{BASE}flyt")
+        assert not robots.can_fetch(crawler, household) and not robots.can_fetch(crawler, f"{BASE}flyt?sti=g:Folketrygden")
 
 
 def test_sitemap_lists_the_pages_and_each_answers() -> None:

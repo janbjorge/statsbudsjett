@@ -107,4 +107,4 @@ def profile_query(p: Profile) -> str:
     if any(a.business for a in p.adults):
         query["naering"] = ",".join(str(round(a.business)) for a in p.adults)
         query["naering_type"] = ",".join(a.business_kind for a in p.adults)
-    return urlencode(query)
+    return urlencode(query, safe=",")  # barn=0,2,0,0,0 reads better than barn=0%2C2%2C0%2C0%2C0

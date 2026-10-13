@@ -6,21 +6,47 @@ The site is in Norwegian (bokmål). Numbers come from regjeringen.no; every "For
 
 Totals are the non-oil budget, the way the Ministry of Finance presents it: petroleum income, the transfer to the oil fund and loan transactions (posts 90–99) are left out, and the transfer from the oil fund counts as income. 2026 and 2027 are both the government's proposals (Gul bok), in nominal kroner.
 
+## Start here
+
+Every link in this file opens as it is, and every answer links onward with absolute URLs (`lenke`, `legg_til`, `fjern`, `kvittering`): combine by following links one step at a time, you never need to write a URL yourself. The one exception is the person's own numbers (see "The person's own numbers" below). For the budget as a whole, start from the JSON API list further down.
+
+What the budget means for a household: the tax change plus every fact that applies, with sources. Open the closest household, then follow `legg_til` or `fjern` in the answer to add or drop a situation (bilist, student, sparer, distrikt_nord and the rest), and `kvittering` for where that household's tax goes.
+
+- [Student with a part-time job, 120 000 kr wage]({{ base }}api/meg?meg=student&lonn=120000)
+- [Pensioner, 320 000 kr pension]({{ base }}api/meg?pensjon=320000)
+- [Pensioner couple, 320 000 kr pension each]({{ base }}api/meg?pensjon=320000,320000)
+- [One adult in work, 750 000 kr wage]({{ base }}api/meg?lonn=750000): the Ministry of Finance's own example
+- [Couple with two incomes, no children, 750 000 kr each]({{ base }}api/meg?lonn=750000,750000): also the Ministry's example
+- [Family with two small children in barnehage, two incomes of 650 000 kr]({{ base }}api/meg?barn=0,2,0,0,0&lonn=650000,650000)
+- [Family with two school children, two incomes of 650 000 kr]({{ base }}api/meg?barn=0,0,2,0,0&lonn=650000,650000)
+- [Single parent with one child in barnehage, 500 000 kr wage]({{ base }}api/meg?barn=0,1,0,0,0&lonn=500000)
+- [Farmer, 550 000 kr business income]({{ base }}api/meg?naering=550000&naering_type=jordbruk)
+- [Fisher, 400 000 kr business income]({{ base }}api/meg?naering=400000&naering_type=fiske)
+
+### The person's own numbers
+
+Write these into the URL only when the person gives them; start from one of the links above and change the values. `/api/meg` with none of `lonn`, `pensjon` and `naering` assumes one adult earning 500 000 kr, which is not the person's household.
+
+- `/api/meg`: `lonn`, `pensjon` and `naering` are yearly kroner before tax, comma-separated for up to two adults (`lonn=650000,550000`). `naering` is business profit; `naering_type` gives its kind per adult: jordbruk, fiske or annen (the default). `barn` counts children per age band, comma-separated in this order: {{ kid_bands }}. Children in barnehage are usually 1–5. `meg` takes any of: {{ personas }}. Barnefamilie, arbeidstaker, pensjonist, naeringsdrivende, bonde and fisker also follow from `barn`, `lonn`, `pensjon` and `naering` (see `profil.situasjoner` in the answer).
+- `/api/kvittering?skatt=150000`: where a tax amount in kroner goes. For a household, follow `kvittering` from its `/api/meg` answer instead.
+- `/api/kommune?k=Bergen`: a kommune by name or 4-digit number. `/api/kommuner` links each one.
+- `/api/sok?q=politi`: chapter and post names containing the text (at least 2 characters).
+
 ## JSON API
 
 Read-only, no key, CORS open. Field names carry their unit: `_mrd_kr` is billions of kroner, `_kr` is kroner, `_prosent` is percent.
 
 - [OpenAPI schema]({{ base }}api/openapi.json): every endpoint and parameter
-- [Overview]({{ base }}api/oversikt): total spending 2026 and 2027, change, oil fund transfer and share
-- [What changes for a household]({{ base }}api/meg?meg=barnefamilie,arbeidstaker&barn=0,1,1,0,0&lonn=600000,550000): tax change (with the source of the tax rates) plus every fact that applies, with sources. `meg` takes any of: {{ personas }}; barnefamilie, arbeidstaker, pensjonist, naeringsdrivende, bonde and fisker also follow from `barn`, `lonn`, `pensjon` and `naering` (see `profil.situasjoner`). `barn` counts children per age band, comma-separated in this order: {{ kid_bands }}. Children in barnehage are usually 1–5. `lonn`/`pensjon`/`naering` are yearly kroner for up to two adults; `naering` is business profit, and `naering_type` gives its kind per adult: jordbruk, fiske or annen (the default).
+- [Overview]({{ base }}api/oversikt): total spending 2026 and 2027, change, oil fund transfer and share, and a link per spending group and income source
+- [What changes for a household]({{ base }}api/meg?barn=0,1,1,0,0&lonn=600000,550000): tax change (with the source of the tax rates) plus every fact that applies, with sources. Parameters under "The person's own numbers" above.
 - [Services and sectors]({{ base }}api/tilbud): changes to a public service (barnevernet, studentboliger) or to a sector or companies (fiskeflåten, oppdrettsselskaper; `gjelder` names who), grouped by who it is for. Not part of `/api/meg`, which holds what changes a household's own money and rules.
 - [All verified facts]({{ base }}api/fakta): every "For deg" fact with source URL and page
-- [Budget tree]({{ base }}api/utforsk?side=utgift): group → area → chapter → post; follow `sti` from the answer to go deeper. `side=inntekt` for income.
-- [Pengestrømmen node]({{ base }}api/flyt?vis=Alderspensjon): one income source, group or sub-group from the flow chart, broken into chapters and posts
-- [Search]({{ base }}api/sok?q=politi): chapter and post names
+- [Budget tree]({{ base }}api/utforsk?side=utgift): group → area → chapter → post; follow `lenke` on a node to go one level down, on a crumb to go up. `side=inntekt` for income.
+- [Pengestrømmen node]({{ base }}api/flyt?vis=Alderspensjon): one income source, group or sub-group from the flow chart, broken into chapters and posts, each chapter linked into the tree
+- [Search]({{ base }}api/sok?q=politi): chapter and post names, each linked to its chapter in the tree
 - [Biggest changes]({{ base }}api/endringer): spending chapters that grow or shrink most
 - [Income sources]({{ base }}api/inntekter)
-- [One kommune]({{ base }}api/kommune?k=Bergen) and [all kommuner]({{ base }}api/kommuner): frie inntekter (unrestricted income) per innbygger
+- [One kommune]({{ base }}api/kommune?k=Bergen) and [all kommuner]({{ base }}api/kommuner), each linked: frie inntekter (unrestricted income) per innbygger
 - [Tax receipt]({{ base }}api/kvittering?skatt=150000): where a given tax amount goes
 - [Everyday units]({{ base }}api/visste-du): per innbygger, per day, per second
 - [Oil fund over time: budget share, share of the fund spent, fund value]({{ base }}api/oljefond)

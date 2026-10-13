@@ -78,7 +78,7 @@ def test_bad_input_never_errors() -> None:
 
 def test_profile_round_trip() -> None:
     p = profile_from("pensjonist,student", "1,0,2,0", "100000,0", "250000,300000")
-    assert profile_from(**dict(pair.split("=") for pair in profile_query(p).replace("%2C", ",").split("&"))) == p
+    assert profile_from(**dict(pair.split("=") for pair in profile_query(p).split("&"))) == p
 
 
 FARMER = "meg=bonde&barn=0,0,0,0&lonn=0&pensjon=0&naering=550000&naering_type=jordbruk"
@@ -151,8 +151,8 @@ def test_bonde_preset_is_a_farmer_not_a_wage_earner() -> None:
 def test_business_profile_round_trip() -> None:
     p = profile_from("bonde", "0,0,0,0", "0,300000", "0,0", "550000,0", "jordbruk,annen")
     query = profile_query(p)
-    assert "naering_type=jordbruk%2Cannen" in query
-    assert profile_from(**dict(pair.split("=") for pair in query.replace("%2C", ",").split("&"))) == p
+    assert "naering_type=jordbruk,annen" in query
+    assert profile_from(**dict(pair.split("=") for pair in query.split("&"))) == p
 
 
 def test_links_without_business_income_stay_as_before() -> None:

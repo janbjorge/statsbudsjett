@@ -300,11 +300,16 @@ def llms_txt(request: Request) -> Response:
     }, media_type="text/markdown; charset=utf-8")
 
 
+# Agents that open a page because a person asked for it in a chat, not to crawl: they may open everything
+CHAT_AGENTS = ("ChatGPT-User", "Claude-User", "Perplexity-User")
+
+
 @app.get("/robots.txt", response_class=PlainTextResponse)
 def robots_txt(request: Request) -> str:
     """Crawlers may read every page and the JSON API, but not the endless query-string variants of the pages:
     GPTBot walked about 1 200 tree paths (then /?sti=, now /flyt?sti=) in three hours. The same data is one API call away.
-    The rules name page paths only, so /api/utforsk?sti= stays open."""
+    The rules name page paths only, so /api/utforsk?sti= stays open. Chat agents get their own group first, since the
+    page rules would also keep them off a household's page (/?…&lonn=), which is what a person in a chat asks about."""
     disallow = [f"/?*{key}=" for key in ("skatt", "lonn", "pensjon", "naering")]
     disallow += [f"/flyt?*{key}=" for key in ("vis", "sti")]
     disallow += ["/utforsk", "/kvittering", "/meg", "/sok", "/kommune", "/flyt/del"]  # HTMX fragments, or redirects to /?…
@@ -312,6 +317,10 @@ def robots_txt(request: Request) -> str:
         f"# For AI agents: read {request.base_url}llms.txt, then use the JSON API\n"
         f"# described in {request.base_url}api/openapi.json instead of crawling the pages.\n"
         f"Sitemap: {request.base_url}sitemap.xml\n"
+        "\n"
+        + "".join(f"User-agent: {agent}\n" for agent in CHAT_AGENTS)
+        + "Allow: /\n"
+        "\n"
         "User-agent: *\n"
         "Allow: /api/\n"
         + "".join(f"Disallow: {path}\n" for path in disallow)

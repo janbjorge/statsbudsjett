@@ -2,6 +2,10 @@
 
 Finished requests from jb, newest first. Each quotes the request and says what was built.
 
+## 2026-10-13
+
+- [x] **Links for chat agents to follow** (jb: "Make the site usable for chat agents (ChatGPT, Claude) by giving them links to follow instead of URLs to build", after ChatGPT never fetched the API on matris.app and Logfire showed agents here use the pages, not the API): API answers carry absolute URLs where an agent goes next: tree nodes and crumbs, `/api/flyt` chapters, search hits, each kommune, each Pengestrømmen node in `/api/oversikt`, and in `/api/meg` the page, the household's tax receipt and one `legg_til`/`fjern` link per situation. llms.txt opens with "Start here": ten households straight to `/api/meg` and the parameters for the person's own numbers, with a warning that no income means the 500 000 kr default. robots.txt has a first group for ChatGPT-User, Claude-User and Perplexity-User with `Allow: /`. Household links now keep their commas (`barn=0,2,0,0,0`, was `%2C`). Tests in tests/test_api.py and tests/test_web.py.
+
 ## 2026-10-09
 
 - [x] **Phone bugs from the re-check, checked on several browsers** (jb: "lets do the next todo, make sure we still keep an eye on the multi platform support!"): new `tools/layout_check.py` runs WebKit, Chromium and Firefox at 320, 390, 834 and 1280 px over every page. It found, in both WebKit and Chromium, the oil-fund labels on top of the line ("Forventet realavkastning, 4 %" and the 2001 end label) and the 2026 → 2027 chart on /flyt scrolling sideways with no hint. Chart labels in the fund charts now take the first of a few spots where they cover no line and no other label, measured in the page since text width differs between browsers; the dashed level's label is dropped when no spot is free, since the card subtitle names it. The /flyt change chart has its swipe hint above it. Firefox would not start on this Mac (Playwright's build, "Could not find profile folder"), so it is unchecked; the tool skips an engine that fails and says so.
